@@ -1,0 +1,107 @@
+html
+{
+    background-color: rgb(0, 0, 0);
+}
+
+body
+{
+    background-color: rgb(255, 255, 255);
+}
+
+header
+{
+    background-color: rgb(225, 0, 255);
+}
+
+main
+{
+    background-color: rgb(150, 150, 150);
+}
+
+footer
+{
+    background-color: rgb(129, 11, 11);
+}
+
+.cabecalhoPrincipal
+{
+    background-color: rgb(172, 172, 172);
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.tituloCabecalhoPrincipal
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.main
+{
+    background-color: rgb(148, 148, 148);
+}
+
+.secao01
+{
+    background-color: rgb(46, 67, 255);
+    border: 5px solid rgb(0, 16, 87);
+}
+
+.artigoSecao01
+{
+    background-color: rgb(13, 0, 202);    
+}
+
+.tituloArtigoSecao01
+{
+    background-color: rgb(0, 140, 255);
+}
+
+.paragrafoArtigoSecao01
+{
+    background-color: rgb(13, 0, 202);    
+}
+
+/**/
+
+.secao02
+{
+    background-color: rgb(9, 255, 0);
+    border: 5px solid rgb(0, 48, 0);
+}
+
+.artigoSecao02
+{
+    background-color: rgb(0, 92, 28);
+}
+
+.tituloArtigoSecao02
+{
+    background-color: rgb(19, 160, 38);
+}
+
+.paragrafoArtigoSecao02
+{
+    background-color: rgb(5, 65, 0);
+}
+
+/**/
+
+.secao03
+{
+    background-color: rgb(255, 251, 0);
+    border: 5px solid rgb(122, 110, 0);
+}
+
+.artigoSecao03
+{
+    background-color: rgb(148, 158, 0);
+}
+
+.tituloArtigoSecao03
+{
+    background-color: rgb(141, 115, 0);
+}
+
+.paragrafoArtigoSecao03
+{
+    background-color: rgb(255, 153, 0);
+}
