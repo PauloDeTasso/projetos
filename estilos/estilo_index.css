@@ -56,6 +56,7 @@ footer
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1%;
 }
 
 .artigoSecao01
@@ -82,6 +83,7 @@ footer
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1%;
 }
 
 .artigoSecao02
@@ -108,6 +110,7 @@ footer
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1%;
 }
 
 .artigoSecao03
@@ -123,4 +126,34 @@ footer
 .paragrafoArtigoSecao03
 {
   
+}
+
+.rodapePrincipal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tituloRodapePrincipal
+{
+    text-align: center;
+}
+
+.paragrafoRodapePrincipal
+{
+text-align: calc(p);
+padding: 1%;
+}
+
+.navRodapePrincipal
+{
+   
+}
+
+.ulRodapePrincipal
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
