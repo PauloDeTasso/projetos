@@ -188,6 +188,8 @@ padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 400px;
 }
 
 .tabelaRoadmap
@@ -197,4 +199,7 @@ padding: 1%;
     text-align: center;
     width: 100%;
     height: 100%;
+    font-size: 14pt;     
+    border-collapse: collapse;
+    letter-spacing: 1px;  
 }
