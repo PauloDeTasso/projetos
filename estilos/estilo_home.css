@@ -193,13 +193,18 @@ padding: 1%;
 }
 
 .tabelaRoadmap
-{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+{   
     width: 100%;
-    height: 100%;
-    font-size: 14pt;     
+    height: 100%;    
     border-collapse: collapse;
-    letter-spacing: 1px;  
+    vertical-align: top;
+    color: rgb(202, 202, 202);
+    background-color: black;
+}
+
+.celulaTabela
+{
+    vertical-align: top;  
+    padding: 10px;    
+    border: 2px solid rgb(200, 200, 200);
 }
