@@ -7,7 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo_index.css" />
    
-   <script>
+    <title>Paulo de Tasso</title>
+
+</head>
+
+<body class="corpo">
+
+<header class="headerBotaoSomInicio">
+
+<img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" >
+
+</header>
+
+    <audio autoplay loop id='audio'>
+        <source src="../audios/relaxing.wav" type="audio/wav">
+    </audio>
+
+    <img src="imagens/start.png" alt="Botão Login" usemap="#login">
+
+    <map name="login">
+
+        <area shape="circle" coords="405,273,83" href="docs/Home.html" alt="Link go home">
+
+    </map>
+
+
+    <script>
 
         var audio = document.getElementById('audio');
 
@@ -33,6 +58,7 @@
         }
 
         function mute() {
+            
             var audio = document.getElementById('audio');
             var icone = document.getElementById('iconeSom')
            
@@ -46,30 +72,6 @@
         }
 
     </script>
-
-    <title>Paulo de Tasso</title>
-
-</head>
-
-<body class="corpo">
-
-<header class="headerBotaoSomInicio">
-
-<img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" >
-
-</header>
-
-    <audio autoplay loop id='audio'>
-        <source src="../audios/relaxing.wav" type="audio/wav">
-    </audio>
-
-    <img src="imagens/start.png" alt="Botão Login" usemap="#login">
-
-    <map name="login">
-
-        <area shape="circle" coords="405,273,83" href="docs/Home.html" alt="Link go home">
-
-    </map>
 
 </body>
 
