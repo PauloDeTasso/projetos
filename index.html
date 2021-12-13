@@ -15,7 +15,7 @@
 
 <header class="headerBotaoSomInicio">
 
-<img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="14px" height="14px">
+<img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="51px" height="51px">
 
 </header>
 
@@ -62,10 +62,10 @@
            
             if (audio.muted) {
                 audio.muted = false;
-                // icone.setAttribute('src', '/icones/sound.png');
+               icone.setAttribute('src', '/icones/sound.png');
             } else {
                 audio.muted = true;
-                // icone.setAttribute('src', '/icones/mute.png');
+                icone.setAttribute('src', '/icones/mute.png');
             }
         }
 
