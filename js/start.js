@@ -14,10 +14,16 @@ function stop() {
 }
 
 function aumentar_volume() {
+
+    var audio = document.getElementById('audio');
+    
     if (audio.volume < 1) audio.volume += 0.1;
 }
 
 function diminuir_volume() {
+
+    var audio = document.getElementById('audio');
+
     if (audio.volume > 0) audio.volume -= 0.1;
 }
 

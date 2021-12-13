@@ -6,18 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo_index.css" />
-   
+
     <title>Paulo de Tasso</title>
 
 </head>
 
 <body class="corpo">
 
-<header class="headerBotaoSomInicio">
+    <section class="headerBotaoSomInicio">
 
-<img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="51px" height="51px">
+        <img onclick="aumentar_volume()" id="iconeSomAumentarVolume" src="/icones/800x600/volumealto.png"
+            alt="Aumentar Volume" width="31px" height="31px">
 
-</header>
+        <img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px">
+
+        <img onclick="diminuir_volume()" id="iconeSomDiminuirVolume" src="/icones/800x600/volumebaixo.png"
+            alt="Diminuir Volume" width="31px" height="31px">
+
+    </section>
 
     <audio autoplay loop id='audio'>
         <source src="../audios/relaxing.wav" type="audio/wav">
