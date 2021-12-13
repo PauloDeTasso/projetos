@@ -5,15 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/estilo_index.css">    
-    <style src="js/start.js" type="text/javascript"></style>
-    <title>Paulo de Tasso</title>
+    <link rel="stylesheet" href="estilos/estilo_index.css">
     
+    <style>
+
+function playSound()
+{
+		var playAudio = document.getElementById('myAudioTagID').play();
+		
+    document.alert(playAudio)
+
+        /* playAudio.play();		 */
+}
+    </style>
+
+    <title>Paulo de Tasso</title>
+
 </head>
 
 <body class="corpo">
-    
-    <audio autoplay loop>
+
+    <audio autoplay loop id='playAudio'>
         <source src="../audios/relaxing.wav" type="audio/wav">
     </audio>
 
@@ -21,14 +33,16 @@
 
     <map name="login">
 
-        <area shape="circle" coords="405,273,83" href="docs/Home.html" alt="Link go home" > 
-        
+        <area shape="circle" coords="405,273,83" href="docs/Home.html" alt="Link go home">
+
     </map>
 
+    <section class="secaoBotaoSomInicio">
+        <button class="botaoSomInicio" onclick="playSound()">
+            <img src="icones/sound.png" alt="Som" width="51px" height="51px">
+        </button>
+    </section>
+
 </body>
-
-<section>
-
-</section>
 
 </html>
