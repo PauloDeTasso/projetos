@@ -34,8 +34,6 @@
 
     <script>
 
-        var audio = document.getElementById('audio');
-
         function play() {
             audio.play();
         }
@@ -64,10 +62,10 @@
            
             if (audio.muted) {
                 audio.muted = false;
-                icone.setAttribute('src', '/icones/sound.png');
+                // icone.setAttribute('src', '/icones/sound.png');
             } else {
                 audio.muted = true;
-                icone.setAttribute('src', '/icones/mute.png');
+                // icone.setAttribute('src', '/icones/mute.png');
             }
         }
 
