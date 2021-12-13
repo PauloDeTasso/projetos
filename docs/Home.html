@@ -7,11 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/estilo_home.css">
     <title>Paulo de Tasso</title>
+
+    <script>
+
+        var audio = document.getElementById('audio');
+
+        function play() {
+            audio.play();
+        }
+
+        function pause() {
+            audio.pause();
+        }
+
+        function stop() {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function aumentar_volume() {
+            if (audio.volume < 1) audio.volume += 0.1;
+        }
+
+        function diminuir_volume() {
+            if (audio.volume > 0) audio.volume -= 0.1;
+        }
+
+        function mute() {
+            var audio = document.getElementById('audio');
+            var icone = document.getElementById('iconeSom')
+           
+            if (audio.muted) {
+                audio.muted = false;
+                icone.setAttribute('src', '/icones/sound.png');
+            } else {
+                audio.muted = true;
+                icone.setAttribute('src', '/icones/mute.png');
+            }
+        }
+
+    </script>
+
 </head>
 
 <body class="corpo">
 
     <header class="cabecalhoPrincipal">
+
+        <input id="iconeSom" type="image" onclick="mute()" src="/icones/sound.png" alt="iconeSound" width="14px" height="14px"></input>
 
         <h1 class="tituloCabecalhoPrincipal">
             PAULO DE TASSO
@@ -152,7 +195,7 @@
 
         <section>
 
-            <audio controls autoplay loop>
+            <audio id='audio' autoplay loop>
                 <source src="../audios/relaxing.wav" type="audio/wav">
             </audio>
 

@@ -6,26 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo_index.css" />
-    <script>
+   
+   <script>
 
-        function playSound() {
-            var playAudio = document.getElementById('playAudio');
+        var audio = document.getElementById('audio');
 
-            alert("Eu sou um alert!");
+        function play() {
+            audio.play();
         }
 
-        function funcao1() {
-            alert("Eu sou um alert!");
+        function pause() {
+            audio.pause();
+        }
+
+        function stop() {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function aumentar_volume() {
+            if (audio.volume < 1) audio.volume += 0.1;
+        }
+
+        function diminuir_volume() {
+            if (audio.volume > 0) audio.volume -= 0.1;
+        }
+
+        function mute() {
+            var audio = document.getElementById('audio');
+            var icone = document.getElementById('iconeSom')
+           
+            if (audio.muted) {
+                audio.muted = false;
+                icone.setAttribute('src', '/icones/sound.png');
+            } else {
+                audio.muted = true;
+                icone.setAttribute('src', '/icones/mute.png');
+            }
         }
 
     </script>
+
     <title>Paulo de Tasso</title>
 
 </head>
 
 <body class="corpo">
 
-    <audio controls autoplay loop id='playAudio'>
+<header class="headerBotaoSomInicio">
+    <input id="iconeSom" type="image" onclick="mute()" src="/icones/sound.png" alt="iconeSound" width="14px" height="14px"></input>
+
+</header>
+
+    <audio autoplay loop id='audio'>
         <source src="../audios/relaxing.wav" type="audio/wav">
     </audio>
 
@@ -36,21 +69,6 @@
         <area shape="circle" coords="405,273,83" href="docs/Home.html" alt="Link go home">
 
     </map>
-
-    <input type="button" onclick="funcao1()" value="Exibir Alert" />
-
-    <section class="secaoBotaoSomInicio">
-
-        <nav>
-            <button type="button" onclick="playSound">sdasd</button>
-        </nav>
-
-        <!-- <img id="imagemSom" src="icones/sound.png" alt="Som" width="51px" height="51px"> -->
-
-    </section>
-
-
-
 
 </body>
 
