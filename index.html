@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/estilo_index.css">
-    
-    <style>
+    <link rel="stylesheet" href="estilos/estilo_index.css" />
+    <script>
 
-function playSound()
-{
-		var playAudio = document.getElementById('myAudioTagID').play();
-		
-    document.alert(playAudio)
+        function playSound() {
+            var playAudio = document.getElementById('playAudio');
 
-        /* playAudio.play();		 */
-}
-    </style>
+            alert("Eu sou um alert!");
+        }
 
+        function funcao1() {
+            alert("Eu sou um alert!");
+        }
+
+    </script>
     <title>Paulo de Tasso</title>
 
 </head>
 
 <body class="corpo">
 
-    <audio autoplay loop id='playAudio'>
+    <audio controls autoplay loop id='playAudio'>
         <source src="../audios/relaxing.wav" type="audio/wav">
     </audio>
 
@@ -37,11 +37,20 @@ function playSound()
 
     </map>
 
+    <input type="button" onclick="funcao1()" value="Exibir Alert" />
+
     <section class="secaoBotaoSomInicio">
-        <button class="botaoSomInicio" onclick="playSound()">
-            <img src="icones/sound.png" alt="Som" width="51px" height="51px">
-        </button>
+
+        <nav>
+            <button type="button" onclick="playSound">sdasd</button>
+        </nav>
+
+        <!-- <img id="imagemSom" src="icones/sound.png" alt="Som" width="51px" height="51px"> -->
+
     </section>
+
+
+
 
 </body>
 
