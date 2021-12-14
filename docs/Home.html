@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="../estilos/estilo_home.css">
     <title>Paulo de Tasso</title>
 
-    <script src="../js/start.js">       
-
-    </script>
-
 </head>
 
 <body class="corpo">
 
-    <a onclick="mute()"><img id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="21px" height="21px"></a>
+    <section class="headerBotaoSomInicio">
+    
+        <img id="iconeSomDiminuirVolume" onclick="diminuir_volume()" src="/icones/800x600/volumebaixo.png"
+            alt="Diminuir Volume" width="31px" height="31px">
+    
+        <img id="iconeSom" onclick="mute()" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px">
+    
+    
+        <img id="iconeSomAumentarVolume" onclick="aumentar_volume()" src="/icones/800x600/volumealto.png"
+            alt="Aumentar Volume" width="31px" height="31px">
+    
+    </section>
 
     <header class="cabecalhoPrincipal">
        
@@ -179,6 +186,11 @@
         </section>
 
     </footer>
+
+
+    <script src="../js/start.js">       
+
+    </script>
 
 </body>
 
