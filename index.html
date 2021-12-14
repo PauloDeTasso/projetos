@@ -15,17 +15,17 @@
 
     <section class="headerBotaoSomInicio">
 
-        <img onclick="aumentar_volume()" id="iconeSomAumentarVolume" src="/icones/800x600/volumealto.png"
+        <img id="iconeSomAumentarVolume" onclick="aumentar_volume()" src="/icones/800x600/volumealto.png"
             alt="Aumentar Volume" width="31px" height="31px">
 
-        <img onclick="mute()" id="iconeSom" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px">
+        <img id="iconeSom" onclick="mute()" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px">
 
-        <img onclick="diminuir_volume()" id="iconeSomDiminuirVolume" src="/icones/800x600/volumebaixo.png"
+        <img id="iconeSomDiminuirVolume" onclick="diminuir_volume()" src="/icones/800x600/volumebaixo.png"
             alt="Diminuir Volume" width="31px" height="31px">
 
     </section>
 
-    <audio autoplay loop id='audio'>
+    <audio id='audio' autoplay loop>
         <source src="../audios/relaxing.wav" type="audio/wav">
     </audio>
 

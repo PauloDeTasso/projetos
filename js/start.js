@@ -13,98 +13,96 @@ function stop() {
     audio.currentTime = 0;
 }
 
-function aumentar_volume() {
+function aumentar_volume()
+{
 
     var audio = document.getElementById('audio');
-    var icone3 = document.getElementById('iconeSomAumentarVolume')
+
+    var iconeAumentarVolume = document.getElementById('iconeSomAumentarVolume');
     
-    var volumecerto = Math.round(audio.volume*10);
+    var volumeArredondado = Math.round(audio.volume*10);
 
-    alert(volumecerto);
-
-    switch (volumecerto) {
+    switch (volumeArredondado)
+    {
 
         case 10:
 
             audio.volume += 0.0;
-            icone3.setAttribute('src', '/icones/800x600/volume10.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume10.png');
 
             break;
 
         case 9:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icones/800x600/volume9.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume9.png');
 
             break;
 
         case 8:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icones/800x600/volume8.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume8.png');
 
             break;
 
         case 7:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume7.png');
-
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume7.png');
+            alert(volumeArredondado);
             break;
 
         case 6:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume6.png');
-
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume6.png');
+            alert(volumeArredondado);
             break;
 
         case 5:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume5.png');
-
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume5.png');
             break;
 
         case 4:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume4.png');
-
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume4.png');
             break;
 
         case 3:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume3.png');
-
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume3.png');
             break;
 
         case 2:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume2.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume2.png');
 
             break;
 
         case 1:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume1.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume1.png');
 
             break;
 
         case 0:
 
             audio.volume += 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume0.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volume0.png');
 
             break;
 
         default:
 
             audio.volume += 0.0;
-            icone3.setAttribute('src', '/icone3s/800x600/volumealto0.png');
+            iconeAumentarVolume.setAttribute('src', '/icones/800x600/volumealto0.png');
 
     }
 
@@ -113,96 +111,83 @@ function aumentar_volume() {
 function diminuir_volume() {
 
     var audio = document.getElementById('audio');
-    var icone3 = document.getElementById('iconeSomDiminuirVolume')
 
-    var volumecerto = Math.round(audio.volume*10);
+    var iconeDiminuirVolume = document.getElementById('iconeSomDiminuirVolume');
 
-    alert(volumecerto);
+    var volumeArredondado = Math.round(audio.volume*10);
 
-    switch (volumecerto) {
+    switch (volumeArredondado) {
 
         case 10:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icones/800x600/volume10.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume10.png');
             break;
 
         case 9:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icones/800x600/volume9.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume9.png');
             break;
 
         case 8:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icones/800x600/volume8.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume8.png');
             break;
 
         case 7:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume7.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume7.png');
             break;
 
         case 6:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume6.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume6.png');
             break;
 
         case 5:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume5.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume5.png');
             break;
 
         case 4:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume4.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume4.png');
             break;
 
         case 3:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume3.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume3.png');
             break;
 
         case 2:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume2.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume2.png');
             break;
 
         case 1:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume1.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume1.png');
             break;
 
         case 0:
 
             audio.volume -= 0.1;
-            icone3.setAttribute('src', '/icone3s/800x600/volume0.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volume0.png');
             break;
 
         default:
 
             audio.volume -= 0.0;
-            icone3.setAttribute('src', '/icone3s/800x600/volumealto0.png');
-
+            iconeDiminuirVolume.setAttribute('src', '/icones/800x600/volumealto0.png');
     }
 
 }
