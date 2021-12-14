@@ -38,4 +38,5 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 5px solid rgb(200, 200, 200);
 }
