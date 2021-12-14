@@ -268,11 +268,13 @@ function mute()
     if (audio.muted)
     {
         audio.muted = false;
+        audio.play();
         icone.removeAttribute('src');
         icone.setAttribute('src','icones/800x600/sound.png');
     }else
     {
         audio.muted = true;
+        audio.pause();
         icone.removeAttribute('src');
         icone.setAttribute('src','icones/800x600/mute.png');
     }
