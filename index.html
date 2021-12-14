@@ -13,22 +13,23 @@
 
 <body class="corpo">
 
-    <section class="headerBotaoSomInicio">
-    
-        <button type="menu" id="iconeSomDiminuirVolume" class="botaoSomInicio" onclick="diminuir_volume()" src="/icones/800x600/volumebaixo.png"
-            alt="Diminuir Volume" width="31px" height="31px">AUMENTAR
-        </button>
-    
-        <button id="iconeSom" class="botaoSomInicio" onclick="mute()" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px"> MUDO   
-        </button>
+    <section>
 
-        <button id="iconeSomAumentarVolume" class="botaoSomInicio" onclick="aumentar_volume()" src="/icones/800x600/volumealto.png"
-            alt="Aumentar Volume" width="31px" height="31px">DIMINUIR
-        </button>
+        <nav class="headerBotaoSomInicio">
+    
+        <img id="iconeSomDiminuirVolume" onclick="diminuir_volume()" src="/icones/800x600/volumebaixo.png"
+            alt="Diminuir Volume" width="31px" height="31px">
+    
+        <img id="iconeSom" onclick="mute()" src="/icones/sound.png" alt="Icone de som" width="31px" height="31px">    
+    
+        <img id="iconeSomAumentarVolume" onclick="aumentar_volume()" src="/icones/800x600/volumealto.png"
+            alt="Aumentar Volume" width="31px" height="31px">
+    
+        </nav>
 
     </section>
 
-    <audio id='audio' autoplay loop>
+    <audio id="audio" autoplay loop>
         <source src="../audios/relaxing.wav" type="audio/wav">
     </audio>
 

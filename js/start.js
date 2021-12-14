@@ -16,13 +16,13 @@ function stop() {
 function aumentar_volume()
 {
 
-    var audio = document.getElementById('audio');
+    var audio = document.getElementsByTagName("audio");
 
-    var iconeAumentarVolume = document.getElementById('iconeSomAumentarVolume');
+    var iconeAumentarVolume = document.querySelector("#iconeSomAumentarVolume");
 
     var iconeDiminuirVolume = document.getElementById('iconeSomDiminuirVolume');
-    
-    var volumeArredondado = Math.round(audio.volume*10);
+
+    var volumeArredondado = Math.round(audio.volume * 10);
 
     switch (volumeArredondado)
     {
@@ -113,17 +113,18 @@ function aumentar_volume()
 
 }
 
-function diminuir_volume() {
+function diminuir_volume()
+{
 
-    var audio = document.getElementById('audio');
+    var audio = document.getElementsByTagName("audio");
 
     var iconeDiminuirVolume = document.getElementById('iconeSomDiminuirVolume');
 
     var iconeAumentarVolume = document.getElementById('iconeSomAumentarVolume');
 
-    var volumeArredondado = Math.round(audio.volume*10);
+    var volumeArredondado = Math.round(audio.volume * 10);
 
-    switch (volumeArredondado) 
+    switch (volumeArredondado)
     {
 
         case 10:
@@ -213,8 +214,9 @@ function diminuir_volume() {
 }
 
 function mute() {
-    var audio = document.getElementById('audio');
-    var icone = document.getElementById('iconeSom')
+
+    let audio = document.getElementById("audio");
+    let icone = document.getElementById('iconeSom')
 
     if (audio.muted) {
         audio.muted = false;
