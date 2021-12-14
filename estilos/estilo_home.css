@@ -225,3 +225,17 @@ padding: 1%;
     background-color: rgb(255, 255, 255);
     border: 0px solid rgb(21, 21, 21);
 }
+
+.secaoMudo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes
+{
+ background-color: rgb(21, 21, 21);
+ border: 0px solid rgb(21, 21, 21);
+}
