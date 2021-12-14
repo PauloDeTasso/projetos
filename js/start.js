@@ -213,16 +213,19 @@ function diminuir_volume()
 
 }
 
-function mute() {
+function mute()
+{
 
     let audio = document.getElementById("audio");
     let icone = document.getElementById('iconeSom')
 
-    if (audio.muted) {
+    if (audio.muted)
+    {
         audio.muted = false;
-        icone.setAttribute('src', '/icones/sound.png');
-    } else {
+        icone.setAttribute('src','icones/sound.png');
+    }else
+    {
         audio.muted = true;
-        icone.setAttribute('src', '/icones/mute.png');
+        icone.setAttribute('src','icones/mute.png');
     }
 }
