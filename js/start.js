@@ -222,10 +222,12 @@ function mute()
     if (audio.muted)
     {
         audio.muted = false;
+        icone.removeAttribute('src')
         icone.setAttribute('src','icones/800x600/sound.png');
     }else
     {
         audio.muted = true;
-        icone.setAttribute('src',"icones/800x600/mute.png");
+        icone.removeAttribute('src')
+        icone.setAttribute('src','icones/800x600/mute.png');
     }
 }
