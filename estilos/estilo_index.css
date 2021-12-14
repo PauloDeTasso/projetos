@@ -31,3 +31,11 @@ body
     background-color: rgb(255, 255, 255);
     border: 0px solid rgb(0, 0, 0); 
 }
+
+.secaoMudo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
