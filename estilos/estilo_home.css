@@ -13,6 +13,7 @@ body
     flex-direction: column;
     justify-content: center;
     background-color: rgb(245, 245, 245);
+    margin: 0px;
 }
 
 header
