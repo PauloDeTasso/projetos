@@ -64,7 +64,7 @@ footer
 
 .main
 {
-   
+   width: auto;
 }
 
 .secao01
@@ -84,14 +84,15 @@ footer
 .tituloArtigoSecao01
 {
    text-align: center;
-
 }
 
-.paragrafoArtigoSecao01
+.paragrafoArtigoSecao01, .paragrafoArtigoSecao02, .paragrafoArtigoSecao03
+
 {
    font-size: 14pt;
-   text-align: calc(p);
+   text-align: auto;
    font-weight: lighter;
+   align-items: center;
 }
 
 /**/
@@ -115,12 +116,6 @@ footer
     text-align: center;
 }
 
-.paragrafoArtigoSecao02
-{
-    font-size: 14pt;
-    text-align: calc(p);
-}
-
 /**/
 
 .secao03
@@ -140,13 +135,6 @@ footer
 .tituloArtigoSecao03
 {
     text-align: center;
-}
-
-.paragrafoArtigoSecao03
-{
-    font-size: 14pt;
-    text-align: calc(p);
-    font-weight: lighter;
 }
 
 .rodapePrincipal
