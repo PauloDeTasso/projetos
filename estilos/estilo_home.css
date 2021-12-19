@@ -4,7 +4,7 @@ html
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: rgb(200, 200, 200);
+    color: rgb(255, 231, 195);
 }
 
 body
@@ -192,7 +192,7 @@ footer
     height: 100%;    
     border-collapse: collapse;
     vertical-align: top;
-    color: rgb(202, 202, 202);
+    color: rgb(255, 231, 195);
     background-color: black;
 }
 
