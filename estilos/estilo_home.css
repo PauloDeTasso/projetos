@@ -12,8 +12,8 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(245, 245, 245);
-    margin: 0px;
+    background-color: rgb(255, 231, 195);
+    border: 2px solid rgb(255, 231, 195);
 }
 
 header
@@ -183,7 +183,7 @@ footer
     justify-content: center;
     width: auto;
     height: 670px;
-    border: 12px solid rgb(240, 240, 240);
+    border: 10px solid rgb(255, 231, 195);
 }
 
 .tabelaRoadmap
