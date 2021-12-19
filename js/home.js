@@ -287,51 +287,51 @@ function alterarGif1()
 {
     var gif1 = document.getElementById('gif1');
 
-    if (gif1.getAttribute('src') == '../icones/code10.gif')
-    {
-        gif1.removeAttribute('src');
-        gif1.setAttribute('src', '../icones/code.gif');
-    } else
+    if (gif1.getAttribute('src') == '../icones/code.gif')
     {
         gif1.removeAttribute('src');
         gif1.setAttribute('src', '../icones/code10.gif');
+    } else
+    {
+        gif1.removeAttribute('src');
+        gif1.setAttribute('src', '../icones/code.gif');
     }
 
 };
 
-function alterarGif10()
+function alterarGif2()
 {
-    var gif10 = document.getElementById('gif10');
+    var gif2 = document.getElementById('gif2');
 
-    if (gif10.getAttribute('src') == '../icones/code.gif')
+    if (gif2.getAttribute('src') == '../icones/code.gif')
     {
-        gif10.removeAttribute('src');
-        gif10.setAttribute('src', '../icones/code12.gif');
+        gif2.removeAttribute('src');
+        gif2.setAttribute('src', '../icones/code12.gif');
 
-    } else if (gif10.getAttribute('src') == '../icones/code12.gif')
+    } else if (gif2.getAttribute('src') == '../icones/code12.gif')
     {
-        gif10.removeAttribute('src');
-        gif10.setAttribute('src', '../icones/code13.gif');
+        gif2.removeAttribute('src');
+        gif2.setAttribute('src', '../icones/code13.gif');
     } else
     {
-        gif10.removeAttribute('src');
-        gif10.setAttribute('src', '../icones/code.gif');
+        gif2.removeAttribute('src');
+        gif2.setAttribute('src', '../icones/code.gif');
     }
 
 };
 
-function alterarGif20()
+function alterarGif3()
 {
-    var gif20 = document.getElementById('gif20');
+    var gif3 = document.getElementById('gif3');
 
-    if (gif20.getAttribute('src') == '../icones/code11.gif')
+    if (gif3.getAttribute('src') == '../icones/code.gif')
     {
-        gif20.removeAttribute('src');
-        gif20.setAttribute('src', '../icones/code.gif');
+        gif3.removeAttribute('src');
+        gif3.setAttribute('src', '../icones/code11.gif');
     } else
     {
-        gif20.removeAttribute('src');
-        gif20.setAttribute('src', '../icones/code11.gif');
+        gif3.removeAttribute('src');
+        gif3.setAttribute('src', '../icones/code.gif');
     }
 
 };
