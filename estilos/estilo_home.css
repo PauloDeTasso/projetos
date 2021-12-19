@@ -4,7 +4,7 @@ html
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: rgb(255, 231, 195);
+    color: rgb(255, 233, 191);
 }
 
 body
@@ -12,8 +12,8 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(255, 231, 195);
-    border: 2px solid rgb(255, 231, 195);
+    background-color: rgb(255, 233, 191);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 header
@@ -54,7 +54,7 @@ footer
 
 .tituloCabecalhoPrincipal
 {
-   
+   color: rgb(200, 200, 200);
 }
 
 .corpo
@@ -78,7 +78,7 @@ footer
 
 .artigoSecao01
 {
-   
+   padding: 10px;   
 }
 
 .tituloArtigoSecao01
@@ -182,8 +182,7 @@ footer
     flex-direction: column;
     justify-content: center;
     width: auto;
-    height: 670px;
-    border: 10px solid rgb(255, 231, 195);
+    height: 550px;
 }
 
 .tabelaRoadmap
@@ -192,7 +191,7 @@ footer
     height: 100%;    
     border-collapse: collapse;
     vertical-align: top;
-    color: rgb(255, 231, 195);
+    color: rgb(255, 233, 191);
     background-color: black;
 }
 
@@ -231,4 +230,13 @@ footer
 {
  background-color: rgb(21, 21, 21);
  border: 0px solid rgb(21, 21, 21);
+}
+
+#secaoTitulo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
 }
