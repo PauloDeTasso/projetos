@@ -291,12 +291,12 @@ function alterarGif1()
     {
         gif1.removeAttribute('src');
         gif1.setAttribute('src', '../icones/code10.gif');
+
     } else
     {
         gif1.removeAttribute('src');
         gif1.setAttribute('src', '../icones/code.gif');
     }
-
 };
 
 function alterarGif2()
