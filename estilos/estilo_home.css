@@ -239,7 +239,8 @@ footer
     justify-content: center;
 }
 
-.marquee {
+.marquee 
+{
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;   
@@ -250,21 +251,26 @@ footer
      font-weight: bold;
      color: rgb(26, 155, 0);
      font-size: 20px;
+     margin-top: -2px;
 }
 
-@-webkit-keyframes marquee {
+@-webkit-keyframes marquee 
+{
     0%   { margin-left: 100% }
     100% { margin-left: -120% }
 }
-@-moz-keyframes marquee {
+@-moz-keyframes marquee
+{
     0%   { margin-left: 100% }
     100% { margin-left: -120% }
 }
-@-o-keyframes marquee {
+@-o-keyframes marquee
+{
     0%   { margin-left: 100% }
     100% { margin-left: -120% }
 }
-@keyframes marquee {
+@keyframes marquee
+{
     0%   { margin-left: 100% }
     100% { margin-left: -120% }
 }
@@ -273,4 +279,5 @@ footer
 {
   height: 40px;
   overflow: hidden;
+  font-size: 20px;
 }
