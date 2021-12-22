@@ -360,7 +360,6 @@ function mute()
     iconeMudo = document.getElementById('iconeMudo')
 
     audioPrincipal = document.getElementById("audioPrincipal");
-
     audio1 = document.getElementById('audio1');
     audio2 = document.getElementById('audio2');
     audio3 = document.getElementById('audio3');
