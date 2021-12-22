@@ -238,3 +238,39 @@ footer
     flex-direction: row;
     justify-content: center;
 }
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;   
+    -webkit-animation: marquee 10s linear infinite;
+    -moz-animation: marquee 10s linear infinite;
+    -o-animation: marquee 10s linear infinite;
+     animation: marquee 10s linear infinite;
+     font-weight: bold;
+     color: rgb(26, 155, 0);
+     font-size: 20px;
+}
+
+@-webkit-keyframes marquee {
+    0%   { margin-left: 100% }
+    100% { margin-left: -120% }
+}
+@-moz-keyframes marquee {
+    0%   { margin-left: 100% }
+    100% { margin-left: -120% }
+}
+@-o-keyframes marquee {
+    0%   { margin-left: 100% }
+    100% { margin-left: -120% }
+}
+@keyframes marquee {
+    0%   { margin-left: 100% }
+    100% { margin-left: -120% }
+}
+
+.quadro 
+{
+  height: 40px;
+  overflow: hidden;
+}

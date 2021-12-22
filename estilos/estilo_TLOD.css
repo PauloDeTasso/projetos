@@ -27,6 +27,7 @@ html
      animation: marquee 10s linear infinite;
      font-weight: bold;
      color: rgb(26, 155, 0);
+     font-size: 20px;
 }
 
 @-webkit-keyframes marquee {
