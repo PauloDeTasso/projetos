@@ -21,7 +21,7 @@
 
                 <button class="botoes" onclick="diminuir_volume()" type="button">
 
-                    <img id="iconeSomDiminuirVolume" src="../icones/800x600/volumebaixo.png" alt="Diminuir Volume"
+                    <img id="iconeMudoDiminuirVolume" src="../icones/800x600/volumebaixo.png" alt="Diminuir Volume"
                         width="31px" height="31px">
 
             </section>
@@ -32,7 +32,7 @@
 
                 <button class="botoes" onclick="mute()" type="button">
 
-                    <img id="iconeSom" src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
+                    <img id="iconeMudo" src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
 
                 </button>
 
@@ -42,7 +42,7 @@
 
                 <button class="botoes" onclick="aumentar_volume()" type="button">
 
-                    <img id="iconeSomAumentarVolume" src="../icones/800x600/volumealto.png" alt="Aumentar Volume"
+                    <img id="iconeMudoAumentarVolume" src="../icones/800x600/volumealto.png" alt="Aumentar Volume"
                         width="31px" height="31px">
 
                 </button>
@@ -111,65 +111,6 @@
                     spontaneous desire to make it happen, help!
                 </p>
 
-                <!-- FOR
-
-                    for (var contagem = 0; contagem < 5; contagem++)
-                    {
-                    document.writeln(contagem);    
-                    }
-
-                -->
-
-                <!-- WHILE
-                    
-                        var nome = "Tasso";
-
-                        var idade = 35;
-                        
-                        if (idade > 36)
-                        {
-                            while (idade > 0)
-                            {
-                                document.writeln(nome + idade);
-                                idade = idade - 1;    
-                            }
-                            document.writeln("Terminou");
-
-                        }else if (idade > 35)
-                        {
-                            document.writeln("Não usou o while");
-                        }
-                        document.writeln("Fim");
- 
-                 -->
-
-                <!-- SWITCH
-
-                        var nome = "Tasso";
-
-                        var idade = 3;
-
-                        switch (idade)
-                        {
-                            case 35:
-                                document.writeln(nome + idade);
-                                break;
-
-                             case 34:
-                                document.writeln(nome + idade);
-                                break;
-
-                            case 33:
-                                document.writeln(nome + idade);
-                                break;
-
-                            default:
-                                document.writeln("default");
-                                break;
-                        }
-
-                 -->
-
                 <p class="paragrafoArtigoSecao03">
                     It was with this idea that life led me here.<br>
                     The infinity of creativity and the vision of contributing to a greater good, inspires me to this day
@@ -224,19 +165,19 @@
 
     <section>
 
-        <audio id='audioPrincipal' autoplay loop>
+        <audio class="audios" id='audioPrincipal' autoplay loop>
             <source id="audioSource" src="../audios/relaxing.wav" type="audio/wav">
         </audio>
 
-        <audio id='audio1'>
+        <audio class="audios" id='audio1'>
             <source id="audioSource1" src="../audios/alarme.wav" type="audio/wav">
         </audio>
 
-        <audio id='audio2'>
+        <audio class="audios" id='audio2'>
             <source id="audioSource2" src="../audios/orchestra.wav" type="audio/wav">
         </audio>
 
-        <audio id='audio3'>
+        <audio class="audios" id='audio3'>
             <source id="audioSource3" src="../audios/clock.wav" type="audio/wav">
         </audio>
 
