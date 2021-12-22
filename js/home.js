@@ -1,42 +1,56 @@
-/*
-function play()
-{
-    audio.play();
-}
 
-function pause()
-{
-    audio.pause();
-}
 
-function stop()
-{
-    audio.pause();
-    audio.currentTime = 0;
-}
-*/
+var audioPrincipal = document.getElementById("audioPrincipal");
+
+var iconeMudo = document.getElementById('iconeMudo')
+
+var audio1 = document.getElementById('audio1');
+
+var audio2 = document.getElementById('audio2');
+
+var audio3 = document.getElementById('audio3');
+
+var gif1 = document.getElementById('gif1');
+
+var gif2 = document.getElementById('gif2');
+
+var gif3 = document.getElementById('gif3');
+
+var audioSource1 = document.getElementById('audioSource1');
+
+var audioSource2 = document.getElementById('audioSource2');
+
+var audioSource3 = document.getElementById('audioSource3');
+
+var iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
+
+var iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
+
+var volumeArredondado = Math.round(audioPrincipal.volume * 10);
+
+
 
 function aumentar_volume()
 {
 
-    var audio = document.getElementById("audioPrincipal");
+    audioPrincipal = document.getElementById("audioPrincipal");
 
-    var audio1 = document.getElementById('audio1');
-    var audio2 = document.getElementById('audio2');
-    var audio3 = document.getElementById('audio3');
+    audio1 = document.getElementById('audio1');
+    audio2 = document.getElementById('audio2');
+    audio3 = document.getElementById('audio3');
 
-    var iconeAumentarVolume = document.getElementById("iconeSomAumentarVolume");
+    iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
 
-    var iconeDiminuirVolume = document.getElementById('iconeSomDiminuirVolume');
+    iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
-    var volumeArredondado = Math.round(audio.volume * 10);
+    volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
     switch (volumeArredondado)
     {
 
         case 10:
 
-            audio.volume += 0.0;
+            audioPrincipal.volume += 0.0;
             audio1.volume += 0.0;
             audio2.volume += 0.0;
             audio3.volume += 0.0;
@@ -48,7 +62,7 @@ function aumentar_volume()
 
         case 9:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -60,7 +74,7 @@ function aumentar_volume()
 
         case 8:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -72,7 +86,7 @@ function aumentar_volume()
 
         case 7:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -84,7 +98,7 @@ function aumentar_volume()
 
         case 6:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -96,7 +110,7 @@ function aumentar_volume()
 
         case 5:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -108,7 +122,7 @@ function aumentar_volume()
 
         case 4:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -120,7 +134,7 @@ function aumentar_volume()
 
         case 3:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -132,7 +146,7 @@ function aumentar_volume()
 
         case 2:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -144,7 +158,7 @@ function aumentar_volume()
 
         case 1:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             audio1.volume += 0.1;
             audio2.volume += 0.1;
             audio3.volume += 0.1;
@@ -156,7 +170,7 @@ function aumentar_volume()
 
         case 0:
 
-            audio.volume += 0.1;
+            audioPrincipal.volume += 0.1;
             iconeAumentarVolume.removeAttribute('src');
             iconeDiminuirVolume.removeAttribute('src');
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
@@ -165,7 +179,7 @@ function aumentar_volume()
 
         default:
 
-            audio.volume += 0.0;
+            audioPrincipal.volume += 0.0;
             audio1.volume += 0.0;
             audio2.volume += 0.0;
             audio3.volume += 0.0;
@@ -180,24 +194,24 @@ function aumentar_volume()
 function diminuir_volume()
 {
 
-    var audio = document.getElementById("audioPrincipal");
+    audioPrincipal = document.getElementById("audioPrincipal");
 
-    var audio1 = document.getElementById('audio1');
-    var audio2 = document.getElementById('audio2');
-    var audio3 = document.getElementById('audio3');
+    audio1 = document.getElementById('audio1');
+    audio2 = document.getElementById('audio2');
+    audio3 = document.getElementById('audio3');
 
-    var iconeDiminuirVolume = document.getElementById('iconeSomDiminuirVolume');
+    iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
-    var iconeAumentarVolume = document.getElementById('iconeSomAumentarVolume');
+    iconeAumentarVolume = document.getElementById('iconeMudoAumentarVolume');
 
-    var volumeArredondado = Math.round(audio.volume * 10);
+    volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
     switch (volumeArredondado)
     {
 
         case 10:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -209,7 +223,7 @@ function diminuir_volume()
 
         case 9:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -221,7 +235,7 @@ function diminuir_volume()
 
         case 8:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -233,7 +247,7 @@ function diminuir_volume()
 
         case 7:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -245,7 +259,7 @@ function diminuir_volume()
 
         case 6:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -257,7 +271,7 @@ function diminuir_volume()
 
         case 5:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -269,7 +283,7 @@ function diminuir_volume()
 
         case 4:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -281,7 +295,7 @@ function diminuir_volume()
 
         case 3:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -293,7 +307,7 @@ function diminuir_volume()
 
         case 2:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -305,7 +319,7 @@ function diminuir_volume()
 
         case 1:
 
-            audio.volume -= 0.1;
+            audioPrincipal.volume -= 0.1;
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
@@ -317,7 +331,7 @@ function diminuir_volume()
 
         case 0:
 
-            audio.volume -= 0.0;
+            audioPrincipal.volume -= 0.0;
             audio1.volume -= 0.0;
             audio2.volume -= 0.0;
             audio3.volume -= 0.0;
@@ -329,7 +343,7 @@ function diminuir_volume()
 
         default:
 
-            audio.volume -= 0.0;
+            audioPrincipal.volume -= 0.0;
             audio1.volume -= 0.0;
             audio2.volume -= 0.0;
             audio3.volume -= 0.0;
@@ -343,40 +357,40 @@ function diminuir_volume()
 
 function mute()
 {
-    var icone = document.getElementById('iconeSom')
+    iconeMudo = document.getElementById('iconeMudo')
 
-    var audio = document.getElementById("audioPrincipal");
+    audioPrincipal = document.getElementById("audioPrincipal");
 
-    var audio1 = document.getElementById('audio1');
-    var audio2 = document.getElementById('audio2');
-    var audio3 = document.getElementById('audio3');
+    audio1 = document.getElementById('audio1');
+    audio2 = document.getElementById('audio2');
+    audio3 = document.getElementById('audio3');
 
-    if (audio.muted)
+    if (audioPrincipal.muted)
     {
-        audio.muted = false;
+        audioPrincipal.muted = false;
         audio1.muted = false;
         audio2.muted = false;
         audio3.muted = false;
-        icone.removeAttribute('src');
-        icone.setAttribute('src', '../icones/800x600/sound.png');
-        audio.play();
+        iconeMudo.removeAttribute('src');
+        iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+        audioPrincipal.play();
     } else
     {
-        audio.pause();
-        audio.muted = true;
+        audioPrincipal.pause();
+        audioPrincipal.muted = true;
         audio1.muted = true;
         audio2.muted = true;
         audio3.muted = true;
-        icone.removeAttribute('src');
-        icone.setAttribute('src', '../icones/800x600/mute.png');
+        iconeMudo.removeAttribute('src');
+        iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
     }
 }
 
 function alterarGif1()
 {
-    var gif1 = document.getElementById('gif1');
-    var audio1 = document.getElementById('audio1');
-    var audioSource1 = document.getElementById('audioSource1');
+    gif1 = document.getElementById('gif1');
+    audio1 = document.getElementById('audio1');
+    audioSource1 = document.getElementById('audioSource1');
 
     if (gif1.getAttribute('src') == '../icones/code.gif')
     {
@@ -392,9 +406,9 @@ function alterarGif1()
 
 function alterarGif2()
 {
-    var gif2 = document.getElementById('gif2');
-    var audio2 = document.getElementById('audio2');
-    var audioSource2 = document.getElementById('audioSource2');
+    gif2 = document.getElementById('gif2');
+    audio2 = document.getElementById('audio2');
+    audioSource2 = document.getElementById('audioSource2');
 
     if (gif2.getAttribute('src') == '../icones/code.gif')
     {
@@ -416,9 +430,9 @@ function alterarGif2()
 
 function alterarGif3()
 {
-    var gif3 = document.getElementById('gif3');
-    var audio3 = document.getElementById('audio3');
-    var audioSource3 = document.getElementById('audioSource3');
+    gif3 = document.getElementById('gif3');
+    audio3 = document.getElementById('audio3');
+    audioSource3 = document.getElementById('audioSource3');
 
     if (gif3.getAttribute('src') == '../icones/code.gif')
     {
@@ -432,3 +446,85 @@ function alterarGif3()
     }
 
 }
+
+
+/*
+function play()
+{
+    audioPrincipal.play();
+}
+
+function pause()
+{
+    audioPrincipal.pause();
+}
+
+function stop()
+{
+    audioPrincipal.pause();
+    audioPrincipal.currentTime = 0;
+}
+*/
+
+/*
+
+<!-- FOR
+
+for (var contagem = 0; contagem < 5; contagem++)
+{
+document.writeln(contagem);    
+}
+
+-->
+
+<!-- WHILE
+
+    var nome = "Tasso";
+
+    var idade = 35;
+    
+    if (idade > 36)
+    {
+        while (idade > 0)
+        {
+            document.writeln(nome + idade);
+            idade = idade - 1;    
+        }
+        document.writeln("Terminou");
+
+    }else if (idade > 35)
+    {
+        document.writeln("Não usou o while");
+    }
+    document.writeln("Fim");
+
+-->
+
+<!-- SWITCH
+
+    var nome = "Tasso";
+
+    var idade = 3;
+
+    switch (idade)
+    {
+        case 35:
+            document.writeln(nome + idade);
+            break;
+
+         case 34:
+            document.writeln(nome + idade);
+            break;
+
+        case 33:
+            document.writeln(nome + idade);
+            break;
+
+        default:
+            document.writeln("default");
+            break;
+    }
+
+-->
+
+*/
