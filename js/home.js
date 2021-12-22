@@ -2,18 +2,18 @@
 function play()
 {
     audio.play();
-};
+}
 
 function pause()
 {
     audio.pause();
-};
+}
 
 function stop()
 {
     audio.pause();
     audio.currentTime = 0;
-};
+}
 */
 
 function aumentar_volume()
@@ -175,7 +175,7 @@ function aumentar_volume()
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
     }
 
-};
+}
 
 function diminuir_volume()
 {
@@ -339,7 +339,7 @@ function diminuir_volume()
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
     }
 
-};
+}
 
 function mute()
 {
@@ -370,7 +370,7 @@ function mute()
         icone.removeAttribute('src');
         icone.setAttribute('src', '../icones/800x600/mute.png');
     }
-};
+}
 
 function alterarGif1()
 {
@@ -388,7 +388,7 @@ function alterarGif1()
         gif1.removeAttribute('src');
         gif1.setAttribute('src', '../icones/code.gif');
     }
-};
+}
 
 function alterarGif2()
 {
@@ -412,7 +412,7 @@ function alterarGif2()
         gif2.setAttribute('src', '../icones/code.gif');
     }
 
-};
+}
 
 function alterarGif3()
 {
@@ -431,4 +431,4 @@ function alterarGif3()
         gif3.setAttribute('src', '../icones/code.gif');
     }
 
-};
+}
