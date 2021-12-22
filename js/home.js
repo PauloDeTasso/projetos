@@ -28,6 +28,10 @@ var iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
 var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
+var tituloPrincipal1 = document.getElementById('tituloPrincipal').innerHTML;
+
+var tituloPrincipal2 = document.getElementById('tituloPrincipal');
+
 function aumentar_volume()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
@@ -357,6 +361,20 @@ function alterarGif3()
 
 }
 
+function alterarTexto1()
+{
+    tituloPrincipal2.innerHTML = "Sophia?";
+}
+
+function alterarTexto2()
+{
+    tituloPrincipal2.innerHTML = "PAULO DE TASSO";
+}
+
+function abrirLink()
+{
+    window.open('https://www.google.com', '_blank');
+}
 
 /*
 function play()
