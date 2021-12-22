@@ -1,8 +1,8 @@
-var portaPrincipal = document.getElementById('portaPrincipal');
-
 var aleatorio;
 
 var caminho;
+
+var portaPrincipal = document.getElementById('portaPrincipal');
 
 function numeroAleatorio(min, max)
 {
@@ -14,6 +14,4 @@ function abrir()
     caminho = '../imagens/doors/door' + aleatorio + '.jpg';
 
     portaPrincipal.setAttribute('src', caminho);
-
-    var rs = portaPrincipal.getAttribute('src');
 }
