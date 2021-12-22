@@ -1,7 +1,7 @@
 var portaPrincipal = document.getElementById('portaPrincipal');
 
 //var numeroAleatorio = Math.random();
-var numeroAleatorio;
+var aleatorio;
 
 var caminho;
 
@@ -11,11 +11,9 @@ function numeroAleatorio(min, max)
     alert(aleatorio);
 }
 
-function abrir(aleatorio)
+function abrir()
 {
-    portaPrincipal.setAttribute('src', '../imagens/doors/door' + aleatorio + '.jpg');
+    caminho = '\'src\'' + ',' + '\'../imagens/doors/door' + aleatorio + '.jpg\'';
+    alert(caminho);
+    portaPrincipal.setAttribute(caminho);
 }
-
-caminho = '../imagens/doors/door' + aleatorio + '.jpg';
-
-alert(caminho);
