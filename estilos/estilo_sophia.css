@@ -1,0 +1,49 @@
+html
+{
+    background-color: rgb(216, 226, 75);
+}
+
+.classHeader
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.classBody
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.classSecaoDeCima
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.classSecaoDoMeio
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.classSecaoDeBaixo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
