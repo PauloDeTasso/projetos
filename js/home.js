@@ -36,11 +36,31 @@ var aleatorio;
 
 var caminho;
 
+var mensagemAleatoria;
+
+var frase1 = "Uma frase!"
+var frase2 = "Uma frase!"
+var frase3 = "Uma frase!"
+var frase4 = "Uma frase!"
+var frase5 = "Uma frase!"
+var frase6 = "Uma frase!"
+var frase7 = "Uma frase!"
+var frase8 = "Uma frase!"
+var frase9 = "Uma frase!"
+var frase10 = "Uma frase!"
+
+var numeroAleatorioFrase;
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
 {
     aleatorio = Math.floor(Math.random() * (max - min) + min);
+}
+
+function numeroAleatorioFrase(min, max)
+{
+    numeroAleatorioFrase = Math.floor(Math.random() * (max - min) + min);
 }
 
 function abrir()
@@ -425,10 +445,71 @@ function show3(texto)
 
 function alertMsg()
 {
-    mensagemAleatoria = Math
-    alert('“Quando eu acordo todas as manhãs, agradeço a Deus pelo novo dia.” - F. Sionil Jose!');
+    alert(mensagemAleatoria);
     nome.innerHTML = "PAULO DE TASSO";
 }
+
+/////////////////////////////////////////////////////////////////
+/*
+function numeroAleatorio(min, max)
+{
+    aleatorio = Math.floor(Math.random() * (max - min) + min);
+}
+*/
+
+function alertFrase(numeroAleatorioFrase)
+{
+
+    switch (numeroAleatorioFrase)
+    {
+        case 1:
+
+            break;
+
+        case 2:
+
+            break;
+
+        case 3:
+
+            break;
+
+        case 4:
+
+            break;
+
+        case 5:
+
+            break;
+
+        case 6:
+
+            break;
+
+        case 7:
+
+            break;
+
+        case 8:
+
+            break;
+
+        case 9:
+
+            break;
+
+        case 10:
+
+            break;
+
+        default:
+
+    }
+
+    return mensagemAleatoria;
+}
+
+/////////////////////////////////////////////////////////
 
 /*
 function play()
