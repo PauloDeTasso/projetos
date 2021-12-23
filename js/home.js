@@ -369,7 +369,7 @@ function alterarTexto1()
 
 function alterarTexto2()
 {
-    tituloPrincipal.innerHTML = "##############################################################################################################################################################################################";
+    tituloPrincipal.innerHTML = "“Não deixe o barulho das opiniões dos outros abafar sua voz interior.” - Steve jobs";
 }
 
 function abrirLink()
