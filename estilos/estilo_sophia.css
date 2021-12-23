@@ -47,3 +47,13 @@ html
     width: auto;
     height: auto;
 }
+
+.classFooter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    align-items: center;
+}
