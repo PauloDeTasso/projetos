@@ -251,28 +251,27 @@ footer
      font-weight: bold;
      color: rgb(26, 155, 0);
      font-size: 20px;
-     margin-top: -2px;
 }
 
 @-webkit-keyframes marquee 
 {
     0%   { margin-left: 100% }
-    100% { margin-left: -120% }
+    100% { margin-left: -200% }
 }
 @-moz-keyframes marquee
 {
     0%   { margin-left: 100% }
-    100% { margin-left: -120% }
+    100% { margin-left: -200% }
 }
 @-o-keyframes marquee
 {
     0%   { margin-left: 100% }
-    100% { margin-left: -120% }
+    100% { margin-left: -200% }
 }
 @keyframes marquee
 {
     0%   { margin-left: 100% }
-    100% { margin-left: -120% }
+    100% { margin-left: -200% }
 }
 
 .quadro 
