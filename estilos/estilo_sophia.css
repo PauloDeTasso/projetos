@@ -1,0 +1,13 @@
+html
+{
+    background-color: rgb(216, 226, 75);
+}
+
+.classBody
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
