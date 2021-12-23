@@ -28,9 +28,9 @@ var iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
 var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-var tituloPrincipal1 = document.getElementById('tituloPrincipal').innerHTML;
+var tituloPrincipal = document.getElementById('tituloPrincipal');
 
-var tituloPrincipal2 = document.getElementById('tituloPrincipal');
+var nome = document.getElementById("paulodetasso");
 
 function aumentar_volume()
 {
@@ -363,12 +363,13 @@ function alterarGif3()
 
 function alterarTexto1()
 {
-    tituloPrincipal2.innerHTML = "Sophia?";
+    tituloPrincipal.innerHTML = "HELP?";
+    nome.style.color = 'rgb(200, 200, 200)';
 }
 
 function alterarTexto2()
 {
-    tituloPrincipal2.innerHTML = "PAULO DE TASSO";
+    tituloPrincipal.innerHTML = "##############################################################################################################################################################################################";
 }
 
 function abrirLink()
