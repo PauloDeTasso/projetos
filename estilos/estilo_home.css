@@ -281,3 +281,13 @@ footer
   overflow: hidden;
   font-size: 20px;
 }
+
+#titulo
+{
+    color: black;
+}
+
+#paulodetasso
+{
+    color: rgb(100, 100, 100);
+}
