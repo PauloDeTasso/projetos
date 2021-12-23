@@ -1,5 +1,3 @@
-
-
 var audioPrincipal = document.getElementById("audioPrincipal");
 
 var iconeMudo = document.getElementById('iconeMudo')
@@ -32,6 +30,27 @@ var tituloPrincipal = document.getElementById('tituloPrincipal');
 
 var nome = document.getElementById("paulodetasso");
 
+var portaPrincipal = document.getElementById('portaPrincipal');
+
+var aleatorio;
+
+var caminho;
+
+/////////////////////////////////////////////////////////////////
+
+function numeroAleatorio(min, max)
+{
+    aleatorio = Math.floor(Math.random() * (max - min) + min);
+}
+
+function abrir()
+{
+    caminho = '../imagens/doors/door' + aleatorio + '.jpg';
+
+    portaPrincipal.setAttribute('src', caminho);
+}
+
+/////////////////////////////////////////////////////////
 function aumentar_volume()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
@@ -143,6 +162,7 @@ function aumentar_volume()
             audioPrincipal.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo1.png');
+            iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             break;
 
         default:
@@ -153,6 +173,7 @@ function aumentar_volume()
             audio3.volume += 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
+            iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
     }
 
 }
@@ -272,6 +293,7 @@ function diminuir_volume()
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
+            iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             break;
 
         case 0:
@@ -283,6 +305,7 @@ function diminuir_volume()
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
+            iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
             break;
 
         default:
@@ -379,12 +402,32 @@ function abrirLink()
 
 function contagemRegresiva()
 {
-    var t = setTimeout("alertMsg('Welcome!')", 3000);
+    var t = setTimeout("show3('3!')", 1000);
+    var t = setTimeout("show2('2!')", 2000);
+    var t = setTimeout("show1('1!')", 3000);
+    var t = setTimeout("alertMsg()", 3500);
 }
 
-function alertMsg(Texto)
+function show1(texto)
 {
-    alert(Texto);
+    nome.innerHTML = texto;
+}
+
+function show2(texto)
+{
+    nome.innerHTML = texto;
+}
+
+function show3(texto)
+{
+    nome.innerHTML = texto;
+}
+
+function alertMsg()
+{
+    mensagemAleatoria = Math
+    alert('“Quando eu acordo todas as manhãs, agradeço a Deus pelo novo dia.” - F. Sionil Jose!');
+    nome.innerHTML = "PAULO DE TASSO";
 }
 
 /*
