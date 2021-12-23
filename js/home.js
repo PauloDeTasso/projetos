@@ -377,6 +377,16 @@ function abrirLink()
     window.open('https://www.google.com', '_blank');
 }
 
+function contagemRegresiva()
+{
+    var t = setTimeout("alertMsg('Welcome!')", 3000);
+}
+
+function alertMsg(Texto)
+{
+    alert(Texto);
+}
+
 /*
 function play()
 {
