@@ -59,6 +59,8 @@ var numeroAleatorioFrase;
 
 var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
 
+var secaoGift = document.getElementById('secaoGift');
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -473,7 +475,17 @@ function alertMsg()
     tituloPrincipal.innerHTML = fraseAtual;
 }
 
+function abrirSecaoGift()
+{
+    if (secaoGift.style.display == "none")
 
+        secaoGift.style.display = 'flex';
+
+    else
+
+        secaoGift.style.display = 'none';
+
+}
 
 /////////////////////////////////////////////////////////////////
 /*

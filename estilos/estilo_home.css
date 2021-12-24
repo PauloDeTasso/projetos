@@ -232,9 +232,9 @@ footer
  border: 0px solid rgb(21, 21, 21);
 }
 
-#secaoGif
+#secaoGift
 {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
 }
