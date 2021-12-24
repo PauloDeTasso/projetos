@@ -42,14 +42,16 @@ var mensagemAleatoria;
 
 var numerogerado;
 
+var fraseAtual = "\“Patience is a key element of success.\" - Bill Gates.";
+
 var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
 var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderful...that\’s what matters to me.\” - Steve Jobs"
 var frase3 = "Programming isn\'t about what you know; it\'s about what you can figure out.\” - Chris Pine"
 var frase4 = "\"The only way to learn a new programming language is by writing programs in it.\" - Dennis Ritchie"
 var frase5 = "\"Sometimes it\'s better to leave something alone, to pause, and that\'s very true of programming.\" - Joyce Wheeler"
 var frase6 = "\"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.\" - Andrew Hunt"
-var frase7 = "\"Testing leads to failure, and failure leads to understanding.\" - Burt Rutan"
-var frase8 = "\"The best error message is the one that never shows up.\""
+var frase7 = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs"
+var frase8 = "\"The best error message is the one that never shows up.\" - Thomas Fuchs";
 var frase9 = "\“The most damaging phrase in the language is.. it\'s always been done this way\” - Grace Hopper"
 var frase10 = "\"Don\'t write better error messages, write code that doesn't need them.\" - Jason C. McDonald"
 
@@ -420,7 +422,7 @@ function alterarTexto1()
 
 function alterarTexto2()
 {
-    tituloPrincipal.innerHTML = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs";
+    tituloPrincipal.innerHTML = fraseAtual;
     tituloPrincipal.style.backgroundColor = 'rgb(255, 233, 191)';
 }
 
@@ -465,8 +467,10 @@ function show3(texto)
 
 function alertMsg()
 {
-    alert(fraseAleatoria());
+    fraseAtual = fraseAleatoria();
+    alert(fraseAtual);
     nome.innerHTML = "PAULO DE TASSO";
+    tituloPrincipal.innerHTML = fraseAtual;
 }
 
 

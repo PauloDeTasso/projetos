@@ -250,7 +250,6 @@ footer
      animation: marquee 10s linear infinite;
      font-weight: bold;
      color: rgb(26, 155, 0);
-     font-size: 20px;
 }
 
 @-webkit-keyframes marquee 
@@ -278,7 +277,7 @@ footer
 {
   height: 40px;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #titulo
