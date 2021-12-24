@@ -38,20 +38,23 @@ var caminho;
 
 var mensagemAleatoria;
 
+var numerogerado;
+
 var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
-var frase2 = "Uma frase!"
-var frase3 = "Uma frase!"
-var frase4 = "Uma frase!"
-var frase5 = "Uma frase!"
-var frase6 = "Uma frase!"
-var frase7 = "Uma frase!"
-var frase8 = "Uma frase!"
-var frase9 = "Uma frase!"
-var frase10 = "Uma frase!"
+var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderful...that\’s what matters to me.\” - Steve Jobs"
+var frase3 = "Programming isn\'t about what you know; it\'s about what you can figure out.\” - Chris Pine"
+var frase4 = "\"The only way to learn a new programming language is by writing programs in it.\" - Dennis Ritchie"
+var frase5 = "\"Sometimes it\'s better to leave something alone, to pause, and that\'s very true of programming.\" - Joyce Wheeler"
+var frase6 = "\"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.\" - Andrew Hunt"
+var frase7 = "\"Testing leads to failure, and failure leads to understanding.\" - Burt Rutan"
+var frase8 = "\"The best error message is the one that never shows up.\""
+var frase9 = "\“The most damaging phrase in the language is.. it\'s always been done this way\” - Grace Hopper"
+var frase10 = "\"Don\'t write better error messages, write code that doesn't need them.\" - Jason C. McDonald"
 
 var numeroAleatorioFrase;
 
-var frases;
+var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -61,7 +64,7 @@ function numeroAleatorio(min, max)
 
 function numeroAleatorioFrase(min, max)
 {
-    numeroAleatorioFrase = Math.floor(Math.random() * (max - min) + min);
+    numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
 }
 
 function abrir()
@@ -413,12 +416,20 @@ function alterarTexto1()
 
 function alterarTexto2()
 {
-    tituloPrincipal.innerHTML = "“Não deixe o barulho das opiniões dos outros abafar sua voz interior.” - Steve jobs";
+    tituloPrincipal.innerHTML = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs";
 }
 
 function abrirLink()
 {
     window.open('https://www.google.com', '_blank');
+}
+
+
+function fraseAleatoria()
+{
+    numeroAleatorioFrase(1, 10);
+    mensagemAleatoria = frases[numeroAleatorioFraseInterno];
+    return mensagemAleatoria;
 }
 
 function contagemRegresiva()
@@ -444,18 +455,13 @@ function show3(texto)
     nome.innerHTML = texto;
 }
 
-function funcaoMensagemAleatoria()
-{
-
-    mensagemAleatoria = frases[x];
-    return mensagemAleatoria;
-}
-
 function alertMsg()
 {
-    alert(funcaoMensagemAleatoria());
+    alert(fraseAleatoria());
     nome.innerHTML = "PAULO DE TASSO";
 }
+
+
 
 /////////////////////////////////////////////////////////////////
 /*
@@ -463,7 +469,7 @@ function numeroAleatorio(min, max)
 {
     aleatorio = Math.floor(Math.random() * (max - min) + min);
 }
-*/
+
 
 function alertFrase(numeroAleatorioFrase)
 {
