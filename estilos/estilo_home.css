@@ -183,8 +183,9 @@ footer
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: auto;
+    width: 100%;
     height: auto;
+    background-color: rgb(233, 233, 233);
 }
 
 .iframeHome
