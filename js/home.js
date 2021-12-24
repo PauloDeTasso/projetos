@@ -38,7 +38,7 @@ var caminho;
 
 var mensagemAleatoria;
 
-var frase1 = "Uma frase!"
+var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
 var frase2 = "Uma frase!"
 var frase3 = "Uma frase!"
 var frase4 = "Uma frase!"
@@ -51,6 +51,7 @@ var frase10 = "Uma frase!"
 
 var numeroAleatorioFrase;
 
+var frases;
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -422,9 +423,9 @@ function abrirLink()
 
 function contagemRegresiva()
 {
-    var t = setTimeout("show3('3!')", 1000);
-    var t = setTimeout("show2('2!')", 2000);
-    var t = setTimeout("show1('1!')", 3000);
+    var t = setTimeout("show3('3')", 1000);
+    var t = setTimeout("show2('2')", 2000);
+    var t = setTimeout("show1('1')", 3000);
     var t = setTimeout("alertMsg()", 3500);
 }
 
@@ -443,9 +444,16 @@ function show3(texto)
     nome.innerHTML = texto;
 }
 
+function funcaoMensagemAleatoria()
+{
+
+    mensagemAleatoria = frases[x];
+    return mensagemAleatoria;
+}
+
 function alertMsg()
 {
-    alert(mensagemAleatoria);
+    alert(funcaoMensagemAleatoria());
     nome.innerHTML = "PAULO DE TASSO";
 }
 
