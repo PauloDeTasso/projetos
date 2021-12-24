@@ -374,7 +374,6 @@ function alterarGif1()
     if (gif1.getAttribute('src') == '../icones/code.gif')
     {
         gif1.setAttribute('src', '../icones/code10.gif');
-        audio1.volume = 0.5;
         audio1.play();
     } else
     {
@@ -387,7 +386,6 @@ function alterarGif2()
     if (gif2.getAttribute('src') == '../icones/code.gif')
     {
         gif2.setAttribute('src', '../icones/code12.gif');
-        audio2.volume = 0.5;
         audio2.play();
 
     } else if (gif2.getAttribute('src') == '../icones/code12.gif')
@@ -405,7 +403,6 @@ function alterarGif3()
     if (gif3.getAttribute('src') == '../icones/code.gif')
     {
         gif3.setAttribute('src', '../icones/code11.gif');
-        audio3.volume = 0.5;
         audio3.play();
     } else
     {
