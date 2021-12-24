@@ -86,13 +86,14 @@ footer
    text-align: center;
 }
 
-.paragrafoArtigoSecao01, .paragrafoArtigoSecao02, .paragrafoArtigoSecao03
+.paragrafoArtigo
 
 {
    font-size: 14pt;
-   text-align: auto;
+   text-align: justify;
    font-weight: lighter;
    align-items: center;
+   padding: 1%;
 }
 
 /**/
