@@ -8,6 +8,8 @@ var audio2 = document.getElementById('audio2');
 
 var audio3 = document.getElementById('audio3');
 
+var audio4 = document.getElementById('audio4');
+
 var gif1 = document.getElementById('gif1');
 
 var gif2 = document.getElementById('gif2');
@@ -75,6 +77,7 @@ function abrir()
 }
 
 /////////////////////////////////////////////////////////
+
 function aumentar_volume()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
@@ -371,6 +374,7 @@ function alterarGif1()
     if (gif1.getAttribute('src') == '../icones/code.gif')
     {
         gif1.setAttribute('src', '../icones/code10.gif');
+        audio1.volume = 0.5;
         audio1.play();
     } else
     {
@@ -383,6 +387,7 @@ function alterarGif2()
     if (gif2.getAttribute('src') == '../icones/code.gif')
     {
         gif2.setAttribute('src', '../icones/code12.gif');
+        audio2.volume = 0.5;
         audio2.play();
 
     } else if (gif2.getAttribute('src') == '../icones/code12.gif')
@@ -400,6 +405,7 @@ function alterarGif3()
     if (gif3.getAttribute('src') == '../icones/code.gif')
     {
         gif3.setAttribute('src', '../icones/code11.gif');
+        audio3.volume = 0.5;
         audio3.play();
     } else
     {
@@ -412,11 +418,13 @@ function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
     nome.style.color = 'rgb(200, 200, 200)';
+    tituloPrincipal.style.backgroundColor = 'rgb(250, 233, 200)';
 }
 
 function alterarTexto2()
 {
     tituloPrincipal.innerHTML = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs";
+    tituloPrincipal.style.backgroundColor = 'rgb(255, 233, 191)';
 }
 
 function abrirLink()
@@ -427,7 +435,7 @@ function abrirLink()
 
 function fraseAleatoria()
 {
-    numeroAleatorioFrase(1, 10);
+    numeroAleatorioFrase(1, frases.length);
     mensagemAleatoria = frases[numeroAleatorioFraseInterno];
     return mensagemAleatoria;
 }
@@ -443,16 +451,19 @@ function contagemRegresiva()
 function show1(texto)
 {
     nome.innerHTML = texto;
+    audio4.play();
 }
 
 function show2(texto)
 {
     nome.innerHTML = texto;
+    audio4.play();
 }
 
 function show3(texto)
 {
     nome.innerHTML = texto;
+    audio4.play(0);
 }
 
 function alertMsg()
