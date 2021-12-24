@@ -61,6 +61,8 @@ var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, f
 
 var secaoGift = document.getElementById('secaoGift');
 
+var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -96,6 +98,7 @@ function aumentar_volume()
             audio3.volume += 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
+            iconeSomExtra.style.display = 'flex';
             break;
 
         case 9:
@@ -217,6 +220,9 @@ function diminuir_volume()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
+    var style = window.getComputedStyle(iconeSomExtra);
+    var top = style.getPropertyValue('display');
+
     switch (volumeArredondado)
     {
 
@@ -229,6 +235,7 @@ function diminuir_volume()
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
+            iconeSomExtra.style.display = 'none';
             break;
 
         case 9:

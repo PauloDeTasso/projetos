@@ -239,6 +239,14 @@ footer
     align-items: center;
 }
 
+.secaoSomExtra
+{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .botoes
 {
  background-color: rgb(21, 21, 21);
