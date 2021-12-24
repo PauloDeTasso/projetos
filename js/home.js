@@ -477,14 +477,16 @@ function alertMsg()
 
 function abrirSecaoGift()
 {
-    if (secaoGift.style.display == "none")
+    var style = window.getComputedStyle(secaoGift);
+    var top = style.getPropertyValue('display');
 
+    if (top == "none")    
+    {
         secaoGift.style.display = 'flex';
-
-    else
-
+    } else
+    {
         secaoGift.style.display = 'none';
-
+    }
 }
 
 /////////////////////////////////////////////////////////////////

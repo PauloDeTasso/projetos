@@ -243,11 +243,11 @@ footer
  border: 0px solid rgb(21, 21, 21);
 }
 
-#secaoGift
-{
-    display: none;
+.secaoGift
+{    
     flex-direction: row;
     justify-content: center;
+    display: none;
 }
 
 .marquee 
