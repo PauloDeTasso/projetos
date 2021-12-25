@@ -427,7 +427,7 @@ function alterarGif3()
 function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
-    nome.style.color = 'rgb(200, 200, 200)';
+    nome.style.color = 'rgb(130, 130, 130)';
     tituloPrincipal.style.backgroundColor = 'rgb(250, 233, 200)';
 }
 
