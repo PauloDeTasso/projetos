@@ -220,9 +220,6 @@ function diminuir_volume()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-    var style = window.getComputedStyle(iconeSomExtra);
-    var top = style.getPropertyValue('display');
-
     switch (volumeArredondado)
     {
 

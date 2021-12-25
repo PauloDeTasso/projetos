@@ -170,24 +170,26 @@ footer
     justify-content: space-around;
 }
 
-.secaoRodapePrincipal
+.secaoRodapePrincipalIcones2
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: auto;
+    padding: 1%;
 }
 
-.secaoRodapePrincipalIcones
+.secaoRodapePrincipalIcones1
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
     height: auto;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 233, 191);
 }
+/*rgb(233, 233, 233);*/
 
 .iframeHome
 {
@@ -270,7 +272,10 @@ footer
     -o-animation: marquee 10s linear infinite;
      animation: marquee 10s linear infinite;
      font-weight: bold;
-     color: rgb(26, 155, 0);
+     color: rgba(31, 187, 0, 0.884);
+     text-shadow: 1px 1px 0px rgba(11, 65, 0, 0.637);
+     letter-spacing: 1px;
+     font-size: 14pt;
 }
 
 @-webkit-keyframes marquee 
@@ -299,6 +304,7 @@ footer
   height: 40px;
   overflow: hidden;
   font-size: 18px;
+  text-overflow: clip;
 }
 
 #titulo
@@ -310,4 +316,12 @@ footer
 {
     color: rgb(100, 100, 100);
     background-color: rgb(233, 233, 233);
+    text-decoration: solid;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 0px 0px 20px rgba(111, 0, 255, 0.2); 
+}
+
+#linkFraseRodape
+{
+    font-size: 10pt;
+    text-align: center;
 }
