@@ -241,12 +241,22 @@ footer
     align-items: center;
 }
 
-.secaoSomExtra
+#iconeVolumeAltoDemais
 {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+}
+
+#iconeVolumeBaixoDemais
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
 }
 
 .botoes

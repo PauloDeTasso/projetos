@@ -63,6 +63,8 @@ var secaoGift = document.getElementById('secaoGift');
 
 var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
 
+var iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -98,7 +100,7 @@ function aumentar_volume()
             audio3.volume += 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
-            iconeSomExtra.style.display = 'flex';
+            iconeSomExtra.style.visibility = 'visible';
             break;
 
         case 9:
@@ -201,6 +203,8 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo1.png');
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+            iconeSomExtra2.style.visibility = 'hidden';
+
             break;
 
         default:
@@ -232,7 +236,7 @@ function diminuir_volume()
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
-            iconeSomExtra.style.display = 'none';
+            iconeSomExtra.style.visibility = 'hidden';
             break;
 
         case 9:
@@ -333,6 +337,7 @@ function diminuir_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
             iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
+            iconeSomExtra2.style.visibility = 'visible';
             break;
 
         case 0:
