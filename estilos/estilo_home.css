@@ -311,7 +311,7 @@ footer
  /* overflow: hidden;*/
   font-size: 14px;
   text-overflow: clip;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #titulo
