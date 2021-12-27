@@ -65,6 +65,7 @@ var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
 
 var iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
 
+
 /////////////////////////////////////////////////////////////////
 
 function numeroAleatorio(min, max)
@@ -561,6 +562,25 @@ function abrirSecaoGift()
 }
 
 /////////////////////////////////////////////////////////////////
+
+function abrirFecharTabela()
+{
+    var secaoIframeHome = document.getElementById('iframeHome');
+    var iconeJanela = document.getElementById('iconeJanela');
+    var getStyle = window.getComputedStyle(secaoIframeHome);
+    var getDisplay = getStyle.getPropertyValue('display');
+    if (getDisplay == "none")    
+    {
+        secaoIframeHome.style.display = 'flex';
+        iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png')
+    } else
+    {
+        secaoIframeHome.style.display = 'none';
+        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco.png')
+    }
+}
+
+
 /*
 function numeroAleatorio(min, max)
 {

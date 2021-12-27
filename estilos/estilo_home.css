@@ -186,13 +186,13 @@ footer
 }
 /*rgb(233, 233, 233);*/
 
-.iframeHome
+#iframeHome
 {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
-    width: auto;
-    height: 570px;
+    width: 100%;
+    height: 400px;
 }
 
 .tabelaRoadmap
@@ -203,6 +203,7 @@ footer
     vertical-align: top;
     color: rgb(255, 233, 191);
     background-color: black;
+    font-size: 8pt;
 }
 
 .celulaTabela
@@ -329,4 +330,20 @@ footer
 {
     font-size: 10pt;
     text-align: center;
+}
+
+#secaoTabela
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#botaoTabela
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: rgb(34, 34, 34);
+   border: 0px solid rgb(0, 0, 0);
 }
