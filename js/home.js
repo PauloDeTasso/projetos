@@ -149,8 +149,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
 
-
-
             break;
 
         case 7:
@@ -161,8 +159,6 @@ function aumentar_volume()
             audio3.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto8.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo8.png');
-
-
 
             break;
 
@@ -175,8 +171,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto7.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo7.png');
 
-
-
             break;
 
         case 5:
@@ -187,8 +181,6 @@ function aumentar_volume()
             audio3.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto6.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo6.png');
-
-
 
             break;
 
@@ -201,8 +193,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto5.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo5.png');
 
-
-
             break;
 
         case 3:
@@ -213,8 +203,6 @@ function aumentar_volume()
             audio3.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto4.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo4.png');
-
-
 
             break;
 
@@ -276,7 +264,6 @@ function diminuir_volume()
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
 
-
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
             iconeSomExtra.style.visibility = 'hidden';
@@ -303,7 +290,6 @@ function diminuir_volume()
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
 
-
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto7.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo7.png');
 
@@ -315,7 +301,6 @@ function diminuir_volume()
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
-
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto6.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo6.png');
@@ -329,7 +314,6 @@ function diminuir_volume()
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
 
-
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto5.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo5.png');
 
@@ -341,7 +325,6 @@ function diminuir_volume()
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
-
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto4.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo4.png');
