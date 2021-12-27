@@ -94,7 +94,7 @@ function aumentar_volume()
     {
         case 10:
 
-            if (iconeSomExtra2.style.visibility == 'visible')
+            if (iconeMudo.getAttribute('src') == '../icones/800x600/mute.png')
             {
                 audioPrincipal.volume += 0.0;
                 audio1.volume += 0.0;
@@ -118,7 +118,7 @@ function aumentar_volume()
 
         case 9:
 
-            if (iconeSomExtra2.style.visibility == 'visible')
+            if (iconeMudo.getAttribute('src') == '../icones/800x600/mute.png')
             {
                 audioPrincipal.volume += 0.1;
                 audio1.volume += 0.1;
@@ -227,8 +227,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto3.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo3.png');
 
-
-
             break;
 
         case 1:
@@ -240,7 +238,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto2.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo2.png');
 
-
             break;
 
         case 0:
@@ -251,7 +248,6 @@ function aumentar_volume()
             audio3.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo1.png');
-
             break;
 
         default:
@@ -397,32 +393,18 @@ function diminuir_volume()
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
-            audioPrincipal.pause();
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
-            iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
-            iconeSomExtra2.style.visibility = 'visible';
-            audioPrincipal.muted = true;
-            audio1.muted = true;
-            audio2.muted = true;
-            audio3.muted = true;
             break;
 
         case 0:
 
-            audioPrincipal.volume -= 0.1;
-            audio1.volume -= 0.1;
-            audio2.volume -= 0.1;
-            audio3.volume -= 0.1;
-            audioPrincipal.pause();
-            iconeSomExtra2.style.visibility = 'visible';
+            audioPrincipal.volume -= 0.0;
+            audio1.volume -= 0.0;
+            audio2.volume -= 0.0;
+            audio3.volume -= 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
-            iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
-            audioPrincipal.muted = true;
-            audio1.muted = true;
-            audio2.muted = true;
-            audio3.muted = true;
             break;
 
         default:
