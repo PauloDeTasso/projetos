@@ -236,6 +236,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo1.png');
+
             break;
 
         default:
