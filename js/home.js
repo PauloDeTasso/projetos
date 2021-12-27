@@ -94,25 +94,49 @@ function aumentar_volume()
     {
         case 10:
 
-            audioPrincipal.volume += 0.0;
-            audio1.volume += 0.0;
-            audio2.volume += 0.0;
-            audio3.volume += 0.0;
-            iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
-            iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
-            iconeSomExtra.style.visibility = 'visible';
+            if (iconeSomExtra2.style.visibility == 'visible')
+            {
+                audioPrincipal.volume += 0.0;
+                audio1.volume += 0.0;
+                audio2.volume += 0.0;
+                audio3.volume += 0.0;
+                iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
+                iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
+                iconeSomExtra.style.visibility = 'hidden';
+            } else
+            {
+                audioPrincipal.volume += 0.0;
+                audio1.volume += 0.0;
+                audio2.volume += 0.0;
+                audio3.volume += 0.0;
+                iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
+                iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
+                iconeSomExtra.style.visibility = 'visible';
+            }
 
             break;
 
         case 9:
 
-            audioPrincipal.volume += 0.1;
-            audio1.volume += 0.1;
-            audio2.volume += 0.1;
-            audio3.volume += 0.1;
-            iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
-            iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
-            iconeSomExtra.style.visibility = 'visible';
+            if (iconeSomExtra2.style.visibility == 'visible')
+            {
+                audioPrincipal.volume += 0.1;
+                audio1.volume += 0.1;
+                audio2.volume += 0.1;
+                audio3.volume += 0.1;
+                iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
+                iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
+                iconeSomExtra.style.visibility = 'hidden';
+            } else
+            {
+                audioPrincipal.volume += 0.1;
+                audio1.volume += 0.1;
+                audio2.volume += 0.1;
+                audio3.volume += 0.1;
+                iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
+                iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
+                iconeSomExtra.style.visibility = 'visible';
+            }
 
             break;
 
@@ -269,7 +293,7 @@ function diminuir_volume()
             audio1.volume -= 0.1;
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
-
+            iconeSomExtra.style.visibility = 'hidden';
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto8.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo8.png');
@@ -374,9 +398,6 @@ function diminuir_volume()
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
             audioPrincipal.pause();
-            iconeSomExtra.style.visibility = 'hidden';
-            iconeSomExtra2.style.visibility = 'visible';
-            iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
             iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
@@ -394,7 +415,6 @@ function diminuir_volume()
             audio2.volume -= 0.1;
             audio3.volume -= 0.1;
             audioPrincipal.pause();
-
             iconeSomExtra2.style.visibility = 'visible';
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
@@ -419,21 +439,39 @@ function diminuir_volume()
 
 function mudo()
 {
+    volumeArredondado = Math.round(audioPrincipal.volume * 10);
+
     if (audioPrincipal.muted)
     {
-        audioPrincipal.muted = false;
-        audio1.muted = false;
-        audio2.muted = false;
-        audio3.muted = false;
-        iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
-        iconeSomExtra2.style.visibility = 'hidden';
-        audioPrincipal.play();
+
+        if (iconeSomExtra.style.visibility == 'hidden' && volumeArredondado == 10)
+        {
+            audioPrincipal.muted = false;
+            audio1.muted = false;
+            audio2.muted = false;
+            audio3.muted = false;
+            iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+            iconeSomExtra.style.visibility = 'visible';
+            iconeSomExtra2.style.visibility = 'hidden';
+            audioPrincipal.play();
+        } else
+        {
+            audioPrincipal.muted = false;
+            audio1.muted = false;
+            audio2.muted = false;
+            audio3.muted = false;
+            iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+            iconeSomExtra2.style.visibility = 'hidden';
+            audioPrincipal.play();
+        }
+
     } else
     {
         audioPrincipal.muted = true;
         audio1.muted = true;
         audio2.muted = true;
         audio3.muted = true;
+        iconeSomExtra.style.visibility = 'hidden';
         iconeSomExtra2.style.visibility = 'visible';
         iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
         audioPrincipal.pause();
