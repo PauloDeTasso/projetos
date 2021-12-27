@@ -307,10 +307,11 @@ footer
 
 .quadro 
 {
-  height: 40px;
-  overflow: hidden;
-  font-size: 18px;
+  height: 50px;
+ /* overflow: hidden;*/
+  font-size: 14px;
   text-overflow: clip;
+  overflow-x: hidden;
 }
 
 #titulo
