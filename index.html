@@ -44,6 +44,10 @@
 
     </section>
 
+    <section id="visitasSite">
+        x
+    </section>
+
     <script src="js/start.js">
 
     </script>
@@ -60,22 +64,21 @@
             visitasdoSite.innerHTML = visitas;
         } else
         {
-            alert(visitas);
+
             var cont = document.cookie;
             var dividindo = cont.split("=");
             //document.write(dividindo[1]);
             var numero = parseInt(dividindo[1]);
             var soma = numero + 1;
-            var visitas = ("<font face='verdana' size='1'>Suas Visitas : " + soma + "</font>");
+            var visitas = ("<font face='verdana' size='1'>" + soma + "</font>");
             setCookie("cookie", soma, 365);
+            visitasdoSite.innerHTML = visitas;
         }
     </script>
 
 </body>
 
-<footer id="visitasSite">
-    x
-</footer>
+
 
 
 
