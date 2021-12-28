@@ -601,6 +601,37 @@ function abrirFecharTabela()
     }
 }
 
+function moveMouseIconeJanela()
+{
+
+    var iconeJanela = document.getElementById('iconeJanela');
+
+    if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
+    {
+        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2p.png')
+
+    } else if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2p.png')
+    {
+        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png')
+    } else
+    {
+        if (iconeJanela.getAttribute('src') == '../icones/fecharJanelaBranco.png')
+        {
+            iconeJanela.setAttribute('src', '../icones/fecharJanelaBrancop.png')
+
+        } else if (iconeJanela.getAttribute('src') == '../icones/fecharJanelaBrancop.png')
+        {
+            iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png')
+        } else
+        {
+            iconeJanela.setAttribute('src', '../icones/GRAVAR.png')
+        }
+    }
+
+
+
+
+}
 
 /*
 function numeroAleatorio(min, max)
