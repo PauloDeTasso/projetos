@@ -65,8 +65,32 @@ var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
 
 var iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
 
+var botaoPausar = document.getElementById('iconePause');
+
+var botaoPlay = document.getElementById('iconePlay');
 
 /////////////////////////////////////////////////////////////////
+
+
+function play()
+{
+    audioPrincipal.play();
+    botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
+    botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
+}
+
+function pausar()
+{
+    audioPrincipal.pause();
+    botaoPlay.setAttribute('src', '../icones/playBranco.png');
+    botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
+}
+
+function stop()
+{
+    audioPrincipal.pause();
+    audioPrincipal.currentTime = 0;
+}
 
 function numeroAleatorio(min, max)
 {
@@ -420,7 +444,6 @@ function mudo()
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             iconeSomExtra.style.visibility = 'visible';
             iconeSomExtra2.style.visibility = 'hidden';
-            audioPrincipal.play();
         } else
         {
             audioPrincipal.muted = false;
@@ -429,7 +452,6 @@ function mudo()
             audio3.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             iconeSomExtra2.style.visibility = 'hidden';
-            audioPrincipal.play();
         }
 
     } else
@@ -441,7 +463,6 @@ function mudo()
         iconeSomExtra.style.visibility = 'hidden';
         iconeSomExtra2.style.visibility = 'visible';
         iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
-        audioPrincipal.pause();
     }
 }
 
@@ -576,7 +597,7 @@ function abrirFecharTabela()
     } else
     {
         secaoIframeHome.style.display = 'none';
-        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco.png')
+        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png')
     }
 }
 
@@ -681,24 +702,6 @@ break;
 }
 
 /////////////////////////////////////////////////////////
-
-/*
-function play()
-{
-    audioPrincipal.play();
-}
-
-function pause()
-{
-    audioPrincipal.pause();
-}
-
-function stop()
-{
-    audioPrincipal.pause();
-    audioPrincipal.currentTime = 0;
-}
-*/
 
 /*
 

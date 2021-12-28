@@ -39,11 +39,31 @@
 
             </section>
 
+            <section class="secaoPause">
+
+                <button class="botoes" onclick="pausar()" type="button">
+
+                    <img id="iconePause" src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
+
+                </button>
+
+            </section>
+
             <section class="secaoMudo">
 
                 <button class="botoes" onclick="mudo()" type="button">
 
                     <img id="iconeMudo" src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
+
+                </button>
+
+            </section>
+
+            <section class="secaoPlay">
+
+                <button class="botoes" onclick="play()" type="button">
+
+                    <img id="iconePlay" src="../icones/playBranco.png" alt="Icone de som" width="31px" height="31px">
 
                 </button>
 
@@ -98,6 +118,7 @@
             <h1 id="paulodetasso">
                 PAULO DE TASSO
             </h1>
+
         </section>
 
         <!-- <h1 class="tituloCabecalhoPrincipal"> 
@@ -127,7 +148,7 @@
         </section>
 
         <button id="botaoTabela" type="button" onclick="abrirFecharTabela()"><img id="iconeJanela"
-                src="../icones/AbrirJanelaBranco.png" alt="Icone para abrir tabela!" width="21px" height="21px">
+                src="../icones/AbrirJanelaBranco2.png" alt="Icone para abrir tabela!" width="14px" height="14px">
         </button>
 
         <section id="iframeHome" class="iframeHome">
@@ -267,7 +288,7 @@
 
     <section>
 
-        <audio class="audios" id='audioPrincipal' autoplay loop>
+        <audio class="audios" id='audioPrincipal' loop>
             <source id="audioSource" src="../audios/relaxing.wav" type="audio/wav">
         </audio>
 
