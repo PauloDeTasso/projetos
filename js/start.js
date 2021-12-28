@@ -38,7 +38,7 @@ contagemRegresiva();
 
 function contagemRegresiva()
 {
-    var ativar = setTimeout("visitando()", 300000);
+    var ativar = setTimeout("visitando()", 6000);
 }
 
 function visitando()
