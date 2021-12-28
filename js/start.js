@@ -18,7 +18,7 @@ function numeroAleatorioFrase(min, max)
 
 function alterarImagem()
 {
-    numeroAleatorioFrase(0, 4);
+    numeroAleatorioFrase(0, 5);
     imagem.setAttribute('src', '/imagens/start' + numeroAleatorioFraseInterno + '.png')
 }
 
@@ -26,3 +26,14 @@ function retornarImagem()
 {
     imagem.setAttribute('src', '/imagens/start0.png')
 }
+
+function contagemRegresiva()
+{
+    var t = setTimeout("alterarImagem()", 1000);
+    var t = setTimeout("alterarImagem()", 2000);
+    var t = setTimeout("alterarImagem()", 3000);
+    var t = setTimeout("alterarImagem()", 4000);
+    var t = setTimeout("alterarImagem()", 5000);
+    var t = setTimeout("alterarImagem()", 6000);
+}
+
