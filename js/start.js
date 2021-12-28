@@ -18,7 +18,7 @@ function numeroAleatorioFrase(min, max)
 
 function alterarImagem()
 {
-    numeroAleatorioFrase(0, 5);
+    numeroAleatorioFrase(0, 6);
     imagem.setAttribute('src', '/imagens/start' + numeroAleatorioFraseInterno + 'min.png')
 }
 
