@@ -10,6 +10,16 @@
 
     <title>Entrar</title>
 
+    <script language="javascript">
+        function setCookie(nome, valor, dias)
+        {
+            diasms = (new Date()).getTime() + 1000 * 3600 * 24 * dias;
+            dias = new Date(diasms);
+            expires = dias.toGMTString();
+            document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires;
+        } 
+    </script>
+
 </head>
 
 <body class="corpo">
@@ -26,10 +36,47 @@
 
     </map>
 
+    <section>
+
+        <audio id='botaoEntrar' class="audios">
+            <source id="audioSource" src="/audios/vento.wav" type="audio/wav">
+        </audio>
+
+    </section>
+
     <script src="js/start.js">
 
     </script>
 
+    <script language="javascript">
+
+        var visitasdoSite = document.getElementById('visitasSite');
+
+        if (!document.cookie)
+        {
+            setCookie("cookie", "1", 365);
+            var visitas = ("<font face='verdana' size='1'>Suas Visitas : 1</font>");
+            alert(visitas);
+            visitasdoSite.innerHTML = visitas;
+        } else
+        {
+            alert(visitas);
+            var cont = document.cookie;
+            var dividindo = cont.split("=");
+            //document.write(dividindo[1]);
+            var numero = parseInt(dividindo[1]);
+            var soma = numero + 1;
+            var visitas = ("<font face='verdana' size='1'>Suas Visitas : " + soma + "</font>");
+            setCookie("cookie", soma, 365);
+        }
+    </script>
+
 </body>
+
+<footer id="visitasSite">
+    x
+</footer>
+
+
 
 </html>
