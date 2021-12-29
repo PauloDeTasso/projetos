@@ -41,6 +41,7 @@ function contagemRegresiva()
     var ativar = setTimeout("visitando()", 6000);
 }
 
+/*
 function visitando()
 {
     online += 1;

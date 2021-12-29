@@ -4,7 +4,7 @@ html
     flex-direction: row;
     justify-content: center;
     background-color: rgb(0, 0, 0);
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -16,17 +16,4 @@ body
     background-color: rgb(0, 0, 0);  
     width: auto;
     height: auto;
-}
-
-#visitasSite
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    color: aliceblue;
-    align-items: center;
-    text-align: center;
-    font-size: 20pt;
 }
