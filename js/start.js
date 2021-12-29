@@ -6,6 +6,14 @@ var somVento = document.getElementById('botaoEntrar');
 
 var visitasdoSite = document.getElementById('visitasSite')
 
+var objetoEmMovimento = document.getElementById('objeto');
+
+function objetoPlay()
+{
+    objetoEmMovimento.setAttribute()
+}
+
+
 function numeroAleatorioFrase(min, max)
 {
     numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
@@ -23,7 +31,6 @@ function retornarImagem()
     imagem.setAttribute('src', 'imagens/start0min.png')
     /* somVento.pause();*/
 }
-
 
 var areaMapImagem = document.getElementById('areaImagem');
 
