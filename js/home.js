@@ -627,11 +627,24 @@ function moveMouseIconeJanela()
             iconeJanela.setAttribute('src', '../icones/GRAVAR.png')
         }
     }
-
-
-
-
 }
+
+var secaoLicense = document.getElementById('license');
+
+function abrirSecaoLicense()
+{
+    var estiloLicense = window.getComputedStyle(secaoLicense);
+    var valorEstilo = estiloLicense.getPropertyValue('display');
+
+    if (valorEstilo == "none")    
+    {
+        secaoLicense.style.display = 'flex';
+    } else
+    {
+        secaoLicense.style.display = 'none';
+    }
+}
+
 
 /*
 function numeroAleatorio(min, max)
