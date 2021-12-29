@@ -24,6 +24,14 @@ function retornarImagem()
     somVento.pause();
 }
 
+
+var areaMapImagem = document.getElementById('areaImagem');
+
+areaMapImagem.addEventListener("touchstart", alterarImagem());
+areaMapImagem.addEventListener("touchmove", alterarImagem());
+areaMapImagem.addEventListener("touchend", retornarImagem());
+/*
+
 function setCookie(nome, valor, dias)
 {
     diasms = (new Date()).getTime() + 1000 * 3600 * 24 * dias;
