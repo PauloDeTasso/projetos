@@ -645,6 +645,94 @@ function abrirSecaoLicense()
     }
 }
 
+///////////////////////////////////////////////////////* - ICONES MULTIMIDEA - */
+
+/**/
+
+function statusbaixarVolume()
+{
+    nome.innerHTML = 'Baixar Volume!'.toUpperCase();
+}
+
+function statusbaixarVolumeOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+///////////////////////////////////////////////////////* - ICONES LINGUAGENS - */
+
 function statusHtml()
 {
     nome.innerHTML = 'HTML5!';
@@ -712,7 +800,8 @@ function statusNtslOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
-/**//*
+
+///////////////////////////////////////////////////////**/
 
 /*
 var iconeHtml5 = getElementById('iconeHtml');
