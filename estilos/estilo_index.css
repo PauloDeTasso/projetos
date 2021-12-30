@@ -10,3 +10,48 @@ body
     background-color: rgb(0, 0, 0);  
 }
 
+.emojis
+{
+    width: 51px;
+    height: 51px;
+}
+
+#secaoTop
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#secaoLeft
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+#secaoBottom
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#secaoRight
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#secaoCenter
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
