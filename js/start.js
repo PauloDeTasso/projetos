@@ -29,8 +29,10 @@ function alterarImagem()
 function retornarImagem()
 {
     imagem.setAttribute('src', 'imagens/start0min.png')
-    /* somVento.pause();*/
+    somVento.pause();
 }
+
+/*
 
 var areaMapImagem = document.getElementById('areaImagem');
 
