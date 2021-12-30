@@ -697,36 +697,36 @@ function statusMudoOff()
 
 /**/
 
-function statusJavascript()
+function statusPlay()
 {
-    nome.innerHTML = 'Javascript!'.toUpperCase();
+    nome.innerHTML = 'Play!'.toUpperCase();
 }
 
-function statusJavascriptOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**/
-
-function statusJavascript()
-{
-    nome.innerHTML = 'Javascript!'.toUpperCase();
-}
-
-function statusJavascriptOff()
+function statusPlayOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
 /**/
 
-function statusJavascript()
+function statusSilencio()
 {
-    nome.innerHTML = 'Javascript!'.toUpperCase();
+    nome.innerHTML = 'Silêncio!'.toUpperCase();
 }
 
-function statusJavascriptOff()
+function statusSilencioOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusAumentarVolume()
+{
+    nome.innerHTML = 'Aumentar Volume!'.toUpperCase();
+}
+
+function statusAumentarVolumeOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
