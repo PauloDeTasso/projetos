@@ -39,7 +39,7 @@ body
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -47,7 +47,7 @@ body
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -55,7 +55,7 @@ body
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -63,6 +63,6 @@ body
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;   
+    justify-content: center;   
     align-items: center;
 }
