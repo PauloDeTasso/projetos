@@ -661,24 +661,24 @@ function statusbaixarVolumeOff()
 
 /**/
 
-function statusJavascript()
+function statusvolumeMaximo()
 {
-    nome.innerHTML = 'Javascript!'.toUpperCase();
+    nome.innerHTML = 'Volume Maximo!'.toUpperCase();
 }
 
-function statusJavascriptOff()
+function statusvolumeMaximoOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
 /**/
 
-function statusJavascript()
+function statusPause()
 {
-    nome.innerHTML = 'Javascript!'.toUpperCase();
+    nome.innerHTML = 'Pause!'.toUpperCase();
 }
 
-function statusJavascriptOff()
+function statusPauseOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
