@@ -27,7 +27,7 @@ function alterarImagem()
 
 function retornarImagem()
 {
-    imagem.setAttribute('src', 'imagens/start0min.png')
+    imagem.setAttribute('src', 'imagens/start0.png')
     somVento.pause();
 }
 
