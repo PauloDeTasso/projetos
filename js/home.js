@@ -645,6 +645,18 @@ function abrirSecaoLicense()
     }
 }
 
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+//////////////////////FUNÇÃO STATUS: /*
+
 
 /*
 function numeroAleatorio(min, max)
