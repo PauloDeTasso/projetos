@@ -655,8 +655,332 @@ function statusHtmlOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
-//////////////////////FUNÇÃO STATUS: /*
+/**/
 
+function statusCss()
+{
+    nome.innerHTML = 'CSS3!';
+}
+
+function statusCssOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+function statusHtml()
+{
+    nome.innerHTML = 'HTML5!';
+}
+
+function statusHtmlOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**//*
+
+/*
+var iconeHtml5 = getElementById('iconeHtml');
+
+function statusPrincipal()
+{
+    
+    if ()
+    
+    iconeHtml5.onmousemove = function () { statusHtml };
+
+
+}
 
 /*
 function numeroAleatorio(min, max)
