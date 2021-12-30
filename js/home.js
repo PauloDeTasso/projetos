@@ -669,304 +669,49 @@ function statusCssOff()
 
 /**/
 
-function statusHtml()
+function statusJavascript()
 {
-    nome.innerHTML = 'HTML5!';
+    nome.innerHTML = 'Javascript!'.toUpperCase();
 }
 
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**/
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
+function statusJavascriptOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
 /**/
 
-function statusHtml()
+function statusJava()
 {
-    nome.innerHTML = 'HTML5!';
+    nome.innerHTML = 'Java!'.toUpperCase();
 }
 
-function statusHtmlOff()
+function statusJavaOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
-
 /**/
 
-function statusHtml()
+function statusMysql()
 {
-    nome.innerHTML = 'HTML5!';
+    nome.innerHTML = 'Mysql!'.toUpperCase();
 }
 
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
+function statusMysqlOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
+/**/
 
-/**//*
-
-function statusHtml()
+function statusNtsl()
 {
-    nome.innerHTML = 'HTML5!';
+    nome.innerHTML = 'Ntsl!'.toUpperCase();
 }
 
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
+function statusNtslOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
-/**//*
-
-function statusHtml()
-{
-    nome.innerHTML = 'HTML5!';
-}
-
-function statusHtmlOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
 /**//*
 
 /*
