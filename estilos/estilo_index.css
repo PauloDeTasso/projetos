@@ -1,19 +1,12 @@
 html
 {   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    align-items: center;
     background-color: rgb(0, 0, 0);
-    width: 100%;
-    height: auto;
 }
 
 body
-{    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+{     
+    align-items: center;
     background-color: rgb(0, 0, 0);  
-    width: auto;
-    height: auto;
 }
+
