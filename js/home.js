@@ -30,7 +30,7 @@ var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
 var tituloPrincipal = document.getElementById('tituloPrincipal');
 
-var nome = document.getElementById("paulodetasso");
+var nome = document.getElementById("status");
 
 var portaPrincipal = document.getElementById('portaPrincipal');
 
