@@ -348,9 +348,10 @@ footer
 #botaoTabela
 {
    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   background-color: rgb(34, 34, 34);
+   flex-direction: column;
+   justify-content: right;
+   align-items: flex-end;
+   background-color: rgb(0, 0, 0);
    border: 0px solid rgb(0, 0, 0);
 }
 
