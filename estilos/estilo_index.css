@@ -1,57 +1,68 @@
 html
 {   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
 }
 
 body
 {     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);  
+}
+
+#secaoCentro
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#secaoBotao
+{
     align-items: center;
     background-color: rgb(0, 0, 0);  
 }
 
 .emojis
 {
-    width: 51px;
-    height: 51px;
+    width: 100px;
+    height: 100px;
 }
 
-#secaoTop
+#secaoNorte
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-#secaoLeft
+#secaoOeste
 {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
 }
 
-#secaoBottom
+#secaoSul
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-#secaoRight
+#secaoLeste
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#secaoCenter
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;   
     align-items: center;
 }

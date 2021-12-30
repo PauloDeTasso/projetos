@@ -13,7 +13,6 @@ function objetoPlay()
     objetoEmMovimento.setAttribute()
 }
 
-
 function numeroAleatorioFrase(min, max)
 {
     numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
@@ -30,6 +29,21 @@ function retornarImagem()
 {
     imagem.setAttribute('src', 'imagens/start0min.png')
     somVento.pause();
+}
+
+var emojiNorte1 = document.getElementById('emojiNorte01')
+
+var numeroEmojiAleatorio;
+
+function numeroEmojisAleatorio(min, max)
+{
+    numeroEmojiAleatorio = Math.floor(Math.random() * (max - min) + min);
+}
+
+function emojiAleatorio()
+{
+    numeroEmojisAleatorio(1, 40);
+    emojiNorte1.setAttribute('src', '../imagens/emojis/' + numeroEmojiAleatorio + '.png');
 }
 
 /*
