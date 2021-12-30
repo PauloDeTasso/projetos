@@ -649,24 +649,24 @@ function abrirSecaoLicense()
 
 /**/
 
-function statusbaixarVolume()
+function statusBaixarVolume()
 {
     nome.innerHTML = 'Baixar Volume!'.toUpperCase();
 }
 
-function statusbaixarVolumeOff()
+function statusBaixarVolumeOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
 /**/
 
-function statusvolumeMaximo()
+function statusVolumeMaximo()
 {
     nome.innerHTML = 'Volume Maximo!'.toUpperCase();
 }
 
-function statusvolumeMaximoOff()
+function statusVolumeMaximoOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
@@ -685,12 +685,12 @@ function statusPauseOff()
 
 /**/
 
-function statusJavascript()
+function statusMudo()
 {
-    nome.innerHTML = 'Javascript!'.toUpperCase();
+    nome.innerHTML = 'Mudo!'.toUpperCase();
 }
 
-function statusJavascriptOff()
+function statusMudoOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
