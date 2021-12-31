@@ -651,6 +651,19 @@ function abrirSecaoLicense()
 
 /**/
 
+function statusTextoEmMovimento()
+{
+    nome.innerHTML = 'Press!'.toUpperCase();
+}
+
+function statusTextoEmMovimentoOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+
+/**/
+
 function statusGift()
 {
     nome.innerHTML = '...'.toUpperCase();

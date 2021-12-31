@@ -124,8 +124,10 @@
         </section>
 
         <section class="quadro">
-            <p id="tituloPrincipal" class="marquee" onmousemove="alterarTexto1()" onmouseleave="alterarTexto2()"
-                ontouchmove="alterarTexto1()" ontouchend="alterarTexto2()" onclick="contagemRegresiva()">
+            <p id="tituloPrincipal" class="marquee" onmousemove="alterarTexto1(), statusTextoEmMovimento()"
+                onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()"
+                ontouchmove="alterarTexto1(),statusTextoEmMovimento()"
+                ontouchend="alterarTexto2(),statusTextoEmMovimentoOff()" onclick="contagemRegresiva()">
                 “It's not a faith in technology. It's faith in people.” - Steve Jobs
             </p>
 
