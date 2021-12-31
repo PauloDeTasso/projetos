@@ -79,6 +79,11 @@ var somCahoeira = document.getElementById('Cachoeira');
 function play()
 {
     audioPrincipal.play();
+    audioPrincipal.play();
+    audio1.play();
+    audio2.play();
+    audio3.play();
+    audio4.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
 }
@@ -86,6 +91,11 @@ function play()
 function pausar()
 {
     audioPrincipal.pause();
+    audio1.pause();
+    audio2.pause();
+    audio3.pause();
+    audio4.pause();
+    somCahoeira.pause();
     botaoPlay.setAttribute('src', '../icones/playBranco.png');
     botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
 }
