@@ -8,6 +8,10 @@ var visitasdoSite = document.getElementById('visitasSite')
 
 var objetoEmMovimento = document.getElementById('objeto');
 
+
+var contador = 0;
+
+/////////////////////////**/
 function objetoPlay()
 {
     objetoEmMovimento.setAttribute()
@@ -20,11 +24,11 @@ function numeroAleatorioFrase(min, max)
 
 function alterarImagem()
 {
-    somVento.play();
+    somVento.volume = 0.3;
+    playUnico();
     numeroAleatorioFrase(0, 20);
     imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png')
-    somVento.volume = 0.3;
-    somVento.play();
+    contador = 1;
 }
 
 function retornarImagem()
@@ -46,6 +50,18 @@ function emojiAleatorio()
 {
     numeroEmojisAleatorio(1, 40);
     emojiNorte1.setAttribute('src', '../imagens/emojis/' + numeroEmojiAleatorio + '.png');
+}
+
+function playUnico()
+{
+    if (contador == 0)
+    {
+        somVento.play();
+
+    } else
+    {
+
+    }
 }
 
 /*
