@@ -1095,7 +1095,7 @@ function statusLinkLicenseJavascriptOff()
 
 function sfssdCode()
 {
-    secaoRodapePrincipalIcones.style.backgroundImage = 'url("http://127.0.0.1:5501/icones/code9.gif")';
+    secaoRodapePrincipalIcones.style.backgroundImage = 'url("../icones/code9.gif")';
 
 }
 
