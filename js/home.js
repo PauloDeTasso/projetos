@@ -653,7 +653,7 @@ function abrirSecaoLicense()
 
 function statusBaixarVolume()
 {
-    nome.innerHTML = 'Baixar Volume!'.toUpperCase();
+    nome.innerHTML = 'Turn down volume!'.toUpperCase();
 }
 
 function statusBaixarVolumeOff()
@@ -665,7 +665,7 @@ function statusBaixarVolumeOff()
 
 function statusVolumeMaximo()
 {
-    nome.innerHTML = 'Volume Maximo!'.toUpperCase();
+    nome.innerHTML = 'Maximum Volume!'.toUpperCase();
 }
 
 function statusVolumeMaximoOff()
@@ -689,7 +689,7 @@ function statusPauseOff()
 
 function statusMudo()
 {
-    nome.innerHTML = 'Mudo!'.toUpperCase();
+    nome.innerHTML = 'Mute!'.toUpperCase();
 }
 
 function statusMudoOff()
@@ -713,7 +713,7 @@ function statusPlayOff()
 
 function statusSilencio()
 {
-    nome.innerHTML = 'Silêncio!'.toUpperCase();
+    nome.innerHTML = 'Silence!'.toUpperCase();
 }
 
 function statusSilencioOff()
@@ -725,7 +725,7 @@ function statusSilencioOff()
 
 function statusAumentarVolume()
 {
-    nome.innerHTML = 'Aumentar Volume!'.toUpperCase();
+    nome.innerHTML = 'Turn up the volume!'.toUpperCase();
 }
 
 function statusAumentarVolumeOff()
@@ -817,10 +817,10 @@ function statusIconeTabela()
 
     if (getDisplay == "none")    
     {
-        nome.innerHTML = 'Maximizar Skills!'.toUpperCase();
+        nome.innerHTML = 'Maximize Skills!'.toUpperCase();
     } else
     {
-        nome.innerHTML = 'Minimizar Skills!'.toUpperCase();
+        nome.innerHTML = 'Minimize Skills!'.toUpperCase();
     }
 }
 
@@ -855,7 +855,7 @@ function statusWhatsappOff()
 
 function statusEnviarEmail()
 {
-    nome.innerHTML = 'Enviar Email!'.toUpperCase();
+    nome.innerHTML = 'Send Email!'.toUpperCase();
 }
 
 function statusEnviarEmailOff()
@@ -955,6 +955,18 @@ function statusLicenseJavascript()
 }
 
 function statusLicenseJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusLinkLicenseJavascript()
+{
+    nome.innerHTML = 'Open License Javascript!'.toUpperCase();
+}
+
+function statusLinkLicenseJavascriptOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }

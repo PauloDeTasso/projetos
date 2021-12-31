@@ -327,10 +327,9 @@
                 </a>
 
                 <a href="https://github.com/PauloDeTasso" target="_blank">
-                    <img onmousemove="statusWhatsapp()" onmouseleave="statusWhatsappOff()"
-                        ontouchmove="statusWhatsapp()" ontouchend="statusWhatsappOff()"
-                        src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png" alt="Logo Github" width="31px"
-                        height="31px">
+                    <img onmousemove="statusGithub()" onmouseleave="statusGithubOff()" ontouchmove="statusGithub()"
+                        ontouchend="statusGithubOff()" src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png"
+                        alt="Logo Github" width="31px" height="31px">
                 </a>
 
             </address>
@@ -339,13 +338,17 @@
 
         <nav id="navLicense">
 
-            <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()">
+            <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
+                onmousemove="statusLicenseJavascript()" onmouseleave="statusLicenseJavascriptOff()"
+                ontouchmove="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
                 <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
             </button>
 
             <section id="license">
 
-                <a href="../licenses/copying Apache 2.0.txt" rel="jslicense" target="_blank">JavaScript license
+                <a onmousemove="statusLinkLicenseJavascript()" onmouseleave="statusLinkLicenseJavascriptOff()"
+                    ontouchmove="statusLinkLicenseJavascript()" ontouchend="statusLinkLicenseJavascriptOff()"
+                    href="../licenses/copying Apache 2.0.txt" rel="jslicense" target="_blank">JavaScript license
                     information</a>
                 <br>
             </section>
