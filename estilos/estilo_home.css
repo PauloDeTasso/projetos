@@ -182,13 +182,12 @@ footer
 #secaoRodapePrincipalIcones1
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: auto;
     /*background-color: rgb(255, 233, 191);*/
    /* background-image: url("../icones/code9.gif");*/
-   border: 5px solid rgb(0, 0, 0);
 }
 
 /*rgb(233, 233, 233);*/
