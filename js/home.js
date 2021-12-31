@@ -71,7 +71,7 @@ var botaoPlay = document.getElementById('iconePlay');
 
 var secaoIframeHome = document.getElementById('iframeHome');
 
-var somCahoeira = getElementById('Cachoeira');
+var somCahoeira = document.getElementById('Cachoeira');
 
 /////////////////////////////////////////////////////////////////
 
@@ -489,7 +489,7 @@ function mudo()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-    if (audioPrincipal.muted || audio1.muted || audio2.muted || audio3.muted || audio4.muted)
+    if (audioPrincipal.muted || audio1.muted || audio2.muted || audio3.muted || audio4.muted || somCahoeira.muted)
     {
 
         if (iconeSomExtra.style.visibility == 'hidden' && volumeArredondado == 10)
