@@ -73,6 +73,10 @@ var secaoIframeHome = document.getElementById('iframeHome');
 
 var somCahoeira = document.getElementById('Cachoeira');
 
+var sfssd = document.getElementById('SFSSD');
+
+var gifCodeFooter = document.getElementById('codeFooter');
+
 /////////////////////////////////////////////////////////////////
 
 
@@ -1068,6 +1072,19 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
+
+function sfssdCode()
+{
+    if (sfssd.hidden == true)
+    {
+        sfssd.hidden = false;
+        gifCodeFooter.hidden = true;
+    } else
+    {
+        sfssd.hidden = true;
+        gifCodeFooter.hidden = false;
+    }
+}
 /*
 
 function statusJavascript()
