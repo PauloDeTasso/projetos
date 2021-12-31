@@ -816,6 +816,12 @@ function statusIconeTabela()
 }
 
 
+function statusIconeTabelaOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+
 ///////////////////////////////////////////////////////**/
 /*
 
