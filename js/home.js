@@ -83,11 +83,6 @@ var gifCodeFooter = document.getElementById('codeFooter');
 function play()
 {
     audioPrincipal.play();
-    audioPrincipal.play();
-    audio1.play();
-    audio2.play();
-    audio3.play();
-    audio4.play();
     somCahoeira.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
@@ -96,10 +91,6 @@ function play()
 function pausar()
 {
     audioPrincipal.pause();
-    audio1.pause();
-    audio2.pause();
-    audio3.pause();
-    audio4.pause();
     somCahoeira.pause();
     botaoPlay.setAttribute('src', '../icones/playBranco.png');
     botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
@@ -1072,17 +1063,23 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
+/*
 
 function sfssdCode()
 {
-    if (sfssd.hidden == true)
+
+    let getStyleCode = window.getComputedStyle(sfssd);
+    let getDisplayCode = getStyleCode.getPropertyValue('visibility');
+
+    if (getDisplayCode == 'visible')
     {
-        sfssd.hidden = false;
-        gifCodeFooter.hidden = true;
+        sfssd.style.visibility = 'hidden';
+        gifCodeFooter.style.visibility = 'visible';
+
     } else
     {
-        sfssd.hidden = true;
-        gifCodeFooter.hidden = false;
+        sfssd.style.visibility = 'visible';
+        gifCodeFooter.style.visibility = 'hidden';
     }
 }
 /*
