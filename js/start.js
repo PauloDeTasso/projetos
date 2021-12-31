@@ -30,7 +30,7 @@ function alterarImagem()
 function retornarImagem()
 {
     imagem.setAttribute('src', 'imagens/start0.png')
-    somVento.pause();
+    /* somVento.pause();*/
 }
 
 var emojiNorte1 = document.getElementById('emojiNorte01')
