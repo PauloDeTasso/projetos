@@ -434,7 +434,7 @@ function mudo()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-    if (audioPrincipal.muted)
+    if (audioPrincipal.muted || audio1.muted || audio2.muted || audio3.muted || audio4.muted)
     {
 
         if (iconeSomExtra.style.visibility == 'hidden' && volumeArredondado == 10)
@@ -443,6 +443,7 @@ function mudo()
             audio1.muted = false;
             audio2.muted = false;
             audio3.muted = false;
+            audio4.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             iconeSomExtra.style.visibility = 'visible';
             iconeSomExtra2.style.visibility = 'hidden';
@@ -452,6 +453,7 @@ function mudo()
             audio1.muted = false;
             audio2.muted = false;
             audio3.muted = false;
+            audio4.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             iconeSomExtra2.style.visibility = 'hidden';
         }
@@ -462,6 +464,7 @@ function mudo()
         audio1.muted = true;
         audio2.muted = true;
         audio3.muted = true;
+        audio4.muted = true;
         iconeSomExtra.style.visibility = 'hidden';
         iconeSomExtra2.style.visibility = 'visible';
         iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
@@ -514,7 +517,7 @@ function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
     nome.style.color = 'rgb(130, 130, 130)';
-    tituloPrincipal.style.backgroundColor = 'rgb(250, 233, 200)';
+    tituloPrincipal.style.backgroundColor = 'rgb(250, 240, 210)';
 }
 
 function alterarTexto2()
@@ -559,7 +562,7 @@ function show2(texto)
 function show3(texto)
 {
     nome.innerHTML = texto;
-    audio4.play(0);
+    audio4.play();
 }
 
 function alertMsg()
