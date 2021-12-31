@@ -810,11 +810,11 @@ function statusIconeTabelaOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
-
 function statusIconeTabela()
 {
     var getStyle = window.getComputedStyle(secaoIframeHome);
     var getDisplay = getStyle.getPropertyValue('display');
+
     if (getDisplay == "none")    
     {
         nome.innerHTML = 'Maximizar Skills!'.toUpperCase();
@@ -824,7 +824,141 @@ function statusIconeTabela()
     }
 }
 
-///////////////////////////////////////////////////////**/
+///////////////////////////////////////////////////////* -  ICONES CONTATOS: - */
+
+
+/**/
+
+function statusSeniorFullStackSoftwareDeveloper()
+{
+    nome.innerHTML = 'Senior Full Stack Software Developer!'.toUpperCase();
+}
+
+function statusSeniorFullStackSoftwareDeveloperOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusWhatsapp()
+{
+    nome.innerHTML = 'Whatsapp!'.toUpperCase();
+}
+
+function statusWhatsappOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusEnviarEmail()
+{
+    nome.innerHTML = 'Enviar Email!'.toUpperCase();
+}
+
+function statusEnviarEmailOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusSkype()
+{
+    nome.innerHTML = 'Skype!'.toUpperCase();
+}
+
+function statusSkypeOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusLinkedIn()
+{
+    nome.innerHTML = 'LinkedIn!'.toUpperCase();
+}
+
+function statusLinkedInOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusTwitter()
+{
+    nome.innerHTML = 'Twitter!'.toUpperCase();
+}
+
+function statusTwitterOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusFacebook()
+{
+    nome.innerHTML = 'Facebook!'.toUpperCase();
+}
+
+function statusFacebookOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusInstagram()
+{
+    nome.innerHTML = 'Instagram!'.toUpperCase();
+}
+
+function statusInstagramOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusYoutube()
+{
+    nome.innerHTML = 'Youtube!'.toUpperCase();
+}
+
+function statusYoutubeOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusGithub()
+{
+    nome.innerHTML = 'Github!'.toUpperCase();
+}
+
+function statusGithubOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusLicenseJavascript()
+{
+    nome.innerHTML = 'License Javascript!'.toUpperCase();
+}
+
+function statusLicenseJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
 /*
 
 function statusJavascript()
