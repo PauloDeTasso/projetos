@@ -10,7 +10,8 @@ html
 body
 {     
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
     background-color: rgb(0, 0, 0);  
 }
