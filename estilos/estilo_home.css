@@ -81,16 +81,18 @@ footer
 .tituloArtigoSecao01
 {
    text-align: center;
+   font-size: 22pt;
 }
 
 .paragrafoArtigo
 
 {
-   font-size: 14pt;
+   font-size: 18pt;
    text-align: justify;
    font-weight: lighter;
    align-items: center;
    padding: 1%;
+   letter-spacing: 1px;
 }
 
 /**/
