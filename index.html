@@ -16,8 +16,12 @@
 
     <section>
 
-        <audio id='botaoEntrar' class="audios" preload="auto">
+        <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
             <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
+        </audio>
+
+        <audio id='loop' class="audios" preload="auto">
+            <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg">
         </audio>
 
     </section>
@@ -31,7 +35,7 @@
         <map name="login">
 
             <area id="areaImagem" onmousemove="alterarImagem()" onmouseout="retornarImagem()"
-                ontouchmove="alterarImagem()" ontouchend="retornarImagem()" shape="circle" coords="473,548,177"
+                ontouchmove="alterarImagem()" ontouchcancel="retornarImagem()" shape="circle" coords="473,548,177"
                 href="docs/Home.html">
 
         </map>

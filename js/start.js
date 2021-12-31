@@ -2,16 +2,22 @@ var imagem = document.getElementById('start')
 
 var numeroAleatorioFraseInterno;
 
-var somVento = document.getElementById('botaoEntrar');
-
-var visitasdoSite = document.getElementById('visitasSite')
+var visitasdoSite = document.getElementById('visitasSite');
 
 var objetoEmMovimento = document.getElementById('objeto');
 
+var somVento = document.getElementById('somDoVento');
+
+var somLoop = document.getElementById('loop');
 
 var contador = 0;
 
+var emojiNorte1 = document.getElementById('emojiNorte01');
+
+var numeroEmojiAleatorio;
+
 /////////////////////////**/
+
 function objetoPlay()
 {
     objetoEmMovimento.setAttribute()
@@ -37,10 +43,6 @@ function retornarImagem()
     /* somVento.pause();*/
 }
 
-var emojiNorte1 = document.getElementById('emojiNorte01')
-
-var numeroEmojiAleatorio;
-
 function numeroEmojisAleatorio(min, max)
 {
     numeroEmojiAleatorio = Math.floor(Math.random() * (max - min) + min);
@@ -54,13 +56,27 @@ function emojiAleatorio()
 
 function playUnico()
 {
-    if (contador == 0)
+    if (contador == 0 || contador == undefined)
     {
         somVento.play();
-
     } else
     {
 
+    }
+
+}
+
+function somTerminou()
+{
+    let confimar = confirm("Ok for a song!");
+
+    if (confimar == true) 
+    {
+        somLoop.play();
+
+    } else
+    {
+        somLoop.pause();
     }
 }
 
