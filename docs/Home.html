@@ -105,7 +105,7 @@
 
         </nav>
 
-        <button type="button" onclick="abrirSecaoGift()">
+        <button id="botaoGif" type="button" onclick="abrirSecaoGift()">
         </button>
 
         <section id="secaoGift" class="secaoGift">
@@ -144,24 +144,24 @@
                     onmouseout="statusHtmlOff()" src="../icones/800x600/html5.png" alt="Icone HTML5" width="51px"></a>
 
             <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss" onmousemove="statusCss()"
-                    onmouseleave="statusCssOff()" onmousemove="statusCss()" onmouseout="statusCsslOff()"
+                    onmouseleave="statusCssOff()" onmousemove="statusCss()" onmouseout="statusCssOff()"
                     src="../icones/800x600/css3.png" alt="Icone CSS3" width="51px"></a>
 
             <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
                     onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
-                    onmousemove="statusJavascript()" onmouseout="statusJavascriptlOff()"
+                    onmousemove="statusJavascript()" onmouseout="statusJavascriptOff()"
                     src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="51px"></a>
 
             <a href="https://www.java.com" target="_blank"><img id="iconeJava" onmousemove="statusJava()"
-                    onmouseleave="statusJavaOff()" onmousemove="statusJava()" onmouseout="statusJavalOff()"
+                    onmouseleave="statusJavaOff()" onmousemove="statusJava()" onmouseout="statusJavaOff()"
                     src="../icones/800x600/java.png" alt="Icone JAVA" width="51px"></a>
 
             <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql" onmousemove="statusMysql()"
-                    onmouseleave="statusMysqlOff()" onmousemove="statusMysql()" onmouseout="statusMysqllOff()"
+                    onmouseleave="statusMysqlOff()" onmousemove="statusMysql()" onmouseout="statusMysqlOff()"
                     src="../icones/800x600/mysql.png" alt="Icone MYSQL" width="51px"></a>
 
             <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl" onmousemove="statusNtsl()"
-                    onmouseleave="statusNtslOff()" onmousemove="statusNtsl()" onmouseout="statusNtsllOff()"
+                    onmouseleave="statusNtslOff()" onmousemove="statusNtsl()" onmouseout="statusNtslOff()"
                     src="../icones/800x600/ntsl.png" alt="Icone NTSL" width="51px"></a>
 
         </section>
@@ -169,7 +169,7 @@
         <section id="botaoTabela">
 
             <button id="botaoTabela" type="button"><img id="iconeJanela" onclick="abrirFecharTabela()"
-                    onmousemove="moveMouseIconeJanela()" onmouseleave="moveMouseIconeJanela()"
+                    onmousemove="moveMouseIconeJanela(), statusIconeTabela()" onmouseleave="moveMouseIconeJanela()"
                     onclick="abrirFecharTabela()" onmousemove="moveMouseIconeJanela()"
                     onmouseout="moveMouseIconeJanela()" src="../icones/AbrirJanelaBranco2.png"
                     alt="Icone para abrir tabela!" width="14px" height="14px">

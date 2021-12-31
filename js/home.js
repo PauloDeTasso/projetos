@@ -801,7 +801,34 @@ function statusNtslOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
+///////////////////////////////////////////////////////* - BARRA DE ICONES - */
+
+
+function statusIconeTabela()
+{
+    if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
+    {
+        nome.innerHTML = 'Maximizar Tabela!'.toUpperCase();
+    } else
+    {
+        nome.innerHTML = 'Minimizar Tabela!'.toUpperCase();
+    }
+}
+
+
 ///////////////////////////////////////////////////////**/
+/*
+
+function statusJavascript()
+{
+    nome.innerHTML = 'Javascript!'.toUpperCase();
+}
+
+function statusJavascriptOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
 
 /*
 var iconeHtml5 = getElementById('iconeHtml');
