@@ -20,7 +20,9 @@
 
             <section class="secaoMudo">
 
-                <button class="botoes" onclick="diminuir_volume()" type="button">
+                <button class="botoes" onclick="diminuir_volume()" onmousemove="diminuir_volume()"
+                    onmouseleave="diminuir_volume()" ontouchmove="diminuir_volume()" ontouchend="diminuir_volume()"
+                    type="button">
 
                     <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
                         onmouseleave="statusBaixarVolumeOff()" ontouchmove="statusBaixarVolume()"
@@ -93,7 +95,9 @@
 
             <section class="secaoMudo">
 
-                <button class="botoes" onclick="aumentar_volume()" type="button">
+                <button class="botoes" onclick="aumentar_volume()" onmousemove="aumentar_volume()"
+                    onmouseleave="aumentar_volume()" ontouchmove="aumentar_volume()" ontouchend="aumentar_volume()"
+                    type="button">
 
                     <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
                         onmouseleave="statusAumentarVolumeOff()" ontouchmove="statusAumentarVolume()"
