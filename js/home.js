@@ -651,6 +651,18 @@ function abrirSecaoLicense()
 
 /**/
 
+function statusGift()
+{
+    nome.innerHTML = '...'.toUpperCase();
+}
+
+function statusGiftOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
 function statusBaixarVolume()
 {
     nome.innerHTML = 'Turn down volume!'.toUpperCase();

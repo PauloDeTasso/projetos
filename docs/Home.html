@@ -106,7 +106,8 @@
 
         </nav>
 
-        <button id="botaoGif" type="button" onclick="abrirSecaoGift()">
+        <button id="botaoGif" onmousemove="statusGift()" onmouseleave="statusGiftOff()" ontouchmove="statusGift()"
+            ontouchend="statusGiftOff()" type="button" onclick="abrirSecaoGift()">
         </button>
 
         <section id="secaoGift" class="secaoGift">
@@ -348,7 +349,7 @@
 
                 <a onmousemove="statusLinkLicenseJavascript()" onmouseleave="statusLinkLicenseJavascriptOff()"
                     ontouchmove="statusLinkLicenseJavascript()" ontouchend="statusLinkLicenseJavascriptOff()"
-                    href="../licenses/copying Apache 2.0.txt" rel="jslicense" target="_blank">JavaScript license
+                    href="../licenses/copying.txt" rel="jslicense" target="_blank">JavaScript license
                     information</a>
                 <br>
             </section>
