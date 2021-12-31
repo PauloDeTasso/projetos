@@ -817,10 +817,10 @@ function statusIconeTabela()
     var getDisplay = getStyle.getPropertyValue('display');
     if (getDisplay == "none")    
     {
-        nome.innerHTML = 'Maximizar Tabela!'.toUpperCase();
+        nome.innerHTML = 'Maximizar Skills!'.toUpperCase();
     } else
     {
-        nome.innerHTML = 'Minimizar Tabela!'.toUpperCase();
+        nome.innerHTML = 'Minimizar Skills!'.toUpperCase();
     }
 }
 
