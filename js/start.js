@@ -68,7 +68,7 @@ function playUnico()
 
 function somTerminou()
 {
-    let confimar = confirm("Ok for a song!");
+    let confimar = confirm("Ok for a song?");
 
     if (confimar == true) 
     {

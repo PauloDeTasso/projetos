@@ -84,6 +84,7 @@ function play()
     audio2.play();
     audio3.play();
     audio4.play();
+    somCahoeira.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
 }
