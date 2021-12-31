@@ -69,6 +69,8 @@ var botaoPausar = document.getElementById('iconePause');
 
 var botaoPlay = document.getElementById('iconePlay');
 
+var secaoIframeHome = document.getElementById('iframeHome');
+
 /////////////////////////////////////////////////////////////////
 
 
@@ -586,7 +588,7 @@ function abrirSecaoGift()
 
 function abrirFecharTabela()
 {
-    var secaoIframeHome = document.getElementById('iframeHome');
+
     var iconeJanela = document.getElementById('iconeJanela');
     var getStyle = window.getComputedStyle(secaoIframeHome);
     var getDisplay = getStyle.getPropertyValue('display');
@@ -803,10 +805,17 @@ function statusNtslOff()
 
 ///////////////////////////////////////////////////////* - BARRA DE ICONES - */
 
+function statusIconeTabelaOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
 
 function statusIconeTabela()
 {
-    if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
+    var getStyle = window.getComputedStyle(secaoIframeHome);
+    var getDisplay = getStyle.getPropertyValue('display');
+    if (getDisplay == "none")    
     {
         nome.innerHTML = 'Maximizar Tabela!'.toUpperCase();
     } else
@@ -814,13 +823,6 @@ function statusIconeTabela()
         nome.innerHTML = 'Minimizar Tabela!'.toUpperCase();
     }
 }
-
-
-function statusIconeTabelaOff()
-{
-    nome.innerHTML = 'PAULO DE TASSO';
-}
-
 
 ///////////////////////////////////////////////////////**/
 /*
