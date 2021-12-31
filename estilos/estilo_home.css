@@ -177,7 +177,7 @@ footer
     padding: 1%;
 }
 
-.secaoRodapePrincipalIcones1
+#secaoRodapePrincipalIcones1
 {
     display: flex;
     flex-direction: row;
@@ -185,7 +185,7 @@ footer
     width: 100%;
     height: auto;
     /*background-color: rgb(255, 233, 191);*/
-    background-image: url("../icones/code9.gif");;
+   /* background-image: url("../icones/code9.gif");*/
 }
 /*rgb(233, 233, 233);*/
 
@@ -429,4 +429,12 @@ footer
 #codeFooter
 {
     visibility: hidden;
+}
+
+#SecaoGifPrincipal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

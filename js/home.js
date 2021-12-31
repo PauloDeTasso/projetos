@@ -59,7 +59,7 @@ var numeroAleatorioFrase;
 
 var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
 
-var secaoGift = document.getElementById('secaoGift');
+var secaoGif = document.getElementById('secaoGif');
 
 var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
 
@@ -76,6 +76,10 @@ var somCahoeira = document.getElementById('Cachoeira');
 var sfssd = document.getElementById('SFSSD');
 
 var gifCodeFooter = document.getElementById('codeFooter');
+
+var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
+
+var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');
 
 /////////////////////////////////////////////////////////////////
 
@@ -637,17 +641,31 @@ function alertMsg()
     tituloPrincipal.innerHTML = fraseAtual;
 }
 
-function abrirSecaoGift()
+function abrirSecaoGif()
 {
-    var style = window.getComputedStyle(secaoGift);
+    var style = window.getComputedStyle(secaoGif);
     var top = style.getPropertyValue('display');
 
     if (top == "none")    
     {
-        secaoGift.style.display = 'flex';
+        secaoGif.style.display = 'flex';
     } else
     {
-        secaoGift.style.display = 'none';
+        secaoGif.style.display = 'none';
+    }
+}
+
+function abrirSecaoGifPrincipal()
+{
+    let styleGifPrincipal = window.getComputedStyle(secaoGifPrincipal);
+    let estiloGifPrincipal = styleGifPrincipal.getPropertyValue('display');
+
+    if (estiloGifPrincipal == "none")    
+    {
+        secaoGifPrincipal.style.display = 'flex';
+    } else
+    {
+        secaoGifPrincipal.style.display = 'none';
     }
 }
 
@@ -731,12 +749,24 @@ function statusTextoEmMovimentoOff()
 
 /**/
 
-function statusGift()
+function statusGif()
 {
     nome.innerHTML = '...'.toUpperCase();
 }
 
-function statusGiftOff()
+function statusGifOff()
+{
+    nome.innerHTML = 'PAULO DE TASSO';
+}
+
+/**/
+
+function statusGifPrincipal()
+{
+    nome.innerHTML = '...'.toUpperCase();
+}
+
+function statusGifPrincipalOff()
 {
     nome.innerHTML = 'PAULO DE TASSO';
 }
@@ -1063,25 +1093,17 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
-/*
-
 function sfssdCode()
 {
+    secaoRodapePrincipalIcones.style.backgroundImage = 'url("http://127.0.0.1:5501/icones/code9.gif")';
 
-    let getStyleCode = window.getComputedStyle(sfssd);
-    let getDisplayCode = getStyleCode.getPropertyValue('visibility');
-
-    if (getDisplayCode == 'visible')
-    {
-        sfssd.style.visibility = 'hidden';
-        gifCodeFooter.style.visibility = 'visible';
-
-    } else
-    {
-        sfssd.style.visibility = 'visible';
-        gifCodeFooter.style.visibility = 'hidden';
-    }
 }
+
+function sfssdCodeOff()
+{
+    secaoRodapePrincipalIcones.style.backgroundImage = 'url("")';
+}
+
 /*
 
 function statusJavascript()
