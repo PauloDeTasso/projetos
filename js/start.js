@@ -20,7 +20,8 @@ function numeroAleatorioFrase(min, max)
 
 function alterarImagem()
 {
-    numeroAleatorioFrase(0, 13);
+    somVento.play();
+    numeroAleatorioFrase(0, 16);
     imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png')
     somVento.volume = 0.3;
     somVento.play();
