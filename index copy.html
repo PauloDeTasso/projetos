@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilo_home_copy.css" />
+    <link rel="icon" href="/icones/code3.gif" type="image/gif">
+
+    <title>Paulo de Tasso</title>
+
+</head>
+
+<header id="audios">
+
+    <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
+        <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id='loop' class="audios" preload="auto" loop>
+        <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg">
+    </audio>
+
+</header>
+
+<body class="corpo">
+
+    <section id="secaoNorte">
+
+        secaoNorte
+
+    </section>
+
+    <!--  -->
+
+    <section id="secaoCentro">
+
+        <section id="secaoOeste">
+
+            secaoOeste
+
+        </section>
+
+        <section id="secaoPrincipal">
+
+            <header class="cabecalhoPrincipal">
+
+                <nav class="headerBotaoSomInicio">
+
+                    <section class="secaoMudo">
+
+                        <button class="botoes" onclick="diminuir_volume()" onmousemove="diminuir_volume()"
+                            onmouseleave="diminuir_volume()" ontouchmove="diminuir_volume()"
+                            ontouchend="diminuir_volume()" type="button">
+
+                            <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
+                                onmouseleave="statusBaixarVolumeOff()" ontouchmove="statusBaixarVolume()"
+                                ontouchend="statusBaixarVolumeOff()" src="../icones/800x600/volumebaixo.png"
+                                alt="Diminuir Volume" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section id="iconeVolumeAltoDemais">
+
+                        <button class="botoes" type="button">
+
+                            <img id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
+                                onmouseleave="statusVolumeMaximoOff()" ontouchmove="statusVolumeMaximo()"
+                                ontouchend="statusVolumeMaximoOff()" src="../icones/800x600/volumehigh.png"
+                                alt="Icone de volume alto!" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section class="secaoPause">
+
+                        <button class="botoes" onclick="pausar()" type="button">
+
+                            <img id="iconePause" onmousemove="statusPause()" onmouseleave="statusPauseOff()"
+                                ontouchmove="statusPause()" ontouchend="statusPauseOff()"
+                                src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section class="secaoMudo">
+
+                        <button class="botoes" onclick="mudo()" type="button">
+
+                            <img id="iconeMudo" onmousemove="statusMudo()" onmouseleave="statusMudoOff()"
+                                ontouchmove="statusMudo()" ontouchend="statusMudoOff()"
+                                src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section class="secaoPlay">
+
+                        <button class="botoes" onclick="play()" type="button">
+
+                            <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
+                                ontouchmove="statusPlay()" ontouchend="statusPlayOff()" src="../icones/playBranco.png"
+                                alt="Icone de som" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section id="iconeVolumeBaixoDemais">
+
+                        <button class="botoes" type="button">
+
+                            <img id="iconeVolumeBaixo" onmousemove="statusSilencio()" onmouseleave="statusSilencioOff()"
+                                ontouchmove="statusSilencio()" ontouchend="statusSilencioOff()"
+                                src="../icones/silencio2.png" alt="Icone de volume baixo!" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                    <section class="secaoMudo">
+
+                        <button class="botoes" onclick="aumentar_volume()" onmousemove="aumentar_volume()"
+                            onmouseleave="aumentar_volume()" ontouchmove="aumentar_volume()"
+                            ontouchend="aumentar_volume()" type="button">
+
+                            <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
+                                onmouseleave="statusAumentarVolumeOff()" ontouchmove="statusAumentarVolume()"
+                                ontouchend="statusAumentarVolumeOff()" src="../icones/800x600/volumealto.png"
+                                alt="Aumentar Volume" width="31px" height="31px">
+
+                        </button>
+
+                    </section>
+
+                </nav>
+
+                <button id=" botaoGifPrincipal" onmousemove="statusGifPrincipal()"
+                    onmouseleave="statusGifPrincipalOff()" ontouchmove="statusGifPrincipal()"
+                    ontouchend="statusGifPrincipalOff()" type="button" onclick="abrirSecaoGifPrincipal()">
+                </button>
+
+                <section id="SecaoGifPrincipal" class="secaoGifPrincipal">
+
+                    <img src="../imagens/gif/nature0.gif" alt="Cachoeira" width="70%" height="120px">
+
+                </section>
+
+                <!-- 
+        
+                <button id=" botaoGif" onmousemove="statusGif()" onmouseleave="statusGifOff()" ontouchmove="statusGif()"
+                        ontouchend="statusGifOff()" type="button" onclick="abrirSecaoGif()">
+                    </button>
+        
+                    <section id="secaoGif" class="secaoGif">
+        
+                        <img id="gif1" onmousemove="alterarGif1()" onmouseleave="alterarGif1()" ontouchmove="alterarGif1()"
+                            ontouchend="alterarGif1()" src="../icones/code.gif" alt="Imagem Gif - 1" width="41px" height="41px">
+        
+                        <img id="gif2" onmousemove="alterarGif2()" onmouseleave="alterarGif2()" ontouchmove="alterarGif2()"
+                            ontouchend="alterarGif2()" src="../icones/code.gif" alt="Imagem Gif - 2" width="41px" height="41px">
+        
+                        <img id="gif3" onmousemove="alterarGif3()" onmouseleave="alterarGif3()" ontouchmove="alterarGif3()"
+                            ontouchend="alterarGif3()" src="../icones/code.gif" alt="Imagem Gif - 3" width="41px" height="41px">
+        
+                    </section>
+                    -->
+
+                <section class=" quadro">
+
+                    <p id="tituloPrincipal" class="marquee" onmousemove="alterarTexto1(), statusTextoEmMovimento()"
+                        onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()"
+                        ontouchmove="alterarTexto1(),statusTextoEmMovimento()"
+                        ontouchend="alterarTexto2(),statusTextoEmMovimentoOff()" onclick="contagemRegresiva()">
+                        “It's not a faith in technology. It's faith in people.” - Steve Jobs
+                    </p>
+
+                    <h1 id="status">
+                        PAULO DE TASSO
+                    </h1>
+
+                </section>
+
+                <section class="divCabecalhoPrincipal">
+
+                    <a href="https://html.spec.whatwg.org/multipage/" target="_blank">
+                        <img id="iconeHtml" onmousemove="statusHtml()" onmouseleave="statusHtmlOff()"
+                            ontouchmove="statusHtml()" ontouchend="statusHtmlOff()" src="../icones/800x600/html5.png"
+                            alt="Icone HTML5" width="51px"></a>
+
+                    <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss" onmousemove="statusCss()"
+                            onmouseleave="statusCssOff()" ontouchmove="statusCss()" ontouchend="statusCssOff()"
+                            src="../icones/800x600/css3.png" alt="Icone CSS3" width="51px"></a>
+
+                    <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
+                            onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
+                            ontouchmove="statusJavascript()" ontouchend="statusJavascriptOff()"
+                            src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="51px"></a>
+
+                    <a href="https://www.java.com" target="_blank"><img id="iconeJava" onmousemove="statusJava()"
+                            onmouseleave="statusJavaOff()" ontouchmove="statusJava()" ontouchend="statusJavaOff()"
+                            src="../icones/800x600/java.png" alt="Icone JAVA" width="51px"></a>
+
+                    <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql" onmousemove="statusMysql()"
+                            onmouseleave="statusMysqlOff()" ontouchmove="statusMysql()" ontouchend="statusMysqlOff()"
+                            src="../icones/800x600/mysql.png" alt="Icone MYSQL" width="51px"></a>
+
+                    <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl"
+                            onmousemove="statusNtsl()" onmouseleave="statusNtslOff()" ontouchmove="statusNtsl()"
+                            ontouchend="statusNtslOff()" src="../icones/800x600/ntsl.png" alt="Icone NTSL"
+                            width="51px"></a>
+
+                </section>
+
+                <section id="botaoTabela">
+
+                    <button id="botaoTabela" type="button">
+                        <img id="iconeJanela" onclick="abrirFecharTabela()"
+                            onmousemove="moveMouseIconeJanela(), statusIconeTabela()"
+                            onmouseleave="statusIconeTabelaOff()" ontouchmove="statusIconeTabela()"
+                            ontouchend="statusIconeTabelaOff()" src="../icones/AbrirJanelaBranco2.png"
+                            alt="Icone para abrir tabela!" width="14px" height="14px">
+                    </button>
+
+                </section>
+
+                <section id="iframeHome" class="iframeHome">
+
+                    <iframe src="../docs/default.html" width="100%" height="100%" frameborder="0"></iframe>
+
+                </section>
+
+            </header>
+
+        </section>
+
+
+        <section id="secaoLeste">
+
+            secaoLeste
+
+        </section>
+
+    </section>
+
+
+    <!--  -->
+
+    <section id="secaoSul">
+
+        secaoSul
+
+    </section>
+
+    <script src="js/home.js">
+
+    </script>
+
+
+</body>
+
+</html>
