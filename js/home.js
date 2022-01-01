@@ -1109,7 +1109,7 @@ function sfssdCode()
 
 function sfssdCodeOff()
 {
-    secaoFooter.style.backgroundImage = 'url("../icones/code2.gif")';
+    secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
 
 }
 

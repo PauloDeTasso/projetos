@@ -230,7 +230,7 @@ body
     background-color: rgb(233, 233, 233);
     text-decoration: solid;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 1px 1px 20px rgba(111, 0, 255, 0.2); 
-    font-size: 23pt;
+    font-size: 18pt;
     font-weight: lighter;
     font-family: "LuckiestGuy";
     letter-spacing: 2px;
@@ -462,7 +462,8 @@ main
     text-align: center;
     width: 100%;
     height: auto;
-    background-image: url("../icones/code2.gif");
+    background-image: url("../icones/code9.gif");    
+    background-size: cover;
 }
 
 .tituloRodapePrincipal
@@ -528,7 +529,7 @@ main
      color: rgba(43, 255, 0, 0.884), rgba(255, 0, 0, 0.884) ;
      text-shadow: 1px 1px 0px rgba(11, 65, 0, 0.637);
      letter-spacing: 1px;
-     font-size: 30pt;
+     font-size: 18pt;
 }
 
 @-webkit-keyframes marquee 
