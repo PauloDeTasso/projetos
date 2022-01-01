@@ -1,18 +1,19 @@
-var imagem = document.getElementById('start')
+const imagem = document.getElementById('start')
 
-var numeroAleatorioFraseInterno;
+const visitasdoSite = document.getElementById('visitasSite');
 
-var visitasdoSite = document.getElementById('visitasSite');
+const objetoEmMovimento = document.getElementById('objeto');
 
-var objetoEmMovimento = document.getElementById('objeto');
+const somVento = document.getElementById('somDoVento');
 
-var somVento = document.getElementById('somDoVento');
+const somLoop = document.getElementById('loop');
 
-var somLoop = document.getElementById('loop');
+const emojiNorte1 = document.getElementById('emojiNorte01');
 
 var contador = 0;
 
-var emojiNorte1 = document.getElementById('emojiNorte01');
+var numeroAleatorioFraseInterno;
+
 
 var numeroEmojiAleatorio;
 
