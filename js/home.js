@@ -592,13 +592,13 @@ function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
     nome.style.color = 'rgb(130, 130, 130)';
-    tituloPrincipal.style.backgroundColor = 'rgb(250, 240, 210)';
+    /*tituloPrincipal.style.backgroundColor = 'rgb(0, 0, 0)';*/
 }
 
 function alterarTexto2()
 {
     tituloPrincipal.innerHTML = fraseAtual;
-    tituloPrincipal.style.backgroundColor = 'rgb(255, 233, 191)';
+    /*tituloPrincipal.style.backgroundColor = 'rgb(0, 0, 0)';*/
 }
 
 function abrirLink()
