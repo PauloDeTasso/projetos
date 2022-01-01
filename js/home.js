@@ -86,7 +86,7 @@ var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
 
 var secaoFooter = document.getElementById('rodapePrincipal');
 
-
+const secaoCabecalho = document.getElementById('secaoCabecalho');
 
 /////////////////////////////////////////////////////////////////
 
@@ -644,7 +644,7 @@ function alertMsg()
 {
     fraseAtual = fraseAleatoria();
     alert(fraseAtual);
-    nome.innerHTML = "PAULO DE TASSO";
+    nome.innerHTML = "Hello! How can I help you!";
     tituloPrincipal.innerHTML = fraseAtual;
 }
 
@@ -664,15 +664,15 @@ function abrirSecaoGif()
 
 function abrirSecaoGifPrincipal()
 {
-    let styleGifPrincipal = window.getComputedStyle(secaoGifPrincipal);
+    let styleGifPrincipal = window.getComputedStyle(secaoCabecalho);
     let estiloGifPrincipal = styleGifPrincipal.getPropertyValue('display');
 
     if (estiloGifPrincipal == "none")    
     {
-        secaoGifPrincipal.style.display = 'flex';
+        secaoCabecalho.style.display = 'flex';
     } else
     {
-        secaoGifPrincipal.style.display = 'none';
+        secaoCabecalho.style.display = 'none';
     }
 }
 
@@ -750,7 +750,7 @@ function statusTextoEmMovimento()
 
 function statusTextoEmMovimentoOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 
@@ -763,7 +763,7 @@ function statusGif()
 
 function statusGifOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -775,7 +775,7 @@ function statusGifPrincipal()
 
 function statusGifPrincipalOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -787,7 +787,7 @@ function statusBaixarVolume()
 
 function statusBaixarVolumeOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -799,7 +799,7 @@ function statusVolumeMaximo()
 
 function statusVolumeMaximoOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -811,7 +811,7 @@ function statusPause()
 
 function statusPauseOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -823,7 +823,7 @@ function statusMudo()
 
 function statusMudoOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -835,7 +835,7 @@ function statusPlay()
 
 function statusPlayOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -847,7 +847,7 @@ function statusSilencio()
 
 function statusSilencioOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -859,7 +859,7 @@ function statusAumentarVolume()
 
 function statusAumentarVolumeOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 ///////////////////////////////////////////////////////* - ICONES LINGUAGENS - */
@@ -871,7 +871,7 @@ function statusHtml()
 
 function statusHtmlOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -883,7 +883,7 @@ function statusCss()
 
 function statusCssOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -895,7 +895,7 @@ function statusJavascript()
 
 function statusJavascriptOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -907,7 +907,7 @@ function statusJava()
 
 function statusJavaOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 /**/
 
@@ -918,7 +918,7 @@ function statusMysql()
 
 function statusMysqlOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 /**/
 
@@ -929,14 +929,14 @@ function statusNtsl()
 
 function statusNtslOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 ///////////////////////////////////////////////////////* - BARRA DE ICONES - */
 
 function statusIconeTabelaOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 function statusIconeTabela()
@@ -965,7 +965,7 @@ function statusSeniorFullStackSoftwareDeveloper()
 
 function statusSeniorFullStackSoftwareDeveloperOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -977,7 +977,7 @@ function statusWhatsapp()
 
 function statusWhatsappOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -989,7 +989,7 @@ function statusEnviarEmail()
 
 function statusEnviarEmailOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1001,7 +1001,7 @@ function statusSkype()
 
 function statusSkypeOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1013,7 +1013,7 @@ function statusLinkedIn()
 
 function statusLinkedInOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1025,7 +1025,7 @@ function statusTwitter()
 
 function statusTwitterOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1037,7 +1037,7 @@ function statusFacebook()
 
 function statusFacebookOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1049,7 +1049,7 @@ function statusInstagram()
 
 function statusInstagramOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1061,7 +1061,7 @@ function statusYoutube()
 
 function statusYoutubeOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1073,7 +1073,7 @@ function statusGithub()
 
 function statusGithubOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1085,7 +1085,7 @@ function statusLicenseJavascript()
 
 function statusLicenseJavascriptOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 /**/
@@ -1097,7 +1097,7 @@ function statusLinkLicenseJavascript()
 
 function statusLinkLicenseJavascriptOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 
@@ -1133,7 +1133,7 @@ function statusJavascript()
 
 function statusJavascriptOff()
 {
-    nome.innerHTML = 'PAULO DE TASSO';
+    nome.innerHTML = 'Hello! How can I help you!';
 }
 
 
