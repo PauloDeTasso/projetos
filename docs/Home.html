@@ -76,11 +76,11 @@
                     <section class="secaoMudo">
 
                         <button class="botoes" onclick="diminuir_volume()" onmousemove="diminuir_volume()"
-                            onmouseleave="diminuir_volume()" ontouchmove="diminuir_volume()"
+                            onmouseleave="diminuir_volume()" ontouchstart="diminuir_volume()"
                             ontouchend="diminuir_volume()" type="button">
 
                             <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
-                                onmouseleave="statusBaixarVolumeOff()" ontouchmove="statusBaixarVolume()"
+                                onmouseleave="statusBaixarVolumeOff()" ontouchstart="statusBaixarVolume()"
                                 ontouchend="statusBaixarVolumeOff()" src="../icones/800x600/volumebaixo.png"
                                 alt="Diminuir Volume" width="31px" height="31px">
 
@@ -93,7 +93,7 @@
                         <button class="botoes" type="button">
 
                             <img id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
-                                onmouseleave="statusVolumeMaximoOff()" ontouchmove="statusVolumeMaximo()"
+                                onmouseleave="statusVolumeMaximoOff()" ontouchstart="statusVolumeMaximo()"
                                 ontouchend="statusVolumeMaximoOff()" src="../icones/800x600/volumehigh.png"
                                 alt="Icone de volume alto!" width="31px" height="31px">
 
@@ -106,7 +106,7 @@
                         <button class="botoes" onclick="pausar()" type="button">
 
                             <img id="iconePause" onmousemove="statusPause()" onmouseleave="statusPauseOff()"
-                                ontouchmove="statusPause()" ontouchend="statusPauseOff()"
+                                ontouchstart="statusPause()" ontouchend="statusPauseOff()"
                                 src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
 
                         </button>
@@ -118,7 +118,7 @@
                         <button class="botoes" onclick="mudo()" type="button">
 
                             <img id="iconeMudo" onmousemove="statusMudo()" onmouseleave="statusMudoOff()"
-                                ontouchmove="statusMudo()" ontouchend="statusMudoOff()"
+                                ontouchstart="statusMudo()" ontouchend="statusMudoOff()"
                                 src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
 
                         </button>
@@ -130,7 +130,7 @@
                         <button class="botoes" onclick="play()" type="button">
 
                             <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
-                                ontouchmove="statusPlay()" ontouchend="statusPlayOff()" src="../icones/playBranco.png"
+                                ontouchstart="statusPlay()" ontouchend="statusPlayOff()" src="../icones/playBranco.png"
                                 alt="Icone de som" width="31px" height="31px">
 
                         </button>
@@ -142,7 +142,7 @@
                         <button class="botoes" type="button">
 
                             <img id="iconeVolumeBaixo" onmousemove="statusSilencio()" onmouseleave="statusSilencioOff()"
-                                ontouchmove="statusSilencio()" ontouchend="statusSilencioOff()"
+                                ontouchstart="statusSilencio()" ontouchend="statusSilencioOff()"
                                 src="../icones/silencio2.png" alt="Icone de volume baixo!" width="31px" height="31px">
 
                         </button>
@@ -152,11 +152,11 @@
                     <section class="secaoMudo">
 
                         <button class="botoes" onclick="aumentar_volume()" onmousemove="aumentar_volume()"
-                            onmouseleave="aumentar_volume()" ontouchmove="aumentar_volume()"
+                            onmouseleave="aumentar_volume()" ontouchstart="aumentar_volume()"
                             ontouchend="aumentar_volume()" type="button">
 
                             <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
-                                onmouseleave="statusAumentarVolumeOff()" ontouchmove="statusAumentarVolume()"
+                                onmouseleave="statusAumentarVolumeOff()" ontouchstart="statusAumentarVolume()"
                                 ontouchend="statusAumentarVolumeOff()" src="../icones/800x600/volumealto.png"
                                 alt="Aumentar Volume" width="31px" height="31px">
 
@@ -168,7 +168,7 @@
 
                 <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(),mudarCorBotaoGif()"
                     onmouseleave="statusGifPrincipalOff(), mudarCorBotaoGifOff()"
-                    ontouchmove="statusGifPrincipal(), mudarCorBotaoGif()"
+                    ontouchstart="statusGifPrincipal(), mudarCorBotaoGif()"
                     ontouchend="statusGifPrincipalOff(), mudarCorBotaoGifOff()" type="button"
                     onclick="abrirSecaoGifPrincipal()">
                 </button>
@@ -184,19 +184,19 @@
 
                     <!-- 
         
-                <button id=" botaoGif" onmousemove="statusGif()" onmouseleave="statusGifOff()" ontouchmove="statusGif()"
+                <button id=" botaoGif" onmousemove="statusGif()" onmouseleave="statusGifOff()" ontouchstart="statusGif()"
                         ontouchend="statusGifOff()" type="button" onclick="abrirSecaoGif()">
                     </button>
         
                     <section id="secaoGif" class="secaoGif">
         
-                        <img id="gif1" onmousemove="alterarGif1()" onmouseleave="alterarGif1()" ontouchmove="alterarGif1()"
+                        <img id="gif1" onmousemove="alterarGif1()" onmouseleave="alterarGif1()" ontouchstart="alterarGif1()"
                             ontouchend="alterarGif1()" src="../icones/code.gif" alt="Imagem Gif - 1" width="41px" height="41px">
         
-                        <img id="gif2" onmousemove="alterarGif2()" onmouseleave="alterarGif2()" ontouchmove="alterarGif2()"
+                        <img id="gif2" onmousemove="alterarGif2()" onmouseleave="alterarGif2()" ontouchstart="alterarGif2()"
                             ontouchend="alterarGif2()" src="../icones/code.gif" alt="Imagem Gif - 2" width="41px" height="41px">
         
-                        <img id="gif3" onmousemove="alterarGif3()" onmouseleave="alterarGif3()" ontouchmove="alterarGif3()"
+                        <img id="gif3" onmousemove="alterarGif3()" onmouseleave="alterarGif3()" ontouchstart="alterarGif3()"
                             ontouchend="alterarGif3()" src="../icones/code.gif" alt="Imagem Gif - 3" width="41px" height="41px">
         
                     </section>
@@ -206,7 +206,7 @@
 
                         <p id="tituloPrincipal" class="marquee" onmousemove="alterarTexto1(), statusTextoEmMovimento()"
                             onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()"
-                            ontouchmove="alterarTexto1(),statusTextoEmMovimento()"
+                            ontouchstart="alterarTexto1(),statusTextoEmMovimento()"
                             ontouchend="alterarTexto2(),statusTextoEmMovimentoOff()" onclick="contagemRegresiva()">
                             “It's not a faith in technology. It's faith in people.” - Steve Jobs
                         </p>
@@ -221,32 +221,32 @@
 
                         <a href="https://html.spec.whatwg.org/multipage/" target="_blank">
                             <img id="iconeHtml" onmousemove="statusHtml()" onmouseleave="statusHtmlOff()"
-                                ontouchmove="statusHtml()" ontouchend="statusHtmlOff()"
+                                ontouchstart="statusHtml()" ontouchend="statusHtmlOff()"
                                 src="../icones/800x600/html5.png" alt="Icone HTML5" width="51px"></a>
 
                         <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss"
-                                onmousemove="statusCss()" onmouseleave="statusCssOff()" ontouchmove="statusCss()"
+                                onmousemove="statusCss()" onmouseleave="statusCssOff()" ontouchstart="statusCss()"
                                 ontouchend="statusCssOff()" src="../icones/800x600/css3.png" alt="Icone CSS3"
                                 width="51px"></a>
 
                         <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
                                 onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
-                                ontouchmove="statusJavascript()" ontouchend="statusJavascriptOff()"
+                                ontouchstart="statusJavascript()" ontouchend="statusJavascriptOff()"
                                 src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="51px"></a>
 
                         <a href="https://www.java.com" target="_blank"><img id="iconeJava" onmousemove="statusJava()"
-                                onmouseleave="statusJavaOff()" ontouchmove="statusJava()" ontouchend="statusJavaOff()"
+                                onmouseleave="statusJavaOff()" ontouchstart="statusJava()" ontouchend="statusJavaOff()"
                                 src="../icones/800x600/java.png" alt="Icone JAVA" width="51px"></a>
 
                         <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql" onmousemove="statusMysql()"
-                                onmouseleave="statusMysqlOff()" ontouchmove="statusMysql()"
+                                onmouseleave="statusMysqlOff()" ontouchstart="statusMysql()"
                                 ontouchend="statusMysqlOff()" src="../icones/800x600/mysql.png" alt="Icone MYSQL"
                                 width="51px"></a>
 
                         <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl"
-                                onmousemove="statusNtsl()" onmouseleave="statusNtslOff()" ontouchmove="statusNtsl()"
+                                onmousemove="statusNtsl()" onmouseleave="statusNtslOff()" ontouchstart="statusNtsl()"
                                 ontouchend="statusNtslOff()" src="../icones/800x600/ntsl.png" alt="Icone NTSL"
-                                width="71px"></a>
+                                width="51px"></a>
 
                     </section>
 
@@ -257,9 +257,9 @@
                     <button id="botaoTabela" type="button">
                         <img id="iconeJanela" onclick="abrirFecharTabela()"
                             onmousemove="moveMouseIconeJanela(), statusIconeTabela()"
-                            onmouseleave="statusIconeTabelaOff()" ontouchmove="statusIconeTabela()"
+                            onmouseleave="statusIconeTabelaOff()" ontouchstart="statusIconeTabela()"
                             ontouchend="statusIconeTabelaOff()" src="../icones/AbrirJanelaBranco2.png"
-                            alt="Icone para abrir tabela!" width="31px" height="31px">
+                            alt="Icone para abrir tabela!" width="21px" height="21px">
                     </button>
 
                 </section>
@@ -318,7 +318,7 @@
             </main>
 
             <footer id="rodapePrincipal" onmousemove="sfssdCode()" onmouseleave="sfssdCodeOff()"
-                ontouchmove="sfssdCode()" ontouchend="sfssdCodeOff()">
+                ontouchstart="sfssdCode()" ontouchend="sfssdCodeOff()">
 
                 <nav class="navRodapePrincipal">
 
@@ -332,7 +332,7 @@
 
                             <h6 id="SFSSD" onmousemove="statusSeniorFullStackSoftwareDeveloper()"
                                 onmouseleave="statusSeniorFullStackSoftwareDeveloperOff()"
-                                ontouchmove="statusSeniorFullStackSoftwareDeveloper(), sfssdCode()"
+                                ontouchstart="statusSeniorFullStackSoftwareDeveloper(), sfssdCode()"
                                 ontouchend="statusSeniorFullStackSoftwareDeveloperOff(), sfssdCode()">
                                 ...Senior Full Stack Software Developer...
                                 <!-- 
@@ -358,62 +358,63 @@
 
                         <a href="https://api.whatsapp.com/send?phone=5583998454848" target="_blank">
                             <img onmousemove="statusWhatsapp()" onmouseleave="statusWhatsappOff()"
-                                ontouchmove="statusWhatsapp()" ontouchend="statusWhatsappOff()"
+                                ontouchstart="statusWhatsapp()" ontouchend="statusWhatsappOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png" alt="Logo Whatsapp" width="31px"
                                 height="31px">
                         </a>
 
                         <a href=mailto:atendimentos.site@gmail.com target="_blank">
                             <img onmousemove="statusEnviarEmail()" onmouseleave="statusEnviarEmailOff()"
-                                ontouchmove="statusEnviarEmail()" ontouchend="statusEnviarEmailOff()"
+                                ontouchstart="statusEnviarEmail()" ontouchend="statusEnviarEmailOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/email 3d.png" alt="Logo Gmail" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://join.skype.com/invite/zc4AHKVGTz7v" target="_blank">
-                            <img onmousemove="statusSkype()" onmouseleave="statusSkypeOff()" ontouchmove="statusSkype()"
-                                ontouchend="statusSkypeOff()" src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png"
-                                alt="Logo SKYPE" width="31px" height="31px">
+                            <img onmousemove="statusSkype()" onmouseleave="statusSkypeOff()"
+                                ontouchstart="statusSkype()" ontouchend="statusSkypeOff()"
+                                src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png" alt="Logo SKYPE" width="31px"
+                                height="31px">
                         </a>
 
                         <a href="https://www.linkedin.com/in/paulodetasso/" target="_blank">
                             <img onmousemove="statusLinkedIn()" onmouseleave="statusLinkedInOff()"
-                                ontouchmove="statusLinkedIn()" ontouchend="statusLinkedInOff()"
+                                ontouchstart="statusLinkedIn()" ontouchend="statusLinkedInOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/LinkedIn 3d 2.png" alt="Logo linkedin" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://twitter.com/tassodjhalls" target="_blank">
                             <img onmousemove="statusTwitter()" onmouseleave="statusTwitterOff()"
-                                ontouchmove="statusTwitter()" ontouchend="statusTwitterOff()"
+                                ontouchstart="statusTwitter()" ontouchend="statusTwitterOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt="Logo Twitter" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://www.facebook.com/paulodetassoDJ" target="_blank">
                             <img onmousemove="statusFacebook()" onmouseleave="statusFacebookOff()"
-                                ontouchmove="statusFacebook()" ontouchend="statusFacebookOff()"
+                                ontouchstart="statusFacebook()" ontouchend="statusFacebookOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt="Logo Facebook" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://www.instagram.com/paulo_de_tasso/" target="_blank">
                             <img onmousemove="statusInstagram()" onmouseleave="statusInstagramOff()"
-                                ontouchmove="statusInstagram()" ontouchend="statusInstagramOff()"
+                                ontouchstart="statusInstagram()" ontouchend="statusInstagramOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt="Logo Instagram" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://www.youtube.com/user/tassodjhalls11/videos" target="_blank">
                             <img onmousemove="statusYoutube()" onmouseleave="statusYoutubeOff()"
-                                ontouchmove="statusYoutube()" ontouchend="statusYoutubeOff()"
+                                ontouchstart="statusYoutube()" ontouchend="statusYoutubeOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/youtube.png" alt="Logo Youtube" width="31px"
                                 height="31px">
                         </a>
 
                         <a href="https://github.com/PauloDeTasso" target="_blank">
                             <img onmousemove="statusGithub()" onmouseleave="statusGithubOff()"
-                                ontouchmove="statusGithub()" ontouchend="statusGithubOff()"
+                                ontouchstart="statusGithub()" ontouchend="statusGithubOff()"
                                 src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png" alt="Logo Github" width="31px"
                                 height="31px">
                         </a>
@@ -432,14 +433,14 @@
                         <br>
                         <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
                             onmousemove="statusLicenseJavascript()" onmouseleave="statusLicenseJavascriptOff()"
-                            ontouchmove="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
+                            ontouchstart="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
                             <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
                         </button>
                         <br>
                         <section id="license">
                             <a onmousemove="statusLinkLicenseJavascript()"
                                 onmouseleave="statusLinkLicenseJavascriptOff()"
-                                ontouchmove="statusLinkLicenseJavascript()"
+                                ontouchstart="statusLinkLicenseJavascript()"
                                 ontouchend="statusLinkLicenseJavascriptOff()" href="../licenses/copying.txt"
                                 rel="jslicense" target="_blank">JavaScript license
                                 information</a><br>
