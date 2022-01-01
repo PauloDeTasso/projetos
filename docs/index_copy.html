@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/estilo_home_copy.css" />
+    <link rel="stylesheet" href="../estilos/estilo_home_copy.css" />
     <link rel="icon" href="/icones/code3.gif" type="image/gif">
 
     <title>Paulo de Tasso</title>
@@ -18,8 +18,28 @@
         <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
     </audio>
 
-    <audio id='loop' class="audios" preload="auto" loop>
-        <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg">
+    <audio class=" audios" id='audioPrincipal' loop>
+        <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
+    </audio>
+
+    <audio class="audios" id='audio1'>
+        <source id="audioSource1" src="../audios/alarme.ogg" type="audio/ogg">
+    </audio>
+
+    <audio class="audios" id='audio2'>
+        <source id="audioSource2" src="../audios/orchestra.ogg" type="audio/ogg">
+    </audio>
+
+    <audio class="audios" id='audio3'>
+        <source id="audioSource3" src="../audios/clock.ogg" type="audio/ogg">
+    </audio>
+
+    <audio class="audios" id='audio4'>
+        <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
+    </audio>
+
+    <audio autoplay loop class="audios" id='Cachoeira'>
+        <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
     </audio>
 
 </header>
@@ -33,8 +53,11 @@
     </section>
 
     <!--  -->
+    <!--  -->
 
     <section id="secaoCentro">
+
+        <!--  -->
 
         <section id="secaoOeste">
 
@@ -42,9 +65,11 @@
 
         </section>
 
+        <!--  -->
+
         <section id="secaoPrincipal">
 
-            <header class="cabecalhoPrincipal">
+            <section class="cabecalhoPrincipal">
 
                 <nav class="headerBotaoSomInicio">
 
@@ -236,10 +261,57 @@
 
                 </section>
 
-            </header>
+            </section>
+
+            <!--  -->
+
+            <main class="main">
+
+                <section class="secao01">
+
+                    <article class="artigoSecao01">
+
+                        <h2 class="tituloArtigoSecao01">
+                            The Begin
+                        </h2>
+
+                        <p class="paragrafoArtigo">
+                            Creativity is something wonderful when an inspiration arises in our thoughts, the feeling of
+                            joy,
+                            euphoria and desire to act, appear as a divine Gif! <br>
+                            Lives with the most diverse experiences are now all around us, needing practical and precise
+                            solutions that improve their experiences even more, life gets easier when inspired people
+                            with a
+                            spontaneous desire to make it happen, help!
+                        </p>
+
+                        <p class="paragrafoArtigo">
+                            It was with this idea that life led me here.<br>
+                            The infinity of creativity and the vision of contributing to a greater good, inspires me to
+                            this day
+                            to
+                            follow, and like any well-chosen profession, survive on the work you love!
+                            <br>
+                            I continue to apprehend more of this magnificent and splendid universe of codes, and for
+                            that, I
+                            count on
+                            you to transform and improve our world even more!
+                            <br>
+                            Paulo de Tasso
+                            <br>
+                            Senior Full Stack Software Developer
+                        </p>
+
+                    </article>
+
+                </section>
+
+            </main>
+
 
         </section>
 
+        <!--  -->
 
         <section id="secaoLeste">
 
@@ -247,9 +319,11 @@
 
         </section>
 
+        <!--  -->
+
     </section>
 
-
+    <!--  -->
     <!--  -->
 
     <section id="secaoSul">
@@ -258,10 +332,12 @@
 
     </section>
 
-    <script src="js/home.js">
+    <!--  -->
+    <!--  -->
+
+    <script src="../js/home.js">
 
     </script>
-
 
 </body>
 

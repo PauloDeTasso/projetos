@@ -370,6 +370,88 @@ body
     border: 2px solid rgb(21, 21, 21);
 }
 
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.secao01
+{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+
+.artigoSecao01
+{
+   padding: 10px;   
+}
+
+.tituloArtigoSecao01
+{
+   text-align: center;
+   font-size: 22pt;
+}
+
+.paragrafoArtigo
+
+{
+   font-size: 18pt;
+   text-align: justify;
+   font-weight: lighter;
+   align-items: center;
+   padding: 1%;
+   letter-spacing: 1px;
+}
+
+/**/
+
+
+.secao02
+{
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+
+.artigoSecao02
+{
+   
+}
+
+.tituloArtigoSecao02
+{
+    text-align: center;
+}
+
+/**/
+
+
+.secao03
+{
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+
+.artigoSecao03
+{
+  
+}
+
+.tituloArtigoSecao03
+{
+    text-align: center;
+}
 
 /*
 html
