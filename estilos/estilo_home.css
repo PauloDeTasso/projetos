@@ -28,6 +28,20 @@ body
     border: 2px solid rgb(0, 0, 0);
 }
 
+
+#secaoCabecalho
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-image: "../imagens/gif/nature0.gif";
+}
+
+
+
 /**/
 
 #secaoOeste
@@ -186,14 +200,16 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 
 .quadro 
 {
+  width: 100%;
   height: auto;
- /* overflow: hidden;*/
- 
+ /* overflow: hidden;*/ 
   font-size: 14px;
   text-overflow: clip;
   overflow-x: hidden;
@@ -541,3 +557,4 @@ main
 {
     background-color: green;
 }
+
