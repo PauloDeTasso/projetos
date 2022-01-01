@@ -166,9 +166,11 @@
 
                 </nav>
 
-                <button id=" botaoGifPrincipal" onmousemove="statusGifPrincipal()"
-                    onmouseleave="statusGifPrincipalOff()" ontouchmove="statusGifPrincipal()"
-                    ontouchend="statusGifPrincipalOff()" type="button" onclick="abrirSecaoGifPrincipal()">
+                <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(),mudarCorBotaoGif()"
+                    onmouseleave="statusGifPrincipalOff(), mudarCorBotaoGifOff()"
+                    ontouchmove="statusGifPrincipal(), mudarCorBotaoGif()"
+                    ontouchend="statusGifPrincipalOff(), mudarCorBotaoGifOff()" type="button"
+                    onclick="abrirSecaoGifPrincipal()">
                 </button>
 
                 <section id="SecaoGifPrincipal" class="secaoGifPrincipal">
@@ -278,7 +280,7 @@
                         <p class="paragrafoArtigo">
                             Creativity is something wonderful when an inspiration arises in our thoughts, the feeling of
                             joy,
-                            euphoria and desire to act, appear as a divine Gif! <br>
+                            euphoria and desire to act, appear as a divine gift! <br>
                             Lives with the most diverse experiences are now all around us, needing practical and precise
                             solutions that improve their experiences even more, life gets easier when inspired people
                             with a
@@ -308,12 +310,12 @@
 
             </main>
 
-            <footer class=" rodapePrincipal">
+            <footer id="rodapePrincipal" onmousemove="sfssdCode()" onmouseleave="sfssdCodeOff()"
+                ontouchmove="sfssdCode()" ontouchend="sfssdCodeOff()">
 
                 <nav class="navRodapePrincipal">
 
-                    <section id="secaoRodapePrincipalIcones1" onmousemove="sfssdCode()" onmouseleave="sfssdCodeOff()"
-                        ontouchmove="sfssdCode()" ontouchend="sfssdCodeOff()">
+                    <section id="secaoRodapePrincipalIcones1">
 
                         <a href=""><img src="../icones/800x600/usuario.png" alt="Icone de usuário" width="57px"
                                 height="50px"></a>
@@ -413,25 +415,35 @@
 
                 </nav>
 
-                <nav id="navLicense">
-
-                    <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
-                        onmousemove="statusLicenseJavascript()" onmouseleave="statusLicenseJavascriptOff()"
-                        ontouchmove="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
-                        <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
-                    </button>
-
-                    <section id="license">
-
-                        <a onmousemove="statusLinkLicenseJavascript()" onmouseleave="statusLinkLicenseJavascriptOff()"
-                            ontouchmove="statusLinkLicenseJavascript()" ontouchend="statusLinkLicenseJavascriptOff()"
-                            href="../licenses/copying.txt" rel="jslicense" target="_blank">JavaScript license
-                            information</a><br>
-                    </section>
-
-                </nav>
-
             </footer>
+
+            <section>
+
+                <section id="secaoBotaoLicense">
+
+                    <nav id="navLicense">
+                        <br>
+                        <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
+                            onmousemove="statusLicenseJavascript()" onmouseleave="statusLicenseJavascriptOff()"
+                            ontouchmove="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
+                            <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
+                        </button>
+                        <br>
+                        <section id="license">
+                            <a onmousemove="statusLinkLicenseJavascript()"
+                                onmouseleave="statusLinkLicenseJavascriptOff()"
+                                ontouchmove="statusLinkLicenseJavascript()"
+                                ontouchend="statusLinkLicenseJavascriptOff()" href="../licenses/copying.txt"
+                                rel="jslicense" target="_blank">JavaScript license
+                                information</a><br>
+
+                        </section>
+
+                    </nav>
+
+                </section>
+
+            </section>
 
         </section>
 

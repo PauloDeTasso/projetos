@@ -1,3 +1,6 @@
+
+const botaoGif = document.getElementById('botaoGifPrincipal');
+
 var audioPrincipal = document.getElementById("audioPrincipal");
 
 var iconeMudo = document.getElementById('iconeMudo')
@@ -79,7 +82,11 @@ var gifCodeFooter = document.getElementById('codeFooter');
 
 var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
 
-var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');
+/*var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
+
+var secaoFooter = document.getElementById('rodapePrincipal');
+
+
 
 /////////////////////////////////////////////////////////////////
 
@@ -1093,15 +1100,27 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'PAULO DE TASSO';
 }
 
+
+
 function sfssdCode()
 {
-    secaoRodapePrincipalIcones.style.backgroundImage = 'url("../icones/code9.gif")';
-
+    secaoFooter.style.backgroundImage = 'url("")';
 }
 
 function sfssdCodeOff()
 {
-    secaoRodapePrincipalIcones.style.backgroundImage = 'url("")';
+    secaoFooter.style.backgroundImage = 'url("../icones/code2.gif")';
+
+}
+
+function mudarCorBotaoGif()
+{
+    botaoGif.style.backgroundColor = 'aqua';
+}
+
+function mudarCorBotaoGifOff()
+{
+    botaoGif.style.backgroundColor = 'green';
 }
 
 /*

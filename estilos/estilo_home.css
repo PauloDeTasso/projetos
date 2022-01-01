@@ -259,16 +259,26 @@ body
    justify-content: center;
 }
 
+#secaoBotaoLicense
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    font-size: 8pt;
+    width: 100%;
+    height: auto;    
+    background-color: rgb(255, 233, 191);
+}
+
 #license
 {
     display: none;
     flex-direction: column;
     justify-content: center;    
     align-items: center;
-    font-size: 8pt;
     width: 100%;
-    height: 100%;    
-    background-color: rgb(200, 200, 200);    
+    height: auto;    
 }
 
 #botaoLicense
@@ -277,11 +287,11 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    font-size: 8pt;
-    background-color: rgb(200, 200, 200);    
-    border: 5px solid rgb(200, 200, 200);    
+    width: 41px;
+    height: 41px;
+    background-color: rgb(233, 233, 233);
+    border: groove 5px rgb(172, 172, 172);
+    border-radius: 2em;
 }
 
 #navLicense
@@ -423,15 +433,15 @@ main
 }
 
 
-.rodapePrincipal
+#rodapePrincipal
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 1%;
-    width: 90%;
+    width: 100%;
     height: auto;
+    background-image: url("../icones/code2.gif");
 }
 
 .tituloRodapePrincipal
@@ -461,10 +471,9 @@ main
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: auto;
-    padding: 1%;
 }
 
 #secaoRodapePrincipalIcones1
@@ -526,6 +535,11 @@ main
 #titulo
 {
     color: black;
+}
+
+#botaoGifPrincipal
+{
+    background-color: green;
 }
 
 /*
