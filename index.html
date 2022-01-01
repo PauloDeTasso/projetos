@@ -12,7 +12,7 @@
 
 </head>
 
-<section id="audios">
+<header id="audios">
 
     <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
         <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
@@ -22,23 +22,13 @@
         <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg">
     </audio>
 
-</section>
+</header>
 
 <body class="corpo">
 
     <section id="secaoNorte">
 
-        <section id="subSecaoNorte1">
 
-        </section>
-
-        <section id="subSecaoNorte2">
-
-        </section>
-
-        <section id="subSecaoNorte3">
-
-        </section>
 
     </section>
 
@@ -64,21 +54,22 @@
 
         <section id="secaoPrincipal">
 
-            <section id="centro">
+            <nav id="navLinkPrincipal">
+                <a href="docs/Home.html">
+                    <img id="start" src="imagens/start0.png" alt="Paulo de Tasso - Go" usemap="#login"
+                        onmousemove="alterarImagem()" onmouseout="retornarImagem()" ontouchmove="alterarImagem()"
+                        ontouchend="retornarImagem()">
+                    <!-- 
+               <map name="login">
 
-                <nav>
-                    <img id="start" src="imagens/start0.png" alt="Paulo de Tasso - Go" usemap="#login">
+                    <area id="areaImagem" onmousemove="alterarImagem()" onmouseout="retornarImagem()"
+                        ontouchmove="alterarImagem()" ontouchend="retornarImagem()" shape="circle" coords="473,548,177"
+                        href="docs/Home.html">
 
-
-                    <map name="login">
-
-                        <area id="areaImagem" onmousemove="alterarImagem()" onmouseout="retornarImagem()"
-                            ontouchmove="alterarImagem()" ontouchend="retornarImagem()" shape="circle"
-                            coords="473,548,177" href="docs/Home.html">
-                </nav>
                 </map>
-
-            </section>
+ -->
+                </a>
+            </nav>
 
         </section>
 
@@ -102,24 +93,16 @@
 
     <!--  -->
 
-    <section id=" secaoSul">
-
-        <section id="subSecaoSul1">
-
-        </section>
-
-        <section id="subSecaoSul2">
-
-        </section>
-
-        <section id="subSecaoSul3">
-
-        </section>
+    <section id="secaoSul">
 
 
-        <script src="js/start.js">
 
-        </script>
+    </section>
+
+
+    <script src="js/start.js">
+
+    </script>
 
     </section>
 
