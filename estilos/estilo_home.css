@@ -254,6 +254,7 @@ body
 {
     font-size: 10pt;
     text-align: center;
+    visibility: hidden;
 }
 
 #secaoTabela
@@ -335,8 +336,12 @@ body
 
 #SFSSD
 {
-    visibility: visible;
-}
+    align-items: center;
+    text-align: center;    
+    font-size: 14pt;
+    visibility: hidden;
+   font-family:'Courier New', Courier, monospace
+ }
 
 #codeFooter
 {
@@ -477,7 +482,7 @@ main
     padding: 1%;
 }
 
-.navRodapePrincipal
+#navRodapePrincipal
 {
    
 }
@@ -505,6 +510,7 @@ main
     justify-content: center;
     width: 100%;
     height: auto;
+    visibility: hidden;
 }
 
 

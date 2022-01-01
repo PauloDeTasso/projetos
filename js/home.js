@@ -1105,12 +1105,13 @@ function statusLinkLicenseJavascriptOff()
 function sfssdCode()
 {
     secaoFooter.style.backgroundImage = 'url("")';
+    sfssd.style.visibility = 'visible';
 }
 
 function sfssdCodeOff()
 {
     secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
-
+    sfssd.style.visibility = 'hidden';
 }
 
 function mudarCorBotaoGif()
