@@ -1137,6 +1137,23 @@ function mudarCorBotaoGifOff()
     botaoGif.style.backgroundColor = 'rgb(42, 150, 0)';
 }
 
+var statusSistema = document.getElementById('statusSistema');
+
+function colar()
+{
+    statusSistema.innerHTML = "Cut out!";
+}
+
+function copiou()
+{
+    statusSistema.innerHTML = "Compiled!";
+}
+
+function colou()
+{
+    statusSistema.innerHTML = "Pasted";
+}
+
 /*
 
 function statusJavascript()

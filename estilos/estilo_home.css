@@ -632,3 +632,9 @@ main
     background-color: rgb(42, 150, 0);    
 }
 
+#statusSistema
+{
+    font-size: 8pt;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
