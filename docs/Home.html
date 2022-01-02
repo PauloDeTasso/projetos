@@ -166,7 +166,7 @@
 
                 </nav>
 
-                <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(),mudarCorBotaoGif()"
+                <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(), mudarCorBotaoGif()"
                     onmouseleave="statusGifPrincipalOff(), mudarCorBotaoGifOff()"
                     ontouchmove="statusGifPrincipal(), mudarCorBotaoGif()"
                     ontouchend="statusGifPrincipalOff(), mudarCorBotaoGifOff()" type="button"
@@ -211,7 +211,11 @@
                             “It's not a faith in technology. It's faith in people.” - Steve Jobs
                         </p>
 
-                        <h1 id="status">
+                        <h1 id="status" onclick="contagemRegresiva()"
+                            onmousemove="alterarTexto1(), statusTextoEmMovimento()"
+                            onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()"
+                            ontouchmove="alterarTexto1(),statusTextoEmMovimento()"
+                            ontouchend="alterarTexto2(),statusTextoEmMovimentoOff()">
                             Hello! How can I help you!
                         </h1>
 
@@ -266,7 +270,9 @@
 
                 <section id="iframeHome" class="iframeHome">
 
-                    <iframe src="../docs/default.html" width="100%" height="100%" frameborder="0"></iframe>
+                    <iframe id="iframe" src="../docs/default.html" frameborder="0">
+
+                    </iframe>
 
                 </section>
 
@@ -327,13 +333,14 @@
                         <a id="linkFraseRodape"
                             href="https://www.google.com/search?q=Senior Full Stack Software Developer" target="_blank">
 
-                            <h6 id="SFSSD" onmousemove="statusSeniorFullStackSoftwareDeveloper()"
+
+                            <p id="SFSSD" onmousemove="statusSeniorFullStackSoftwareDeveloper()"
                                 onmouseleave="statusSeniorFullStackSoftwareDeveloperOff()"
                                 ontouchmove="statusSeniorFullStackSoftwareDeveloper(), sfssdCode()"
                                 ontouchend="statusSeniorFullStackSoftwareDeveloperOff(), sfssdCode()">
-                                Paulo de Tasso - Senior Full Stack Software Developer.
-                                <img src="../icones/800x600/usuario.png" alt="Icone de usuário" width="57px"
-                                    height="50px">
+                                Paulo de Tasso
+                                <br>
+                                Senior Full Stack Software Developer
                                 <!-- 
                                 <a href="../docs/TLOD.html" target="_blank">
                                     .
@@ -347,11 +354,25 @@
                                     .
                                 </a>
                                 -->
-                            </h6>
+                            </p>
 
                         </a>
 
                     </section>
+
+                    <section id="secaoIconeUsuario">
+
+                        <img id="iconeUsuario" src="../icones/800x600/usuario.png" alt="Icone de usuário">
+
+                    </section>
+
+                </nav>
+
+            </footer>
+
+            <section id="secaoRodape">
+
+                <section id="secaoBotaoLicense">
 
                     <address class="secaoRodapePrincipalIcones2">
 
@@ -418,14 +439,6 @@
                         </a>
 
                     </address>
-
-                </nav>
-
-            </footer>
-
-            <section>
-
-                <section id="secaoBotaoLicense">
 
                     <nav id="navLicense">
                         <br>

@@ -33,7 +33,7 @@ var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
 var tituloPrincipal = document.getElementById('tituloPrincipal');
 
-var nome = document.getElementById("status");
+const nome = document.getElementById("status");
 
 var portaPrincipal = document.getElementById('portaPrincipal');
 
@@ -87,6 +87,8 @@ var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
 var secaoFooter = document.getElementById('rodapePrincipal');
 
 const secaoCabecalho = document.getElementById('secaoCabecalho');
+
+const iconeUsuario = document.getElementById('iconeUsuario');
 
 /////////////////////////////////////////////////////////////////
 
@@ -681,9 +683,10 @@ function abrirSecaoGifPrincipal()
 function abrirFecharTabela()
 {
 
-    var iconeJanela = document.getElementById('iconeJanela');
-    var getStyle = window.getComputedStyle(secaoIframeHome);
-    var getDisplay = getStyle.getPropertyValue('display');
+    const iconeJanela = document.getElementById('iconeJanela');
+    let getStyle = window.getComputedStyle(secaoIframeHome);
+    let getDisplay = getStyle.getPropertyValue('display');
+
     if (getDisplay == "none")    
     {
         secaoIframeHome.style.display = 'flex';
@@ -770,7 +773,16 @@ function statusGifOff()
 
 function statusGifPrincipal()
 {
-    nome.innerHTML = '...'.toUpperCase();
+    let styleSecaoGif = window.getComputedStyle(secaoCabecalho);
+    let estiloGifPrincipal = styleSecaoGif.getPropertyValue('display');
+
+    if (estiloGifPrincipal == "none")    
+    {
+        nome.innerHTML = 'Open header'.toUpperCase();
+    } else
+    {
+        nome.innerHTML = 'Close header'.toUpperCase();
+    }
 }
 
 function statusGifPrincipalOff()
@@ -1106,12 +1118,15 @@ function sfssdCode()
 {
     secaoFooter.style.backgroundImage = 'url("")';
     sfssd.style.visibility = 'visible';
+    iconeUsuario.style.visibility = 'visible';
+
 }
 
 function sfssdCodeOff()
 {
     secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
     sfssd.style.visibility = 'hidden';
+    iconeUsuario.style.visibility = 'hidden';
 }
 
 function mudarCorBotaoGif()
@@ -1121,7 +1136,7 @@ function mudarCorBotaoGif()
 
 function mudarCorBotaoGifOff()
 {
-    botaoGif.style.backgroundColor = 'green';
+    botaoGif.style.backgroundColor = 'rgb(42, 150, 0)';
 }
 
 /*

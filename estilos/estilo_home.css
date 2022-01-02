@@ -230,7 +230,7 @@ body
     background-color: rgb(233, 233, 233);
     text-decoration: solid;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 1px 1px 20px rgba(111, 0, 255, 0.2); 
-    font-size: 18pt;
+    font-size: 14pt;
     font-weight: lighter;
     font-family: "LuckiestGuy";
     letter-spacing: 2px;
@@ -281,6 +281,15 @@ body
    justify-content: center;
 }
 
+#nomeTitulo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: center;
+    font-size: 30pt;
+}
+
 #secaoBotaoLicense
 {
     display: flex;
@@ -289,7 +298,7 @@ body
     align-items: center;
     font-size: 8pt;
     width: 100%;
-    height: auto;    
+    height: 100%;    
     background-color: rgb(255, 233, 191);
 }
 
@@ -312,8 +321,8 @@ body
     width: 41px;
     height: 41px;
     background-color: rgb(233, 233, 233);
-    border: groove 5px rgb(172, 172, 172);
-    border-radius: 2em;
+    border: thick 5px rgb(172, 172, 172);
+    border-radius: 3em;
 }
 
 #navLicense
@@ -336,11 +345,40 @@ body
 
 #SFSSD
 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: center;    
-    font-size: 14pt;
     visibility: hidden;
-    font-family:'Courier New', Courier, monospace
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    padding: 1%;
+    width: 100%;
+    height: auto;
+}
+
+#secaoIconeUsuario
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    visibility: hidden;
+}
+
+ #iconeUsuario
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 57px;
+    height: 51px;
+    padding: 1%;
  }
 
 #codeFooter
@@ -350,9 +388,20 @@ body
 
 #iframeHome
 {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#iframe
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 400px;
 }
@@ -462,12 +511,12 @@ main
 #rodapePrincipal
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     width: 100%;
     height: auto;
-    background-image: url("../icones/code9.gif");    
+    background-image: url("../icones/code9.gif"); 
     background-size: cover;
 }
 
@@ -484,7 +533,12 @@ main
 
 #navRodapePrincipal
 {
-   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
 }
 
 .ulRodapePrincipal
@@ -492,6 +546,16 @@ main
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#secaoRodape
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 1%;
 }
 
 .secaoRodapePrincipalIcones2
@@ -508,7 +572,7 @@ main
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
@@ -569,7 +633,7 @@ main
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 8px;
-    background-color: green;    
+    height: 7px;
+    background-color: rgb(42, 150, 0);    
 }
 
