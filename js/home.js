@@ -1,3 +1,4 @@
+/* CONST'S*/
 
 const botaoGif = document.getElementById('botaoGifPrincipal');
 
@@ -37,30 +38,8 @@ const nome = document.getElementById("status");
 
 const portaPrincipal = document.getElementById('portaPrincipal');
 
-var aleatorio;
+const iconeJanela = document.getElementById('iconeJanela');
 
-var caminho;
-
-var mensagemAleatoria;
-
-var numerogerado;
-
-var fraseAtual = "\“Patience is a key element of success.\" - Bill Gates.";
-
-var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
-var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderful...that\’s what matters to me.\” - Steve Jobs"
-var frase3 = "Programming isn\'t about what you know; it\'s about what you can figure out.\” - Chris Pine"
-var frase4 = "\"The only way to learn a new programming language is by writing programs in it.\" - Dennis Ritchie"
-var frase5 = "\"Sometimes it\'s better to leave something alone, to pause, and that\'s very true of programming.\" - Joyce Wheeler"
-var frase6 = "\"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.\" - Andrew Hunt"
-var frase7 = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs"
-var frase8 = "\"The best error message is the one that never shows up.\" - Thomas Fuchs";
-var frase9 = "\“The most damaging phrase in the language is.. it\'s always been done this way\” - Grace Hopper"
-var frase10 = "\"Don\'t write better error messages, write code that doesn't need them.\" - Jason C. McDonald"
-
-var numeroAleatorioFrase;
-
-var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
 
 const secaoGif = document.getElementById('secaoGif');
 
@@ -89,6 +68,36 @@ const secaoFooter = document.getElementById('rodapePrincipal');
 const secaoCabecalho = document.getElementById('secaoCabecalho');
 
 const iconeUsuario = document.getElementById('iconeUsuario');
+
+const secaoLicense = document.getElementById('license');
+
+
+/* VAR'S*/
+
+var fraseAtual = "\“Patience is a key element of success.\" - Bill Gates.";
+
+var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
+var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderful...that\’s what matters to me.\” - Steve Jobs"
+var frase3 = "Programming isn\'t about what you know; it\'s about what you can figure out.\” - Chris Pine"
+var frase4 = "\"The only way to learn a new programming language is by writing programs in it.\" - Dennis Ritchie"
+var frase5 = "\"Sometimes it\'s better to leave something alone, to pause, and that\'s very true of programming.\" - Joyce Wheeler"
+var frase6 = "\"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.\" - Andrew Hunt"
+var frase7 = "\“Don\’t let the noise of others\’ opinions drown out your own inner voice.\" - Steve jobs"
+var frase8 = "\"The best error message is the one that never shows up.\" - Thomas Fuchs";
+var frase9 = "\“The most damaging phrase in the language is.. it\'s always been done this way\” - Grace Hopper"
+var frase10 = "\"Don\'t write better error messages, write code that doesn't need them.\" - Jason C. McDonald"
+
+var numeroAleatorioFrase;
+
+var aleatorio;
+
+var caminho;
+
+var mensagemAleatoria;
+
+var numerogerado;
+
+var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
 
 /////////////////////////////////////////////////////////////////
 
@@ -652,8 +661,8 @@ function alertMsg()
 
 function abrirSecaoGif()
 {
-    var style = window.getComputedStyle(secaoGif);
-    var top = style.getPropertyValue('display');
+    let style = window.getComputedStyle(secaoGif);
+    let top = style.getPropertyValue('display');
 
     if (top == "none")    
     {
@@ -701,8 +710,6 @@ function abrirFecharTabela()
 function moveMouseIconeJanela()
 {
 
-    var iconeJanela = document.getElementById('iconeJanela');
-
     if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
     {
         iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2p.png')
@@ -726,12 +733,10 @@ function moveMouseIconeJanela()
     }
 }
 
-var secaoLicense = document.getElementById('license');
-
 function abrirSecaoLicense()
 {
-    var estiloLicense = window.getComputedStyle(secaoLicense);
-    var valorEstilo = estiloLicense.getPropertyValue('display');
+    let estiloLicense = window.getComputedStyle(secaoLicense);
+    let valorEstilo = estiloLicense.getPropertyValue('display');
 
     if (valorEstilo == "none")    
     {
@@ -953,8 +958,8 @@ function statusIconeTabelaOff()
 
 function statusIconeTabela()
 {
-    var getStyle = window.getComputedStyle(secaoIframeHome);
-    var getDisplay = getStyle.getPropertyValue('display');
+    let getStyle = window.getComputedStyle(secaoIframeHome);
+    let getDisplay = getStyle.getPropertyValue('display');
 
     if (getDisplay == "none")    
     {
@@ -1153,7 +1158,7 @@ function statusJavascriptOff()
 
 
 /*
-var iconeHtml5 = getElementById('iconeHtml');
+const iconeHtml5 = getElementById('iconeHtml');
 
 function statusPrincipal()
 {
