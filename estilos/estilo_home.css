@@ -252,7 +252,10 @@ body
 
 #linkFraseRodape
 {
-    font-size: 10pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     visibility: hidden;
 }
@@ -572,6 +575,7 @@ main
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     width: 80%;
     height: auto;
 }

@@ -1113,14 +1113,11 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'Hello! How can I help you!';
 }
 
-
-
 function sfssdCode()
 {
     secaoFooter.style.backgroundImage = 'url("")';
     sfssd.style.visibility = 'visible';
     iconeUsuario.style.visibility = 'visible';
-
 }
 
 function sfssdCodeOff()
