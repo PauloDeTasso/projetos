@@ -749,7 +749,7 @@ function abrirSecaoLicense()
 
 function statusTextoEmMovimento()
 {
-    nome.innerHTML = 'Press!'.toUpperCase();
+    nome.innerHTML = 'Press!';
 }
 
 function statusTextoEmMovimentoOff()
