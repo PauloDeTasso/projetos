@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" onload="carregado()">
 
 <head>
     <meta charset="UTF-8">
@@ -12,39 +12,39 @@
 
 </head>
 
-<header id="audios">
+<body class="corpo" oncut="colar()" oncopy="copiou()" onpaste="colou()" onload="carregado()">
 
-    <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
-        <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
-    </audio>
+    <header id="audios">
 
-    <audio class=" audios" id='audioPrincipal' loop>
-        <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
-    </audio>
+        <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
+            <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
+        </audio>
 
-    <audio class="audios" id='audio1'>
-        <source id="audioSource1" src="../audios/alarme.ogg" type="audio/ogg">
-    </audio>
+        <audio class=" audios" id='audioPrincipal' loop>
+            <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
+        </audio>
 
-    <audio class="audios" id='audio2'>
-        <source id="audioSource2" src="../audios/orchestra.ogg" type="audio/ogg">
-    </audio>
+        <audio class="audios" id='audio1'>
+            <source id="audioSource1" src="../audios/alarme.ogg" type="audio/ogg">
+        </audio>
 
-    <audio class="audios" id='audio3'>
-        <source id="audioSource3" src="../audios/clock.ogg" type="audio/ogg">
-    </audio>
+        <audio class="audios" id='audio2'>
+            <source id="audioSource2" src="../audios/orchestra.ogg" type="audio/ogg">
+        </audio>
 
-    <audio class="audios" id='audio4'>
-        <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
-    </audio>
+        <audio class="audios" id='audio3'>
+            <source id="audioSource3" src="../audios/clock.ogg" type="audio/ogg">
+        </audio>
 
-    <audio autoplay loop class="audios" id='Cachoeira'>
-        <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
-    </audio>
+        <audio class="audios" id='audio4'>
+            <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
+        </audio>
 
-</header>
+        <audio autoplay loop class="audios" id='Cachoeira'>
+            <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
+        </audio>
 
-<body class="corpo" oncut="colar()" oncopy="copiou()" onpaste="colou()">
+    </header>
 
     <section id="secaoNorte">
 

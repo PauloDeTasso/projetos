@@ -1142,18 +1142,22 @@ var statusSistema = document.getElementById('statusSistema');
 function colar()
 {
     statusSistema.innerHTML = "Cut out!";
+    setTimeout("limparStatusSistema()", 10000);
 }
 
 function copiou()
 {
     statusSistema.innerHTML = "Compiled!";
+    setTimeout("limparStatusSistema()", 10000);
 }
 
 function colou()
 {
     statusSistema.innerHTML = "Pasted";
+    setTimeout("limparStatusSistema()", 10000);
 }
 
+/*
 const input = document.querySelector('input');
 const log = document.getElementById('log');
 
@@ -1162,6 +1166,18 @@ input.onkeydown = logKey;
 function logKey(e)
 {
     log.textContent += ` ${e.code}`;
+}
+*/
+
+function carregado()
+{
+    statusSistema.innerHTML = "Page loaded!";
+    setTimeout("limparStatusSistema()", 10000);
+}
+
+function limparStatusSistema()
+{
+    statusSistema.innerHTML = "";
 }
 
 /*
