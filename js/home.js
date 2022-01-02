@@ -1,41 +1,41 @@
 
 const botaoGif = document.getElementById('botaoGifPrincipal');
 
-var audioPrincipal = document.getElementById("audioPrincipal");
+const audioPrincipal = document.getElementById("audioPrincipal");
 
-var iconeMudo = document.getElementById('iconeMudo')
+const iconeMudo = document.getElementById('iconeMudo')
 
-var audio1 = document.getElementById('audio1');
+const audio1 = document.getElementById('audio1');
 
-var audio2 = document.getElementById('audio2');
+const audio2 = document.getElementById('audio2');
 
-var audio3 = document.getElementById('audio3');
+const audio3 = document.getElementById('audio3');
 
-var audio4 = document.getElementById('audio4');
+const audio4 = document.getElementById('audio4');
 
-var gif1 = document.getElementById('gif1');
+const gif1 = document.getElementById('gif1');
 
-var gif2 = document.getElementById('gif2');
+const gif2 = document.getElementById('gif2');
 
-var gif3 = document.getElementById('gif3');
+const gif3 = document.getElementById('gif3');
 
-var audioSource1 = document.getElementById('audioSource1');
+const audioSource1 = document.getElementById('audioSource1');
 
-var audioSource2 = document.getElementById('audioSource2');
+const audioSource2 = document.getElementById('audioSource2');
 
-var audioSource3 = document.getElementById('audioSource3');
+const audioSource3 = document.getElementById('audioSource3');
 
-var iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
+const iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
 
-var iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
+const iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
-var volumeArredondado = Math.round(audioPrincipal.volume * 10);
+const volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-var tituloPrincipal = document.getElementById('tituloPrincipal');
+const tituloPrincipal = document.getElementById('tituloPrincipal');
 
 const nome = document.getElementById("status");
 
-var portaPrincipal = document.getElementById('portaPrincipal');
+const portaPrincipal = document.getElementById('portaPrincipal');
 
 var aleatorio;
 
@@ -62,29 +62,29 @@ var numeroAleatorioFrase;
 
 var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
 
-var secaoGif = document.getElementById('secaoGif');
+const secaoGif = document.getElementById('secaoGif');
 
-var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
+const iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
 
-var iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
+const iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
 
-var botaoPausar = document.getElementById('iconePause');
+const botaoPausar = document.getElementById('iconePause');
 
-var botaoPlay = document.getElementById('iconePlay');
+const botaoPlay = document.getElementById('iconePlay');
 
-var secaoIframeHome = document.getElementById('iframeHome');
+const secaoIframeHome = document.getElementById('iframeHome');
 
-var somCahoeira = document.getElementById('Cachoeira');
+const somCahoeira = document.getElementById('Cachoeira');
 
-var sfssd = document.getElementById('SFSSD');
+const sfssd = document.getElementById('SFSSD');
 
-var gifCodeFooter = document.getElementById('codeFooter');
+const gifCodeFooter = document.getElementById('codeFooter');
 
-var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
+const secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
 
-/*var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
+/*const secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
 
-var secaoFooter = document.getElementById('rodapePrincipal');
+const secaoFooter = document.getElementById('rodapePrincipal');
 
 const secaoCabecalho = document.getElementById('secaoCabecalho');
 
@@ -618,10 +618,10 @@ function fraseAleatoria()
 
 function contagemRegresiva()
 {
-    var t = setTimeout("show3('3')", 1000);
-    var t = setTimeout("show2('2')", 2000);
-    var t = setTimeout("show1('1')", 3000);
-    var t = setTimeout("alertMsg()", 3500);
+    let t = setTimeout("show3('3')", 1000);
+    let t = setTimeout("show2('2')", 2000);
+    let t = setTimeout("show1('1')", 3000);
+    let t = setTimeout("alertMsg()", 3500);
 }
 
 function show1(texto)
