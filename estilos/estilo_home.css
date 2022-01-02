@@ -576,14 +576,6 @@ main
     height: auto;
 }
 
-
-.secaoGift
-{    
-    flex-direction: row;
-    justify-content: center;
-    display: none;
-}
-
 /*#tituloPrincipal*/
 .marquee 
 {
