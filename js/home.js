@@ -1175,9 +1175,27 @@ function carregado()
     setTimeout("limparStatusSistema()", 10000);
 }
 
+function audioAmbienteTocando()
+{
+    statusSistema.innerHTML = "Ambient music playing!";
+    setTimeout("limparStatusSistema()", 10000);
+}
+
+function audioCachoeiraTocando()
+{
+    statusSistema.innerHTML = "Sound of waterfall is playing!";
+    setTimeout("limparStatusSistema()", 10000);
+}
+
 function limparStatusSistema()
 {
-    statusSistema.innerHTML = "";
+    if (statusSistema.innerHTML == "")
+    {
+
+    } else
+    {
+        statusSistema.innerHTML = "";
+    }
 }
 
 /*

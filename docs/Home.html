@@ -20,7 +20,7 @@
             <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
         </audio>
 
-        <audio class=" audios" id='audioPrincipal' loop>
+        <audio class=" audios" id='audioPrincipal' loop onplaying="audioAmbienteTocando()">
             <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
         </audio>
 
@@ -40,7 +40,7 @@
             <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
         </audio>
 
-        <audio autoplay loop class="audios" id='Cachoeira'>
+        <audio autoplay loop class="audios" id='Cachoeira' onplaying="audioCachoeiraTocando()">
             <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
         </audio>
 
@@ -344,7 +344,7 @@
                             <p id="SFSSD">
                                 Paulo de Tasso
                                 <br>
-                                * Senior Full Stack Software Developer *
+                                - Senior Full Stack Software Developer -
                                 <!-- 
                                 <a href="../docs/TLOD.html" target="_blank">
                                     .
