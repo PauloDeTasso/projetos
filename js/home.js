@@ -1154,6 +1154,16 @@ function colou()
     statusSistema.innerHTML = "Pasted";
 }
 
+const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeydown = logKey;
+
+function logKey(e)
+{
+    log.textContent += ` ${e.code}`;
+}
+
 /*
 
 function statusJavascript()
