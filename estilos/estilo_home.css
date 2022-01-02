@@ -264,7 +264,10 @@ body
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 #botaoTabela
@@ -392,39 +395,42 @@ body
 #iframeHome
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
+    font-size: 1%;
 }
 
 #iframe
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: auto;
+    font-size: 1%;
 }
 
-.tabelaRoadmap
+#tabelaRoadmap
 {   
-    width: auto;
-    height: 100%;    
+    width: 100%;
+    height: auto;    
     border-collapse: collapse;
-    vertical-align: top;
     color: rgb(255, 233, 191);
     background-color: black;
-    font-size: 8pt;
+    font-size: 1%;
 }
 
 .celulaTabela
-{
+{    
     vertical-align: top;  
-    padding: 10px;    
     border: 2px solid rgb(21, 21, 21);
+    width: auto;
+    height: auto;
+    font-size: 1%;
 }
 
 main
