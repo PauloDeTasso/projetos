@@ -1,78 +1,50 @@
-/* CONST'S*/
+/* var 'S*/
 
-const botaoGif = document.getElementById('botaoGifPrincipal');
+var botaoGif = document.getElementById('botaoGifPrincipal');
 
-const audioPrincipal = document.getElementById("audioPrincipal");
+var audioPrincipal = document.getElementById("audioPrincipal");
 
-const iconeMudo = document.getElementById('iconeMudo')
+var iconeMudo = document.getElementById('iconeMudo')
 
-const audio1 = document.getElementById('audio1');
+var audio1 = document.getElementById('audio1');
 
-const audio2 = document.getElementById('audio2');
+var audio2 = document.getElementById('audio2');
 
-const audio3 = document.getElementById('audio3');
+var audio3 = document.getElementById('audio3');
 
-const audio4 = document.getElementById('audio4');
+var audio4 = document.getElementById('audio4');
 
-const gif1 = document.getElementById('gif1');
+var gif1 = document.getElementById('gif1');
 
-const gif2 = document.getElementById('gif2');
+var gif2 = document.getElementById('gif2');
 
-const gif3 = document.getElementById('gif3');
+var gif3 = document.getElementById('gif3');
 
-const audioSource1 = document.getElementById('audioSource1');
+var audioSource1 = document.getElementById('audioSource1');
 
-const audioSource2 = document.getElementById('audioSource2');
+var audioSource2 = document.getElementById('audioSource2');
 
-const audioSource3 = document.getElementById('audioSource3');
+var audioSource3 = document.getElementById('audioSource3');
 
-const iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
+var iconeAumentarVolume = document.getElementById("iconeMudoAumentarVolume");
 
-const iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
+var iconeDiminuirVolume = document.getElementById('iconeMudoDiminuirVolume');
 
-const volumeArredondado = Math.round(audioPrincipal.volume * 10);
+var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-const tituloPrincipal = document.getElementById('tituloPrincipal');
+var tituloPrincipal = document.getElementById('tituloPrincipal');
 
-const nome = document.getElementById("status");
+var nome = document.getElementById("status");
 
-const portaPrincipal = document.getElementById('portaPrincipal');
+var portaPrincipal = document.getElementById('portaPrincipal');
 
-const iconeJanela = document.getElementById('iconeJanela');
+var aleatorio;
 
+var caminho;
 
-const secaoGif = document.getElementById('secaoGif');
+var mensagemAleatoria;
 
-const iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
-
-const iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
-
-const botaoPausar = document.getElementById('iconePause');
-
-const botaoPlay = document.getElementById('iconePlay');
-
-const secaoIframeHome = document.getElementById('iframeHome');
-
-const somCahoeira = document.getElementById('Cachoeira');
-
-const sfssd = document.getElementById('SFSSD');
-
-const gifCodeFooter = document.getElementById('codeFooter');
-
-const secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
-
-/*const secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
-
-const secaoFooter = document.getElementById('rodapePrincipal');
-
-const secaoCabecalho = document.getElementById('secaoCabecalho');
-
-const iconeUsuario = document.getElementById('iconeUsuario');
-
-const secaoLicense = document.getElementById('license');
-
-
-/* VAR'S*/
+var numerogerado;
 
 var fraseAtual = "\“Patience is a key element of success.\" - Bill Gates.";
 
@@ -89,15 +61,35 @@ var frase10 = "\"Don\'t write better error messages, write code that doesn't nee
 
 var numeroAleatorioFrase;
 
-var aleatorio;
-
-var caminho;
-
-var mensagemAleatoria;
-
-var numerogerado;
-
 var frases = new Array(frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9, frase10);
+
+var secaoGif = document.getElementById('secaoGif');
+
+var iconeSomExtra = document.getElementById('iconeVolumeAltoDemais');
+
+var iconeSomExtra2 = document.getElementById('iconeVolumeBaixoDemais');
+
+var botaoPausar = document.getElementById('iconePause');
+
+var botaoPlay = document.getElementById('iconePlay');
+
+var secaoIframeHome = document.getElementById('iframeHome');
+
+var somCahoeira = document.getElementById('Cachoeira');
+
+var sfssd = document.getElementById('SFSSD');
+
+var gifCodeFooter = document.getElementById('codeFooter');
+
+var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
+
+/*var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
+
+var secaoFooter = document.getElementById('rodapePrincipal');
+
+var secaoCabecalho = document.getElementById('secaoCabecalho');
+
+var iconeUsuario = document.getElementById('iconeUsuario');
 
 /////////////////////////////////////////////////////////////////
 
@@ -627,10 +619,10 @@ function fraseAleatoria()
 
 function contagemRegresiva()
 {
-    let t = setTimeout("show3('3')", 1000);
-    let t = setTimeout("show2('2')", 2000);
-    let t = setTimeout("show1('1')", 3000);
-    let t = setTimeout("alertMsg()", 3500);
+    var t = setTimeout("show3('3')", 1000);
+    var t = setTimeout("show2('2')", 2000);
+    var t = setTimeout("show1('1')", 3000);
+    var t = setTimeout("alertMsg()", 3500);
 }
 
 function show1(texto)
@@ -661,8 +653,8 @@ function alertMsg()
 
 function abrirSecaoGif()
 {
-    let style = window.getComputedStyle(secaoGif);
-    let top = style.getPropertyValue('display');
+    var style = window.getComputedStyle(secaoGif);
+    var top = style.getPropertyValue('display');
 
     if (top == "none")    
     {
@@ -692,9 +684,9 @@ function abrirSecaoGifPrincipal()
 function abrirFecharTabela()
 {
 
-    const iconeJanela = document.getElementById('iconeJanela');
+    var iconeJanela = document.getElementById('iconeJanela');
     let getStyle = window.getComputedStyle(secaoIframeHome);
-    let getDisplay = getStyle.getPropertyValue('display');
+    var getDisplay = getStyle.getPropertyValue('display');
 
     if (getDisplay == "none")    
     {
@@ -709,6 +701,8 @@ function abrirFecharTabela()
 
 function moveMouseIconeJanela()
 {
+
+    var iconeJanela = document.getElementById('iconeJanela');
 
     if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
     {
@@ -733,10 +727,12 @@ function moveMouseIconeJanela()
     }
 }
 
+var secaoLicense = document.getElementById('license');
+
 function abrirSecaoLicense()
 {
-    let estiloLicense = window.getComputedStyle(secaoLicense);
-    let valorEstilo = estiloLicense.getPropertyValue('display');
+    var estiloLicense = window.getComputedStyle(secaoLicense);
+    var valorEstilo = estiloLicense.getPropertyValue('display');
 
     if (valorEstilo == "none")    
     {
@@ -958,8 +954,8 @@ function statusIconeTabelaOff()
 
 function statusIconeTabela()
 {
-    let getStyle = window.getComputedStyle(secaoIframeHome);
-    let getDisplay = getStyle.getPropertyValue('display');
+    var getStyle = window.getComputedStyle(secaoIframeHome);
+    var getDisplay = getStyle.getPropertyValue('display');
 
     if (getDisplay == "none")    
     {
@@ -1158,7 +1154,7 @@ function statusJavascriptOff()
 
 
 /*
-const iconeHtml5 = getElementById('iconeHtml');
+var iconeHtml5 = getElementById('iconeHtml');
 
 function statusPrincipal()
 {
