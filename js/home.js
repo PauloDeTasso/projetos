@@ -1238,12 +1238,13 @@ function limparStatusSistema()
     }
 }
 
+/*
 
-luzes();
+luzes()
 
 function luzes()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
+    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/9.jpg');
     secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
