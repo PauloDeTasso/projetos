@@ -118,6 +118,26 @@ body
     height: 100%;
 }
 
+#secaoLesteImagem
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 10px;
+    height: 1000px;
+}
+
+#secaoOesteImagem
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 10px;
+    height: 1000px;
+}
+
 /*////////////////////////////*/
 
 
