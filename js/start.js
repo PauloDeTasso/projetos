@@ -95,7 +95,7 @@ function luzes()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
-    let show = setTimeout("luzes1()", 200);
+    let show = setTimeout("luzes1()", 140);
 }
 
 function luzes1()
@@ -104,7 +104,7 @@ function luzes1()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    let show = setTimeout("luzes2()", 200);
+    let show = setTimeout("luzes2()", 140);
 }
 
 function luzes2()
@@ -113,7 +113,7 @@ function luzes2()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    let show = setTimeout("luzes3()", 200);
+    let show = setTimeout("luzes3()", 140);
 }
 
 function luzes3()
@@ -122,7 +122,7 @@ function luzes3()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    let show = setTimeout("luzes4()", 200);
+    let show = setTimeout("luzes4()", 140);
 }
 
 function luzes4()
@@ -131,7 +131,7 @@ function luzes4()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    let show = setTimeout("luzes5()", 200);
+    let show = setTimeout("luzes5()", 140);
 }
 
 function luzes5()
@@ -140,7 +140,7 @@ function luzes5()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    let show = setTimeout("luzes6()", 200);
+    let show = setTimeout("luzes6()", 140);
 }
 
 function luzes6()
@@ -149,7 +149,7 @@ function luzes6()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    let show = setTimeout("luzes7()", 200);
+    let show = setTimeout("luzes7()", 140);
 }
 
 function luzes7()
@@ -158,7 +158,7 @@ function luzes7()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    let show = setTimeout("luzes8()", 200);
+    let show = setTimeout("luzes8()", 140);
 }
 
 function luzes8()
@@ -167,7 +167,7 @@ function luzes8()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    let show = setTimeout("luzes9()", 200);
+    let show = setTimeout("luzes9()", 140);
 }
 
 
@@ -177,7 +177,7 @@ function luzes16()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    let show = setTimeout("luzes1()", 200);
+    let show = setTimeout("luzes1()", 140);
 }
 
 function luzes15()
@@ -186,7 +186,7 @@ function luzes15()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    let show = setTimeout("luzes16()", 200);
+    let show = setTimeout("luzes16()", 140);
 }
 
 function luzes14()
@@ -195,7 +195,7 @@ function luzes14()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    let show = setTimeout("luzes15()", 200);
+    let show = setTimeout("luzes15()", 140);
 }
 
 function luzes13()
@@ -204,7 +204,7 @@ function luzes13()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    let show = setTimeout("luzes14()", 200);
+    let show = setTimeout("luzes14()", 140);
 }
 
 function luzes12()
@@ -213,7 +213,7 @@ function luzes12()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    let show = setTimeout("luzes13()", 200);
+    let show = setTimeout("luzes13()", 140);
 }
 
 function luzes11()
@@ -222,7 +222,7 @@ function luzes11()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    let show = setTimeout("luzes12()", 200);
+    let show = setTimeout("luzes12()", 140);
 }
 
 function luzes10()
@@ -231,7 +231,7 @@ function luzes10()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    let show = setTimeout("luzes11()", 200);
+    let show = setTimeout("luzes11()", 140);
 }
 
 function luzes9()
@@ -240,7 +240,7 @@ function luzes9()
     secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    let show = setTimeout("luzes10()", 200);
+    let show = setTimeout("luzes10()", 140);
 }
 
 /* COLORIDAS: 
