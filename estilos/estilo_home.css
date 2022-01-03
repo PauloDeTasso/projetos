@@ -400,7 +400,6 @@ body
     align-items: center;
     width: 100%;
     height: auto;
-    font-size: 1%;
 }
 
 #iframe
@@ -411,7 +410,6 @@ body
     align-items: center;
     width: 100%;
     height: auto;
-    font-size: 1%;
 }
 
 #tabelaRoadmap
@@ -421,7 +419,7 @@ body
     border-collapse: collapse;
     color: rgb(255, 233, 191);
     background-color: black;
-    font-size: 1%;
+    font-size: 100%;
 }
 
 .celulaTabela
@@ -430,7 +428,7 @@ body
     border: 2px solid rgb(21, 21, 21);
     width: auto;
     height: auto;
-    font-size: 1%;
+    font-size: 100%;
 }
 
 main
