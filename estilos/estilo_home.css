@@ -48,9 +48,7 @@ body
     justify-content: center;    
     align-items: center;
     width: 3%;
-    height: 100%; 
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
+    height: 100%;    
 }
 
 /**/
@@ -63,8 +61,6 @@ body
     align-items: center;
     width: 100%;
     height: 10%;
-    background-color: rgb(0, 0, 0);
-    opacity: 1;
 }
 
 /**/
@@ -100,8 +96,6 @@ body
     align-items: center;
     width: 100%;
     height: 3%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
 }
 
 /**/
@@ -114,8 +108,6 @@ body
     align-items: center;
     width: 3%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
 }
 
 /*////////////////////////////*/
@@ -646,4 +638,24 @@ main
     font-size: 5pt;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#secaoLesteImagem
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 10px;
+    height: 600px;
+}
+
+#secaoOesteImagem
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 10px;
+    height: 600px;
 }
