@@ -14,8 +14,9 @@ var contador = 0;
 
 var numeroAleatorioFraseInterno;
 
-
 var numeroEmojiAleatorio;
+
+var secaoNorteImagem = document.getElementById('secaoNorteImagem');
 
 /////////////////////////**/
 
@@ -78,12 +79,14 @@ function somTerminou()
     } else
     {
         somLoop.pause();
+        let show1 = setTimeout("luzes()", 1000);
     }
 }
 
 function luzes()
 {
-
+    secaoNorteImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
+    let show1 = setTimeout("luzes()", 1000);
 }
 
 /*
