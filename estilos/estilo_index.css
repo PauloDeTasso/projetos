@@ -46,6 +46,8 @@ body
     align-items: center;
     width: 100%;
     height: 10%;
+    background-color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
 }
 
 /**/
