@@ -83,7 +83,7 @@ function somTerminou()
 
 function luzes()
 {
-    alert('oi');
+
 }
 
 /*
