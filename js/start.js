@@ -20,6 +20,8 @@ var secaoNorteImagem = document.getElementById('secaoNorteImagem');
 
 var secaoSulImagem = document.getElementById('secaoSulImagem');
 
+var secaoLesteImagem = document.getElementById('secaoLesteImagem');
+
 /////////////////////////**/
 
 function objetoPlay()
