@@ -74,11 +74,16 @@ function somTerminou()
     if (confimar == true) 
     {
         somLoop.play();
-
+        let show1 = setTimeout("luzes()", 1000);
     } else
     {
         somLoop.pause();
     }
+}
+
+function luzes()
+{
+
 }
 
 /*
