@@ -85,7 +85,7 @@ function somTerminou()
     } else
     {
         somLoop.pause();
-        let show1 = setTimeout("luzes()", 500);
+        let show1 = setTimeout("luzes()", 1000);
     }
 }
 
@@ -93,73 +93,81 @@ function luzes()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    secaoOesteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    let show = setTimeout("luzes1()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/preto.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/preto.jpg');
+    let show = setTimeout("luzes1()", 100);
 }
 
 function luzes1()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/azulmarinho.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/azulmarinho.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/azulmarinho.jpg');
-    let show = setTimeout("luzes2()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
+    let show = setTimeout("luzes2()", 100);
 }
 
 function luzes2()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
-    let show = setTimeout("luzes3()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/azulmarinho.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/azulmarinho.jpg');
+    let show = setTimeout("luzes3()", 100);
 }
 
 function luzes3()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/lilas.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/lilas.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/lilas.jpg');
-    let show = setTimeout("luzes4()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/azul.jpg');
+    let show = setTimeout("luzes4()", 100);
 }
 
 function luzes4()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/verde.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/verde.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/verde.jpg');
-    let show = setTimeout("luzes5()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/lilas.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/lilas.jpg');
+    let show = setTimeout("luzes5()", 100);
 }
 
 function luzes5()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/amarelo.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/amarelo.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/amarelo.jpg');
-    let show = setTimeout("luzes6()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/verde.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/verde.jpg');
+    let show = setTimeout("luzes6()", 100);
 }
 
 function luzes6()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/laranja.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/laranja.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/laranja.jpg');
-    let show = setTimeout("luzes7()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/amarelo.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/amarelo.jpg');
+    let show = setTimeout("luzes7()", 100);
 }
 
 function luzes7()
 {
     secaoNorteImagem.setAttribute('src', '/imagens/luzes/vermelho.jpg');
     secaoSulImagem.setAttribute('src', '/imagens/luzes/vermelho.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/vermelho.jpg');
-    let show = setTimeout("luzes8()", 500);
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/laranja.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/laranja.jpg');
+    let show = setTimeout("luzes8()", 100);
 }
 
 function luzes8()
 {
-    secaoNorteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    secaoSulImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    secaoLesteImagem.setAttribute('src', '/imagens/luzes/branco.jpg');
-    let show = setTimeout("luzes1()", 500);
+    secaoNorteImagem.setAttribute('src', '/imagens/luzes/preto.jpg');
+    secaoSulImagem.setAttribute('src', '/imagens/luzes/preto.jpg');
+    secaoLesteImagem.setAttribute('src', '/imagens/luzes/vermelho.jpg');
+    secaoOesteImagem.setAttribute('src', '/imagens/luzes/vermelho.jpg');
+    let show = setTimeout("luzes1()", 100);
 }
 
 
