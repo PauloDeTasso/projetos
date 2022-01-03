@@ -1,0 +1,46 @@
+html
+{   
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 21, 21);
+    color: rgb(255, 233, 191);
+    border: 10px solid rgb(255, 255, 255);
+    font-size: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    border: 10px solid rgb(0, 0, 0);
+}
+
+#tabelaRoadmap
+{
+    border: 10px solid rgb(0, 255, 191);     
+}
+
+#cabecalhoTabela
+{
+    border: 10px solid rgb(0, 77, 17);
+}
+
+#linhaTabela
+{
+    border: 10px solid rgb(0, 146, 24);
+}
+
+#celulaTabela
+{
+    border: 10px solid rgb(0, 255, 0);
+}
+
+#tituloTabela
+{
+    border: 10px solid rgb(0, 23, 228);
+}
