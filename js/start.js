@@ -81,13 +81,169 @@ function somTerminou()
     if (confimar == true) 
     {
         somLoop.play();
-        let show1 = setTimeout("luzes()", 1000);
+        let show1 = setTimeout("luzes()", 1);
     } else
     {
         somLoop.pause();
-        let show1 = setTimeout("luzes()", 1000);
+        let show1 = setTimeout("luzes()", 1);
     }
 }
+
+function luzes()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
+    let show = setTimeout("luzes1()", 200);
+}
+
+function luzes1()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    let show = setTimeout("luzes2()", 200);
+}
+
+function luzes2()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    let show = setTimeout("luzes3()", 200);
+}
+
+function luzes3()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    let show = setTimeout("luzes4()", 200);
+}
+
+function luzes4()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    let show = setTimeout("luzes5()", 200);
+}
+
+function luzes5()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    let show = setTimeout("luzes6()", 200);
+}
+
+function luzes6()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    let show = setTimeout("luzes7()", 200);
+}
+
+function luzes7()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    let show = setTimeout("luzes8()", 200);
+}
+
+function luzes8()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    let show = setTimeout("luzes9()", 200);
+}
+
+
+function luzes16()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
+    let show = setTimeout("luzes1()", 200);
+}
+
+function luzes15()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
+    let show = setTimeout("luzes16()", 200);
+}
+
+function luzes14()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
+    let show = setTimeout("luzes15()", 200);
+}
+
+function luzes13()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
+    let show = setTimeout("luzes14()", 200);
+}
+
+function luzes12()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
+    let show = setTimeout("luzes13()", 200);
+}
+
+function luzes11()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
+    let show = setTimeout("luzes12()", 200);
+}
+
+function luzes10()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
+    let show = setTimeout("luzes11()", 200);
+}
+
+function luzes9()
+{
+    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
+    let show = setTimeout("luzes10()", 200);
+}
+
+/* COLORIDAS: 
 
 function luzes()
 {
@@ -169,7 +325,6 @@ function luzes8()
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/vermelho.jpg');
     let show = setTimeout("luzes1()", 100);
 }
-
 
 /*
 
