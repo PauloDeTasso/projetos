@@ -5,8 +5,9 @@ html
     justify-content: center;
     align-items: center;
     background-color: rgb(21, 21, 21);
-    color: rgb(255, 233, 191);
-    font-size: 5pt;
+    color: rgb(255, 233, 191);    
+    width: 100%;
+    height: auto;
 }
 
 body
@@ -15,13 +16,14 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5pt;    
     background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    font-size: 10pt;
 }
 
 #tabelaRoadmap
-{       
-    font-size: 5pt;     
+{    
     border-collapse: collapse;
     color: rgb(255, 233, 191);    
     background-color: black;
@@ -29,26 +31,48 @@ body
 
 #cabecalhoTabela
 {   
-    font-size: 5pt;
-}
 
-#tituloTabela
-{
-    font-size: 5pt;    
 }
 
 #linhaTabela
 {    
-    font-size: 5pt;
+
 }
 
-#celulaTabela
-{    
+#colunaTabela
+{            
+    width: auto;
+    height: auto;
     align-items: center;
-    font-size: 5pt;
+    font-size: 7pt;
+    font-weight: bold;
     vertical-align: top;
+    padding: 0px;
+    margin: 0px;    
     border-collapse: collapse;
     color: rgb(255, 233, 191);
     background-color: black;    
-    border: 2px solid rgb(21, 21, 21);
+    border: 1px solid rgb(44, 44, 44);    
 }
+
+#tituloTabela
+{   
+
+}
+
+#corpoTabela
+{    
+
+}
+
+#ulTabela
+{    
+}
+
+#liTabela
+{   
+}
+
+#secaoColuna2
+{
+}  
