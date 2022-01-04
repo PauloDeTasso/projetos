@@ -1335,8 +1335,6 @@ function luzes2()
 
 function luzes3()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/3.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/3.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/3.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/3.jpg');
     let show = setTimeout("luzes4()", 120);
@@ -1344,8 +1342,6 @@ function luzes3()
 
 function luzes4()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/4.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/4.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/4.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/4.jpg');
     let show = setTimeout("luzes5()", 120);
