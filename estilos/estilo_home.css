@@ -477,12 +477,12 @@ main
     flex-direction: column;
     justify-content: center;
    font-size: 18pt;
-   text-align: justify;
+   text-align: center;
    font-weight: lighter;
    align-items: center;
    padding: 3%;
    letter-spacing: 1px;
-   font-weight: bold;
+   font-weight: bolder;
     text-shadow: 2px 3px 1px rgb(0, 64, 160);
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
