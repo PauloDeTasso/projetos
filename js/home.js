@@ -1417,7 +1417,7 @@ function luzes9()
 
 function bodyCarregado()
 {
-    progresso = progresso + 30;
+    progresso = progresso + 1;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "...Loaded Body...";
     setTimeout("progressoDaBarra()", 100);
@@ -1425,7 +1425,7 @@ function bodyCarregado()
 
 function iframeCarregado()
 {
-    progresso = progresso + 30;
+    progresso = progresso + 1;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "...Loaded iframe...";
     setTimeout("progressoDaBarra()", 100);
@@ -1433,17 +1433,18 @@ function iframeCarregado()
 
 function scriptCarregado()
 {
-    progresso = progresso + 30;
+    progresso = progresso + 1;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "...Loaded Script...";
     setTimeout("progressoDaBarra()", 100);
 }
 
-function imagemCarregada1()
+function imagemCarregada()
 {
     progresso = progresso + 1;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Imagem1...";
+    /*statusSistema.innerHTML = "...Loaded Imagens...";*/
+    statusSistema.innerHTML = progresso;
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1475,11 +1476,31 @@ function progressoDaBarra()
     if (progresso >= 0 && progresso < 90)
     {
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Loading!";
-    } else
+        /*statusSistema.innerHTML = "...Loading...";*/
+        statusSistema.innerHTML = progresso;
+    }
+
+    if (progresso >= 90 && progresso < 100)
     {
         setTimeout("completarBarraDeProgresso()", 100);
     }
+
+
+    if (progresso == 100)
+    {
+        barraDeProgresso.setAttribute('value', progresso);
+        /*statusSistema.innerHTML = "Loaded!";*/
+        statusSistema.innerHTML = progresso;
+        setTimeout("limparStatusSistema()", 5000);
+    }
+
+    if (progresso > 100)
+    {
+        /*statusSistema.innerHTML = "Loaded!";*/
+        statusSistema.innerHTML = progresso;
+        setTimeout("limparStatusSistema()", 5000);
+    }
+
 }
 
 function completarBarraDeProgresso()
@@ -1489,19 +1510,8 @@ function completarBarraDeProgresso()
         progresso += 1;
 
         barraDeProgresso.setAttribute('value', progresso);
-
-        setTimeout("completarBarraDeProgresso()", 1000);
-
-    } else if (progresso == 100)
-    {
-        barraDeProgresso.setAttribute('value', progresso);
-        statusSistema.innerHTML = "Loaded!";
-        setTimeout("limparStatusSistema()", 5000);
-    } else   
-    {
-        statusSistema.innerHTML = "...Loading...";
     }
-
+    progressoDaBarra();
 }
 
 function limparStatusSistema()
