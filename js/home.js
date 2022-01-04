@@ -101,6 +101,10 @@ var secaoLesteImagem = document.getElementById('secaoLesteImagem');
 
 var secaoOesteImagem = document.getElementById('secaoOesteImagem');
 
+var barraDeProgresso = document.getElementById('barraDeProgresso');
+
+var progresso = 0;
+
 /////////////////////////////////////////////////////////////////
 
 
@@ -1197,24 +1201,6 @@ function colou()
     setTimeout("limparStatusSistema()", 10000);
 }
 
-/*
-const input = document.querySelector('input');
-const log = document.getElementById('log');
-
-input.onkeydown = logKey;
-
-function logKey(e)
-{
-    log.textContent += ` ${e.code}`;
-}
-*/
-
-function carregado()
-{
-    statusSistema.innerHTML = "Page loaded!";
-    setTimeout("limparStatusSistema()", 10000);
-}
-
 function audioAmbienteTocando()
 {
     statusSistema.innerHTML = "Ambient music playing!";
@@ -1237,6 +1223,106 @@ function limparStatusSistema()
         statusSistema.innerHTML = "";
     }
 }
+
+/*
+const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeydown = logKey;
+
+function logKey(e)
+{
+    log.textContent += ` ${e.code}`;
+}
+*/
+
+function carregado()
+{
+    progresso = progresso + 1;
+    statusSistema.innerHTML = "Loading...";
+
+    if (progresso <= 100)
+    {
+        setTimeout("aumentarProgressoDaBarra()", 1000);
+    } else
+    {
+        statusSistema.innerHTML = "Loaded!";
+    }
+
+    setTimeout("limparStatusSistema()", 10000);
+
+}
+
+function aumentarProgressoDaBarra()
+{
+    progresso += 1;
+
+    if (progresso <= 100)
+    {
+        setTimeout("aumentarProgressoDaBarra()", 10);
+
+    } else
+    {
+        statusSistema.innerHTML = "Loaded!";
+    }
+
+    barraDeProgresso.setAttribute('value', progresso);
+
+    setTimeout("limparStatusSistema()", 10000);
+
+}
+
+/*
+function progressoDaBarra()
+{
+    switch (progresso)
+    {
+        case 10:
+            barraDeProgresso.setAttribute('value', '10');
+            break;
+
+        case 20:
+            barraDeProgresso.setAttribute('value', '20');
+            break;
+
+        case 30:
+            barraDeProgresso.setAttribute('value', '30');
+            break;
+
+        case 40:
+            barraDeProgresso.setAttribute('value', '40');
+            break;
+
+        case 50:
+            barraDeProgresso.setAttribute('value', '50');
+            break;
+
+        case 60:
+            barraDeProgresso.setAttribute('value', '60');
+            break;
+
+        case 70:
+            barraDeProgresso.setAttribute('value', '70');
+            break;
+
+        case 80:
+            barraDeProgresso.setAttribute('value', '80');
+            break;
+
+        case 90:
+            barraDeProgresso.setAttribute('value', '90');
+            break;
+
+        case 100:
+            barraDeProgresso.setAttribute('value', '100');
+            break;
+
+        default:
+
+            barraDeProgresso.setAttribute('value', '0');
+    }
+}
+
 
 /*
 

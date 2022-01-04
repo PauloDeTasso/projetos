@@ -625,7 +625,7 @@ main
     justify-content: center;
     width: 100%;
     height: auto;
-    font-size: 5pt;
+    font-size: 10pt;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -648,4 +648,14 @@ main
     align-items: center;
     width: 10px;
     height: 600px;
+}
+
+#secaoBarraDeProgresso
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
