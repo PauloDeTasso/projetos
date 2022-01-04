@@ -429,7 +429,7 @@ main
     align-items: center;
     width: 100%;
     height: auto;    
-    background-image: url('../imagens/outros/terra.png');
+    background-image: url('../imagens/outros/terra_p.png');
     background-size: cover;
     background-position: center;
 }

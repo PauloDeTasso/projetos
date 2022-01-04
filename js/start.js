@@ -1,14 +1,16 @@
-const imagem = document.getElementById('start')
+var imagem = document.getElementById('start')
 
-const visitasdoSite = document.getElementById('visitasSite');
+var visitasdoSite = document.getElementById('visitasSite');
 
-const objetoEmMovimento = document.getElementById('objeto');
+var objetoEmMovimento = document.getElementById('objeto');
 
-const somVento = document.getElementById('somDoVento');
+var somVento = document.getElementById('somDoVento');
 
-const somLoop = document.getElementById('loop');
+var somLoop = document.getElementById('loop');
 
-const emojiNorte1 = document.getElementById('emojiNorte01');
+var somRespiracao = document.getElementById('respiracao');
+
+var emojiNorte1 = document.getElementById('emojiNorte01');
 
 var contador = 0;
 
@@ -26,6 +28,8 @@ var secaoOesteImagem = document.getElementById('secaoOesteImagem');
 
 /////////////////////////**/
 
+somVento.volume = 0.3;
+
 function objetoPlay()
 {
     objetoEmMovimento.setAttribute()
@@ -38,8 +42,6 @@ function numeroAleatorioFrase(min, max)
 
 function alterarImagem()
 {
-    somVento.volume = 0.3;
-    playUnico();
     numeroAleatorioFrase(0, 20);
     imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png')
     contador = 1;
@@ -74,6 +76,10 @@ function playUnico()
 
 }
 
+/* SE BARRA DE PROGRESSO = 100 ENTÃO: */
+
+let som = setTimeout("somTerminou()", 7000);
+
 function somTerminou()
 {
     let confimar = confirm("Ok for a song?");
@@ -81,12 +87,16 @@ function somTerminou()
     if (confimar == true) 
     {
         somLoop.play();
-
+        somVento.play();
+        somRespiracao, play();
     } else
     {
         somLoop.pause();
+        somVento.pause();
+        somRespiracao.pause();
     }
 }
+
 
 luzes();
 

@@ -1225,48 +1225,6 @@ function logKey(e)
 }
 */
 
-/*
-function linkEstiloCarregado()
-{
-    progresso = progresso + 20;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loading Style...";
-    setTimeout("progressoDaBarra()", 1);
-}
-
-function linkFavIconCarregado()
-{
-    progresso = progresso + 20;
-
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loading Icon...";
-    setTimeout("progressoDaBarra()", 1);
-}
-
-*/
-function bodyCarregado()
-{
-    progresso = progresso + 30;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Body...";
-    setTimeout("progressoDaBarra()", 100);
-}
-
-function iframeCarregado()
-{
-    progresso = progresso + 30;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded iframe...";
-    setTimeout("progressoDaBarra()", 100);
-}
-
-function scriptCarregado()
-{
-    progresso = progresso + 30;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Script...";
-    setTimeout("progressoDaBarra()", 100);
-}
 
 /*
 function aumentarProgressoDaBarra()
@@ -1288,6 +1246,8 @@ function aumentarProgressoDaBarra()
 
 }
 */
+
+/*
 
 function progressoDaBarra()
 {
@@ -1329,33 +1289,7 @@ function progressoDaBarra()
     }
 }
 
-
-function completarBarraDeProgresso()
-{
-    if (progresso >= 90 && progresso < 100)
-    {
-        progresso += 1;
-
-        barraDeProgresso.setAttribute('value', progresso);
-
-        setTimeout("completarBarraDeProgresso()", 1000);
-
-    } else
-    {
-        statusSistema.innerHTML = "Loaded!";
-    }
-
-    if (progresso == 100)
-    {
-        setTimeout("limparStatusSistema()", 5000);
-    }
-
-}
-
-function limparStatusSistema()
-{
-    statusSistema.style.visibility = 'hidden';
-}
+*/
 
 luzes()
 
@@ -1477,6 +1411,102 @@ function luzes9()
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/8.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/8.jpg');
     let show = setTimeout("luzes10()", 120);
+}
+
+/*//////////CARREGAMENTOS: */
+
+function bodyCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded Body...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+function iframeCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded iframe...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+function scriptCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded Script...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+function imagemCarregada1()
+{
+    progresso = progresso + 1;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded Imagem1...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+/*
+function linkEstiloCarregado()
+{
+    progresso = progresso + 20;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loading Style...";
+    setTimeout("progressoDaBarra()", 1);
+}
+
+function linkFavIconCarregado()
+{
+    progresso = progresso + 20;
+
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loading Icon...";
+    setTimeout("progressoDaBarra()", 1);
+}
+
+*/
+
+
+function progressoDaBarra()
+{
+    barraDeProgresso.setAttribute('value', progresso);
+
+    if (progresso >= 0 && progresso < 90)
+    {
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "Loading!";
+    } else
+    {
+        setTimeout("completarBarraDeProgresso()", 100);
+    }
+}
+
+function completarBarraDeProgresso()
+{
+    if (progresso >= 90 && progresso < 100)
+    {
+        progresso += 1;
+
+        barraDeProgresso.setAttribute('value', progresso);
+
+        setTimeout("completarBarraDeProgresso()", 1000);
+
+    } else if (progresso == 100)
+    {
+        barraDeProgresso.setAttribute('value', progresso);
+        statusSistema.innerHTML = "Loaded!";
+        setTimeout("limparStatusSistema()", 5000);
+    } else   
+    {
+        statusSistema.innerHTML = "...Loading...";
+    }
+
+}
+
+function limparStatusSistema()
+{
+    statusSistema.style.visibility = 'hidden';
 }
 
 /*

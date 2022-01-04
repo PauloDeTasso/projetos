@@ -52,7 +52,8 @@
 
     <section id="secaoNorte">
 
-        <img src="../icones/RETROCEDER.png" alt="Icone de volume alto!" width="20px" height="20px">
+        <img onload="imagemCarregada1()" src="../icones/RETROCEDER.png" alt="Icone de volume alto!" width="20px"
+            height="20px">
 
         <section id="secaoBarraDeProgresso">
 
@@ -64,7 +65,8 @@
 
         </section>
 
-        <img src="../icones/AVANÇAR.png" alt="Icone de volume alto!" width="20px" height="20px">
+        <img onload="imagemCarregada1()" src="../icones/AVANÇAR.png" alt="Icone de volume alto!" width="20px"
+            height="20px">
 
     </section>
 
@@ -77,8 +79,8 @@
 
         <section id="secaoOeste">
 
-            <img id="secaoOesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias" width="10px"
-                height="70%">
+            <img onload="imagemCarregada1()" id="secaoOesteImagem" src="../imagens/luzes/preto e branco/0.jpg"
+                alt="Cores Aleatorias" width="10px" height="70%">
 
         </section>
 
@@ -96,10 +98,11 @@
                             onmouseleave="diminuir_volume()" ontouchmove="diminuir_volume()"
                             ontouchend="diminuir_volume()" type="button">
 
-                            <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
-                                onmouseleave="statusBaixarVolumeOff()" ontouchmove="statusBaixarVolume()"
-                                ontouchend="statusBaixarVolumeOff()" src="../icones/800x600/volumebaixo.png"
-                                alt="Diminuir Volume" width="31px" height="31px">
+                            <img onload="imagemCarregada1()" id="iconeMudoDiminuirVolume"
+                                onmousemove="statusBaixarVolume()" onmouseleave="statusBaixarVolumeOff()"
+                                ontouchmove="statusBaixarVolume()" ontouchend="statusBaixarVolumeOff()"
+                                src="../icones/800x600/volumebaixo.png" alt="Diminuir Volume" width="31px"
+                                height="31px">
 
                         </button>
 
@@ -109,7 +112,7 @@
 
                         <button class="botoes" type="button">
 
-                            <img id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
+                            <img onload="imagemCarregada1()" id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
                                 onmouseleave="statusVolumeMaximoOff()" ontouchmove="statusVolumeMaximo()"
                                 ontouchend="statusVolumeMaximoOff()" src="../icones/800x600/volumehigh.png"
                                 alt="Icone de volume alto!" width="31px" height="31px">
@@ -122,9 +125,10 @@
 
                         <button class="botoes" onclick="pausar()" type="button">
 
-                            <img id="iconePause" onmousemove="statusPause()" onmouseleave="statusPauseOff()"
-                                ontouchmove="statusPause()" ontouchend="statusPauseOff()"
-                                src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
+                            <img onload="imagemCarregada1()" id="iconePause" onmousemove="statusPause()"
+                                onmouseleave="statusPauseOff()" ontouchmove="statusPause()"
+                                ontouchend="statusPauseOff()" src="../icones/pauseBranco.png" alt="Icone de som"
+                                width="31px" height="31px">
 
                         </button>
 
@@ -134,8 +138,8 @@
 
                         <button class="botoes" onclick="mudo()" type="button">
 
-                            <img id="iconeMudo" onmousemove="statusMudo()" onmouseleave="statusMudoOff()"
-                                ontouchmove="statusMudo()" ontouchend="statusMudoOff()"
+                            <img onload="imagemCarregada1()" id="iconeMudo" onmousemove="statusMudo()"
+                                onmouseleave="statusMudoOff()" ontouchmove="statusMudo()" ontouchend="statusMudoOff()"
                                 src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
 
                         </button>
@@ -146,9 +150,9 @@
 
                         <button class="botoes" onclick="play()" type="button">
 
-                            <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
-                                ontouchmove="statusPlay()" ontouchend="statusPlayOff()" src="../icones/playBranco.png"
-                                alt="Icone de som" width="31px" height="31px">
+                            <img onload="imagemCarregada1()" id="iconePlay" onmousemove="statusPlay()"
+                                onmouseleave="statusPlayOff()" ontouchmove="statusPlay()" ontouchend="statusPlayOff()"
+                                src="../icones/playBranco.png" alt="Icone de som" width="31px" height="31px">
 
                         </button>
 
@@ -158,9 +162,10 @@
 
                         <button class="botoes" type="button">
 
-                            <img id="iconeVolumeBaixo" onmousemove="statusSilencio()" onmouseleave="statusSilencioOff()"
-                                ontouchmove="statusSilencio()" ontouchend="statusSilencioOff()"
-                                src="../icones/silencio2.png" alt="Icone de volume baixo!" width="31px" height="31px">
+                            <img onload="imagemCarregada1()" id="iconeVolumeBaixo" onmousemove="statusSilencio()"
+                                onmouseleave="statusSilencioOff()" ontouchmove="statusSilencio()"
+                                ontouchend="statusSilencioOff()" src="../icones/silencio2.png"
+                                alt="Icone de volume baixo!" width="31px" height="31px">
 
                         </button>
 
@@ -172,10 +177,10 @@
                             onmouseleave="aumentar_volume()" ontouchmove="aumentar_volume()"
                             ontouchend="aumentar_volume()" type="button">
 
-                            <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
-                                onmouseleave="statusAumentarVolumeOff()" ontouchmove="statusAumentarVolume()"
-                                ontouchend="statusAumentarVolumeOff()" src="../icones/800x600/volumealto.png"
-                                alt="Aumentar Volume" width="31px" height="31px">
+                            <img onload="imagemCarregada1()" id="iconeMudoAumentarVolume"
+                                onmousemove="statusAumentarVolume()" onmouseleave="statusAumentarVolumeOff()"
+                                ontouchmove="statusAumentarVolume()" ontouchend="statusAumentarVolumeOff()"
+                                src="../icones/800x600/volumealto.png" alt="Aumentar Volume" width="31px" height="31px">
 
                         </button>
 
@@ -195,7 +200,7 @@
 
                     <section id="SecaoGifPrincipal" class="secaoGifPrincipal">
 
-                        <!-- <img src="../imagens/gif/nature0.gif" alt="Cachoeira"> -->
+                        <!-- <img onload="imagemCarregada1()" src="../imagens/gif/nature0.gif" alt="Cachoeira"> -->
 
                     </section>
 
@@ -207,13 +212,13 @@
         
                     <section id="secaoGif" class="secaoGif">
         
-                        <img id="gif1" onmousemove="alterarGif1()" onmouseleave="alterarGif1()" ontouchmove="alterarGif1()"
+                        <img onload="imagemCarregada1()" id="gif1" onmousemove="alterarGif1()" onmouseleave="alterarGif1()" ontouchmove="alterarGif1()"
                             ontouchend="alterarGif1()" src="../icones/code.gif" alt="Imagem Gif - 1" width="41px" height="41px">
         
-                        <img id="gif2" onmousemove="alterarGif2()" onmouseleave="alterarGif2()" ontouchmove="alterarGif2()"
+                        <img onload="imagemCarregada1()" id="gif2" onmousemove="alterarGif2()" onmouseleave="alterarGif2()" ontouchmove="alterarGif2()"
                             ontouchend="alterarGif2()" src="../icones/code.gif" alt="Imagem Gif - 2" width="41px" height="41px">
         
-                        <img id="gif3" onmousemove="alterarGif3()" onmouseleave="alterarGif3()" ontouchmove="alterarGif3()"
+                        <img onload="imagemCarregada1()" id="gif3" onmousemove="alterarGif3()" onmouseleave="alterarGif3()" ontouchmove="alterarGif3()"
                             ontouchend="alterarGif3()" src="../icones/code.gif" alt="Imagem Gif - 3" width="41px" height="41px">
         
                     </section>
@@ -241,33 +246,35 @@
                     <section class="divCabecalhoPrincipal">
 
                         <a href="https://html.spec.whatwg.org/multipage/" target="_blank">
-                            <img id="iconeHtml" onmousemove="statusHtml()" onmouseleave="statusHtmlOff()"
-                                ontouchmove="statusHtml()" ontouchend="statusHtmlOff()"
+                            <img onload="imagemCarregada1()" id="iconeHtml" onmousemove="statusHtml()"
+                                onmouseleave="statusHtmlOff()" ontouchmove="statusHtml()" ontouchend="statusHtmlOff()"
                                 src="../icones/800x600/html5.png" alt="Icone HTML5" width="51px"></a>
 
-                        <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss"
-                                onmousemove="statusCss()" onmouseleave="statusCssOff()" ontouchmove="statusCss()"
-                                ontouchend="statusCssOff()" src="../icones/800x600/css3.png" alt="Icone CSS3"
+                        <a href="https://www.w3.org/Style/CSS/" target="_blank"><img onload="imagemCarregada1()"
+                                id="iconeCss" onmousemove="statusCss()" onmouseleave="statusCssOff()"
+                                ontouchmove="statusCss()" ontouchend="statusCssOff()" src="../icones/800x600/css3.png"
+                                alt="Icone CSS3" width="51px"></a>
+
+                        <a href="https://www.ecma-international.org/" target="_blank"><img onload="imagemCarregada1()"
+                                id="iconeJavascript" onmousemove="statusJavascript()"
+                                onmouseleave="statusJavascriptOff()" ontouchmove="statusJavascript()"
+                                ontouchend="statusJavascriptOff()" src="../icones/800x600/javascript.png"
+                                alt="Icone JAVASCRIPT" width="51px"></a>
+
+                        <a href="https://www.java.com" target="_blank"><img onload="imagemCarregada1()" id="iconeJava"
+                                onmousemove="statusJava()" onmouseleave="statusJavaOff()" ontouchmove="statusJava()"
+                                ontouchend="statusJavaOff()" src="../icones/800x600/java.png" alt="Icone JAVA"
                                 width="51px"></a>
 
-                        <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
-                                onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
-                                ontouchmove="statusJavascript()" ontouchend="statusJavascriptOff()"
-                                src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="51px"></a>
-
-                        <a href="https://www.java.com" target="_blank"><img id="iconeJava" onmousemove="statusJava()"
-                                onmouseleave="statusJavaOff()" ontouchmove="statusJava()" ontouchend="statusJavaOff()"
-                                src="../icones/800x600/java.png" alt="Icone JAVA" width="51px"></a>
-
-                        <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql" onmousemove="statusMysql()"
-                                onmouseleave="statusMysqlOff()" ontouchmove="statusMysql()"
+                        <a href="https://www.mysql.com" target="_blank"><img onload="imagemCarregada1()" id="iconeMysql"
+                                onmousemove="statusMysql()" onmouseleave="statusMysqlOff()" ontouchmove="statusMysql()"
                                 ontouchend="statusMysqlOff()" src="../icones/800x600/mysql.png" alt="Icone MYSQL"
                                 width="51px"></a>
 
-                        <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl"
-                                onmousemove="statusNtsl()" onmouseleave="statusNtslOff()" ontouchmove="statusNtsl()"
-                                ontouchend="statusNtslOff()" src="../icones/800x600/ntsl.png" alt="Icone NTSL"
-                                width="51px"></a>
+                        <a href="https://www.nelogica.com.br/" target="_blank"><img onload="imagemCarregada1()"
+                                id="iconeNtsl" onmousemove="statusNtsl()" onmouseleave="statusNtslOff()"
+                                ontouchmove="statusNtsl()" ontouchend="statusNtslOff()" src="../icones/800x600/ntsl.png"
+                                alt="Icone NTSL" width="51px"></a>
 
                     </section>
 
@@ -276,7 +283,7 @@
                 <section id="botaoTabela">
 
                     <button id="botaoTabela" type="button">
-                        <img id="iconeJanela" onclick="abrirFecharTabela()"
+                        <img onload="imagemCarregada1()" id="iconeJanela" onclick="abrirFecharTabela()"
                             onmousemove="moveMouseIconeJanela(), statusIconeTabela()"
                             onmouseleave="statusIconeTabelaOff()" ontouchmove="statusIconeTabela()"
                             ontouchend="statusIconeTabelaOff()" src="../icones/AbrirJanelaBranco2.png"
@@ -355,66 +362,68 @@
                         <address class="secaoRodapePrincipalIcones2">
 
                             <a href="https://api.whatsapp.com/send?phone=5583998454848" target="_blank">
-                                <img onmousemove="statusWhatsapp()" onmouseleave="statusWhatsappOff()"
-                                    ontouchmove="statusWhatsapp()" ontouchend="statusWhatsappOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png" alt="Logo Whatsapp" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusWhatsapp()"
+                                    onmouseleave="statusWhatsappOff()" ontouchmove="statusWhatsapp()"
+                                    ontouchend="statusWhatsappOff()" src="../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png"
+                                    alt="Logo Whatsapp" width="31px" height="31px">
                             </a>
 
                             <a href=mailto:atendimentos.site@gmail.com target="_blank">
-                                <img onmousemove="statusEnviarEmail()" onmouseleave="statusEnviarEmailOff()"
-                                    ontouchmove="statusEnviarEmail()" ontouchend="statusEnviarEmailOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/email 3d.png" alt="Logo Gmail" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusEnviarEmail()"
+                                    onmouseleave="statusEnviarEmailOff()" ontouchmove="statusEnviarEmail()"
+                                    ontouchend="statusEnviarEmailOff()" src="../icones/LOGOS/REDES SOCIAIS/email 3d.png"
+                                    alt="Logo Gmail" width="31px" height="31px">
                             </a>
 
                             <a href="https://join.skype.com/invite/zc4AHKVGTz7v" target="_blank">
-                                <img onmousemove="statusSkype()" onmouseleave="statusSkypeOff()"
-                                    ontouchmove="statusSkype()" ontouchend="statusSkypeOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png" alt="Logo SKYPE" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusSkype()"
+                                    onmouseleave="statusSkypeOff()" ontouchmove="statusSkype()"
+                                    ontouchend="statusSkypeOff()" src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png"
+                                    alt="Logo SKYPE" width="31px" height="31px">
                             </a>
 
                             <a href="https://www.linkedin.com/in/paulodetasso/" target="_blank">
-                                <img onmousemove="statusLinkedIn()" onmouseleave="statusLinkedInOff()"
-                                    ontouchmove="statusLinkedIn()" ontouchend="statusLinkedInOff()"
+                                <img onload="imagemCarregada1()" onmousemove="statusLinkedIn()"
+                                    onmouseleave="statusLinkedInOff()" ontouchmove="statusLinkedIn()"
+                                    ontouchend="statusLinkedInOff()"
                                     src="../icones/LOGOS/REDES SOCIAIS/LinkedIn 3d 2.png" alt="Logo linkedin"
                                     width="31px" height="31px">
                             </a>
 
                             <a href="https://twitter.com/tassodjhalls" target="_blank">
-                                <img onmousemove="statusTwitter()" onmouseleave="statusTwitterOff()"
-                                    ontouchmove="statusTwitter()" ontouchend="statusTwitterOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt="Logo Twitter" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusTwitter()"
+                                    onmouseleave="statusTwitterOff()" ontouchmove="statusTwitter()"
+                                    ontouchend="statusTwitterOff()" src="../icones/LOGOS/REDES SOCIAIS/twitter 3d.png"
+                                    alt="Logo Twitter" width="31px" height="31px">
                             </a>
 
                             <a href="https://www.facebook.com/paulodetassoDJ" target="_blank">
-                                <img onmousemove="statusFacebook()" onmouseleave="statusFacebookOff()"
-                                    ontouchmove="statusFacebook()" ontouchend="statusFacebookOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt="Logo Facebook" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusFacebook()"
+                                    onmouseleave="statusFacebookOff()" ontouchmove="statusFacebook()"
+                                    ontouchend="statusFacebookOff()" src="../icones/LOGOS/REDES SOCIAIS/facebook 3d.png"
+                                    alt="Logo Facebook" width="31px" height="31px">
                             </a>
 
                             <a href="https://www.instagram.com/paulo_de_tasso/" target="_blank">
-                                <img onmousemove="statusInstagram()" onmouseleave="statusInstagramOff()"
-                                    ontouchmove="statusInstagram()" ontouchend="statusInstagramOff()"
+                                <img onload="imagemCarregada1()" onmousemove="statusInstagram()"
+                                    onmouseleave="statusInstagramOff()" ontouchmove="statusInstagram()"
+                                    ontouchend="statusInstagramOff()"
                                     src="../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt="Logo Instagram"
                                     width="31px" height="31px">
                             </a>
 
                             <a href="https://www.youtube.com/user/tassodjhalls11/videos" target="_blank">
-                                <img onmousemove="statusYoutube()" onmouseleave="statusYoutubeOff()"
-                                    ontouchmove="statusYoutube()" ontouchend="statusYoutubeOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/youtube.png" alt="Logo Youtube" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusYoutube()"
+                                    onmouseleave="statusYoutubeOff()" ontouchmove="statusYoutube()"
+                                    ontouchend="statusYoutubeOff()" src="../icones/LOGOS/REDES SOCIAIS/youtube.png"
+                                    alt="Logo Youtube" width="31px" height="31px">
                             </a>
 
                             <a href="https://github.com/PauloDeTasso" target="_blank">
-                                <img onmousemove="statusGithub()" onmouseleave="statusGithubOff()"
-                                    ontouchmove="statusGithub()" ontouchend="statusGithubOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png" alt="Logo Github" width="31px"
-                                    height="31px">
+                                <img onload="imagemCarregada1()" onmousemove="statusGithub()"
+                                    onmouseleave="statusGithubOff()" ontouchmove="statusGithub()"
+                                    ontouchend="statusGithubOff()" src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png"
+                                    alt="Logo Github" width="31px" height="31px">
                             </a>
 
                         </address>
@@ -424,7 +433,8 @@
                             <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
                                 onmousemove="statusLicenseJavascript()" onmouseleave="statusLicenseJavascriptOff()"
                                 ontouchmove="statusLicenseJavascript()" ontouchend="statusLicenseJavascriptOff()">
-                                <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
+                                <img onload="imagemCarregada1()" src="../icones/LICENSE1.png" alt="Icone License"
+                                    width="21px" height="21px">
                             </button>
                             <br>
                             <section id="license">
@@ -445,7 +455,8 @@
 
                         <section id="secaoRodapePrincipalIcones1">
 
-                            <img id="iconeUsuario" src="../icones/800x600/usuario.png" alt="Icone de usuário">
+                            <img onload="imagemCarregada1()" id="iconeUsuario" src="../icones/800x600/usuario.png"
+                                alt="Icone de usuário">
 
                             <a id="linkFraseRodape"
                                 href="https://www.google.com/search?q=Senior Full Stack Software Developer"
@@ -486,8 +497,8 @@
 
         <section id="secaoLeste">
 
-            <img id="secaoLesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias" width="10px"
-                height="70%">
+            <img onload="imagemCarregada1()" id="secaoLesteImagem" src="../imagens/luzes/preto e branco/0.jpg"
+                alt="Cores Aleatorias" width="10px" height="70%">
 
         </section>
 
