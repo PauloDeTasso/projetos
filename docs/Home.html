@@ -56,9 +56,11 @@
 
         <section id="secaoBarraDeProgresso">
 
-            <p id="statusSistema"></p>
+            <progress id="barraDeProgresso" value="0" max="100"></progress>
 
-            <progress id="barraDeProgresso" value="0" max="100">70 %</progress>
+            <section id="statusSistema">
+
+            </section>
 
         </section>
 
@@ -296,7 +298,7 @@
 
             <!--  -->
 
-            <main class="main">
+            <main class="main" oncut="colar()" oncopy="copiou()" onpaste="colou()">
 
                 <section class="secao01">
 
@@ -309,26 +311,33 @@
                         <p class="paragrafoArtigo">
                             Creativity is something wonderful when an inspiration arises in our thoughts, the feeling of
                             joy,
-                            euphoria and desire to act, appear as a divine gift! <br>
+                            euphoria and desire to act, appear as a divine gift!
                             Lives with the most diverse experiences are now all around us, needing practical and precise
                             solutions that improve their experiences even more, life gets easier when inspired people
                             with a
                             spontaneous desire to make it happen, help!
-                            <br>
+                        </p>
 
-                            It was with this idea that life led me here.<br>
+                        <figure id="secaoImagemTerra">
+
+                            <img src="../imagens/outros/earth.gif" alt="A terra" width="100%" height="auto">
+
+                        </figure>
+
+                        <p class="paragrafoArtigo">
+                            It was with this idea that life led me here.
                             The infinity of creativity and the vision of contributing to a greater good, inspires me to
                             this day
                             to
                             follow, and like any well-chosen profession, survive on the work you love!
-                            <br>
+
                             I continue to apprehend more of this magnificent and splendid universe of codes, and for
                             that, I
                             count on
                             you to transform and improve our world even more!
-                            <br>
+
                             Paulo de Tasso
-                            <br>
+
                             Senior Full Stack Software Developer.
                         </p>
 

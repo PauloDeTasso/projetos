@@ -450,6 +450,7 @@ main
    align-items: center;
    padding: 3%;
    letter-spacing: 1px;
+   text-indent: 5%;
 }
 
 /**/
@@ -625,9 +626,10 @@ main
     justify-content: center;
     width: 100%;
     height: auto;
-    font-size: 10pt;
+    font-size: 8pt;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+    visibility: visible;
 }
 
 #secaoLesteImagem
@@ -657,5 +659,20 @@ main
     justify-content: center;    
     align-items: center;
     width: 100%;
+    height: auto;
+}
+
+#barraDeProgresso
+{
+
+}
+
+#secaoImagemTerra
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
     height: auto;
 }

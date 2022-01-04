@@ -1215,13 +1215,7 @@ function audioCachoeiraTocando()
 
 function limparStatusSistema()
 {
-    if (statusSistema.innerHTML == "")
-    {
-
-    } else
-    {
-        statusSistema.innerHTML = "";
-    }
+    statusSistema.style.visibility = 'hidden';
 }
 
 /*
@@ -1240,17 +1234,7 @@ function carregado()
 {
     progresso = progresso + 1;
     statusSistema.innerHTML = "Loading...";
-
-    if (progresso <= 100)
-    {
-        setTimeout("aumentarProgressoDaBarra()", 1000);
-    } else
-    {
-        statusSistema.innerHTML = "Loaded!";
-    }
-
-    setTimeout("limparStatusSistema()", 10000);
-
+    setTimeout("aumentarProgressoDaBarra()", 1);
 }
 
 function aumentarProgressoDaBarra()
@@ -1259,7 +1243,7 @@ function aumentarProgressoDaBarra()
 
     if (progresso <= 100)
     {
-        setTimeout("aumentarProgressoDaBarra()", 10);
+        setTimeout("aumentarProgressoDaBarra()", 1);
 
     } else
     {
