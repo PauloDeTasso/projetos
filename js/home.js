@@ -1213,30 +1213,62 @@ function audioCachoeiraTocando()
     setTimeout("limparStatusSistema()", 10000);
 }
 
-function limparStatusSistema()
-{
-    statusSistema.style.visibility = 'hidden';
-}
-
 /*
 const input = document.querySelector('input');
 const log = document.getElementById('log');
-
+ 
 input.onkeydown = logKey;
-
+ 
 function logKey(e)
 {
     log.textContent += ` ${e.code}`;
 }
 */
 
-function carregado()
+/*
+function linkEstiloCarregado()
 {
-    progresso = progresso + 1;
-    statusSistema.innerHTML = "Loading...";
-    setTimeout("aumentarProgressoDaBarra()", 1);
+    progresso = progresso + 20;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loading Style...";
+    setTimeout("progressoDaBarra()", 1);
 }
 
+function linkFavIconCarregado()
+{
+    progresso = progresso + 20;
+
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loading Icon...";
+    setTimeout("progressoDaBarra()", 1);
+}
+
+*/
+function bodyCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded Body...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+function iframeCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded iframe...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+function scriptCarregado()
+{
+    progresso = progresso + 30;
+    statusSistema.style.visibility = 'visible';
+    statusSistema.innerHTML = "...Loaded Script...";
+    setTimeout("progressoDaBarra()", 100);
+}
+
+/*
 function aumentarProgressoDaBarra()
 {
     progresso += 1;
@@ -1255,42 +1287,22 @@ function aumentarProgressoDaBarra()
     setTimeout("limparStatusSistema()", 10000);
 
 }
+*/
 
-/*
 function progressoDaBarra()
 {
     switch (progresso)
     {
-        case 10:
-            barraDeProgresso.setAttribute('value', '10');
-            break;
-
-        case 20:
-            barraDeProgresso.setAttribute('value', '20');
+        case 0:
+            barraDeProgresso.setAttribute('value', '0');
             break;
 
         case 30:
             barraDeProgresso.setAttribute('value', '30');
             break;
 
-        case 40:
-            barraDeProgresso.setAttribute('value', '40');
-            break;
-
-        case 50:
-            barraDeProgresso.setAttribute('value', '50');
-            break;
-
         case 60:
             barraDeProgresso.setAttribute('value', '60');
-            break;
-
-        case 70:
-            barraDeProgresso.setAttribute('value', '70');
-            break;
-
-        case 80:
-            barraDeProgresso.setAttribute('value', '80');
             break;
 
         case 90:
@@ -1299,16 +1311,51 @@ function progressoDaBarra()
 
         case 100:
             barraDeProgresso.setAttribute('value', '100');
+            statusSistema.style.visibility = 'visible';
+            statusSistema.innerHTML = "Loaded!";
             break;
 
         default:
 
-            barraDeProgresso.setAttribute('value', '0');
+            barraDeProgresso.setAttribute('value', progresso);
+    }
+
+    if (progresso => 0 && progresso < 100)
+    {
+        setTimeout("completarBarraDeProgresso()", 100);
+    } else
+    {
+        setTimeout("progressoDaBarra()", 1);
     }
 }
 
 
-*/
+function completarBarraDeProgresso()
+{
+    if (progresso >= 90 && progresso < 100)
+    {
+        progresso += 1;
+
+        barraDeProgresso.setAttribute('value', progresso);
+
+        setTimeout("completarBarraDeProgresso()", 1000);
+
+    } else
+    {
+        statusSistema.innerHTML = "Loaded!";
+    }
+
+    if (progresso == 100)
+    {
+        setTimeout("limparStatusSistema()", 5000);
+    }
+
+}
+
+function limparStatusSistema()
+{
+    statusSistema.style.visibility = 'hidden';
+}
 
 luzes()
 
