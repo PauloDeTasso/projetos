@@ -112,7 +112,6 @@ body
 
 /*////////////////////////////*/
 
-
 .headerBotaoSomInicio
 {
     display: flex;
@@ -186,7 +185,6 @@ body
    color: rgb(200, 200, 200);
 }
 
-
 #SecaoGifPrincipal
 {
     display: flex;
@@ -196,8 +194,6 @@ body
     width: 100%;
     height: auto;
 }
-
-
 
 /*#secaoTitulos*/ 
 .quadro
@@ -209,11 +205,6 @@ body
   text-overflow: clip;
   overflow-x: hidden;
   opacity: 0.9;
-}
-
-#titulo
-{
-    color: black;
 }
 
 #status
@@ -270,22 +261,6 @@ body
    align-items: center;
    background-color: rgb(0, 0, 0);
    border: 0px solid rgb(0, 0, 0);
-}
-
-#secaoLetrasNome
-{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-}
-
-#nomeTitulo
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;   
-    align-items: center;
-    font-size: 30pt;
 }
 
 #secaoBotaoLicense
@@ -473,7 +448,7 @@ main
    text-align: justify;
    font-weight: lighter;
    align-items: center;
-   padding: 1%;
+   padding: 3%;
    letter-spacing: 1px;
 }
 
