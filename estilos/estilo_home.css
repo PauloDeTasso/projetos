@@ -683,3 +683,8 @@ main
     width: 800px;
     height: auto;
 }
+
+#hrTexto
+{
+    color: black;
+}

@@ -1308,25 +1308,19 @@ function progressoDaBarra()
 }
 
 
-/*
+*/
 
 luzes()
 
 function luzes()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/9.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/0.jpg');
     let show = setTimeout("luzes1()", 120);
 }
 
-alert("Oi");
-
 function luzes1()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/1.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/1.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/1.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/1.jpg');
     let show = setTimeout("luzes2()", 120);
@@ -1334,8 +1328,6 @@ function luzes1()
 
 function luzes2()
 {
-    secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/2.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/2.jpg');
     secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/2.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/2.jpg');
     let show = setTimeout("luzes3()", 120);
@@ -1371,8 +1363,7 @@ function luzes5()
 function luzes6()
 {
     secaoNorteImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg');
-    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg');
-    secaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg');
+    secaoSulImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg'); ecaoLesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg');
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/6.jpg');
     let show = setTimeout("luzes7()", 120);
 }
@@ -1467,8 +1458,6 @@ function luzes9()
     secaoOesteImagem.setAttribute('src', '../imagens/luzes/preto e branco/8.jpg');
     let show = setTimeout("luzes10()", 120);
 }
-
-
 
 /*
 
