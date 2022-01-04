@@ -567,7 +567,7 @@ main
 #secaoRodapePrincipalIcones1
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     width: 100%;
