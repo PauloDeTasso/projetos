@@ -624,16 +624,45 @@ function mudo()
     }
 }
 
+var audio1tocou = false;
+var audio2tocou = false;
+var audio3tocou = false;
+
 function alterarGif1()
 {
-    if (gif1.getAttribute('src') == '../icones/code.gif')
+
+    let styleSecaoGif = window.getComputedStyle(gif1);
+    let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
+
+    if (estiloGifPrincipal == "hidden" && gif1.getAttribute('src') == "../icones/code.gif")
     {
+        gif1.style.visibility = 'visible';
+        gif1.setAttribute('src', '../icones/code.gif');
+
+    } else if (estiloGifPrincipal == "visible" && gif1.getAttribute('src') == "../icones/code.gif")
+    {
+        gif1.style.visibility = 'visible';
         gif1.setAttribute('src', '../icones/code10.gif');
-        audio1.play();
-    } else
+
+    } else if (estiloGifPrincipal == "visible" && gif1.getAttribute('src') == "../icones/code10.gif")
     {
         gif1.setAttribute('src', '../icones/code.gif');
+
+        if (audio1tocou)
+        {
+            audio1.pause();
+        } else
+        {
+            audio1.play();
+            audio1tocou = true;
+        }
     }
+
+}
+
+function alterarGif1Off()
+{
+    gif1.style.visibility = 'hidden';
 }
 
 function alterarGif2()
@@ -1450,7 +1479,7 @@ function bodyCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Loaded Body";
+    statusSistema.innerHTML = "...Loaded Body...";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1458,7 +1487,7 @@ function iframeCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Loaded iframe";
+    statusSistema.innerHTML = "...Loaded iframe...";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1466,7 +1495,7 @@ function scriptCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Loaded Script";
+    statusSistema.innerHTML = "...Loaded Script...";
     setTimeout("progressoDaBarra()", 100);
 }
 

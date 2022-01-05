@@ -711,3 +711,18 @@ main
     width: 800px;
     height: auto;
 }
+
+#gif1
+{
+    visibility: visible;
+}
+
+#gif2
+{
+    visibility: visible;
+}
+
+#gif3
+{
+    visibility: visible;
+}
