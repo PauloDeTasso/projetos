@@ -658,7 +658,7 @@ function alterarGif1()
     }
 }
 
-function alterargif2()
+function alterarGif2()
 {
     let styleSecaoGif = window.getComputedStyle(gif2);
     let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
@@ -688,7 +688,7 @@ function alterargif2()
     }
 }
 
-function alterargif3()
+function alterarGif3()
 {
     let styleSecaoGif = window.getComputedStyle(gif3);
     let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
@@ -728,12 +728,12 @@ function alterarGif1Off()
 
 function alterarGif2Off()
 {
-    gif1.style.visibility = 'hidden';
+    gif2.style.visibility = 'hidden';
 }
 
 function alterarGif3Off()
 {
-    gif1.style.visibility = 'hidden';
+    gif3.style.visibility = 'hidden';
 }
 
 /**/
