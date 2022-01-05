@@ -1528,7 +1528,7 @@ function bodyCarregado()
 
 function iframeCarregado()
 {
-    progresso = progresso + 23;
+    progresso = progresso + 25;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "External documents donwloaded!";
     setTimeout("progressoDaBarra()", 100);
@@ -1536,7 +1536,7 @@ function iframeCarregado()
 
 function scriptCarregado()
 {
-    progresso = progresso + 23;
+    progresso = progresso + 25;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "Internal process donwloaded!";
     setTimeout("progressoDaBarra()", 100);
