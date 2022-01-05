@@ -1450,7 +1450,7 @@ function bodyCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Body...";
+    statusSistema.innerHTML = "Loaded Body";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1458,7 +1458,7 @@ function iframeCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded iframe...";
+    statusSistema.innerHTML = "Loaded iframe";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1466,7 +1466,7 @@ function scriptCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Script...";
+    statusSistema.innerHTML = "Loaded Script";
     setTimeout("progressoDaBarra()", 100);
 }
 
