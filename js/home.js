@@ -630,7 +630,6 @@ var audio3tocou = false;
 
 function alterarGif1()
 {
-
     let styleSecaoGif = window.getComputedStyle(gif1);
     let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
 
@@ -657,7 +656,69 @@ function alterarGif1()
             audio1tocou = true;
         }
     }
+}
 
+function alterargif2()
+{
+    let styleSecaoGif = window.getComputedStyle(gif2);
+    let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
+
+    if (estiloGifPrincipal == "hidden" && gif2.getAttribute('src') == "../icones/code.gif")
+    {
+        gif2.style.visibility = 'visible';
+        gif2.setAttribute('src', '../icones/code.gif');
+
+    } else if (estiloGifPrincipal == "visible" && gif2.getAttribute('src') == "../icones/code.gif")
+    {
+        gif2.style.visibility = 'visible';
+        gif2.setAttribute('src', '../icones/code12.gif');
+
+    } else if (estiloGifPrincipal == "visible" && gif2.getAttribute('src') == "../icones/code10.gif")
+    {
+        gif2.setAttribute('src', '../icones/code.gif');
+
+        if (audio2tocou)
+        {
+            audio2.pause();
+        } else
+        {
+            audio2.play();
+            audio2tocou = true;
+        }
+    }
+}
+
+function alterargif3()
+{
+    let styleSecaoGif = window.getComputedStyle(gif3);
+    let estiloGifPrincipal = styleSecaoGif.getPropertyValue('visibility');
+
+    if (estiloGifPrincipal == "hidden" && gif3.getAttribute('src') == "../icones/code.gif")
+    {
+        gif3.style.visibility = 'visible';
+        gif3.setAttribute('src', '../icones/code.gif');
+
+    } else if (estiloGifPrincipal == "visible" && gif3.getAttribute('src') == "../icones/code.gif")
+    {
+        gif3.style.visibility = 'visible';
+        gif3.setAttribute('src', '../icones/code10.gif');
+
+    } else if (estiloGifPrincipal == "visible" && gif3.getAttribute('src') == "../icones/code10.gif")
+    {
+        gif3.setAttribute('src', '../icones/code13.gif');
+    } else if (estiloGifPrincipal == "visible" && gif3.getAttribute('src') == "../icones/code13.gif")
+    {
+        gif3.setAttribute('src', '../icones/code.gif');
+
+        if (audio3tocou)
+        {
+            audio3.pause();
+        } else
+        {
+            audio3.play();
+            audio3tocou = true;
+        }
+    }
 }
 
 function alterarGif1Off()
@@ -665,35 +726,17 @@ function alterarGif1Off()
     gif1.style.visibility = 'hidden';
 }
 
-function alterarGif2()
+function alterarGif2Off()
 {
-    if (gif2.getAttribute('src') == '../icones/code.gif')
-    {
-        gif2.setAttribute('src', '../icones/code12.gif');
-        audio2.play();
-
-    } else if (gif2.getAttribute('src') == '../icones/code12.gif')
-    {
-        gif2.setAttribute('src', '../icones/code13.gif');
-    } else
-    {
-        gif2.setAttribute('src', '../icones/code.gif');
-    }
-
+    gif1.style.visibility = 'hidden';
 }
 
-function alterarGif3()
+function alterarGif3Off()
 {
-    if (gif3.getAttribute('src') == '../icones/code.gif')
-    {
-        gif3.setAttribute('src', '../icones/code11.gif');
-        audio3.play();
-    } else
-    {
-        gif3.setAttribute('src', '../icones/code.gif');
-    }
-
+    gif1.style.visibility = 'hidden';
 }
+
+/**/
 
 function alterarTexto1()
 {
