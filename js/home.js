@@ -51,7 +51,7 @@ var numerogerado;
 var fraseAtual = "\“Patience is a key element of success.\" - Bill Gates.";
 
 var frase1 = "\“Patience is a key element of success.\" - Bill Gates.";
-var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderful...that\’s what matters to me.\” - Steve Jobs"
+var frase2 = "\“Being the richest man in the cemetery doesn\’t matter to me. Going to bed at night saying we\’ve done something wonderfulthat\’s what matters to me.\” - Steve Jobs"
 var frase3 = "Programming isn\'t about what you know; it\'s about what you can figure out.\” - Chris Pine"
 var frase4 = "\"The only way to learn a new programming language is by writing programs in it.\" - Dennis Ritchie"
 var frase5 = "\"Sometimes it\'s better to leave something alone, to pause, and that\'s very true of programming.\" - Joyce Wheeler"
@@ -909,7 +909,7 @@ function statusTextoEmMovimentoOff()
 
 function statusGif()
 {
-    nome.innerHTML = '...'.toUpperCase();
+    nome.innerHTML = ''.toUpperCase();
 }
 
 function statusGifOff()
@@ -1340,7 +1340,7 @@ function aumentarProgressoDaBarra()
 
     } else
     {
-        statusSistema.innerHTML = "Loaded!";
+        statusSistema.innerHTML = "donwloaded!";
     }
 
     barraDeProgresso.setAttribute('value', progresso);
@@ -1375,7 +1375,7 @@ function progressoDaBarra()
         case 100:
             barraDeProgresso.setAttribute('value', '100');
             statusSistema.style.visibility = 'visible';
-            statusSistema.innerHTML = "Loaded!";
+            statusSistema.innerHTML = "donwloaded!";
             break;
 
         default:
@@ -1522,7 +1522,7 @@ function bodyCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Body...";
+    statusSistema.innerHTML = "Main content donwloaded!";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1530,7 +1530,7 @@ function iframeCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded iframe...";
+    statusSistema.innerHTML = "External documents donwloaded!";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1538,7 +1538,7 @@ function scriptCarregado()
 {
     progresso = progresso + 23;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loaded Script...";
+    statusSistema.innerHTML = "Internal process donwloaded!";
     setTimeout("progressoDaBarra()", 100);
 }
 
@@ -1553,7 +1553,7 @@ function imagemCarregada1()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 1 loaded"
+        statusSistema.innerHTML = "Image 1 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado1 = true;
@@ -1568,7 +1568,7 @@ function imagemCarregada2()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 2 loaded"
+        statusSistema.innerHTML = "Image 2 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado2 = true;
@@ -1583,7 +1583,7 @@ function imagemCarregada3()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 3 loaded"
+        statusSistema.innerHTML = "Image 3 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado3 = true;
@@ -1598,7 +1598,7 @@ function imagemCarregada4()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 4 loaded"
+        statusSistema.innerHTML = "Image 4 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado4 = true;
@@ -1613,7 +1613,7 @@ function imagemCarregada5()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 5 loaded"
+        statusSistema.innerHTML = "Image 5 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado5 = true;
@@ -1628,7 +1628,7 @@ function imagemCarregada6()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 6 loaded"
+        statusSistema.innerHTML = "Image 6 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado6 = true;
@@ -1643,7 +1643,7 @@ function imagemCarregada7()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 7 loaded"
+        statusSistema.innerHTML = "Image 7 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado7 = true;
@@ -1658,7 +1658,7 @@ function imagemCarregada8()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 8 loaded"
+        statusSistema.innerHTML = "Image 8 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado8 = true;
@@ -1673,7 +1673,7 @@ function imagemCarregada9()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 9 loaded"
+        statusSistema.innerHTML = "Image 9 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado9 = true;
@@ -1688,7 +1688,7 @@ function imagemCarregada10()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 10 loaded"
+        statusSistema.innerHTML = "Image 10 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado10 = true;
@@ -1704,7 +1704,7 @@ function imagemCarregada11()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 11 loaded"
+        statusSistema.innerHTML = "Image 11 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado11 = true;
@@ -1719,7 +1719,7 @@ function imagemCarregada12()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 12 loaded"
+        statusSistema.innerHTML = "Image 12 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado12 = true;
@@ -1734,7 +1734,7 @@ function imagemCarregada13()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 13 loaded"
+        statusSistema.innerHTML = "Image 13 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado13 = true;
@@ -1749,7 +1749,7 @@ function imagemCarregada14()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 14 loaded"
+        statusSistema.innerHTML = "Image 14 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado14 = true;
@@ -1764,7 +1764,7 @@ function imagemCarregada15()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 15 loaded"
+        statusSistema.innerHTML = "Image 15 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado15 = true;
@@ -1779,7 +1779,7 @@ function imagemCarregada16()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 16 loaded"
+        statusSistema.innerHTML = "Image 16 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado16 = true;
@@ -1794,7 +1794,7 @@ function imagemCarregada17()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 17 loaded"
+        statusSistema.innerHTML = "Image 17 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado17 = true;
@@ -1809,7 +1809,7 @@ function imagemCarregada18()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 18 loaded"
+        statusSistema.innerHTML = "Image 18 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado18 = true;
@@ -1824,7 +1824,7 @@ function imagemCarregada19()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 19 loaded"
+        statusSistema.innerHTML = "Image 19 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado19 = true;
@@ -1839,7 +1839,7 @@ function imagemCarregada20()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 20 loaded"
+        statusSistema.innerHTML = "Image 20 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado20 = true;
@@ -1855,7 +1855,7 @@ function imagemCarregada21()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 21 loaded"
+        statusSistema.innerHTML = "Image 21 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado21 = true;
@@ -1870,7 +1870,7 @@ function imagemCarregada22()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 22 loaded"
+        statusSistema.innerHTML = "Image 22 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado22 = true;
@@ -1885,7 +1885,7 @@ function imagemCarregada23()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 23 loaded"
+        statusSistema.innerHTML = "Image 23 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado23 = true;
@@ -1901,7 +1901,7 @@ function imagemCarregada24()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 24 loaded"
+        statusSistema.innerHTML = "Image 24 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado24 = true;
@@ -1917,7 +1917,7 @@ function imagemCarregada25()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 25 loaded"
+        statusSistema.innerHTML = "Image 25 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado25 = true;
@@ -1933,7 +1933,7 @@ function imagemCarregada26()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 26 loaded"
+        statusSistema.innerHTML = "Image 26 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado26 = true;
@@ -1949,7 +1949,7 @@ function imagemCarregada27()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 27 loaded"
+        statusSistema.innerHTML = "Image 27 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado27 = true;
@@ -1965,7 +1965,7 @@ function imagemCarregada28()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 28 loaded"
+        statusSistema.innerHTML = "Image 28 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado28 = true;
@@ -1981,7 +1981,7 @@ function imagemCarregada29()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 29 loaded"
+        statusSistema.innerHTML = "Image 29 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado29 = true;
@@ -1996,7 +1996,7 @@ function imagemCarregada30()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 30 loaded"
+        statusSistema.innerHTML = "Image 30 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado30 = true;
@@ -2011,7 +2011,7 @@ function imagemCarregada31()
     {
         progresso = progresso + 1;
         statusSistema.style.visibility = 'visible';
-        statusSistema.innerHTML = "Image 31 loaded"
+        statusSistema.innerHTML = "Image 31 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado31 = true;
@@ -2022,7 +2022,7 @@ function linkEstiloCarregado()
 {
     progresso = progresso + 20;
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loading Style...";
+    statusSistema.innerHTML = "Loading Style";
     setTimeout("progressoDaBarra()", 1);
 }
 
@@ -2031,7 +2031,7 @@ function linkFavIconCarregado()
     progresso = progresso + 20;
 
     statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "...Loading Icon...";
+    statusSistema.innerHTML = "Loading Icon";
     setTimeout("progressoDaBarra()", 1);
 }
 
@@ -2045,7 +2045,7 @@ function progressoDaBarra()
     if (progresso >= 0 && progresso < 90)
     {
         statusSistema.style.visibility = 'visible';
-        /*statusSistema.innerHTML = "...Loading...";*/
+        /*statusSistema.innerHTML = "Loading";*/
     }
 
     if (progresso >= 90 && progresso < 100)
@@ -2057,13 +2057,13 @@ function progressoDaBarra()
     if (progresso == 100)
     {
         barraDeProgresso.setAttribute('value', progresso);
-        statusSistema.innerHTML = "Loaded!";
+        statusSistema.innerHTML = "Full site donwloaded!";
         setTimeout("limparStatusSistema()", 5000);
     }
 
     if (progresso > 100)
     {
-        statusSistema.innerHTML = "Loaded!";
+        statusSistema.innerHTML = "Fully donwloaded website!";
         setTimeout("limparStatusSistema()", 5000);
     }
 
