@@ -105,6 +105,10 @@ var barraDeProgresso = document.getElementById('barraDeProgresso');
 
 var progresso = 0;
 
+var bodyCarregou = false;
+var iframeCarregou = false;
+var scriptCarregou = false;
+
 var carregado1 = false;
 var carregado2 = false;
 var carregado3 = false;
@@ -1520,26 +1524,50 @@ function luzes9()
 
 function bodyCarregado()
 {
-    progresso = progresso + 25;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Main content donwloaded!";
-    setTimeout("progressoDaBarra()", 100);
+    if (bodyCarregou)
+    {
+        statusSistema.style.visibility = 'visible';
+        setTimeout("progressoDaBarra()", 1000);
+    } else
+    {
+        progresso = progresso + 25;
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "Main content donwloaded!";
+        setTimeout("progressoDaBarra()", 100);
+    }
+    bodyCarregou = true;
 }
 
 function iframeCarregado()
 {
-    progresso = progresso + 25;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "External documents donwloaded!";
-    setTimeout("progressoDaBarra()", 100);
+    if (iframeCarregou)
+    {
+        statusSistema.style.visibility = 'visible';
+        setTimeout("progressoDaBarra()", 1000);
+    } else
+    {
+        progresso = progresso + 25;
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "External documents donwloaded!";
+        setTimeout("progressoDaBarra()", 1000);
+    }
+    iframeCarregou = true;
 }
 
 function scriptCarregado()
 {
-    progresso = progresso + 25;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Internal process donwloaded!";
-    setTimeout("progressoDaBarra()", 100);
+    if (scriptCarregou)
+    {
+        statusSistema.style.visibility = 'visible';
+        setTimeout("progressoDaBarra()", 1000);
+    } else
+    {
+        progresso = progresso + 25;
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "Internal process donwloaded!";
+        setTimeout("progressoDaBarra()", 1000);
+    }
+    scriptCarregou = true;
 }
 
 //**/
@@ -2072,7 +2100,6 @@ function progressoDaBarra()
     }
 
 }
-
 
 function completarBarraDeProgresso()
 {
