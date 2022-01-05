@@ -1264,6 +1264,8 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'Hello! How can I help you!';
 }
 
+var secaoIconesRodape = document.getElementById('secaoBotaoLicense');
+
 function sfssdCode()
 {
     secaoFooter.style.backgroundImage = 'url("")';

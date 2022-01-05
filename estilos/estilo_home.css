@@ -272,7 +272,7 @@ body
     width: 100%;
     height: auto;    
     background-image: url("../icones/code9.gif"); 
-    background-size: cover;
+    background-size: cover;    
 }
 
 #secaoBotaoLicense
@@ -287,7 +287,7 @@ body
     background-color: rgb(255, 233, 191);
     padding: 0%;        
     background-image: url("../imagens/texture/02.png");
-    background-size: cover;    
+    background-size: cover;      
 }
 
 
@@ -610,6 +610,7 @@ main
     text-align: center;
     width: 100%;
     height: auto;
+    border: 10px groove rgba(0, 0, 0,0.5);
 }
 
 /*#tituloPrincipal*/
