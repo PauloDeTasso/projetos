@@ -671,9 +671,9 @@ function alterarGif2()
     } else if (estiloGifPrincipal == "visible" && gif2.getAttribute('src') == "../icones/code.gif")
     {
         gif2.style.visibility = 'visible';
-        gif2.setAttribute('src', '../icones/code12.gif');
+        gif2.setAttribute('src', '../icones/code11.gif');
 
-    } else if (estiloGifPrincipal == "visible" && gif2.getAttribute('src') == "../icones/code10.gif")
+    } else if (estiloGifPrincipal == "visible" && gif2.getAttribute('src') == "../icones/code11.gif")
     {
         gif2.setAttribute('src', '../icones/code.gif');
 
@@ -1985,6 +1985,36 @@ function imagemCarregada29()
         setTimeout("progressoDaBarra()", 1000);
     }
     carregado29 = true;
+}
+
+function imagemCarregada30()
+{
+    if (carregado30)
+    {
+        setTimeout("progressoDaBarra()", 1000);
+    } else
+    {
+        progresso = progresso + 1;
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "Image 30 loaded"
+        setTimeout("progressoDaBarra()", 1000);
+    }
+    carregado30 = true;
+}
+
+function imagemCarregada31()
+{
+    if (carregado31)
+    {
+        setTimeout("progressoDaBarra()", 1000);
+    } else
+    {
+        progresso = progresso + 1;
+        statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = "Image 31 loaded"
+        setTimeout("progressoDaBarra()", 1000);
+    }
+    carregado31 = true;
 }
 
 /*
