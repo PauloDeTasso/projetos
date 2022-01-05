@@ -105,7 +105,7 @@ var barraDeProgresso = document.getElementById('barraDeProgresso');
 
 var progresso = 0;
 
-var carregado1 = false;
+var carregado6 = false;
 var carregado2 = false;
 var carregado3 = false;
 var carregado4 = false;
@@ -114,16 +114,16 @@ var carregado6 = false;
 var carregado7 = false;
 var carregado8 = false;
 var carregado9 = false;
-var carregado10 = false;
-var carregado11 = false;
-var carregado12 = false;
-var carregado13 = false;
-var carregado14 = false;
-var carregado15 = false;
-var carregado16 = false;
-var carregado17 = false;
-var carregado18 = false;
-var carregado19 = false;
+var carregado60 = false;
+var carregado61 = false;
+var carregado62 = false;
+var carregado63 = false;
+var carregado64 = false;
+var carregado65 = false;
+var carregado66 = false;
+var carregado67 = false;
+var carregado68 = false;
+var carregado69 = false;
 var carregado20 = false;
 var carregado21 = false;
 var carregado22 = false;
@@ -1474,7 +1474,7 @@ function scriptCarregado()
 
 function imagemCarregada1()
 {
-    if (carregado1)
+    if (carregado6)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1485,7 +1485,7 @@ function imagemCarregada1()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado6 = true;
 }
 
 function imagemCarregada2()
@@ -1506,7 +1506,7 @@ function imagemCarregada2()
 
 function imagemCarregada3()
 {
-    if (carregado2)
+    if (carregado3)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1517,12 +1517,12 @@ function imagemCarregada3()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado3 = true;
 }
 
 function imagemCarregada4()
 {
-    if (carregado1)
+    if (carregado4)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1533,12 +1533,12 @@ function imagemCarregada4()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado4 = true;
 }
 
 function imagemCarregada5()
 {
-    if (carregado1)
+    if (carregado5)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1549,12 +1549,12 @@ function imagemCarregada5()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado5 = true;
 }
 
 function imagemCarregada6()
 {
-    if (carregado1)
+    if (carregado6)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1565,12 +1565,12 @@ function imagemCarregada6()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado6 = true;
 }
 
 function imagemCarregada7()
 {
-    if (carregado1)
+    if (carregado7)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1581,12 +1581,12 @@ function imagemCarregada7()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado7 = true;
 }
 
 function imagemCarregada8()
 {
-    if (carregado1)
+    if (carregado8)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1597,12 +1597,12 @@ function imagemCarregada8()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado8 = true;
 }
 
 function imagemCarregada9()
 {
-    if (carregado1)
+    if (carregado9)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1613,12 +1613,12 @@ function imagemCarregada9()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado9 = true;
 }
 
 function imagemCarregada10()
 {
-    if (carregado1)
+    if (carregado10)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1629,13 +1629,13 @@ function imagemCarregada10()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado10 = true;
 }
 
 
 function imagemCarregada11()
 {
-    if (carregado1)
+    if (carregado11)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1646,12 +1646,12 @@ function imagemCarregada11()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado11 = true;
 }
 
 function imagemCarregada12()
 {
-    if (carregado1)
+    if (carregado12)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1662,12 +1662,12 @@ function imagemCarregada12()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado12 = true;
 }
 
 function imagemCarregada13()
 {
-    if (carregado1)
+    if (carregado13)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1678,12 +1678,12 @@ function imagemCarregada13()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado13 = true;
 }
 
 function imagemCarregada14()
 {
-    if (carregado1)
+    if (carregado14)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1694,12 +1694,12 @@ function imagemCarregada14()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado14 = true;
 }
 
 function imagemCarregada15()
 {
-    if (carregado1)
+    if (carregado15)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1710,12 +1710,12 @@ function imagemCarregada15()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado15 = true;
 }
 
 function imagemCarregada16()
 {
-    if (carregado1)
+    if (carregado16)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1726,12 +1726,12 @@ function imagemCarregada16()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado16 = true;
 }
 
 function imagemCarregada17()
 {
-    if (carregado1)
+    if (carregado17)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1742,12 +1742,12 @@ function imagemCarregada17()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado17 = true;
 }
 
 function imagemCarregada18()
 {
-    if (carregado1)
+    if (carregado18)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1758,12 +1758,12 @@ function imagemCarregada18()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado8 = true;
 }
 
 function imagemCarregada19()
 {
-    if (carregado1)
+    if (carregado19)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1774,12 +1774,12 @@ function imagemCarregada19()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado19 = true;
 }
 
 function imagemCarregada20()
 {
-    if (carregado1)
+    if (carregado20)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1790,13 +1790,13 @@ function imagemCarregada20()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado20 = true;
 }
 
 
 function imagemCarregada21()
 {
-    if (carregado1)
+    if (carregado21)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1807,12 +1807,12 @@ function imagemCarregada21()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado21 = true;
 }
 
 function imagemCarregada22()
 {
-    if (carregado1)
+    if (carregado22)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1823,12 +1823,12 @@ function imagemCarregada22()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado22 = true;
 }
 
 function imagemCarregada23()
 {
-    if (carregado1)
+    if (carregado23)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1839,12 +1839,12 @@ function imagemCarregada23()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado23 = true;
 }
 
 function imagemCarregada24()
 {
-    if (carregado1)
+    if (carregado24)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1855,12 +1855,12 @@ function imagemCarregada24()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado24 = true;
 }
 
 function imagemCarregada25()
 {
-    if (carregado1)
+    if (carregado25)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1871,12 +1871,12 @@ function imagemCarregada25()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado25 = true;
 }
 
 function imagemCarregada26()
 {
-    if (carregado1)
+    if (carregado26)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1887,12 +1887,12 @@ function imagemCarregada26()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado26 = true;
 }
 
 function imagemCarregada27()
 {
-    if (carregado1)
+    if (carregado27)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1903,12 +1903,12 @@ function imagemCarregada27()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado27 = true;
 }
 
 function imagemCarregada28()
 {
-    if (carregado1)
+    if (carregado28)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1919,12 +1919,12 @@ function imagemCarregada28()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado28 = true;
 }
 
 function imagemCarregada29()
 {
-    if (carregado1)
+    if (carregado29)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1935,12 +1935,12 @@ function imagemCarregada29()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado29 = true;
 }
 
 function imagemCarregada30()
 {
-    if (carregado1)
+    if (carregado30)
     {
         statusSistema.innerHTML = progresso;
         setTimeout("progressoDaBarra()", 100);
@@ -1951,7 +1951,7 @@ function imagemCarregada30()
         statusSistema.innerHTML = "Image 1 loaded"
         setTimeout("progressoDaBarra()", 100);
     }
-    carregado1 = true;
+    carregado30 = true;
 }
 
 /*
