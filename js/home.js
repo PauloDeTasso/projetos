@@ -1520,7 +1520,7 @@ function luzes9()
 
 function bodyCarregado()
 {
-    progresso = progresso + 23;
+    progresso = progresso + 25;
     statusSistema.style.visibility = 'visible';
     statusSistema.innerHTML = "Main content donwloaded!";
     setTimeout("progressoDaBarra()", 100);
@@ -2045,29 +2045,34 @@ function progressoDaBarra()
     if (progresso >= 0 && progresso < 90)
     {
         statusSistema.style.visibility = 'visible';
+        statusSistema.innerHTML = progresso + "%";
         /*statusSistema.innerHTML = "Loading";*/
     }
 
     if (progresso >= 90 && progresso < 100)
     {
         setTimeout("completarBarraDeProgresso()", 100);
+
+        statusSistema.innerHTML = progresso + "%";
     }
 
+    let progressoVF1 = progresso < 100;
 
-    if (progresso == 100)
+    let progressoVF2 = progresso > 100;
+
+    if (!progressoVF1 && !progressoVF2)
     {
-        barraDeProgresso.setAttribute('value', progresso);
-        statusSistema.innerHTML = "Full site donwloaded!";
+        statusSistema.innerHTML = "100% - Full site donwloaded!";
         setTimeout("limparStatusSistema()", 5000);
     }
 
     if (progresso > 100)
     {
-        statusSistema.innerHTML = "Fully donwloaded website!";
         setTimeout("limparStatusSistema()", 5000);
     }
 
 }
+
 
 function completarBarraDeProgresso()
 {
