@@ -134,10 +134,10 @@ var carregado26 = false;
 var carregado27 = false;
 var carregado28 = false;
 var carregado29 = false;
-
+var carregado30 = false;
+var carregado31 = false;
 
 /////////////////////////////////////////////////////////////////
-
 
 function play()
 {
