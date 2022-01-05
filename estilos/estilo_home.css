@@ -714,15 +714,21 @@ main
 
 #gif1
 {
-    visibility: hidden;
+    visibility: visible;
+    border: thick 5px rgb(172, 172, 172);
+    border-radius: 3em;
 }
 
 #gif2
 {
-    visibility: hidden;
+    visibility: visible;
+    border: thick 5px rgb(172, 172, 172);
+    border-radius: 3em;
 }
 
 #gif3
 {
-    visibility: hidden;
+    visibility: visible;
+    border: thick 5px rgb(172, 172, 172);
+    border-radius: 3em;
 }
