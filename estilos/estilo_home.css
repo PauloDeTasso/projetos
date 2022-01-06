@@ -243,18 +243,6 @@ body
     visibility: hidden;
 }
 
-#secaoTabela
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    align-items: center;
-    width: 100%;
-    height: auto;
-    border: 10px solid rgb(100, 100, 100);
-    opacity: 0;
-}
-
 #botaoTabela
 {
    display: flex;
