@@ -35,8 +35,9 @@ body
     align-items: center;
     width: auto;
     height: 100%;
-    background-image: url("../imagens/gif/nature0.gif");
+    background-image: url("../imagens/gif/nature1.gif");
     background-size: cover;
+    background-position: bottom;
 }
 
 /**/
@@ -610,7 +611,7 @@ main
     text-align: center;
     width: 100%;
     height: auto;
-    border: 10px groove rgba(0, 0, 0,0.5);
+    border: 10px groove rgba(105, 105, 105, 0.2);
 }
 
 /*#tituloPrincipal*/
