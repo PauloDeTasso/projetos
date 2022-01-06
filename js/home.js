@@ -1,5 +1,7 @@
 /* var 'S*/
 
+var numeroDePaginas = window.history.length;
+
 var botaoGif = document.getElementById('botaoGifPrincipal');
 
 var audioPrincipal = document.getElementById("audioPrincipal");
@@ -2119,6 +2121,13 @@ function completarBarraDeProgresso()
 function limparStatusSistema()
 {
     statusSistema.style.visibility = 'hidden';
+}
+
+/**/
+
+function voltarPagina() 
+{
+    window.history.back()
 }
 
 /*
