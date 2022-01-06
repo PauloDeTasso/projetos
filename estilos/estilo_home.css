@@ -729,39 +729,42 @@ visibility: visible;
     width: 100%;
     height: auto;
     background-image: url('../imagens/texture/01.png');
-    background-size: cover;          
-    font-size: 80%;         
+    background-size: cover;         
     border-collapse: collapse;    
     color: rgba(255, 233, 191,1);  
     text-align: center;
     padding: 1%;
     border-top: 1px solid rgba(172, 172, 172, 0.1);
-    border-right: 1px solid rgba(172, 172, 172, 0.1);
+    border-right: 1px solid rgba(172, 172, 172, 0.1);    
+    table-layout: fixed;
 }
 
 #tabelaRoadmap
 {    
     width: 100%;
     height: auto;    
-    font-size: 100%;    
+    font-size: 8pt;    
     border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
     background-color: rgba(0, 0, 0,0.8);
     opacity: 0.9;
     text-align: center;
-    padding: 1%;
+    padding: 1%;    
+    table-layout: fixed;
 }
 
 #cabecalhoTabela
 {           
     font-weight: bolder;
-    font-size: 100%;    
+    font-size: 8pt;    
     text-align: center;
-    padding: 1%;
+    padding: 1%;    
+    table-layout: fixed;
 }
 
 #linhaTabela
 {          
+    table-layout: fixed;
 }
 
 #tituloTabela
@@ -769,9 +772,10 @@ visibility: visible;
     padding: 1%;
     border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
-    font-size: 100%;
+    font-size: 8pt;
     font-weight: lighter;
-    text-align: center;
+    text-align: center;    
+    table-layout: fixed;
 }
 
 #corpoTabela
@@ -780,7 +784,8 @@ visibility: visible;
     border-collapse: collapse;
     text-align: left;
     padding: 1%;    
-    vertical-align: top;
+    vertical-align: top;    
+    table-layout: fixed;
 }
 
 .colunaTabela
@@ -788,9 +793,10 @@ visibility: visible;
     width: auto;
     height: 100%;
     font-weight: lighter;
-    font-size: 80%;    
+    font-size: 8pt;    
     border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
     text-align: left;
-    padding: 1%;    
+    padding: 1%;        
+    table-layout: fixed;
 }
