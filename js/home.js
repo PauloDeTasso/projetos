@@ -103,6 +103,8 @@ var secaoOesteImagem = document.getElementById('secaoOesteImagem');
 
 var barraDeProgresso = document.getElementById('barraDeProgresso');
 
+var secaoTabela = document.getElementById('secaoTabela');
+
 var progresso = 0;
 
 var bodyCarregou = false;
@@ -836,16 +838,16 @@ function abrirFecharTabela()
 {
 
     var iconeJanela = document.getElementById('iconeJanela');
-    let getStyle = window.getComputedStyle(secaoIframeHome);
+    let getStyle = window.getComputedStyle(secaoTabela);
     var getDisplay = getStyle.getPropertyValue('display');
 
     if (getDisplay == "none")    
     {
-        secaoIframeHome.style.display = 'flex';
+        secaoTabela.style.display = 'flex';
         iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png')
     } else
     {
-        secaoIframeHome.style.display = 'none';
+        secaoTabela.style.display = 'none';
         iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png')
     }
 }
@@ -1532,7 +1534,7 @@ function bodyCarregado()
         setTimeout("progressoDaBarra()", 1000);
     } else
     {
-        progresso = progresso + 25;
+        progresso = progresso + 50;
         statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = "Main content donwloaded!";
         setTimeout("progressoDaBarra()", 100);

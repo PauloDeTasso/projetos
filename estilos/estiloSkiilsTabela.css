@@ -54,10 +54,6 @@ body
     border-collapse: collapse;
 }
 
-#linhaTabela
-{          
-}
-
 #tituloTabela
 {   
     border: 1px solid rgba(255, 233, 191,0.9);
