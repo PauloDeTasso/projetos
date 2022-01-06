@@ -648,12 +648,19 @@ main
     align-items: center;
     width: 100%;
     height: auto;
+    
 }
 
 #barraDeProgresso
 {
-
+    background-color: rgb(107, 31, 247);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(32, 0, 107);  /* creates padding around scroll thumb */
 }
+
+progress::-moz-progress-bar { background: rgb(107, 31, 247); }
+progress::-webkit-progress-value { background: rgb(107, 31, 247); }
+progress { color: rgb(107, 31, 247); }
 
 #secaoImagemTerra
 {
@@ -736,7 +743,8 @@ visibility: visible;
     padding: 1%;
     border-top: 1px solid rgba(172, 172, 172, 0.1);
     border-right: 1px solid rgba(172, 172, 172, 0.1);    
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: auto;
 }
 
 #tabelaRoadmap
@@ -750,7 +758,8 @@ visibility: visible;
     opacity: 0.9;
     text-align: center;
     padding: 1%;    
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: auto;
 }
 
 #cabecalhoTabela
@@ -759,12 +768,14 @@ visibility: visible;
     font-size: 8pt;    
     text-align: center;
     padding: 1%;    
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: auto;
 }
 
 #linhaTabela
 {          
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: auto;
 }
 
 #tituloTabela
@@ -775,7 +786,8 @@ visibility: visible;
     font-size: 8pt;
     font-weight: lighter;
     text-align: center;    
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: auto;
 }
 
 #corpoTabela
@@ -786,6 +798,7 @@ visibility: visible;
     padding: 1%;    
     vertical-align: top;    
     table-layout: fixed;
+    overflow: auto;
 }
 
 .colunaTabela
@@ -798,5 +811,35 @@ visibility: visible;
     border-collapse: collapse;
     text-align: left;
     padding: 1%;        
-    table-layout: fixed;
+    table-layout: fixed;    
+    overflow: scroll;
+
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 31, 247);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(32, 0, 107);  /* creates padding around scroll thumb */
+  }
+
+ .colunaTabela::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .colunaTabela::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);        /* color of the tracking area */
+  }
+  
+  .colunaTabela::-webkit-scrollbar-thumb {
+    background-color: rgb(102, 102, 102);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(41, 41, 41);  /* creates padding around scroll thumb */
+  }
