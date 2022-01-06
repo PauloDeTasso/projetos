@@ -76,7 +76,7 @@ function playUnico()
 
 }
 
-/* SE BARRA DE PROGRESSO = 100 ENTÃO: */
+/* SE BARRA DE PROGRESSO = 100 ENTÃO: 
 
 let som = setTimeout("somTerminou()", 7000);
 
@@ -96,7 +96,7 @@ function somTerminou()
         somRespiracao.pause();
     }
 }
-
+*/
 
 luzes();
 
