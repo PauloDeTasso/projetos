@@ -21,7 +21,7 @@ body
     background-image: url('../imagens/texture/01.png');
     background-size: cover;          
     font-size: 100%;      
-    border: 1px solid rgba(255, 233, 191,0.5);
+    border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
 }
 
@@ -30,7 +30,7 @@ body
     width: 100%;
     height: auto;    
     font-size: 100%;    
-    border: 1px solid rgba(255, 233, 191,0.5);
+    border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
     background-color: rgba(0, 0, 0,0.8);
     opacity: 0.9;
@@ -50,7 +50,7 @@ body
     font-weight: lighter;
     vertical-align: top;
     font-size: 80%;    
-    border: 1px solid rgba(255, 233, 191,0.5);
+    border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
 }
 
@@ -60,13 +60,15 @@ body
 
 #tituloTabela
 {   
-    border: 4px solid rgba(255, 233, 191,0.5);
+    border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
+    font-size: 80%;
+    font-weight: lighter;
 }
 
 #corpoTabela
 {        
-    border: 4px solid rgba(255, 233, 191,0.5);
+    border: 1px solid rgba(255, 233, 191,0.9);
     border-collapse: collapse;
 }
 
