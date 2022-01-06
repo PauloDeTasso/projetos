@@ -740,3 +740,23 @@ main
     background-image: url("../imagens/texture/01.png");
     background-size: cover;
 }
+
+#icone01
+{
+visibility: visible;
+}
+
+#icone02
+{
+visibility: hidden;
+}
+
+#icone03
+{
+visibility: hidden;
+}
+
+#icone04
+{
+visibility: visible;
+}
