@@ -4,10 +4,10 @@ html
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(21, 21, 21);
     color: rgb(255, 233, 191);    
     width: 100%;
-    height: auto;
+    height: auto;    
+    font-size: 100%;
 }
 
 body
@@ -19,7 +19,7 @@ body
     background-color: rgb(0, 0, 0);
     width: 100%;
     height: auto;
-    font-size: 10pt;
+    font-size: 100%;
     background-image: url('../imagens/texture/01.png');
     background-size: cover;
 }
@@ -33,12 +33,9 @@ body
 
 #cabecalhoTabela
 {   
-
-}
-
-#linhaTabela
-{    
-
+    
+    background-color: black;  
+    border-collapse: collapse;
 }
 
 #colunaTabela
@@ -52,29 +49,41 @@ body
     padding: 0px;
     margin: 0px;    
     border-collapse: collapse;
-    color: rgb(255, 233, 191);
-    background-color: black;    
-    border: 1px solid rgb(44, 44, 44);    
+    color: rgb(255, 233, 191);    
+    background-color: black;  
+    opacity: 0.9;
+}
+
+#linhaTabela
+{        
+    background-color: black;  
+    opacity: 0.9;
 }
 
 #tituloTabela
 {   
-
+    
+    background-color: black;  
+    opacity: 0.9;
 }
 
 #corpoTabela
-{    
-
+{        
+    background-color: black;  
+    opacity: 0.9;
 }
 
 #ulTabela
 {    
+    
+    background-color: black;  
+    opacity: 0.9;
 }
 
 #liTabela
 {   
+    
+    background-color: black;  
+    opacity: 0.9;
 }
-
-#secaoColuna2
-{
-}  
+  
