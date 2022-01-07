@@ -2087,7 +2087,6 @@ function temporizador20S()
     }
 }
 
-
 function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
