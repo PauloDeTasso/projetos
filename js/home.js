@@ -1540,12 +1540,14 @@ function bodyCarregado()
     {
         statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
+        bodyCarregou = true;
     } else
     {
         progresso = progresso + 50;
         statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Main content donwloaded!";
         setTimeout("progressoDaBarra()", 100);
+        bodyCarregou = true;
     }
     bodyCarregou = true;
 }
@@ -1556,12 +1558,15 @@ function iframeCarregado()
     {
         statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
+        iframeCarregou = true;
+
     } else
     {
         progresso = progresso + 25;
         statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - External documents donwloaded!";
         setTimeout("progressoDaBarra()", 1000);
+        iframeCarregou = true;
     }
     iframeCarregou = true;
 }
@@ -1572,12 +1577,14 @@ function scriptCarregado()
     {
         statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
+        scriptCarregou = true;
     } else
     {
         progresso = progresso + 25;
         statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Internal process donwloaded!";
         setTimeout("progressoDaBarra()", 1000);
+        scriptCarregou = true;
     }
     scriptCarregou = true;
 }
