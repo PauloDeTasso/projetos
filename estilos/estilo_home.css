@@ -817,6 +817,20 @@ visibility: visible;
 
 }
 
+#thTabela
+{
+    width: auto;
+    height: 100%;
+    font-weight: bolder;
+    font-size: 8pt;    
+    border: 1px solid rgba(255, 233, 191,0.9);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 1%;        
+    table-layout: fixed;    
+    overflow: scroll;
+}
+
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
   }
@@ -840,6 +854,23 @@ body::-webkit-scrollbar {
   }
   
   .colunaTabela::-webkit-scrollbar-thumb {
+    background-color: rgb(32, 32, 32);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(107, 31, 247);  /* creates padding around scroll thumb */
+  }
+
+  #thTabela::-webkit-scrollbar 
+  {
+    width: 0.1px;               /* width of the entire scrollbar */
+  }
+  
+  #thTabela::-webkit-scrollbar-track 
+  {
+    background: rgb(0, 0, 0);        /* color of the tracking area */
+  }
+  
+  #thTabela::-webkit-scrollbar-thumb
+  {
     background-color: rgb(32, 32, 32);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid rgb(107, 31, 247);  /* creates padding around scroll thumb */
