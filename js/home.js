@@ -2073,9 +2073,9 @@ function linkFavIconCarregado()
 
 var tempoLimite = false;
 
-setTimeout("temporizador20S()", 20000);
+setTimeout("temporizador10S()", 10000);
 
-function temporizador20S()
+function temporizador10S()
 {
     tempoLimite = true;
     progressoDaBarra();
@@ -2086,10 +2086,7 @@ function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
 
-    if (progresso == 75
-        && bodyCarregou
-        && scriptCarregou
-        && tempoLimite)
+    if (progresso == 75 && tempoLimite)
     {
         completarBarraDeProgressoTodosCarregados();
     }
@@ -2137,12 +2134,10 @@ function completarBarraDeProgresso()
 
 function completarBarraDeProgressoTodosCarregados()
 {
-    if (progresso >= 75
-        && progresso < 100
-    )
+    if (progresso >= 75 && progresso < 100)
     {
         progresso += 1;
-        setTimeout("completarBarraDeProgressoTodosCarregados()", 500);
+        setTimeout("completarBarraDeProgressoTodosCarregados()", 100);
     }
     progressoDaBarra();
 }
