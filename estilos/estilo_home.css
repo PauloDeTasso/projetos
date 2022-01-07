@@ -614,7 +614,7 @@ main
     justify-content: center;
     width: 100%;
     height: auto;
-    font-size: 80%;
+    font-size: 7pt;
     color: rgba(200, 200, 200, 0.8);
     font-family: 'Courier New', Courier, monospace;
     visibility: visible;
