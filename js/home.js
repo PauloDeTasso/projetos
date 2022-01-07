@@ -887,14 +887,14 @@ var secaoLicense = document.getElementById('license');
 function abrirSecaoLicense()
 {
     var estiloLicense = window.getComputedStyle(secaoLicense);
-    var valorEstilo = estiloLicense.getPropertyValue('display');
+    var valorEstilo = estiloLicense.getPropertyValue('visibility');
 
-    if (valorEstilo == "none")    
+    if (valorEstilo == "hidden")    
     {
-        secaoLicense.style.display = 'flex';
+        secaoLicense.style.visibility = 'visible';
     } else
     {
-        secaoLicense.style.display = 'none';
+        secaoLicense.style.visibility = 'hidden';
     }
 }
 
@@ -2071,6 +2071,16 @@ function linkFavIconCarregado()
 
 */
 
+var tempoLimite = false;
+
+setTimeout("temporizador20S()", 20000);
+
+function temporizador20S()
+{
+    tempoLimite = true;
+}
+
+
 function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
@@ -2078,38 +2088,7 @@ function progressoDaBarra()
     if (progresso == 75
         && bodyCarregou
         && scriptCarregou
-        && carregado1
-        && carregado2
-        && carregado3
-        && carregado4
-        && carregado5
-        && carregado6
-        && carregado7
-        && carregado8
-        && carregado9
-        && carregado10
-        && carregado11
-        && carregado12
-        && carregado13
-        && carregado14
-        && carregado15
-        && carregado16
-        && carregado17
-        && carregado18
-        && carregado19
-        && carregado20
-        && carregado21
-        && carregado22
-        && carregado23
-        && carregado24
-        && carregado25
-        && carregado26
-        && carregado27
-        && carregado28
-        && carregado29
-        && carregado30
-        && carregado31
-    )
+        && tempoLimite)
     {
         completarBarraDeProgressoTodosCarregados();
     }
@@ -2180,6 +2159,22 @@ function voltarPagina()
 }
 
 progressoDaBarra();
+
+var botaoLicense = document.getElementById('botaoLicense');
+
+function corBotaoLicense()
+{
+    let styleBotaoLicense = window.getComputedStyle(botaoLicense);
+    let styleBotaoLicense2 = styleBotaoLicense.getPropertyValue('background-color');
+
+    if (styleBotaoLicense2 == "rgb(0, 36, 114)")    
+    {
+        botaoLicense.style.backgroundColor = "rgb(107, 31, 247)";
+    } else
+    {
+        botaoLicense.style.backgroundColor = "rgb(0, 36, 114)";
+    }
+}
 
 /*
 
