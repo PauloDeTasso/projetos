@@ -2079,11 +2079,11 @@ function linkFavIconCarregado()
 
 var tempoLimite = false;
 
-setTimeout("temporizador20S()", 20000);
+setTimeout("temporizador60S()", 60000);
 
-function temporizador20S()
+function temporizador60S()
 {
-    if (bodyCarregou && scriptCarregou)
+    if (progresso < 100 && tempoLimite && bodyCarregou && scriptCarregou)
     {
         tempoLimite = true;
         progressoDaBarra();
@@ -2097,7 +2097,7 @@ function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
 
-    if (progresso == 75 && tempoLimite)
+    if (progresso < 100 && tempoLimite && bodyCarregou && scriptCarregou)
     {
         completarBarraDeProgressoTodosCarregados();
     }
