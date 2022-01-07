@@ -2073,12 +2073,18 @@ function linkFavIconCarregado()
 
 var tempoLimite = false;
 
-setTimeout("temporizador10S()", 10000);
+setTimeout("temporizador20S()", 20000);
 
-function temporizador10S()
+function temporizador20S()
 {
-    tempoLimite = true;
-    progressoDaBarra();
+    if (bodyCarregou && scriptCarregou)
+    {
+        tempoLimite = true;
+        progressoDaBarra();
+    } else
+    {
+        document.location.reload(true);
+    }
 }
 
 
