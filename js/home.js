@@ -2075,7 +2075,41 @@ function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
 
-    if (progresso == 75 && bodyCarregou && scriptCarregou)
+    if (progresso == 75
+        && bodyCarregou
+        && scriptCarregou
+        && carregado1
+        && carregado2
+        && carregado3
+        && carregado4
+        && carregado5
+        && carregado6
+        && carregado7
+        && carregado8
+        && carregado9
+        && carregado10
+        && carregado11
+        && carregado12
+        && carregado13
+        && carregado14
+        && carregado15
+        && carregado16
+        && carregado17
+        && carregado18
+        && carregado19
+        && carregado20
+        && carregado21
+        && carregado22
+        && carregado23
+        && carregado24
+        && carregado25
+        && carregado26
+        && carregado27
+        && carregado28
+        && carregado29
+        && carregado30
+        && carregado31
+    )
     {
         completarBarraDeProgressoTodosCarregados();
     }
@@ -2125,39 +2159,6 @@ function completarBarraDeProgressoTodosCarregados()
 {
     if (progresso >= 75
         && progresso < 100
-        && bodyCarregou
-        && scriptCarregou
-        && carregado1
-        && carregado2
-        && carregado3
-        && carregado4
-        && carregado5
-        && carregado6
-        && carregado7
-        && carregado8
-        && carregado9
-        && carregado10
-        && carregado11
-        && carregado12
-        && carregado13
-        && carregado14
-        && carregado15
-        && carregado16
-        && carregado17
-        && carregado18
-        && carregado19
-        && carregado20
-        && carregado21
-        && carregado22
-        && carregado23
-        && carregado24
-        && carregado25
-        && carregado26
-        && carregado27
-        && carregado28
-        && carregado29
-        && carregado30
-        && carregado31
     )
     {
         progresso += 1;
