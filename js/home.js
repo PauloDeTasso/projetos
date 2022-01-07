@@ -2071,16 +2071,19 @@ function linkFavIconCarregado()
 
 */
 
-
 function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
+
+    if (progresso == 75 && bodyCarregou && scriptCarregou)
+    {
+        completarBarraDeProgressoTodosCarregados();
+    }
 
     if (progresso >= 0 && progresso < 90)
     {
         statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + "%";
-        /*statusSistema.innerHTML = "Loading";*/
     }
 
     if (progresso >= 90 && progresso < 100)
@@ -2118,6 +2121,16 @@ function completarBarraDeProgresso()
     progressoDaBarra();
 }
 
+function completarBarraDeProgressoTodosCarregados()
+{
+    if (progresso >= 75 && progresso < 100)
+    {
+        progresso += 1;
+        completarBarraDeProgressoTodosCarregados();
+    }
+    progressoDaBarra();
+}
+
 function limparStatusSistema()
 {
     statusSistema.style.visibility = 'hidden';
@@ -2130,6 +2143,7 @@ function voltarPagina()
     window.history.back()
 }
 
+progressoDaBarra();
 /*
 
 function statusJavascript()
