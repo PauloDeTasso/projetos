@@ -844,3 +844,19 @@ body::-webkit-scrollbar {
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid rgb(107, 31, 247);  /* creates padding around scroll thumb */
   }
+
+  #secaoRelogio
+  {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+  }
+
+  #relogio
+  {
+      color: rgb(200, 200, 200);
+      font-size: 7pt;
+      padding: 1%;
+  }

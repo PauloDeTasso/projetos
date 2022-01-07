@@ -2176,6 +2176,14 @@ function corBotaoLicense()
     }
 }
 
+setInterval(relogio, 1000);
+
+function relogio()
+{
+    const date = new Date();
+    document.getElementById("relogio").innerHTML = date.toLocaleTimeString();
+}
+
 /*
 
 /////////////////////////////////////////////////////////
