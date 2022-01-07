@@ -856,6 +856,10 @@ body::-webkit-scrollbar {
 
   #relogio
   {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       color: rgb(200, 200, 200);
       font-size: 7pt;
       padding: 1%;
