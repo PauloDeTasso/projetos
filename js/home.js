@@ -2086,11 +2086,13 @@ function linkFavIconCarregado()
 
 var tempoLimite = false;
 
-setTimeout("temporizador60S()", 60000);
+setTimeout("temporizador120S()", 120000);
 
-function temporizador60S()
+function temporizador120S()
 {
-    if (progresso < 100 && tempoLimite && bodyCarregou && scriptCarregou)
+    tempoLimite = true;
+
+    if (tempoLimite && bodyCarregou && scriptCarregou)
     {
         tempoLimite = true;
         progressoDaBarra();
