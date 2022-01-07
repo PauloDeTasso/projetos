@@ -887,14 +887,20 @@ var secaoLicense = document.getElementById('license');
 function abrirSecaoLicense()
 {
     var estiloLicense = window.getComputedStyle(secaoLicense);
-    var valorEstilo = estiloLicense.getPropertyValue('visibility');
+    var valorEstiloLicense = estiloLicense.getPropertyValue('visibility');
 
-    if (valorEstilo == "hidden")    
+    if (valorEstiloLicense == "hidden")    
     {
         secaoLicense.style.visibility = 'visible';
+        secaoFooter.style.backgroundImage = 'url("")';
+        sfssd.style.visibility = 'visible';
+        iconeUsuario.style.visibility = 'visible';
     } else
     {
         secaoLicense.style.visibility = 'hidden';
+        secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
+        sfssd.style.visibility = 'hidden';
+        iconeUsuario.style.visibility = 'hidden';
     }
 }
 
