@@ -2164,7 +2164,7 @@ function completarBarraDeProgressoTodosCarregados()
 
 function limparStatusSistema()
 {
-    statusSistema.style.visibility = 'hidden';
+    statusSistema.style.visibility = "";
 }
 
 /**/
