@@ -2078,6 +2078,7 @@ setTimeout("temporizador20S()", 20000);
 function temporizador20S()
 {
     tempoLimite = true;
+    progressoDaBarra();
 }
 
 
