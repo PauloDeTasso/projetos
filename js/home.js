@@ -2287,8 +2287,8 @@ function iniciarJogo()
 
     // OPONENTE *************************************************
 
-    if (oponenteParaCima
-        { // CASP O OPONENTE ESTIVER INDO PARA CIMA
+    if (oponenteParaCima)
+    { // CASP O OPONENTE ESTIVER INDO PARA CIMA
         oponenteParaCima -= velocidadeOponente;
         if (oponentePosY <= 0) // SE A BOLA ESTIVER SAINDO DA TELA
         {
@@ -2314,10 +2314,10 @@ function iniciarJogo()
                 bolaParaDireita = true;
                 if (teclaBaixoPressionada)
                 { // SE O USUARIO ESTIVER INDO PARA BAIXO E TOCAR NA BOLA
-                    bolaAngulo = Math.floor(Math.random() * 10) - 9; // FAZ A BOLA IR PARA UMA DIREÇÃO ALEATÓRIA
+                    bolaAngulo = Math.floor(Math.random() * 10) - 9; // MANDA BOLA PARA DIAGONAL PARA CIMA
                 } else
                 {
-                    bolaAngulo = Math.floor(Math.random() * 10); // FAZ A BOLA IR PARA UMA DIREÇÃO ALEATÓRIA
+                    bolaAngulo = Math.floor(Math.random() * 10); //  MANDA BOLA PARA DIAGONAL PARA BAIXO
                 }
             }
         } else 
@@ -2326,16 +2326,93 @@ function iniciarJogo()
             { // SE O OPONENTE ESCONTAR NA BOLA NO EIXO X
                 if ((bolaPosY + bolaRaio) > oponentePosY && (bolaPosY - bolaRaio < oponentePosY + barraHeigth))
                 { // SE O OPONENTE ESCONTAR NA BOLA NO EIXO Y
-                    if (oponenteParaCima)
-                    {
 
+                    bolaParaDireita = false;
+
+                    if (oponenteParaCima)
+                    { // CASO OPONENTE ESTIVER INDO PARA CIMA AO TOCAR NA BOLA
+                        bolaAngulo = Math.floor(Math.random() * 10) - 9; // // MANDA BOLA PARA DIAGONAL PARA CIMA
+                    } else
+                    { // caso o oponente estiver indo para baixo quando tocar na bola
+                        bolaAngulo = Math.floor(Math.random() * 10); //  MANDA BOLA PARA DIAGONAL PARA BAIXO
                     }
                 }
             }
         }
+        if ((bolaPosY - bolaRaio <= 0) || (bolaPosY + bolaRaio > canvas.heigth))
+        { // SE A BOLA ESTIVER INDO PARA CIMA OU PARA BAIXO NA TELA
+            bolaAngulo = bolaAngulo * - 1; // MULTIPLICAMOS POR - 1 PARA INVERTER A DIREÇÃO DA BOLA NO EIXO Y
+        }
+        bolaPosY += bolaAngulo; // MOVE BOLA PARA CIMA OU PARA BAIXO DE ACORDO COM O CAUCULO ACIMA
+        if (bolaParaDireita)
+        {
+            bolaPoxX += velocidadeBola; // MOVE A BOLA PARA A DIREITA
+        } else
+        {
+            bolaPoxX -= velocidadeBola; // MOVE A BOLA PARA A ESQUERDA
+        }
     }
+    if ((bolaPoxX <= - bolaRaio) || (bolaPoxX > canvas.width))
+    { // SE A BOLA SAIU DA TELA
+        if (bolaTempo >= 50)
+        { // SE O TEMPO DE DEIXAR A BOLA INVISIVEL PASSOU
+            if (bolaPoxX <= bolaRaio)
+            { // SE A BOLA SAIU NA ESQUERDA
+                pontosOponente++;
+            }
+            bolaPoxX = canvas.width / 2; // Coloca bola no centro da tela
+            bolaPosY = canvas.heigth / 2; // Coloca bola no centro da tela
 
+            bolaParaDireita = false;
+            bolaAngulo = Math.floor(Math.random() * 21) - 10); /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
+            bolaTempo = 0; // ZERA O TEMPO DE DEIXA A BOLA INVISIVEL E COLOCA NOVAMENTE EM JOGO
+        } else
+        { // CASO O TEMPO DE DEIXAR A BOLA INVISIVEL NAO ACABOU
+            bolaTempo++;
+        }
+
+    }
 }
+
+// DESENHAR TODA A TELA *****************************************************************
+
+context.clearRect(0, 0, canvas.width, canvas.heigth); // LIMPAR A TELA ANTES DE DESENHAR
+
+// JOGADOR E OPONENTE ******************************************************************
+
+context.fillRect(jogadorPosX, jogadorPosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
+context.fillRect(openentePosX, oponentePosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
+
+// BOLA **********************************************************************************
+
+context.beginPath(); // MODO DESENHO
+context.arc(bolaPoxX, bolaPosY, bolaRaio, 0, Math.PI * 2, true); // DESENHA O CIRCULO COM COORDENADAS NO CENTRO
+context.closePath(); // FINALIZA O CAMINHO / NAO OBRIGATORIO
+context.fill();
+
+// PLACAR ********************************************************************************
+
+var pontosA = pontosJogador; // VARIAVEIS TEMPORARIAS PARA ALTERAR PONTUAÇAO
+var pontosB = pontosOponente;
+
+if (pontosA < 10)
+{ // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
+    pontosA = "0" + pontosA;
+}
+
+if (pontosB < 10)
+{ // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
+    pontosB = "0" + pontosB;
+}
+
+context.font = "38pt Arial"; // Tamanho e fonte 
+context.fillStyle = "rgb(0, 0, 0)";
+context.fillText(pontosA + "   " + pontosB, (canvas.width / 2) - 70, 50); // ESCREVENDO TEXTO NO CENTRO DA TELA NO TOPO
+
+// LINHA DIVISORIA
+
+context.beginPath();
+context.moveTo(canvas.width / 2); // ARRUMAR LAPIS PARA FAZER A ESCRITA DA LINHA
 
 /////////////////////////////////////////////////////////
 
