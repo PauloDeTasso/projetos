@@ -2430,14 +2430,14 @@ function loopGame()
     }
 
     context.font = "38pt Arial"; // tamanho e fonte
-    context.fillStyle = "#000000";
+    context.fillStyle = "#c4c4c4";
     context.fillText(pontosA + "  " + pontosB, (canvas.width / 2) - 70, 50); // escrevendo texto no centro da tela no top
 
     //  LINHA DIVISÓRIA
     context.beginPath();
     context.moveTo(canvas.width / 2, 0); // arrumar lapis para fazere a escrita da linha
     context.lineTo(canvas.width / 2, canvas.height);// faz risco na tela no centro
-    context.strokeStyle = "#00000";
+    context.strokeStyle = "#c4c4c4";
     context.stroke();
     context.closePath();
 
