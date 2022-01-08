@@ -2227,7 +2227,7 @@ function iniciarJogo()
 
     bolaParaDireita = false;
 
-    bolaAngulo = Math.floor(Math.random() * 21) - 10); /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
+    bolaAngulo = Math.floor(Math.random() * 21) - 10; /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
 
     bolaTempo = 0;
     velocidadeJogador = 15;
@@ -2364,7 +2364,7 @@ function iniciarJogo()
             bolaPosY = canvas.heigth / 2; // Coloca bola no centro da tela
 
             bolaParaDireita = false;
-            bolaAngulo = Math.floor(Math.random() * 21) - 10); /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
+            bolaAngulo = Math.floor(Math.random() * 21) - 10; /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
             bolaTempo = 0; // ZERA O TEMPO DE DEIXA A BOLA INVISIVEL E COLOCA NOVAMENTE EM JOGO
         } else
         { // CASO O TEMPO DE DEIXAR A BOLA INVISIVEL NAO ACABOU
