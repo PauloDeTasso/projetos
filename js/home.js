@@ -2193,14 +2193,149 @@ function corBotaoLicense()
 }
 
 setInterval(relogio, 1000);
-
 function relogio()
 {
     const date = new Date();
     document.getElementById("relogio").innerHTML = date.toLocaleTimeString();
 }
 
-/*
+/* PING PONG */
+
+var canvas, context, barraWidth, barraHeigth, jogadorPosX, jogadorPosY, teclaCimaPressionada, teclaBaixoPressionada, openentePosX, oponentePosY,
+    oponenteParaCima, bolaRaio, bolaPoxX, bolaPosY, bolaParaDireita, bolaAngulo, bolaTempo, velocidadeJogador, velocidadeOponente, velocidadeBola, pontosJogador, pontosOponente;
+
+function iniciarJogo()
+{
+    canvas = document.getElementById('canvas');
+    context = canvas.getContext("2d");
+
+    barraWidth = 30;
+    barraHeigth = 90;
+    jogadorPosX = 0;
+    jogadorPosY = (canvas.heigth - barraHeigth) / 2;
+    teclaBaixoPressionada = false;
+    teclaCimaPressionada = false;
+
+    openentePosX = canvas.width - barraWidth;
+    oponentePosY = 0;
+    oponenteParaCima = false;
+
+    bolaRaio = 10;
+
+    bolaPoxX = canvas.width / 2;
+    bolaPosY = canvas.heigth / 2;
+
+    bolaParaDireita = false;
+
+    bolaAngulo = Math.floor(Math.random() * 21) - 10); /*FAS BOLA IR PARA UMA DIREÇÃO ALEATORIA*/
+
+    bolaTempo = 0;
+    velocidadeJogador = 15;
+    velocidadeOponente = 30;
+    velocidadeBola = 10;
+    pontosJogador = 0;
+    pontosOponente = 0;
+
+    document.addEventListener('keyup', keyUp, false);
+    document.addEventListener('keydown', keyDown, false);
+
+    setInterval(loopGame, 30);
+
+    function keyUp(e)
+    {
+        if (e.keyCode == 30)
+        {
+            teclaCimaPressionada = false;
+        } else if (e.keyCode == 40)
+        {
+            teclaBaixoPressionada = false;
+        }
+    }
+
+    function keyDown() 
+    {
+        if (e.keyCode == 30)
+        {
+            teclaCimaPressionada = true;
+        } else if (e.keyCode == 40)
+        {
+            teclaBaixoPressionada = true;
+        }
+    }
+
+    function loopGame()
+    {
+        // JOGADOR ******************************************
+
+        if (teclaCimaPressionada != teclaBaixoPressionada) //SE O USUARIO PRECIONAR PARA CIMA
+        {
+            if (teclaCimaPressionada)
+            { //SE FOR PARA CIMA PRESSIONADO
+                if (jogadorPosY > 0)
+                { // se a bola não sair da tela
+                    jogadorPosY -= velocidadeJogador; //MUDA A POSIÇÃO DO JOGADOR
+                }
+            }
+        } else
+        {
+            if (jogadorPosY < (canvas.heigth - barraHeigth))
+            { // SE A BOLA NÃO NÃO SAIU DA TELA
+                jogadorPosY += velocidadeJogador; // MUDA POSIÇÃO                
+            }
+        }
+    }
+
+    // OPONENTE *************************************************
+
+    if (oponenteParaCima
+        { // CASP O OPONENTE ESTIVER INDO PARA CIMA
+        oponenteParaCima -= velocidadeOponente;
+        if (oponentePosY <= 0) // SE A BOLA ESTIVER SAINDO DA TELA
+        {
+            oponenteParaCima = false;
+        }
+    } else
+    { // se o ponente estiver se movendo para cima
+        oponentePosY += velocidadeOponente;
+        if (oponentePosY >= canvas.heigth - barraHeigth)
+        { // caso a bola estiver saindo da tela
+            oponenteParaCima = true;
+        }
+    }
+
+    // BOLA ****************************************************
+
+    if (bolaTempo <= 0)
+    { // CASO A BOLA ESTIVER EM JOGO, O TEMPO É ZERADO APOS MARCAR PONTO, A BOLA FICARA INVISIVEL POR UM TEMPO
+        if ((bolaPoxX - bolaRaio) <= (jogadorPosX + barraWidth))
+        { // caso o jogador esconte na bola no eixo x
+            if ((bolaPosY + bolaRaio > jogadorPosY) && (bolaPosY - bolaRaio < jogadorPosY + barraHeigth))
+            { // caso o jogador esconte na bola no eixo y
+                bolaParaDireita = true;
+                if (teclaBaixoPressionada)
+                { // SE O USUARIO ESTIVER INDO PARA BAIXO E TOCAR NA BOLA
+                    bolaAngulo = Math.floor(Math.random() * 10) - 9; // FAZ A BOLA IR PARA UMA DIREÇÃO ALEATÓRIA
+                } else
+                {
+                    bolaAngulo = Math.floor(Math.random() * 10); // FAZ A BOLA IR PARA UMA DIREÇÃO ALEATÓRIA
+                }
+            }
+        } else 
+        {
+            if ((bolaPoxX + bolaRaio) > openentePosX)
+            { // SE O OPONENTE ESCONTAR NA BOLA NO EIXO X
+                if ((bolaPosY + bolaRaio) > oponentePosY && (bolaPosY - bolaRaio < oponentePosY + barraHeigth))
+                { // SE O OPONENTE ESCONTAR NA BOLA NO EIXO Y
+                    if (oponenteParaCima)
+                    {
+
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 /////////////////////////////////////////////////////////
 
