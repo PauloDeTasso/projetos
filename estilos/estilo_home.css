@@ -983,3 +983,8 @@ body::-webkit-scrollbar {
   {
 
   }
+
+  #canvas
+  {
+      border: 1px dashed rgb(0, 0, 0) ;
+  }
