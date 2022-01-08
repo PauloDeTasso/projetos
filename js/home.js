@@ -2492,6 +2492,65 @@ function mudarVelocidade()
     }
 }
 
+var statusPingPong = document.getElementById('statusPingPong');
+
+setTimeout("atualizarStatusPingPong()", 1000);
+
+function atualizarStatusPingPong()
+{
+
+}
+
+function zerarPlacar()
+{
+    pontosJogador = 0;
+    pontosOponente = 0;
+    bolaPosX = canvas.width / 2;
+    bolaPosY = canvas.height / 2;
+    velocidadeBola = 0;
+    setTimeout("status3()", 1000);
+}
+
+function status3()
+{
+    statusPingPong.innerHTML = 3;
+    setTimeout("status2()", 1000);
+}
+
+function status2()
+{
+    statusPingPong.innerHTML = 2;
+    setTimeout("status1()", 1000);
+}
+
+function status1()
+{
+    statusPingPong.innerHTML = 1;
+    setTimeout("statusGO()", 1000);
+}
+
+function statusGO()
+{
+    statusPingPong.innerHTML = "Start!";
+    iniciarPartida();
+}
+
+const randomBoolean = () => Math.random() >= 0.5;
+
+function iniciarPartida()
+{
+    bolaParaDireita = randomBoolean();
+    bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
+    bolaTempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
+    velocidadeBola = 10;
+    setTimeout("limparStatusPingPong()", 3000);
+}
+
+function limparStatusPingPong()
+{
+    statusPingPong.innerHTML = "";
+}
+
 /////////////////////////////////////////////////////////
 
 /*
