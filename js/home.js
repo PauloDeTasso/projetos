@@ -2413,6 +2413,10 @@ context.fillText(pontosA + "   " + pontosB, (canvas.width / 2) - 70, 50); // ESC
 
 context.beginPath();
 context.moveTo(canvas.width / 2); // ARRUMAR LAPIS PARA FAZER A ESCRITA DA LINHA
+context.lineTo(canvas.width / 2, canvas.heigth); // FAZ RISCO NA TELA NO CENTRO
+context.strokeStyle = "rgb(0,0,0)";
+context.stroke();
+context.closePath;
 
 /////////////////////////////////////////////////////////
 
