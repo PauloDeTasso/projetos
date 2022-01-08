@@ -1008,6 +1008,6 @@ body::-webkit-scrollbar {
     align-items: center;
     width: 100%;
     height: auto;
-    background-image: url("../imagens/texture/02.jpg");
+    background-image: url("../imagens/texture/02.png");
     background-size: cover;
   }
