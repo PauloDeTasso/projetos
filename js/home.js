@@ -2242,7 +2242,7 @@ function iniciarJogo()
     bolaTempo = 0;
     velocidadeJogador = 15;
     velocidadeOponente = 30;
-    velocidadeBola = 10;
+    velocidadeBola = 0;
     pontosJogador = 0;
     pontosOponente = 0;
 
