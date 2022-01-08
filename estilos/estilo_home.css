@@ -1053,3 +1053,19 @@ body::-webkit-scrollbar {
       background-color: black;
       border: 0px solid black;
   }
+
+  #secaoOpcoesPingPong
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    background-color: black;
+  }
+
+  #botaoOpcaoVelocidade
+  {
+    
+  }

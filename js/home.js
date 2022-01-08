@@ -2233,7 +2233,7 @@ function iniciarJogo()
     oponentePosY = 0;
     oponenteParaCima = false;
 
-    bolaRaio = 10;
+    bolaRaio = 17;
     bolaPosX = canvas.width / 2;
     bolaPosY = canvas.height / 2;
 
@@ -2420,12 +2420,12 @@ function loopGame()
     var pontosB = pontosOponente;
 
     if (pontosA < 10)
-    { // voloca zero a esquerda se for menor que 10 a pontiação 
+    { // coloca zero a esquerda se for menor que 10 a pontiação 
         pontosA = "0" + pontosA;
     }
 
     if (pontosB < 10)
-    { // voloca zero a esquerda se for menor que 10 a pontiação 
+    { // coloca zero a esquerda se for menor que 10 a pontiação 
         pontosB = "0" + pontosB;
     }
 
@@ -2459,6 +2459,36 @@ function irParaBaixo()
     if (jogadorPosY < (canvas.height - barraHeigth))
     { // se a bola não saiu da tela
         jogadorPosY += velocidadeJogador; // muda posição
+    }
+}
+
+var imagemBotaoOpcaoDeVelocidade = document.getElementById('imagemBotaoOpcaoVelocidade');
+
+function mudarVelocidade()
+{
+    if (velocidadeBola == 0)
+    {
+        velocidadeBola = 10;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/1.png');
+
+    } else if (velocidadeBola == 10)
+    {
+        velocidadeBola = 20;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/2.png');
+
+    } else if (velocidadeBola == 20)
+    {
+        velocidadeBola = 30;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/3.png');
+
+    } else if (velocidadeBola == 30)
+    {
+        velocidadeBola = 40;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/4.png');
+    } else
+    {
+        velocidadeBola = 0;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/0.png');
     }
 }
 
