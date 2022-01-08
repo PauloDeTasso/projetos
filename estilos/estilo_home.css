@@ -1079,6 +1079,10 @@ body::-webkit-scrollbar {
     text-align: center;
     width: 100%;
     height: auto;
+    background-image: url('../imagens/outros/02.png');
+    background-size: cover;
+    opacity: 0.9;
+    color: azure;
   }
   
   #imagemBotaoOpcaoVelocidade

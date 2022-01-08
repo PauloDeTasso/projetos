@@ -2551,6 +2551,30 @@ function limparStatusPingPong()
     statusPingPong.innerHTML = "PING PONG";
 }
 
+function statusBotaoParaCima()
+{
+    statusPingPong.innerHTML = "MOVE UP!";
+}
+
+function statusBotaoParaBaixo()
+{
+    statusPingPong.innerHTML = "MOVE DOWN!";
+}
+
+function statusBotaoVelocidade()
+{
+    statusPingPong.innerHTML = "CHANGE BALL SPEED!";
+}
+
+function statusZerarPlacar()
+{
+    statusPingPong.innerHTML = "RESTART!";
+}
+
+function statusCanvas()
+{
+    statusPingPong.innerHTML = "USE THE KEYBOARD, UP AND DOWN ARROW!";
+}
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
