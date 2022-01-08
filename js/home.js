@@ -2445,6 +2445,23 @@ function loopGame()
 
 iniciarJogo();
 
+function irParaCima()
+{
+    if (jogadorPosY > 0)
+    { // se a bola nçao sair da tela
+        jogadorPosY -= velocidadeJogador; // muda posição do jogador
+    }
+}
+
+function irParaBaixo()
+{
+    // se for para baixo 
+    if (jogadorPosY < (canvas.height - barraHeigth))
+    { // se a bola não saiu da tela
+        jogadorPosY += velocidadeJogador; // muda posição
+    }
+}
+
 /////////////////////////////////////////////////////////
 
 /*

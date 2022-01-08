@@ -999,6 +999,7 @@ body::-webkit-scrollbar {
     width: auto;
     height: 100%;
     background-color: rgb(0, 0, 0);
+    padding: 1%;
   }
 
   #canvas
