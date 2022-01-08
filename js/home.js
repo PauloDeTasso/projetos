@@ -2199,7 +2199,7 @@ function relogio()
     document.getElementById("relogio").innerHTML = date.toLocaleTimeString();
 }
 
-/* PING PONG */
+//******************************************  PING PONG 
 
 var canvas, context, barraWidth, barraHeigth, jogadorPosX, jogadorPosY, teclaCimaPressionada, teclaBaixoPressionada, openentePosX, oponentePosY,
     oponenteParaCima, bolaRaio, bolaPoxX, bolaPosY, bolaParaDireita, bolaAngulo, bolaTempo, velocidadeJogador, velocidadeOponente, velocidadeBola, pontosJogador, pontosOponente;
@@ -2372,51 +2372,53 @@ function iniciarJogo()
         }
 
     }
+
+    // DESENHAR TODA A TELA *****************************************************************
+
+    context.clearRect(0, 0, canvas.width, canvas.heigth); // LIMPAR A TELA ANTES DE DESENHAR
+
+    // JOGADOR E OPONENTE ******************************************************************
+
+    context.fillRect(jogadorPosX, jogadorPosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
+    context.fillRect(openentePosX, oponentePosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
+
+    // BOLA **********************************************************************************
+
+    context.beginPath(); // MODO DESENHO
+    context.arc(bolaPoxX, bolaPosY, bolaRaio, 0, Math.PI * 2, true); // DESENHA O CIRCULO COM COORDENADAS NO CENTRO
+    context.closePath(); // FINALIZA O CAMINHO / NAO OBRIGATORIO
+    context.fill();
+
+    // PLACAR ********************************************************************************
+
+    var pontosA = pontosJogador; // VARIAVEIS TEMPORARIAS PARA ALTERAR PONTUAÇAO
+    var pontosB = pontosOponente;
+
+    if (pontosA < 10)
+    { // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
+        pontosA = "0" + pontosA;
+    }
+
+    if (pontosB < 10)
+    { // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
+        pontosB = "0" + pontosB;
+    }
+
+    context.font = "38pt Arial"; // Tamanho e fonte 
+    context.fillStyle = "rgb(0, 0, 0)";
+    context.fillText(pontosA + "   " + pontosB, (canvas.width / 2) - 70, 50); // ESCREVENDO TEXTO NO CENTRO DA TELA NO TOPO
+
+    // LINHA DIVISORIA
+
+    context.beginPath();
+    context.moveTo(canvas.width / 2); // ARRUMAR LAPIS PARA FAZER A ESCRITA DA LINHA
+    context.lineTo(canvas.width / 2, canvas.heigth); // FAZ RISCO NA TELA NO CENTRO
+    context.strokeStyle = "rgb(0,0,0)";
+    context.stroke();
+    context.closePath;
 }
 
-// DESENHAR TODA A TELA *****************************************************************
-
-context.clearRect(0, 0, canvas.width, canvas.heigth); // LIMPAR A TELA ANTES DE DESENHAR
-
-// JOGADOR E OPONENTE ******************************************************************
-
-context.fillRect(jogadorPosX, jogadorPosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
-context.fillRect(openentePosX, oponentePosY, barraWidth, barraHeigth); // DESENHA O JOGADOR
-
-// BOLA **********************************************************************************
-
-context.beginPath(); // MODO DESENHO
-context.arc(bolaPoxX, bolaPosY, bolaRaio, 0, Math.PI * 2, true); // DESENHA O CIRCULO COM COORDENADAS NO CENTRO
-context.closePath(); // FINALIZA O CAMINHO / NAO OBRIGATORIO
-context.fill();
-
-// PLACAR ********************************************************************************
-
-var pontosA = pontosJogador; // VARIAVEIS TEMPORARIAS PARA ALTERAR PONTUAÇAO
-var pontosB = pontosOponente;
-
-if (pontosA < 10)
-{ // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
-    pontosA = "0" + pontosA;
-}
-
-if (pontosB < 10)
-{ // COLOCA ZERO A ESQUERDA SE FOR MENOR QUE 10 A PONTUAÇÃO
-    pontosB = "0" + pontosB;
-}
-
-context.font = "38pt Arial"; // Tamanho e fonte 
-context.fillStyle = "rgb(0, 0, 0)";
-context.fillText(pontosA + "   " + pontosB, (canvas.width / 2) - 70, 50); // ESCREVENDO TEXTO NO CENTRO DA TELA NO TOPO
-
-// LINHA DIVISORIA
-
-context.beginPath();
-context.moveTo(canvas.width / 2); // ARRUMAR LAPIS PARA FAZER A ESCRITA DA LINHA
-context.lineTo(canvas.width / 2, canvas.heigth); // FAZ RISCO NA TELA NO CENTRO
-context.strokeStyle = "rgb(0,0,0)";
-context.stroke();
-context.closePath;
+iniciarJogo();
 
 /////////////////////////////////////////////////////////
 
