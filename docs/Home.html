@@ -568,6 +568,65 @@
 
                 </section>
                  -->
+
+                <style>
+                    .modal-container {
+                        width: 100vw;
+                        height: 100vw;
+                        background: rgba(0, 0, 0, 0.5);
+                        position: fixed;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 2000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .modal {
+                        background: white;
+                        width: 60%;
+                        min-width: 300px;
+                        padding: 40px;
+                        border: 10px solid #988b7a;
+                        box-shadow: 0 0 0 10px white;
+                        position: relative;
+                    }
+
+                    .fechar {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 4px solid white;
+                        background: #988b7a;
+                    }
+                </style>
+
+                <section id="modal-promoção" class="modal-container">
+
+                    <section class="modal">
+
+                        <button class="fechar">
+                            x
+                        </button>
+
+                        <h3 class="subtitulo"> Cadastre-se na Newsletter</h3>
+
+                        <form>
+
+                            <input type="text" class="input">
+
+                            <input type="button" class="button" value="Cadastrar">
+
+                        </form>
+
+                    </section>
+
+                </section>
+
             </section>
 
             <footer id="rodapePrincipal">
