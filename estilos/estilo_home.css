@@ -988,3 +988,26 @@ body::-webkit-scrollbar {
   {
       border: 1px dashed rgb(0, 0, 0) ;
   }
+
+  #secaoCanvas
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: blue;
+  }
+
+  #canvas
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-image: url("../imagens/texture/02.jpg");
+    background-size: cover;
+  }
