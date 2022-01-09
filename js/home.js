@@ -2445,6 +2445,10 @@ function loopGame()
 
 iniciarJogo();
 
+/**/
+
+// ////////////////////////////////////
+
 function irParaCima()
 {
     if (jogadorPosY > 0)
