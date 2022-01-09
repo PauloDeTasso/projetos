@@ -2248,6 +2248,8 @@ function iniciarJogo()
 
     document.addEventListener('keyup', keyUp, false);
     document.addEventListener('keydown', keyDown, false);
+    document.addEventListener('keyleft', keyLeft, false);
+    document.addEventListener('keyright', keyRight, false);
 
     setInterval(loopGame, 30);
 }
@@ -2269,6 +2271,28 @@ function keyDown(e)
     {
         teclaCimaPressionada = true;
     } else if (e.keyCode == 40)
+    {
+        teclaBaixoPressionada = true;
+    }
+}
+
+function keyLeft(e)
+{
+    if (e.keyCode == 37)
+    {
+        teclaCimaPressionada = false;
+    } else if (e.keyCode == 39)
+    {
+        teclaBaixoPressionada = false;
+    }
+}
+
+function keyRight(e)
+{
+    if (e.keyCode == 37)
+    {
+        teclaCimaPressionada = true;
+    } else if (e.keyCode == 39)
     {
         teclaBaixoPressionada = true;
     }
@@ -2661,6 +2685,15 @@ function returnData(input)
 {
     return input > 10 ? input : `0${input}`
 }
+
+///////////////////////////////////////////////////////
+
+function checkKey(e)
+{
+    var event = window.event ? window.event : e;
+    statusPingPong.innerText = (event.keyCode);
+}
+
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
