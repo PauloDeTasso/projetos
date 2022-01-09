@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|PT+mono" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilo_home.css" onload="linkEstiloCarregado()">
     <link rel="icon" href="/icones/code3.gif" type="image/gif">
 
@@ -570,85 +569,43 @@
                 </section>
                  -->
 
-                <style>
-                    .modal-container {
-                        width: 100vw;
-                        height: 100vw;
-                        background: rgba(0, 0, 0, 0.5);
-                        position: fixed;
-                        top: 0px;
-                        left: 0px;
-                        z-index: 2000;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-
-                    .modal-container .mostrar {
-                        display: flex;
-                    }
-
-                    .modal {
-                        background: white;
-                        width: 60%;
-                        min-width: 300px;
-                        padding: 40px;
-                        border: 10px solid #988b7a;
-                        box-shadow: 0 0 0 10px white;
-                        position: relative;
-                    }
-
-                    @keyframes modal {
-                        form {
-                            opacity: 0;
-                            transform: translate3d(0, -60px, 0);
-                        }
-
-                        to {
-                            opacity: 1;
-                            transform: translate3d(0, 0, 0);
-                        }
-                    }
-
-                    .mostrar .modal {
-                        animation: model;
-                    }
-
-                    .fechar {
-                        position: absolute;
-                        font-size: 1.2em;
-                        top: -30px;
-                        right: -30px;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        border: 4px solid white;
-                        background: #988b7a;
-                        color: white;
-                        font-family: "PT mono", monospace;
-                        cursor: pointer;
-                        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
-                    }
-                </style>
-
-                <section id="modal-promoção" class="modal-container">
+                <section id="secaoPopup" class="modal-container">
 
                     <section class="modal">
 
-                        <button class="fechar">
+                        <button class="fechar" onclick="abrirFecharPopup()">
                             x
                         </button>
 
-                        <h3 class="subtitulo"> Cadastre-se na Newsletter</h3>
+                        <h3 class="subtitulo">MIT License</h3>
 
-                        <form>
+                        <h5>
+                            Copyright (c) 2021 Paulo de Tasso
+                        </h5>
 
-                            <input type="text" class="input">
+                        <p>
+                            Permission is hereby granted, free of charge, to any person obtaining a copy
+                            of this software and associated documentation files (the "Software"), to deal
+                            in the Software without restriction, including without limitation the rights
+                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                            copies of the Software, and to permit persons to whom the Software is
+                            furnished to do so, subject to the following conditions:
+                        </p>
 
-                            <input type="button" class="button" value="Cadastrar">
+                        <p>
+                            The above copyright notice and this permission notice shall be included in all
+                            copies or substantial portions of the Software.
+                        </p>
 
-                        </form>
+                        <p>
+                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                            SOFTWARE.
+                        </p>
 
                     </section>
 
@@ -742,11 +699,11 @@
                             </button>
                             <br>
                             <section id="license">
-                                <a onmousemove="statusLinkLicenseJavascript()"
+                                <a onclick="abrirFecharPopup()" onmousemove="statusLinkLicenseJavascript()"
                                     onmouseleave="statusLinkLicenseJavascriptOff()"
                                     ontouchmove="statusLinkLicenseJavascript()"
-                                    ontouchend="statusLinkLicenseJavascriptOff()" href="../licenses/copying.txt"
-                                    rel="jslicense" target="_blank">JavaScript license
+                                    ontouchend="statusLinkLicenseJavascriptOff()" rel="jslicense" target="_blank"
+                                    href="../licenses/copying.txt" download="">JavaScript license
                                     information</a>
 
                             </section><br>

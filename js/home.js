@@ -2576,6 +2576,24 @@ function statusCanvas()
     statusPingPong.innerHTML = "USE THE KEYBOARD, UP AND DOWN ARROW!";
 }
 
+// ////////////////////////////////////////////////// POPUP:
+
+var secaoPopup = document.getElementById('secaoPopup');
+
+function abrirFecharPopup()
+{
+    var estiloPopup = window.getComputedStyle(secaoPopup);
+    var estiloPropriedade = estiloPopup.getPropertyValue('display');
+
+    if (estiloPropriedade == "none")    
+    {
+        secaoPopup.style.display = 'flex';
+    } else
+    {
+        secaoPopup.style.display = 'none';
+    }
+}
+
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
 
