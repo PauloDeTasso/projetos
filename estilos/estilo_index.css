@@ -160,8 +160,8 @@ body::-webkit-scrollbar {
 
   .load .dot
   {
-      width: 20px;
-      height: 20px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       margin: 10px;
       display: inline-block;
