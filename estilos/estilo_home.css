@@ -1083,6 +1083,7 @@ body::-webkit-scrollbar {
     background-size: cover;
     opacity: 0.9;
     color: azure;
+    font-size: 12pt;
   }
   
   #imagemBotaoOpcaoVelocidade
@@ -1101,12 +1102,12 @@ body::-webkit-scrollbar {
 
 #secaoPopup
  {
-    width: 100vw;
-    height: 100vw;
+    width: 400px;
+    height: 100px;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 40%;
+    left: 40%;
     z-index: 2000;
     display: none;
     justify-content: center;
@@ -1122,13 +1123,15 @@ body::-webkit-scrollbar {
 .modal
 {
     background: white;
-    width: 50%;
-    min-width: 200px;
+    width: 400px;
+    height: 450px;
+    min-width: 10%;
     padding: 40px;
     border: 10px solid #988b7a;
     box-shadow: 0 0 0 10px white;
     position: relative;
     color: black;
+    font-size: 80%;
 }
 
 @keyframes modal {
