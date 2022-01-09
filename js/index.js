@@ -1,4 +1,4 @@
-var imagem = document.getElementById('start')
+var imagem = document.getElementById('imagemStart')
 
 var visitasdoSite = document.getElementById('visitasSite');
 
