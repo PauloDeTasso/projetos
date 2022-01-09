@@ -2522,12 +2522,7 @@ function mudarVelocidade()
 
 var statusPingPong = document.getElementById('statusPingPong');
 
-setTimeout("atualizarStatusPingPong()", 1000);
-
-function atualizarStatusPingPong()
-{
-
-}
+var statusPingPong2 = document.getElementById('statusPingPong2');
 
 function zerarPlacar()
 {
@@ -2541,25 +2536,26 @@ function zerarPlacar()
 
 function status3()
 {
-    statusPingPong.innerHTML = 3;
+    statusPingPong2.style.visibility = 'visible';
+    statusPingPong2.innerHTML = 3;
     setTimeout("status2()", 1000);
 }
 
 function status2()
 {
-    statusPingPong.innerHTML = 2;
+    statusPingPong2.innerHTML = 2;
     setTimeout("status1()", 1000);
 }
 
 function status1()
 {
-    statusPingPong.innerHTML = 1;
+    statusPingPong2.innerHTML = 1;
     setTimeout("statusGO()", 1000);
 }
 
 function statusGO()
 {
-    statusPingPong.innerHTML = "GO!!!";
+    statusPingPong2.innerHTML = "GO!!!";
     iniciarPartida();
 }
 
@@ -2571,12 +2567,19 @@ function iniciarPartida()
     bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
     bolaTempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
     velocidadeBola = 10;
-    setTimeout("limparStatusPingPong()", 3000);
+    setTimeout("limparStatusPingPong()", 1000);
+    setTimeout("limparStatusPingPong2()", 3000);
 }
 
 function limparStatusPingPong()
 {
     statusPingPong.innerHTML = "PING PONG";
+}
+
+
+function limparStatusPingPong2()
+{
+    statusPingPong2.style.visibility = "hidden"
 }
 
 function statusBotaoParaCima()
