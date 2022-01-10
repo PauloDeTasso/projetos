@@ -1330,7 +1330,7 @@ var botaoSecaoPingPong = document.getElementById('botaoPingPong');
 
 function mudarCorBotaoPingPong()
 {
-    botaoSecaoPingPong.style.backgroundColor = 'aqua';
+    botaoSecaoPingPong.style.backgroundColor = 'rgb(17,17,17)';
 }
 
 function mudarCorBotaoPingPongOff()

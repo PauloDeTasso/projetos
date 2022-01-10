@@ -1035,7 +1035,6 @@ body::-webkit-scrollbar {
     width: 100%;
     height: auto;
     background-color: black;   
-    border: 10px solid rgb(255, 0, 0); 
 }
 
   #controles1
@@ -1047,8 +1046,6 @@ body::-webkit-scrollbar {
     width: 17%;
     height: auto;
     background-color: black;    
-    
-    border: 10px solid rgb(255, 251, 0); 
   }
 
   #controles2
@@ -1061,8 +1058,6 @@ body::-webkit-scrollbar {
     width: 17%;
     height: auto;
     background-color: black;    
-    
-    border: 10px solid rgb(255, 166, 0); 
   }
 
   #secaoOpcoesPingPong
@@ -1074,8 +1069,6 @@ body::-webkit-scrollbar {
     width: 64%;
     height: auto;
     background-color: black;
-    
-    border: 10px solid rgb(64, 255, 0); 
   }
   
   .botoesPingPong
@@ -1088,8 +1081,7 @@ body::-webkit-scrollbar {
     height: auto;
     background-color: black;
     border: 0px solid black;      
-      
-    border: 10px solid rgb(0, 8, 255); 
+    padding: 2%;
   }
 
   #botaoOpcaoVelocidade
@@ -1111,8 +1103,6 @@ body::-webkit-scrollbar {
     opacity: 0.9;
     color: azure;
     font-size: 12pt;
-    
-    border: 10px solid rgb(179, 179, 179); 
   }
 
   #statusPingPong2
@@ -1130,7 +1120,7 @@ body::-webkit-scrollbar {
     color: azure;
     font-size: 18pt;
     visibility: hidden;
-    margin: 0px;
+    margin: 5px;
   }
   
   #imagemBotaoOpcaoVelocidade
@@ -1143,7 +1133,7 @@ body::-webkit-scrollbar {
     height: auto;
     background-color: black;
     border: 0px solid black;      
-    height:  140px;
+    height:  71px;
     width: auto;
   }
 
