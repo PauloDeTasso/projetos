@@ -820,6 +820,22 @@ function abrirSecaoGif()
     }
 }
 
+var secaoPingPong = document.getElementById('secaoCanvas');
+
+function abrirSecaoPingPong()
+{
+    var style = window.getComputedStyle(secaoPingPong);
+    var top = style.getPropertyValue('display');
+
+    if (top == "none")    
+    {
+        secaoPingPong.style.display = 'flex';
+    } else
+    {
+        secaoPingPong.style.display = 'none';
+    }
+}
+
 function abrirSecaoGifPrincipal()
 {
     let styleGifPrincipal = window.getComputedStyle(secaoCabecalho);
@@ -1298,6 +1314,18 @@ function mudarCorBotaoGif()
 function mudarCorBotaoGifOff()
 {
     botaoGif.style.backgroundColor = 'rgb(42, 150, 0)';
+}
+
+var botaoSecaoPingPong = document.getElementById('botaoPingPong');
+
+function mudarCorBotaoPingPong()
+{
+    botaoSecaoPingPong.style.backgroundColor = 'aqua';
+}
+
+function mudarCorBotaoPingPongOff()
+{
+    botaoSecaoPingPong.style.backgroundColor = 'rgb(42, 150, 0)';
 }
 
 var statusSistema = document.getElementById('statusSistema');

@@ -507,6 +507,14 @@
             <!-- onmousemove="sfssdCode()" onmouseleave="sfssdCodeOff()" 
             ontouchmove="sfssdCode()" ontouchend="sfssdCodeOff()"
             -->
+
+            <button id="botaoPingPong" onmousemove="statusSecaoPingPong(), mudarCorBotaoPingPong()"
+                onmouseleave="statusSecaoPingPongOff(), mudarCorBotaoPingPongOff()"
+                ontouchmove="statusSecaoPingPong(), mudarCorBotaoPingPong()"
+                ontouchend="statusSecaoPingPongOff(), mudarCorBotaoPingPongOff()" type="button"
+                onclick="abrirSecaoPingPong()">
+            </button>
+
             <section id="secaoCanvas">
 
                 <canvas id="canvas" width="600px" height="480px" onmousemove="statusCanvas()"
