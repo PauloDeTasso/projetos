@@ -2689,12 +2689,12 @@ function returnData(input)
     return input > 10 ? input : `0${input}`
 }
 
-///////////////////////////////////////////////////////
+//////////////////////////////////// - CHECAR CODIGO TECLADO
 
-function checkKey(e)
+function checarTecla(e)
 {
-    var event = window.event ? window.event : e;
-    statusPingPong.innerText = (event.keyCode);
+    var evento = window.event ? window.event : e;
+    statusPingPong.innerText = (evento.keyCode);
 }
 
 
