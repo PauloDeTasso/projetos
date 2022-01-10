@@ -1122,6 +1122,16 @@ function statusNtslOff()
     nome.innerHTML = 'Hello! How can I help you!';
 }
 
+function statusSecaoPingPong()
+{
+    nome.innerHTML = 'PLAY GAME!'.toUpperCase();
+}
+
+function statusSecaoPingPongOff()
+{
+    nome.innerHTML = 'Hello! How can I help you!';
+}
+
 ///////////////////////////////////////////////////////* - BARRA DE ICONES - */
 
 function statusIconeTabelaOff()
@@ -1325,7 +1335,7 @@ function mudarCorBotaoPingPong()
 
 function mudarCorBotaoPingPongOff()
 {
-    botaoSecaoPingPong.style.backgroundColor = 'rgb(42, 150, 0)';
+    botaoSecaoPingPong.style.backgroundColor = 'rgb(0, 0, 0)';
 }
 
 var statusSistema = document.getElementById('statusSistema');
