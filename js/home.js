@@ -395,7 +395,6 @@ function aumentar_volume()
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
     }
-
 }
 
 function diminuir_volume()
@@ -2251,7 +2250,7 @@ var canvas, context,
     bolaAngulo,
     bolaTempo,
     velocidadeJogador, velocidadeOponente,
-    velocidadeBola,
+    velocidadeBola, velocidadeMemorizada,
     pontosJogador, pontosOponente;
 
 function iniciarJogo()
@@ -2281,6 +2280,7 @@ function iniciarJogo()
     velocidadeJogador = 15;
     velocidadeOponente = 30;
     velocidadeBola = 0;
+    velocidadeMemorizada = 0;
     pontosJogador = 0;
     pontosOponente = 0;
 
@@ -2344,9 +2344,9 @@ function loopGame()
     //  JOGADOR ********************************************************************
 
     if (teclaCimaPressionada != teclaBaixoPressionada)
-    { // se o usuário precionar para sima
+    { // se o usuário precionar para cima
         if (teclaCimaPressionada)
-        { // se for para cima pressionado
+        { // se para cima for pressionado
             if (jogadorPosY > 0)
             { // se a bola nçao sair da tela
                 jogadorPosY -= velocidadeJogador; // muda posição do jogador
@@ -2390,6 +2390,7 @@ function loopGame()
             if ((bolaPosY + bolaRaio > jogadorPosY) && (bolaPosY - bolaRaio < jogadorPosY + barraHeigth))
             { // caso o jogador encoste na bola no eixo Y
                 bolaParaDireita = true;
+
                 if (teclaBaixoPressionada)
                 { // se o usuário estiver indo para baixo e tocar na bola
                     bolaAngulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
@@ -2558,19 +2559,43 @@ function mudarVelocidade()
     }
 }
 
+function memoria(valorMemoria)
+{
+    velocidadeMemorizada = valorMemoria;
+    return velocidadeMemorizada;
+}
+
+
 var statusPingPong = document.getElementById('statusPingPong');
 
 var statusPingPong2 = document.getElementById('statusPingPong2');
 
 function zerarPlacar()
 {
-    pontosJogador = 0;
-    pontosOponente = 0;
-    bolaPosX = canvas.width / 2;
-    bolaPosY = canvas.height / 2;
-    velocidadeBola = 0;
-    setTimeout("status3()", 1000);
+    if (velocidadeBola == 0)
+    {
+        pontosJogador = 0;
+        pontosOponente = 0;
+        bolaPosX = canvas.width / 2;
+        bolaPosY = canvas.height / 2;
+        velocidadeBola = 10;
+        imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/1.png');
+        memoria(velocidadeBola);
+        velocidadeBola = 0;
+        setTimeout("status3()", 1000);
+    } else
+    {
+        pontosJogador = 0;
+        pontosOponente = 0;
+        bolaPosX = canvas.width / 2;
+        bolaPosY = canvas.height / 2;
+        memoria(velocidadeBola);
+        velocidadeBola = 0;
+        setTimeout("status3()", 1000);
+    }
 }
+
+
 
 function status3()
 {
@@ -2604,7 +2629,7 @@ function iniciarPartida()
     bolaParaDireita = randomBoolean();
     bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
     bolaTempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
-    velocidadeBola = 10;
+    velocidadeBola = velocidadeMemorizada;
     setTimeout("limparStatusPingPong()", 1000);
     setTimeout("limparStatusPingPong2()", 3000);
 }
