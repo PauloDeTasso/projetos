@@ -113,38 +113,6 @@ var bodyCarregou = false;
 var iframeCarregou = false;
 var scriptCarregou = false;
 
-var carregado1 = false;
-var carregado2 = false;
-var carregado3 = false;
-var carregado4 = false;
-var carregado5 = false;
-var carregado6 = false;
-var carregado7 = false;
-var carregado8 = false;
-var carregado9 = false;
-var carregado10 = false;
-var carregado11 = false;
-var carregado12 = false;
-var carregado13 = false;
-var carregado14 = false;
-var carregado15 = false;
-var carregado16 = false;
-var carregado17 = false;
-var carregado18 = false;
-var carregado19 = false;
-var carregado20 = false;
-var carregado21 = false;
-var carregado22 = false;
-var carregado23 = false;
-var carregado24 = false;
-var carregado25 = false;
-var carregado26 = false;
-var carregado27 = false;
-var carregado28 = false;
-var carregado29 = false;
-var carregado30 = false;
-var carregado31 = false;
-
 var favIcon = document.getElementById('favIcon');
 
 /////////////////////////////////////////////////////////////////
@@ -1582,13 +1550,13 @@ function bodyCarregado()
 {
     if (bodyCarregou)
     {
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         bodyCarregou = true;
     } else
     {
         progresso = progresso + 50;
         statusSistema.innerHTML = progresso + " % - Main content donwloaded!";
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         bodyCarregou = true;
     }
     bodyCarregou = true;
@@ -1598,14 +1566,14 @@ function iframeCarregado()
 {
     if (iframeCarregou)
     {
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         iframeCarregou = true;
 
     } else
     {
-        progresso = progresso + 25;
+        progresso = progresso + 50;
         statusSistema.innerHTML = progresso + " % - External documents donwloaded!";
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         iframeCarregou = true;
     }
     iframeCarregou = true;
@@ -1615,13 +1583,13 @@ function scriptCarregado()
 {
     if (scriptCarregou)
     {
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         scriptCarregou = true;
     } else
     {
-        progresso = progresso + 25;
+        progresso = progresso + 50;
         statusSistema.innerHTML = progresso + " % - Internal process donwloaded!";
-        setTimeout("progressoDaBarra()", 1000);
+        setTimeout("progressoDaBarra()", 1);
         scriptCarregou = true;
     }
     scriptCarregou = true;
@@ -1629,451 +1597,9 @@ function scriptCarregado()
 
 //**/
 
-function imagemCarregada1()
-{
-    if (carregado1)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  1 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado1 = true;
-}
-
-function imagemCarregada2()
-{
-    if (carregado2)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  2 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado2 = true;
-}
-
-function imagemCarregada3()
-{
-    if (carregado3)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  3 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado3 = true;
-}
-
-function imagemCarregada4()
-{
-    if (carregado4)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  4 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado4 = true;
-}
-
-function imagemCarregada5()
-{
-    if (carregado5)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  5 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado5 = true;
-}
-
-function imagemCarregada6()
-{
-    if (carregado6)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  6 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado6 = true;
-}
-
-function imagemCarregada7()
-{
-    if (carregado7)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  7 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado7 = true;
-}
-
-function imagemCarregada8()
-{
-    if (carregado8)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  8 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado8 = true;
-}
-
-function imagemCarregada9()
-{
-    if (carregado9)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  9 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado9 = true;
-}
-
-function imagemCarregada10()
-{
-    if (carregado10)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  10 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado10 = true;
-}
-
-
-function imagemCarregada11()
-{
-    if (carregado11)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  11 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado11 = true;
-}
-
-function imagemCarregada12()
-{
-    if (carregado12)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  12 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado12 = true;
-}
-
-function imagemCarregada13()
-{
-    if (carregado13)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  13 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado13 = true;
-}
-
-function imagemCarregada14()
-{
-    if (carregado14)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  14 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado14 = true;
-}
-
-function imagemCarregada15()
-{
-    if (carregado15)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  15 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado15 = true;
-}
-
-function imagemCarregada16()
-{
-    if (carregado16)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  16 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado16 = true;
-}
-
-function imagemCarregada17()
-{
-    if (carregado17)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  17 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado17 = true;
-}
-
-function imagemCarregada18()
-{
-    if (carregado18)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  18 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado18 = true;
-}
-
-function imagemCarregada19()
-{
-    if (carregado19)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  19 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado19 = true;
-}
-
-function imagemCarregada20()
-{
-    if (carregado20)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  20 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado20 = true;
-}
-
-
-function imagemCarregada21()
-{
-    if (carregado21)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  21 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado21 = true;
-}
-
-function imagemCarregada22()
-{
-    if (carregado22)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  22 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado22 = true;
-}
-
-function imagemCarregada23()
-{
-    if (carregado23)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  23 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado23 = true;
-}
-
-
-function imagemCarregada24()
-{
-    if (carregado24)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  24 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado24 = true;
-}
-
-
-function imagemCarregada25()
-{
-    if (carregado25)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  25 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado25 = true;
-}
-
-
-function imagemCarregada26()
-{
-    if (carregado26)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  26 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado26 = true;
-}
-
-
-function imagemCarregada27()
-{
-    if (carregado27)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  27 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado27 = true;
-}
-
-
-function imagemCarregada28()
-{
-    if (carregado28)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  28 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado28 = true;
-}
-
-
-function imagemCarregada29()
-{
-    if (carregado29)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  29 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado29 = true;
-}
-
-function imagemCarregada30()
-{
-    if (carregado30)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  30 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado30 = true;
-}
-
-function imagemCarregada31()
-{
-    if (carregado31)
-    {
-        setTimeout("progressoDaBarra()", 1000);
-    } else
-    {
-        progresso = progresso + 1;
-        statusSistema.innerHTML = progresso + " % - Image  31 donwloaded"
-        setTimeout("progressoDaBarra()", 1000);
-    }
-    carregado31 = true;
-}
-
 var tempoLimite = false;
 
-setTimeout("temporizador120S()", 120000);
+//setTimeout("temporizador120S()", 120000);
 
 function temporizador120S()
 {
@@ -2089,6 +1615,28 @@ function temporizador120S()
     }
 }
 
+function progressoDaBarra()
+{
+    barraDeProgresso.setAttribute('value', progresso);
+
+    let progressoVF1 = progresso < 100;
+
+    let progressoVF2 = progresso > 100;
+
+    if (!progressoVF1 && !progressoVF2)
+    {
+        statusSistema.innerHTML = "100% - Full site donwloaded!";
+        setTimeout("limparStatusSistema()", 5000);
+    }
+
+    if (progresso > 100)
+    {
+        setTimeout("limparStatusSistema()", 5000);
+    }
+
+}
+
+/*BACKUP FUNCTION 2:
 function progressoDaBarra()
 {
     barraDeProgresso.setAttribute('value', progresso);
@@ -2127,7 +1675,7 @@ function progressoDaBarra()
     }
 
 }
-
+*/
 function completarBarraDeProgresso()
 {
     if (progresso >= 90 && progresso < 100)
@@ -2151,7 +1699,7 @@ function completarBarraDeProgressoTodosCarregados()
 
 function limparStatusSistema()
 {
-    statusSistema.style.visibility = 'hidden';
+    statusSistema.innerHTML = 'Thanks for the visit!';
 }
 
 /**/
