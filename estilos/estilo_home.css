@@ -233,7 +233,7 @@ body
   width: 100%;
   height: auto;
  /* overflow: hidden;*/ 
-  font-size: 100%;
+  font-size: 13pt;
   text-overflow: clip;
   overflow-x: hidden;
   opacity: 0.9;
@@ -246,16 +246,16 @@ body
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto;
     height: auto;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(133, 255, 188, 0.2);
+    color: rgb(54, 54, 54);
+    background-color: rgba(202, 255, 209, 0.2);
     text-decoration: solid;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.962), 1px 1px 20px rgba(255, 255, 255, 0.9); 
-    font-size: 170%;
-    font-weight: bolder;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 1px 1px 20px rgba(255, 255, 255, 0.5); 
+    font-size: 14pt;
+    font-weight: bold;
    /* font-family: "LuckiestGuy";*/
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
     letter-spacing: 1px;
     padding: 1%;
 }

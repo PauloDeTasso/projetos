@@ -723,7 +723,7 @@ function alterarGif3Off()
 function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
-    nome.style.color = 'rgb(100, 100, 100)';
+    nome.style.color = 'rgb(54, 54, 54)';
     /*tituloPrincipal.style.backgroundColor = 'rgb(0, 0, 0)';*/
 }
 
