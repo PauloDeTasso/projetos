@@ -2668,7 +2668,7 @@ function abrirFecharPopup()
 }
 
 // ////////////////////////////////////////////////// CRONOMETRO:
-
+/*
 let hour = 0;
 let minute = 0;
 let second = 0;
@@ -2730,7 +2730,7 @@ function returnData(input)
 {
     return input > 10 ? input : `0${input}`
 }
-
+*/
 //////////////////////////////////// - CHECAR CODIGO TECLADO
 
 function checarTecla(e)
