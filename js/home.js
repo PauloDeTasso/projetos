@@ -2255,6 +2255,7 @@ var canvas, context,
 
 function iniciarJogo()
 {
+    pingPongStatusLigado = true;
 
     canvas = document.getElementById("canvas");
     context = canvas.getContext("2d");
@@ -2336,10 +2337,8 @@ function keyRight(e)
     }
 }
 
-
 function loopGame()
 {
-
 
     //  JOGADOR ********************************************************************
 
@@ -2505,8 +2504,6 @@ function loopGame()
     context.closePath();
 
 }
-
-iniciarJogo();
 
 /**/
 
@@ -2760,6 +2757,20 @@ function checarTecla(e)
     statusPingPong.innerText = (evento.keyCode);
 }
 
+var pingPongStatusLigado = false;
+
+function ligarDesligarPingPong()
+{
+    if (pingPongStatusLigado)
+    {
+        pingPongStatusLigado = false;
+        canvas = null;
+    } else
+    {
+        pingPongStatusLigado = true;
+        iniciarJogo();
+    }
+}
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
