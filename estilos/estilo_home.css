@@ -245,11 +245,13 @@ body
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 1px 1px 20px rgba(111, 0, 255, 0.2); 
     font-size: 12pt;
     font-weight: lighter;
-    font-family: "LuckiestGuy";
+   /* font-family: "LuckiestGuy";*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 2px;
     padding: 1%;
 }
 
+/*
 @font-face
  {
     font-family: 'LuckiestGuy';
@@ -261,6 +263,7 @@ body
     font-weight: normal;
     font-style: normal;   
   }  
+*/
 
 #linkFraseRodape
 {
@@ -852,7 +855,7 @@ visibility: visible;
     text-align: left;
     padding: 1%;        
     table-layout: fixed;    
-    overflow: scroll;
+    overflow: auto;
 
 }
 
@@ -867,7 +870,7 @@ visibility: visible;
     text-align: center;
     padding: 1%;        
     table-layout: fixed;    
-    overflow: scroll;
+    overflow: auto;
 }
 
 body::-webkit-scrollbar {

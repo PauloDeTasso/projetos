@@ -77,7 +77,7 @@ var botaoPausar = document.getElementById('iconePause');
 
 var botaoPlay = document.getElementById('iconePlay');
 
-var secaoIframeHome = document.getElementById('iframeHome');
+var secaoIframeHome = document.getElementById('secaoTabela');
 
 var somCahoeira = document.getElementById('Cachoeira');
 
@@ -145,6 +145,8 @@ var carregado29 = false;
 var carregado30 = false;
 var carregado31 = false;
 
+var favIcon = document.getElementById('favIcon');
+
 /////////////////////////////////////////////////////////////////
 
 function play()
@@ -153,6 +155,7 @@ function play()
     somCahoeira.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
+    favIcon.setAttribute('href', '../icones/playBrancoTocando.png')
 }
 
 function pausar()
@@ -161,6 +164,7 @@ function pausar()
     somCahoeira.pause();
     botaoPlay.setAttribute('src', '../icones/playBranco.png');
     botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
+    favIcon.setAttribute('href', '../icones/pauseBrancoPausado.png');
 }
 
 function stop()
@@ -601,6 +605,7 @@ function mudo()
             audioSomDaFloresta.muted = false;
             somCahoeira.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+            favIcon.setAttribute('href', '../icones/800x600/sound.png');
             iconeSomExtra.style.visibility = 'visible';
             iconeSomExtra2.style.visibility = 'hidden';
         } else
@@ -613,6 +618,7 @@ function mudo()
             audioSomDaFloresta.muted = false;
             somCahoeira.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
+            favIcon.setAttribute('href', '../icones/800x600/sound.png');
             iconeSomExtra2.style.visibility = 'hidden';
         }
 
@@ -628,6 +634,7 @@ function mudo()
         iconeSomExtra.style.visibility = 'hidden';
         iconeSomExtra2.style.visibility = 'visible';
         iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
+        favIcon.setAttribute('href', '../icones/800x600/mute.png');
     }
 }
 
