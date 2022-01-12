@@ -1582,15 +1582,13 @@ function bodyCarregado()
 {
     if (bodyCarregou)
     {
-        statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
         bodyCarregou = true;
     } else
     {
         progresso = progresso + 50;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Main content donwloaded!";
-        setTimeout("progressoDaBarra()", 100);
+        setTimeout("progressoDaBarra()", 1000);
         bodyCarregou = true;
     }
     bodyCarregou = true;
@@ -1600,14 +1598,12 @@ function iframeCarregado()
 {
     if (iframeCarregou)
     {
-        statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
         iframeCarregou = true;
 
     } else
     {
         progresso = progresso + 25;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - External documents donwloaded!";
         setTimeout("progressoDaBarra()", 1000);
         iframeCarregou = true;
@@ -1619,13 +1615,11 @@ function scriptCarregado()
 {
     if (scriptCarregou)
     {
-        statusSistema.style.visibility = 'visible';
         setTimeout("progressoDaBarra()", 1000);
         scriptCarregou = true;
     } else
     {
         progresso = progresso + 25;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Internal process donwloaded!";
         setTimeout("progressoDaBarra()", 1000);
         scriptCarregou = true;
@@ -1643,7 +1637,6 @@ function imagemCarregada1()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  1 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1658,7 +1651,6 @@ function imagemCarregada2()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  2 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1673,7 +1665,6 @@ function imagemCarregada3()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  3 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1688,7 +1679,6 @@ function imagemCarregada4()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  4 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1703,7 +1693,6 @@ function imagemCarregada5()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  5 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1718,7 +1707,6 @@ function imagemCarregada6()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  6 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1733,7 +1721,6 @@ function imagemCarregada7()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  7 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1748,7 +1735,6 @@ function imagemCarregada8()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  8 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1763,7 +1749,6 @@ function imagemCarregada9()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  9 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1778,7 +1763,6 @@ function imagemCarregada10()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  10 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1794,7 +1778,6 @@ function imagemCarregada11()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  11 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1809,7 +1792,6 @@ function imagemCarregada12()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  12 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1824,7 +1806,6 @@ function imagemCarregada13()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  13 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1839,7 +1820,6 @@ function imagemCarregada14()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  14 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1854,7 +1834,6 @@ function imagemCarregada15()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  15 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1869,7 +1848,6 @@ function imagemCarregada16()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  16 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1884,7 +1862,6 @@ function imagemCarregada17()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  17 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1899,7 +1876,6 @@ function imagemCarregada18()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  18 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1914,7 +1890,6 @@ function imagemCarregada19()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  19 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1929,7 +1904,6 @@ function imagemCarregada20()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  20 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1945,7 +1919,6 @@ function imagemCarregada21()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  21 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1960,7 +1933,6 @@ function imagemCarregada22()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  22 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1975,7 +1947,6 @@ function imagemCarregada23()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  23 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -1991,7 +1962,6 @@ function imagemCarregada24()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  24 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2007,7 +1977,6 @@ function imagemCarregada25()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  25 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2023,7 +1992,6 @@ function imagemCarregada26()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  26 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2039,7 +2007,6 @@ function imagemCarregada27()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  27 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2055,7 +2022,6 @@ function imagemCarregada28()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  28 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2071,7 +2037,6 @@ function imagemCarregada29()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  29 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2086,7 +2051,6 @@ function imagemCarregada30()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  30 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
@@ -2101,7 +2065,6 @@ function imagemCarregada31()
     } else
     {
         progresso = progresso + 1;
-        statusSistema.style.visibility = 'visible';
         statusSistema.innerHTML = progresso + " % - Image  31 donwloaded"
         setTimeout("progressoDaBarra()", 1000);
     }
