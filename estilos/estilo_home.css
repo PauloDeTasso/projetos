@@ -1023,11 +1023,6 @@ body::-webkit-scrollbar {
 
   }
 
-  #canvas
-  {
-      border: 1px dashed rgb(0, 0, 0) ;
-  }
-
   #secaoCanvas
   {
     display: none;
@@ -1050,6 +1045,7 @@ body::-webkit-scrollbar {
     height: 100%;
     background-image: url("../imagens/texture/00.jpg");
     background-size: cover;    
+    background-repeat: round;
   }
 
 #secaoBotoesPingPong
