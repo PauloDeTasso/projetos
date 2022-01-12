@@ -2101,26 +2101,6 @@ function imagemCarregada31()
     carregado31 = true;
 }
 
-/*
-function linkEstiloCarregado()
-{
-    progresso = progresso + 20;
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Loading Style";
-    setTimeout("progressoDaBarra()", 1);
-}
-
-function linkFavIconCarregado()
-{
-    progresso = progresso + 20;
-
-    statusSistema.style.visibility = 'visible';
-    statusSistema.innerHTML = "Loading Icon";
-    setTimeout("progressoDaBarra()", 1);
-}
-
-*/
-
 var tempoLimite = false;
 
 setTimeout("temporizador120S()", 120000);
@@ -2229,12 +2209,14 @@ function corBotaoLicense()
     }
 }
 
+/*
 setInterval(relogio, 1000);
 function relogio()
 {
     const date = new Date();
     document.getElementById("relogio").innerHTML = date.toLocaleTimeString();
 }
+*/
 
 // JOGO PING PONG
 
