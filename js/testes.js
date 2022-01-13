@@ -8,7 +8,9 @@ var titulo3 = document.getElementById('titulo3');
 
 var titulo4 = document.getElementById('titulo4');
 
-var pessoa =
+var pessoa = Object.create(null);
+
+pessoa =
 {
     nome: "",
     peso: 0,
@@ -81,19 +83,28 @@ function Pessoa(nome, peso, vivo, familia, olhos, bateria)
     }
 }
 
-var tasso = new Object(pessoa);
 
-//var tasso = Object.create(pessoa);
+//var tasso = new Object(pessoa);
+
+var tasso = Object.create(pessoa);
+
+//var aline = new Object(pessoa);
 
 var aline = Object.create(pessoa);
 
 var sophia = Object.create(pessoa);
 
+Object.setPrototypeOf(tasso.bateria, pessoa);
+
+Object.setPrototypeOf(aline.bateria, pessoa);
+
+/*
 function pessoa()
 {
     Pessoa.call(this);
     this.apelido = "Aline Vaqueira";
 }
+*/
 
 /*
 var carro = function ()
@@ -134,14 +145,25 @@ Object.defineProperty(aline, 'bateria',
 );
 */
 
+titulo1.innerHTML = tasso.nome;
 
-titulo1.innerHTML = tasso.bateria.carga;
+titulo2.innerHTML = tasso.bateria.carga;
 
-titulo2.innerHTML = aline.bateria.carga;
+titulo3.innerHTML = aline.nome;
+
+titulo4.innerHTML = aline.bateria.carga;
+
+/*
+
+titulo1.innerHTML = Object.getPrototypeOf(tasso) === pessoa; // COMPARA SE O OBJETO É IGUAL AO OUTRO
+
+titulo2.innerHTML = Object.entries(tasso); //EXIBE TODOS OS NOMES DAS PROPRIEDADES E SEUS VALORES SEPARADOS POR VIRGULA
 
 titulo3.innerHTML = Object.getOwnPropertyNames(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso SEPARADOS POR VIRGULAS
 
 titulo4.innerHTML = Object.keys(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso SEPARADOS POR VIRGULAS
+
+*/
 
 /**/
 
@@ -156,7 +178,7 @@ document.writeln(Object.values(tasso)); // EXIBE OS VALORES DAS PROPRIEDADES SEP
 
 document.writeln("<br>");
 document.writeln("<br>");
-
+/*
 for (propriedades in tasso) // EXIBE OS VALORES DAS PROPRIEDADES, SEPARADOS POR ESPAÇO
 {
     if (tasso.hasOwnProperty(propriedades)) // EXIBE OS VALORES DAS PROPRIEDADES SEPARADOS POR VIRGULAS
@@ -165,6 +187,7 @@ for (propriedades in tasso) // EXIBE OS VALORES DAS PROPRIEDADES, SEPARADOS POR 
         document.writeln(valores);
     }
 }
+*/
 /*
 document.writeln("<br>");
 
@@ -172,7 +195,7 @@ document.writeln(Object.values(tasso));
 
 document.writeln("<br>");
 document.writeln("<br>");
-/*
+*/
 for (let propriedades2 in aline)
 {
     document.writeln(propriedades2);
@@ -184,8 +207,7 @@ document.writeln(Object.values(aline));
 
 document.writeln("<br>");
 document.writeln("<br>");
-document.writeln("<br>");
-*/
+
 
 //titulo3.innerHTML = Object.getOwnPropertyNames(tasso.prototype);
 
