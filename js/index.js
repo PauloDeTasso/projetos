@@ -1,3 +1,5 @@
+var html5 = document.getElementById('html5')
+
 var imagem = document.getElementById('imagemStart')
 
 var visitasdoSite = document.getElementById('visitasSite');
@@ -14,6 +16,8 @@ var emojiNorte1 = document.getElementById('emojiNorte01');
 
 var contador = 0;
 
+var contador2 = 0;
+
 var numeroAleatorioFraseInterno;
 
 var numeroEmojiAleatorio;
@@ -25,6 +29,8 @@ var secaoSulImagem = document.getElementById('secaoSulImagem');
 var secaoLesteImagem = document.getElementById('secaoLesteImagem');
 
 var secaoOesteImagem = document.getElementById('secaoOesteImagem');
+
+var statusSistema = document.getElementById('statusSistema');
 
 /////////////////////////**/
 
@@ -76,6 +82,44 @@ function playUnico()
 
 }
 
+var imagensGirou = false;
+
+var contadorOpacidade = 1.9;
+
+function goHome()
+{
+    if (imagensGirou)
+    {
+        window.location.href = "docs/Home.html";
+    } else
+    {
+        girarImagens();
+    }
+}
+
+function girarImagens()
+{
+    contador2 = 0;
+    setTimeout("imagemAtual(1)", 70);
+}
+
+function imagemAtual(contador2)
+{
+
+    if (contador2 >= 19)
+    {
+        imagensGirou = true;
+        goHome();
+    } else
+    {
+        contadorOpacidade = contadorOpacidade - 0.1;
+        contador2++;
+        imagem.setAttribute('src', 'imagens/start' + contador2 + '.png')
+        //statusSistema.innerHTML = contadorOpacidade;
+        html5.style.opacity = contadorOpacidade;
+        setTimeout("imagemAtual(" + contador2 + ")", 70);
+    }
+}
 /* SE BARRA DE PROGRESSO = 100 ENTÃO: 
 
 let som = setTimeout("somTerminou()", 7000);
