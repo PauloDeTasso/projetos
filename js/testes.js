@@ -8,7 +8,50 @@ var titulo3 = document.getElementById('titulo3');
 
 var titulo4 = document.getElementById('titulo4');
 
-var pessoa = Object.create(null);
+var titulo5 = document.getElementById('titulo5');
+
+
+function Pessoa()
+{
+    this.nome = "";
+    this.peso = 0;
+    this.vivo = false;
+    this.familia = [];
+    this.olhos = {};
+    this.bateria = function (carga, consumindo) 
+    {
+        this.bateria.carga = carga;
+        this.bateria.consumindo = consumindo;
+    };
+}
+
+/*
+Pessoa.olhos.corDosOlhos = "";
+Pessoa.olhos.tamanhoDosOlhos = 0;
+Pessoa.olhos.olhosAbertos = false;
+Pessoa.olhos.olhar = function ()
+{
+    this.olhos.olhosAbertos = true;
+    this.bateria.consumindoBateria();
+}
+
+Pessoa.bateria.carga = 0;
+Pessoa.bateria.consumindo = "";
+Pessoa.bateria.consumindoBateria = function ()
+{
+    this.bateria.carga -= 1;
+    this.bateria.consumindo = true;
+};
+
+Pessoa.bateria.carregandoBateria = function ()
+{
+    this.bateria.carga = carga + 0.1;
+    this.bateria.consumindo = false;
+};
+
+*/
+
+/*
 
 pessoa =
 {
@@ -46,14 +89,16 @@ pessoa =
         }
     }
 };
+*/
 
-function Pessoa(nome, peso, vivo, familia, olhos, bateria)
+/*
+var Pessoa = function (nome, peso, vivo, familia)
 {
     this.nome = nome; //String
     this.peso = peso; //Numero
     this.vivo = vivo;   //Bolleano
     this.familia = familia; //Array
-    this.olhos = olhos =
+    this.olhos =
     {
         corDosOlhos: "", //String
         tamanhoDosOlhos: 0, //Numero
@@ -61,43 +106,45 @@ function Pessoa(nome, peso, vivo, familia, olhos, bateria)
 
         olhar: function () //Função
         {
-            Pessoa.olhos.olhosAbertos = true; //Boleano
-            Pessoa.bateria.consumindoBateria(); //Funcão
+            this.olhos.olhosAbertos = true; //Boleano
+            this.bateria.consumindoBateria(); //Funcão
         }
     };
-    this.bateria = bateria = //Objeto
+
+    this.bateria =
     {
         carga: 0, //Numero
         consumindo: "", //Boleano
         consumindoBateria: function () //Função
         {
-            Pessoa.bateria.carga -= 1;
-            Pessoa.bateria.consumindo = true; //Boleano
+            this.bateria.carga -= 1;
+            this.bateria.consumindo = true; //Boleano
         },
 
         carregandoBateria: function ()
         {
-            Pessoa.bateria.carga = carga + 0.1;
-            Pessoa.bateria.consumindo = false; //Boleano
+            this.bateria.carga = carga + 0.1;
+            this.bateria.consumindo = false; //Boleano
         }
     }
 }
 
+*/
 
-//var tasso = new Object(pessoa);
+var tasso = new Pessoa();
 
-var tasso = Object.create(pessoa);
+var aline = new Pessoa();
+
+//tasso = new Pessoa("Tasso", 80, true, [21]);
+
+//var tasso = Object.create(pessoa);
 
 //var aline = new Object(pessoa);
-
+/*
 var aline = Object.create(pessoa);
 
 var sophia = Object.create(pessoa);
-
-Object.setPrototypeOf(tasso.bateria, pessoa);
-
-Object.setPrototypeOf(aline.bateria, pessoa);
-
+*/
 /*
 function pessoa()
 {
@@ -119,22 +166,25 @@ var carro1 = new carro();
 tasso.nome = "Tasso";
 tasso.peso = 80;
 tasso.vivo = true;
-tasso.familia[0] = 21;
-tasso.olhos.corDosOlhos = "Escuros";
-tasso.olhos.tamanhoDosOlhos = 10;
-tasso.olhos.olhosAbertos = true;
-tasso.bateria.carga = 100;
+//tasso.familia[0] = 21;
+//tasso.olhos.corDosOlhos = "Escuros";
+//tasso.olhos.tamanhoDosOlhos = 10;
+//tasso.olhos.olhosAbertos = true;
+//tasso.bateria(100, false);
+tasso.bateria.carga = 90;
 tasso.bateria.consumindo = true;
+
 
 aline.nome = "Aline";
 aline.peso = 70;
 aline.vivo = true;
-aline.familia[0] = 17;
-aline.olhos.corDosOlhos = "Azuis";
-aline.olhos.tamanhoDosOlhos = 12;
-aline.olhos.olhosAbertos = false;
+//aline.familia[0] = 17;
+//aline.olhos.corDosOlhos = "Azuis";
+//aline.olhos.tamanhoDosOlhos = 12;
+//aline.olhos.olhosAbertos = false;
 aline.bateria.carga = 84;
 aline.bateria.consumindo = false;
+//aline.bateria(50, true);
 
 /*
 Object.defineProperty(aline, 'bateria',
@@ -153,6 +203,11 @@ titulo3.innerHTML = aline.nome;
 
 titulo4.innerHTML = aline.bateria.carga;
 
+//titulo5.innerHTML = Pessoa;
+titulo5.innerHTML = tasso.bateria.consumindo;
+
+document.writeln(aline.bateria.consumindo);
+
 /*
 
 titulo1.innerHTML = Object.getPrototypeOf(tasso) === pessoa; // COMPARA SE O OBJETO É IGUAL AO OUTRO
@@ -166,6 +221,7 @@ titulo4.innerHTML = Object.keys(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OB
 */
 
 /**/
+/*
 
 for (let propriedades in tasso) // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso 
 {
@@ -196,6 +252,7 @@ document.writeln(Object.values(tasso));
 document.writeln("<br>");
 document.writeln("<br>");
 */
+/*
 for (let propriedades2 in aline)
 {
     document.writeln(propriedades2);
