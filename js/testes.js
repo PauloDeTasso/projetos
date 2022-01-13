@@ -11,7 +11,7 @@ var titulo4 = document.getElementById('titulo4');
 var titulo5 = document.getElementById('titulo5');
 
 
-function Pessoa()
+function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA
 {
     this.nome = "";
     this.peso = 0;
@@ -24,6 +24,45 @@ function Pessoa()
         this.bateria.consumindo = consumindo;
     };
 }
+
+/*
+
+function Bola() //UM CONSTRUTOR DO OBJETO BOLA
+{
+    this.nome = "";
+    this.tamanho = 0;
+    this.peso = 0;
+    this.emMovimento = false;
+    this.tipodeEsporte = [];
+    this.cor = {};
+    this.movimento = function (norte, sul, leste, oeste) 
+    {
+        this.movimento.norte = norte;
+        this.movimento.sul = sul;
+        this.movimento.leste = leste;
+        this.movimento.oeste = oeste;
+        direcaoBola();
+    };
+}
+
+function direcaoBola()
+{
+    if (this.movimento.norte == true
+        && this.movimento.sul == false
+        && this.movimento.leste == false
+        && this.movimento.oeste == false)
+    {
+        Bola.posicaoY--;
+
+    } else if (this.movimento.norte == false
+        && this.movimento.sul == true
+        && this.movimento.leste == false
+        && this.movimento.oeste == false)
+    {
+        Bola.posicaoY++;
+    }
+}
+*/
 
 /*
 Pessoa.olhos.corDosOlhos = "";
@@ -131,20 +170,25 @@ var Pessoa = function (nome, peso, vivo, familia)
 
 */
 
+var carro = new Object();
+
 var tasso = new Pessoa();
 
 var aline = new Pessoa();
 
 //tasso = new Pessoa("Tasso", 80, true, [21]);
 
-//var tasso = Object.create(pessoa);
+//var tasso = Object.create(Pessoa);
 
-//var aline = new Object(pessoa);
+//var aline = new Object(Pessoa);
 /*
 var aline = Object.create(pessoa);
-
-var sophia = Object.create(pessoa);
 */
+
+//var sophia = Object.create(Pessoa);
+
+/*
+
 /*
 function pessoa()
 {
@@ -194,7 +238,7 @@ Object.defineProperty(aline, 'bateria',
 }
 );
 */
-
+/*
 titulo1.innerHTML = tasso.nome;
 
 titulo2.innerHTML = tasso.bateria.carga;
@@ -207,10 +251,26 @@ titulo4.innerHTML = aline.bateria.carga;
 titulo5.innerHTML = tasso.bateria.consumindo;
 
 document.writeln(aline.bateria.consumindo);
+*/
 
-/*
+function irmaos(objeto1, objeto2, objetoPai)
+{
+    var objetoFamilia1 = objeto1 instanceof objetoPai;
+    var objetoFamilia2 = objeto2 instanceof objetoPai;
 
-titulo1.innerHTML = Object.getPrototypeOf(tasso) === pessoa; // COMPARA SE O OBJETO É IGUAL AO OUTRO
+    if (objetoFamilia1 == true && objetoFamilia2 == true)
+    {
+        var resultado = true;
+    } else
+    {
+        var resultado = false;
+    }
+
+    return resultado;
+}
+
+
+titulo1.innerHTML = irmaos(tasso, aline, Pessoa); // COMPARA SE O OBJETO É IGUAL AO OUTRO
 
 titulo2.innerHTML = Object.entries(tasso); //EXIBE TODOS OS NOMES DAS PROPRIEDADES E SEUS VALORES SEPARADOS POR VIRGULA
 
@@ -218,10 +278,21 @@ titulo3.innerHTML = Object.getOwnPropertyNames(tasso); // EXIBE OS NOMES DAS PRO
 
 titulo4.innerHTML = Object.keys(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso SEPARADOS POR VIRGULAS
 
-*/
+titulo5.innerHTML = irmaos(tasso, aline, Pessoa);
+
+/*
+titulo1.innerHTML = Object.getPrototypeOf(tasso) === Pessoa; // COMPARA SE O OBJETO É IGUAL AO OUTRO
+
+titulo2.innerHTML = Object.entries(tasso); //EXIBE TODOS OS NOMES DAS PROPRIEDADES E SEUS VALORES SEPARADOS POR VIRGULA
+
+titulo3.innerHTML = Object.getOwnPropertyNames(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso SEPARADOS POR VIRGULAS
+
+titulo4.innerHTML = Object.keys(tasso); // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso SEPARADOS POR VIRGULAS
+
+titulo5.innerHTML = irmaos(tasso, aline, Pessoa);
 
 /**/
-/*
+
 
 for (let propriedades in tasso) // EXIBE OS NOMES DAS PROPRIEDADES DO OBJETO tasso 
 {
@@ -252,7 +323,7 @@ document.writeln(Object.values(tasso));
 document.writeln("<br>");
 document.writeln("<br>");
 */
-/*
+
 for (let propriedades2 in aline)
 {
     document.writeln(propriedades2);
