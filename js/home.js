@@ -1285,7 +1285,7 @@ function sfssdCode()
 
 function sfssdCodeOff()
 {
-    secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
+    secaoFooter.style.backgroundImage = 'url("../imagens/gif/code9.gif")';
     sfssd.style.visibility = 'hidden';
     iconeUsuario.style.visibility = 'hidden';
 }
