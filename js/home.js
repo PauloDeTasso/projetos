@@ -123,7 +123,7 @@ function play()
     somCahoeira.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
-    favIcon.setAttribute('href', '../icones/playBrancoTocando.png')
+    favIcon.setAttribute('href', '../icones/PLAYICON.png')
 }
 
 function pausar()
@@ -132,7 +132,7 @@ function pausar()
     somCahoeira.pause();
     botaoPlay.setAttribute('src', '../icones/playBranco.png');
     botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
-    favIcon.setAttribute('href', '../icones/pauseBrancoPausado.png');
+    favIcon.setAttribute('href', '../icones/PAUSEICON.png');
 }
 
 function stop()
