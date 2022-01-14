@@ -241,3 +241,27 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
 }
+
+#secaoNorteImagem
+{    
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+#secaoSulImagem
+{    
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+#secaoLesteImagem
+{    
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+#secaoOesteImagem
+{    
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
