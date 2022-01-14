@@ -888,7 +888,7 @@ function abrirSecaoLicense()
     } else
     {
         secaoLicense.style.visibility = 'hidden';
-        secaoFooter.style.backgroundImage = 'url("../icones/code9.gif")';
+        secaoFooter.style.backgroundImage = 'url("../imagens/gif/code9.gif")';
         sfssd.style.visibility = 'hidden';
         iconeUsuario.style.visibility = 'hidden';
     }
