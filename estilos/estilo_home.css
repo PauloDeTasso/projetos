@@ -255,7 +255,7 @@ body
     font-size: 14pt;
     font-weight: bold;
    /* font-family: "LuckiestGuy";*/
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 1px;
     padding: 1%;
 }
@@ -527,7 +527,6 @@ main
 
 /**/
 
-
 .secao03
 {
     background-color: rgb(0, 0, 0);
@@ -535,11 +534,6 @@ main
     flex-direction: column;
     justify-content: center;
     padding: 1%;
-}
-
-.artigoSecao03
-{
-  
 }
 
 .tituloArtigoSecao03
@@ -679,7 +673,9 @@ main
     justify-content: center;    
     align-items: center;
     width: 10px;
-    height: 600px;
+    height: 2000px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
 }
 
 #secaoOesteImagem
@@ -689,7 +685,9 @@ main
     justify-content: center;    
     align-items: center;
     width: 10px;
-    height: 600px;
+    height: 2000px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 50%;
 }
 
 #secaoBarraDeProgresso
@@ -1236,3 +1234,4 @@ body::-webkit-scrollbar {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
+
