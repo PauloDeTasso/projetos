@@ -96,7 +96,7 @@ body
     justify-content: center;    
     align-items: center;
     width: 70%;
-    height: 70%;
+    height: auto;
 }
 
 /**/
