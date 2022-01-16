@@ -11,6 +11,17 @@ var titulo4 = document.getElementById('titulo4');
 var titulo5 = document.getElementById('titulo5');
 
 
+const log = document.getElementById('log');
+
+document.addEventListener('keypress', logKey);
+
+function logKey(e)
+{
+    //log.innerHTML += e.code;
+    //ou
+    log.innerHTML += e.keyCode;
+}
+
 function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA
 {
     this.nome = "";
@@ -394,7 +405,7 @@ function Oponente()
 
 var oponente1 = new Oponente();
 
-function Controle(key1, ke2, key3, key4)
+function Controle(key1, key2, key3, key4)
 {
     this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
     this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
@@ -404,7 +415,15 @@ function Controle(key1, ke2, key3, key4)
         if (e.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = false;
-        } else if (e.keyCode == ke2)
+
+        } else if (e.keyCode == key2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        } else if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+
+        } else if (e.keyCode == key4)
         {
             controle1.teclaSetaParaBaixoPressionada = false;
         }
@@ -415,28 +434,14 @@ function Controle(key1, ke2, key3, key4)
         if (e.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = true;
-        } else if (e.keyCode == ke2)
+
+        } else if (e.keyCode == key2)
         {
             controle1.teclaSetaParaBaixoPressionada = true;
-        }
-    }
-
-    this.keyLeft = function (e)
-    {
-        if (e.keyCode == key3)
-        {
-            controle1.teclaSetaParaCimaPressionada = false;
-        } else if (e.keyCode == key4)
-        {
-            controle1.teclaSetaParaBaixoPressionada = false;
-        }
-    }
-
-    this.keyRight = function (e)
-    {
-        if (e.keyCode == key3)
+        } else if (e.keyCode == key3)
         {
             controle1.teclaSetaParaCimaPressionada = true;
+
         } else if (e.keyCode == key4)
         {
             controle1.teclaSetaParaBaixoPressionada = true;
@@ -445,7 +450,7 @@ function Controle(key1, ke2, key3, key4)
 
 }
 
-var controle1 = new Controle(38, 40);
+var controle1 = new Controle(38, 40, 37, 39);
 
 titulo1.innerHTML = canvas1.canvas;
 
@@ -465,8 +470,6 @@ function iniciarJogo()
 
     document.addEventListener('keyup', controle1.keyUp, false);
     document.addEventListener('keydown', controle1.keyDown, false);
-    document.addEventListener('keyleft', controle1.keyLeft, false);
-    document.addEventListener('keyright', controle1.keyRight, false);
 
     setInterval(loopGame, 30);
 }
