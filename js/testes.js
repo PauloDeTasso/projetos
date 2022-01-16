@@ -474,20 +474,16 @@ function iniciarJogo()
 function loopGame()
 {
 
-    if (!pingPongStatusLigado)
+    if (pingPongStatusLigado)
     {
-
-    } else
-    {
-
-        //  JOGADOR ********************************************************************
+        //  MOVIMENTAR JOGADOR ********************************************************************
 
         if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
         { // se o usuário precionar para cima
             if (controle1.teclaSetaParaCimaPressionada)
             { // se para cima for pressionado
                 if (usuario1.posicaoY > 0)
-                { // se a bola nçao sair da tela
+                { // se a bola não sair da tela
                     usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
                 }
             }
@@ -502,21 +498,20 @@ function loopGame()
 
         // OPONENTE ********************************************************************************
 
-        if (usuario1.movimentoParaCima)
+        if (oponente1.movimentoParaCima)
         { // caso o oponente estivcer inddo para cima
             oponente1.posicaoY -= oponente1.velocidade;
             if (oponente1.posicaoY <= 0) // se a bola estiver saindo da tela
             {
-                usuario1.movimentoParaCima = false;
+                oponente1.movimentoParaCima = false;
             }
         }
         else
-        { // se o oponente estiver se movendo para cima
+        { // se o oponente estiver se movendo para baixo
             oponente1.posicaoY += oponente1.velocidade;
-            if (oponente1.posicaoY >= canvas1.canvas.height - usuario1.altura)
+            if (oponente1.posicaoY >= canvas1.canvas.height - oponente1.altura)
             { // caso a bola estiver saindo da tela
-
-                usuario1.movimentoParaCima = true;
+                oponente1.movimentoParaCima = true;
             }
         }
 
@@ -594,7 +589,7 @@ function loopGame()
 
                 bola1.movimentoParaDireita = false;
                 bola1.angulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
-                bola1.tempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
+                bola1.tempo = 0; // zera  o tempo de deixar a bola invisivel e coloca novamente em jogo
             }
             else
             { // caso o tempo de deixar a bola invisivel não acabou 
@@ -602,21 +597,22 @@ function loopGame()
             }
         }
 
-        //  DESENHA TODA A TELA ****************************************************************************
+        //  DESENHA TODA A TELA ***********************************************************************************
         canvas1.contexto.clearRect(0, 0, canvas1.canvas.width, canvas1.canvas.height); // limpar a tela antes de desenhar
 
-        //  JOGADOR E OPONENTE *************************************************************************
-        canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador
+        //  JOGADOR E OPONENTE ***********************************************************************************
+        canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador       
         canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, usuario1.largura, usuario1.altura); /// desenha ioponente
 
+        // BOLA ***********************************************************************************
 
-        // BOLA ************************************************************************************************
         canvas1.contexto.beginPath(); // modo desenho 
         canvas1.contexto.arc(bola1.posicaoX, bola1.posicaoY, bola1.raio, 0, Math.PI * 2, true); // desenha o circulo com coordenadas no centro
         canvas1.contexto.closePath(); // finaliza o caminho/ não obrigatorio
         canvas1.contexto.fill();
 
-        // PLACAR ************************************************************************************************
+
+        // PLACAR ***********************************************************************************
 
         var pontosA = usuario1.pontos; // variaveis temporarias para alterar pontiação
         var pontosB = oponente1.pontos;
@@ -637,12 +633,16 @@ function loopGame()
 
         //  LINHA DIVISÓRIA
         canvas1.contexto.beginPath();
-        canvas1.contexto.moveTo(canvas1.canvas.width / 2, 0); // arrumar lapis para fazere a escrita da linha
+        canvas1.contexto.moveTo(canvas1.canvas.width / 2, 0); // arrumar lapis para fazer a escrita da linha
         canvas1.contexto.lineTo(canvas1.canvas.width / 2, canvas1.canvas.height);// faz risco na tela no centro
         canvas1.contexto.strokeStyle = "#c4c4c4";
         canvas1.contexto.stroke();
         canvas1.contexto.closePath();
 
+    } else
+    {
+        statusPingPong2.innerHTML = "PINGP PONG - OFFLINE!";
+        setTimeout("limparStatusPingPong2()", 3000);
     }
 
 }
@@ -704,7 +704,6 @@ function memoria(valorMemoria)
     return bola1.velocidadeEmMemoria;
 }
 
-
 var statusPingPong = document.getElementById('statusPingPong');
 
 var statusPingPong2 = document.getElementById('statusPingPong2');
@@ -733,8 +732,6 @@ function zerarPlacar()
         setTimeout("status3()", 1000);
     }
 }
-
-
 
 function status3()
 {
