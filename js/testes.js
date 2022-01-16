@@ -344,53 +344,108 @@ document.writeln(Object.values(sophia));
   
  */
 
-
-function Bola()
-{
-    this.nome = ""; //NOME
-    this.cor = "";
-    this.raio = 17; //  bola1.raio
-    this.posicaoX = 0;
-    this.posicaoY = 0;
-    this.movimentoParaDireita = true; // bola1.movimentoParaDireita
-    this.angulo; // bola1.angulo
-    this.tempo; // bola1.tempo
-    this.velocidade = 0; // bola1.velocidade
-    this.velocidadeEmMemoria; // bola1.velocidadeEmMemoria
-}
-
-function Jogador()
-{
-    this.altura = 90; // usuario1.altura
-    this.largura = 30; // usuario1.largura
-    this.posicaoX = 0; // usuario1.posicaoX / oponente1.posicaoX
-    this.posicaoY = 0; // usuario1.posicaoY / oponente1.posicaoY
-    this.velocidade = 17; // usuario1.velocidade / oponente1.velocidade
-    this.pontos = 0; //usuario1.pontos / oponente1.pontos
-    this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
-}
-
-function Controle()
-{
-    this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
-    this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
-}
-
 function CanvasHtml(IdCanvas, dimensao)
 {
     this.canvas = document.getElementById(IdCanvas);
     this.contexto = this.canvas.getContext(dimensao)
 }
 
+var canvas1 = new CanvasHtml('canvas', '2d');
+
+function Bola()
+{
+    this.nome = ""; //NOME
+    this.cor = "";
+    this.raio = 17; //  bola1.raio
+    this.posicaoX = canvas1.canvas.width / 2;
+    this.posicaoY = canvas1.canvas.height / 2;
+    this.movimentoParaDireita = false; // bola1.movimentoParaDireita
+    this.angulo = Math.floor(Math.random() * 21) - 10; // bola1.angulo
+    this.tempo = 0; // bola1.tempo
+    this.velocidade = 0; // bola1.velocidade
+    this.velocidadeEmMemoria = 0; // bola1.velocidadeEmMemoria
+}
+
 var bola1 = new Bola();
+
+function Jogador()
+{
+    this.altura = 90; // usuario1.altura
+    this.largura = 30; // usuario1.largura
+    this.posicaoX = 0; // usuario1.posicaoX / oponente1.posicaoX
+    this.posicaoY = (canvas1.canvas.height - this.altura) / 2; // usuario1.posicaoY / oponente1.posicaoY
+    this.velocidade = 17; // usuario1.velocidade / oponente1.velocidade
+    this.pontos = 0; //usuario1.pontos / oponente1.pontos
+    this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+}
 
 var usuario1 = new Jogador();
 
-var oponente1 = new Jogador();
+function Oponente()
+{
+    this.altura = 90; // usuario1.altura
+    this.largura = 30; // usuario1.largura
+    this.posicaoX = canvas1.canvas.width - this.largura; // usuario1.posicaoX / oponente1.posicaoX
+    this.posicaoY = 0; // usuario1.posicaoY / oponente1.posicaoY
+    this.velocidade = 30; // usuario1.velocidade / oponente1.velocidade
+    this.pontos = 0; //usuario1.pontos / oponente1.pontos
+    this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+}
 
-var controle1 = new Controle();
+var oponente1 = new Oponente();
 
-var canvas1 = new CanvasHtml('canvas', '2d');
+function Controle(key1, ke2, key3, key4)
+{
+    this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
+    this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
+
+    this.keyUp = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+        } else if (e.keyCode == ke2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        }
+    }
+
+    this.keyDown = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = true;
+        } else if (e.keyCode == ke2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = true;
+        }
+    }
+
+    this.keyLeft = function (e)
+    {
+        if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        }
+    }
+
+    this.keyRight = function (e)
+    {
+        if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaCimaPressionada = true;
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaBaixoPressionada = true;
+        }
+    }
+
+}
+
+var controle1 = new Controle(38, 40);
 
 titulo1.innerHTML = canvas1.canvas;
 
@@ -408,81 +463,12 @@ function iniciarJogo()
 {
     pingPongStatusLigado = true;
 
-    usuario1.largura = 30;
-    usuario1.altura = 90;
-    usuario1.posicaoX = 0;
-    usuario1.posicaoY = (canvas1.canvas.height - usuario1.altura) / 2;
-    controle1.teclaSetaParaBaixoPressionada = false;
-    controle1.teclaSetaParaCimaPressionada = false;
-
-    oponente1.posicaoX = canvas1.canvas.width - usuario1.largura;
-    oponente1.posicaoY = 0;
-    usuario1.movimentoParaCima = false;
-
-    bola1.raio = 17;
-    bola1.posicaoX = canvas1.canvas.width / 2;
-    bola1.posicaoY = canvas1.canvas.height / 2;
-
-    bola1.movimentoParaDireita = false;
-    bola1.angulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
-    bola1.tempo = 0;
-    usuario1.velocidade = 15;
-    oponente1.velocidade = 30;
-    bola1.velocidade = 0;
-    bola1.velocidadeEmMemoria = 0;
-    usuario1.pontos = 0;
-    oponente1.pontos = 0;
-
-    document.addEventListener('keyup', keyUp, false);
-    document.addEventListener('keydown', keyDown, false);
-    document.addEventListener('keyleft', keyLeft, false);
-    document.addEventListener('keyright', keyRight, false);
+    document.addEventListener('keyup', controle1.keyUp, false);
+    document.addEventListener('keydown', controle1.keyDown, false);
+    document.addEventListener('keyleft', controle1.keyLeft, false);
+    document.addEventListener('keyright', controle1.keyRight, false);
 
     setInterval(loopGame, 30);
-}
-
-function keyUp(e)
-{
-    if (e.keyCode == 38)
-    {
-        controle1.teclaSetaParaCimaPressionada = false;
-    } else if (e.keyCode == 40)
-    {
-        controle1.teclaSetaParaBaixoPressionada = false;
-    }
-}
-
-function keyDown(e)
-{
-    if (e.keyCode == 38)
-    {
-        controle1.teclaSetaParaCimaPressionada = true;
-    } else if (e.keyCode == 40)
-    {
-        controle1.teclaSetaParaBaixoPressionada = true;
-    }
-}
-
-function keyLeft(e)
-{
-    if (e.keyCode == 37)
-    {
-        controle1.teclaSetaParaCimaPressionada = false;
-    } else if (e.keyCode == 39)
-    {
-        controle1.teclaSetaParaBaixoPressionada = false;
-    }
-}
-
-function keyRight(e)
-{
-    if (e.keyCode == 37)
-    {
-        controle1.teclaSetaParaCimaPressionada = true;
-    } else if (e.keyCode == 39)
-    {
-        controle1.teclaSetaParaBaixoPressionada = true;
-    }
 }
 
 function loopGame()
