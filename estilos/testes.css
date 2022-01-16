@@ -39,3 +39,153 @@ background-color: rgb(0, 46, 0);
 color: rgb(0, 255, 21);
 font-size: 25pt;
 }
+
+/**/
+
+
+#secaoCanvas
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  padding: 2%;    
+}
+
+#canvas
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  background-image: url("../imagens/texture/00.jpg");
+  background-size: cover;    
+  background-repeat: round;
+}
+
+#secaoBotoesPingPong
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  background-color: black;   
+}
+
+#controles1
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17%;
+  height: auto;
+  background-color: black;    
+}
+
+#controles2
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: auto;
+  width: 17%;
+  height: auto;
+  background-color: black;    
+}
+
+#secaoOpcoesPingPong
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 64%;
+  height: auto;
+  background-color: black;
+}
+
+.botoesPingPong
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  border: 0px solid black;      
+  padding: 2%;
+}
+
+#botaoOpcaoVelocidade
+{
+  
+}
+
+#statusPingPong
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-image: url('../imagens/outros/03.png');
+  background-size: cover;
+  opacity: 0.9;
+  color: azure;
+  font-size: 12pt;
+}
+
+#statusPingPong2
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-image: url('../imagens/outros/03.png');
+  background-size: cover;
+  opacity: 0.9;
+  color: azure;
+  font-size: 18pt;
+  visibility: hidden;
+  margin: 5px;
+}
+
+#imagemBotaoOpcaoVelocidade
+{      
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  border: 0px solid black;      
+  height:  71px;
+  width: auto;
+}
+
+#imagemIconePingPong
+{
+  padding: 1%;
+}
+
+#canvas2
+{
+  border:1px solid red;
+  background-color: rgb(255, 255, 255);
+}
