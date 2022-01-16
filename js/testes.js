@@ -359,24 +359,48 @@ document.writeln(Object.values(sophia));
 
 var Bola = function ()
 {
-    this.nome = "";
-    this.raio = 17;
+    this.nome = ""; //NOME
+    this.raio = 17; //  bolaRaio
     this.posicaoX = 0;
     this.posicaoY = 0;
-    this.indoParaDireita = true;
-    this.angulo;
-    this.tempo;
-    this.velocidade = 0;
-    this.velocidadeEmMemoria;
+    this.movimentoParaDireita = true; // bolaParaDireita
+    this.angulo; // bolaAngulo
+    this.tempo; // bolaTempo
+    this.velocidade = 0; // velocidadeBola
+    this.velocidadeEmMemoria; // velocidadeMemorizada
 }
 
 var Jogador = function ()
 {
-    this.posicaoX = 0;
-    this.posicaoY = 0;
-    this.velocidade = 17;
-    this.pontos = 0;
+    this.altura = 90; // barraHeigth
+    this.largura = 30; // barraWidth
+    this.posicaoX = 0; // jogadorPosX / oponentePosX
+    this.posicaoY = 0; // jogadorPosY / oponentePosY
+    this.velocidade = 17; // velocidadeJogador / velocidadeOponente
+    this.pontos = 0; //pontosJogador / pontosOponente
+    this.movimentoParaCima = false; // jogadorParaCima/ oponenteParaCima
 }
+
+var controle = function ()
+{
+    this.teclaSetaParaCimaPressionada = false; // teclaCimaPressionada
+    this.teclaSetaParaBaixoPressionada = false;  // teclaBaixoPressionada
+}
+
+var canvas = function (IdCanvas, dimensao)
+{
+    this.canvas = document.getElementById(IdCanvas);
+    this.contexto = canvas.getContext(dimensao);
+}
+
+
+var bola1 = new Bola();
+
+var Usuario1 = new Jogador();
+
+var controle1 = new controle();
+
+var canvas1 = new CanvasGradient("canvas", "2d");
 
 var canvas, context,
     barraWidth, barraHeigth,
