@@ -10,18 +10,6 @@ var titulo4 = document.getElementById('titulo4');
 
 var titulo5 = document.getElementById('titulo5');
 
-
-const log = document.getElementById('log');
-
-document.addEventListener('keypress', logKey);
-
-function logKey(e)
-{
-    //log.innerHTML += e.code;
-    //ou
-    log.innerHTML += e.keyCode;
-}
-
 function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA
 {
     this.nome = "";
@@ -405,6 +393,17 @@ function Oponente()
 
 var oponente1 = new Oponente();
 
+const log = document.getElementById('log');
+
+document.addEventListener('keydown', logKey);
+
+function logKey(e)
+{
+    //log.innerHTML += e.code;
+    //ou
+    log.innerHTML += e.keyCode;
+}
+
 function Controle(key1, key2, key3, key4)
 {
     this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
@@ -450,7 +449,7 @@ function Controle(key1, key2, key3, key4)
 
 }
 
-var controle1 = new Controle(38, 40, 37, 39);
+var controle1 = new Controle(38, 40, 65, 68);
 
 titulo1.innerHTML = canvas1.canvas;
 
@@ -590,7 +589,7 @@ function loopGame()
                 bola1.posicaoX = canvas1.canvas.width / 2; // coloca bola no centro da tela
                 bola1.posicaoY = canvas1.canvas.height / 2; // coloca bola no centro da tela
 
-                bola1.movimentoParaDireita = false;
+                bola1.movimentoParaDireita = randomBoolean();
                 bola1.angulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
                 bola1.tempo = 0; // zera  o tempo de deixar a bola invisivel e coloca novamente em jogo
             }
@@ -806,7 +805,7 @@ function statusZerarPlacar()
 
 function statusCanvas()
 {
-    statusPingPong.innerHTML = "USE THE KEYBOARD, UP AND DOWN ARROW!";
+    statusPingPong.innerHTML = "USE THE KEYBOARD \'A\' AND \'DAD\', OR UP AND DOWN ARROW!";
 }
 
 

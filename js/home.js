@@ -1736,256 +1736,273 @@ function relogio()
 }
 */
 
-// JOGO PING PONG
 
-var canvas, context,
-    barraWidth, barraHeigth,
-    jogadorPosX, jogadorPosY,
-    teclaCimaPressionada, teclaBaixoPressionada,
-    oponentePosX, oponentePosY,
-    oponenteParaCima,
-    bolaRaio,
-    bolaPosX, bolaPosY,
-    bolaParaDireita,
-    bolaAngulo,
-    bolaTempo,
-    velocidadeJogador, velocidadeOponente,
-    velocidadeBola, velocidadeMemorizada,
-    pontosJogador, pontosOponente;
+
+function CanvasHtml(IdCanvas, dimensao)
+{
+    this.canvas = document.getElementById(IdCanvas);
+    this.contexto = this.canvas.getContext(dimensao)
+}
+
+var canvas1 = new CanvasHtml('canvas', '2d');
+
+function Bola()
+{
+    this.nome = ""; //NOME
+    this.cor = "";
+    this.raio = 17; //  bola1.raio
+    this.posicaoX = canvas1.canvas.width / 2;
+    this.posicaoY = canvas1.canvas.height / 2;
+    this.movimentoParaDireita = false; // bola1.movimentoParaDireita
+    this.angulo = Math.floor(Math.random() * 21) - 10; // bola1.angulo
+    this.tempo = 0; // bola1.tempo
+    this.velocidade = 0; // bola1.velocidade
+    this.velocidadeEmMemoria = 0; // bola1.velocidadeEmMemoria
+}
+
+var bola1 = new Bola();
+
+function Jogador()
+{
+    this.altura = 90; // usuario1.altura
+    this.largura = 30; // usuario1.largura
+    this.posicaoX = 0; // usuario1.posicaoX / oponente1.posicaoX
+    this.posicaoY = (canvas1.canvas.height - this.altura) / 2; // usuario1.posicaoY / oponente1.posicaoY
+    this.velocidade = 17; // usuario1.velocidade / oponente1.velocidade
+    this.pontos = 0; //usuario1.pontos / oponente1.pontos
+    this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+}
+
+var usuario1 = new Jogador();
+
+function Oponente()
+{
+    this.altura = 90; // usuario1.altura
+    this.largura = 30; // usuario1.largura
+    this.posicaoX = canvas1.canvas.width - this.largura; // usuario1.posicaoX / oponente1.posicaoX
+    this.posicaoY = 0; // usuario1.posicaoY / oponente1.posicaoY
+    this.velocidade = 30; // usuario1.velocidade / oponente1.velocidade
+    this.pontos = 0; //usuario1.pontos / oponente1.pontos
+    this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+}
+
+var oponente1 = new Oponente();
+
+//var log = document.getElementById('log');
+
+//document.addEventListener('keydown', logKey);
+
+//function logKey(e)
+//{
+//log.innerHTML += e.code;
+//ou
+//   log.innerHTML += e.keyCode;
+//}
+
+function Controle(key1, key2, key3, key4)
+{
+    this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
+    this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
+
+    this.keyUp = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+
+        } else if (e.keyCode == key2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        } else if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        }
+    }
+
+    this.keyDown = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = true;
+
+        } else if (e.keyCode == key2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = true;
+        } else if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaCimaPressionada = true;
+
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaBaixoPressionada = true;
+        }
+    }
+
+}
+
+var controle1 = new Controle(38, 40, 65, 68);
+
+// JOGO PING PONG
 
 function iniciarJogo()
 {
     pingPongStatusLigado = true;
 
-    canvas = document.getElementById("canvas");
-    context = canvas.getContext("2d");
-
-    barraWidth = 30;
-    barraHeigth = 90;
-    jogadorPosX = 0;
-    jogadorPosY = (canvas.height - barraHeigth) / 2;
-    teclaBaixoPressionada = false;
-    teclaCimaPressionada = false;
-
-    oponentePosX = canvas.width - barraWidth;
-    oponentePosY = 0;
-    oponenteParaCima = false;
-
-    bolaRaio = 17;
-    bolaPosX = canvas.width / 2;
-    bolaPosY = canvas.height / 2;
-
-    bolaParaDireita = false;
-    bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
-    bolaTempo = 0;
-    velocidadeJogador = 15;
-    velocidadeOponente = 30;
-    velocidadeBola = 0;
-    velocidadeMemorizada = 0;
-    pontosJogador = 0;
-    pontosOponente = 0;
-
-    document.addEventListener('keyup', keyUp, false);
-    document.addEventListener('keydown', keyDown, false);
-    document.addEventListener('keyleft', keyLeft, false);
-    document.addEventListener('keyright', keyRight, false);
+    document.addEventListener('keyup', controle1.keyUp, false);
+    document.addEventListener('keydown', controle1.keyDown, false);
 
     setInterval(loopGame, 30);
-}
-
-function keyUp(e)
-{
-    if (e.keyCode == 38)
-    {
-        teclaCimaPressionada = false;
-    } else if (e.keyCode == 40)
-    {
-        teclaBaixoPressionada = false;
-    }
-}
-
-function keyDown(e)
-{
-    if (e.keyCode == 38)
-    {
-        teclaCimaPressionada = true;
-    } else if (e.keyCode == 40)
-    {
-        teclaBaixoPressionada = true;
-    }
-}
-
-function keyLeft(e)
-{
-    if (e.keyCode == 37)
-    {
-        teclaCimaPressionada = false;
-    } else if (e.keyCode == 39)
-    {
-        teclaBaixoPressionada = false;
-    }
-}
-
-function keyRight(e)
-{
-    if (e.keyCode == 37)
-    {
-        teclaCimaPressionada = true;
-    } else if (e.keyCode == 39)
-    {
-        teclaBaixoPressionada = true;
-    }
 }
 
 function loopGame()
 {
 
-    if (!pingPongStatusLigado)
+    if (pingPongStatusLigado)
     {
+        //  MOVIMENTAR JOGADOR ********************************************************************
 
-    } else
-    {
-
-        //  JOGADOR ********************************************************************
-
-        if (teclaCimaPressionada != teclaBaixoPressionada)
+        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
         { // se o usuário precionar para cima
-            if (teclaCimaPressionada)
+            if (controle1.teclaSetaParaCimaPressionada)
             { // se para cima for pressionado
-                if (jogadorPosY > 0)
-                { // se a bola nçao sair da tela
-                    jogadorPosY -= velocidadeJogador; // muda posição do jogador
+                if (usuario1.posicaoY > 0)
+                { // se a bola não sair da tela
+                    usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
                 }
             }
             else
             { // se for para baixo 
-                if (jogadorPosY < (canvas.height - barraHeigth))
+                if (usuario1.posicaoY < (canvas1.canvas.height - usuario1.altura))
                 { // se a bola não saiu da tela
-                    jogadorPosY += velocidadeJogador; // muda posição
+                    usuario1.posicaoY += usuario1.velocidade; // muda posição
                 }
             }
         }
 
         // OPONENTE ********************************************************************************
 
-        if (oponenteParaCima)
+        if (oponente1.movimentoParaCima)
         { // caso o oponente estivcer inddo para cima
-            oponentePosY -= velocidadeOponente;
-            if (oponentePosY <= 0) // se a bola estiver saindo da tela
+            oponente1.posicaoY -= oponente1.velocidade;
+            if (oponente1.posicaoY <= 0) // se a bola estiver saindo da tela
             {
-                oponenteParaCima = false;
+                oponente1.movimentoParaCima = false;
             }
         }
         else
-        { // se o oponente estiver se movendo para cima
-            oponentePosY += velocidadeOponente;
-            if (oponentePosY >= canvas.height - barraHeigth)
+        { // se o oponente estiver se movendo para baixo
+            oponente1.posicaoY += oponente1.velocidade;
+            if (oponente1.posicaoY >= canvas1.canvas.height - oponente1.altura)
             { // caso a bola estiver saindo da tela
-
-                oponenteParaCima = true;
+                oponente1.movimentoParaCima = true;
             }
         }
 
         // BOLA **************************************************************************
 
-        if (bolaTempo <= 0) // caso a bola estiver em jogo, o tempo  e zerado apos marcar ponto, abola ficará invisivel por um tempo
+        if (bola1.tempo <= 0) // caso a bola estiver em jogo, o tempo  e zerado apos marcar ponto, abola ficará invisivel por um tempo
         {
-            if ((bolaPosX - bolaRaio) <= (jogadorPosX + barraWidth))
+            if ((bola1.posicaoX - bola1.raio) <= (usuario1.posicaoX + usuario1.largura))
             { // caso o jogador encoste na bola no eixo X
-                if ((bolaPosY + bolaRaio > jogadorPosY) && (bolaPosY - bolaRaio < jogadorPosY + barraHeigth))
+                if ((bola1.posicaoY + bola1.raio > usuario1.posicaoY) && (bola1.posicaoY - bola1.raio < usuario1.posicaoY + usuario1.altura))
                 { // caso o jogador encoste na bola no eixo Y
-                    bolaParaDireita = true;
+                    bola1.movimentoParaDireita = true;
 
-                    if (teclaBaixoPressionada)
+                    if (controle1.teclaSetaParaBaixoPressionada)
                     { // se o usuário estiver indo para baixo e tocar na bola
-                        bolaAngulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
+                        bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
                     }
                     else
                     {
-                        bolaAngulo = Math.floor(Math.random() * 10); // manda bola para diagonal para baixo
+                        bola1.angulo = Math.floor(Math.random() * 10); // manda bola para diagonal para baixo
                     }
                 }
             }
             else
             {
-                if ((bolaPosX + bolaRaio) >= oponentePosX)
+                if ((bola1.posicaoX + bola1.raio) >= oponente1.posicaoX)
                 { // se o oponente encostar na bola no eixo X
-                    if ((bolaPosY + bolaRaio) > oponentePosY && (bolaPosY - bolaRaio < oponentePosY + barraHeigth))
+                    if ((bola1.posicaoY + bola1.raio) > oponente1.posicaoY && (bola1.posicaoY - bola1.raio < oponente1.posicaoY + usuario1.altura))
                     { // se o oponente encostar na bola no eixo Y
 
-                        bolaParaDireita = false;
-                        if (oponenteParaCima)
+                        bola1.movimentoParaDireita = false;
+                        if (usuario1.movimentoParaCima)
                         { // caso oponetne estiver indo para cima ao tocar na bola
-                            bolaAngulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
+                            bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
                         }
                         else
                         { // caso o oponetne estiover info para baico quando tocar na bola
-                            bolaAngulo = Math.floor(Math.random() * 10); // manda bola para diagonal para baixo
+                            bola1.angulo = Math.floor(Math.random() * 10); // manda bola para diagonal para baixo
                         }
                     }
                 }
             }
 
-            if ((bolaPosY - bolaRaio <= 0) || (bolaPosY + bolaRaio > canvas.height))
+            if ((bola1.posicaoY - bola1.raio <= 0) || (bola1.posicaoY + bola1.raio > canvas1.canvas.height))
             { // se a boal estiver indo para cima ou para baixo na tela
-                bolaAngulo = bolaAngulo * -1; // multiplicamos por - 1 para inverter a direção da bola no eixo y
+                bola1.angulo = bola1.angulo * -1; // multiplicamos por - 1 para inverter a direção da bola no eixo y
             }
-            bolaPosY += bolaAngulo; // move bola para cima ou para baixo de acordo com o cauculo acima
+            bola1.posicaoY += bola1.angulo; // move bola para cima ou para baixo de acordo com o cauculo acima
 
-            if (bolaParaDireita)
+            if (bola1.movimentoParaDireita)
             {
-                bolaPosX += velocidadeBola; // move vbola para direita
+                bola1.posicaoX += bola1.velocidade; // move vbola para direita
             }
             else
             {
-                bolaPosX -= velocidadeBola; // move vbola para esquerda
+                bola1.posicaoX -= bola1.velocidade; // move vbola para esquerda
             }
         }
 
-        if ((bolaPosX <= -bolaRaio) || (bolaPosX > canvas.width))
+        if ((bola1.posicaoX <= -bola1.raio) || (bola1.posicaoX > canvas1.canvas.width))
         { // se a bola saiu da tela
-            if (bolaTempo >= 50)
+            if (bola1.tempo >= 50)
             { // se o tempo de deixar a bola invisuivel passou 
-                if (bolaPosX <= - bolaRaio)
+                if (bola1.posicaoX <= - bola1.raio)
                 { // se bola saiu na esquerda 
-                    pontosOponente++;
+                    oponente1.pontos++;
                 }
                 else
                 { // se bola saiu na direita 
-                    pontosJogador++;
+                    usuario1.pontos++;
                 }
 
-                bolaPosX = canvas.width / 2; // coloca bola no centro da tela
-                bolaPosY = canvas.height / 2; // coloca bola no centro da tela
+                bola1.posicaoX = canvas1.canvas.width / 2; // coloca bola no centro da tela
+                bola1.posicaoY = canvas1.canvas.height / 2; // coloca bola no centro da tela
 
-                bolaParaDireita = false;
-                bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
-                bolaTempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
+                bola1.movimentoParaDireita = randomBoolean();
+                bola1.angulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
+                bola1.tempo = 0; // zera  o tempo de deixar a bola invisivel e coloca novamente em jogo
             }
             else
             { // caso o tempo de deixar a bola invisivel não acabou 
-                bolaTempo++;
+                bola1.tempo++;
             }
         }
 
-        //  DESENHA TODA A TELA ****************************************************************************
-        context.clearRect(0, 0, canvas.width, canvas.height); // limpar a tela antes de desenhar
+        //  DESENHA TODA A TELA ***********************************************************************************
+        canvas1.contexto.clearRect(0, 0, canvas1.canvas.width, canvas1.canvas.height); // limpar a tela antes de desenhar
 
-        //  JOGADOR E OPONENTE *************************************************************************
-        context.fillRect(jogadorPosX, jogadorPosY, barraWidth, barraHeigth); /// desenha jogador
-        context.fillRect(oponentePosX, oponentePosY, barraWidth, barraHeigth); /// desenha ioponente
+        //  JOGADOR E OPONENTE ***********************************************************************************
+        canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador       
+        canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, usuario1.largura, usuario1.altura); /// desenha ioponente
+
+        // BOLA ***********************************************************************************
+
+        canvas1.contexto.beginPath(); // modo desenho 
+        canvas1.contexto.arc(bola1.posicaoX, bola1.posicaoY, bola1.raio, 0, Math.PI * 2, true); // desenha o circulo com coordenadas no centro
+        canvas1.contexto.closePath(); // finaliza o caminho/ não obrigatorio
+        canvas1.contexto.fill();
 
 
-        // BOLA ************************************************************************************************
-        context.beginPath(); // modo desenho 
-        context.arc(bolaPosX, bolaPosY, bolaRaio, 0, Math.PI * 2, true); // desenha o circulo com coordenadas no centro
-        context.closePath(); // finaliza o caminho/ não obrigatorio
-        context.fill();
+        // PLACAR ***********************************************************************************
 
-        // PLACAR ************************************************************************************************
-
-        var pontosA = pontosJogador; // variaveis temporarias para alterar pontiação
-        var pontosB = pontosOponente;
+        var pontosA = usuario1.pontos; // variaveis temporarias para alterar pontiação
+        var pontosB = oponente1.pontos;
 
         if (pontosA < 10)
         { // coloca zero a esquerda se for menor que 10 a pontiação 
@@ -1997,40 +2014,43 @@ function loopGame()
             pontosB = "0" + pontosB;
         }
 
-        context.font = "38pt Arial"; // tamanho e fonte
-        context.fillStyle = "#c4c4c4";
-        context.fillText(pontosA + "  " + pontosB, (canvas.width / 2) - 70, 50); // escrevendo texto no centro da tela no top
+        canvas1.contexto.font = "38pt Arial"; // tamanho e fonte
+        canvas1.contexto.fillStyle = "#c4c4c4";
+        canvas1.contexto.fillText(pontosA + "  " + pontosB, (canvas1.canvas.width / 2) - 70, 50); // escrevendo texto no centro da tela no top
 
         //  LINHA DIVISÓRIA
-        context.beginPath();
-        context.moveTo(canvas.width / 2, 0); // arrumar lapis para fazere a escrita da linha
-        context.lineTo(canvas.width / 2, canvas.height);// faz risco na tela no centro
-        context.strokeStyle = "#c4c4c4";
-        context.stroke();
-        context.closePath();
+        canvas1.contexto.beginPath();
+        canvas1.contexto.moveTo(canvas1.canvas.width / 2, 0); // arrumar lapis para fazer a escrita da linha
+        canvas1.contexto.lineTo(canvas1.canvas.width / 2, canvas1.canvas.height);// faz risco na tela no centro
+        canvas1.contexto.strokeStyle = "#c4c4c4";
+        canvas1.contexto.stroke();
+        canvas1.contexto.closePath();
 
+    } else
+    {
+        statusPingPong2.innerHTML = "PINGP PONG - OFFLINE!";
+        setTimeout("limparStatusPingPong2()", 3000);
     }
 
 }
-
 /**/
 
 // ////////////////////////////////////
 
 function irParaCima()
 {
-    if (jogadorPosY > 0)
+    if (usuario1.posicaoY > 0)
     { // se a bola nçao sair da tela
-        jogadorPosY -= velocidadeJogador; // muda posição do jogador
+        usuario1.posicaoY -= velocidadeJogador; // muda posição do jogador
     }
 }
 
 function irParaBaixo()
 {
     // se for para baixo 
-    if (jogadorPosY < (canvas.height - barraHeigth))
+    if (usuario1.posicaoY < (canvas.height - barraHeigth))
     { // se a bola não saiu da tela
-        jogadorPosY += velocidadeJogador; // muda posição
+        usuario1.posicaoY += velocidadeJogador; // muda posição
     }
 }
 
@@ -2038,28 +2058,28 @@ var imagemBotaoOpcaoDeVelocidade = document.getElementById('imagemBotaoOpcaoVelo
 
 function mudarVelocidade()
 {
-    if (velocidadeBola == 0)
+    if (bola1.velocidade == 0)
     {
-        velocidadeBola = 10;
+        bola1.velocidade = 10;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/1.png');
 
-    } else if (velocidadeBola == 10)
+    } else if (bola1.velocidade == 10)
     {
-        velocidadeBola = 20;
+        bola1.velocidade = 20;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/2.png');
 
-    } else if (velocidadeBola == 20)
+    } else if (bola1.velocidade == 20)
     {
-        velocidadeBola = 30;
+        bola1.velocidade = 30;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/3.png');
 
-    } else if (velocidadeBola == 30)
+    } else if (bola1.velocidade == 30)
     {
-        velocidadeBola = 40;
+        bola1.velocidade = 40;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/4.png');
     } else
     {
-        velocidadeBola = 0;
+        bola1.velocidade = 0;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/0.png');
     }
 }
@@ -2077,30 +2097,28 @@ var statusPingPong2 = document.getElementById('statusPingPong2');
 
 function zerarPlacar()
 {
-    if (velocidadeBola == 0)
+    if (bola1.velocidade == 0)
     {
-        pontosJogador = 0;
-        pontosOponente = 0;
-        bolaPosX = canvas.width / 2;
-        bolaPosY = canvas.height / 2;
-        velocidadeBola = 10;
+        usuario1.pontos = 0;
+        oponente1.pontos = 0;
+        bola1.posicaoX = canvas1.canvas.width / 2;
+        bola1.posicaoY = canvas1.canvas.height / 2;
+        bola1.velocidade = 10;
         imagemBotaoOpcaoDeVelocidade.setAttribute('src', '../icones/1.png');
-        memoria(velocidadeBola);
-        velocidadeBola = 0;
+        memoria(bola1.velocidade);
+        bola1.velocidade = 0;
         setTimeout("status3()", 1000);
     } else
     {
-        pontosJogador = 0;
-        pontosOponente = 0;
-        bolaPosX = canvas.width / 2;
-        bolaPosY = canvas.height / 2;
-        memoria(velocidadeBola);
-        velocidadeBola = 0;
+        usuario1.pontos = 0;
+        oponente1.pontos = 0;
+        bola1.posicaoX = canvas1.canvas.width / 2;
+        bola1.posicaoY = canvas1.canvas.height / 2;
+        memoria(bola1.velocidade);
+        bola1.velocidade = 0;
         setTimeout("status3()", 1000);
     }
 }
-
-
 
 function status3()
 {
@@ -2131,10 +2149,10 @@ const randomBoolean = () => Math.random() >= 0.5;
 
 function iniciarPartida()
 {
-    bolaParaDireita = randomBoolean();
-    bolaAngulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
-    bolaTempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
-    velocidadeBola = velocidadeMemorizada;
+    bola1.movimentoParaDireita = randomBoolean();
+    bola1.angulo = Math.floor(Math.random() * 21) - 10; // faz bola ir para uma direção aleatória.
+    bola1.tempo = 0; // zera  ortempo de deixar a bola invisivel e coloca novamente em jogo
+    bola1.velocidade = velocidadeMemorizada;
     setTimeout("limparStatusPingPong()", 1000);
     setTimeout("limparStatusPingPong2()", 3000);
 }
@@ -2172,7 +2190,7 @@ function statusZerarPlacar()
 
 function statusCanvas()
 {
-    statusPingPong.innerHTML = "USE THE KEYBOARD, UP AND DOWN ARROW!";
+    statusPingPong.innerHTML = "USE THE KEYBOARD \'A\' AND \'DAD\', OR UP AND DOWN ARROW!";
 }
 
 // ////////////////////////////////////////////////// POPUP:
