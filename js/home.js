@@ -2190,7 +2190,7 @@ function statusZerarPlacar()
 
 function statusCanvas()
 {
-    statusPingPong.innerHTML = "USE THE KEYBOARD \'A\' AND \'DAD\', OR UP AND DOWN ARROW!";
+    statusPingPong.innerHTML = "On the keyboard use the \"A\" or \"B\" key or the up or down arrow.";
 }
 
 // ////////////////////////////////////////////////// POPUP:
