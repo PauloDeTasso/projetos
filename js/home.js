@@ -2354,6 +2354,7 @@ function fecharStatus()
     {
         nome.style.visibility = 'hidden';
         botaoStatus.style.opacity = 0.0;
+        flutuante.style.display = 'none';
     }
 }
 
