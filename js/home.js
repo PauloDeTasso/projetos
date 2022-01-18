@@ -746,7 +746,7 @@ function alterarGif3Off()
 function alterarTexto1()
 {
     tituloPrincipal.innerHTML = "HELP?";
-    nome.style.color = 'rgb(54, 54, 54)';
+    nome.style.color = 'rgb(255, 255, 255)';
     /*tituloPrincipal.style.backgroundColor = 'rgb(0, 0, 0)';*/
 }
 
@@ -2323,6 +2323,23 @@ function ligarDesligarPingPong()
 
 // //////////////////////////////////////////////////
 
+var botaoStatus = document.getElementById('botaoStatus');
+
+function fecharStatus()
+{
+    var estiloStatus = window.getComputedStyle(nome);
+    var valorEstiloStatus = estiloStatus.getPropertyValue('visibility');
+
+    if (valorEstiloStatus == "hidden")    
+    {
+        nome.style.visibility = 'visible';
+        botaoStatus.style.opacity = 1;
+    } else
+    {
+        nome.style.visibility = 'hidden';
+        botaoStatus.style.opacity = 0.0;
+    }
+}
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
