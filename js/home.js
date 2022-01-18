@@ -2041,16 +2041,16 @@ function irParaCima()
 {
     if (usuario1.posicaoY > 0)
     { // se a bola nçao sair da tela
-        usuario1.posicaoY -= velocidadeJogador; // muda posição do jogador
+        usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
     }
 }
 
 function irParaBaixo()
 {
     // se for para baixo 
-    if (usuario1.posicaoY < (canvas.height - barraHeigth))
+    if (usuario1.posicaoY < (canvas1.canvas.height - usuario1.altura))
     { // se a bola não saiu da tela
-        usuario1.posicaoY += velocidadeJogador; // muda posição
+        usuario1.posicaoY += usuario1.velocidade; // muda posição
     }
 }
 
