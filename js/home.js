@@ -2213,7 +2213,7 @@ function statusZerarPlacar()
 
 function statusCanvas()
 {
-    statusPingPong.innerHTML = "On the keyboard use the \"A\" or \"B\" key or the up or down arrow.";
+    statusPingPong.innerHTML = "On the keyboard use the \"A\" or \"D\" key or the up or down arrow.";
 }
 
 // ////////////////////////////////////////////////// POPUP:
