@@ -1,5 +1,7 @@
 /* var 'S*/
 
+var html5 = document.getElementById('html5');
+
 var numeroDePaginas = window.history.length;
 
 var botaoGif = document.getElementById('botaoGifPrincipal');
@@ -116,6 +118,27 @@ var scriptCarregou = false;
 var favIcon = document.getElementById('favIcon');
 
 /////////////////////////////////////////////////////////////////
+
+
+var numero = 0;
+
+var contadorOpacidade = 0;
+
+function imagemAtual()
+{
+    if (numero < 10)
+    {
+        numero = numero + 1;
+        contadorOpacidade = Math.round(numero);
+        html5.style.opacity = contadorOpacidade / 10;
+        setTimeout("imagemAtual()", 170);
+    } else
+    {
+        //alert('Seja bem vindo!);
+    }
+}
+
+imagemAtual();
 
 function play()
 {
@@ -2297,6 +2320,9 @@ function ligarDesligarPingPong()
         iniciarJogo();
     }
 }
+
+// //////////////////////////////////////////////////
+
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
