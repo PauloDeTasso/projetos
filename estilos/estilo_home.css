@@ -587,6 +587,8 @@ main
      color: rgba(43, 255, 0, 0.884), rgba(255, 0, 0, 0.884) ;
      text-shadow: 1px 1px 0px rgba(11, 65, 0, 0.637);
      letter-spacing: 1px;
+     height: 100%;     
+     padding: 20%;
 }
 
 @-webkit-keyframes marquee 
@@ -1271,5 +1273,7 @@ body::-webkit-scrollbar {
 
 #botaoStatus
 {
+    background-color: rgba(0, 0, 0,0.1);
+    border: 0px solid rgb(0, 0, 0);
     opacity: 1;
 }

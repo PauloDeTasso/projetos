@@ -1340,30 +1340,35 @@ var statusSistema = document.getElementById('statusSistema');
 function colar()
 {
     statusSistema.innerHTML = "Cut out!";
+    nome.innerHTML = "Cut out!";
     setTimeout("limparStatusSistema()", 10000);
 }
 
 function copiou()
 {
     statusSistema.innerHTML = "Compiled!";
+    nome.innerHTML = "Compiled!";
     setTimeout("limparStatusSistema()", 10000);
 }
 
 function colou()
 {
     statusSistema.innerHTML = "Pasted";
+    nome.innerHTML = "Pasted";
     setTimeout("limparStatusSistema()", 10000);
 }
 
 function audioAmbienteTocando()
 {
     statusSistema.innerHTML = "Ambient music playing!";
+    nome.innerHTML = "Ambient music playing!";
     setTimeout("limparStatusSistema()", 10000);
 }
 
 function audioCachoeiraTocando()
 {
     statusSistema.innerHTML = "Sound of waterfall is playing!";
+    nome.innerHTML = "Sound of waterfall is playing!";
     setTimeout("limparStatusSistema()", 10000);
 }
 
@@ -2052,6 +2057,7 @@ function loopGame()
     } else
     {
         statusPingPong2.innerHTML = "PINGP PONG - OFFLINE!";
+        nome.innerHTML = "PINGP PONG - OFFLINE!";
         setTimeout("limparStatusPingPong2()", 3000);
     }
 
@@ -2147,24 +2153,28 @@ function status3()
 {
     statusPingPong2.style.visibility = 'visible';
     statusPingPong2.innerHTML = 3;
+    nome.innerHTML = 3;
     setTimeout("status2()", 1000);
 }
 
 function status2()
 {
     statusPingPong2.innerHTML = 2;
+    nome.innerHTML = 2;
     setTimeout("status1()", 1000);
 }
 
 function status1()
 {
     statusPingPong2.innerHTML = 1;
+    nome.innerHTML = 1;
     setTimeout("statusGO()", 1000);
 }
 
 function statusGO()
 {
     statusPingPong2.innerHTML = "GO!!!";
+    nome.innerHTML = "GO!!!";
     iniciarPartida();
 }
 
@@ -2183,6 +2193,7 @@ function iniciarPartida()
 function limparStatusPingPong()
 {
     statusPingPong.innerHTML = "PING PONG";
+    nome.innerHTML = "PING PONG";
 }
 
 
@@ -2194,26 +2205,31 @@ function limparStatusPingPong2()
 function statusBotaoParaCima()
 {
     statusPingPong.innerHTML = "MOVE UP!";
+    nome.innerHTML = "MOVE UP!";
 }
 
 function statusBotaoParaBaixo()
 {
     statusPingPong.innerHTML = "MOVE DOWN!";
+    nome.innerHTML = "MOVE DOWN!";
 }
 
 function statusBotaoVelocidade()
 {
     statusPingPong.innerHTML = "CHANGE BALL SPEED!";
+    nome.innerHTML = "CHANGE BALL SPEED!";
 }
 
 function statusZerarPlacar()
 {
     statusPingPong.innerHTML = "RESTART!";
+    nome.innerHTML = "RESTART!";
 }
 
 function statusCanvas()
 {
     statusPingPong.innerHTML = "On the keyboard use the \"A\" or \"D\" key or the up or down arrow.";
+    nome.innerHTML = "On the keyboard use the \"A\" or \"D\" key or the up or down arrow.";
 }
 
 // ////////////////////////////////////////////////// POPUP:
