@@ -256,7 +256,7 @@ body
     background-color: rgba(202, 255, 209, 0.2);
     text-decoration: solid;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.562), 1px 1px 20px rgba(255, 255, 255, 0.5); 
-    font-size: 14pt;
+    font-size: 17pt;
     font-weight: bold;
    /* font-family: "LuckiestGuy";*/
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -961,7 +961,7 @@ body::-webkit-scrollbar {
   {
     background-color: rgba(0, 0, 0, 0.0);      /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 2px solid rgb(107, 31, 247);  /* creates padding around scroll thumb */
+    border: 2px solid rgba(107, 31, 247,0.5);  /* creates padding around scroll thumb */
   }
 
    /**/
