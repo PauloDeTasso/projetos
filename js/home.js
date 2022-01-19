@@ -1304,6 +1304,16 @@ function statusLinkLicenseJavascriptOff()
     nome.innerHTML = 'Hello! How can I help you!';
 }
 
+function statusStatus()
+{
+    nome.innerHTML = "Open / Close - Status!"
+}
+
+function statusStatusOff()
+{
+    nome.innerHTML = 'Hello! How can I help you!';
+}
+
 var secaoIconesRodape = document.getElementById('secaoBotaoLicense');
 
 function sfssdCode()
@@ -2361,15 +2371,16 @@ function checarTecla(e)
 
 // //////////////////////////////////////////////////
 
-var botaoStatus = document.getElementById('botaoStatus');
+var botaoStatus = document.getElementById('imagemBotaoStatus');
 
-function fecharStatus()
+function abrirFecharStatus()
 {
     var estiloStatus = window.getComputedStyle(nome);
     var valorEstiloStatus = estiloStatus.getPropertyValue('visibility');
 
     if (valorEstiloStatus == "hidden")    
     {
+        flutuante.style.display = 'flex';
         nome.style.visibility = 'visible';
         botaoStatus.style.opacity = 1;
     } else
