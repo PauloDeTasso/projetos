@@ -2056,8 +2056,7 @@ function loopGame()
 
     } else
     {
-        statusPingPong2.innerHTML = "PINGP PONG - OFFLINE!";
-        nome.innerHTML = "PINGP PONG - OFFLINE!";
+        statusPingPong2.innerHTML = "PING PONG - OFFLINE!";
         setTimeout("limparStatusPingPong2()", 3000);
     }
 
@@ -2193,13 +2192,13 @@ function iniciarPartida()
 function limparStatusPingPong()
 {
     statusPingPong.innerHTML = "PING PONG";
-    nome.innerHTML = "PING PONG";
 }
 
 
 function limparStatusPingPong2()
 {
     statusPingPong2.style.visibility = "hidden"
+    nome.innerHTML = "Hello! How can I help you!";
 }
 
 function statusBotaoParaCima()
