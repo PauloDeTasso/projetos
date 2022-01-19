@@ -449,7 +449,6 @@ function Controle(key1, key2, key3, key4)
 
 }
 
-
 var controle1 = new Controle(38, 40, 65, 68);
 
 var carro = new Jogador();
@@ -826,8 +825,6 @@ function statusCanvas()
     statusPingPong.innerHTML = "USE THE KEYBOARD \'A\' AND \'DAD\', OR UP AND DOWN ARROW!";
 }
 
-
-
 var secaoPingPong = document.getElementById('secaoCanvas');
 
 function abrirSecaoPingPong()
@@ -858,8 +855,6 @@ function ligarDesligarPingPong()
         iniciarJogo();
     }
 }
-
-
 
 /*
 
