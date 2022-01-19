@@ -169,7 +169,7 @@ var Pessoa = function (nome, peso, vivo, familia)
 
 */
 
-var carro = new Object();
+//var carro = new Object();
 
 var tasso = new Pessoa();
 
@@ -449,7 +449,16 @@ function Controle(key1, key2, key3, key4)
 
 }
 
+
 var controle1 = new Controle(38, 40, 65, 68);
+
+var carro = new Jogador();
+
+carro.altura = 50;
+carro.largura = 50;
+carro.posicaoX = 20;
+carro.posicaoY = 20;
+carro.velocidade = 20;
 
 titulo1.innerHTML = canvas1.canvas;
 
@@ -487,6 +496,7 @@ function loopGame()
                 if (usuario1.posicaoY > 0)
                 { // se a bola não sair da tela
                     usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
+                    carro.posicaoY -= carro.velocidade;
                 }
             }
             else
@@ -494,6 +504,7 @@ function loopGame()
                 if (usuario1.posicaoY < (canvas1.canvas.height - usuario1.altura))
                 { // se a bola não saiu da tela
                     usuario1.posicaoY += usuario1.velocidade; // muda posição
+                    carro.posicaoY += carro.velocidade;
                 }
             }
         }
@@ -606,6 +617,11 @@ function loopGame()
         canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador       
         canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, usuario1.largura, usuario1.altura); /// desenha ioponente
 
+        ////////////testes
+
+        canvas1.contexto.fillRect(carro.posicaoX, carro.posicaoY, carro.largura, carro.altura); /// desenha jogador       
+        canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, carro.largura, carro.altura); /// desenha ioponente
+
         // BOLA ***********************************************************************************
 
         canvas1.contexto.beginPath(); // modo desenho 
@@ -658,6 +674,7 @@ function irParaCima()
     if (usuario1.posicaoY > 0)
     { // se a bola nçao sair da tela
         usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
+        carro.posicaoY -= carro.velocidade;
     }
 }
 
@@ -667,6 +684,7 @@ function irParaBaixo()
     if (usuario1.posicaoY < (canvas1.canvas.height - usuario1.altura))
     { // se a bola não saiu da tela
         usuario1.posicaoY += usuario1.velocidade; // muda posição
+        carro.posicaoY += carro.velocidade;
     }
 }
 
@@ -825,8 +843,6 @@ function abrirSecaoPingPong()
         secaoPingPong.style.display = 'none';
     }
 }
-
-
 
 var pingPongStatusLigado = false;
 
