@@ -1307,11 +1307,13 @@ function statusLinkLicenseJavascriptOff()
 function statusStatus()
 {
     nome.innerHTML = "Open / Close - Status!"
+    statusSistema.innerHTML = "Open / Close - Status!"
 }
 
 function statusStatusOff()
 {
     nome.innerHTML = 'Hello! How can I help you!';
+    statusSistema.innerHTML = "Thanks for the visit!"
 }
 
 var secaoIconesRodape = document.getElementById('secaoBotaoLicense');
