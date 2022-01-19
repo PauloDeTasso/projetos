@@ -18,6 +18,10 @@ var audio3 = document.getElementById('audio3');
 
 var audio4 = document.getElementById('audio4');
 
+var fx1 = document.getElementById('fx1');
+
+var fx2 = document.getElementById('fx2');
+
 var audioSomDaFloresta = document.getElementById('somDaFloresta');
 
 var gif1 = document.getElementById('gif1');
@@ -126,6 +130,9 @@ var contadorOpacidade = 0;
 
 function imagemAtual()
 {
+
+    fx2.play();
+
     if (numero < 10)
     {
         numero = numero + 1;

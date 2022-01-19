@@ -12,6 +12,10 @@ var somLoop = document.getElementById('loop');
 
 var somRespiracao = document.getElementById('respiracao');
 
+var fx1 = document.getElementById('fx1');
+
+var fx2 = document.getElementById('fx2');
+
 var emojiNorte1 = document.getElementById('emojiNorte01');
 
 var contador = 0;
@@ -101,6 +105,7 @@ function girarImagens()
 {
     contador2 = 0;
     setTimeout("imagemAtual(1)", 70);
+    fx1.play();
 }
 
 function imagemAtual(contador2)
