@@ -1246,7 +1246,6 @@ body::-webkit-scrollbar {
     top: 1%;
 }
 
-
 #status
 {
     display: flex;
@@ -1267,8 +1266,15 @@ body::-webkit-scrollbar {
 }
 
 #botaoStatus
-{
-    background-color: rgba(0, 0, 0,0.1);
+{   
+    background-color: rgba(0, 0, 0,0);
     border: 0px solid rgb(0, 0, 0);
+    opacity: 0.9;
+}
+
+#imagemBotaoStatus
+{
     opacity: 1;
+    border-bottom: 50px dashed rgba(255, 255, 255, 0);
+
 }

@@ -97,14 +97,14 @@
 
     <section id="flutuante">
 
-        <button id="botaoStatus" type="button" onclick="fecharStatus()">
-            <img src="../icones/fechar01.png" alt="Icone fechar status!" width="10px" height="auto">
-        </button>
-
-        <p id="status" onclick="contagemRegresiva()" onmousemove="alterarTexto1(), statusTextoEmMovimento()"
-            onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()">
+        <p id="status">
             Hello! How can I help you!
         </p>
+
+        <button id="botaoStatus" type="button" onclick="fecharStatus()">
+            <img id="imagemBotaoStatus" src="../icones/fechar01.png" alt="Icone fechar status!" width="10px"
+                height="auto">
+        </button>
 
     </section>
 
