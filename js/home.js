@@ -1883,15 +1883,45 @@ var controle1 = new Controle(38, 40, 65, 68);
 
 // JOGO PING PONG
 
+var intervaloLoopGame = setInterval(loopGame, 30);
+
+/*
+function myTimer() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+*/
+
+var pingPongStatusLigado = false;
+
+function ligarDesligarPingPong()
+{
+    if (pingPongStatusLigado)
+    {
+        canvas = null;
+        pararIntervaloLoopGame();
+    } else
+    {
+        pingPongStatusLigado = true;
+        setInterval
+        iniciarJogo();
+    }
+}
+
+function pararIntervaloLoopGame() 
+{
+    pingPongStatusLigado = false;
+    clearInterval(intervaloLoopGame);
+}
+
 function iniciarJogo()
 {
-    pingPongStatusLigado = true;
-
     document.addEventListener('keyup', controle1.keyUp, false);
     document.addEventListener('keydown', controle1.keyDown, false);
 
     setInterval(loopGame, 30);
 }
+
 
 function loopGame()
 {
@@ -2205,7 +2235,6 @@ function limparStatusPingPong()
 function limparStatusPingPong2()
 {
     statusPingPong2.style.visibility = "hidden"
-    nome.innerHTML = "Hello! How can I help you!";
 }
 
 function statusBotaoParaCima()
@@ -2328,20 +2357,7 @@ function checarTecla(e)
     statusPingPong.innerText = (evento.keyCode);
 }
 
-var pingPongStatusLigado = false;
 
-function ligarDesligarPingPong()
-{
-    if (pingPongStatusLigado)
-    {
-        pingPongStatusLigado = false;
-        canvas = null;
-    } else
-    {
-        pingPongStatusLigado = true;
-        iniciarJogo();
-    }
-}
 
 // //////////////////////////////////////////////////
 
