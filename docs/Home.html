@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/estilo_home.css">
-    <link id="favIcon" rel="icon" href="/icones/STOPICON.png" type="image/gif">
+    <link id="favIcon" rel="icon" href="/icones/PLAYICON.png" type="image/gif">
 
     <title>Paulo de Tasso - Developer</title>
 
@@ -40,11 +40,11 @@
             <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
         </audio>
 
-        <audio loop class="audios" id='Cachoeira' onplaying="audioCachoeiraTocando()">
+        <audio autoplay loop class="audios" id='Cachoeira' onplaying="audioCachoeiraTocando()">
             <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
         </audio>
 
-        <audio loop class="audios" id='somDaFloresta'>
+        <audio autoplay loop class="audios" id='somDaFloresta'>
             <source id="audioSource5" src="../audios/som da floresta.ogg" type="audio/ogg">
         </audio>
 
@@ -182,7 +182,7 @@
                         <button class="botoes" onclick="play()" type="button">
 
                             <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
-                                src="../icones/playBranco.png" alt="Icone de som" width="31px" height="31px">
+                                src="../icones/playBrancoTocando.png" alt="Icone de som" width="31px" height="31px">
 
                         </button>
 
