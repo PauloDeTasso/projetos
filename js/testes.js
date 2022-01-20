@@ -10,6 +10,14 @@ var titulo4 = document.getElementById('titulo4');
 
 var titulo5 = document.getElementById('titulo5');
 
+var x = document.getElementById('X');
+
+var y = document.getElementById('Y');
+
+var larguraX = document.getElementById('larguraX');
+
+var larguraY = document.getElementById('larguraY');
+
 function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA
 {
     this.nome = "";
@@ -456,7 +464,7 @@ var carro = new Jogador();
 carro.altura = 50;
 carro.largura = 50;
 carro.posicaoX = 20;
-carro.posicaoY = 20;
+carro.posicaoY = canvas1.canvas.height - carro.altura;
 carro.velocidade = 20;
 
 titulo1.innerHTML = canvas1.canvas;
@@ -486,7 +494,8 @@ function loopGame()
 
     if (pingPongStatusLigado)
     {
-        //  MOVIMENTAR JOGADOR ********************************************************************
+        //  MOVIMENTAR JOGADOR  - 
+        //VERTICAL:********************************************************************
 
         if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
         { // se o usuário precionar para cima
@@ -495,7 +504,6 @@ function loopGame()
                 if (usuario1.posicaoY > 0)
                 { // se a bola não sair da tela
                     usuario1.posicaoY -= usuario1.velocidade; // muda posição do jogador
-                    carro.posicaoY -= carro.velocidade;
                 }
             }
             else
@@ -503,7 +511,36 @@ function loopGame()
                 if (usuario1.posicaoY < (canvas1.canvas.height - usuario1.altura))
                 { // se a bola não saiu da tela
                     usuario1.posicaoY += usuario1.velocidade; // muda posição
-                    carro.posicaoY += carro.velocidade;
+                }
+            }
+        }
+
+        //HORIZONTAL:
+
+        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+        { // se o usuário precionar para cima
+            if (controle1.teclaSetaParaCimaPressionada)
+            { // se para cima for pressionado
+                if (carro.posicaoX > 0)
+                { // se a bola não sair da tela
+                    // muda posição do jogador
+                    carro.posicaoX -= carro.velocidade;
+                    x.innerHTML = "X = " + carro.posicaoX;
+                    y.innerHTML = "Y = " + carro.posicaoY;
+                    larguraX.innerHTML = "Lagura Total X = " + carro.largura;
+                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                }
+            }
+            else
+            { // se for para baixo 
+                if (carro.posicaoX < (canvas1.canvas.width - carro.largura))
+                { // se a bola não saiu da tela
+                    // muda posição
+                    carro.posicaoX += carro.velocidade;
+                    x.innerHTML = "X = " + carro.posicaoX;
+                    y.innerHTML = "Y = " + carro.posicaoY;
+                    larguraX.innerHTML = "Lagura Total X = " + (canvas1.canvas.width - carro.largura);
+                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
                 }
             }
         }

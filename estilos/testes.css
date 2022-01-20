@@ -195,3 +195,30 @@ font-size: 25pt;
   color: aqua;
   border: 10px solid red;
 }
+
+#X
+{
+  color: aquamarine;
+}
+
+#Y
+{
+  color: aqua;
+}
+
+#painel
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#info
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
