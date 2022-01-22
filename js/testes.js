@@ -414,28 +414,29 @@ function logKey(e)
 
 function Controle(key1, key2, key3, key4)
 {
-    this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
-    this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
+    this.teclaUp = false; // controle1.teclaUp
+    this.teclaDown = false;  // controle1.teclaDown
 
-    this.teclaLeft = false; // controle1.teclaParaCimaPressionada
-    this.teclaRight = false;  // controle1.teclaParaBaixoPressionada
+    this.teclaLeft = false; // controle1.teclaParaEsquerdaPressionada
+    this.teclaRight = false;  // controle1.teclaParaDireitaPressionada
 
     this.keyUp = function (e)
     {
         if (e.keyCode == key1)
         {
-            controle1.teclaSetaParaCimaPressionada = false;
+            controle1.teclaUp = false;
 
         } else if (e.keyCode == key2)
         {
-            controle1.teclaSetaParaBaixoPressionada = false;
+            controle1.teclaDown = false;
+
         } else if (e.keyCode == key3)
         {
-            controle1.teclaSetaParaCimaPressionada = false;
+            controle1.teclaLeft = false;
 
         } else if (e.keyCode == key4)
         {
-            controle1.teclaSetaParaBaixoPressionada = false;
+            controle1.teclaRight = false;
         }
     }
 
@@ -443,24 +444,25 @@ function Controle(key1, key2, key3, key4)
     {
         if (e.keyCode == key1)
         {
-            controle1.teclaSetaParaCimaPressionada = true;
+            controle1.teclaUp = true;
 
         } else if (e.keyCode == key2)
         {
-            controle1.teclaSetaParaBaixoPressionada = true;
+            controle1.teclaDown = true;
+
         } else if (e.keyCode == key3)
         {
-            controle1.teclaSetaParaCimaPressionada = true;
+            controle1.teclaLeft = true;
 
         } else if (e.keyCode == key4)
         {
-            controle1.teclaSetaParaBaixoPressionada = true;
+            controle1.teclaRight = true;
         }
     }
 
 }
 
-var controle1 = new Controle(38, 40, 65, 68);
+var controle1 = new Controle(87, 83, 65, 68);
 
 var carro = new Jogador();
 
@@ -468,13 +470,15 @@ carro.altura = 50;
 carro.largura = 50;
 carro.posicaoX = 20;
 carro.posicaoY = canvas1.canvas.height - carro.altura;
-carro.velocidade = 20;
+carro.velocidade = 1;
 
-titulo1.innerHTML = canvas1.canvas;
+//////////////////////////
 
-titulo2.innerHTML = canvas1 instanceof CanvasHtml;
+titulo1.innerHTML = "ola";
 
-titulo3.innerHTML = "Ola";
+titulo2.innerHTML = "oi";
+
+titulo3.innerHTML = "oi";
 
 titulo4.innerHTML = "Oi";
 
@@ -500,9 +504,9 @@ function loopGame()
         //  MOVIMENTAR JOGADOR  - 
         //VERTICAL:********************************************************************
 
-        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+        if (controle1.teclaUp != controle1.teclaDown)
         { // se o usuário precionar para cima
-            if (controle1.teclaSetaParaCimaPressionada)
+            if (controle1.teclaUp)
             { // se para cima for pressionado
                 if (usuario1.posicaoY > 0)
                 { // se a bola não sair da tela
@@ -518,12 +522,12 @@ function loopGame()
             }
         }
 
-        //HORIZONTAL:
+        //VERTICAL:
 
-        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
-        { // se o usuário precionar para cima
-            if (controle1.teclaSetaParaCimaPressionada)
-            { // se para cima for pressionado
+        if (controle1.teclaLeft != controle1.teclaRight)
+        { // se o usuário precionar para a esquerda
+            if (controle1.teclaLeft)
+            { // se para esquerda for pressionado
                 if (carro.posicaoX > 0)
                 { // se a bola não sair da tela
                     // muda posição do jogador
@@ -535,7 +539,7 @@ function loopGame()
                 }
             }
             else
-            { // se for para baixo 
+            { // se for para direita
                 if (carro.posicaoX < (canvas1.canvas.width - carro.largura))
                 { // se a bola não saiu da tela
                     // muda posição
@@ -548,13 +552,13 @@ function loopGame()
             }
         }
 
-        //VERTICAL:
+        //HORIZONTAL:
 
-        if (controle1.teclaLeft != controle1.teclaRight)
+        if (controle1.teclaUp != controle1.teclaDown)
         { // se o usuário precionar para cima
-            if (controle1.teclaLeft)
+            if (controle1.teclaUp)
             { // se para cima for pressionado
-                if (carro.posicaoY < 0)
+                if (carro.posicaoY > 0)
                 { // se a bola não sair da tela
                     // muda posição do jogador
                     carro.posicaoY -= carro.velocidade;
@@ -569,7 +573,7 @@ function loopGame()
                 if (carro.posicaoY < (canvas1.canvas.height - carro.altura))
                 { // se a bola não saiu da tela
                     // muda posição
-                    carro.posicaoX += carro.velocidade;
+                    carro.posicaoY += carro.velocidade;
                     x.innerHTML = "X = " + carro.posicaoX;
                     y.innerHTML = "Y = " + carro.posicaoY;
                     larguraX.innerHTML = "Lagura Total X = " + (canvas1.canvas.width - carro.largura);
@@ -607,7 +611,7 @@ function loopGame()
                 { // caso o jogador encoste na bola no eixo Y
                     bola1.movimentoParaDireita = true;
 
-                    if (controle1.teclaSetaParaBaixoPressionada)
+                    if (controle1.teclaDown)
                     { // se o usuário estiver indo para baixo e tocar na bola
                         bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
                     }
@@ -738,6 +742,7 @@ function loopGame()
 
 // ////////////////////////////////////
 
+/*
 function irParaCima()
 {
     if (usuario1.posicaoY > 0)
@@ -756,6 +761,7 @@ function irParaBaixo()
         carro.posicaoY += carro.velocidade;
     }
 }
+*/
 
 var imagemBotaoOpcaoDeVelocidade = document.getElementById('imagemBotaoOpcaoVelocidade');
 
@@ -939,7 +945,7 @@ function checarTecla(e)
 var canvas, context,
     usuario1.largura, usuario1.altura,
     usuario1.posicaoX, usuario1.posicaoY,
-    controle1.teclaSetaParaCimaPressionada, controle1.teclaSetaParaBaixoPressionada,
+    controle1.teclaUp, controle1.teclaDown,
     oponente1.posicaoX, oponente1.posicaoY,
     usuario1.movimentoParaCima,
     bola1.raio,
@@ -962,8 +968,8 @@ function iniciarJogo()
     usuario1.altura = 90;
     usuario1.posicaoX = 0;
     usuario1.posicaoY = (canvas.height - usuario1.altura) / 2;
-    controle1.teclaSetaParaBaixoPressionada = false;
-    controle1.teclaSetaParaCimaPressionada = false;
+    controle1.teclaDown = false;
+    controle1.teclaUp = false;
 
     oponente1.posicaoX = canvas.width - usuario1.largura;
     oponente1.posicaoY = 0;
@@ -995,10 +1001,10 @@ function keyUp(e)
 {
     if (e.keyCode == 38)
     {
-        controle1.teclaSetaParaCimaPressionada = false;
+        controle1.teclaUp = false;
     } else if (e.keyCode == 40)
     {
-        controle1.teclaSetaParaBaixoPressionada = false;
+        controle1.teclaDown = false;
     }
 }
 
@@ -1006,10 +1012,10 @@ function keyDown(e)
 {
     if (e.keyCode == 38)
     {
-        controle1.teclaSetaParaCimaPressionada = true;
+        controle1.teclaUp = true;
     } else if (e.keyCode == 40)
     {
-        controle1.teclaSetaParaBaixoPressionada = true;
+        controle1.teclaDown = true;
     }
 }
 
@@ -1017,10 +1023,10 @@ function keyLeft(e)
 {
     if (e.keyCode == 37)
     {
-        controle1.teclaSetaParaCimaPressionada = false;
+        controle1.teclaUp = false;
     } else if (e.keyCode == 39)
     {
-        controle1.teclaSetaParaBaixoPressionada = false;
+        controle1.teclaDown = false;
     }
 }
 
@@ -1028,10 +1034,10 @@ function keyRight(e)
 {
     if (e.keyCode == 37)
     {
-        controle1.teclaSetaParaCimaPressionada = true;
+        controle1.teclaUp = true;
     } else if (e.keyCode == 39)
     {
-        controle1.teclaSetaParaBaixoPressionada = true;
+        controle1.teclaDown = true;
     }
 }
 
@@ -1046,9 +1052,9 @@ function loopGame()
 
         //  JOGADOR ********************************************************************
 
-        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+        if (controle1.teclaUp != controle1.teclaDown)
         { // se o usuário precionar para cima
-            if (controle1.teclaSetaParaCimaPressionada)
+            if (controle1.teclaUp)
             { // se para cima for pressionado
                 if (usuario1.posicaoY > 0)
                 { // se a bola nçao sair da tela
@@ -1094,7 +1100,7 @@ function loopGame()
                 { // caso o jogador encoste na bola no eixo Y
                     bola1.movimentoParaDireita = true;
 
-                    if (controle1.teclaSetaParaBaixoPressionada)
+                    if (controle1.teclaDown)
                     { // se o usuário estiver indo para baixo e tocar na bola
                         bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
                     }
