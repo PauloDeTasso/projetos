@@ -417,6 +417,9 @@ function Controle(key1, key2, key3, key4)
     this.teclaSetaParaCimaPressionada = false; // controle1.teclaSetaParaCimaPressionada
     this.teclaSetaParaBaixoPressionada = false;  // controle1.teclaSetaParaBaixoPressionada
 
+    this.teclaLeft = false; // controle1.teclaParaCimaPressionada
+    this.teclaRight = false;  // controle1.teclaParaBaixoPressionada
+
     this.keyUp = function (e)
     {
         if (e.keyCode == key1)
@@ -534,6 +537,36 @@ function loopGame()
             else
             { // se for para baixo 
                 if (carro.posicaoX < (canvas1.canvas.width - carro.largura))
+                { // se a bola não saiu da tela
+                    // muda posição
+                    carro.posicaoX += carro.velocidade;
+                    x.innerHTML = "X = " + carro.posicaoX;
+                    y.innerHTML = "Y = " + carro.posicaoY;
+                    larguraX.innerHTML = "Lagura Total X = " + (canvas1.canvas.width - carro.largura);
+                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                }
+            }
+        }
+
+        //VERTICAL:
+
+        if (controle1.teclaLeft != controle1.teclaRight)
+        { // se o usuário precionar para cima
+            if (controle1.teclaLeft)
+            { // se para cima for pressionado
+                if (carro.posicaoY < 0)
+                { // se a bola não sair da tela
+                    // muda posição do jogador
+                    carro.posicaoY -= carro.velocidade;
+                    x.innerHTML = "X = " + carro.posicaoX;
+                    y.innerHTML = "Y = " + carro.posicaoY;
+                    larguraX.innerHTML = "Lagura Total X = " + carro.largura;
+                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                }
+            }
+            else
+            { // se for para baixo 
+                if (carro.posicaoY < (canvas1.canvas.height - carro.altura))
                 { // se a bola não saiu da tela
                     // muda posição
                     carro.posicaoX += carro.velocidade;
@@ -891,6 +924,12 @@ function ligarDesligarPingPong()
         pingPongStatusLigado = true;
         iniciarJogo();
     }
+}
+
+function checarTecla(e)
+{
+    var evento = window.event ? window.event : e;
+    titulo5.innerText = (evento.keyCode);
 }
 
 /*
