@@ -16,7 +16,7 @@ var y = document.getElementById('Y');
 
 var larguraX = document.getElementById('larguraX');
 
-var larguraY = document.getElementById('larguraY');
+var alturaY = document.getElementById('alturaY');
 
 function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA
 {
@@ -470,7 +470,7 @@ carro.altura = 50;
 carro.largura = 50;
 carro.posicaoX = 20;
 carro.posicaoY = canvas1.canvas.height - carro.altura;
-carro.velocidade = 1;
+carro.velocidade = 10;
 
 //////////////////////////
 
@@ -532,10 +532,11 @@ function loopGame()
                 { // se a bola não sair da tela
                     // muda posição do jogador
                     carro.posicaoX -= carro.velocidade;
+
                     x.innerHTML = "X = " + carro.posicaoX;
                     y.innerHTML = "Y = " + carro.posicaoY;
-                    larguraX.innerHTML = "Lagura Total X = " + carro.largura;
-                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                    larguraX.innerHTML = "Lagura Total X = " + canvas1.canvas.width;
+                    alturaY.innerHTML = "Lagura Total Y = " + canvas1.canvas.height;
                 }
             }
             else
@@ -544,10 +545,11 @@ function loopGame()
                 { // se a bola não saiu da tela
                     // muda posição
                     carro.posicaoX += carro.velocidade;
+
                     x.innerHTML = "X = " + carro.posicaoX;
                     y.innerHTML = "Y = " + carro.posicaoY;
-                    larguraX.innerHTML = "Lagura Total X = " + (canvas1.canvas.width - carro.largura);
-                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                    larguraX.innerHTML = "Lagura Total X = " + canvas1.canvas.width;
+                    alturaY.innerHTML = "Lagura Total Y = " + canvas1.canvas.height;
                 }
             }
         }
@@ -564,8 +566,8 @@ function loopGame()
                     carro.posicaoY -= carro.velocidade;
                     x.innerHTML = "X = " + carro.posicaoX;
                     y.innerHTML = "Y = " + carro.posicaoY;
-                    larguraX.innerHTML = "Lagura Total X = " + carro.largura;
-                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                    larguraX.innerHTML = "Lagura Total X = " + canvas1.canvas.width;
+                    alturaY.innerHTML = "Lagura Total Y = " + canvas1.canvas.height;
                 }
             }
             else
@@ -576,8 +578,8 @@ function loopGame()
                     carro.posicaoY += carro.velocidade;
                     x.innerHTML = "X = " + carro.posicaoX;
                     y.innerHTML = "Y = " + carro.posicaoY;
-                    larguraX.innerHTML = "Lagura Total X = " + (canvas1.canvas.width - carro.largura);
-                    larguraY.innerHTML = "Lagura Total Y = " + carro.altura;
+                    larguraX.innerHTML = "Lagura Total X = " + canvas1.canvas.width;
+                    alturaY.innerHTML = "Lagura Total Y = " + canvas1.canvas.height;
                 }
             }
         }
