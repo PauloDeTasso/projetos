@@ -85,7 +85,7 @@ var botaoPlay = document.getElementById('iconePlay');
 
 var secaoIframeHome = document.getElementById('secaoTabela');
 
-var somCahoeira = document.getElementById('Cachoeira');
+var somCachoeira = document.getElementById('Cachoeira');
 
 var sfssd = document.getElementById('SFSSD');
 
@@ -150,7 +150,7 @@ imagemAtual();
 function play()
 {
     audioPrincipal.play();
-    somCahoeira.play();
+    somCachoeira.play();
     botaoPlay.setAttribute('src', '../icones/playBrancoTocando.png');
     botaoPausar.setAttribute('src', '../icones/pauseBranco.png');
     favIcon.setAttribute('href', '../icones/PLAYICON.png')
@@ -159,7 +159,8 @@ function play()
 function pausar()
 {
     audioPrincipal.pause();
-    somCahoeira.pause();
+    somCachoeira.pause();
+    audioSomDaFloresta.pause();
     botaoPlay.setAttribute('src', '../icones/playBranco.png');
     botaoPausar.setAttribute('src', '../icones/pauseBrancoPausado.png');
     favIcon.setAttribute('href', '../icones/PAUSEICON.png');
@@ -206,7 +207,7 @@ function aumentar_volume()
                 audio3.volume += 0.0;
                 audio4.volume += 0.0;
                 audioSomDaFloresta.volume += 0.0;
-                somCahoeira.volume += 0.0;
+                somCachoeira.volume += 0.0;
                 iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
                 iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
                 iconeSomExtra.style.visibility = 'hidden';
@@ -218,7 +219,7 @@ function aumentar_volume()
                 audio3.volume += 0.0;
                 audio4.volume += 0.0;
                 audioSomDaFloresta.volume += 0.0;
-                somCahoeira.volume += 0.0;
+                somCachoeira.volume += 0.0;
                 iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
                 iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
                 iconeSomExtra.style.visibility = 'visible';
@@ -236,10 +237,10 @@ function aumentar_volume()
                 audio3.volume += 0.1;
                 audio4.volume += 0.1;
                 audioSomDaFloresta.volume += 0.1;
-                somCahoeira.volume += 0.1;
+                somCachoeira.volume += 0.1;
                 audio4.volume += 0.1;
                 audioSomDaFloresta.volume += 0.1;
-                somCahoeira.volume += 0.1;
+                somCachoeira.volume += 0.1;
                 iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
                 iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
                 iconeSomExtra.style.visibility = 'hidden';
@@ -251,7 +252,7 @@ function aumentar_volume()
                 audio3.volume += 0.1;
                 audio4.volume += 0.1;
                 audioSomDaFloresta.volume += 0.1;
-                somCahoeira.volume += 0.1;
+                somCachoeira.volume += 0.1;
                 iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto10.png');
                 iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo10.png');
                 iconeSomExtra.style.visibility = 'visible';
@@ -267,7 +268,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
 
@@ -281,7 +282,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto8.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo8.png');
 
@@ -295,7 +296,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto7.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo7.png');
 
@@ -309,7 +310,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto6.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo6.png');
 
@@ -323,7 +324,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto5.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo5.png');
 
@@ -337,7 +338,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto4.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo4.png');
 
@@ -351,7 +352,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto3.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo3.png');
 
@@ -365,7 +366,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto2.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo2.png');
 
@@ -379,7 +380,7 @@ function aumentar_volume()
             audio3.volume += 0.1;
             audio4.volume += 0.1;
             audioSomDaFloresta.volume += 0.1;
-            somCahoeira.volume += 0.1;
+            somCachoeira.volume += 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo1.png');
 
@@ -393,7 +394,7 @@ function aumentar_volume()
             audio3.volume += 0.0;
             audio4.volume += 0.0;
             audioSomDaFloresta.volume += 0.0;
-            somCahoeira.volume += 0.0;
+            somCachoeira.volume += 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
     }
@@ -414,7 +415,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto9.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo9.png');
             iconeSomExtra.style.visibility = 'hidden';
@@ -429,7 +430,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
             iconeSomExtra.style.visibility = 'hidden';
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto8.png');
@@ -445,7 +446,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto7.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo7.png');
@@ -460,7 +461,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto6.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo6.png');
@@ -475,7 +476,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto5.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo5.png');
@@ -490,7 +491,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto4.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo4.png');
@@ -505,7 +506,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto3.png');
@@ -521,7 +522,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto2.png');
@@ -537,7 +538,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
 
 
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto1.png');
@@ -553,7 +554,7 @@ function diminuir_volume()
             audio3.volume -= 0.1;
             audio4.volume -= 0.1;
             audioSomDaFloresta.volume -= 0.1;
-            somCahoeira.volume -= 0.1;
+            somCachoeira.volume -= 0.1;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
             break;
@@ -566,7 +567,7 @@ function diminuir_volume()
             audio3.volume -= 0.0;
             audio4.volume -= 0.0;
             audioSomDaFloresta.volume -= 0.0;
-            somCahoeira.volume -= 0.0;
+            somCachoeira.volume -= 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealto0.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo0.png');
             break;
@@ -579,7 +580,7 @@ function diminuir_volume()
             audio3.volume -= 0.0;
             audio4.volume -= 0.0;
             audioSomDaFloresta.volume -= 0.0;
-            somCahoeira.volume -= 0.0;
+            somCachoeira.volume -= 0.0;
             iconeAumentarVolume.setAttribute('src', '../icones/800x600/volumealtoalto.png');
             iconeDiminuirVolume.setAttribute('src', '../icones/800x600/volumebaixo.png');
     }
@@ -590,7 +591,7 @@ function mudo()
 {
     volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
-    if (audioPrincipal.muted || audio1.muted || audio2.muted || audio3.muted || audio4.muted || somCahoeira.muted || audioSomDaFloresta.muted)
+    if (audioPrincipal.muted || audio1.muted || audio2.muted || audio3.muted || audio4.muted || somCachoeira.muted || audioSomDaFloresta.muted)
     {
 
         if (iconeSomExtra.style.visibility == 'hidden' && volumeArredondado == 10)
@@ -601,7 +602,7 @@ function mudo()
             audio3.muted = false;
             audio4.muted = false;
             audioSomDaFloresta.muted = false;
-            somCahoeira.muted = false;
+            somCachoeira.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             favIcon.setAttribute('href', '../icones/800x600/sound.png');
             iconeSomExtra.style.visibility = 'visible';
@@ -614,7 +615,7 @@ function mudo()
             audio3.muted = false;
             audio4.muted = false;
             audioSomDaFloresta.muted = false;
-            somCahoeira.muted = false;
+            somCachoeira.muted = false;
             iconeMudo.setAttribute('src', '../icones/800x600/sound.png');
             favIcon.setAttribute('href', '../icones/800x600/sound.png');
             iconeSomExtra2.style.visibility = 'hidden';
@@ -628,7 +629,7 @@ function mudo()
         audio3.muted = true;
         audio4.muted = true;
         audioSomDaFloresta.muted = true;
-        somCahoeira.muted = true;
+        somCachoeira.muted = true;
         iconeSomExtra.style.visibility = 'hidden';
         iconeSomExtra2.style.visibility = 'visible';
         iconeMudo.setAttribute('src', '../icones/800x600/mute.png');
