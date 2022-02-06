@@ -401,6 +401,14 @@ function Oponente()
 
 var oponente1 = new Oponente();
 
+var oponente2 = new Oponente();
+
+oponente2.posicaoX = 0;
+oponente2.posicaoY = 0;
+oponente2.altura = 50;
+oponente2.largura = 50;
+oponente2.velocidade = 20;
+
 const log = document.getElementById('log');
 
 document.addEventListener('keydown', logKey);
@@ -603,6 +611,25 @@ function loopGame()
             }
         }
 
+        //2
+
+        if (oponente2.movimentoParaDireita)
+        { // caso o oponente estivcer inddo para direita
+            oponente2.posicaoX += oponente2.velocidade;
+            if (oponente2.posicaoX >= canvas1.canvas.width - oponente2.largura) // se a bola estiver saindo da tela
+            {
+                oponente2.movimentoParaDireita = false;
+            }
+        }
+        else
+        { // se o oponente estiver se movendo para esquerda
+            oponente2.posicaoX -= oponente2.velocidade;
+            if (oponente2.posicaoX <= 0)
+            { // caso a bola estiver saindo da tela
+                oponente2.movimentoParaDireita = true;
+            }
+        }
+
         // BOLA **************************************************************************
 
         if (bola1.tempo <= 0) // caso a bola estiver em jogo, o tempo  e zerado apos marcar ponto, abola ficará invisivel por um tempo
@@ -692,10 +719,14 @@ function loopGame()
         canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador       
         canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, usuario1.largura, usuario1.altura); /// desenha ioponente
 
-        ////////////testes
+        /////////// TESTES:
 
         canvas1.contexto.fillRect(carro.posicaoX, carro.posicaoY, carro.largura, carro.altura); /// desenha jogador       
         canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, carro.largura, carro.altura); /// desenha ioponente
+
+        canvas1.contexto.fillRect(oponente2.posicaoX, oponente2.posicaoY, oponente2.largura, oponente2.altura); /// desenha ioponente
+
+        //////////////////////////////////
 
         // BOLA ***********************************************************************************
 
