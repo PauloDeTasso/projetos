@@ -48,6 +48,10 @@ var nome = document.getElementById("status");
 
 var portaPrincipal = document.getElementById('portaPrincipal');
 
+var botaoAlterarTamanhoTela = document.getElementById('botaoAlterarTamanhoTela');
+
+var canvasHTML5 = document.getElementById('canvas');
+
 var aleatorio;
 
 var caminho;
@@ -1159,7 +1163,6 @@ function statusIconeTabela()
 }
 
 ///////////////////////////////////////////////////////* -  ICONES CONTATOS: - */
-
 
 /**/
 
@@ -2392,6 +2395,22 @@ function abrirFecharStatus()
         botaoStatus.style.opacity = 0.0;
         flutuante.style.display = 'none';
     }
+}
+
+function alterarTamanhoTela()
+{
+    if (canvasHTML5.getAttribute("width") == "700px")
+    {
+        canvasHTML5.setAttribute("width", "500px");
+    } else
+    {
+        canvasHTML5.setAttribute("width", "700px");
+    }
+}
+
+function statusTamanhoTela()
+{
+
 }
 
 // ////////////////////////////////////////////////// CANVAS 2:
