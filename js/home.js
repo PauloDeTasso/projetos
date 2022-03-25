@@ -1,5 +1,7 @@
 /* var 'S*/
 
+var botaoBestBusiness = document.getElementById('botaoBestBusiness');
+
 var html5 = document.getElementById('html5');
 
 var numeroDePaginas = window.history.length;
@@ -1394,6 +1396,13 @@ function audioCachoeiraTocando()
     nome.innerHTML = "Sound of waterfall is playing!";
     setTimeout("limparStatusSistema()", 10000);
 }
+
+function abrirBestBusiness(url)
+{
+    window.open(url, _blank);
+}
+
+botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("../testes/Best Business/Mercadorias.html") }, false);
 
 /*
 const input = document.querySelector('input');

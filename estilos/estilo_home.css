@@ -1289,3 +1289,18 @@ body::-webkit-scrollbar {
     width: 100%;
     height: auto;
 }
+
+#botaoBestBusiness
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border: 1px solid rgb(94, 94, 94);
+    color: rgb(82, 82, 82);
+    padding: 1%;
+}
