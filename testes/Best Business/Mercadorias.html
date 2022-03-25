@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html id="html5" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Mercadorias.css" rel="stylesheet" type="text/css" />
+    <title id="titulo">Mercadorias</title>
+</head>
+
+<body id="body">
+
+    <button type="button" id="botaoReiniciar">
+        Reiniciar
+    </button>
+
+    <br>
+
+    <section id="secaoPrincipal">
+
+        <section>
+
+            <label for="entradaCidadeOrigem" class="entradas">
+                CIDADE DE ORIGEM:
+            </label>
+
+            <input type="text" id="entradaCidadeOrigem" class="entradas" value="" list="listaCidades">
+
+            <button type="button" id="botaoApagarEntrada1">
+                Backspace
+            </button>
+
+        </section>
+
+        <section>
+
+            <label for="entradaCidadeDestino" class="entradas">
+                CIDADE DE DESTINO:
+            </label>
+
+            <input type="text" id="entradaCidadeDestino" class="entradas" value="" list="listaCidades">
+
+            <button type="button" id="botaoApagarEntrada2">
+                Backspace
+            </button>
+
+        </section>
+
+        <section>
+
+            <label for="entradaProduto" class="entradas">
+                PRODUTO:
+            </label>
+
+            <input type="text" id="entradaProduto" class="entradas" value="" list="listaProdutos">
+
+            <button type="button" id="botaoApagarEntrada3">
+                Backspace
+            </button>
+
+        </section>
+
+        <datalist id="listaCidades">
+            <option value="conceicao">
+            <option value="douwesen">
+            <option value="falaiseDeFleur">
+            <option value="islaMuelle">
+            <option value="oxbay">
+            <option value="redmond">
+        </datalist>
+
+        <datalist id="listaProdutos">
+            <option value="Cerveja">
+            <option value="Chocolate">
+            <option value="Canela">
+            <option value="Roupas">
+            <option value="Café">
+            <option value="Algodão">
+            <option value="Ébano">
+            <option value="Frutas">
+            <option value="Couro">
+            <option value="Linho">
+            <option value="Mogno">
+            <option value="Óleo">
+            <option value="Páprica">
+            <option value="Tábuas">
+            <option value="Rum">
+            <option value="Lona">
+            <option value="Sandálias">
+            <option value="Seda">
+            <option value="Açúcar">
+            <option value="Trigo">
+            <option value="Vinho">
+        </datalist>
+
+        <br>
+
+        <button type="button" id="botaoPesquisar">
+            PESQUISAR
+        </button>
+
+        <br>
+
+        CIDADES:
+
+        <section id="secaoCidades">
+
+            <!-- CONCEICAO -->
+
+            <section class="todasAsCidades" id="secaoConceicao">
+
+                CONCEICAO:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaConceicao">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasConceicao">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaConceicao">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoConceicao">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - CONCEICAO -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoConceicao">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoConceicao">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="todasAsCidades" id="secaoDouwesen">
+
+                DOUWESEN:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaDouwesen">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasDouwesen">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaDouwesen">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoDouwesen">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - Douwesen -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoDouwesen">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoDouwesen">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="todasAsCidades" id="secaoFalaiseDeFleur">
+
+                FALAISEDEFLEUR:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - FalaiseDeFleur -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoFalaiseDeFleur">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoFalaiseDeFleur">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="todasAsCidades" id="secaoIslaMuelle">
+
+                ISLAMUELLE:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasIslaMuelle">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - IslaMuelle -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoIslaMuelle">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoIslaMuelle">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="todasAsCidades" id="secaoOxbay">
+
+                OXBAY:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaOxbay">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasOxbay">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaOxbay">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoOxbay">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - Oxbay -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoOxbay">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoOxbay">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="todasAsCidades" id="secaoRedmond">
+
+                REDMOND:
+
+                <section class="todosOsProdutos">
+
+                    PROD/COMPRA/VENDA
+
+                </section>
+
+                <!-- ALE/CERVEJA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    ALE/CERVEJA
+                    <section class="compra" id="compraCervejaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaCervejaRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- CHOCOLATE - Redmond -->
+
+                <section class="todosOsProdutos">
+                    CHOCOLATE
+                    <section class="compra" id="compraChocolateRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaChocolateRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- CANELA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    CANELA
+                    <section class="compra" id="compraCanelaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaCanelaRedmond">
+
+                    </section>
+
+                </section>
+
+
+                <!-- ROUPAS - Redmond -->
+
+                <section class="todosOsProdutos">
+                    ROUPAS
+                    <section class="compra" id="compraRoupasRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaRoupasRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- CAFÉ - Redmond -->
+
+                <section class="todosOsProdutos">
+                    CAFÉ
+                    <section class="compra" id="compraCafeRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaCafeRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- ALGODÃO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    ALGODÃO
+                    <section class="compra" id="compraAlgodaoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaAlgodaoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- ÉBANO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    ÉBANO
+                    <section class="compra" id="compraEbanoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaEbanoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- FRUTAS - Redmond -->
+
+                <section class="todosOsProdutos">
+                    FRUTAS
+                    <section class="compra" id="compraFrutasRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaFrutasRedmond">
+
+                    </section>
+
+                </section>
+
+
+                <!-- COURO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    COURO
+                    <section class="compra" id="compraCouroRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaCouroRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- LINHO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    LINHO
+                    <section class="compra" id="compraLinhoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaLinhoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- MOGNO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    MOGNO
+                    <section class="compra" id="compraMognoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaMognoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- ÓLEO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    ÓLEO
+                    <section class="compra" id="compraOleoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaOleoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- PÁPRICA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    PÁPRICA
+                    <section class="compra" id="compraPapricaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaPapricaRedmond">
+
+                    </section>
+
+                </section>
+
+
+                <!-- TÁBUAS - Redmond -->
+
+                <section class="todosOsProdutos">
+                    TÁBUAS
+                    <section class="compra" id="compraTabuasRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabuasRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- RUM - Redmond -->
+
+                <section class="todosOsProdutos">
+                    RUM
+                    <section class="compra" id="compraRumRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaRumRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- LONA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    LONA
+                    <section class="compra" id="compraLonaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaLonaRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- SANDÁLIA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    SANDÁLIA
+                    <section class="compra" id="compraSandaliaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaSandaliaRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- SEDA - Redmond -->
+
+                <section class="todosOsProdutos">
+                    SEDA
+                    <section class="compra" id="compraSedaRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaSedaRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- AÇÚCAR - Redmond -->
+
+                <section class="todosOsProdutos">
+                    AÇÚCAR
+                    <section class="compra" id="compraAcucarRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaAcucarRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- TABACO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    TABACO
+                    <section class="compra" id="compraTabacoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaTabacoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- TRIGO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    TRIGO
+                    <section class="compra" id="compraTrigoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaTrigoRedmond">
+
+                    </section>
+
+                </section>
+
+                <!-- VINHO - Redmond -->
+
+                <section class="todosOsProdutos">
+                    VINHO
+                    <section class="compra" id="compraVinhoRedmond">
+
+                    </section>
+
+                    <section class="venda" id="vendaVinhoRedmond">
+
+                    </section>
+
+                </section>
+
+            </section>
+
+        </section>
+
+        <br>
+
+        <section id="resultados">
+
+            <h1>RESULTADOS:</h1>
+
+
+            <section id="produtosComprar">
+
+                A CIDADE COM O MELHOR PREÇO PARA COMPRAR ESSE PRODUTO:
+                <p class="resultadosProdutos" id="cidadeMelhorPreco">
+
+                </p>
+
+                A DIFERENÇA DO PREÇO DE COMPRA ENTRE AS DUAS CIDADES:
+                <p class="resultadosProdutos" id="diferencaDePreco">
+
+                </p>
+
+                O LUCRO:
+                <p class="resultadosProdutos" id="lucro">
+
+                </p>
+
+            </section>
+
+            <section id="produtosComprar">
+
+                PRODUTO MAIS BARATO PARA COMPRAR DA CIDADE DE ORIGEM:
+                <p class="resultadosProdutos" id="produtoMaisBarato">
+
+                </p>
+
+                MELHOR PRODUTO PARA VENDER NA CIDADE DESTINO:
+                <p class="resultadosProdutos" id="produtoMaisCaro">
+
+                </p>
+
+                OS PRODUTOS MAIS BARATOS PARA COMPRAR DA CIDADE DE ORIGEM:
+                <p class="resultadosProdutos" id="produtosMaisBaratosComprar">
+
+                </p>
+
+                MELHORES PRODUTOS PARA VENDER NA CIDADE DE DESTINO:
+                <p class="resultadosProdutos" id="produtosMaisCarosVender">
+
+                </p>
+
+            </section>
+
+            <section id="produtosComprar">
+
+                MELHOR CIDADE PARA FAZER AS COMPRAS:
+                <p class="resultadosProdutos" id="cidadeComMelhoresPrecos">
+
+                </p>
+
+                MELHOR CIDADE PARA VENDER PRODUTOS:
+                <p class="resultadosProdutos" id="cidadeParaMelhoresCompras">
+
+                </p>
+
+            </section>
+
+            <section id="produtosComprar">
+
+                A CIDADE DE ORIGEM, A CIDADE DE DESTINO E O MELHOR PRODUTO COM MAIOR LUCRO:
+                <p class="resultadosProdutos" id="cidadeComMelhoresPrecos">
+
+                </p>
+
+                A SEGUNDA MELHOR CIDADE DE ORIGEM, A CIDADE DE DESTINO E O MELHOR PRODUTO COM MAIOR LUCRO:
+                <p class="resultadosProdutos" id="cidadeParaMelhoresCompras">
+
+                </p>
+
+            </section>
+
+            <section id="resultadosTodosOsProdutos">
+
+                CERVEJA:
+                <p class="resultadosProdutos" id="resultadoCerveja">
+
+                </p>
+
+                CHOCOLATE:
+                <p class="resultadosProdutos" id="resultadoChocolate">
+
+                </p>
+
+                CANELA:
+                <p class="resultadosProdutos" id="resultadoCanela">
+
+                </p>
+
+                ROUPAS:
+                <p class="resultadosProdutos" id="resultadoRoupas">
+
+                </p>
+
+                CAFÉ:
+                <p class="resultadosProdutos" id="resultadoCafe">
+
+                </p>
+
+                ALGODÃO:
+                <p class="resultadosProdutos" id="resultadoAlgodao">
+
+                </p>
+
+                ÉBANO:
+                <p class="resultadosProdutos" id="resultadoEbano">
+
+                </p>
+
+                FRUTAS:
+                <p class="resultadosProdutos" id="resultadoFrutas">
+
+                </p>
+
+                COURO:
+                <p class="resultadosProdutos" id="resultadoCouro">
+
+                </p>
+
+                LINHO:
+                <p class="resultadosProdutos" id="resultadoLinho">
+
+                </p>
+
+                MOGNO:
+                <p class="resultadosProdutos" id="resultadoMogno">
+
+                </p>
+
+                ÓLEO:
+                <p class="resultadosProdutos" id="resultadoOleo">
+
+                </p>
+
+                PÁPRICA:
+                <p class="resultadosProdutos" id="resultadoPaprica">
+
+                </p>
+
+                TÁBUAS:
+                <p class="resultadosProdutos" id="resultadoTabuas">
+
+                </p>
+
+                RUM:
+                <p class="resultadosProdutos" id="resultadoRum">
+
+                </p>
+
+                LONA:
+                <p class="resultadosProdutos" id="resultadoLona">
+
+                </p>
+
+                SANDÁLIA:
+                <p class="resultadosProdutos" id="resultadoSandalia">
+
+                </p>
+
+                SEDA:
+                <p class="resultadosProdutos" id="resultadoSeda">
+
+                </p>
+
+                AÇÚCAR:
+                <p class="resultadosProdutos" id="resultadoAcucar">
+
+                </p>
+
+                TABACO:
+                <p class="resultadosProdutos" id="resultadoTabaco">
+
+                </p>
+
+                TRIGO:
+                <p class="resultadosProdutos" id="resultadoTrigo">
+
+                </p>
+
+                VINHO:
+                <p class="resultadosProdutos" id="resultadoVinho">
+
+                </p>
+
+            </section>
+
+        </section>
+
+    </section>
+
+    <script src="Mercadorias.js">
+
+    </script>
+
+</body>
+
+</html>
