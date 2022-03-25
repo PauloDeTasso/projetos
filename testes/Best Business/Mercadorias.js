@@ -12,9 +12,12 @@ var secaoRedmond = document.getElementById('secaoRedmond');
 
 var secaocervejaConceicao = document.getElementById('secaocervejaConceicao');
 
+var secaoCidades = document.getElementById('secaoCidades');
+
 var botaoApagarEntrada1 = document.getElementById('botaoApagarEntrada1');
 var botaoApagarEntrada2 = document.getElementById('botaoApagarEntrada2');
 var botaoApagarEntrada3 = document.getElementById('botaoApagarEntrada3');
+var botaoAbrirFecharTabela = document.getElementById('botaoAbrirFecharTabela');
 var entradaCidadeOrigem = document.getElementById('entradaCidadeOrigem');
 var entradaCidadeDestino = document.getElementById('entradaCidadeDestino');
 var entradaProduto = document.getElementById('entradaProduto');
@@ -1869,12 +1872,27 @@ function reiniciar()
     location.reload();
 }
 
+function abrirFecharTabela()
+{
+    var estilo = window.getComputedStyle(secaoCidades);
+    var estiloPropriedade = estilo.getPropertyValue('display');
+
+    if (estiloPropriedade == "none")    
+    {
+        secaoCidades.style.display = 'flex';
+    } else
+    {
+        secaoCidades.style.display = 'none';
+    }
+}
+
 /////////////////////////////////////EVENTOS:
 
 botaoReiniciar.addEventListener('click', reiniciar, false);
 botaoApagarEntrada1.addEventListener('click', apagarEntrada1, false);
 botaoApagarEntrada2.addEventListener('click', apagarEntrada2, false);
 botaoApagarEntrada3.addEventListener('click', apagarEntrada3, false);
+botaoAbrirFecharTabela.addEventListener('click', abrirFecharTabela, false);
 botaoPesquisar.addEventListener('click', function ()
 { pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor) }
     , false);
