@@ -1397,7 +1397,7 @@ function audioCachoeiraTocando()
     setTimeout("limparStatusSistema()", 10000);
 }
 
-var urlInterno = "../testes/Best Business/Mercadorias.html";
+var urlInterno = "../testes/BestBusiness/BestBusiness.html";
 
 function abrirBestBusiness(url)
 {
