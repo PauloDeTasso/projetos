@@ -10,7 +10,7 @@ var secaoRedmond = document.getElementById('secaoRedmond');
 
 //
 
-var secaoAleCervejaConceicao = document.getElementById('secaoAleCervejaConceicao');
+var secaocervejaConceicao = document.getElementById('secaocervejaConceicao');
 
 var botaoApagarEntrada1 = document.getElementById('botaoApagarEntrada1');
 var botaoApagarEntrada2 = document.getElementById('botaoApagarEntrada2');
@@ -41,6 +41,24 @@ var resultadoCerveja = document.getElementById('resultadoCerveja');
 var resultadoChocolate = document.getElementById('resultadoChocolate');
 var resultadoCanela = document.getElementById('resultadoCanela');
 var resultadoRoupas = document.getElementById('resultadoRoupas');
+var resultadoCafe = document.getElementById('resultadoCafe');
+var resultadoAlgodao = document.getElementById('resultadoAlgodao');
+var resultadoEbano = document.getElementById('resultadoEbano');
+var resultadoFrutas = document.getElementById('resultadoFrutas');
+var resultadoCouro = document.getElementById('resultadoCouro');
+var resultadoLinho = document.getElementById('resultadoLinho');
+var resultadoMogno = document.getElementById('resultadoMogno');
+var resultadoOleo = document.getElementById('resultadoOleo');
+var resultadoPaprica = document.getElementById('resultadoPaprica');
+var resultadoTabuas = document.getElementById('resultadoTabuas');
+var resultadoRum = document.getElementById('resultadoRum');
+var resultadoLona = document.getElementById('resultadoLona');
+var resultadoSandalias = document.getElementById('resultadoSandalias');
+var resultadoSeda = document.getElementById('resultadoSeda');
+var resultadoAcucar = document.getElementById('resultadoAcucar');
+var resultadoTabaco = document.getElementById('resultadoTabaco');
+var resultadoTrigo = document.getElementById('resultadoTrigo');
+var resultadoVinho = document.getElementById('resultadoVinho');
 
 //
 
@@ -94,8 +112,8 @@ var vendaRumConceicao = document.getElementById('vendaRumConceicao');
 var compraLonaConceicao = document.getElementById('compraLonaConceicao');
 var vendaLonaConceicao = document.getElementById('vendaLonaConceicao');
 
-var compraSandaliaConceicao = document.getElementById('compraSandaliaConceicao');
-var vendaSandaliaConceicao = document.getElementById('vendaSandaliaConceicao');
+var compraSandaliasConceicao = document.getElementById('compraSandaliasConceicao');
+var vendaSandaliasConceicao = document.getElementById('vendaSandaliasConceicao');
 
 var compraSedaConceicao = document.getElementById('compraSedaConceicao');
 var vendaSedaConceicao = document.getElementById('vendaSedaConceicao');
@@ -162,8 +180,8 @@ var vendaRumDouwesen = document.getElementById('vendaRumDouwesen');
 var compraLonaDouwesen = document.getElementById('compraLonaDouwesen');
 var vendaLonaDouwesen = document.getElementById('vendaLonaDouwesen');
 
-var compraSandaliaDouwesen = document.getElementById('compraSandaliaDouwesen');
-var vendaSandaliaDouwesen = document.getElementById('vendaSandaliaDouwesen');
+var compraSandaliasDouwesen = document.getElementById('compraSandaliasDouwesen');
+var vendaSandaliasDouwesen = document.getElementById('vendaSandaliasDouwesen');
 
 var compraSedaDouwesen = document.getElementById('compraSedaDouwesen');
 var vendaSedaDouwesen = document.getElementById('vendaSedaDouwesen');
@@ -230,8 +248,8 @@ var vendaRumFalaiseDeFleur = document.getElementById('vendaRumFalaiseDeFleur');
 var compraLonaFalaiseDeFleur = document.getElementById('compraLonaFalaiseDeFleur');
 var vendaLonaFalaiseDeFleur = document.getElementById('vendaLonaFalaiseDeFleur');
 
-var compraSandaliaFalaiseDeFleur = document.getElementById('compraSandaliaFalaiseDeFleur');
-var vendaSandaliaFalaiseDeFleur = document.getElementById('vendaSandaliaFalaiseDeFleur');
+var compraSandaliasFalaiseDeFleur = document.getElementById('compraSandaliasFalaiseDeFleur');
+var vendaSandaliasFalaiseDeFleur = document.getElementById('vendaSandaliasFalaiseDeFleur');
 
 var compraSedaFalaiseDeFleur = document.getElementById('compraSedaFalaiseDeFleur');
 var vendaSedaFalaiseDeFleur = document.getElementById('vendaSedaFalaiseDeFleur');
@@ -298,8 +316,8 @@ var vendaRumIslaMuelle = document.getElementById('vendaRumIslaMuelle');
 var compraLonaIslaMuelle = document.getElementById('compraLonaIslaMuelle');
 var vendaLonaIslaMuelle = document.getElementById('vendaLonaIslaMuelle');
 
-var compraSandaliaIslaMuelle = document.getElementById('compraSandaliaIslaMuelle');
-var vendaSandaliaIslaMuelle = document.getElementById('vendaSandaliaIslaMuelle');
+var compraSandaliasIslaMuelle = document.getElementById('compraSandaliasIslaMuelle');
+var vendaSandaliasIslaMuelle = document.getElementById('vendaSandaliasIslaMuelle');
 
 var compraSedaIslaMuelle = document.getElementById('compraSedaIslaMuelle');
 var vendaSedaIslaMuelle = document.getElementById('vendaSedaIslaMuelle');
@@ -366,8 +384,8 @@ var vendaRumOxbay = document.getElementById('vendaRumOxbay');
 var compraLonaOxbay = document.getElementById('compraLonaOxbay');
 var vendaLonaOxbay = document.getElementById('vendaLonaOxbay');
 
-var compraSandaliaOxbay = document.getElementById('compraSandaliaOxbay');
-var vendaSandaliaOxbay = document.getElementById('vendaSandaliaOxbay');
+var compraSandaliasOxbay = document.getElementById('compraSandaliasOxbay');
+var vendaSandaliasOxbay = document.getElementById('vendaSandaliasOxbay');
 
 var compraSedaOxbay = document.getElementById('compraSedaOxbay');
 var vendaSedaOxbay = document.getElementById('vendaSedaOxbay');
@@ -434,8 +452,8 @@ var vendaRumRedmond = document.getElementById('vendaRumRedmond');
 var compraLonaRedmond = document.getElementById('compraLonaRedmond');
 var vendaLonaRedmond = document.getElementById('vendaLonaRedmond');
 
-var compraSandaliaRedmond = document.getElementById('compraSandaliaRedmond');
-var vendaSandaliaRedmond = document.getElementById('vendaSandaliaRedmond');
+var compraSandaliasRedmond = document.getElementById('compraSandaliasRedmond');
+var vendaSandaliasRedmond = document.getElementById('vendaSandaliasRedmond');
 
 var compraSedaRedmond = document.getElementById('compraSedaRedmond');
 var vendaSedaRedmond = document.getElementById('vendaSedaRedmond');
@@ -458,74 +476,74 @@ function Cidade(nome)
 {
     this.nome = nome;
 
-    this.aleCervejaComprar = 0;
-    this.aleCervejaVender = 0;
+    this.cervejaComprar = 0;
+    this.cervejaVender = 0;
 
     this.chocolateComprar = 0;
     this.chocolateVender = 0;
 
-    this.cinnamonCanelaComprar = 0;
-    this.cinnamonCanelaVender = 0;
+    this.canelaComprar = 0;
+    this.canelaVender = 0;
 
-    this.clothesRoupasComprar = 0;
-    this.clothesRoupasVender = 0;
+    this.roupasComprar = 0;
+    this.roupasVender = 0;
 
-    this.coffeeCafeComprar = 0;
-    this.coffeeCafeVender = 0;
+    this.cafeComprar = 0;
+    this.cafeVender = 0;
 
     this.copraComprar = 0;
     this.copraVender = 0;
 
-    this.cottonAlgodaoComprar = 0;
-    this.cottonAlgodaoVender = 0;
+    this.algodaoComprar = 0;
+    this.algodaoVender = 0;
 
-    this.ebonyEbanoComprar = 0;
-    this.ebonyEbanoVender = 0;
+    this.ebanoComprar = 0;
+    this.ebanoVender = 0;
 
-    this.fruitsFrutasComprar = 0;
-    this.fruitsFrutasVender = 0;
+    this.frutasComprar = 0;
+    this.frutasVender = 0;
 
-    this.leatherCouroComprar = 0;
-    this.leatherCouroVender = 0;
+    this.couroComprar = 0;
+    this.couroVender = 0;
 
-    this.linenLinhoComprar = 0;
-    this.linenLinhoVender = 0;
+    this.linhoComprar = 0;
+    this.linhoVender = 0;
 
-    this.mahoganyCaobaComprar = 0;
-    this.mahoganyCaobaVender = 0;
+    this.caobaComprar = 0;
+    this.caobaVender = 0;
 
-    this.oilOleoComprar = 0;
-    this.oilOleoVender = 0;
+    this.oleoComprar = 0;
+    this.oleoVender = 0;
 
     this.papricaComprar = 0;
     this.papricaVender = 0;
 
-    this.planksTabuasComprar = 0;
-    this.planksTabuasVender = 0;
+    this.tabuasComprar = 0;
+    this.tabuasVender = 0;
 
     this.rumComprar = 0;
     this.rumVender = 0;
 
-    this.sailclothLonasComprar = 0;
-    this.sailclothLonasVender = 0;
+    this.lonaComprar = 0;
+    this.lonaVender = 0;
 
-    this.sandalSandaliasComprar = 0;
-    this.sandalSandaliasVender = 0;
+    this.sandaliasComprar = 0;
+    this.sandaliasVender = 0;
 
-    this.silkSedaComprar = 0;
-    this.silkSedaVender = 0;
+    this.sedaComprar = 0;
+    this.sedaVender = 0;
 
-    this.sugarAcucarComprar = 0;
-    this.sugarAcucarVender = 0;
+    this.acucarComprar = 0;
+    this.acucarVender = 0;
 
-    this.TobaccoTabacoComprar = 0;
-    this.TobaccoTabacoVender = 0;
+    this.tabacoComprar = 0;
+    this.tabacoVender = 0;
 
-    this.wheatTrigoComprar = 0;
-    this.wheatTrigoVender = 0;
+    this.trigoComprar = 0;
+    this.trigoVender = 0;
 
-    this.wineVinhoComprar = 0;
-    this.wineVinhoVender = 0;
+    this.vinhoComprar = 0;
+    this.vinhoVender = 0;
 }
 
 
@@ -533,849 +551,849 @@ function Cidade(nome)
 
 var conceicao = new Cidade("Conceição");
 
-conceicao.aleCervejaComprar = 6;
-conceicao.aleCervejaVender = 3;
+conceicao.cervejaComprar = 6;
+conceicao.cervejaVender = 3;
 
 conceicao.chocolateComprar = 29;
 conceicao.chocolateVender = 17;
 
-conceicao.cinnamonCanelaComprar = 7;
-conceicao.cinnamonCanelaVender = 4;
+conceicao.canelaComprar = 7;
+conceicao.canelaVender = 4;
 
-conceicao.clothesRoupasComprar = 12;
-conceicao.clothesRoupasVender = 7;
+conceicao.roupasComprar = 12;
+conceicao.roupasVender = 7;
 
-conceicao.coffeeCafeComprar = 21;
-conceicao.coffeeCafeVender = 12;
+conceicao.cafeComprar = 21;
+conceicao.cafeVender = 12;
 
 conceicao.copraComprar = undefined;
 conceicao.copraVender = undefined;
 
-conceicao.cottonAlgodaoComprar = 7;
-conceicao.cottonAlgodaoVender = 4;
+conceicao.algodaoComprar = 7;
+conceicao.algodaoVender = 4;
 
-conceicao.ebonyEbanoComprar = 32;
-conceicao.ebonyEbanoVender = 18;
+conceicao.ebanoComprar = 32;
+conceicao.ebanoVender = 18;
 
-conceicao.fruitsFrutasComprar = 5;
-conceicao.fruitsFrutasVender = 2;
+conceicao.frutasComprar = 5;
+conceicao.frutasVender = 2;
 
-conceicao.leatherCouroComprar = 4;
-conceicao.leatherCouroVender = 2;
+conceicao.couroComprar = 4;
+conceicao.couroVender = 2;
 
-conceicao.linenLinhoComprar = 11;
-conceicao.linenLinhoVender = 6;
+conceicao.linhoComprar = 11;
+conceicao.linhoVender = 6;
 
-conceicao.mahoganyCaobaComprar = undefined;
-conceicao.mahoganyCaobaVender = undefined;
+conceicao.caobaComprar = undefined;
+conceicao.caobaVender = undefined;
 
-conceicao.oilOleoComprar = 6;
-conceicao.oilOleoVender = 3;
+conceicao.oleoComprar = 6;
+conceicao.oleoVender = 3;
 
 conceicao.papricaComprar = 16;
 conceicao.papricaVender = 9;
 
-conceicao.planksTabuasComprar = 9;
-conceicao.planksTabuasVender = 5;
+conceicao.tabuasComprar = 9;
+conceicao.tabuasVender = 5;
 
 conceicao.rumComprar = 12;
 conceicao.rumVender = 7;
 
-conceicao.sailclothLonasComprar = 5;
-conceicao.sailclothLonasVender = 3;
+conceicao.lonaComprar = 5;
+conceicao.lonaVender = 3;
 
-conceicao.sandalSandaliasComprar = 29;
-conceicao.sandalSandaliasVender = 17;
+conceicao.sandaliasComprar = 29;
+conceicao.sandaliasVender = 17;
 
-conceicao.silkSedaComprar = 23;
-conceicao.silkSedaVender = 13;
+conceicao.sedaComprar = 23;
+conceicao.sedaVender = 13;
 
-conceicao.sugarAcucarComprar = 3;
-conceicao.sugarAcucarVender = 1;
+conceicao.acucarComprar = 3;
+conceicao.acucarVender = 1;
 
-conceicao.TobaccoTabacoComprar = 17;
-conceicao.TobaccoTabacoVender = 10;
+conceicao.tabacoComprar = 17;
+conceicao.tabacoVender = 10;
 
-conceicao.wheatTrigoComprar = 4;
-conceicao.wheatTrigoVender = 2;
+conceicao.trigoComprar = 4;
+conceicao.trigoVender = 2;
 
-conceicao.wineVinhoComprar = undefined;
-conceicao.wineVinhoVender = undefined;
+conceicao.vinhoComprar = undefined;
+conceicao.vinhoVender = undefined;
 
 ///////////DOUWESEN:
 
 var douwesen = new Cidade("Douwesen");
 
-douwesen.aleCervejaComprar = 1;
-douwesen.aleCervejaVender = 1;
+douwesen.cervejaComprar = 1;
+douwesen.cervejaVender = 1;
 
 douwesen.chocolateComprar = 19;
 douwesen.chocolateVender = 11;
 
-douwesen.cinnamonCanelaComprar = 23;
-douwesen.cinnamonCanelaVender = 13;
+douwesen.canelaComprar = 23;
+douwesen.canelaVender = 13;
 
-douwesen.clothesRoupasComprar = 12;
-douwesen.clothesRoupasVender = 7;
+douwesen.roupasComprar = 12;
+douwesen.roupasVender = 7;
 
-douwesen.coffeeCafeComprar = 8;
-douwesen.coffeeCafeVender = 4;
+douwesen.cafeComprar = 8;
+douwesen.cafeVender = 4;
 
 douwesen.copraComprar = 3;
 douwesen.copraVender = 2;
 
-douwesen.cottonAlgodaoComprar = 9;
-douwesen.cottonAlgodaoVender = 5;
+douwesen.algodaoComprar = 9;
+douwesen.algodaoVender = 5;
 
-douwesen.ebonyEbanoComprar = 33;
-douwesen.ebonyEbanoVender = 19;
+douwesen.ebanoComprar = 33;
+douwesen.ebanoVender = 19;
 
-douwesen.fruitsFrutasComprar = 9;
-douwesen.fruitsFrutasVender = 5;
+douwesen.frutasComprar = 9;
+douwesen.frutasVender = 5;
 
-douwesen.leatherCouroComprar = 5;
-douwesen.leatherCouroVender = 2;
+douwesen.couroComprar = 5;
+douwesen.couroVender = 2;
 
-douwesen.linenLinhoComprar = undefined;
-douwesen.linenLinhoVender = undefined;
+douwesen.linhoComprar = undefined;
+douwesen.linhoVender = undefined;
 
-douwesen.mahoganyCaobaComprar = 25;
-douwesen.mahoganyCaobaVender = 14;
+douwesen.caobaComprar = 25;
+douwesen.caobaVender = 14;
 
-douwesen.oilOleoComprar = 7;
-douwesen.oilOleoVender = 4;
+douwesen.oleoComprar = 7;
+douwesen.oleoVender = 4;
 
 douwesen.papricaComprar = 15;
 douwesen.papricaVender = 9;
 
-douwesen.planksTabuasComprar = 12;
-douwesen.planksTabuasVender = 7;
+douwesen.tabuasComprar = 12;
+douwesen.tabuasVender = 7;
 
 douwesen.rumComprar = undefined;
 douwesen.rumVender = undefined;
 
-douwesen.sailclothLonasComprar = 9;
-douwesen.sailclothLonasVender = 5;
+douwesen.lonaComprar = 9;
+douwesen.lonaVender = 5;
 
-douwesen.sandalSandaliasComprar = 24;
-douwesen.sandalSandaliasVender = 13;
+douwesen.sandaliasComprar = 24;
+douwesen.sandaliasVender = 13;
 
-douwesen.silkSedaComprar = 14;
-douwesen.silkSedaVender = 8;
+douwesen.sedaComprar = 14;
+douwesen.sedaVender = 8;
 
-douwesen.sugarAcucarComprar = undefined;
-douwesen.sugarAcucarVender = undefined;
+douwesen.acucarComprar = undefined;
+douwesen.acucarVender = undefined;
 
-douwesen.TobaccoTabacoComprar = 8;
-douwesen.TobaccoTabacoVender = 4;
+douwesen.tabacoComprar = 8;
+douwesen.tabacoVender = 4;
 
-douwesen.wheatTrigoComprar = 7;
-douwesen.wheatTrigoVender = 4;
+douwesen.trigoComprar = 7;
+douwesen.trigoVender = 4;
 
-douwesen.wineVinhoComprar = 19;
-douwesen.wineVinhoVender = 11;
+douwesen.vinhoComprar = 19;
+douwesen.vinhoVender = 11;
 
 ///////////FALAISE DE FLEUR:
 
 var falaiseDeFleur = new Cidade("Falaise de Fleur");
 
-falaiseDeFleur.aleCervejaComprar = 4;
-falaiseDeFleur.aleCervejaVender = 2;
+falaiseDeFleur.cervejaComprar = 4;
+falaiseDeFleur.cervejaVender = 2;
 
 falaiseDeFleur.chocolateComprar = 9;
 falaiseDeFleur.chocolateVender = 5;
 
-falaiseDeFleur.cinnamonCanelaComprar = undefined;
-falaiseDeFleur.cinnamonCanelaVender = undefined;
+falaiseDeFleur.canelaComprar = undefined;
+falaiseDeFleur.canelaVender = undefined;
 
-falaiseDeFleur.clothesRoupasComprar = 9;
-falaiseDeFleur.clothesRoupasVender = 5;
+falaiseDeFleur.roupasComprar = 9;
+falaiseDeFleur.roupasVender = 5;
 
-falaiseDeFleur.coffeeCafeComprar = 22;
-falaiseDeFleur.coffeeCafeVender = 12;
+falaiseDeFleur.cafeComprar = 22;
+falaiseDeFleur.cafeVender = 12;
 
 falaiseDeFleur.copraComprar = 7;
 falaiseDeFleur.copraVender = 4;
 
-falaiseDeFleur.cottonAlgodaoComprar = 6;
-falaiseDeFleur.cottonAlgodaoVender = 4;
+falaiseDeFleur.algodaoComprar = 6;
+falaiseDeFleur.algodaoVender = 4;
 
-falaiseDeFleur.ebonyEbanoComprar = 54;
-falaiseDeFleur.ebonyEbanoVender = 31;
+falaiseDeFleur.ebanoComprar = 54;
+falaiseDeFleur.ebanoVender = 31;
 
-falaiseDeFleur.fruitsFrutasComprar = undefined;
-falaiseDeFleur.fruitsFrutasVender = undefined;
+falaiseDeFleur.frutasComprar = undefined;
+falaiseDeFleur.frutasVender = undefined;
 
-falaiseDeFleur.leatherCouroComprar = 8;
-falaiseDeFleur.leatherCouroVender = 4;
+falaiseDeFleur.couroComprar = 8;
+falaiseDeFleur.couroVender = 4;
 
-falaiseDeFleur.linenLinhoComprar = 6;
-falaiseDeFleur.linenLinhoVender = 3;
+falaiseDeFleur.linhoComprar = 6;
+falaiseDeFleur.linhoVender = 3;
 
-falaiseDeFleur.mahoganyCaobaComprar = 24;
-falaiseDeFleur.mahoganyCaobaVender = 14;
+falaiseDeFleur.caobaComprar = 24;
+falaiseDeFleur.caobaVender = 14;
 
-falaiseDeFleur.oilOleoComprar = 6;
-falaiseDeFleur.oilOleoVender = 3;
+falaiseDeFleur.oleoComprar = 6;
+falaiseDeFleur.oleoVender = 3;
 
 falaiseDeFleur.papricaComprar = 18;
 falaiseDeFleur.papricaVender = 10;
 
-falaiseDeFleur.planksTabuasComprar = 12;
-falaiseDeFleur.planksTabuasVender = 7;
+falaiseDeFleur.tabuasComprar = 12;
+falaiseDeFleur.tabuasVender = 7;
 
 falaiseDeFleur.rumComprar = 12;
 falaiseDeFleur.rumVender = 7;
 
-falaiseDeFleur.sailclothLonasComprar = 5;
-falaiseDeFleur.sailclothLonasVender = 3;
+falaiseDeFleur.lonaComprar = 5;
+falaiseDeFleur.lonaVender = 3;
 
-falaiseDeFleur.sandalSandaliasComprar = undefined;
-falaiseDeFleur.sandalSandaliasVender = undefined;
+falaiseDeFleur.sandaliasComprar = undefined;
+falaiseDeFleur.sandaliasVender = undefined;
 
-falaiseDeFleur.silkSedaComprar = 9;
-falaiseDeFleur.silkSedaVender = 5;
+falaiseDeFleur.sedaComprar = 9;
+falaiseDeFleur.sedaVender = 5;
 
-falaiseDeFleur.sugarAcucarComprar = 9;
-falaiseDeFleur.sugarAcucarVender = 5;
+falaiseDeFleur.acucarComprar = 9;
+falaiseDeFleur.acucarVender = 5;
 
-falaiseDeFleur.TobaccoTabacoComprar = 13;
-falaiseDeFleur.TobaccoTabacoVender = 8;
+falaiseDeFleur.tabacoComprar = 13;
+falaiseDeFleur.tabacoVender = 8;
 
-falaiseDeFleur.wheatTrigoComprar = 6;
-falaiseDeFleur.wheatTrigoVender = 3;
+falaiseDeFleur.trigoComprar = 6;
+falaiseDeFleur.trigoVender = 3;
 
-falaiseDeFleur.wineVinhoComprar = 15;
-falaiseDeFleur.wineVinhoVender = 9;
+falaiseDeFleur.vinhoComprar = 15;
+falaiseDeFleur.vinhoVender = 9;
 
 ///////////ISLA MUELLE:
 
 var islaMuelle = new Cidade("Isla Muelle");
 
-islaMuelle.aleCervejaComprar = undefined;
-islaMuelle.aleCervejaVender = undefined;
+islaMuelle.cervejaComprar = undefined;
+islaMuelle.cervejaVender = undefined;
 
 islaMuelle.chocolateComprar = 21;
 islaMuelle.chocolateVender = 12;
 
-islaMuelle.cinnamonCanelaComprar = 6;
-islaMuelle.cinnamonCanelaVender = 3;
+islaMuelle.canelaComprar = 6;
+islaMuelle.canelaVender = 3;
 
-islaMuelle.clothesRoupasComprar = 10;
-islaMuelle.clothesRoupasVender = 5;
+islaMuelle.roupasComprar = 10;
+islaMuelle.roupasVender = 5;
 
-islaMuelle.coffeeCafeComprar = 18;
-islaMuelle.coffeeCafeVender = 10;
+islaMuelle.cafeComprar = 18;
+islaMuelle.cafeVender = 10;
 
 islaMuelle.copraComprar = 9;
 islaMuelle.copraVender = 5;
 
-islaMuelle.cottonAlgodaoComprar = 8;
-islaMuelle.cottonAlgodaoVender = 4;
+islaMuelle.algodaoComprar = 8;
+islaMuelle.algodaoVender = 4;
 
-islaMuelle.ebonyEbanoComprar = 15;
-islaMuelle.ebonyEbanoVender = 9;
+islaMuelle.ebanoComprar = 15;
+islaMuelle.ebanoVender = 9;
 
-islaMuelle.fruitsFrutasComprar = 10;
-islaMuelle.fruitsFrutasVender = 6;
+islaMuelle.frutasComprar = 10;
+islaMuelle.frutasVender = 6;
 
-islaMuelle.leatherCouroComprar = 6;
-islaMuelle.leatherCouroVender = 3;
+islaMuelle.couroComprar = 6;
+islaMuelle.couroVender = 3;
 
-islaMuelle.linenLinhoComprar = 18;
-islaMuelle.linenLinhoVender = 10;
+islaMuelle.linhoComprar = 18;
+islaMuelle.linhoVender = 10;
 
-islaMuelle.mahoganyCaobaComprar = 14;
-islaMuelle.mahoganyCaobaVender = 8;
+islaMuelle.caobaComprar = 14;
+islaMuelle.caobaVender = 8;
 
-islaMuelle.oilOleoComprar = 7;
-islaMuelle.oilOleoVender = 4;
+islaMuelle.oleoComprar = 7;
+islaMuelle.oleoVender = 4;
 
 islaMuelle.papricaComprar = 15;
 islaMuelle.papricaVender = 9;
 
-islaMuelle.planksTabuasComprar = 12;
-islaMuelle.planksTabuasVender = 7;
+islaMuelle.tabuasComprar = 12;
+islaMuelle.tabuasVender = 7;
 
 islaMuelle.rumComprar = 8;
 islaMuelle.rumVender = 4;
 
-islaMuelle.sailclothLonasComprar = 9;
-islaMuelle.sailclothLonasVender = 5;
+islaMuelle.lonaComprar = 9;
+islaMuelle.lonaVender = 5;
 
-islaMuelle.sandalSandaliasComprar = 15;
-islaMuelle.sandalSandaliasVender = 9;
+islaMuelle.sandaliasComprar = 15;
+islaMuelle.sandaliasVender = 9;
 
-islaMuelle.silkSedaComprar = undefined;
-islaMuelle.silkSedaVender = undefined;
+islaMuelle.sedaComprar = undefined;
+islaMuelle.sedaVender = undefined;
 
-islaMuelle.sugarAcucarComprar = 13;
-islaMuelle.sugarAcucarVender = 7;
+islaMuelle.acucarComprar = 13;
+islaMuelle.acucarVender = 7;
 
-islaMuelle.TobaccoTabacoComprar = undefined;
-islaMuelle.TobaccoTabacoVender = undefined;
+islaMuelle.tabacoComprar = undefined;
+islaMuelle.tabacoVender = undefined;
 
-islaMuelle.wheatTrigoComprar = 5;
-islaMuelle.wheatTrigoVender = 3;
+islaMuelle.trigoComprar = 5;
+islaMuelle.trigoVender = 3;
 
-islaMuelle.wineVinhoComprar = 12;
-islaMuelle.wineVinhoVender = 7;
+islaMuelle.vinhoComprar = 12;
+islaMuelle.vinhoVender = 7;
 
 ///////////OXBAY:
 
 var oxbay = new Cidade("Oxbay");
 
-oxbay.aleCervejaComprar = 3;
-oxbay.aleCervejaVender = 1;
+oxbay.cervejaComprar = 3;
+oxbay.cervejaVender = 1;
 
 oxbay.chocolateComprar = 29;
 oxbay.chocolateVender = 16;
 
-oxbay.cinnamonCanelaComprar = 20;
-oxbay.cinnamonCanelaVender = 11;
+oxbay.canelaComprar = 20;
+oxbay.canelaVender = 11;
 
-oxbay.clothesRoupasComprar = 12;
-oxbay.clothesRoupasVender = 6;
+oxbay.roupasComprar = 12;
+oxbay.roupasVender = 6;
 
-oxbay.coffeeCafeComprar = undefined;
-oxbay.coffeeCafeVender = undefined;
+oxbay.cafeComprar = undefined;
+oxbay.cafeVender = undefined;
 
 oxbay.copraComprar = 8;
 oxbay.copraVender = 4;
 
-oxbay.cottonAlgodaoComprar = 6;
-oxbay.cottonAlgodaoVender = 3;
+oxbay.algodaoComprar = 6;
+oxbay.algodaoVender = 3;
 
-oxbay.ebonyEbanoComprar = undefined;
-oxbay.ebonyEbanoVender = undefined;
+oxbay.ebanoComprar = undefined;
+oxbay.ebanoVender = undefined;
 
-oxbay.fruitsFrutasComprar = 10;
-oxbay.fruitsFrutasVender = 6;
+oxbay.frutasComprar = 10;
+oxbay.frutasVender = 6;
 
-oxbay.leatherCouroComprar = 9;
-oxbay.leatherCouroVender = 5;
+oxbay.couroComprar = 9;
+oxbay.couroVender = 5;
 
-oxbay.linenLinhoComprar = 11;
-oxbay.linenLinhoVender = 6;
+oxbay.linhoComprar = 11;
+oxbay.linhoVender = 6;
 
-oxbay.mahoganyCaobaComprar = 19;
-oxbay.mahoganyCaobaVender = 11;
+oxbay.caobaComprar = 19;
+oxbay.caobaVender = 11;
 
-oxbay.oilOleoComprar = 6;
-oxbay.oilOleoVender = 3;
+oxbay.oleoComprar = 6;
+oxbay.oleoVender = 3;
 
 oxbay.papricaComprar = undefined;
 oxbay.papricaVender = undefined;
 
-oxbay.planksTabuasComprar = 9;
-oxbay.planksTabuasVender = 5;
+oxbay.tabuasComprar = 9;
+oxbay.tabuasVender = 5;
 
 oxbay.rumComprar = 2;
 oxbay.rumVender = 1;
 
-oxbay.sailclothLonasComprar = 9;
-oxbay.sailclothLonasVender = 5;
+oxbay.lonaComprar = 9;
+oxbay.lonaVender = 5;
 
-oxbay.sandalSandaliasComprar = 17;
-oxbay.sandalSandaliasVender = 9;
+oxbay.sandaliasComprar = 17;
+oxbay.sandaliasVender = 9;
 
-oxbay.silkSedaComprar = 25;
-oxbay.silkSedaVender = 13;
+oxbay.sedaComprar = 25;
+oxbay.sedaVender = 13;
 
-oxbay.sugarAcucarComprar = 7;
-oxbay.sugarAcucarVender = 4;
+oxbay.acucarComprar = 7;
+oxbay.acucarVender = 4;
 
-oxbay.TobaccoTabacoComprar = 5;
-oxbay.TobaccoTabacoVender = 2;
+oxbay.tabacoComprar = 5;
+oxbay.tabacoVender = 2;
 
-oxbay.wheatTrigoComprar = 5;
-oxbay.wheatTrigoVender = 2;
+oxbay.trigoComprar = 5;
+oxbay.trigoVender = 2;
 
-oxbay.wineVinhoComprar = 14;
-oxbay.wineVinhoVender = 8;
+oxbay.vinhoComprar = 14;
+oxbay.vinhoVender = 8;
 
 ///////////REDMOND:
 
 var redmond = new Cidade("Redmond");
 
-redmond.aleCervejaComprar = 2;
-redmond.aleCervejaVender = 1;
+redmond.cervejaComprar = 2;
+redmond.cervejaVender = 1;
 
 redmond.chocolateComprar = 22;
 redmond.chocolateVender = 13;
 
-redmond.cinnamonCanelaComprar = 35;
-redmond.cinnamonCanelaVender = 20;
+redmond.canelaComprar = 35;
+redmond.canelaVender = 20;
 
-redmond.clothesRoupasComprar = 4;
-redmond.clothesRoupasVender = 2;
+redmond.roupasComprar = 4;
+redmond.roupasVender = 2;
 
-redmond.coffeeCafeComprar = undefined;
-redmond.coffeeCafeVender = undefined;
+redmond.cafeComprar = undefined;
+redmond.cafeVender = undefined;
 
 redmond.copraComprar = 8;
 redmond.copraVender = 5;
 
-redmond.cottonAlgodaoComprar = 8;
-redmond.cottonAlgodaoVender = 4;
+redmond.algodaoComprar = 8;
+redmond.algodaoVender = 4;
 
-redmond.ebonyEbanoComprar = undefined;
-redmond.ebonyEbanoVender = undefined;
+redmond.ebanoComprar = undefined;
+redmond.ebanoVender = undefined;
 
-redmond.fruitsFrutasComprar = 11;
-redmond.fruitsFrutasVender = 6;
+redmond.frutasComprar = 11;
+redmond.frutasVender = 6;
 
-redmond.leatherCouroComprar = 5;
-redmond.leatherCouroVender = 3;
+redmond.couroComprar = 5;
+redmond.couroVender = 3;
 
-redmond.linenLinhoComprar = 6;
-redmond.linenLinhoVender = 3;
+redmond.linhoComprar = 6;
+redmond.linhoVender = 3;
 
-redmond.mahoganyCaobaComprar = 19;
-redmond.mahoganyCaobaVender = 11;
+redmond.caobaComprar = 19;
+redmond.caobaVender = 11;
 
-redmond.oilOleoComprar = 8;
-redmond.oilOleoVender = 4;
+redmond.oleoComprar = 8;
+redmond.oleoVender = 4;
 
 redmond.papricaComprar = undefined;
 redmond.papricaVender = undefined;
 
-redmond.planksTabuasComprar = 12;
-redmond.planksTabuasVender = 7;
+redmond.tabuasComprar = 12;
+redmond.tabuasVender = 7;
 
 redmond.rumComprar = 7;
 redmond.rumVender = 4;
 
-redmond.sailclothLonasComprar = 5;
-redmond.sailclothLonasVender = 3;
+redmond.lonaComprar = 5;
+redmond.lonaVender = 3;
 
-redmond.sandalSandaliasComprar = 45;
-redmond.sandalSandaliasVender = 26;
+redmond.sandaliasComprar = 45;
+redmond.sandaliasVender = 26;
 
-redmond.silkSedaComprar = 22;
-redmond.silkSedaVender = 12;
+redmond.sedaComprar = 22;
+redmond.sedaVender = 12;
 
-redmond.sugarAcucarComprar = 9;
-redmond.sugarAcucarVender = 5;
+redmond.acucarComprar = 9;
+redmond.acucarVender = 5;
 
-redmond.TobaccoTabacoComprar = 18;
-redmond.TobaccoTabacoVender = 10;
+redmond.tabacoComprar = 18;
+redmond.tabacoVender = 10;
 
-redmond.wheatTrigoComprar = 5;
-redmond.wheatTrigoVender = 3;
+redmond.trigoComprar = 5;
+redmond.trigoVender = 3;
 
-redmond.wineVinhoComprar = 15;
-redmond.wineVinhoVender = 8;
+redmond.vinhoComprar = 15;
+redmond.vinhoVender = 8;
 
 //// DEFINIÇÕES TABELA:
 
 //CONCEIÇÃO:
 
-compraCervejaConceicao.innerHTML = conceicao.aleCervejaComprar;
-vendaCervejaConceicao.innerHTML = conceicao.aleCervejaVender;
+compraCervejaConceicao.innerHTML = conceicao.cervejaComprar;
+vendaCervejaConceicao.innerHTML = conceicao.cervejaVender;
 
 compraChocolateConceicao.innerHTML = conceicao.chocolateComprar;
 vendaChocolateConceicao.innerHTML = conceicao.chocolateVender;
 
-compraCanelaConceicao.innerHTML = conceicao.cinnamonCanelaComprar;
-vendaCanelaConceicao.innerHTML = conceicao.cinnamonCanelaVender;
+compraCanelaConceicao.innerHTML = conceicao.canelaComprar;
+vendaCanelaConceicao.innerHTML = conceicao.canelaVender;
 
-compraRoupasConceicao.innerHTML = conceicao.clothesRoupasComprar;
-vendaRoupasConceicao.innerHTML = conceicao.clothesRoupasVender;
+compraRoupasConceicao.innerHTML = conceicao.roupasComprar;
+vendaRoupasConceicao.innerHTML = conceicao.roupasVender;
 
-compraCafeConceicao.innerHTML = conceicao.coffeeCafeComprar;
-vendaCafeConceicao.innerHTML = conceicao.coffeeCafeVender;
+compraCafeConceicao.innerHTML = conceicao.cafeComprar;
+vendaCafeConceicao.innerHTML = conceicao.cafeVender;
 
-compraAlgodaoConceicao.innerHTML = conceicao.cottonAlgodaoComprar;
-vendaAlgodaoConceicao.innerHTML = conceicao.cottonAlgodaoVender;
+compraAlgodaoConceicao.innerHTML = conceicao.algodaoComprar;
+vendaAlgodaoConceicao.innerHTML = conceicao.algodaoVender;
 
-compraEbanoConceicao.innerHTML = conceicao.ebonyEbanoComprar;
-vendaEbanoConceicao.innerHTML = conceicao.ebonyEbanoVender;
+compraEbanoConceicao.innerHTML = conceicao.ebanoComprar;
+vendaEbanoConceicao.innerHTML = conceicao.ebanoVender;
 
-compraFrutasConceicao.innerHTML = conceicao.fruitsFrutasComprar;
-vendaFrutasConceicao.innerHTML = conceicao.fruitsFrutasVender;
+compraFrutasConceicao.innerHTML = conceicao.frutasComprar;
+vendaFrutasConceicao.innerHTML = conceicao.frutasVender;
 
-compraCouroConceicao.innerHTML = conceicao.leatherCouroComprar;
-vendaCouroConceicao.innerHTML = conceicao.leatherCouroVender;
+compraCouroConceicao.innerHTML = conceicao.couroComprar;
+vendaCouroConceicao.innerHTML = conceicao.couroVender;
 
-compraLinhoConceicao.innerHTML = conceicao.linenLinhoComprar;
-vendaLinhoConceicao.innerHTML = conceicao.linenLinhoVender;
+compraLinhoConceicao.innerHTML = conceicao.linhoComprar;
+vendaLinhoConceicao.innerHTML = conceicao.linhoVender;
 
-compraMognoConceicao.innerHTML = conceicao.mahoganyCaobaComprar;
-vendaMognoConceicao.innerHTML = conceicao.mahoganyCaobaVender;
+compraMognoConceicao.innerHTML = conceicao.caobaComprar;
+vendaMognoConceicao.innerHTML = conceicao.caobaVender;
 
-compraOleoConceicao.innerHTML = conceicao.oilOleoComprar;
-vendaOleoConceicao.innerHTML = conceicao.oilOleoVender;
+compraOleoConceicao.innerHTML = conceicao.oleoComprar;
+vendaOleoConceicao.innerHTML = conceicao.oleoVender;
 
 compraPapricaConceicao.innerHTML = conceicao.papricaComprar;
 vendaPapricaConceicao.innerHTML = conceicao.papricaVender;
 
-compraTabuasConceicao.innerHTML = conceicao.planksTabuasComprar;
-vendaTabuasConceicao.innerHTML = conceicao.planksTabuasVender;
+compraTabuasConceicao.innerHTML = conceicao.tabuasComprar;
+vendaTabuasConceicao.innerHTML = conceicao.tabuasVender;
 
 compraRumConceicao.innerHTML = conceicao.rumComprar;
 vendaRumConceicao.innerHTML = conceicao.rumVender;
 
-compraLonaConceicao.innerHTML = conceicao.sailclothLonasComprar;
-vendaLonaConceicao.innerHTML = conceicao.sailclothLonasVender;
+compraLonaConceicao.innerHTML = conceicao.lonaComprar;
+vendaLonaConceicao.innerHTML = conceicao.lonaVender;
 
-compraSandaliaConceicao.innerHTML = conceicao.sandalSandaliasComprar;
-vendaSandaliaConceicao.innerHTML = conceicao.sandalSandaliasVender;
+compraSandaliasConceicao.innerHTML = conceicao.sandaliasComprar;
+vendaSandaliasConceicao.innerHTML = conceicao.sandaliasVender;
 
-compraSedaConceicao.innerHTML = conceicao.silkSedaComprar;
-vendaSedaConceicao.innerHTML = conceicao.silkSedaVender;
+compraSedaConceicao.innerHTML = conceicao.sedaComprar;
+vendaSedaConceicao.innerHTML = conceicao.sedaVender;
 
-compraAcucarConceicao.innerHTML = conceicao.sugarAcucarComprar;
-vendaAcucarConceicao.innerHTML = conceicao.sugarAcucarVender;
+compraAcucarConceicao.innerHTML = conceicao.acucarComprar;
+vendaAcucarConceicao.innerHTML = conceicao.acucarVender;
 
-compraTabacoConceicao.innerHTML = conceicao.TobaccoTabacoComprar;
-vendaTabacoConceicao.innerHTML = conceicao.TobaccoTabacoVender;
+compraTabacoConceicao.innerHTML = conceicao.tabacoComprar;
+vendaTabacoConceicao.innerHTML = conceicao.tabacoVender;
 
-compraTrigoConceicao.innerHTML = conceicao.wheatTrigoComprar;
-vendaTrigoConceicao.innerHTML = conceicao.wheatTrigoVender;
+compraTrigoConceicao.innerHTML = conceicao.trigoComprar;
+vendaTrigoConceicao.innerHTML = conceicao.trigoVender;
 
-compraVinhoConceicao.innerHTML = conceicao.wineVinhoComprar;
-vendaVinhoConceicao.innerHTML = conceicao.wineVinhoVender;
+compraVinhoConceicao.innerHTML = conceicao.vinhoComprar;
+vendaVinhoConceicao.innerHTML = conceicao.vinhoVender;
 
 //DOUWESEN:
 
-compraCervejaDouwesen.innerHTML = douwesen.aleCervejaComprar;
-vendaCervejaDouwesen.innerHTML = douwesen.aleCervejaVender;
+compraCervejaDouwesen.innerHTML = douwesen.cervejaComprar;
+vendaCervejaDouwesen.innerHTML = douwesen.cervejaVender;
 
 compraChocolateDouwesen.innerHTML = douwesen.chocolateComprar;
 vendaChocolateDouwesen.innerHTML = douwesen.chocolateVender;
 
-compraCanelaDouwesen.innerHTML = douwesen.cinnamonCanelaComprar;
-vendaCanelaDouwesen.innerHTML = douwesen.cinnamonCanelaVender;
+compraCanelaDouwesen.innerHTML = douwesen.canelaComprar;
+vendaCanelaDouwesen.innerHTML = douwesen.canelaVender;
 
-compraRoupasDouwesen.innerHTML = douwesen.clothesRoupasComprar;
-vendaRoupasDouwesen.innerHTML = douwesen.clothesRoupasVender;
+compraRoupasDouwesen.innerHTML = douwesen.roupasComprar;
+vendaRoupasDouwesen.innerHTML = douwesen.roupasVender;
 
-compraCafeDouwesen.innerHTML = douwesen.coffeeCafeComprar;
-vendaCafeDouwesen.innerHTML = douwesen.coffeeCafeVender;
+compraCafeDouwesen.innerHTML = douwesen.cafeComprar;
+vendaCafeDouwesen.innerHTML = douwesen.cafeVender;
 
-compraAlgodaoDouwesen.innerHTML = douwesen.cottonAlgodaoComprar;
-vendaAlgodaoDouwesen.innerHTML = douwesen.cottonAlgodaoVender;
+compraAlgodaoDouwesen.innerHTML = douwesen.algodaoComprar;
+vendaAlgodaoDouwesen.innerHTML = douwesen.algodaoVender;
 
-compraEbanoDouwesen.innerHTML = douwesen.ebonyEbanoComprar;
-vendaEbanoDouwesen.innerHTML = douwesen.ebonyEbanoVender;
+compraEbanoDouwesen.innerHTML = douwesen.ebanoComprar;
+vendaEbanoDouwesen.innerHTML = douwesen.ebanoVender;
 
-compraFrutasDouwesen.innerHTML = douwesen.fruitsFrutasComprar;
-vendaFrutasDouwesen.innerHTML = douwesen.fruitsFrutasVender;
+compraFrutasDouwesen.innerHTML = douwesen.frutasComprar;
+vendaFrutasDouwesen.innerHTML = douwesen.frutasVender;
 
-compraCouroDouwesen.innerHTML = douwesen.leatherCouroComprar;
-vendaCouroDouwesen.innerHTML = douwesen.leatherCouroVender;
+compraCouroDouwesen.innerHTML = douwesen.couroComprar;
+vendaCouroDouwesen.innerHTML = douwesen.couroVender;
 
-compraLinhoDouwesen.innerHTML = douwesen.linenLinhoComprar;
-vendaLinhoDouwesen.innerHTML = douwesen.linenLinhoVender;
+compraLinhoDouwesen.innerHTML = douwesen.linhoComprar;
+vendaLinhoDouwesen.innerHTML = douwesen.linhoVender;
 
-compraMognoDouwesen.innerHTML = douwesen.mahoganyCaobaComprar;
-vendaMognoDouwesen.innerHTML = douwesen.mahoganyCaobaVender;
+compraMognoDouwesen.innerHTML = douwesen.caobaComprar;
+vendaMognoDouwesen.innerHTML = douwesen.caobaVender;
 
-compraOleoDouwesen.innerHTML = douwesen.oilOleoComprar;
-vendaOleoDouwesen.innerHTML = douwesen.oilOleoVender;
+compraOleoDouwesen.innerHTML = douwesen.oleoComprar;
+vendaOleoDouwesen.innerHTML = douwesen.oleoVender;
 
 compraPapricaDouwesen.innerHTML = douwesen.papricaComprar;
 vendaPapricaDouwesen.innerHTML = douwesen.papricaVender;
 
-compraTabuasDouwesen.innerHTML = douwesen.planksTabuasComprar;
-vendaTabuasDouwesen.innerHTML = douwesen.planksTabuasVender;
+compraTabuasDouwesen.innerHTML = douwesen.tabuasComprar;
+vendaTabuasDouwesen.innerHTML = douwesen.tabuasVender;
 
 compraRumDouwesen.innerHTML = douwesen.rumComprar;
 vendaRumDouwesen.innerHTML = douwesen.rumVender;
 
-compraLonaDouwesen.innerHTML = douwesen.sailclothLonasComprar;
-vendaLonaDouwesen.innerHTML = douwesen.sailclothLonasVender;
+compraLonaDouwesen.innerHTML = douwesen.lonaComprar;
+vendaLonaDouwesen.innerHTML = douwesen.lonaVender;
 
-compraSandaliaDouwesen.innerHTML = douwesen.sandalSandaliasComprar;
-vendaSandaliaDouwesen.innerHTML = douwesen.sandalSandaliasVender;
+compraSandaliasDouwesen.innerHTML = douwesen.sandaliasComprar;
+vendaSandaliasDouwesen.innerHTML = douwesen.sandaliasVender;
 
-compraSedaDouwesen.innerHTML = douwesen.silkSedaComprar;
-vendaSedaDouwesen.innerHTML = douwesen.silkSedaVender;
+compraSedaDouwesen.innerHTML = douwesen.sedaComprar;
+vendaSedaDouwesen.innerHTML = douwesen.sedaVender;
 
-compraAcucarDouwesen.innerHTML = douwesen.sugarAcucarComprar;
-vendaAcucarDouwesen.innerHTML = douwesen.sugarAcucarVender;
+compraAcucarDouwesen.innerHTML = douwesen.acucarComprar;
+vendaAcucarDouwesen.innerHTML = douwesen.acucarVender;
 
-compraTabacoDouwesen.innerHTML = douwesen.TobaccoTabacoComprar;
-vendaTabacoDouwesen.innerHTML = douwesen.TobaccoTabacoVender;
+compraTabacoDouwesen.innerHTML = douwesen.tabacoComprar;
+vendaTabacoDouwesen.innerHTML = douwesen.tabacoVender;
 
-compraTrigoDouwesen.innerHTML = douwesen.wheatTrigoComprar;
-vendaTrigoDouwesen.innerHTML = douwesen.wheatTrigoVender;
+compraTrigoDouwesen.innerHTML = douwesen.trigoComprar;
+vendaTrigoDouwesen.innerHTML = douwesen.trigoVender;
 
-compraVinhoDouwesen.innerHTML = douwesen.wineVinhoComprar;
-vendaVinhoDouwesen.innerHTML = douwesen.wineVinhoVender;
+compraVinhoDouwesen.innerHTML = douwesen.vinhoComprar;
+vendaVinhoDouwesen.innerHTML = douwesen.vinhoVender;
 
 //FALAISE DE FLEUR:
 
-compraCervejaFalaiseDeFleur.innerHTML = falaiseDeFleur.aleCervejaComprar;
-vendaCervejaFalaiseDeFleur.innerHTML = falaiseDeFleur.aleCervejaVender;
+compraCervejaFalaiseDeFleur.innerHTML = falaiseDeFleur.cervejaComprar;
+vendaCervejaFalaiseDeFleur.innerHTML = falaiseDeFleur.cervejaVender;
 
 compraChocolateFalaiseDeFleur.innerHTML = falaiseDeFleur.chocolateComprar;
 vendaChocolateFalaiseDeFleur.innerHTML = falaiseDeFleur.chocolateVender;
 
-compraCanelaFalaiseDeFleur.innerHTML = falaiseDeFleur.cinnamonCanelaComprar;
-vendaCanelaFalaiseDeFleur.innerHTML = falaiseDeFleur.cinnamonCanelaVender;
+compraCanelaFalaiseDeFleur.innerHTML = falaiseDeFleur.canelaComprar;
+vendaCanelaFalaiseDeFleur.innerHTML = falaiseDeFleur.canelaVender;
 
-compraRoupasFalaiseDeFleur.innerHTML = falaiseDeFleur.clothesRoupasComprar;
-vendaRoupasFalaiseDeFleur.innerHTML = falaiseDeFleur.clothesRoupasVender;
+compraRoupasFalaiseDeFleur.innerHTML = falaiseDeFleur.roupasComprar;
+vendaRoupasFalaiseDeFleur.innerHTML = falaiseDeFleur.roupasVender;
 
-compraCafeFalaiseDeFleur.innerHTML = falaiseDeFleur.coffeeCafeComprar;
-vendaCafeFalaiseDeFleur.innerHTML = falaiseDeFleur.coffeeCafeVender;
+compraCafeFalaiseDeFleur.innerHTML = falaiseDeFleur.cafeComprar;
+vendaCafeFalaiseDeFleur.innerHTML = falaiseDeFleur.cafeVender;
 
-compraAlgodaoFalaiseDeFleur.innerHTML = falaiseDeFleur.cottonAlgodaoComprar;
-vendaAlgodaoFalaiseDeFleur.innerHTML = falaiseDeFleur.cottonAlgodaoVender;
+compraAlgodaoFalaiseDeFleur.innerHTML = falaiseDeFleur.algodaoComprar;
+vendaAlgodaoFalaiseDeFleur.innerHTML = falaiseDeFleur.algodaoVender;
 
-compraEbanoFalaiseDeFleur.innerHTML = falaiseDeFleur.ebonyEbanoComprar;
-vendaEbanoFalaiseDeFleur.innerHTML = falaiseDeFleur.ebonyEbanoVender;
+compraEbanoFalaiseDeFleur.innerHTML = falaiseDeFleur.ebanoComprar;
+vendaEbanoFalaiseDeFleur.innerHTML = falaiseDeFleur.ebanoVender;
 
-compraFrutasFalaiseDeFleur.innerHTML = falaiseDeFleur.fruitsFrutasComprar;
-vendaFrutasFalaiseDeFleur.innerHTML = falaiseDeFleur.fruitsFrutasVender;
+compraFrutasFalaiseDeFleur.innerHTML = falaiseDeFleur.frutasComprar;
+vendaFrutasFalaiseDeFleur.innerHTML = falaiseDeFleur.frutasVender;
 
-compraCouroFalaiseDeFleur.innerHTML = falaiseDeFleur.leatherCouroComprar;
-vendaCouroFalaiseDeFleur.innerHTML = falaiseDeFleur.leatherCouroVender;
+compraCouroFalaiseDeFleur.innerHTML = falaiseDeFleur.couroComprar;
+vendaCouroFalaiseDeFleur.innerHTML = falaiseDeFleur.couroVender;
 
-compraLinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.linenLinhoComprar;
-vendaLinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.linenLinhoVender;
+compraLinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.linhoComprar;
+vendaLinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.linhoVender;
 
-compraMognoFalaiseDeFleur.innerHTML = falaiseDeFleur.mahoganyCaobaComprar;
-vendaMognoFalaiseDeFleur.innerHTML = falaiseDeFleur.mahoganyCaobaVender;
+compraMognoFalaiseDeFleur.innerHTML = falaiseDeFleur.caobaComprar;
+vendaMognoFalaiseDeFleur.innerHTML = falaiseDeFleur.caobaVender;
 
-compraOleoFalaiseDeFleur.innerHTML = falaiseDeFleur.oilOleoComprar;
-vendaOleoFalaiseDeFleur.innerHTML = falaiseDeFleur.oilOleoVender;
+compraOleoFalaiseDeFleur.innerHTML = falaiseDeFleur.oleoComprar;
+vendaOleoFalaiseDeFleur.innerHTML = falaiseDeFleur.oleoVender;
 
 compraPapricaFalaiseDeFleur.innerHTML = falaiseDeFleur.papricaComprar;
 vendaPapricaFalaiseDeFleur.innerHTML = falaiseDeFleur.papricaVender;
 
-compraTabuasFalaiseDeFleur.innerHTML = falaiseDeFleur.planksTabuasComprar;
-vendaTabuasFalaiseDeFleur.innerHTML = falaiseDeFleur.planksTabuasVender;
+compraTabuasFalaiseDeFleur.innerHTML = falaiseDeFleur.tabuasComprar;
+vendaTabuasFalaiseDeFleur.innerHTML = falaiseDeFleur.tabuasVender;
 
 compraRumFalaiseDeFleur.innerHTML = falaiseDeFleur.rumComprar;
 vendaRumFalaiseDeFleur.innerHTML = falaiseDeFleur.rumVender;
 
-compraLonaFalaiseDeFleur.innerHTML = falaiseDeFleur.sailclothLonasComprar;
-vendaLonaFalaiseDeFleur.innerHTML = falaiseDeFleur.sailclothLonasVender;
+compraLonaFalaiseDeFleur.innerHTML = falaiseDeFleur.lonaComprar;
+vendaLonaFalaiseDeFleur.innerHTML = falaiseDeFleur.lonaVender;
 
-compraSandaliaFalaiseDeFleur.innerHTML = falaiseDeFleur.sandalSandaliasComprar;
-vendaSandaliaFalaiseDeFleur.innerHTML = falaiseDeFleur.sandalSandaliasVender;
+compraSandaliasFalaiseDeFleur.innerHTML = falaiseDeFleur.sandaliasComprar;
+vendaSandaliasFalaiseDeFleur.innerHTML = falaiseDeFleur.sandaliasVender;
 
-compraSedaFalaiseDeFleur.innerHTML = falaiseDeFleur.silkSedaComprar;
-vendaSedaFalaiseDeFleur.innerHTML = falaiseDeFleur.silkSedaVender;
+compraSedaFalaiseDeFleur.innerHTML = falaiseDeFleur.sedaComprar;
+vendaSedaFalaiseDeFleur.innerHTML = falaiseDeFleur.sedaVender;
 
-compraAcucarFalaiseDeFleur.innerHTML = falaiseDeFleur.sugarAcucarComprar;
-vendaAcucarFalaiseDeFleur.innerHTML = falaiseDeFleur.sugarAcucarVender;
+compraAcucarFalaiseDeFleur.innerHTML = falaiseDeFleur.acucarComprar;
+vendaAcucarFalaiseDeFleur.innerHTML = falaiseDeFleur.acucarVender;
 
-compraTabacoFalaiseDeFleur.innerHTML = falaiseDeFleur.TobaccoTabacoComprar;
-vendaTabacoFalaiseDeFleur.innerHTML = falaiseDeFleur.TobaccoTabacoVender;
+compraTabacoFalaiseDeFleur.innerHTML = falaiseDeFleur.tabacoComprar;
+vendaTabacoFalaiseDeFleur.innerHTML = falaiseDeFleur.tabacoVender;
 
-compraTrigoFalaiseDeFleur.innerHTML = falaiseDeFleur.wheatTrigoComprar;
-vendaTrigoFalaiseDeFleur.innerHTML = falaiseDeFleur.wheatTrigoVender;
+compraTrigoFalaiseDeFleur.innerHTML = falaiseDeFleur.trigoComprar;
+vendaTrigoFalaiseDeFleur.innerHTML = falaiseDeFleur.trigoVender;
 
-compraVinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.wineVinhoComprar;
-vendaVinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.wineVinhoVender;
+compraVinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.vinhoComprar;
+vendaVinhoFalaiseDeFleur.innerHTML = falaiseDeFleur.vinhoVender;
 
 //ISLA MUELLE:
 
-compraCervejaIslaMuelle.innerHTML = islaMuelle.aleCervejaComprar;
-vendaCervejaIslaMuelle.innerHTML = islaMuelle.aleCervejaVender;
+compraCervejaIslaMuelle.innerHTML = islaMuelle.cervejaComprar;
+vendaCervejaIslaMuelle.innerHTML = islaMuelle.cervejaVender;
 
 compraChocolateIslaMuelle.innerHTML = islaMuelle.chocolateComprar;
 vendaChocolateIslaMuelle.innerHTML = islaMuelle.chocolateVender;
 
-compraCanelaIslaMuelle.innerHTML = islaMuelle.cinnamonCanelaComprar;
-vendaCanelaIslaMuelle.innerHTML = islaMuelle.cinnamonCanelaVender;
+compraCanelaIslaMuelle.innerHTML = islaMuelle.canelaComprar;
+vendaCanelaIslaMuelle.innerHTML = islaMuelle.canelaVender;
 
-compraRoupasIslaMuelle.innerHTML = islaMuelle.clothesRoupasComprar;
-vendaRoupasIslaMuelle.innerHTML = islaMuelle.clothesRoupasVender;
+compraRoupasIslaMuelle.innerHTML = islaMuelle.roupasComprar;
+vendaRoupasIslaMuelle.innerHTML = islaMuelle.roupasVender;
 
-compraCafeIslaMuelle.innerHTML = islaMuelle.coffeeCafeComprar;
-vendaCafeIslaMuelle.innerHTML = islaMuelle.coffeeCafeVender;
+compraCafeIslaMuelle.innerHTML = islaMuelle.cafeComprar;
+vendaCafeIslaMuelle.innerHTML = islaMuelle.cafeVender;
 
-compraAlgodaoIslaMuelle.innerHTML = islaMuelle.cottonAlgodaoComprar;
-vendaAlgodaoIslaMuelle.innerHTML = islaMuelle.cottonAlgodaoVender;
+compraAlgodaoIslaMuelle.innerHTML = islaMuelle.algodaoComprar;
+vendaAlgodaoIslaMuelle.innerHTML = islaMuelle.algodaoVender;
 
-compraEbanoIslaMuelle.innerHTML = islaMuelle.ebonyEbanoComprar;
-vendaEbanoIslaMuelle.innerHTML = islaMuelle.ebonyEbanoVender;
+compraEbanoIslaMuelle.innerHTML = islaMuelle.ebanoComprar;
+vendaEbanoIslaMuelle.innerHTML = islaMuelle.ebanoVender;
 
-compraFrutasIslaMuelle.innerHTML = islaMuelle.fruitsFrutasComprar;
-vendaFrutasIslaMuelle.innerHTML = islaMuelle.fruitsFrutasVender;
+compraFrutasIslaMuelle.innerHTML = islaMuelle.frutasComprar;
+vendaFrutasIslaMuelle.innerHTML = islaMuelle.frutasVender;
 
-compraCouroIslaMuelle.innerHTML = islaMuelle.leatherCouroComprar;
-vendaCouroIslaMuelle.innerHTML = islaMuelle.leatherCouroVender;
+compraCouroIslaMuelle.innerHTML = islaMuelle.couroComprar;
+vendaCouroIslaMuelle.innerHTML = islaMuelle.couroVender;
 
-compraLinhoIslaMuelle.innerHTML = islaMuelle.linenLinhoComprar;
-vendaLinhoIslaMuelle.innerHTML = islaMuelle.linenLinhoVender;
+compraLinhoIslaMuelle.innerHTML = islaMuelle.linhoComprar;
+vendaLinhoIslaMuelle.innerHTML = islaMuelle.linhoVender;
 
-compraMognoIslaMuelle.innerHTML = islaMuelle.mahoganyCaobaComprar;
-vendaMognoIslaMuelle.innerHTML = islaMuelle.mahoganyCaobaVender;
+compraMognoIslaMuelle.innerHTML = islaMuelle.caobaComprar;
+vendaMognoIslaMuelle.innerHTML = islaMuelle.caobaVender;
 
-compraOleoIslaMuelle.innerHTML = islaMuelle.oilOleoComprar;
-vendaOleoIslaMuelle.innerHTML = islaMuelle.oilOleoVender;
+compraOleoIslaMuelle.innerHTML = islaMuelle.oleoComprar;
+vendaOleoIslaMuelle.innerHTML = islaMuelle.oleoVender;
 
 compraPapricaIslaMuelle.innerHTML = islaMuelle.papricaComprar;
 vendaPapricaIslaMuelle.innerHTML = islaMuelle.papricaVender;
 
-compraTabuasIslaMuelle.innerHTML = islaMuelle.planksTabuasComprar;
-vendaTabuasIslaMuelle.innerHTML = islaMuelle.planksTabuasVender;
+compraTabuasIslaMuelle.innerHTML = islaMuelle.tabuasComprar;
+vendaTabuasIslaMuelle.innerHTML = islaMuelle.tabuasVender;
 
 compraRumIslaMuelle.innerHTML = islaMuelle.rumComprar;
 vendaRumIslaMuelle.innerHTML = islaMuelle.rumVender;
 
-compraLonaIslaMuelle.innerHTML = islaMuelle.sailclothLonasComprar;
-vendaLonaIslaMuelle.innerHTML = islaMuelle.sailclothLonasVender;
+compraLonaIslaMuelle.innerHTML = islaMuelle.lonaComprar;
+vendaLonaIslaMuelle.innerHTML = islaMuelle.lonaVender;
 
-compraSandaliaIslaMuelle.innerHTML = islaMuelle.sandalSandaliasComprar;
-vendaSandaliaIslaMuelle.innerHTML = islaMuelle.sandalSandaliasVender;
+compraSandaliasIslaMuelle.innerHTML = islaMuelle.sandaliasComprar;
+vendaSandaliasIslaMuelle.innerHTML = islaMuelle.sandaliasVender;
 
-compraSedaIslaMuelle.innerHTML = islaMuelle.silkSedaComprar;
-vendaSedaIslaMuelle.innerHTML = islaMuelle.silkSedaVender;
+compraSedaIslaMuelle.innerHTML = islaMuelle.sedaComprar;
+vendaSedaIslaMuelle.innerHTML = islaMuelle.sedaVender;
 
-compraAcucarIslaMuelle.innerHTML = islaMuelle.sugarAcucarComprar;
-vendaAcucarIslaMuelle.innerHTML = islaMuelle.sugarAcucarVender;
+compraAcucarIslaMuelle.innerHTML = islaMuelle.acucarComprar;
+vendaAcucarIslaMuelle.innerHTML = islaMuelle.acucarVender;
 
-compraTabacoIslaMuelle.innerHTML = islaMuelle.TobaccoTabacoComprar;
-vendaTabacoIslaMuelle.innerHTML = islaMuelle.TobaccoTabacoVender;
+compraTabacoIslaMuelle.innerHTML = islaMuelle.tabacoComprar;
+vendaTabacoIslaMuelle.innerHTML = islaMuelle.tabacoVender;
 
-compraTrigoIslaMuelle.innerHTML = islaMuelle.wheatTrigoComprar;
-vendaTrigoIslaMuelle.innerHTML = islaMuelle.wheatTrigoVender;
+compraTrigoIslaMuelle.innerHTML = islaMuelle.trigoComprar;
+vendaTrigoIslaMuelle.innerHTML = islaMuelle.trigoVender;
 
-compraVinhoIslaMuelle.innerHTML = islaMuelle.wineVinhoComprar;
-vendaVinhoIslaMuelle.innerHTML = islaMuelle.wineVinhoVender;
+compraVinhoIslaMuelle.innerHTML = islaMuelle.vinhoComprar;
+vendaVinhoIslaMuelle.innerHTML = islaMuelle.vinhoVender;
 
 //OXBAY:
 
-compraCervejaOxbay.innerHTML = oxbay.aleCervejaComprar;
-vendaCervejaOxbay.innerHTML = oxbay.aleCervejaVender;
+compraCervejaOxbay.innerHTML = oxbay.cervejaComprar;
+vendaCervejaOxbay.innerHTML = oxbay.cervejaVender;
 
 compraChocolateOxbay.innerHTML = oxbay.chocolateComprar;
 vendaChocolateOxbay.innerHTML = oxbay.chocolateVender;
 
-compraCanelaOxbay.innerHTML = oxbay.cinnamonCanelaComprar;
-vendaCanelaOxbay.innerHTML = oxbay.cinnamonCanelaVender;
+compraCanelaOxbay.innerHTML = oxbay.canelaComprar;
+vendaCanelaOxbay.innerHTML = oxbay.canelaVender;
 
-compraRoupasOxbay.innerHTML = oxbay.clothesRoupasComprar;
-vendaRoupasOxbay.innerHTML = oxbay.clothesRoupasVender;
+compraRoupasOxbay.innerHTML = oxbay.roupasComprar;
+vendaRoupasOxbay.innerHTML = oxbay.roupasVender;
 
-compraCafeOxbay.innerHTML = oxbay.coffeeCafeComprar;
-vendaCafeOxbay.innerHTML = oxbay.coffeeCafeVender;
+compraCafeOxbay.innerHTML = oxbay.cafeComprar;
+vendaCafeOxbay.innerHTML = oxbay.cafeVender;
 
-compraAlgodaoOxbay.innerHTML = oxbay.cottonAlgodaoComprar;
-vendaAlgodaoOxbay.innerHTML = oxbay.cottonAlgodaoVender;
+compraAlgodaoOxbay.innerHTML = oxbay.algodaoComprar;
+vendaAlgodaoOxbay.innerHTML = oxbay.algodaoVender;
 
-compraEbanoOxbay.innerHTML = oxbay.ebonyEbanoComprar;
-vendaEbanoOxbay.innerHTML = oxbay.ebonyEbanoVender;
+compraEbanoOxbay.innerHTML = oxbay.ebanoComprar;
+vendaEbanoOxbay.innerHTML = oxbay.ebanoVender;
 
-compraFrutasOxbay.innerHTML = oxbay.fruitsFrutasComprar;
-vendaFrutasOxbay.innerHTML = oxbay.fruitsFrutasVender;
+compraFrutasOxbay.innerHTML = oxbay.frutasComprar;
+vendaFrutasOxbay.innerHTML = oxbay.frutasVender;
 
-compraCouroOxbay.innerHTML = oxbay.leatherCouroComprar;
-vendaCouroOxbay.innerHTML = oxbay.leatherCouroVender;
+compraCouroOxbay.innerHTML = oxbay.couroComprar;
+vendaCouroOxbay.innerHTML = oxbay.couroVender;
 
-compraLinhoOxbay.innerHTML = oxbay.linenLinhoComprar;
-vendaLinhoOxbay.innerHTML = oxbay.linenLinhoVender;
+compraLinhoOxbay.innerHTML = oxbay.linhoComprar;
+vendaLinhoOxbay.innerHTML = oxbay.linhoVender;
 
-compraMognoOxbay.innerHTML = oxbay.mahoganyCaobaComprar;
-vendaMognoOxbay.innerHTML = oxbay.mahoganyCaobaVender;
+compraMognoOxbay.innerHTML = oxbay.caobaComprar;
+vendaMognoOxbay.innerHTML = oxbay.caobaVender;
 
-compraOleoOxbay.innerHTML = oxbay.oilOleoComprar;
-vendaOleoOxbay.innerHTML = oxbay.oilOleoVender;
+compraOleoOxbay.innerHTML = oxbay.oleoComprar;
+vendaOleoOxbay.innerHTML = oxbay.oleoVender;
 
 compraPapricaOxbay.innerHTML = oxbay.papricaComprar;
 vendaPapricaOxbay.innerHTML = oxbay.papricaVender;
 
-compraTabuasOxbay.innerHTML = oxbay.planksTabuasComprar;
-vendaTabuasOxbay.innerHTML = oxbay.planksTabuasVender;
+compraTabuasOxbay.innerHTML = oxbay.tabuasComprar;
+vendaTabuasOxbay.innerHTML = oxbay.tabuasVender;
 
 compraRumOxbay.innerHTML = oxbay.rumComprar;
 vendaRumOxbay.innerHTML = oxbay.rumVender;
 
-compraLonaOxbay.innerHTML = oxbay.sailclothLonasComprar;
-vendaLonaOxbay.innerHTML = oxbay.sailclothLonasVender;
+compraLonaOxbay.innerHTML = oxbay.lonaComprar;
+vendaLonaOxbay.innerHTML = oxbay.lonaVender;
 
-compraSandaliaOxbay.innerHTML = oxbay.sandalSandaliasComprar;
-vendaSandaliaOxbay.innerHTML = oxbay.sandalSandaliasVender;
+compraSandaliasOxbay.innerHTML = oxbay.sandaliasComprar;
+vendaSandaliasOxbay.innerHTML = oxbay.sandaliasVender;
 
-compraSedaOxbay.innerHTML = oxbay.silkSedaComprar;
-vendaSedaOxbay.innerHTML = oxbay.silkSedaVender;
+compraSedaOxbay.innerHTML = oxbay.sedaComprar;
+vendaSedaOxbay.innerHTML = oxbay.sedaVender;
 
-compraAcucarOxbay.innerHTML = oxbay.sugarAcucarComprar;
-vendaAcucarOxbay.innerHTML = oxbay.sugarAcucarVender;
+compraAcucarOxbay.innerHTML = oxbay.acucarComprar;
+vendaAcucarOxbay.innerHTML = oxbay.acucarVender;
 
-compraTabacoOxbay.innerHTML = oxbay.TobaccoTabacoComprar;
-vendaTabacoOxbay.innerHTML = oxbay.TobaccoTabacoVender;
+compraTabacoOxbay.innerHTML = oxbay.tabacoComprar;
+vendaTabacoOxbay.innerHTML = oxbay.tabacoVender;
 
-compraTrigoOxbay.innerHTML = oxbay.wheatTrigoComprar;
-vendaTrigoOxbay.innerHTML = oxbay.wheatTrigoVender;
+compraTrigoOxbay.innerHTML = oxbay.trigoComprar;
+vendaTrigoOxbay.innerHTML = oxbay.trigoVender;
 
-compraVinhoOxbay.innerHTML = oxbay.wineVinhoComprar;
-vendaVinhoOxbay.innerHTML = oxbay.wineVinhoVender;
+compraVinhoOxbay.innerHTML = oxbay.vinhoComprar;
+vendaVinhoOxbay.innerHTML = oxbay.vinhoVender;
 
 //REDMOND:
 
-compraCervejaRedmond.innerHTML = redmond.aleCervejaComprar;
-vendaCervejaRedmond.innerHTML = redmond.aleCervejaVender;
+compraCervejaRedmond.innerHTML = redmond.cervejaComprar;
+vendaCervejaRedmond.innerHTML = redmond.cervejaVender;
 
 compraChocolateRedmond.innerHTML = redmond.chocolateComprar;
 vendaChocolateRedmond.innerHTML = redmond.chocolateVender;
 
-compraCanelaRedmond.innerHTML = redmond.cinnamonCanelaComprar;
-vendaCanelaRedmond.innerHTML = redmond.cinnamonCanelaVender;
+compraCanelaRedmond.innerHTML = redmond.canelaComprar;
+vendaCanelaRedmond.innerHTML = redmond.canelaVender;
 
-compraRoupasRedmond.innerHTML = redmond.clothesRoupasComprar;
-vendaRoupasRedmond.innerHTML = redmond.clothesRoupasVender;
+compraRoupasRedmond.innerHTML = redmond.roupasComprar;
+vendaRoupasRedmond.innerHTML = redmond.roupasVender;
 
-compraCafeRedmond.innerHTML = redmond.coffeeCafeComprar;
-vendaCafeRedmond.innerHTML = redmond.coffeeCafeVender;
+compraCafeRedmond.innerHTML = redmond.cafeComprar;
+vendaCafeRedmond.innerHTML = redmond.cafeVender;
 
-compraAlgodaoRedmond.innerHTML = redmond.cottonAlgodaoComprar;
-vendaAlgodaoRedmond.innerHTML = redmond.cottonAlgodaoVender;
+compraAlgodaoRedmond.innerHTML = redmond.algodaoComprar;
+vendaAlgodaoRedmond.innerHTML = redmond.algodaoVender;
 
-compraEbanoRedmond.innerHTML = redmond.ebonyEbanoComprar;
-vendaEbanoRedmond.innerHTML = redmond.ebonyEbanoVender;
+compraEbanoRedmond.innerHTML = redmond.ebanoComprar;
+vendaEbanoRedmond.innerHTML = redmond.ebanoVender;
 
-compraFrutasRedmond.innerHTML = redmond.fruitsFrutasComprar;
-vendaFrutasRedmond.innerHTML = redmond.fruitsFrutasVender;
+compraFrutasRedmond.innerHTML = redmond.frutasComprar;
+vendaFrutasRedmond.innerHTML = redmond.frutasVender;
 
-compraCouroRedmond.innerHTML = redmond.leatherCouroComprar;
-vendaCouroRedmond.innerHTML = redmond.leatherCouroVender;
+compraCouroRedmond.innerHTML = redmond.couroComprar;
+vendaCouroRedmond.innerHTML = redmond.couroVender;
 
-compraLinhoRedmond.innerHTML = redmond.linenLinhoComprar;
-vendaLinhoRedmond.innerHTML = redmond.linenLinhoVender;
+compraLinhoRedmond.innerHTML = redmond.linhoComprar;
+vendaLinhoRedmond.innerHTML = redmond.linhoVender;
 
-compraMognoRedmond.innerHTML = redmond.mahoganyCaobaComprar;
-vendaMognoRedmond.innerHTML = redmond.mahoganyCaobaVender;
+compraMognoRedmond.innerHTML = redmond.caobaComprar;
+vendaMognoRedmond.innerHTML = redmond.caobaVender;
 
-compraOleoRedmond.innerHTML = redmond.oilOleoComprar;
-vendaOleoRedmond.innerHTML = redmond.oilOleoVender;
+compraOleoRedmond.innerHTML = redmond.oleoComprar;
+vendaOleoRedmond.innerHTML = redmond.oleoVender;
 
 compraPapricaRedmond.innerHTML = redmond.papricaComprar;
 vendaPapricaRedmond.innerHTML = redmond.papricaVender;
 
-compraTabuasRedmond.innerHTML = redmond.planksTabuasComprar;
-vendaTabuasRedmond.innerHTML = redmond.planksTabuasVender;
+compraTabuasRedmond.innerHTML = redmond.tabuasComprar;
+vendaTabuasRedmond.innerHTML = redmond.tabuasVender;
 
 compraRumRedmond.innerHTML = redmond.rumComprar;
 vendaRumRedmond.innerHTML = redmond.rumVender;
 
-compraLonaRedmond.innerHTML = redmond.sailclothLonasComprar;
-vendaLonaRedmond.innerHTML = redmond.sailclothLonasVender;
+compraLonaRedmond.innerHTML = redmond.lonaComprar;
+vendaLonaRedmond.innerHTML = redmond.lonaVender;
 
-compraSandaliaRedmond.innerHTML = redmond.sandalSandaliasComprar;
-vendaSandaliaRedmond.innerHTML = redmond.sandalSandaliasVender;
+compraSandaliasRedmond.innerHTML = redmond.sandaliasComprar;
+vendaSandaliasRedmond.innerHTML = redmond.sandaliasVender;
 
-compraSedaRedmond.innerHTML = redmond.silkSedaComprar;
-vendaSedaRedmond.innerHTML = redmond.silkSedaVender;
+compraSedaRedmond.innerHTML = redmond.sedaComprar;
+vendaSedaRedmond.innerHTML = redmond.sedaVender;
 
-compraAcucarRedmond.innerHTML = redmond.sugarAcucarComprar;
-vendaAcucarRedmond.innerHTML = redmond.sugarAcucarVender;
+compraAcucarRedmond.innerHTML = redmond.acucarComprar;
+vendaAcucarRedmond.innerHTML = redmond.acucarVender;
 
-compraTabacoRedmond.innerHTML = redmond.TobaccoTabacoComprar;
-vendaTabacoRedmond.innerHTML = redmond.TobaccoTabacoVender;
+compraTabacoRedmond.innerHTML = redmond.tabacoComprar;
+vendaTabacoRedmond.innerHTML = redmond.tabacoVender;
 
-compraTrigoRedmond.innerHTML = redmond.wheatTrigoComprar;
-vendaTrigoRedmond.innerHTML = redmond.wheatTrigoVender;
+compraTrigoRedmond.innerHTML = redmond.trigoComprar;
+vendaTrigoRedmond.innerHTML = redmond.trigoVender;
 
-compraVinhoRedmond.innerHTML = redmond.wineVinhoComprar;
-vendaVinhoRedmond.innerHTML = redmond.wineVinhoVender;
+compraVinhoRedmond.innerHTML = redmond.vinhoComprar;
+vendaVinhoRedmond.innerHTML = redmond.vinhoVender;
 
 ////////////////////////////////////////FUNÇÕES:
 
@@ -1387,15 +1405,13 @@ var entradaCidadeOrigemValor = entradaCidadeOrigem.value;
 var entradaCidadeDestinoValor = entradaCidadeDestino.value;
 var entradaProdutoValor = entradaProduto.value;
 
-var cidadeDaCervejaMaisBarataParaComprar, cervejaDiferencaDePreco, cervejaLucro;
+var cervejaLucro;
 
-var cidadeDaChocolateMaisBarataParaComprar, chocolateDiferencaDePreco, chocolateLucro;
+var chocolateLucro;
 
-var cidadeDaCinnamonCanelaMaisBarataParaComprar, cinnamonCanelaDiferencaDePreco, cinnamonCanelaLucro;
+var canelaLucro;
 
-var cidadeDaRoupasMaisBarataParaComprar, roupasDiferencaDePreco, roupasLucro;
-
-var todosOsProdutos = [];
+var roupasLucro;
 
 //FUNÇÕES DEFINIDAS:
 
@@ -1468,109 +1484,354 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //PREÇO DE COMPRA DA CERVEJA:
 
-    if (cidadeOrigem.aleCervejaComprar > cidadeDestino.aleCervejaComprar)
-    {
-        cidadeDaCervejaMaisBarataParaComprar = cidadeDestino.nome;
-        cervejaDiferencaDePreco = cidadeOrigem.aleCervejaComprar - cidadeDestino.aleCervejaComprar;
-        cervejaLucro = cidadeOrigem.aleCervejaVender - cidadeDestino.aleCervejaComprar;
-
-    } else if (cidadeOrigem.aleCervejaComprar < cidadeDestino.aleCervejaComprar)
-    {
-        cidadeDaCervejaMaisBarataParaComprar = cidadeOrigem.nome;
-        cervejaDiferencaDePreco = cidadeDestino.aleCervejaComprar - cidadeOrigem.aleCervejaComprar;
-        cervejaLucro = cidadeDestino.aleCervejaVender - cidadeOrigem.aleCervejaComprar;
-
-    } else
-    {
-        cidadeDaCervejaMaisBarataParaComprar = "As duas cidades têm o mesmo preço!";
-        cervejaDiferencaDePreco = 0;
-        cervejaLucro = cidadeDestino.aleCervejaVender - cidadeOrigem.aleCervejaComprar;
-        ;
-    }
+    cervejaLucro = cidadeDestino.cervejaVender - cidadeOrigem.cervejaComprar;
 
     //PREÇO DE COMPRA DE CHOCOLATE:
 
-    if (cidadeOrigem.chocolateComprar > cidadeDestino.chocolateComprar)
-    {
-        cidadeDaChocolateMaisBarataParaComprar = cidadeDestino.nome;
-        chocolateDiferencaDePreco = cidadeOrigem.chocolateComprar - cidadeDestino.chocolateComprar;
-        chocolateLucro = cidadeOrigem.chocolateVender - cidadeDestino.chocolateComprar;
-
-    } else if (cidadeOrigem.chocolateComprar < cidadeDestino.chocolateComprar)
-    {
-        cidadeDaChocolateMaisBarataParaComprar = cidadeOrigem.nome;
-        chocolateDiferencaDePreco = cidadeDestino.chocolateComprar - cidadeOrigem.chocolateComprar;
-        chocolateLucro = cidadeDestino.chocolateVender - cidadeOrigem.chocolateComprar;
-
-    } else
-    {
-        cidadeDaChocolateMaisBarataParaComprar = "As duas cidades têm o mesmo preço!";
-        chocolateDiferencaDePreco = 0;
-        chocolateLucro = cidadeDestino.chocolateVender - cidadeOrigem.chocolateComprar;
-    }
+    chocolateLucro = cidadeDestino.chocolateVender - cidadeOrigem.chocolateComprar;
 
     //PREÇO DE COMPRA DE CANELA:
 
-    if (cidadeOrigem.cinnamonCanelaComprar > cidadeDestino.cinnamonCanelaComprar)
-    {
-        cidadeDaCinnamonCanelaMaisBarataParaComprar = cidadeDestino.nome;
-        cinnamonCanelaDiferencaDePreco = cidadeOrigem.cinnamonCanelaComprar - cidadeDestino.cinnamonCanelaComprar;
-        cinnamonCanelaLucro = cidadeOrigem.cinnamonCanelaVender - cidadeDestino.cinnamonCanelaComprar;
-
-    } else if (cidadeOrigem.cinnamonCanelaComprar < cidadeDestino.cinnamonCanelaComprar)
-    {
-        cidadeDaCinnamonCanelaMaisBarataParaComprar = cidadeOrigem.nome;
-        cinnamonCanelaDiferencaDePreco = cidadeDestino.cinnamonCanelaComprar - cidadeOrigem.cinnamonCanelaComprar;
-        cinnamonCanelaLucro = cidadeDestino.cinnamonCanelaVender - cidadeOrigem.cinnamonCanelaComprar;
-
-    } else
-    {
-        cidadeDaCinnamonCanelaMaisBarataParaComprar = "As duas cidades têm o mesmo preço!";
-        cinnamonCanelaDiferencaDePreco = 0;
-        cinnamonCanelaLucro = cidadeDestino.cinnamonCanelaVender - cidadeOrigem.cinnamonCanelaComprar;
-    }
+    canelaLucro = cidadeDestino.canelaVender - cidadeOrigem.canelaComprar;
 
     //PREÇO DE COMPRA DE ROUPAS:
 
-    if (cidadeOrigem.clothesRoupasComprar > cidadeDestino.clothesRoupasComprar)
-    {
-        cidadeDaRoupasMaisBarataParaComprar = cidadeDestino.nome;
-        roupasDiferencaDePreco = cidadeOrigem.clothesRoupasComprar - cidadeDestino.clothesRoupasComprar;
-        roupasLucro = cidadeOrigem.clothesRoupasVender - cidadeDestino.clothesRoupasComprar;
+    roupasLucro = cidadeDestino.roupasVender - cidadeOrigem.roupasComprar;
 
-    } else if (cidadeOrigem.clothesRoupasComprar < cidadeDestino.clothesRoupasComprar)
-    {
-        cidadeDaRoupasMaisBarataParaComprar = cidadeOrigem.nome;
-        roupasDiferencaDePreco = cidadeDestino.clothesRoupasComprar - cidadeOrigem.clothesRoupasComprar;
-        roupasLucro = cidadeDestino.clothesRoupasVender - cidadeOrigem.clothesRoupasComprar;
+    //PREÇO DE COMPRA DE CAFE:
 
-    } else
-    {
-        cidadeDaRoupasMaisBarataParaComprar = "As duas cidades têm o mesmo preço!";
-        roupasDiferencaDePreco = 0;
-        roupasLucro = cidadeDestino.clothesRoupasVender - cidadeOrigem.clothesRoupasComprar;
-    }
+    cafeLucro = cidadeDestino.cafeVender - cidadeOrigem.cafeComprar;
+
+    //PREÇO DE COMPRA DE ALGODÃO:
+
+    algodaoLucro = cidadeDestino.algodaoVender - cidadeOrigem.algodaoComprar;
+
+    //PREÇO DE COMPRA DE ÉBANO:
+
+    ebanoLucro = cidadeDestino.ebanoVender - cidadeOrigem.ebanoComprar;
+
+    //PREÇO DE COMPRA DE FRUTAS:
+
+    frutasLucro = cidadeDestino.frutasVender - cidadeOrigem.frutasComprar;
+
+    //PREÇO DE COMPRA DE COURO:
+
+    couroLucro = cidadeDestino.couroVender - cidadeOrigem.couroComprar;
+
+    //PREÇO DE COMPRA DE LINHO:
+
+    linhoLucro = cidadeDestino.linhoVender - cidadeOrigem.linhoComprar;
+
+    //PREÇO DE COMPRA DE MOGNO:
+
+    mognoLucro = cidadeDestino.mognoVender - cidadeOrigem.mognoComprar;
+
+    //PREÇO DE COMPRA DE ÓLEO:
+
+    oleoLucro = cidadeDestino.oleoVender - cidadeOrigem.oleoComprar;
+
+    //PREÇO DE COMPRA DE PÁPRICA:
+
+    papricaLucro = cidadeDestino.papricaVender - cidadeOrigem.papricaComprar;
+
+    //PREÇO DE COMPRA DE TÁBUAS:
+
+    tabuasLucro = cidadeDestino.tabuasVender - cidadeOrigem.tabuasComprar;
+
+    //PREÇO DE COMPRA DE RUM:
+
+    rumLucro = cidadeDestino.rumVender - cidadeOrigem.rumComprar;
+
+    //PREÇO DE COMPRA DE LONA:
+
+    lonaLucro = cidadeDestino.lona - cidadeOrigem.lonaComprar;
+
+    //PREÇO DE COMPRA DE SANDALIAS:
+
+    sandaliasLucro = cidadeDestino.sandaliasVender - cidadeOrigem.sandaliasComprar;
+
+    //PREÇO DE COMPRA DE SEDA:
+
+    sedaLucro = cidadeDestino.sedaVender - cidadeOrigem.sedaComprar;
+
+    //PREÇO DE COMPRA DE AÇÚCAR:
+
+    acucarLucro = cidadeDestino.acucarVender - cidadeOrigem.acucarComprar;
+
+    //PREÇO DE COMPRA DE TABACO:
+
+    tabacoLucro = cidadeDestino.tabacoVender - cidadeOrigem.tabacoComprar;
+
+    //PREÇO DE COMPRA DE TRIGO:
+
+    trigoLucro = cidadeDestino.trigoVender - cidadeOrigem.trigoComprar;
+
+    //PREÇO DE COMPRA DE VINHO:
+
+    vinhoLucro = cidadeDestino.vinhoVender - cidadeOrigem.vinhoComprar;
 
     //
 
     //SAIDA RESULTADO PRODUTOS:
 
-    resultadoCerveja.innerHTML = "A cerveja com o melhor preço é o da cidade de: " + cidadeDaCervejaMaisBarataParaComprar + ", o lucro será de: " + cervejaLucro + " se negociado!"
+    resultadoCerveja.innerHTML = "CERVEJA LUCRO: " + cervejaLucro;
 
-    resultadoChocolate.innerHTML = "O chocolate com o melhor preço é o da cidade de: " + cidadeDaChocolateMaisBarataParaComprar + ", o lucro será de: " + chocolateLucro + " se negociado!"
+    resultadoChocolate.innerHTML = "CHOCOLATE LUCRO: " + chocolateLucro;
 
-    resultadoCanela.innerHTML = "A canela com o melhor preço é o da cidade de: " + cidadeDaCinnamonCanelaMaisBarataParaComprar + ", o lucro será de: " + cinnamonCanelaLucro + " se negociado!"
+    resultadoCanela.innerHTML = "CANELA LUCRO: " + canelaLucro;
 
-    resultadoRoupas.innerHTML = "As roupas com o melhor preço é o da cidade de: " + cidadeDaRoupasMaisBarataParaComprar + ", o lucro será de: " + roupasLucro + " se negociado!"
+    resultadoRoupas.innerHTML = "ROUPAS LUCRO: " + roupasLucro;
 
-    /*
-    //SAIDA 2:
+    resultadoCafe.innerHTML = "CAFÉ LUCRO: " + cafeLucro;
 
-    cidadeMelhorPreco.innerHTML = "A CERVEJA MAIS BARATA É DA CIDADE DE " + roupasMaisBarataParaComprar;
-    diferencaDePreco.innerHTML = "A DIFERENÇA DE PREÇO É DE: " + roupasDiferencaDePreco;
-    lucro.innerHTML = "O LUCRO DA CERVEJA SERÁ DE: " + roupasLucro;
-    produtoMaisBarato.innerHTML = "";
-    */
+    resultadoAlgodao.innerHTML = "ALGODÃO LUCRO: " + algodaoLucro;
+
+    resultadoEbano.innerHTML = "ÉBANO LUCRO: " + ebanoLucro;
+
+    resultadoFrutas.innerHTML = "FRUTAS LUCRO: " + frutasLucro;
+
+    resultadoCouro.innerHTML = "COURO LUCRO: " + couroLucro;
+
+    resultadoLinho.innerHTML = "LINHO LUCRO: " + linhoLucro;
+
+    resultadoMogno.innerHTML = "MOGNO LUCRO: " + mognoLucro;
+
+    resultadoOleo.innerHTML = "ÓLEO LUCRO: " + oleoLucro;
+
+    resultadoPaprica.innerHTML = "PÁPRICA LUCRO: " + papricaLucro;
+
+    resultadoTabuas.innerHTML = "TÁBUAS LUCRO: " + tabuasLucro;
+
+    resultadoRum.innerHTML = "RUM LUCRO: " + rumLucro;
+
+    resultadoLona.innerHTML = "LONA LUCRO: " + lonaLucro;
+
+    resultadoSandalias.innerHTML = "SANDÁLIA LUCRO: " + sandaliasLucro;
+
+    resultadoSeda.innerHTML = "SEDA LUCRO: " + sedaLucro;
+
+    resultadoAcucar.innerHTML = "AÇÚCAR LUCRO: " + acucarLucro;
+
+    resultadoTabaco.innerHTML = "TABACO LUCRO: " + tabacoLucro;
+
+    resultadoTrigo.innerHTML = "TRIGO LUCRO: " + trigoLucro;
+
+    resultadoVinho.innerHTML = "VINHO LUCRO: " + vinhoLucro;
+
+    //DEFINDO CORES:
+
+    if (cervejaLucro > 0)
+    {
+        resultadoCerveja.style.backgroundColor = "green";
+    } else
+    {
+        resultadoCerveja.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (chocolateLucro > 0)
+    {
+        resultadoChocolate.style.backgroundColor = "green";
+    } else
+    {
+        resultadoChocolate.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (canelaLucro > 0)
+    {
+        resultadoCanela.style.backgroundColor = "green";
+    } else
+    {
+        resultadoCanela.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (roupasLucro > 0)
+    {
+        resultadoRoupas.style.backgroundColor = "green";
+    } else
+    {
+        resultadoRoupas.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (cafeLucro > 0)
+    {
+        resultadoCafe.style.backgroundColor = "green";
+    } else
+    {
+        resultadoCafe.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (algodaoLucro > 0)
+    {
+        resultadoAlgodao.style.backgroundColor = "green";
+    } else
+    {
+        resultadoAlgodao.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (ebanoLucro > 0)
+    {
+        resultadoEbano.style.backgroundColor = "green";
+    } else
+    {
+        resultadoEbano.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (frutasLucro > 0)
+    {
+        resultadoFrutas.style.backgroundColor = "green";
+    } else
+    {
+        resultadoFrutas.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (couroLucro > 0)
+    {
+        resultadoCouro.style.backgroundColor = "green";
+    } else
+    {
+        resultadoCouro.style.backgroundColor = "red";
+    }
+
+    if (linhoLucro > 0)
+    {
+        resultadoLinho.style.backgroundColor = "green";
+    } else
+    {
+        resultadoLinho.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (mognoLucro > 0)
+    {
+        resultadoMogno.style.backgroundColor = "green";
+    } else
+    {
+        resultadoMogno.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (oleoLucro > 0)
+    {
+        resultadoOleo.style.backgroundColor = "green";
+    } else
+    {
+        resultadoOleo.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (papricaLucro > 0)
+    {
+        resultadoPaprica.style.backgroundColor = "green";
+    } else
+    {
+        resultadoPaprica.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (tabuasLucro > 0)
+    {
+        resultadoTabuas.style.backgroundColor = "green";
+    } else
+    {
+        resultadoTabuas.style.backgroundColor = "red";
+    }
+
+    if (rumLucro > 0)
+    {
+        resultadoRum.style.backgroundColor = "green";
+    } else
+    {
+        resultadoRum.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (lonaLucro > 0)
+    {
+        resultadoLona.style.backgroundColor = "green";
+    } else
+    {
+        resultadoLona.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (sandaliasLucro > 0)
+    {
+        resultadoSandalias.style.backgroundColor = "green";
+    } else
+    {
+        resultadoSandalias.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (sedaLucro > 0)
+    {
+        resultadoSeda.style.backgroundColor = "green";
+    } else
+    {
+        resultadoSeda.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (acucarLucro > 0)
+    {
+        resultadoAcucar.style.backgroundColor = "green";
+    } else
+    {
+        resultadoAcucar.style.backgroundColor = "red";
+    }
+
+    if (tabacoLucro > 0)
+    {
+        resultadoTabaco.style.backgroundColor = "green";
+    } else
+    {
+        resultadoTabaco.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (trigoLucro > 0)
+    {
+        resultadoTrigo.style.backgroundColor = "green";
+    } else
+    {
+        resultadoTrigo.style.backgroundColor = "red";
+    }
+
+    //
+
+    if (vinhoLucro > 0)
+    {
+        resultadoVinho.style.backgroundColor = "green";
+    } else
+    {
+        resultadoVinho.style.backgroundColor = "red";
+    }
+
 }
 
 //
