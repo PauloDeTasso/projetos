@@ -1397,12 +1397,14 @@ function audioCachoeiraTocando()
     setTimeout("limparStatusSistema()", 10000);
 }
 
+var urlInterno = "../testes/Best Business/Mercadorias.html";
+
 function abrirBestBusiness(url)
 {
-    window.open(url, _blank);
+    window.open(url, "_blank");
 }
 
-botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("../testes/Best Business/Mercadorias.html") }, false);
+//botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("/testes/Best Business/Mercadorias.html") }, false);
 
 /*
 const input = document.querySelector('input');
