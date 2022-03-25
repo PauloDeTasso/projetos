@@ -1623,7 +1623,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //DEFINDO CORES:
 
-    if (cervejaLucro > 0)
+    if (cervejaLucro >= 0)
     {
         resultadoCerveja.style.backgroundColor = "green";
     } else
@@ -1633,7 +1633,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (chocolateLucro > 0)
+    if (chocolateLucro >= 0)
     {
         resultadoChocolate.style.backgroundColor = "green";
     } else
@@ -1643,7 +1643,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (canelaLucro > 0)
+    if (canelaLucro >= 0)
     {
         resultadoCanela.style.backgroundColor = "green";
     } else
@@ -1653,7 +1653,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (roupasLucro > 0)
+    if (roupasLucro >= 0)
     {
         resultadoRoupas.style.backgroundColor = "green";
     } else
@@ -1663,7 +1663,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (cafeLucro > 0)
+    if (cafeLucro >= 0)
     {
         resultadoCafe.style.backgroundColor = "green";
     } else
@@ -1673,7 +1673,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (algodaoLucro > 0)
+    if (algodaoLucro >= 0)
     {
         resultadoAlgodao.style.backgroundColor = "green";
     } else
@@ -1683,7 +1683,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (ebanoLucro > 0)
+    if (ebanoLucro >= 0)
     {
         resultadoEbano.style.backgroundColor = "green";
     } else
@@ -1693,7 +1693,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (frutasLucro > 0)
+    if (frutasLucro >= 0)
     {
         resultadoFrutas.style.backgroundColor = "green";
     } else
@@ -1703,7 +1703,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (couroLucro > 0)
+    if (couroLucro >= 0)
     {
         resultadoCouro.style.backgroundColor = "green";
     } else
@@ -1711,7 +1711,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
         resultadoCouro.style.backgroundColor = "red";
     }
 
-    if (linhoLucro > 0)
+    if (linhoLucro >= 0)
     {
         resultadoLinho.style.backgroundColor = "green";
     } else
@@ -1721,7 +1721,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (mognoLucro > 0)
+    if (mognoLucro >= 0)
     {
         resultadoMogno.style.backgroundColor = "green";
     } else
@@ -1731,7 +1731,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (oleoLucro > 0)
+    if (oleoLucro >= 0)
     {
         resultadoOleo.style.backgroundColor = "green";
     } else
@@ -1741,7 +1741,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (papricaLucro > 0)
+    if (papricaLucro >= 0)
     {
         resultadoPaprica.style.backgroundColor = "green";
     } else
@@ -1751,7 +1751,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (tabuasLucro > 0)
+    if (tabuasLucro >= 0)
     {
         resultadoTabuas.style.backgroundColor = "green";
     } else
@@ -1759,7 +1759,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
         resultadoTabuas.style.backgroundColor = "red";
     }
 
-    if (rumLucro > 0)
+    if (rumLucro >= 0)
     {
         resultadoRum.style.backgroundColor = "green";
     } else
@@ -1769,7 +1769,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (lonaLucro > 0)
+    if (lonaLucro >= 0)
     {
         resultadoLona.style.backgroundColor = "green";
     } else
@@ -1779,7 +1779,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (sandaliasLucro > 0)
+    if (sandaliasLucro >= 0)
     {
         resultadoSandalias.style.backgroundColor = "green";
     } else
@@ -1789,7 +1789,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (sedaLucro > 0)
+    if (sedaLucro >= 0)
     {
         resultadoSeda.style.backgroundColor = "green";
     } else
@@ -1799,7 +1799,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (acucarLucro > 0)
+    if (acucarLucro >= 0)
     {
         resultadoAcucar.style.backgroundColor = "green";
     } else
@@ -1807,7 +1807,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
         resultadoAcucar.style.backgroundColor = "red";
     }
 
-    if (tabacoLucro > 0)
+    if (tabacoLucro >= 0)
     {
         resultadoTabaco.style.backgroundColor = "green";
     } else
@@ -1817,7 +1817,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (trigoLucro > 0)
+    if (trigoLucro >= 0)
     {
         resultadoTrigo.style.backgroundColor = "green";
     } else
@@ -1827,7 +1827,7 @@ function pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor)
 
     //
 
-    if (vinhoLucro > 0)
+    if (vinhoLucro >= 0)
     {
         resultadoVinho.style.backgroundColor = "green";
     } else
