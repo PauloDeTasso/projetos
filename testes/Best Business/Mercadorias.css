@@ -54,6 +54,18 @@ html
     border: 5px solid rgb(79, 79, 79);
 }
 
+#resultadosAvancados
+{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+}
+
 .todasAsCidades
 {
     display: flex;

@@ -13,10 +13,11 @@ var secaoRedmond = document.getElementById('secaoRedmond');
 var secaocervejaConceicao = document.getElementById('secaocervejaConceicao');
 
 var secaoCidades = document.getElementById('secaoCidades');
+var resultadosAvancados = document.getElementById('resultadosAvancados');
 
 var botaoApagarEntrada1 = document.getElementById('botaoApagarEntrada1');
 var botaoApagarEntrada2 = document.getElementById('botaoApagarEntrada2');
-var botaoApagarEntrada3 = document.getElementById('botaoApagarEntrada3');
+//var botaoApagarEntrada3 = document.getElementById('botaoApagarEntrada3');
 var botaoAbrirFecharTabela = document.getElementById('botaoAbrirFecharTabela');
 var entradaCidadeOrigem = document.getElementById('entradaCidadeOrigem');
 var entradaCidadeDestino = document.getElementById('entradaCidadeDestino');
@@ -1405,8 +1406,8 @@ vendaVinhoRedmond.innerHTML = redmond.vinhoVender;
 var cidadeOrigem, cidadeDestino;
 
 var entradaCidadeOrigemValor = entradaCidadeOrigem.value;
+
 var entradaCidadeDestinoValor = entradaCidadeDestino.value;
-var entradaProdutoValor = entradaProduto.value;
 
 var cervejaLucro;
 
@@ -1874,8 +1875,8 @@ function reiniciar()
 
 function abrirFecharTabela()
 {
-    var estilo = window.getComputedStyle(secaoCidades);
-    var estiloPropriedade = estilo.getPropertyValue('display');
+    let estilo = window.getComputedStyle(secaoCidades);
+    let estiloPropriedade = estilo.getPropertyValue('display');
 
     if (estiloPropriedade == "none")    
     {
@@ -1886,13 +1887,31 @@ function abrirFecharTabela()
     }
 }
 
+function abrirFecharResultadosAvancados()
+{
+    let estilo = window.getComputedStyle(resultadosAvancados);
+    let estiloPropriedade = estilo.getPropertyValue('display');
+
+    if (estiloPropriedade == "none")    
+    {
+        resultadosAvancados.style.display = 'flex';
+    } else
+    {
+        resultadosAvancados.style.display = 'none';
+    }
+}
+
 /////////////////////////////////////EVENTOS:
 
 botaoReiniciar.addEventListener('click', reiniciar, false);
+
 botaoApagarEntrada1.addEventListener('click', apagarEntrada1, false);
 botaoApagarEntrada2.addEventListener('click', apagarEntrada2, false);
-botaoApagarEntrada3.addEventListener('click', apagarEntrada3, false);
+//botaoApagarEntrada3.addEventListener('click', apagarEntrada3, false);
+
 botaoAbrirFecharTabela.addEventListener('click', abrirFecharTabela, false);
+botaoAbrirFecharTabela.addEventListener('click', abrirFecharResultadosAvancados, false);
+
 botaoPesquisar.addEventListener('click', function ()
 { pesquisar(entradaCidadeOrigemValor, entradaCidadeDestinoValor) }
     , false);
