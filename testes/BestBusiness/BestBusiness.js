@@ -1,4 +1,3 @@
-
 ////////////////////////////////////VARIAVEIS:
 
 var secaoConceicao = document.getElementById('secaoConceicao');
