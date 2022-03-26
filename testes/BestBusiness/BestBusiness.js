@@ -922,70 +922,70 @@ var redmond = new Cidade("Redmond");
 redmond.cervejaComprar = 2;
 redmond.cervejaVender = 1;
 
-redmond.chocolateComprar = 22;
-redmond.chocolateVender = 13;
+redmond.chocolateComprar = 14;
+redmond.chocolateVender = 10;
 
-redmond.canelaComprar = 35;
-redmond.canelaVender = 20;
+redmond.canelaComprar = 27;
+redmond.canelaVender = 21;
 
-redmond.roupasComprar = 4;
-redmond.roupasVender = 2;
+redmond.roupasComprar = 5;
+redmond.roupasVender = 4;
 
 redmond.cafeComprar = undefined;
 redmond.cafeVender = undefined;
 
-redmond.copraComprar = 8;
+redmond.copraComprar = 6;
 redmond.copraVender = 5;
 
-redmond.algodaoComprar = 8;
+redmond.algodaoComprar = 6;
 redmond.algodaoVender = 4;
 
 redmond.ebanoComprar = undefined;
 redmond.ebanoVender = undefined;
 
-redmond.frutasComprar = 11;
+redmond.frutasComprar = 8;
 redmond.frutasVender = 6;
 
 redmond.couroComprar = 5;
-redmond.couroVender = 3;
+redmond.couroVender = 4;
 
 redmond.linhoComprar = 6;
-redmond.linhoVender = 3;
+redmond.linhoVender = 5;
 
-redmond.caobaComprar = 19;
-redmond.caobaVender = 11;
+redmond.caobaComprar = 21;
+redmond.caobaVender = 16;
 
-redmond.oleoComprar = 8;
+redmond.oleoComprar = 6;
 redmond.oleoVender = 4;
 
 redmond.papricaComprar = undefined;
 redmond.papricaVender = undefined;
 
-redmond.tabuasComprar = 12;
-redmond.tabuasVender = 7;
+redmond.tabuasComprar = 11;
+redmond.tabuasVender = 8;
 
-redmond.rumComprar = 7;
-redmond.rumVender = 4;
+redmond.rumComprar = 8;
+redmond.rumVender = 6;
 
-redmond.lonaComprar = 5;
+redmond.lonaComprar = 4;
 redmond.lonaVender = 3;
 
-redmond.sandaliasComprar = 45;
-redmond.sandaliasVender = 26;
+redmond.sandaliasComprar = 33;
+redmond.sandaliasVender = 25;
 
-redmond.sedaComprar = 22;
-redmond.sedaVender = 12;
+redmond.sedaComprar = 23;
+redmond.sedaVender = 18;
 
-redmond.acucarComprar = 9;
-redmond.acucarVender = 5;
+redmond.acucarComprar = 8;
+redmond.acucarVender = 6;
 
-redmond.tabacoComprar = 18;
-redmond.tabacoVender = 10;
+redmond.tabacoComprar = 11;
+redmond.tabacoVender = 9;
 
 redmond.trigoComprar = 5;
-redmond.trigoVender = 3;
+redmond.trigoVender = 4;
 
-redmond.vinhoComprar = 15;
+redmond.vinhoComprar = 10;
 redmond.vinhoVender = 8;
 
 //// DEFINIÇÕES TABELA:
