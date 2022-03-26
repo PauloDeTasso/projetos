@@ -554,71 +554,71 @@ function Cidade(nome)
 
 var conceicao = new Cidade("Conceição");
 
-conceicao.cervejaComprar = 6;
-conceicao.cervejaVender = 3;
+conceicao.cervejaComprar = 5;
+conceicao.cervejaVender = 4;
 
-conceicao.chocolateComprar = 29;
-conceicao.chocolateVender = 17;
+conceicao.chocolateComprar = 28;
+conceicao.chocolateVender = 22;
 
-conceicao.canelaComprar = 7;
-conceicao.canelaVender = 4;
+conceicao.canelaComprar = 8;
+conceicao.canelaVender = 6;
 
-conceicao.roupasComprar = 12;
-conceicao.roupasVender = 7;
+conceicao.roupasComprar = 7;
+conceicao.roupasVender = 6;
 
-conceicao.cafeComprar = 21;
-conceicao.cafeVender = 12;
+conceicao.cafeComprar = 14;
+conceicao.cafeVender = 11;
 
 conceicao.copraComprar = undefined;
 conceicao.copraVender = undefined;
 
-conceicao.algodaoComprar = 7;
+conceicao.algodaoComprar = 6;
 conceicao.algodaoVender = 4;
 
-conceicao.ebanoComprar = 32;
-conceicao.ebanoVender = 18;
+conceicao.ebanoComprar = 29;
+conceicao.ebanoVender = 22;
 
-conceicao.frutasComprar = 5;
+conceicao.frutasComprar = 3;
 conceicao.frutasVender = 2;
 
 conceicao.couroComprar = 4;
-conceicao.couroVender = 2;
+conceicao.couroVender = 3;
 
 conceicao.linhoComprar = 11;
-conceicao.linhoVender = 6;
+conceicao.linhoVender = 8;
 
 conceicao.caobaComprar = undefined;
 conceicao.caobaVender = undefined;
 
-conceicao.oleoComprar = 6;
+conceicao.oleoComprar = 5;
 conceicao.oleoVender = 3;
 
-conceicao.papricaComprar = 16;
+conceicao.papricaComprar = 12;
 conceicao.papricaVender = 9;
 
-conceicao.tabuasComprar = 9;
-conceicao.tabuasVender = 5;
+conceicao.tabuasComprar = 8;
+conceicao.tabuasVender = 6;
 
-conceicao.rumComprar = 12;
-conceicao.rumVender = 7;
+conceicao.rumComprar = 11;
+conceicao.rumVender = 8;
 
-conceicao.lonaComprar = 5;
+conceicao.lonaComprar = 4;
 conceicao.lonaVender = 3;
 
-conceicao.sandaliasComprar = 29;
-conceicao.sandaliasVender = 17;
+conceicao.sandaliasComprar = 27;
+conceicao.sandaliasVender = 21;
 
-conceicao.sedaComprar = 23;
-conceicao.sedaVender = 13;
+conceicao.sedaComprar = 20;
+conceicao.sedaVender = 15;
 
-conceicao.acucarComprar = 3;
-conceicao.acucarVender = 1;
+conceicao.acucarComprar = 4;
+conceicao.acucarVender = 3;
 
-conceicao.tabacoComprar = 17;
-conceicao.tabacoVender = 10;
+conceicao.tabacoComprar = 11;
+conceicao.tabacoVender = 9;
 
 conceicao.trigoComprar = 4;
-conceicao.trigoVender = 2;
+conceicao.trigoVender = 3;
 
 conceicao.vinhoComprar = undefined;
 conceicao.vinhoVender = undefined;
@@ -628,146 +628,146 @@ conceicao.vinhoVender = undefined;
 var douwesen = new Cidade("Douwesen");
 
 douwesen.cervejaComprar = 1;
-douwesen.cervejaVender = 1;
+douwesen.cervejaVender = 0;
 
-douwesen.chocolateComprar = 19;
+douwesen.chocolateComprar = 14;
 douwesen.chocolateVender = 11;
 
-douwesen.canelaComprar = 23;
-douwesen.canelaVender = 13;
+douwesen.canelaComprar = 20;
+douwesen.canelaVender = 16;
 
-douwesen.roupasComprar = 12;
+douwesen.roupasComprar = 9;
 douwesen.roupasVender = 7;
 
-douwesen.cafeComprar = 8;
+douwesen.cafeComprar = 6;
 douwesen.cafeVender = 4;
 
-douwesen.copraComprar = 3;
-douwesen.copraVender = 2;
+douwesen.copraComprar = 4;
+douwesen.copraVender = 3;
 
-douwesen.algodaoComprar = 9;
+douwesen.algodaoComprar = 7;
 douwesen.algodaoVender = 5;
 
 douwesen.ebanoComprar = 33;
-douwesen.ebanoVender = 19;
+douwesen.ebanoVender = 25;
 
-douwesen.frutasComprar = 9;
-douwesen.frutasVender = 5;
+douwesen.frutasComprar = 8;
+douwesen.frutasVender = 6;
 
-douwesen.couroComprar = 5;
-douwesen.couroVender = 2;
+douwesen.couroComprar = 4;
+douwesen.couroVender = 3;
 
 douwesen.linhoComprar = undefined;
 douwesen.linhoVender = undefined;
 
-douwesen.caobaComprar = 25;
-douwesen.caobaVender = 14;
+douwesen.caobaComprar = 15;
+douwesen.caobaVender = 12;
 
-douwesen.oleoComprar = 7;
+douwesen.oleoComprar = 5;
 douwesen.oleoVender = 4;
 
-douwesen.papricaComprar = 15;
+douwesen.papricaComprar = 12;
 douwesen.papricaVender = 9;
 
-douwesen.tabuasComprar = 12;
-douwesen.tabuasVender = 7;
+douwesen.tabuasComprar = 11;
+douwesen.tabuasVender = 8;
 
 douwesen.rumComprar = undefined;
 douwesen.rumVender = undefined;
 
-douwesen.lonaComprar = 9;
-douwesen.lonaVender = 5;
+douwesen.lonaComprar = 8;
+douwesen.lonaVender = 6;
 
-douwesen.sandaliasComprar = 24;
-douwesen.sandaliasVender = 13;
+douwesen.sandaliasComprar = 21;
+douwesen.sandaliasVender = 16;
 
-douwesen.sedaComprar = 14;
-douwesen.sedaVender = 8;
+douwesen.sedaComprar = 15;
+douwesen.sedaVender = 12;
 
 douwesen.acucarComprar = undefined;
 douwesen.acucarVender = undefined;
 
 douwesen.tabacoComprar = 8;
-douwesen.tabacoVender = 4;
+douwesen.tabacoVender = 6;
 
 douwesen.trigoComprar = 7;
-douwesen.trigoVender = 4;
+douwesen.trigoVender = 5;
 
 douwesen.vinhoComprar = 19;
-douwesen.vinhoVender = 11;
+douwesen.vinhoVender = 14;
 
 ///////////FALAISE DE FLEUR:
 
 var falaiseDeFleur = new Cidade("Falaise de Fleur");
 
-falaiseDeFleur.cervejaComprar = 4;
+falaiseDeFleur.cervejaComprar = 3;
 falaiseDeFleur.cervejaVender = 2;
 
-falaiseDeFleur.chocolateComprar = 9;
-falaiseDeFleur.chocolateVender = 5;
+falaiseDeFleur.chocolateComprar = 7;
+falaiseDeFleur.chocolateVender = 6;
 
 falaiseDeFleur.canelaComprar = undefined;
 falaiseDeFleur.canelaVender = undefined;
 
-falaiseDeFleur.roupasComprar = 9;
-falaiseDeFleur.roupasVender = 5;
+falaiseDeFleur.roupasComprar = 11;
+falaiseDeFleur.roupasVender = 8;
 
-falaiseDeFleur.cafeComprar = 22;
-falaiseDeFleur.cafeVender = 12;
+falaiseDeFleur.cafeComprar = 17;
+falaiseDeFleur.cafeVender = 13;
 
 falaiseDeFleur.copraComprar = 7;
-falaiseDeFleur.copraVender = 4;
+falaiseDeFleur.copraVender = 6;
 
-falaiseDeFleur.algodaoComprar = 6;
-falaiseDeFleur.algodaoVender = 4;
+falaiseDeFleur.algodaoComprar = 7;
+falaiseDeFleur.algodaoVender = 5;
 
-falaiseDeFleur.ebanoComprar = 54;
-falaiseDeFleur.ebanoVender = 31;
+falaiseDeFleur.ebanoComprar = 46;
+falaiseDeFleur.ebanoVender = 36;
 
 falaiseDeFleur.frutasComprar = undefined;
 falaiseDeFleur.frutasVender = undefined;
 
-falaiseDeFleur.couroComprar = 8;
-falaiseDeFleur.couroVender = 4;
+falaiseDeFleur.couroComprar = 6;
+falaiseDeFleur.couroVender = 5;
 
 falaiseDeFleur.linhoComprar = 6;
-falaiseDeFleur.linhoVender = 3;
+falaiseDeFleur.linhoVender = 4;
 
-falaiseDeFleur.caobaComprar = 24;
-falaiseDeFleur.caobaVender = 14;
+falaiseDeFleur.caobaComprar = 21;
+falaiseDeFleur.caobaVender = 17;
 
-falaiseDeFleur.oleoComprar = 6;
-falaiseDeFleur.oleoVender = 3;
+falaiseDeFleur.oleoComprar = 5;
+falaiseDeFleur.oleoVender = 4;
 
-falaiseDeFleur.papricaComprar = 18;
-falaiseDeFleur.papricaVender = 10;
+falaiseDeFleur.papricaComprar = 14;
+falaiseDeFleur.papricaVender = 11;
 
-falaiseDeFleur.tabuasComprar = 12;
-falaiseDeFleur.tabuasVender = 7;
+falaiseDeFleur.tabuasComprar = 11;
+falaiseDeFleur.tabuasVender = 8;
 
-falaiseDeFleur.rumComprar = 12;
-falaiseDeFleur.rumVender = 7;
+falaiseDeFleur.rumComprar = 10;
+falaiseDeFleur.rumVender = 8;
 
-falaiseDeFleur.lonaComprar = 5;
+falaiseDeFleur.lonaComprar = 4;
 falaiseDeFleur.lonaVender = 3;
 
 falaiseDeFleur.sandaliasComprar = undefined;
 falaiseDeFleur.sandaliasVender = undefined;
 
-falaiseDeFleur.sedaComprar = 9;
-falaiseDeFleur.sedaVender = 5;
+falaiseDeFleur.sedaComprar = 7;
+falaiseDeFleur.sedaVender = 6;
 
-falaiseDeFleur.acucarComprar = 9;
-falaiseDeFleur.acucarVender = 5;
+falaiseDeFleur.acucarComprar = 8;
+falaiseDeFleur.acucarVender = 6;
 
-falaiseDeFleur.tabacoComprar = 13;
-falaiseDeFleur.tabacoVender = 8;
+falaiseDeFleur.tabacoComprar = 16;
+falaiseDeFleur.tabacoVender = 13;
 
-falaiseDeFleur.trigoComprar = 6;
-falaiseDeFleur.trigoVender = 3;
+falaiseDeFleur.trigoComprar = 5;
+falaiseDeFleur.trigoVender = 4;
 
-falaiseDeFleur.vinhoComprar = 15;
-falaiseDeFleur.vinhoVender = 9;
+falaiseDeFleur.vinhoComprar = 13;
+falaiseDeFleur.vinhoVender = 10;
 
 ///////////ISLA MUELLE:
 
