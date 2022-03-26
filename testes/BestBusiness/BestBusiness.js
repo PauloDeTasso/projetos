@@ -846,74 +846,74 @@ islaMuelle.vinhoVender = 10;
 
 var oxbay = new Cidade("Oxbay");
 
-oxbay.cervejaComprar = 3;
-oxbay.cervejaVender = 1;
+oxbay.cervejaComprar = 4;
+oxbay.cervejaVender = 3;
 
-oxbay.chocolateComprar = 29;
-oxbay.chocolateVender = 16;
+oxbay.chocolateComprar = 25;
+oxbay.chocolateVender = 19;
 
-oxbay.canelaComprar = 20;
-oxbay.canelaVender = 11;
+oxbay.canelaComprar = 15;
+oxbay.canelaVender = 12;
 
-oxbay.roupasComprar = 12;
-oxbay.roupasVender = 6;
+oxbay.roupasComprar = 10;
+oxbay.roupasVender = 8;
 
 oxbay.cafeComprar = undefined;
 oxbay.cafeVender = undefined;
 
 oxbay.copraComprar = 8;
-oxbay.copraVender = 4;
+oxbay.copraVender = 6;
 
-oxbay.algodaoComprar = 6;
-oxbay.algodaoVender = 3;
+oxbay.algodaoComprar = 5;
+oxbay.algodaoVender = 4;
 
 oxbay.ebanoComprar = undefined;
 oxbay.ebanoVender = undefined;
 
 oxbay.frutasComprar = 10;
-oxbay.frutasVender = 6;
+oxbay.frutasVender = 7;
 
-oxbay.couroComprar = 9;
+oxbay.couroComprar = 7;
 oxbay.couroVender = 5;
 
-oxbay.linhoComprar = 11;
-oxbay.linhoVender = 6;
+oxbay.linhoComprar = 10;
+oxbay.linhoVender = 7;
 
-oxbay.caobaComprar = 19;
-oxbay.caobaVender = 11;
+oxbay.caobaComprar = 16;
+oxbay.caobaVender = 13;
 
 oxbay.oleoComprar = 6;
-oxbay.oleoVender = 3;
+oxbay.oleoVender = 5;
 
 oxbay.papricaComprar = undefined;
 oxbay.papricaVender = undefined;
 
-oxbay.tabuasComprar = 9;
-oxbay.tabuasVender = 5;
+oxbay.tabuasComprar = 8;
+oxbay.tabuasVender = 6;
 
 oxbay.rumComprar = 2;
-oxbay.rumVender = 1;
+oxbay.rumVender = 2;
 
-oxbay.lonaComprar = 9;
-oxbay.lonaVender = 5;
+oxbay.lonaComprar = 8;
+oxbay.lonaVender = 6;
 
-oxbay.sandaliasComprar = 17;
-oxbay.sandaliasVender = 9;
+oxbay.sandaliasComprar = 9;
+oxbay.sandaliasVender = 7;
 
-oxbay.sedaComprar = 25;
-oxbay.sedaVender = 13;
+oxbay.sedaComprar = 22;
+oxbay.sedaVender = 17;
 
-oxbay.acucarComprar = 7;
+oxbay.acucarComprar = 6;
 oxbay.acucarVender = 4;
 
 oxbay.tabacoComprar = 5;
-oxbay.tabacoVender = 2;
+oxbay.tabacoVender = 3;
 
 oxbay.trigoComprar = 5;
-oxbay.trigoVender = 2;
+oxbay.trigoVender = 3;
 
 oxbay.vinhoComprar = 14;
-oxbay.vinhoVender = 8;
+oxbay.vinhoVender = 10;
 
 ///////////REDMOND:
 
