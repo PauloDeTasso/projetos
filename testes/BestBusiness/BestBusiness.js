@@ -776,71 +776,71 @@ var islaMuelle = new Cidade("Isla Muelle");
 islaMuelle.cervejaComprar = undefined;
 islaMuelle.cervejaVender = undefined;
 
-islaMuelle.chocolateComprar = 21;
+islaMuelle.chocolateComprar = 15;
 islaMuelle.chocolateVender = 12;
 
-islaMuelle.canelaComprar = 6;
-islaMuelle.canelaVender = 3;
+islaMuelle.canelaComprar = 8;
+islaMuelle.canelaVender = 6;
 
-islaMuelle.roupasComprar = 10;
-islaMuelle.roupasVender = 5;
+islaMuelle.roupasComprar = 9;
+islaMuelle.roupasVender = 7;
 
-islaMuelle.cafeComprar = 18;
-islaMuelle.cafeVender = 10;
+islaMuelle.cafeComprar = 14;
+islaMuelle.cafeVender = 11;
 
-islaMuelle.copraComprar = 9;
-islaMuelle.copraVender = 5;
+islaMuelle.copraComprar = 5;
+islaMuelle.copraVender = 4;
 
-islaMuelle.algodaoComprar = 8;
+islaMuelle.algodaoComprar = 6;
 islaMuelle.algodaoVender = 4;
 
-islaMuelle.ebanoComprar = 15;
-islaMuelle.ebanoVender = 9;
+islaMuelle.ebanoComprar = 18;
+islaMuelle.ebanoVender = 14;
 
-islaMuelle.frutasComprar = 10;
+islaMuelle.frutasComprar = 8;
 islaMuelle.frutasVender = 6;
 
-islaMuelle.couroComprar = 6;
+islaMuelle.couroComprar = 4;
 islaMuelle.couroVender = 3;
 
-islaMuelle.linhoComprar = 18;
-islaMuelle.linhoVender = 10;
+islaMuelle.linhoComprar = 14;
+islaMuelle.linhoVender = 11;
 
-islaMuelle.caobaComprar = 14;
-islaMuelle.caobaVender = 8;
+islaMuelle.caobaComprar = 6;
+islaMuelle.caobaVender = 4;
 
-islaMuelle.oleoComprar = 7;
-islaMuelle.oleoVender = 4;
+islaMuelle.oleoComprar = 6;
+islaMuelle.oleoVender = 5;
 
-islaMuelle.papricaComprar = 15;
-islaMuelle.papricaVender = 9;
+islaMuelle.papricaComprar = 14;
+islaMuelle.papricaVender = 11;
 
-islaMuelle.tabuasComprar = 12;
-islaMuelle.tabuasVender = 7;
+islaMuelle.tabuasComprar = 11;
+islaMuelle.tabuasVender = 8;
 
 islaMuelle.rumComprar = 8;
-islaMuelle.rumVender = 4;
+islaMuelle.rumVender = 6;
 
-islaMuelle.lonaComprar = 9;
-islaMuelle.lonaVender = 5;
+islaMuelle.lonaComprar = 8;
+islaMuelle.lonaVender = 6;
 
-islaMuelle.sandaliasComprar = 15;
-islaMuelle.sandaliasVender = 9;
+islaMuelle.sandaliasComprar = 9;
+islaMuelle.sandaliasVender = 7;
 
 islaMuelle.sedaComprar = undefined;
 islaMuelle.sedaVender = undefined;
 
-islaMuelle.acucarComprar = 13;
-islaMuelle.acucarVender = 7;
+islaMuelle.acucarComprar = 10;
+islaMuelle.acucarVender = 8;
 
 islaMuelle.tabacoComprar = undefined;
 islaMuelle.tabacoVender = undefined;
 
-islaMuelle.trigoComprar = 5;
+islaMuelle.trigoComprar = 4;
 islaMuelle.trigoVender = 3;
 
-islaMuelle.vinhoComprar = 12;
-islaMuelle.vinhoVender = 7;
+islaMuelle.vinhoComprar = 13;
+islaMuelle.vinhoVender = 10;
 
 ///////////OXBAY:
 
