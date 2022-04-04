@@ -1930,6 +1930,7 @@ entradaCidadeDestino.addEventListener('change', atualizarArgumentos, false);
 
 var secaoTesteArmazenamento = document.getElementById('secaoTesteArmazenamento');
 var botaoSalvarTesteArmazenamento = document.getElementById('botaoSalvarTesteArmazenamento');
+var botaoLimparTesteArmazenamento = document.getElementById('botaoLimparTesteArmazenamento');
 var botaoMostrarTesteArmazenamento = document.getElementById('botaoMostrarTesteArmazenamento');
 var entradaTesteArmazenamento = document.getElementById('entradaTesteArmazenamento');
 var saidaTesteArmazenamento = document.getElementById('saidaTesteArmazenamento');
@@ -1956,11 +1957,15 @@ function mostrarTesteArmazernamento()
     saidaTesteArmazenamento.innerHTML = armazenamentoLocal.nome;
 }
 
+function limparEntradaTesteArmazenamento()
+{
+    entradaTesteArmazenamento.value = "";
+}
+
 botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(chave, valor) }, 'false');
 
 botaoMostrarTesteArmazenamento.addEventListener('click', mostrarTesteArmazernamento, 'false');
 
+botaoLimparTesteArmazenamento.addEventListener('click', limparEntradaTesteArmazenamento, 'false');
+
 entradaTesteArmazenamento.addEventListener('change', atualizarEntradaTesteArmazenamento, 'false');
-
-
-alert('oi');
