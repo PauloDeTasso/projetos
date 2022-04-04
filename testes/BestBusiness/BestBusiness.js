@@ -1925,8 +1925,7 @@ botaoPesquisar.addEventListener('click', function ()
 entradaCidadeOrigem.addEventListener('change', atualizarArgumentos, false);
 entradaCidadeDestino.addEventListener('change', atualizarArgumentos, false);
 
-//////////////////////////////////////CÓDIGO:
-
+/////TESTE ARMAZENAMENTO LOCAL:
 
 var secaoTesteArmazenamento = document.getElementById('secaoTesteArmazenamento');
 var botaoSalvarTesteArmazenamento = document.getElementById('botaoSalvarTesteArmazenamento');
@@ -1940,7 +1939,6 @@ var chave = "nome";
 var valor = entradaTesteArmazenamento.value;
 
 var armazenamentoLocal = localStorage;
-
 
 function salvarTextoTesteArmazenamento(chave, valor)
 {
@@ -1969,3 +1967,5 @@ botaoMostrarTesteArmazenamento.addEventListener('click', mostrarTesteArmazername
 botaoLimparTesteArmazenamento.addEventListener('click', limparEntradaTesteArmazenamento, 'false');
 
 entradaTesteArmazenamento.addEventListener('change', atualizarEntradaTesteArmazenamento, 'false');
+
+//////////////////////////////////////CÓDIGO:
