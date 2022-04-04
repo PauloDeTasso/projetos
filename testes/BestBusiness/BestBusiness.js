@@ -25,6 +25,13 @@ var entradaProduto = document.getElementById('entradaProduto');
 var botaoReiniciar = document.getElementById('botaoReiniciar');
 var botaoPesquisar = document.getElementById('botaoPesquisar');
 
+//Teste Armazenamento
+
+var secaoTesteArmazenamento = document.getElementById('secaoTesteArmazenamento');
+var botaoAbrirFecharTabela = document.getElementById('botaoAbrirFecharTabela');
+var testeArmazenamento = document.getElementById('testeArmazenamento');
+var saidaTeste = document.getElementById('saidaTeste');
+
 //
 
 var cidadeMelhorPreco = document.getElementById('cidadeMelhorPreco');
@@ -1919,3 +1926,41 @@ entradaCidadeOrigem.addEventListener('change', atualizarArgumentos, false);
 entradaCidadeDestino.addEventListener('change', atualizarArgumentos, false);
 
 //////////////////////////////////////CÓDIGO:
+
+
+var secaoTesteArmazenamento = document.getElementById('secaoTesteArmazenamento');
+var botaoSalvarTesteArmazenamento = document.getElementById('botaoSalvarTesteArmazenamento');
+var botaoMostrarTesteArmazenamento = document.getElementById('botaoMostrarTesteArmazenamento');
+var entradaTesteArmazenamento = document.getElementById('entradaTesteArmazenamento');
+var saidaTesteArmazenamento = document.getElementById('saidaTesteArmazenamento');
+
+var chave = "nome";
+
+var valor = entradaTesteArmazenamento.value;
+
+var armazenamentoLocal = localStorage;
+
+
+function salvarTextoTesteArmazenamento(chave, valor)
+{
+    armazenamentoLocal.setItem(chave, valor)
+}
+
+function atualizarEntradaTesteArmazenamento()
+{
+    valor = entradaTesteArmazenamento.value;
+}
+
+function mostrarTesteArmazernamento()
+{
+    saidaTesteArmazenamento.innerHTML = armazenamentoLocal.nome;
+}
+
+botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(chave, valor) }, 'false');
+
+botaoMostrarTesteArmazenamento.addEventListener('click', mostrarTesteArmazernamento, 'false');
+
+entradaTesteArmazenamento.addEventListener('change', atualizarEntradaTesteArmazenamento, 'false');
+
+
+alert('oi');
