@@ -1940,13 +1940,6 @@ var valor = entradaTesteArmazenamento.value;
 
 var armazenamentoLocal = localStorage;
 
-/*
-function salvarTextoTesteArmazenamento(chave, valor)
-{
-    armazenamentoLocal.setItem(chave, valor)
-}
-*/
-
 function salvarTextoTesteArmazenamento(nome, idade, login, senha)
 {
     armazenamentoLocal.setItem('nome', nome);
@@ -1969,8 +1962,6 @@ function limparEntradaTesteArmazenamento()
 {
     entradaTesteArmazenamento.value = "";
 }
-
-//botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(chave, valor) }, 'false');
 
 botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(entradaNome.value, entradaIdade.value, entradaLogin.value, entradaSenha.value) }, 'false');
 
@@ -2018,41 +2009,9 @@ function apagarEntradaUniversal(entrada)
     }
 }
 
-/*
-function apagarEntradaUniversal(entrada)
-{
-    if (entrada == 'entradaNome')
-    {
-        entradaNome.value = "";
-
-    } else if (entrada == 'entradaIdade')
-    {
-        entradaIdade.value = "";
-
-    } else if (entrada == 'entradaLogin')
-    {
-        entradaLogin.value = "";
-
-    } else if (entrada == 'entradaSenha')
-    {
-        entradaSenha.value = "";
-    } else
-    {
-        saidaTeste.innerHTML = "ERRO! NÃO CONSEGUI APAGAR A CAIXA DE TEXTO SELECIONADA!"
-    }
-}
-*/
-
 botaoApagarEntradaNome.addEventListener('click', function () { apagarEntradaUniversal(entradaNome) }, false);
 botaoApagarEntradaIdade.addEventListener('click', function () { apagarEntradaUniversal(entradaIdade) }, false);
 botaoApagarEntradaLogin.addEventListener('click', function () { apagarEntradaUniversal(entradaLogin) }, false);
 botaoApagarEntradaSenha.addEventListener('click', function () { apagarEntradaUniversal(entradaSenha) }, false);
-
-/*
-botaoApagarEntradaNome.addEventListener('click', function () { apagarEntradaUniversal('entradaNome') }, false);
-botaoApagarEntradaIdade.addEventListener('click', function () { apagarEntradaUniversal('entradaIdade') }, false);
-botaoApagarEntradaLogin.addEventListener('click', function () { apagarEntradaUniversal('entradaLogin') }, false);
-botaoApagarEntradaSenha.addEventListener('click', function () { apagarEntradaUniversal('entradaSenha') }, false);
-*/
 
 //////////////////////////////////////CÓDIGO:
