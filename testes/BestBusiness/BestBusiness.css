@@ -1,5 +1,4 @@
-html
-{
+html {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,8 +12,7 @@ html
     font-size: 12pt;
 }
 
-#body
-{
+#body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,8 +24,7 @@ html
     background-color: black;
 }
 
-#secaoPrincipal
-{
+#secaoPrincipal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,8 +36,7 @@ html
     background-color: black;
 }
 
-#secaoCidades
-{
+#secaoCidades {
     display: none;
     flex-direction: row;
     justify-content: center;
@@ -54,8 +50,7 @@ html
     border: 5px solid rgb(79, 79, 79);
 }
 
-#resultadosAvancados
-{
+#resultadosAvancados {
     display: none;
     flex-direction: row;
     justify-content: center;
@@ -66,8 +61,7 @@ html
     height: auto;
 }
 
-.todasAsCidades
-{
+.todasAsCidades {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,14 +75,13 @@ html
     border: 5px solid rgb(79, 79, 79);
 }
 
-.todosOsProdutos
-{
-display: grid;
-grid-template-columns: 50px 50px 50px;
-grid-gap: 10px;
-background-color: rgb(38, 38, 38);
-border: 5px solid rgb(79, 79, 79);
-color: rgb(0, 234, 255);
+.todosOsProdutos {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-gap: 10px;
+    background-color: rgb(38, 38, 38);
+    border: 5px solid rgb(79, 79, 79);
+    color: rgb(0, 234, 255);
 }
 
 /*
@@ -107,8 +100,7 @@ color: rgb(0, 234, 255);
 }
 */
 
-.compra
-{
+.compra {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -117,13 +109,12 @@ color: rgb(0, 234, 255);
     width: 100%;
     height: auto;
     color: rgb(0, 255, 119);
-    background-color: rgb(7, 49, 0);    
+    background-color: rgb(7, 49, 0);
     padding: 1%;
     border: 2px solid rgb(79, 79, 79);
 }
 
-.venda
-{
+.venda {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -137,8 +128,7 @@ color: rgb(0, 234, 255);
     border: 2px solid rgb(79, 79, 79);
 }
 
-#produtosComprar
-{
+#produtosComprar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -151,8 +141,7 @@ color: rgb(0, 234, 255);
     border: 2px solid rgb(65, 65, 65);
 }
 
-#resultados
-{
+#resultados {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,8 +151,7 @@ color: rgb(0, 234, 255);
     height: auto;
 }
 
-#resultadosTodosOsProdutos
-{
+#resultadosTodosOsProdutos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,8 +165,7 @@ color: rgb(0, 234, 255);
     font-weight: bold;
 }
 
-.resultadosProdutos
-{
+.resultadosProdutos {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -189,4 +176,30 @@ color: rgb(0, 234, 255);
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
+}
+
+#secaoTesteArmazenamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 109, 109);
+    border: 2px solid rgb(165, 165, 165);
+}
+
+.secaoCadastro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 109, 109);
+    border: 2px solid rgb(165, 165, 165);
 }

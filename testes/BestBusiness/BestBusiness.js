@@ -1940,9 +1940,19 @@ var valor = entradaTesteArmazenamento.value;
 
 var armazenamentoLocal = localStorage;
 
+/*
 function salvarTextoTesteArmazenamento(chave, valor)
 {
     armazenamentoLocal.setItem(chave, valor)
+}
+*/
+
+function salvarTextoTesteArmazenamento(nome, idade, login, senha)
+{
+    armazenamentoLocal.setItem('nome', nome);
+    armazenamentoLocal.setItem('idade', idade);
+    armazenamentoLocal.setItem('login', login);
+    armazenamentoLocal.setItem('senha', senha);
 }
 
 function atualizarEntradaTesteArmazenamento()
@@ -1952,7 +1962,7 @@ function atualizarEntradaTesteArmazenamento()
 
 function mostrarTesteArmazernamento()
 {
-    saidaTesteArmazenamento.innerHTML = armazenamentoLocal.nome;
+    saidaTesteArmazenamento.innerHTML = "Nome: " + armazenamentoLocal.nome + "\n, Idade: " + armazenamentoLocal.idade + "\n, Login: " + armazenamentoLocal.login + "\n, Senha: " + armazenamentoLocal.senha;
 }
 
 function limparEntradaTesteArmazenamento()
@@ -1960,12 +1970,89 @@ function limparEntradaTesteArmazenamento()
     entradaTesteArmazenamento.value = "";
 }
 
-botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(chave, valor) }, 'false');
+//botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(chave, valor) }, 'false');
+
+botaoSalvarTesteArmazenamento.addEventListener('click', function () { salvarTextoTesteArmazenamento(entradaNome.value, entradaIdade.value, entradaLogin.value, entradaSenha.value) }, 'false');
 
 botaoMostrarTesteArmazenamento.addEventListener('click', mostrarTesteArmazernamento, 'false');
 
 botaoLimparTesteArmazenamento.addEventListener('click', limparEntradaTesteArmazenamento, 'false');
 
 entradaTesteArmazenamento.addEventListener('change', atualizarEntradaTesteArmazenamento, 'false');
+
+//////CADASTRO
+
+var entradaNome = document.getElementById('entradaNome');
+
+var entradaIdade = document.getElementById('entradaIdade');
+
+var entradaLogin = document.getElementById('entradaLogin');
+
+var entradaSenha = document.getElementById('entradaSenha');
+
+var botaoApagarEntradaNome = document.getElementById('botaoApagarEntradaNome');
+var botaoApagarEntradaIdade = document.getElementById('botaoApagarEntradaIdade');
+var botaoApagarEntradaLogin = document.getElementById('botaoApagarEntradaLogin');
+var botaoApagarEntradaSenha = document.getElementById('botaoApagarEntradaSenha');
+
+function apagarEntradaUniversal(entrada)
+{
+    if (entrada == entradaNome)
+    {
+        entradaNome.value = "";
+
+    } else if (entrada == entradaIdade)
+    {
+        entradaIdade.value = "";
+
+    } else if (entrada == entradaLogin)
+    {
+        entradaLogin.value = "";
+
+    } else if (entrada == entradaSenha)
+    {
+        entradaSenha.value = "";
+    } else
+    {
+        saidaTeste.innerHTML = "ERRO! NÃO CONSEGUI APAGAR A CAIXA DE TEXTO SELECIONADA!"
+    }
+}
+
+/*
+function apagarEntradaUniversal(entrada)
+{
+    if (entrada == 'entradaNome')
+    {
+        entradaNome.value = "";
+
+    } else if (entrada == 'entradaIdade')
+    {
+        entradaIdade.value = "";
+
+    } else if (entrada == 'entradaLogin')
+    {
+        entradaLogin.value = "";
+
+    } else if (entrada == 'entradaSenha')
+    {
+        entradaSenha.value = "";
+    } else
+    {
+        saidaTeste.innerHTML = "ERRO! NÃO CONSEGUI APAGAR A CAIXA DE TEXTO SELECIONADA!"
+    }
+}
+*/
+
+botaoApagarEntradaNome.addEventListener('click', function () { apagarEntradaUniversal(entradaNome) }, false);
+botaoApagarEntradaIdade.addEventListener('click', function () { apagarEntradaUniversal(entradaIdade) }, false);
+botaoApagarEntradaLogin.addEventListener('click', function () { apagarEntradaUniversal(entradaLogin) }, false);
+botaoApagarEntradaSenha.addEventListener('click', function () { apagarEntradaUniversal(entradaSenha) }, false);
+
+/*
+botaoApagarEntradaNome.addEventListener('click', function () { apagarEntradaUniversal('entradaNome') }, false);
+botaoApagarEntradaIdade.addEventListener('click', function () { apagarEntradaUniversal('entradaIdade') }, false);
+botaoApagarEntradaLogin.addEventListener('click', function () { apagarEntradaUniversal('entradaLogin') }, false);
+botaoApagarEntradaSenha.addEventListener('click', function () { apagarEntradaUniversal('entradaSenha') }, false);
+*/
 
 //////////////////////////////////////CÓDIGO:
