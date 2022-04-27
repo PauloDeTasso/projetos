@@ -1,5 +1,56 @@
 var corpo = document.getElementById('corpo');
 
+var numero = 0;
+/*
+function encherBarra()
+{
+    if (numero == 0)
+    {
+        numero = 1;
+        var barra = document.getElementById('barra');
+        var tamanhoBarra = 1;
+        var completarBarra = setInterval(preencherBarra, 10);
+
+        function preencherBarra()
+        {
+            if (tamanhoBarra >= 100)
+            {
+                clearInterval(completarBarra);
+                numero = 0;
+            } else
+            {
+                tamanhoBarra++;
+                barra.style.width = tamanhoBarra + "%";
+            }
+        }
+    }
+}
+*/
+function encherBarra2()
+{
+    var barra2 = document.getElementById('fome');
+
+    if (numero == 0)
+    {
+        numero = 1;
+        var tamanhoBarra = 1;
+        var completarBarra2 = setInterval(preencherBarra2, 10);
+
+        function preencherBarra2()
+        {
+            if (tamanhoBarra >= 100)
+            {
+                clearInterval(completarBarra2);
+                numero = 0;
+            } else
+            {
+                tamanhoBarra++;
+                barra2.value = tamanhoBarra;
+            }
+        }
+    }
+}
+
 /*
 
 function Pessoa() //UM CONSTRUTOR DO OBJETO PESSOA

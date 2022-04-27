@@ -5,8 +5,8 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    background-color: rgb(125, 125, 125);
+    color: rgb(255, 255, 255);
 }
 
 #corpo {
@@ -111,6 +111,7 @@ html {
     width: 100%;
     height: auto;
     background-color: rgb(77, 77, 77);
+    color: #04AA6D;
 }
 
 #secaoStatusDireito {
@@ -132,4 +133,65 @@ html {
     height: auto;
     background-color: rgb(77, 77, 77);
     border: 10px solid rgb(40, 44, 41);
+}
+
+#corpoBarra {
+    width: 100%;
+    background-color: #ddd;
+}
+
+#barra {
+    width: 1%;
+    height: 30px;
+    background-color: #04AA6D;
+}
+
+#secaoFome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+#secaoSede {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+#secaoBanheiro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+#secaoHigiene {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+#secaoEnergia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
 }
