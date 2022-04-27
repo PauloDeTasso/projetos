@@ -1,7 +1,7 @@
 var corpo = document.getElementById('corpo');
 
 var numero = 0;
-/*
+
 function encherBarra()
 {
     if (numero == 0)
@@ -25,7 +25,7 @@ function encherBarra()
         }
     }
 }
-*/
+
 function encherBarra2()
 {
     var barra2 = document.getElementById('fome');
