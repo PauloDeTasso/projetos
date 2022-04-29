@@ -3,8 +3,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 98%;
+    height: 98%;
     background-color: rgb(125, 125, 125);
     color: rgb(255, 255, 255);
 }
@@ -15,7 +15,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     color: aliceblue;
 }
@@ -26,7 +26,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgb(0, 0, 0);
 }
 
@@ -56,8 +56,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 5%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     border: 10px solid rgb(40, 44, 41);
 }
@@ -67,8 +67,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 100%;
     background-color: rgb(200, 200, 200);
 }
 
@@ -77,8 +77,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 5%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
     border: 10px solid rgb(40, 44, 41);
 }
@@ -91,6 +91,7 @@ html {
     width: 100%;
     height: auto;
     background-color: rgb(77, 77, 77);
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoStatus {
@@ -130,9 +131,8 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 5%;
     background-color: rgb(77, 77, 77);
-    border: 10px solid rgb(40, 44, 41);
 }
 
 #corpoBarra {
@@ -152,7 +152,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
 
@@ -162,7 +162,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
 
@@ -172,7 +172,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
 
@@ -182,7 +182,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
 
@@ -192,7 +192,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
 
@@ -202,6 +202,6 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1%;
 }
