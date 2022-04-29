@@ -18,12 +18,16 @@ var barraSaude = document.getElementById('barraSaude');
 
 //
 
+status1 = document.getElementById('status1');
+
+//
+
 var botaoComer = document.getElementById('botaoComer');
 
 
 //
 
-localStorage.barraFome;
+localStorage.barraFome = new Number(localStorage.barraFome);
 
 ////////////////////
 
@@ -31,9 +35,21 @@ setTimeout(fome, 1000);
 
 function fome()
 {
-    localStorage.barraFome++;
-    barraFome.value = localStorage.barraFome;
+    localStorage.barraFome = parseInt(localStorage.barraFome) + 1;
+
+    if (localStorage.barraFome >= 100)
+    {
+        localStorage.barraFome = 100;
+        barraFome.value = localStorage.barraFome;
+    } else
+    {
+        barraFome.value = localStorage.barraFome;
+    }
+
+    status1.innerHTML = barraFome.value;
+
     setTimeout(fome, 1000);
+
 }
 
 function comer(comida)
@@ -41,11 +57,18 @@ function comer(comida)
 
     if (comida == "cochinha")
     {
-        barraFome.value = barraFome.value - 30;
-
+        localStorage.barraFome = localStorage.barraFome - 30;
+        if (localStorage.barraFome <= 0)
+        {
+            localStorage.barraFome = 0;
+        } else
+        {
+            barraFome.value = localStorage.barraFome;
+        }
     } else
     {
-        barraFome.value = barraFome.value - 10;
+        localStorage.barraFome = localStorage.barraFome - 10;
+        barraFome.value = localStorage.barraFome;
     }
 }
 
