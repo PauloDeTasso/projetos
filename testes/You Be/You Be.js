@@ -1,3 +1,58 @@
+///////////////////////////// VARIAVEIS:
+
+var barraFome = document.getElementById('barraFome');
+
+var barraSede = document.getElementById('barraSede');
+
+var barraBanheiro = document.getElementById('barraBanheiro');
+
+var barraHigiene = document.getElementById('barraHigiene');
+
+var barraEnergia = document.getElementById('barraEnergia');
+
+var barraEstresse = document.getElementById('barraEstresse');
+
+var barraSocial = document.getElementById('barraSocial');
+
+var barraSaude = document.getElementById('barraSaude');
+
+//
+
+var botaoComer = document.getElementById('botaoComer');
+
+
+//
+
+localStorage.barraFome;
+
+////////////////////
+
+setTimeout(fome, 1000);
+
+function fome()
+{
+    localStorage.barraFome++;
+    barraFome.value = localStorage.barraFome;
+    setTimeout(fome, 1000);
+}
+
+function comer(comida)
+{
+
+    if (comida == "cochinha")
+    {
+        barraFome.value = barraFome.value - 30;
+
+    } else
+    {
+        barraFome.value = barraFome.value - 10;
+    }
+}
+
+botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
+
+/*
+
 var corpo = document.getElementById('corpo');
 
 var numero = 0;
