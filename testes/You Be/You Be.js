@@ -24,7 +24,6 @@ status1 = document.getElementById('status1');
 
 var botaoComer = document.getElementById('botaoComer');
 
-
 //
 
 localStorage.barraFome = new Number(localStorage.barraFome);
@@ -49,7 +48,6 @@ function fome()
     status1.innerHTML = barraFome.value;
 
     setTimeout(fome, 1000);
-
 }
 
 function comer(comida)

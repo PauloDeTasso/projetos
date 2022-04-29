@@ -1399,7 +1399,9 @@ function audioCachoeiraTocando()
 
 var urlInterno = "../testes/BestBusiness/BestBusiness.html";
 
-function abrirBestBusiness(url)
+var urlYouBe = "../testes/You Be/You Be.html";
+
+function abrirUrl(url)
 {
     window.open(url, "_blank");
 }
