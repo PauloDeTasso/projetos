@@ -19,6 +19,10 @@ var barraSaude = document.getElementById('barraSaude');
 //
 
 status1 = document.getElementById('status1');
+status2 = document.getElementById('status2');
+status3 = document.getElementById('status3');
+status4 = document.getElementById('status4');
+status5 = document.getElementById('status5');
 
 //
 
@@ -28,7 +32,66 @@ var botaoComer = document.getElementById('botaoComer');
 
 localStorage.barraFome = new Number();
 
-////////////////////
+// DATA E HORA:
+
+var data = new Date();
+var hora = data.getHours();          // 0-23
+var min = data.getMinutes();        // 0-59
+var seg = data.getSeconds();        // 0-59
+var dia = data.getDate();           // 1-31
+var mes = getMes();          // 0-11 
+var ano = data.getFullYear();       // 4 dígitos
+
+//
+
+//////////////////// FUNÇÕES:
+
+function getMes()
+{
+    switch (data.getMonth())
+    {
+        case 0:
+            return 01;
+            break;
+        case 1:
+            return 02;
+            break;
+        case 2:
+            return 03;
+            break;
+        case 3:
+            return 04;
+            break;
+        case 4:
+            return 05;
+            break;
+        case 5:
+            return 06;
+            break;
+        case 6:
+            return 07;
+            break;
+        case 7:
+            return 08;
+            break;
+        case 8:
+            return 09;
+            break;
+        case 9:
+            return 10;
+            break;
+        case 10:
+            return 11;
+            break;
+        case 11:
+            return 12;
+            break;
+        default:
+            return "Erro!";
+    }
+}
+
+//
 
 setTimeout(fome, 1000);
 
@@ -48,6 +111,8 @@ function fome()
     }
 
     status1.innerHTML = barraFome.value;
+    status2.innerHTML = hora + ":" + min + ":" + seg;
+    status3.innerHTML = dia + "/" + mes + "/" + ano;
 
     setTimeout(fome, 1000);
 }
@@ -75,6 +140,33 @@ function comer(comida)
 botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
 
 /*
+
+
+// Obtém a data/hora atual
+var data = new Date();
+
+// Guarda cada pedaço em uma variável
+var dia     = data.getDate();           // 1-31
+var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+var ano2    = data.getYear();           // 2 dígitos
+var ano4    = data.getFullYear();       // 4 dígitos
+var hora    = data.getHours();          // 0-23
+var min     = data.getMinutes();        // 0-59
+var seg     = data.getSeconds();        // 0-59
+var mseg    = data.getMilliseconds();   // 0-999
+var tz      = data.getTimezoneOffset(); // em minutos
+
+// Formata a data e a hora (note o mês + 1)
+var str_data = dia + '/' + (mes+1) + '/' + ano4;
+var str_hora = hora + ':' + min + ':' + seg;
+
+// Mostra o resultado
+alert('Hoje é ' + str_data + ' às ' + str_hora);
+
+//////////////////////
+
+
 
 var corpo = document.getElementById('corpo');
 
