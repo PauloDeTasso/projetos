@@ -26,7 +26,7 @@ var botaoComer = document.getElementById('botaoComer');
 
 //
 
-localStorage.barraFome = new Number(localStorage.barraFome);
+localStorage.barraFome = new Number();
 
 ////////////////////
 
@@ -34,6 +34,7 @@ setTimeout(fome, 1000);
 
 function fome()
 {
+
     localStorage.barraFome = parseInt(localStorage.barraFome) + 1;
 
     if (localStorage.barraFome >= 100)
@@ -43,6 +44,7 @@ function fome()
     } else
     {
         barraFome.value = localStorage.barraFome;
+
     }
 
     status1.innerHTML = barraFome.value;
