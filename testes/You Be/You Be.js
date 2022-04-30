@@ -30,7 +30,7 @@ var botaoComer = document.getElementById('botaoComer');
 
 //
 
-localStorage.barraFome = new Number();
+//localStorage.barraFome = new Number();
 
 // DATA E HORA:
 
