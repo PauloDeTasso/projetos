@@ -1,4 +1,17 @@
-///////////////////////////// VARIAVEIS ELEMENTOS:
+///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
+
+Storage.prototype.setObj = function (key, obj)
+{
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function (key)
+{
+    return JSON.parse(this.getItem(key))
+}
+
+///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
+
+//BARRAS NECESSIDADES:
 
 var barraFome = document.getElementById('barraFome');
 
@@ -16,7 +29,7 @@ var barraSocial = document.getElementById('barraSocial');
 
 var barraSaude = document.getElementById('barraSaude');
 
-//
+//STATUS SAIDAS:
 
 status1 = document.getElementById('status1');
 status2 = document.getElementById('status2');
@@ -28,8 +41,8 @@ status5 = document.getElementById('status5');
 
 // NECESSIDADES:
 
-localStorage.fomeStatus;
-localStorage.sedeStatus;
+localStorage.fomeStatus = new Number();
+localStorage.sedeStatus = new Number();
 localStorage.banheiroStatus;
 localStorage.higieneStatus;
 localStorage.energiaStatus;
@@ -39,27 +52,6 @@ localStorage.saudeStatus;
 
 // SENTIMENTOS - EMOÇÃO:
 
-//localStorage.sentimentosBons = new Array();
-
-/*
-
-localStorage.setItem('sentimentosBons',);
-
-localStorage.sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
-
-localStorage.setItem('sentimentosRuins', []);
-*/
-//
-
-Storage.prototype.setObj = function (key, obj)
-{
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function (key)
-{
-    return JSON.parse(this.getItem(key))
-}
-
 var sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
 
 var sentimentosRuins = ['LUTO', 'INGRATIDÃO', 'DEPRESSÃO', 'RAIVA', 'DESCONFIANÇA', 'MEDO', 'CIUMES', 'AUTOESTIMA BAIXA', 'APAVORAÇÃO', 'FRAQUEZA', 'INQUIETAÇÃO', 'FÚRIA', 'NEUROZE', 'DOR', 'LOUCURA', 'DESESPERO', 'ÓDIO', 'ARREPENDIMENTO', 'ANSIEDADE', 'CONFUSÃO', 'ESPANTO', 'INVEJA', 'HORROR', 'NOJO', 'TÉDIO', 'VIGANÇA', 'TRISTEZA', 'DECEPÇÃO', 'CARENCIA'];
@@ -68,15 +60,41 @@ localStorage.setObj('sentimentosBons', sentimentosBons);
 
 localStorage.setObj('sentimentosRuins', sentimentosRuins);
 
-//
+// ITENS:
+
+localStorage.dinheiro;
+localStorage.celular;
+localStorage.relogio;
+localStorage.computador;
+
+// DADOS:
+
+localStorage.nome;
+localStorage.generoSexo;
+localStorage.idade;
+localStorage.vivo;
+
+// REGISTROS:
+
+localStorage.dataAtual;
+localStorage.horaAtual;
+localStorage.dataCriação;
+localStorage.horaCriação;
+localStorage.primeiraAcao;
+localStorage.ultimaAcao;
+localStorage.acaoMaisUsada;
+localStorage.acaoMenosUsada;
+localStorage.sentimentoMaisUsado;
+localStorage.sentimentoMenosUsado;
+localStorage.alimentoMaisUsado;
+localStorage.alimentoMenosUsado;
 
 //
 
 var botaoComer = document.getElementById('botaoComer');
+var botaoBeber = document.getElementById('botaoBeber');
 
 //
-
-//localStorage.barraFome = new Number();
 
 /////////////////////////////VARIAVEIS DATA E HORA:
 
@@ -90,7 +108,9 @@ var ano = data.getFullYear();       // 4 dígitos
 
 //
 
-//////////////////// FUNÇÕES:
+//////////////////// METODOS/ FUNÇÕES:
+
+//////// DO SISTEMA:
 
 function getMes()
 {
@@ -137,53 +157,121 @@ function getMes()
     }
 }
 
-//
+//////// DE AÇÃO:
 
-setTimeout(fome, 1000);
+//// AÇÕES DO SISTEMA:
 
-function fome()
-{
 
-    localStorage.barraFome = parseInt(localStorage.barraFome) + 1;
+//// AÇÕES DO PERSONAGEM:
 
-    if (localStorage.barraFome >= 100)
-    {
-        localStorage.barraFome = 100;
-        barraFome.value = localStorage.barraFome;
-    } else
-    {
-        barraFome.value = localStorage.barraFome;
-
-    }
-
-    status1.innerHTML = barraFome.value;
-    status2.innerHTML = hora + ":" + min + ":" + seg;
-    status3.innerHTML = dia + "/" + mes + "/" + ano;
-
-    setTimeout(fome, 1000);
-}
+// COMER:
 
 function comer(comida)
 {
 
     if (comida == "cochinha")
     {
-        localStorage.barraFome = localStorage.barraFome - 30;
-        if (localStorage.barraFome <= 0)
+        localStorage.fomeStatus = localStorage.fomeStatus - 30;
+        if (localStorage.fomeStatus <= 0)
         {
-            localStorage.barraFome = 0;
+            localStorage.fomeStatus = 0;
         } else
         {
-            barraFome.value = localStorage.barraFome;
+            barraFome.value = localStorage.fomeStatus;
         }
     } else
     {
-        localStorage.barraFome = localStorage.barraFome - 10;
-        barraFome.value = localStorage.barraFome;
+        localStorage.fomeStatus = localStorage.fomeStatus - 10;
+        barraFome.value = localStorage.fomeStatus;
     }
 }
 
+// BEBER:
+
+function beber(bebida)
+{
+
+    if (bebida == "agua")
+    {
+        localStorage.sedeStatus = localStorage.sedeStatus - 30;
+        if (localStorage.sedeStatus <= 0)
+        {
+            localStorage.sedeStatus = 0;
+        } else
+        {
+            barraSede.value = localStorage.sedeStatus;
+        }
+    } else
+    {
+        localStorage.sedeStatus = localStorage.sedeStatus - 10;
+        barraSede.value = localStorage.sedeStatus
+    }
+}
+
+//////// DE REAÇÃO/ EVENTOS:
+
+////  REAÇÕES DAS NECESSIDADES:
+
+// FOME:
+
+setTimeout(fome, 1000);
+
+function fome()
+{
+
+    localStorage.fomeStatus = parseInt(localStorage.fomeStatus) + 1;
+
+    if (localStorage.fomeStatus >= 100)
+    {
+        localStorage.fomeStatus = 100;
+        barraFome.value = localStorage.fomeStatus;
+    } else
+    {
+        barraFome.value = localStorage.fomeStatus;
+
+    }
+
+    setTimeout(fome, 1000);
+}
+
+// SEDE:
+
+setTimeout(sede, 1000);
+
+function sede()
+{
+    localStorage.sedeStatus = parseInt(localStorage.sedeStatus) + 1;
+
+    if (localStorage.sedeStatus >= 100)
+    {
+        localStorage.sedeStatus = 100;
+        barraSede.value = localStorage.sedeStatus;
+    } else
+    {
+        barraSede.value = localStorage.sedeStatus;
+    }
+
+    setTimeout(sede, 1000);
+
+}
+
+//// REAÇÕES DE ATIVIDADES/ LOCAIS:
+
+
+
+//// REAÇÕES DA HISTORIA:
+
+
+
+//////////////////// DEFINIÇÃO DE EVENTOS:
+
+//BOTÕES:
+
 botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
+
+botaoBeber.addEventListener("click", function () { beber('agua') }, false);
+
+//////////////////// SAIDAS:
 
 status4.innerHTML = localStorage.getObj('sentimentosBons');
 
