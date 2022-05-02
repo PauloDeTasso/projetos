@@ -41,15 +41,32 @@ status5 = document.getElementById('status5');
 
 // NECESSIDADES:
 
+if (localStorage.primeiroAcesso == undefined)
+{
+    localStorage.fomeStatus = new Number();
+    localStorage.sedeStatus = new Number();
+    localStorage.banheiroStatus = new Number();
+    localStorage.higieneStatus = new Number();
+    localStorage.energiaStatus = new Number();
+    localStorage.estresseStatus = new Number();
+    localStorage.socialStatus = new Number();
+    localStorage.saudeStatus = new Number();
+
+    localStorage.primeiroAcesso = 1;
+} else
+{
+    localStorage.primeiroAcesso = 1;
+}
+
 /*
 localStorage.fomeStatus = new Number();
 localStorage.sedeStatus = new Number();
-localStorage.banheiroStatus;
-localStorage.higieneStatus;
-localStorage.energiaStatus;
-localStorage.estresseStatus;
-localStorage.socialStatus;
-localStorage.saudeStatus;
+localStorage.banheiroStatus = new Number();
+localStorage.higieneStatus = new Number();
+localStorage.energiaStatus = new Number();
+localStorage.estresseStatus = new Number();
+localStorage.socialStatus = new Number();
+localStorage.saudeStatus = new Number();
 */
 
 // SENTIMENTOS - EMOÇÃO:
@@ -177,6 +194,7 @@ function comer(comida)
         if (localStorage.fomeStatus <= 0)
         {
             localStorage.fomeStatus = 0;
+            barraFome.value = localStorage.fomeStatus;
         } else
         {
             barraFome.value = localStorage.fomeStatus;
@@ -207,6 +225,22 @@ function beber(bebida)
     {
         localStorage.sedeStatus = localStorage.sedeStatus - 10;
         barraSede.value = localStorage.sedeStatus
+    }
+}
+
+// USAR BANHEIRO:
+
+function usarBanheiro()
+{
+    localStorage.banheiroStatus = localStorage.banheiroStatus - 30;
+
+    if (localStorage.banheiroStatus <= 0)
+    {
+        localStorage.banheiroStatus = 0;
+        barraBanheiro.value = localStorage.banheiroStatus;
+    } else
+    {
+        barraBanheiro.value = localStorage.banheiroStatus;
     }
 }
 
@@ -254,7 +288,26 @@ function sede()
     }
 
     setTimeout(sede, 1000);
+}
 
+// USAR BANHEIRO:
+
+setTimeout(usarBanheiro, 1000);
+
+function usarBanheiro()
+{
+    localStorage.banheiroStatus = parseInt(localStorage.banheiroStatus) + 1;
+
+    if (localStorage.banheiroStatus >= 100)
+    {
+        localStorage.banheiroStatus = 100;
+        barraBanheiro.value = localStorage.banheiroStatus;
+    } else
+    {
+        barraBanheiro.value = localStorage.banheiroStatus;
+    }
+
+    setTimeout(usarBanheiro, 1000);
 }
 
 //// REAÇÕES DE ATIVIDADES/ LOCAIS:
