@@ -41,6 +41,7 @@ status5 = document.getElementById('status5');
 
 // NECESSIDADES:
 
+/*
 localStorage.fomeStatus = new Number();
 localStorage.sedeStatus = new Number();
 localStorage.banheiroStatus;
@@ -49,6 +50,7 @@ localStorage.energiaStatus;
 localStorage.estresseStatus;
 localStorage.socialStatus;
 localStorage.saudeStatus;
+*/
 
 // SENTIMENTOS - EMOÇÃO:
 
@@ -273,9 +275,15 @@ botaoBeber.addEventListener("click", function () { beber('agua') }, false);
 
 //////////////////// SAIDAS:
 
-status4.innerHTML = localStorage.getObj('sentimentosBons');
+status1.innerHTML = "Oi";
 
-status5.innerHTML = localStorage.getObj('sentimentosRuins');
+status2.innerHTML = "Oi";
+
+status3.innerHTML = "Oi";
+
+status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
+
+status5.innerHTML = localStorage.getObj('sentimentosRuins')[1];
 
 /*
 
