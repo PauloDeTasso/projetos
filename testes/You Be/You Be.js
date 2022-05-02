@@ -1,4 +1,4 @@
-///////////////////////////// VARIAVEIS:
+///////////////////////////// VARIAVEIS ELEMENTOS:
 
 var barraFome = document.getElementById('barraFome');
 
@@ -24,6 +24,52 @@ status3 = document.getElementById('status3');
 status4 = document.getElementById('status4');
 status5 = document.getElementById('status5');
 
+///////////////////////////// VARIAVEIS LOCAIS:
+
+// NECESSIDADES:
+
+localStorage.fomeStatus;
+localStorage.sedeStatus;
+localStorage.banheiroStatus;
+localStorage.higieneStatus;
+localStorage.energiaStatus;
+localStorage.estresseStatus;
+localStorage.socialStatus;
+localStorage.saudeStatus;
+
+// SENTIMENTOS - EMOÇÃO:
+
+//localStorage.sentimentosBons = new Array();
+
+/*
+
+localStorage.setItem('sentimentosBons',);
+
+localStorage.sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
+
+localStorage.setItem('sentimentosRuins', []);
+*/
+//
+
+Storage.prototype.setObj = function (key, obj)
+{
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function (key)
+{
+    return JSON.parse(this.getItem(key))
+}
+
+var sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
+
+var sentimentosRuins = ['LUTO', 'INGRATIDÃO', 'DEPRESSÃO', 'RAIVA', 'DESCONFIANÇA', 'MEDO', 'CIUMES', 'AUTOESTIMA BAIXA', 'APAVORAÇÃO', 'FRAQUEZA', 'INQUIETAÇÃO', 'FÚRIA', 'NEUROZE', 'DOR', 'LOUCURA', 'DESESPERO', 'ÓDIO', 'ARREPENDIMENTO', 'ANSIEDADE', 'CONFUSÃO', 'ESPANTO', 'INVEJA', 'HORROR', 'NOJO', 'TÉDIO', 'VIGANÇA', 'TRISTEZA', 'DECEPÇÃO', 'CARENCIA'];
+
+localStorage.setObj('sentimentosBons', sentimentosBons);
+
+localStorage.setObj('sentimentosRuins', sentimentosRuins);
+
+//
+
 //
 
 var botaoComer = document.getElementById('botaoComer');
@@ -32,7 +78,7 @@ var botaoComer = document.getElementById('botaoComer');
 
 //localStorage.barraFome = new Number();
 
-// DATA E HORA:
+/////////////////////////////VARIAVEIS DATA E HORA:
 
 var data = new Date();
 var hora = data.getHours();          // 0-23
@@ -139,8 +185,11 @@ function comer(comida)
 
 botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
 
-/*
+status4.innerHTML = localStorage.getObj('sentimentosBons');
 
+status5.innerHTML = localStorage.getObj('sentimentosRuins');
+
+/*
 
 // Obtém a data/hora atual
 var data = new Date();
