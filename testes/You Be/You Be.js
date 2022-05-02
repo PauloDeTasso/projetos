@@ -52,22 +52,11 @@ if (localStorage.primeiroAcesso == undefined)
     localStorage.socialStatus = new Number();
     localStorage.saudeStatus = new Number();
 
-    localStorage.primeiroAcesso = 1;
+    localStorage.primeiroAcesso = "Definido";
 } else
 {
-    localStorage.primeiroAcesso = 1;
+    localStorage.primeiroAcesso = "Definido";
 }
-
-/*
-localStorage.fomeStatus = new Number();
-localStorage.sedeStatus = new Number();
-localStorage.banheiroStatus = new Number();
-localStorage.higieneStatus = new Number();
-localStorage.energiaStatus = new Number();
-localStorage.estresseStatus = new Number();
-localStorage.socialStatus = new Number();
-localStorage.saudeStatus = new Number();
-*/
 
 // SENTIMENTOS - EMOÇÃO:
 
@@ -112,6 +101,7 @@ localStorage.alimentoMenosUsado;
 
 var botaoComer = document.getElementById('botaoComer');
 var botaoBeber = document.getElementById('botaoBeber');
+var botaoUsarBanheiro = document.getElementById('botaoUsarBanheiro');
 
 //
 
@@ -292,9 +282,9 @@ function sede()
 
 // USAR BANHEIRO:
 
-setTimeout(usarBanheiro, 1000);
+setTimeout(banheiro, 1000);
 
-function usarBanheiro()
+function banheiro()
 {
     localStorage.banheiroStatus = parseInt(localStorage.banheiroStatus) + 1;
 
@@ -307,7 +297,7 @@ function usarBanheiro()
         barraBanheiro.value = localStorage.banheiroStatus;
     }
 
-    setTimeout(usarBanheiro, 1000);
+    setTimeout(banheiro, 1000);
 }
 
 //// REAÇÕES DE ATIVIDADES/ LOCAIS:
@@ -323,8 +313,8 @@ function usarBanheiro()
 //BOTÕES:
 
 botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
-
 botaoBeber.addEventListener("click", function () { beber('agua') }, false);
+botaoUsarBanheiro.addEventListener("click", usarBanheiro, false);
 
 //////////////////// SAIDAS:
 
