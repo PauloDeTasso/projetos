@@ -359,17 +359,57 @@ var player1 = new Player();
 function loopDesenho()
 {
 
-    //DESENHANDO UM RETANGULO
+    /* USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
+    
+    var imagem = document.getElementById("imagem");
 
-    contexto.fillStyle = "rgb(000,00,100)"; // COR DO PREENCHIMENTO *FUNCIONA ANTES DE fillRect
+    var estiloImagem = contexto.createPattern(imagem, "no-repeat");
+    // "repeat" (ambas direcoes)
+    // "repeat-x" (somente na horizontal)
+    // "repeat-y" (somente verticais)
+    // "no-repeat" (nenhuma direção)
 
-    contexto.fillRect(0, 0, 100, 200); // DESENHA RETANGULO (X, Y, LARGURA, ALTURA)
+    contexto.fillStyle = estiloImagem;
 
-    //DESENHANDO SEGUNDO RETANGULO TRANSPARENTE POR CIMA DO PRIMEIRO
+    */
 
-    contexto.fillStyle = "rgba(100,00,000,0.5)";
+    var imagem = document.getElementById("imagem");
+
+    //DESENHA UMA IMAGEM - (IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
+    //contexto.drawImage(imagem, 0, 0, 500, 500);
+
+    ////DESENHANDO UM RETANGULO - RETANGULO 1
+
+    contexto.fillStyle = "rgb(000,00,100)"; // COR DO PREENCHIMENTO 
+
+    // DESENHA RETANGULO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.fillRect(0, 0, 100, 200);
+
+    //FINALIZAR O PREENCHIMENTO DO DESENHO DO RETANGULO 1: 
+    contexto.fill();
+
+    // LIMPA A AREA DE DESENHO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.clearRect(10, 10, 20, 20);
+
+    //// RETANGULO 2 - PLAYER 1:
+
+    contexto.fillStyle = "rgba(100,00,000,0.5)"; // USANDO TRANSPARENCIA RGBA
 
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura); // DESENHA PLAYER 1       
+
+    //FINALIZAR O PREENCHIMENTO DO DESENHO DO RETANGULO 2: 
+    contexto.fill();
+
+    ////DESENHANDO LINHAS:
+
+    //COMEÇA O DESENHO NESSA POSSIÇÃO - (POSICAO X, POSICAO Y)
+    contexto.moveTo(300, 300);
+
+    //FINALIZAR O DESENHO NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
+    contexto.lineTo(400, 400);
+
+    // REDENRIZA O DESENHO DE LINHA:
+    contexto.stroke();
 
 }
 
