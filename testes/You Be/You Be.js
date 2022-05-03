@@ -29,6 +29,11 @@ var barraSocial = document.getElementById('barraSocial');
 
 var barraSaude = document.getElementById('barraSaude');
 
+//
+
+var telaCanvas = document.getElementById('telaCanvas');
+var contexto = telaCanvas.getContext('2d');
+
 //STATUS SAIDAS:
 
 status1 = document.getElementById('status1');
@@ -105,6 +110,12 @@ var botaoUsarBanheiro = document.getElementById('botaoUsarBanheiro');
 
 //
 
+var botaoPlay = document.getElementById('botaoPlay');
+var botaoStop = document.getElementById('botaoStop');
+var botaoIrParaDireita = document.getElementById('botaoIrParaDireita');
+var botaoIrParaEsquerda = document.getElementById('botaoIrParaEsquerda');
+var botaoIrParaCima = document.getElementById('botaoIrParaCima');
+var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
 /////////////////////////////VARIAVEIS DATA E HORA:
 
 var data = new Date();
@@ -327,6 +338,89 @@ status3.innerHTML = "Oi";
 status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
 
 status5.innerHTML = localStorage.getObj('sentimentosRuins')[1];
+
+//////////////////// CANVAS:
+
+// CRIANDO UM OBJETO:
+
+function Player()
+{
+    this.largura = 100; //
+    this.altura = 200; // 
+    this.posicaoX = 40; //
+    this.posicaoY = 40; //   
+    this.velocidade = 10; //
+}
+
+var player1 = new Player();
+
+//setTimeout(loopDesenho, 0)
+
+function loopDesenho()
+{
+
+    //DESENHANDO UM RETANGULO
+
+    contexto.fillStyle = "rgb(000,00,100)"; // COR DO PREENCHIMENTO *FUNCIONA ANTES DE fillRect
+
+    contexto.fillRect(0, 0, 100, 200); // DESENHA RETANGULO (X, Y, LARGURA, ALTURA)
+
+    //DESENHANDO SEGUNDO RETANGULO TRANSPARENTE POR CIMA DO PRIMEIRO
+
+    contexto.fillStyle = "rgba(100,00,000,0.5)";
+
+    contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura); // DESENHA PLAYER 1       
+
+}
+
+//CONFIGURAÇÕES EVENTOS BOTÕES:
+
+botaoPlay.addEventListener('click', play, false);
+botaoStop.addEventListener('click', stop, false);
+botaoIrParaEsquerda.addEventListener('click', irParaEsquerda, false);
+botaoIrParaDireita.addEventListener('click', irParaDireita, false);
+botaoIrParaCima.addEventListener('click', irParaCima, false);
+botaoIrParaBaixo.addEventListener('click', irParaBaixo, false);
+
+// FUNÇÕES:
+
+function play()
+{
+
+}
+
+function stop()
+{
+
+}
+
+function irParaEsquerda()
+{
+    player1.posicaoX = player1.posicaoX - player1.velocidade;
+    loopDesenho();
+}
+
+function irParaDireita()
+{
+    player1.posicaoX = player1.posicaoX + player1.velocidade;
+    loopDesenho();
+}
+
+function irParaCima()
+{
+    player1.posicaoY = player1.posicaoY - player1.velocidade;
+    loopDesenho();
+}
+
+function irParaBaixo()
+{
+    player1.posicaoY = player1.posicaoY + player1.velocidade;
+    loopDesenho();
+}
+
+//
+
+//////////////////// RASCUNHOS:
 
 /*
 
