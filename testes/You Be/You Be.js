@@ -29,7 +29,7 @@ var barraSocial = document.getElementById('barraSocial');
 
 var barraSaude = document.getElementById('barraSaude');
 
-//
+//CANVAS:
 
 var telaCanvas = document.getElementById('telaCanvas');
 var contexto = telaCanvas.getContext('2d');
@@ -116,6 +116,7 @@ var botaoIrParaDireita = document.getElementById('botaoIrParaDireita');
 var botaoIrParaEsquerda = document.getElementById('botaoIrParaEsquerda');
 var botaoIrParaCima = document.getElementById('botaoIrParaCima');
 var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
+
 /////////////////////////////VARIAVEIS DATA E HORA:
 
 var data = new Date();
@@ -354,29 +355,35 @@ function Player()
 
 var player1 = new Player();
 
+var loop;
+
 //setTimeout(loopDesenho, 0)
+
+loopDesenho()
 
 function loopDesenho()
 {
+    // LIMPA A AREA ESPECIFICADA DO DESENHO
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.clearRect(0, 0, 500, 500);
 
-    /* USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
-    
-    var imagem = document.getElementById("imagem");
+    // var imagem = document.getElementById("imagem");
 
-    var estiloImagem = contexto.createPattern(imagem, "no-repeat");
+    // USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
+    // var estiloImagem = contexto.createPattern(imagem, "no-repeat");
     // "repeat" (ambas direcoes)
     // "repeat-x" (somente na horizontal)
     // "repeat-y" (somente verticais)
     // "no-repeat" (nenhuma direção)
 
-    contexto.fillStyle = estiloImagem;
+    //USANDO A IMAGEM PARA PREENCHIMENTO DO DESENHO:
+    // contexto.fillStyle = estiloImagem;
 
-    */
-
-    var imagem = document.getElementById("imagem");
-
-    //DESENHA UMA IMAGEM - (IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
+    // DESENHA A IMAGEM NA POSIÇÃO DESEJADA
+    // (URL IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
     //contexto.drawImage(imagem, 0, 0, 500, 500);
+
+    ////DESENHANDO RETANGULOS:
 
     ////DESENHANDO UM RETANGULO - RETANGULO 1
 
@@ -385,8 +392,8 @@ function loopDesenho()
     // DESENHA RETANGULO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.fillRect(0, 0, 100, 200);
 
-    //FINALIZAR O PREENCHIMENTO DO DESENHO DO RETANGULO 1: 
-    contexto.fill();
+    //FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 1: 
+    //contexto.fill();
 
     // LIMPA A AREA DE DESENHO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.clearRect(10, 10, 20, 20);
@@ -397,25 +404,44 @@ function loopDesenho()
 
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura); // DESENHA PLAYER 1       
 
-    //FINALIZAR O PREENCHIMENTO DO DESENHO DO RETANGULO 2: 
-    contexto.fill();
+    // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
+    //contexto.fill();
 
-    ////DESENHANDO LINHAS:
+    //// DESENHANDO LINHAS:
 
-    //COMEÇA O DESENHO DE LINHA NESSA POSSIÇÃO - (POSICAO X, POSICAO Y)
+    // COMEÇA O DESENHO DE LINHA NESSA POSSIÇÃO - (POSICAO X, POSICAO Y)
     contexto.moveTo(300, 300);
 
-    //FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
+    // FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
     contexto.lineTo(400, 400);
 
-    //DESENHA UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO DESENHADA E FINALIZA A LINHA NAS NOVAS POSIÇÕES PASSADAS 
+    // DESENHA UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO DESENHADA E FINALIZA A LINHA NAS NOVAS POSIÇÕES PASSADAS 
     contexto.lineTo(400, 450);
 
-    //DESENHA MAIS UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO
+    // DESENHA MAIS UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO
     contexto.lineTo(450, 450);
+
+    // AGORA MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
+    contexto.moveTo(400, 470);
+
+    // E AGORA FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO:
+    contexto.lineTo(450, 470);
+
+    // DEFINE A LARGURA DE LINHA:
+    contexto.lineWidth = 3;
+
+    // DEFINE O ESTILO/COR DA LINHA:
+    contexto.strokeStyle = "rgb(100,0,0)";
+
+    // DESENHA UMA LINHA COMO UM RETANGULO
+    // (USADO COMO CONTORNO DE PREENCHIMENTOS)
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.strokeRect(150, 150, 100, 100);
 
     // REDENRIZA O DESENHO DE LINHA:
     contexto.stroke();
+
+    loop = requestAnimationFrame(loopDesenho);
 }
 
 //CONFIGURAÇÕES EVENTOS BOTÕES:
