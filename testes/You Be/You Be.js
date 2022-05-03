@@ -346,14 +346,16 @@ status5.innerHTML = localStorage.getObj('sentimentosRuins')[1];
 
 function Player()
 {
-    this.largura = 100; //
-    this.altura = 200; // 
+    this.largura = 50; //
+    this.altura = 50; // 
     this.posicaoX = 40; //
     this.posicaoY = 40; //   
     this.velocidade = 10; //
 }
 
 var player1 = new Player();
+
+var imagem = document.getElementById("imagem");
 
 var loop;
 
@@ -366,8 +368,6 @@ function loopDesenho()
     // LIMPA A AREA ESPECIFICADA DO DESENHO
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.clearRect(0, 0, 500, 500);
-
-    // var imagem = document.getElementById("imagem");
 
     // USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
     // var estiloImagem = contexto.createPattern(imagem, "no-repeat");
@@ -387,7 +387,8 @@ function loopDesenho()
 
     ////DESENHANDO UM RETANGULO - RETANGULO 1
 
-    contexto.fillStyle = "rgb(000,00,100)"; // COR DO PREENCHIMENTO 
+    // DEFINE A COR DO PREENCHIMENTO 
+    contexto.fillStyle = "rgb(000,00,100)";
 
     // DESENHA RETANGULO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.fillRect(0, 0, 100, 200);
@@ -396,18 +397,26 @@ function loopDesenho()
     //contexto.fill();
 
     // LIMPA A AREA DE DESENHO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
-    contexto.clearRect(10, 10, 20, 20);
+    contexto.clearRect(10, 10, 40, 40);
 
     //// RETANGULO 2 - PLAYER 1:
 
-    contexto.fillStyle = "rgba(100,00,000,0.5)"; // USANDO TRANSPARENCIA RGBA
+    // USANDO TRANSPARENCIA RGBA COMO PREENCHIMENTO
+    contexto.fillStyle = "rgba(000,200,200,0.5)";
 
-    contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura); // DESENHA PLAYER 1       
+    // DESENHA RETANGULO - PLAYER 1       
+    contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
     // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
     //contexto.fill();
 
     //// DESENHANDO LINHAS:
+
+    // DEFINE A LARGURA DE LINHA:
+    contexto.lineWidth = 3;
+
+    // DEFINE O ESTILO/COR DA LINHA:
+    contexto.strokeStyle = "rgb(200,200,0)";
 
     // COMEÇA O DESENHO DE LINHA NESSA POSSIÇÃO - (POSICAO X, POSICAO Y)
     contexto.moveTo(300, 300);
@@ -419,38 +428,47 @@ function loopDesenho()
     contexto.lineTo(400, 450);
 
     // DESENHA MAIS UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO
-    contexto.lineTo(450, 450);
+    contexto.lineTo(300, 450);
+
+    // FECHA O DESENHO DE LINHA NA MESMA POSIÇÃO DE INICIO
+    contexto.lineTo(300, 300);
 
     // AGORA MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
     contexto.moveTo(400, 470);
 
-    // E AGORA FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO:
+    // E AGORA FINALIZAR O DESENHO DE LINHA NESSA NOVA POSIÇÃO:
     contexto.lineTo(450, 470);
 
-    // DEFINE A LARGURA DE LINHA:
-    contexto.lineWidth = 3;
-
-    // DEFINE O ESTILO/COR DA LINHA:
-    contexto.strokeStyle = "rgb(100,0,0)";
-
-    // DESENHA UMA LINHA COMO UM RETANGULO
-    // (USADO COMO CONTORNO DE PREENCHIMENTOS)
+    // DESENHA UM RETANGULO DE LINHA
+    // (USADO MAIS COMO CONTORNO DE PREENCHIMENTOS)
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.strokeRect(150, 150, 100, 100);
 
-    // REDENRIZA O DESENHO DE LINHA:
-    contexto.stroke();
-
-    contexto.fillStyle = "rgb(0,100,0)"; //
-
+    //MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA
     contexto.moveTo(350, 100);
 
     // DESENHA UM CIRCULO:
     // (POSICAO X, POSICAO Y, RAIO, ANGULO INICIAL, ANGULO FINAL, SENTIDO)
     // SENTIDO = TRUE (SENTIDO HORÁRIO / = FALSE (SENTIDO ANTI HORARIO)
     contexto.arc(350, 100, 100, 0, 360, false);
+
+    // REDENRIZA/ CONTORNA OS DESENHOS FEITOS DE LINHA:
+    contexto.stroke();
+
+    // DEFINE OUTRA COR DE PREENCHIMENTO 
+    contexto.fillStyle = "rgb(000,100,100)";
+
+    // DEFINE OUTRA FORMA DE PREENCHIMENTO, USANDO UMA IMAGEM
+
+    var estiloImagem = contexto.createPattern(imagem, "repeat");
+
+    contexto.fillStyle = estiloImagem;
+
+    // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
     contexto.fill();
 
+    // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
+    // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
     loop = requestAnimationFrame(loopDesenho);
 }
 
@@ -478,25 +496,21 @@ function stop()
 function irParaEsquerda()
 {
     player1.posicaoX = player1.posicaoX - player1.velocidade;
-    loopDesenho();
 }
 
 function irParaDireita()
 {
     player1.posicaoX = player1.posicaoX + player1.velocidade;
-    loopDesenho();
 }
 
 function irParaCima()
 {
     player1.posicaoY = player1.posicaoY - player1.velocidade;
-    loopDesenho();
 }
 
 function irParaBaixo()
 {
     player1.posicaoY = player1.posicaoY + player1.velocidade;
-    loopDesenho();
 }
 
 //
