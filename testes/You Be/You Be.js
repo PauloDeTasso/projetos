@@ -441,10 +441,14 @@ function loopDesenho()
     // REDENRIZA O DESENHO DE LINHA:
     contexto.stroke();
 
+    contexto.fillStyle = "rgb(0,100,0)"; //
+
+    contexto.moveTo(350, 100);
+
     // DESENHA UM CIRCULO:
     // (POSICAO X, POSICAO Y, RAIO, ANGULO INICIAL, ANGULO FINAL, SENTIDO)
     // SENTIDO = TRUE (SENTIDO HORÁRIO / = FALSE (SENTIDO ANTI HORARIO)
-    contexto.arc(10, 200, 100, 0, 360, true);
+    contexto.arc(350, 100, 100, 0, 360, false);
     contexto.fill();
 
     loop = requestAnimationFrame(loopDesenho);
