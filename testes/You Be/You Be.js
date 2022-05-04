@@ -342,7 +342,9 @@ status5.innerHTML = localStorage.getObj('sentimentosRuins')[1];
 
 //////////////////// CANVAS:
 
-// CRIANDO UM OBJETO:
+// FUNÇÕES CONSTRUTORAS
+
+// PLAYER
 
 function Player()
 {
@@ -353,18 +355,121 @@ function Player()
     this.velocidade = 10; //
 }
 
+// CONTROLE
+
+function Controle(key1, key2, key3, key4)
+{
+    this.teclaSetaParaCimaPressionada = false;
+    this.teclaSetaParaBaixoPressionada = false;
+
+    this.teclaSetaParaDireitaPressionada = false;
+    this.teclaSetaParaEsquerdaPressionada = false;
+
+    this.keyUp = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = false;
+
+        } else if (e.keyCode == key2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = false;
+        } else if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaDireitaPressionada = false;
+
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaEsquerdaPressionada = false;
+        }
+    }
+
+    this.keyDown = function (e)
+    {
+        if (e.keyCode == key1)
+        {
+            controle1.teclaSetaParaCimaPressionada = true;
+
+        } else if (e.keyCode == key2)
+        {
+            controle1.teclaSetaParaBaixoPressionada = true;
+        } else if (e.keyCode == key3)
+        {
+            controle1.teclaSetaParaDireitaPressionada = true;
+
+        } else if (e.keyCode == key4)
+        {
+            controle1.teclaSetaParaEsquerdaPressionada = true;
+        }
+    }
+}
+
 var player1 = new Player();
+
+var controle1 = new Controle(87, 83, 68, 65);
 
 var imagem = document.getElementById("imagem");
 
 var loop;
 
-//setTimeout(loopDesenho, 0)
+////////////////////////////////////
 
 loopDesenho()
 
 function loopDesenho()
 {
+
+    //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
+    // se o usuário precionar para cima
+    if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+    {
+        // se para cima for pressionado
+        if (controle1.teclaSetaParaCimaPressionada)
+        {
+            // se a bola não sair da tela
+            if (player1.posicaoY >= 0)
+            {
+                // muda posição do jogador
+                player1.posicaoY -= player1.velocidade;
+            }
+        }
+        else
+        // se for para baixo 
+        {
+            // se a bola não saiu da tela
+            if (player1.posicaoY <= (telaCanvas.height - player1.altura))
+            {
+                // muda posição
+                player1.posicaoY += player1.velocidade;
+            }
+        }
+    }
+
+    //  MOVIMENTAR JOGADOR ESQUERDA / DIREITA ********************************************************************
+
+    if (controle1.teclaSetaParaDireitaPressionada != controle1.teclaSetaParaEsquerdaPressionada)
+    {
+        // se para direita for pressionado
+        if (controle1.teclaSetaParaDireitaPressionada)
+        {
+            // se a bola não sair da tela
+            if (player1.posicaoX <= telaCanvas.width - player1.largura)
+            {
+                player1.posicaoX += player1.velocidade;
+            }
+        }
+        else
+        // se for para esquerda
+        {
+            // se a bola não saiu da tela
+            if (player1.posicaoX >= 0)
+            {
+                // muda posição
+                player1.posicaoX -= player1.velocidade;
+            }
+        }
+    }
+
     // LIMPA A AREA ESPECIFICADA DO DESENHO
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.clearRect(0, 0, 500, 500);
@@ -481,6 +586,11 @@ botaoIrParaDireita.addEventListener('click', irParaDireita, false);
 botaoIrParaCima.addEventListener('click', irParaCima, false);
 botaoIrParaBaixo.addEventListener('click', irParaBaixo, false);
 
+// TECLAS PRESSIONADAS
+
+document.addEventListener('keyup', controle1.keyUp, false);
+document.addEventListener('keydown', controle1.keyDown, false);
+
 // FUNÇÕES:
 
 function play()
@@ -512,6 +622,28 @@ function irParaBaixo()
 {
     player1.posicaoY = player1.posicaoY + player1.velocidade;
 }
+
+//
+
+
+/*
+    function irParaCima()
+    {
+        if (player1.posicaoY > 0)
+        { // se a bola nçao sair da tela
+            player1.posicaoY -= player1.velocidade; // muda posição do jogador
+        }
+    }
+
+    function irParaBaixo()
+    {
+        // se for para baixo
+        if (player1.posicaoY < (canvas1.canvas.height - player1.altura))
+        { // se a bola não saiu da tela
+            player1.posicaoY += player1.velocidade; // muda posição
+        }
+    }
+*/
 
 //
 
