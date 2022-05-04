@@ -408,6 +408,19 @@ var player1 = new Player();
 
 var controle1 = new Controle(87, 83, 68, 65);
 
+var circuloPosicaoX = 350;
+
+var circuloPosicaoY = 100;
+
+var circuloTamanho = 100;
+
+var anguloInicial = (Math.PI / 180) * 0;
+
+var anguloFinal = (Math.PI / 180) * 360;
+
+//O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
+var sentidoCirculo = true;
+
 var imagem = document.getElementById("imagem");
 
 var loop;
@@ -488,6 +501,11 @@ function loopDesenho()
     // (URL IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
     //contexto.drawImage(imagem, 0, 0, 500, 500);
 
+    // SOBREPOSIÇÃO DO METODO:
+    // PODE RECORTAR A IMAGEM 
+    // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+    contexto.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
+
     ////DESENHANDO RETANGULOS:
 
     ////DESENHANDO UM RETANGULO - RETANGULO 1
@@ -523,7 +541,7 @@ function loopDesenho()
     // DEFINE O ESTILO/COR DA LINHA:
     contexto.strokeStyle = "rgb(200,200,0)";
 
-    // COMEÇA O DESENHO DE LINHA NESSA POSSIÇÃO - (POSICAO X, POSICAO Y)
+    // COMEÇA MOVENDO O PONTO DE DESENHO DE LINHA NA POSSIÇÃO - (POSICAO X, POSICAO Y)
     contexto.moveTo(300, 300);
 
     // FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
@@ -538,7 +556,7 @@ function loopDesenho()
     // FECHA O DESENHO DE LINHA NA MESMA POSIÇÃO DE INICIO
     contexto.lineTo(300, 300);
 
-    // AGORA MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
+    // AGORA MOVE O PONTO, A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
     contexto.moveTo(400, 470);
 
     // E AGORA FINALIZAR O DESENHO DE LINHA NESSA NOVA POSIÇÃO:
@@ -555,16 +573,39 @@ function loopDesenho()
     // DESENHA UM CIRCULO:
     // (POSICAO X, POSICAO Y, RAIO, ANGULO INICIAL, ANGULO FINAL, SENTIDO)
     // SENTIDO = TRUE (SENTIDO HORÁRIO / = FALSE (SENTIDO ANTI HORARIO)
-    contexto.arc(350, 100, 100, 0, 360, false);
+    contexto.arc(circuloPosicaoX, circuloPosicaoY, circuloTamanho, anguloInicial, anguloFinal, sentidoCirculo);
+
+    // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE
+    contexto.fill();
+
+    //beginPath - INICIA UM NOVO DESENHO
+    //contexto.beginPath();
+
+    //closePath - FINALIZA O DESENHO
+    //contexto.closePath();
+
+    //DESENHA CIRCULOS POR ANIMAÇÕES - COM POSIÇÕES, TAMANHOS, CORES VARIADAS
+    function gerarCirculosAleatorios()
+    {
+        for (var i = 0; i < 10; i++)
+        {
+            contexto.beginPath();
+            contexto.fillStyle = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ")";
+            contexto.arc(Math.random() * 500, Math.random() * 500, Math.random() * circuloTamanho, anguloInicial, anguloFinal, sentidoCirculo);
+            contexto.fill();
+        }
+    }
+
+    //MOVE O PONTO DE DESENHO PARA ESSA POSIÇÃO
+    contexto.moveTo(10, 400);
+
+    //CRIA UM ARCO ONDE (POSICÃOX-INICIAL, POSIÇÃOY-INICIAL, POSICÃOX-FINAL, POSIÇÃOY-FINAL, RAIO)
+    contexto.arcTo(50, 400, 50, 0, 50);
 
     // REDENRIZA/ CONTORNA OS DESENHOS FEITOS DE LINHA:
     contexto.stroke();
 
-    // DEFINE OUTRA COR DE PREENCHIMENTO 
-    contexto.fillStyle = "rgb(000,100,100)";
-
     // DEFINE OUTRA FORMA DE PREENCHIMENTO, USANDO UMA IMAGEM
-
     var estiloImagem = contexto.createPattern(imagem, "repeat");
 
     contexto.fillStyle = estiloImagem;
