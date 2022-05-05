@@ -617,27 +617,49 @@ imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
 
 //VARIAVEIS IMAGENS DE AÇÕES DO PLAYER 1
 
-// CORRENDO:
+// CORRENDO DIREITA:
 
-var imagemPlayer1PosInicialXCorrendo1 = 52;
-var imagemPlayer1PosInicialXCorrendo2 = 34;
-var imagemPlayer1PosInicialXCorrendo3 = 66;
-var imagemPlayer1PosInicialXCorrendo4 = 99;
+var imagemPlayer1PosInicialXCorrendoD1 = 52;
+var imagemPlayer1PosInicialXCorrendoD2 = 34;
+var imagemPlayer1PosInicialXCorrendoD3 = 66;
+var imagemPlayer1PosInicialXCorrendoD4 = 99;
 
-var imagemPlayer1PosInicialYCorrendo1 = 39;
-var imagemPlayer1PosInicialYCorrendo2 = 38;
-var imagemPlayer1PosInicialYCorrendo3 = 39;
-var imagemPlayer1PosInicialYCorrendo4 = 39;
+var imagemPlayer1PosInicialYCorrendoD1 = 39;
+var imagemPlayer1PosInicialYCorrendoD2 = 38;
+var imagemPlayer1PosInicialYCorrendoD3 = 39;
+var imagemPlayer1PosInicialYCorrendoD4 = 39;
 
-var imagemPlayerCorteLarguraCorrendo1 = 12;
-var imagemPlayerCorteLarguraCorrendo2 = 12;
-var imagemPlayerCorteLarguraCorrendo3 = 12;
-var imagemPlayerCorteLarguraCorrendo4 = 12;
+var imagemPlayerCorteLarguraCorrendoD1 = 12;
+var imagemPlayerCorteLarguraCorrendoD2 = 12;
+var imagemPlayerCorteLarguraCorrendoD3 = 12;
+var imagemPlayerCorteLarguraCorrendoD4 = 12;
 
-var imagemPlayerCorteAlturaCorrendo1 = 15;
-var imagemPlayerCorteAlturaCorrendo2 = 15;
-var imagemPlayerCorteAlturaCorrendo3 = 15;
-var imagemPlayerCorteAlturaCorrendo4 = 15;
+var imagemPlayerCorteAlturaCorrendoD1 = 15;
+var imagemPlayerCorteAlturaCorrendoD2 = 15;
+var imagemPlayerCorteAlturaCorrendoD3 = 15;
+var imagemPlayerCorteAlturaCorrendoD4 = 15;
+
+// CORRENDO ESQUERDA:
+
+var imagemPlayer1PosInicialXCorrendoE1 = 66;
+var imagemPlayer1PosInicialXCorrendoE2 = 80;
+var imagemPlayer1PosInicialXCorrendoE3 = 32;
+var imagemPlayer1PosInicialXCorrendoE4 = 16;
+
+var imagemPlayer1PosInicialYCorrendoE1 = 139;
+var imagemPlayer1PosInicialYCorrendoE2 = 139;
+var imagemPlayer1PosInicialYCorrendoE3 = 138;
+var imagemPlayer1PosInicialYCorrendoE4 = 139;
+
+var imagemPlayerCorteLarguraCorrendoE1 = 9;
+var imagemPlayerCorteLarguraCorrendoE2 = 12;
+var imagemPlayerCorteLarguraCorrendoE3 = 12;
+var imagemPlayerCorteLarguraCorrendoE4 = 12;
+
+var imagemPlayerCorteAlturaCorrendoE1 = 15;
+var imagemPlayerCorteAlturaCorrendoE2 = 15;
+var imagemPlayerCorteAlturaCorrendoE3 = 15;
+var imagemPlayerCorteAlturaCorrendoE4 = 15;
 
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
@@ -717,71 +739,70 @@ function loopDesenho()
 
                 //imagemPlayer1PosInicialX:
 
-                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo1)
+                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD1)
                 {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo2;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo2)
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD2)
                 {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo3;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo3)
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
                 {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo4;
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4;
                 } else
                 {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo1;
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1;
                 }
 
                 //imagemPlayer1PosInicialY:
 
-                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo1)
+                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD1)
                 {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo2;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo2)
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD2)
                 {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo3;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo3)
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
                 {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo4;
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4;
                 } else
                 {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo1;
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1;
                 }
 
                 //imagemPlayerCorteLargura:
 
-                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo1)
+                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD1)
                 {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo2;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo2)
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD2;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD2)
                 {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo3;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo3)
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD3;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD3)
                 {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo4;
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD4;
                 } else
                 {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo1;
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD1;
                 }
 
                 //imagemPlayerCorteAltura:
 
-                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo1)
+                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD1)
                 {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo2;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo2)
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD2;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD2)
                 {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo3;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo3)
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD3;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD3)
                 {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo4;
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD4;
                 } else
                 {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo1;
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD1;
                 }
 
             }
-        }
-        else
+        } else
         // se for para esquerda
         {
             // se a bola não saiu da tela
@@ -789,14 +810,82 @@ function loopDesenho()
             {
                 // muda posição
                 player1.posicaoX -= player1.velocidade;
+
+                //imagemPlayer1PosInicialX:
+
+                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE1)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE2)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4;
+                } else
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1;
+                }
+
+                //imagemPlayer1PosInicialY:
+
+                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE1)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE2)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4;
+                } else
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1;
+                }
+
+                //imagemPlayerCorteLargura:
+
+                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE1)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE2;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE2)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE3;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE3)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE4;
+                } else
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE1;
+                }
+
+                //imagemPlayerCorteAltura:
+
+                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE1)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE2;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE2)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE3;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE3)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE4;
+                } else
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE1;
+                }
+
             }
         }
     } else
     {
-        imagemPlayer1PosInicialX = 19;
-        imagemPlayer1PosInicialY = 23;
-        imagemPlayerCorteLargura = 10;
-        imagemPlayerCorteAltura = 15;
+        if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+        {
+            imagemPlayer1PosInicialX = 19;
+            imagemPlayer1PosInicialY = 23;
+            imagemPlayerCorteLargura = 10;
+            imagemPlayerCorteAltura = 15;
+        }
     }
 
     /*
@@ -956,8 +1045,6 @@ function loopDesenho()
     contexto.fill();
 */
     //
-
-
 
     // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
     // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
