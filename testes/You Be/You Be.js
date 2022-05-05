@@ -107,6 +107,11 @@ localStorage.alimentoMenosUsado;
 var botaoComer = document.getElementById('botaoComer');
 var botaoBeber = document.getElementById('botaoBeber');
 var botaoUsarBanheiro = document.getElementById('botaoUsarBanheiro');
+var botaoTomarBanho = document.getElementById('botaoTomarBanho');
+var botaoDormir = document.getElementById('botaoDormir');
+var botaoRelaxar = document.getElementById('botaoRelaxar');
+var botaoConversar = document.getElementById('botaoConversar');
+var botaoTomarRemedio = document.getElementById('botaoTomarRemedio');
 
 //
 
@@ -246,6 +251,86 @@ function usarBanheiro()
     }
 }
 
+// TOMAR BANHO:
+
+function tomarBanho()
+{
+    localStorage.higieneStatus = localStorage.higieneStatus - 30;
+
+    if (localStorage.higieneStatus <= 0)
+    {
+        localStorage.higieneStatus = 0;
+        barraHigiene.value = localStorage.higieneStatus;
+    } else
+    {
+        barraHigiene.value = localStorage.higieneStatus;
+    }
+}
+
+// DORMIR:
+
+function dormir()
+{
+    localStorage.energiaStatus = localStorage.energiaStatus - 30;
+
+    if (localStorage.energiaStatus <= 0)
+    {
+        localStorage.energiaStatus = 0;
+        barraEnergia.value = localStorage.energiaStatus;
+    } else
+    {
+        barraEnergia.value = localStorage.energiaStatus;
+    }
+}
+
+// RELAXAR:
+
+function relaxar()
+{
+    localStorage.estresseStatus = localStorage.estresseStatus - 30;
+
+    if (localStorage.estresseStatus <= 0)
+    {
+        localStorage.estresseStatus = 0;
+        barraEstresse.value = localStorage.estresseStatus;
+    } else
+    {
+        barraEstresse.value = localStorage.estresseStatus;
+    }
+}
+
+// CONVERSAR:
+
+function conversar()
+{
+    localStorage.socialStatus = localStorage.socialStatus - 30;
+
+    if (localStorage.socialStatus <= 0)
+    {
+        localStorage.socialStatus = 0;
+        barraSocial.value = localStorage.socialStatus;
+    } else
+    {
+        barraSocial.value = localStorage.socialStatus;
+    }
+}
+
+// TOMAR REMEDIO:
+
+function tomarRemedio()
+{
+    localStorage.saudeStatus = localStorage.saudeStatus - 30;
+
+    if (localStorage.saudeStatus <= 0)
+    {
+        localStorage.saudeStatus = 0;
+        barraSaude.value = localStorage.saudeStatus;
+    } else
+    {
+        barraSaude.value = localStorage.saudeStatus;
+    }
+}
+
 //////// DE REAÇÃO/ EVENTOS:
 
 ////  REAÇÕES DAS NECESSIDADES:
@@ -312,6 +397,106 @@ function banheiro()
     setTimeout(banheiro, 1000);
 }
 
+// TOMAR BANHO:
+
+setTimeout(higiene, 1000);
+
+function higiene()
+{
+    localStorage.higieneStatus = parseInt(localStorage.higieneStatus) + 1;
+
+    if (localStorage.higieneStatus >= 100)
+    {
+        localStorage.higieneStatus = 100;
+        barraHigiene.value = localStorage.higieneStatus;
+    } else
+    {
+        barraHigiene.value = localStorage.higieneStatus;
+    }
+
+    setTimeout(higiene, 1000);
+}
+
+// ENERGIA:
+
+setTimeout(energia, 1000);
+
+function energia()
+{
+    localStorage.energiaStatus = parseInt(localStorage.energiaStatus) + 1;
+
+    if (localStorage.energiaStatus >= 100)
+    {
+        localStorage.energiaStatus = 100;
+        barraEnergia.value = localStorage.energiaStatus;
+    } else
+    {
+        barraEnergia.value = localStorage.energiaStatus;
+    }
+
+    setTimeout(energia, 1000);
+}
+
+// ESTRESSE:
+
+setTimeout(estresse, 1000);
+
+function estresse()
+{
+    localStorage.estresseStatus = parseInt(localStorage.estresseStatus) + 1;
+
+    if (localStorage.estresseStatus >= 100)
+    {
+        localStorage.estresseStatus = 100;
+        barraEstresse.value = localStorage.estresseStatus;
+    } else
+    {
+        barraEstresse.value = localStorage.estresseStatus;
+    }
+
+    setTimeout(estresse, 1000);
+}
+
+// SOCIAL:
+
+setTimeout(social, 1000);
+
+function social()
+{
+    localStorage.socialStatus = parseInt(localStorage.socialStatus) + 1;
+
+    if (localStorage.socialStatus >= 100)
+    {
+        localStorage.socialStatus = 100;
+        barraSocial.value = localStorage.socialStatus;
+    } else
+    {
+        barraSocial.value = localStorage.socialStatus;
+    }
+
+    setTimeout(social, 1000);
+}
+
+// SAUDE:
+
+setTimeout(saude, 1000);
+
+function saude()
+{
+    localStorage.saudeStatus = parseInt(localStorage.saudeStatus) + 1;
+
+    if (localStorage.saudeStatus >= 100)
+    {
+        localStorage.saudeStatus = 100;
+        barraSaude.value = localStorage.saudeStatus;
+    } else
+    {
+        barraSaude.value = localStorage.saudeStatus;
+    }
+
+    setTimeout(saude, 1000);
+}
+
 //// REAÇÕES DE ATIVIDADES/ LOCAIS:
 
 
@@ -327,6 +512,11 @@ function banheiro()
 botaoComer.addEventListener("click", function () { comer('cochinha') }, false);
 botaoBeber.addEventListener("click", function () { beber('agua') }, false);
 botaoUsarBanheiro.addEventListener("click", usarBanheiro, false);
+botaoTomarBanho.addEventListener("click", tomarBanho, false);
+botaoDormir.addEventListener("click", dormir, false);
+botaoRelaxar.addEventListener("click", relaxar, false);
+botaoConversar.addEventListener("click", conversar, false);
+botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //////////////////// SAIDAS:
 
