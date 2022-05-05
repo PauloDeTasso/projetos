@@ -352,7 +352,7 @@ function Player()
     this.altura = 50; // 
     this.posicaoX = 40; //
     this.posicaoY = 40; //   
-    this.velocidade = 10; //
+    this.velocidade = 3; //
 }
 
 // CONTROLE
@@ -421,7 +421,44 @@ var anguloFinal = (Math.PI / 180) * 360;
 //O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
 var sentidoCirculo = true;
 
-var imagem = document.getElementById("imagem");
+var imagemEmBranco = new Image();
+
+imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
+
+//VARIAVEIS IMAGENS DE AÇÕES DO PLAYER 1
+
+// CORRENDO:
+
+var imagemPlayer1PosInicialXCorrendo1 = 19;
+var imagemPlayer1PosInicialXCorrendo2 = 34;
+var imagemPlayer1PosInicialXCorrendo3 = 52;
+
+var imagemPlayer1PosInicialYCorrendo1 = 16;
+var imagemPlayer1PosInicialYCorrendo2 = 32;
+var imagemPlayer1PosInicialYCorrendo3 = 33;
+
+var imagemPlayerCorteLarguraCorrendo1 = 10;
+var imagemPlayerCorteLarguraCorrendo2 = 12;
+var imagemPlayerCorteLarguraCorrendo3 = 9;
+
+var imagemPlayerCorteAlturaCorrendo1 = 15;
+var imagemPlayerCorteAlturaCorrendo2 = 15;
+var imagemPlayerCorteAlturaCorrendo3 = 15;
+
+// POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
+
+var imagemPlayer1PosInicialX = 19;
+var imagemPlayer1PosInicialY = 16;
+var imagemPlayerCorteLargura = 10;
+var imagemPlayerCorteAltura = 15;
+
+//
+
+var imagemCidade1 = new Image();
+imagemCidade1.src = "../../imagens/texture/2D/cidade1.jpg"
+
+var imagemPlayer1 = new Image();
+imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
 var loop;
 
@@ -431,6 +468,11 @@ loopDesenho()
 
 function loopDesenho()
 {
+    // LIMPA A AREA ESPECIFICADA DO DESENHO
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.clearRect(0, 0, 500, 500);
+
+    contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
 
     //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
     // se o usuário precionar para cima
@@ -469,6 +511,59 @@ function loopDesenho()
             if (player1.posicaoX <= telaCanvas.width - player1.largura)
             {
                 player1.posicaoX += player1.velocidade;
+
+                //imagemPlayer1PosInicialX:
+
+                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo1)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo2;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo2)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo3;
+                } else
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo1;
+                }
+
+                //imagemPlayer1PosInicialY:
+
+                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo1)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo2;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo2)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo3;
+                } else
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo1;
+                }
+
+                //imagemPlayerCorteLargura:
+
+                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo1)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo2;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo2)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo3;
+                } else
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo1;
+                }
+
+                //imagemPlayerCorteAltura:
+
+                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo1)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo2;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo2)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo3;
+                } else
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo1;
+                }
+
             }
         }
         else
@@ -483,10 +578,8 @@ function loopDesenho()
         }
     }
 
-    // LIMPA A AREA ESPECIFICADA DO DESENHO
-    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
-    contexto.clearRect(0, 0, 500, 500);
 
+    /*
     // USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
     // var estiloImagem = contexto.createPattern(imagem, "no-repeat");
     // "repeat" (ambas direcoes)
@@ -527,8 +620,35 @@ function loopDesenho()
     // USANDO TRANSPARENCIA RGBA COMO PREENCHIMENTO
     contexto.fillStyle = "rgba(000,200,200,0.5)";
 
+    */
+
+    //INSERINDO TEXTOS
+    /*
+    contexto.font = "20px Comic Sans MS";
+
+    contexto.fillStyle = "blue";
+
+    contexto.textAlign = "center";
+
+    contexto.fillText("Paulo de Tasso", 250, 20);
+    */
+
+    //var estiloImagem = contexto.createPattern(imagem, "no-repeat")
+
+    //contexto.fillStyle = estiloImagem;
+
+    // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+    //contexto.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
+
+    var estiloImagem = contexto.createPattern(imagemEmBranco, "repeat")
+
+    contexto.fillStyle = estiloImagem;
+
+    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+
 
     // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
     //contexto.fill();
@@ -538,9 +658,10 @@ function loopDesenho()
     // DEFINE A LARGURA DE LINHA:
     contexto.lineWidth = 3;
 
+    /*
     // DEFINE O ESTILO/COR DA LINHA:
     contexto.strokeStyle = "rgb(200,200,0)";
-
+    
     // COMEÇA MOVENDO O PONTO DE DESENHO DE LINHA NA POSSIÇÃO - (POSICAO X, POSICAO Y)
     contexto.moveTo(300, 300);
 
@@ -602,6 +723,7 @@ function loopDesenho()
     //CRIA UM ARCO ONDE (POSICÃOX-INICIAL, POSIÇÃOY-INICIAL, POSICÃOX-FINAL, POSIÇÃOY-FINAL, RAIO)
     contexto.arcTo(50, 400, 50, 0, 50);
 
+
     // REDENRIZA/ CONTORNA OS DESENHOS FEITOS DE LINHA:
     contexto.stroke();
 
@@ -612,6 +734,10 @@ function loopDesenho()
 
     // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
     contexto.fill();
+*/
+    //
+
+
 
     // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
     // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
