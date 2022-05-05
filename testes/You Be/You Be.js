@@ -619,26 +619,30 @@ imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
 
 // CORRENDO:
 
-var imagemPlayer1PosInicialXCorrendo1 = 19;
+var imagemPlayer1PosInicialXCorrendo1 = 52;
 var imagemPlayer1PosInicialXCorrendo2 = 34;
-var imagemPlayer1PosInicialXCorrendo3 = 52;
+var imagemPlayer1PosInicialXCorrendo3 = 66;
+var imagemPlayer1PosInicialXCorrendo4 = 99;
 
-var imagemPlayer1PosInicialYCorrendo1 = 16;
-var imagemPlayer1PosInicialYCorrendo2 = 32;
-var imagemPlayer1PosInicialYCorrendo3 = 33;
+var imagemPlayer1PosInicialYCorrendo1 = 39;
+var imagemPlayer1PosInicialYCorrendo2 = 38;
+var imagemPlayer1PosInicialYCorrendo3 = 39;
+var imagemPlayer1PosInicialYCorrendo4 = 39;
 
-var imagemPlayerCorteLarguraCorrendo1 = 10;
+var imagemPlayerCorteLarguraCorrendo1 = 12;
 var imagemPlayerCorteLarguraCorrendo2 = 12;
-var imagemPlayerCorteLarguraCorrendo3 = 9;
+var imagemPlayerCorteLarguraCorrendo3 = 12;
+var imagemPlayerCorteLarguraCorrendo4 = 12;
 
 var imagemPlayerCorteAlturaCorrendo1 = 15;
 var imagemPlayerCorteAlturaCorrendo2 = 15;
 var imagemPlayerCorteAlturaCorrendo3 = 15;
+var imagemPlayerCorteAlturaCorrendo4 = 15;
 
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
 var imagemPlayer1PosInicialX = 19;
-var imagemPlayer1PosInicialY = 16;
+var imagemPlayer1PosInicialY = 23;
 var imagemPlayerCorteLargura = 10;
 var imagemPlayerCorteAltura = 15;
 
@@ -688,6 +692,15 @@ function loopDesenho()
                 player1.posicaoY += player1.velocidade;
             }
         }
+    } else
+    {
+        if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
+        {
+            imagemPlayer1PosInicialX = 19;
+            imagemPlayer1PosInicialY = 23;
+            imagemPlayerCorteLargura = 10;
+            imagemPlayerCorteAltura = 15;
+        }
     }
 
     //  MOVIMENTAR JOGADOR ESQUERDA / DIREITA ********************************************************************
@@ -710,6 +723,9 @@ function loopDesenho()
                 } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo2)
                 {
                     imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo3;
+                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendo3)
+                {
+                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo4;
                 } else
                 {
                     imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendo1;
@@ -723,6 +739,9 @@ function loopDesenho()
                 } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo2)
                 {
                     imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo3;
+                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendo3)
+                {
+                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo4;
                 } else
                 {
                     imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendo1;
@@ -736,6 +755,9 @@ function loopDesenho()
                 } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo2)
                 {
                     imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo3;
+                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendo3)
+                {
+                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo4;
                 } else
                 {
                     imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendo1;
@@ -749,6 +771,9 @@ function loopDesenho()
                 } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo2)
                 {
                     imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo3;
+                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendo3)
+                {
+                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo4;
                 } else
                 {
                     imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendo1;
@@ -766,8 +791,13 @@ function loopDesenho()
                 player1.posicaoX -= player1.velocidade;
             }
         }
+    } else
+    {
+        imagemPlayer1PosInicialX = 19;
+        imagemPlayer1PosInicialY = 23;
+        imagemPlayerCorteLargura = 10;
+        imagemPlayerCorteAltura = 15;
     }
-
 
     /*
     // USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
