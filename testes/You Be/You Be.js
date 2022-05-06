@@ -555,39 +555,39 @@ function Controle(key1, key2, key3, key4)
     this.teclaSetaParaDireitaPressionada = false;
     this.teclaSetaParaEsquerdaPressionada = false;
 
-    this.keyUp = function (e)
+    this.keyUp = function (eventoAcionado)
     {
-        if (e.keyCode == key1)
+        if (eventoAcionado.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = false;
 
-        } else if (e.keyCode == key2)
+        } else if (eventoAcionado.keyCode == key2)
         {
             controle1.teclaSetaParaBaixoPressionada = false;
-        } else if (e.keyCode == key3)
+        } else if (eventoAcionado.keyCode == key3)
         {
             controle1.teclaSetaParaDireitaPressionada = false;
 
-        } else if (e.keyCode == key4)
+        } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = false;
         }
     }
 
-    this.keyDown = function (e)
+    this.keyDown = function (eventoAcionado)
     {
-        if (e.keyCode == key1)
+        if (eventoAcionado.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = true;
 
-        } else if (e.keyCode == key2)
+        } else if (eventoAcionado.keyCode == key2)
         {
             controle1.teclaSetaParaBaixoPressionada = true;
-        } else if (e.keyCode == key3)
+        } else if (eventoAcionado.keyCode == key3)
         {
             controle1.teclaSetaParaDireitaPressionada = true;
 
-        } else if (e.keyCode == key4)
+        } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = true;
         }
@@ -686,7 +686,7 @@ function loopDesenho()
 {
     // LIMPA A AREA ESPECIFICADA DO DESENHO
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
-    contexto.clearRect(0, 0, 500, 500);
+    contexto.clearRect(0, 0, telaCanvas.width, telaCanvas.height);
 
     contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
 
@@ -931,16 +931,31 @@ function loopDesenho()
 
     */
 
-    //INSERINDO TEXTOS
+    // INSERINDO TEXTOS:
     /*
+
+    // TAMANHO E FONT
     contexto.font = "20px Comic Sans MS";
-
-    contexto.fillStyle = "blue";
-
+    
+    // ALINHAMENTO
     contexto.textAlign = "center";
 
-    contexto.fillText("Paulo de Tasso", 250, 20);
+    // COR
+    contexto.fillStyle = "blue";
+
+    //BORDA
+    // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
+    contexto.strokeText("Paulo de Tasso",10,100,100)
+    contexto.strokeText("Paulo de Tasso",10,100)
+
+    //PREENCHIMENTO DO TEXTO
+    // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
+    contexto.fillText("Paulo de Tasso", 250, 20,100);  
+    contexto.fillText("Paulo de Tasso", 250, 20);  
+
     */
+
+    //IMAGENS: 
 
     //var estiloImagem = contexto.createPattern(imagem, "no-repeat")
 
@@ -949,15 +964,38 @@ function loopDesenho()
     // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
     //contexto.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
 
-    var estiloImagem = contexto.createPattern(imagemEmBranco, "repeat")
+    //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
+    //var estiloImagem = contexto.createPattern(imagemEmBranco, "repeat")
+    //contexto.fillStyle = estiloImagem;
 
-    contexto.fillStyle = estiloImagem;
+    //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
+    contexto.fillStyle = "rgba(0,0,0,0.0)";
+
+    // SOMBREAMENTO DE ELEMENTOS:
+    // COR DA SOMBRA
+    contexto.shadowColor = 'rgba(0, 0, 0, 0.5)';
+    // BLUR
+    contexto.shadowBlur = 10;
+    // DESLOCAMENTO DA SOMBRA NA POSIÇÃOX
+    contexto.shadowOffsetX = 3;
+    // DESLOCAMENTO DA SOMBRA NA POSIÇÃOY
+    contexto.shadowOffsetY = 3;
+
+    // LINHAS EM CURVA:
+    /*
+        contexto.beginPath();
+        contexto.moveTo(0, 0);
+        contexto.quadraticCurveTo(250, 500, 500, 0);
+        contexto.stroke();
+        contexto.closePath();    
+    */
+
+    //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO PLAYER 1:
 
     contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
-
 
     // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
     //contexto.fill();
@@ -1062,14 +1100,21 @@ botaoIrParaBaixo.addEventListener('click', irParaBaixo, false);
 
 // TECLAS PRESSIONADAS
 
-document.addEventListener('keyup', controle1.keyUp, false);
-document.addEventListener('keydown', controle1.keyDown, false);
+//document.addEventListener('keyup', controle1.keyUp, false);
+//document.addEventListener('keydown', controle1.keyDown, false);
+
+window.addEventListener('keyup', controle1.keyUp, false);
+window.addEventListener('keydown', controle1.keyDown, false);
 
 // FUNÇÕES:
 
-function play()
+function play(eventoAcionado)
 {
-
+    status1.innerHTML = eventoAcionado.screenX;
+    status2.innerHTML = eventoAcionado.screenY;
+    status3.innerHTML = eventoAcionado.clientX;
+    status4.innerHTML = eventoAcionado.clientY;
+    status5.innerHTML = eventoAcionado.shiftKey;
 }
 
 function stop()
