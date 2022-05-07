@@ -679,8 +679,8 @@ imagemCidade1.larguraRecorte = imagemCidade1.width;
 imagemCidade1.alturaRecorte = imagemCidade1.height;
 imagemCidade1.posicaoX = 0;
 imagemCidade1.posicaoY = 0;
-imagemCidade1.largura = imagemCidade1.width - 3200;
-imagemCidade1.altura = imagemCidade1.height - 3200;
+imagemCidade1.largura = imagemCidade1.width;
+imagemCidade1.altura = imagemCidade1.height;
 
 //contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
 
@@ -726,6 +726,17 @@ function loopDesenho()
             {
                 // muda posição do jogador
                 player1.posicaoY -= player1.velocidade;
+            } else
+            {
+                //MOVENDO MAPA POSICAO -Y:
+
+                if (imagemCidade1.posicaoYRecorte <= 0)
+                {
+                    imagemCidade1.posicaoYRecorte = imagemCidade1.posicaoYRecorte;
+                } else
+                {
+                    imagemCidade1.posicaoYRecorte -= player1.velocidade;
+                }
             }
         }
         else
@@ -736,6 +747,17 @@ function loopDesenho()
             {
                 // muda posição
                 player1.posicaoY += player1.velocidade;
+            } else
+            {
+                //MOVENDO MAPA POSICAO Y:
+
+                if (imagemCidade1.posicaoYRecorte >= imagemCidade1.height - telaCanvas.height)
+                {
+                    imagemCidade1.posicaoYRecorte = imagemCidade1.posicaoYRecorte;
+                } else
+                {
+                    imagemCidade1.posicaoYRecorte += player1.velocidade;
+                }
             }
         }
     } else
@@ -758,11 +780,11 @@ function loopDesenho()
         {
             // se a bola não sair da tela
 
-            status1.innerHTML = player1.posicaoX;
-            status2.innerHTML = telaCanvas.width - player1.largura;
-            status3.innerHTML = telaCanvas.width;
-            status4.innerHTML = player1.largura;
-            status5.innerHTML = telaCanvas.width;
+            status1.innerHTML = imagemCidade1.width;
+            status2.innerHTML = imagemCidade1.largura;
+            status3.innerHTML = imagemCidade1.posicaoXRecorte;
+            status4.innerHTML = imagemCidade1.posicaoX;
+            status5.innerHTML = imagemCidade1.height;
 
             if (player1.posicaoX <= telaCanvas.width - player1.largura)
             {
@@ -836,7 +858,10 @@ function loopDesenho()
             {
                 //ALTERANDO O MAPA POSICAO X:
 
-                if (player1.posicaoX >= telaCanvas.width - player1.largura)
+                if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvas.width)
+                {
+                    imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
+                } else
                 {
                     imagemCidade1.posicaoXRecorte += player1.velocidade;
                 }
@@ -845,11 +870,11 @@ function loopDesenho()
         } else
         // se for para esquerda
         {
-            status1.innerHTML = player1.posicaoX;
-            status2.innerHTML = telaCanvas.width - player1.largura;
-            status3.innerHTML = telaCanvas.width;
-            status4.innerHTML = player1.largura;
-            status5.innerHTML = telaCanvas.width;
+            status1.innerHTML = imagemCidade1.width;
+            status2.innerHTML = imagemCidade1.largura;
+            status3.innerHTML = imagemCidade1.posicaoXRecorte;
+            status4.innerHTML = imagemCidade1.posicaoX;
+            status5.innerHTML = imagemCidade1.height;
 
             // se a bola não saiu da tela
             if (player1.posicaoX >= 0)
@@ -925,15 +950,12 @@ function loopDesenho()
             {
                 //MOVENDO MAPA POSICAO -X:
 
-                if (player1.posicaoX <= 0)
+                if (imagemCidade1.posicaoXRecorte <= 0)
                 {
-                    if (imagemCidade1.posicaoXRecorte <= 0)
-                    {
-                        imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
-                    } else
-                    {
-                        imagemCidade1.posicaoXRecorte -= player1.velocidade;
-                    }
+                    imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
+                } else
+                {
+                    imagemCidade1.posicaoXRecorte -= player1.velocidade;
                 }
             }
         }
