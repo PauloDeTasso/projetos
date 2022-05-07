@@ -528,7 +528,7 @@ status3.innerHTML = "Oi";
 
 status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
 
-status5.innerHTML = localStorage.getObj('sentimentosRuins')[1];
+status5.innerHTML = localStorage.getObj('sentimentosRuins')[10];
 
 //////////////////// CANVAS:
 
@@ -591,6 +591,43 @@ function Controle(key1, key2, key3, key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = true;
         }
+    }
+
+    this.mover = function (direcao)
+    {
+        switch (direcao) 
+        {
+            case "paraCima":
+                controle1.teclaSetaParaCimaPressionada = true;
+                break;
+
+            case "paraBaixo":
+                controle1.teclaSetaParaBaixoPressionada = true;
+                break;
+
+            case "paraDireita":
+                controle1.teclaSetaParaDireitaPressionada = true;
+                break;
+
+            case "paraEsquerda":
+                controle1.teclaSetaParaEsquerdaPressionada = true;
+                break;
+
+            default:
+                controle1.teclaSetaParaCimaPressionada = false;
+                controle1.teclaSetaParaBaixoPressionada = false;
+                controle1.teclaSetaParaDireitaPressionada = false;
+                controle1.teclaSetaParaEsquerdaPressionada = false;
+                break;
+        }
+    }
+
+    this.parar = function ()
+    {
+        controle1.teclaSetaParaCimaPressionada = false;
+        controle1.teclaSetaParaBaixoPressionada = false;
+        controle1.teclaSetaParaDireitaPressionada = false;
+        controle1.teclaSetaParaEsquerdaPressionada = false;
     }
 }
 
@@ -661,6 +698,50 @@ var imagemPlayerCorteAlturaCorrendoE2 = 15;
 var imagemPlayerCorteAlturaCorrendoE3 = 15;
 var imagemPlayerCorteAlturaCorrendoE4 = 15;
 
+// CORRENDO PARA CIMA:
+
+var imagemPlayer1PosInicialXCorrendoC1 = 52;
+var imagemPlayer1PosInicialXCorrendoC2 = 34;
+var imagemPlayer1PosInicialXCorrendoC3 = 66;
+var imagemPlayer1PosInicialXCorrendoC4 = 99;
+
+var imagemPlayer1PosInicialYCorrendoC1 = 39;
+var imagemPlayer1PosInicialYCorrendoC2 = 38;
+var imagemPlayer1PosInicialYCorrendoC3 = 39;
+var imagemPlayer1PosInicialYCorrendoC4 = 39;
+
+var imagemPlayerCorteLarguraCorrendoC1 = 12;
+var imagemPlayerCorteLarguraCorrendoC2 = 12;
+var imagemPlayerCorteLarguraCorrendoC3 = 12;
+var imagemPlayerCorteLarguraCorrendoC4 = 12;
+
+var imagemPlayerCorteAlturaCorrendoC1 = 15;
+var imagemPlayerCorteAlturaCorrendoC2 = 15;
+var imagemPlayerCorteAlturaCorrendoC3 = 15;
+var imagemPlayerCorteAlturaCorrendoC4 = 15;
+
+// CORRENDO PARA BAIXO:
+
+var imagemPlayer1PosInicialXCorrendoB1 = 66;
+var imagemPlayer1PosInicialXCorrendoB2 = 80;
+var imagemPlayer1PosInicialXCorrendoB3 = 32;
+var imagemPlayer1PosInicialXCorrendoB4 = 16;
+
+var imagemPlayer1PosInicialYCorrendoB1 = 139;
+var imagemPlayer1PosInicialYCorrendoB2 = 139;
+var imagemPlayer1PosInicialYCorrendoB3 = 138;
+var imagemPlayer1PosInicialYCorrendoB4 = 139;
+
+var imagemPlayerCorteLarguraCorrendoB1 = 9;
+var imagemPlayerCorteLarguraCorrendoB2 = 12;
+var imagemPlayerCorteLarguraCorrendoB3 = 12;
+var imagemPlayerCorteLarguraCorrendoB4 = 12;
+
+var imagemPlayerCorteAlturaCorrendoB1 = 15;
+var imagemPlayerCorteAlturaCorrendoB2 = 15;
+var imagemPlayerCorteAlturaCorrendoB3 = 15;
+var imagemPlayerCorteAlturaCorrendoB4 = 15;
+
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
 var imagemPlayer1PosInicialX = 19;
@@ -691,7 +772,7 @@ imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
 var loop;
 
-//
+// SPRITE - CORRENDO DIREITA:
 
 function imagensCorrendoDireitaPlayer1()
 {
@@ -760,7 +841,7 @@ function imagensCorrendoDireitaPlayer1()
     }
 }
 
-//
+// SPRITE - CORRENDO ESQUERDA:
 
 function imagensCorrendoEsquerdaPlayer1()
 {
@@ -829,6 +910,156 @@ function imagensCorrendoEsquerdaPlayer1()
     }
 }
 
+// SPRITE - CORRENDO PARA CIMA:
+
+function imagensCorrendoParaCimaPlayer1()
+{
+    //imagemPlayer1PosInicialX:
+
+    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC1)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC2;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC2)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC3;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC3)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC4;
+    } else
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC1;
+    }
+
+    //imagemPlayer1PosInicialY:
+
+    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC1)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC2;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC2)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC3;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC3)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC4;
+    } else
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1;
+    }
+
+    //imagemPlayerCorteLargura:
+
+    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC1)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC2;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC2)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC3;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC3)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC4;
+    } else
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC1;
+    }
+
+    //imagemPlayerCorteAltura:
+
+    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC1)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC2;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC2)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC3;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC3)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC4;
+    } else
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC1;
+    }
+}
+
+// SPRITE - CORRENDO PARA BAIXO:
+
+function imagensCorrendoParaBaixoPlayer1()
+{
+    //imagemPlayer1PosInicialX:
+
+    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB1)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB2;
+
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB2)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB3;
+
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB3)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB4;
+
+    } else
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB1;
+    }
+
+    //imagemPlayer1PosInicialY:
+
+    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB1)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB2;
+
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB2)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB3;
+
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB3)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB4;
+
+    } else
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB1;
+    }
+
+    //imagemPlayerCorteLargura:
+
+    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB1)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB2;
+
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB2)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB3;
+
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB3)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB4;
+
+    } else
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB1;
+    }
+
+    //imagemPlayerCorteAltura:
+
+    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB1)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB2;
+
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB2)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB3;
+
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB3)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB4;
+
+    } else
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB1;
+    }
+}
+
 //
 
 ////////////////////////////////////
@@ -855,20 +1086,23 @@ function loopDesenho()
     contexto.drawImage(imagemCidade1, imagemCidade1.posicaoXRecorte, imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
 
     //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
-    // se o usuário precionar para cima
+    // SE PRESSIONOU UMA TECLA
     if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
     {
-        // se para cima for pressionado
+        // TECLA PARA CIMA
         if (controle1.teclaSetaParaCimaPressionada)
         {
-            // se a bola não sair da tela
+            // SE A POSICAO Y É MAIOR QUE ZERO '0'
             if (player1.posicaoY >= 0)
             {
-                // muda posição do jogador
+                // MOVE PARA CIMA
                 player1.posicaoY -= player1.velocidade;
+
+                imagensCorrendoParaCimaPlayer1();
+
             } else
             {
-                //MOVENDO MAPA POSICAO -Y:
+                //MOVE MAPA PARA CIMA SE POSICAO Y DA IMAGEM É MAIOR QUE ZERO '0':
 
                 if (imagemCidade1.posicaoYRecorte <= 0)
                 {
@@ -876,20 +1110,25 @@ function loopDesenho()
                 } else
                 {
                     imagemCidade1.posicaoYRecorte -= player1.velocidade;
+
+                    imagensCorrendoParaCimaPlayer1();
                 }
             }
         }
         else
-        // se for para baixo 
+        // SE TECLA PARA BAIXO PRESSIONADA:
         {
-            // se a bola não saiu da tela
+            // SE O PLAYER NAO ULTRAPASSA A TELA DO CANVAS:
             if (player1.posicaoY <= (telaCanvas.height - player1.altura))
             {
-                // muda posição
+                // MOVE PARA BAIXO
                 player1.posicaoY += player1.velocidade;
+
+                imagensCorrendoParaBaixoPlayer1();
+
             } else
             {
-                //MOVENDO MAPA POSICAO Y:
+                //MOVENDO MAPA PARA BAIXAO - POSICAO Y:
 
                 if (imagemCidade1.posicaoYRecorte >= imagemCidade1.height - telaCanvas.height)
                 {
@@ -897,6 +1136,8 @@ function loopDesenho()
                 } else
                 {
                     imagemCidade1.posicaoYRecorte += player1.velocidade;
+
+                    imagensCorrendoParaBaixoPlayer1();
                 }
             }
         }
@@ -904,10 +1145,12 @@ function loopDesenho()
     {
         if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
         {
+            /*
             imagemPlayer1PosInicialX = 19;
             imagemPlayer1PosInicialY = 23;
             imagemPlayerCorteLargura = 10;
             imagemPlayerCorteAltura = 15;
+        */
         }
     }
 
@@ -915,10 +1158,10 @@ function loopDesenho()
 
     if (controle1.teclaSetaParaDireitaPressionada != controle1.teclaSetaParaEsquerdaPressionada)
     {
-        // se para direita for pressionado
+        // TECLA PARA DIREITA PRESSIONADA
         if (controle1.teclaSetaParaDireitaPressionada)
         {
-            // se a bola não sair da tela
+            // SE O PLAYER NAO SAIR DA TELA DO CANVAS
 
             if (player1.posicaoX <= telaCanvas.width - player1.largura)
             {
@@ -929,6 +1172,8 @@ function loopDesenho()
             } else
             {
                 //ALTERANDO O MAPA POSICAO X:
+
+                imagensCorrendoDireitaPlayer1();
 
                 if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvas.width)
                 {
@@ -967,10 +1212,12 @@ function loopDesenho()
     {
         if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
         {
+            /*
             imagemPlayer1PosInicialX = 19;
             imagemPlayer1PosInicialY = 23;
             imagemPlayerCorteLargura = 10;
             imagemPlayerCorteAltura = 15;
+        */
         }
     }
 
@@ -1178,11 +1425,21 @@ function loopDesenho()
 //CONFIGURAÇÕES EVENTOS BOTÕES:
 
 botaoPlay.addEventListener('click', play, false);
-botaoStop.addEventListener('click', stop, false);
-botaoIrParaEsquerda.addEventListener('click', irParaEsquerda, false);
-botaoIrParaDireita.addEventListener('click', irParaDireita, false);
-botaoIrParaCima.addEventListener('click', irParaCima, false);
-botaoIrParaBaixo.addEventListener('click', irParaBaixo, false);
+botaoStop.addEventListener('click', controle1.parar, false);
+
+//MOVENDO
+
+botaoIrParaEsquerda.addEventListener('mousedown', () => { controle1.mover("paraEsquerda") }, false);
+botaoIrParaDireita.addEventListener('mousedown', () => { controle1.mover("paraDireita") }, false);
+botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima") }, false);
+botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
+
+// PARANDO
+
+botaoIrParaEsquerda.addEventListener('mouseup', controle1.parar, false);
+botaoIrParaDireita.addEventListener('mouseup', controle1.parar, false);
+botaoIrParaCima.addEventListener('mouseup', controle1.parar, false);
+botaoIrParaBaixo.addEventListener('mouseup', controle1.parar, false);
 
 // TECLAS PRESSIONADAS
 
