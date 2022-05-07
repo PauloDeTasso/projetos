@@ -1434,12 +1434,26 @@ botaoIrParaDireita.addEventListener('mousedown', () => { controle1.mover("paraDi
 botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
 
+//
+
+botaoIrParaEsquerda.addEventListener('touchstart', () => { controle1.mover("paraEsquerda") }, false);
+botaoIrParaDireita.addEventListener('touchstart', () => { controle1.mover("paraDireita") }, false);
+botaoIrParaCima.addEventListener('touchstart', () => { controle1.mover("paraCima") }, false);
+botaoIrParaBaixo.addEventListener('touchstart', () => { controle1.mover("paraBaixo") }, false);
+
 // PARANDO
 
 botaoIrParaEsquerda.addEventListener('mouseup', controle1.parar, false);
 botaoIrParaDireita.addEventListener('mouseup', controle1.parar, false);
 botaoIrParaCima.addEventListener('mouseup', controle1.parar, false);
 botaoIrParaBaixo.addEventListener('mouseup', controle1.parar, false);
+
+//
+
+botaoIrParaEsquerda.addEventListener('touchend', controle1.parar, false);
+botaoIrParaDireita.addEventListener('touchend', controle1.parar, false);
+botaoIrParaCima.addEventListener('touchend', controle1.parar, false);
+botaoIrParaBaixo.addEventListener('touchend', controle1.parar, false);
 
 // TECLAS PRESSIONADAS
 
