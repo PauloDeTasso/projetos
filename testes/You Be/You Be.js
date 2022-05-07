@@ -691,6 +691,146 @@ imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
 var loop;
 
+//
+
+function imagensCorrendoDireitaPlayer1()
+{
+    //imagemPlayer1PosInicialX:
+
+    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD1)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD2)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4;
+    } else
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1;
+    }
+
+    //imagemPlayer1PosInicialY:
+
+    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD1)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD2)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4;
+    } else
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1;
+    }
+
+    //imagemPlayerCorteLargura:
+
+    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD1)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD2;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD2)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD3;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD3)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD4;
+    } else
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD1;
+    }
+
+    //imagemPlayerCorteAltura:
+
+    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD1)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD2;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD2)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD3;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD3)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD4;
+    } else
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD1;
+    }
+}
+
+//
+
+function imagensCorrendoEsquerdaPlayer1()
+{
+    //imagemPlayer1PosInicialX:
+
+    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE1)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE2)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3;
+    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4;
+    } else
+    {
+        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1;
+    }
+
+    //imagemPlayer1PosInicialY:
+
+    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE1)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE2)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3;
+    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4;
+    } else
+    {
+        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1;
+    }
+
+    //imagemPlayerCorteLargura:
+
+    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE1)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE2;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE2)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE3;
+    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE3)
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE4;
+    } else
+    {
+        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE1;
+    }
+
+    //imagemPlayerCorteAltura:
+
+    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE1)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE2;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE2)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE3;
+    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE3)
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE4;
+    } else
+    {
+        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE1;
+    }
+}
+
+//
+
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -780,79 +920,11 @@ function loopDesenho()
         {
             // se a bola não sair da tela
 
-            status1.innerHTML = imagemCidade1.width;
-            status2.innerHTML = imagemCidade1.largura;
-            status3.innerHTML = imagemCidade1.posicaoXRecorte;
-            status4.innerHTML = imagemCidade1.posicaoX;
-            status5.innerHTML = imagemCidade1.height;
-
             if (player1.posicaoX <= telaCanvas.width - player1.largura)
             {
                 player1.posicaoX += player1.velocidade;
 
-                //imagemPlayer1PosInicialX:
-
-                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD1)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD2)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4;
-                } else
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1;
-                }
-
-                //imagemPlayer1PosInicialY:
-
-                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD1)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD2)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4;
-                } else
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1;
-                }
-
-                //imagemPlayerCorteLargura:
-
-                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD1)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD2;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD2)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD3;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD3)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD4;
-                } else
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD1;
-                }
-
-                //imagemPlayerCorteAltura:
-
-                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD1)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD2;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD2)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD3;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD3)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD4;
-                } else
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD1;
-                }
+                imagensCorrendoDireitaPlayer1();
 
             } else
             {
@@ -870,81 +942,13 @@ function loopDesenho()
         } else
         // se for para esquerda
         {
-            status1.innerHTML = imagemCidade1.width;
-            status2.innerHTML = imagemCidade1.largura;
-            status3.innerHTML = imagemCidade1.posicaoXRecorte;
-            status4.innerHTML = imagemCidade1.posicaoX;
-            status5.innerHTML = imagemCidade1.height;
-
             // se a bola não saiu da tela
             if (player1.posicaoX >= 0)
             {
                 // muda posição
                 player1.posicaoX -= player1.velocidade;
 
-                //imagemPlayer1PosInicialX:
-
-                if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE1)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE2)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3;
-                } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4;
-                } else
-                {
-                    imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1;
-                }
-
-                //imagemPlayer1PosInicialY:
-
-                if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE1)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE2)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3;
-                } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4;
-                } else
-                {
-                    imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1;
-                }
-
-                //imagemPlayerCorteLargura:
-
-                if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE1)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE2;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE2)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE3;
-                } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE3)
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE4;
-                } else
-                {
-                    imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE1;
-                }
-
-                //imagemPlayerCorteAltura:
-
-                if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE1)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE2;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE2)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE3;
-                } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE3)
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE4;
-                } else
-                {
-                    imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE1;
-                }
+                imagensCorrendoEsquerdaPlayer1();
 
             } else
             {
@@ -1051,7 +1055,7 @@ function loopDesenho()
     //contexto.fillStyle = estiloImagem;
 
     //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
-    //  contexto.fillStyle = "rgba(0,0,0,0.0)";
+    contexto.fillStyle = "rgba(0,0,0,0.0)";
 
     // SOMBREAMENTO DE ELEMENTOS:
     // COR DA SOMBRA
@@ -1073,9 +1077,9 @@ function loopDesenho()
     */
 
     //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO PLAYER 1:
-    /*
-        contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
-    */
+
+    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
