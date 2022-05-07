@@ -540,8 +540,8 @@ function Player()
 {
     this.largura = 50; //
     this.altura = 50; // 
-    this.posicaoX = 40; //
-    this.posicaoY = 40; //   
+    this.posicaoX = 0; //
+    this.posicaoY = 0; //   
     this.velocidade = 3; //
 }
 
@@ -671,13 +671,36 @@ var imagemPlayerCorteAltura = 15;
 //
 
 var imagemCidade1 = new Image();
-imagemCidade1.src = "../../imagens/texture/2D/cidade1.jpg"
+imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
+
+imagemCidade1.posicaoXRecorte = 0;
+imagemCidade1.posicaoYRecorte = 0;
+imagemCidade1.larguraRecorte = imagemCidade1.width;
+imagemCidade1.alturaRecorte = imagemCidade1.height;
+imagemCidade1.posicaoX = 0;
+imagemCidade1.posicaoY = 0;
+imagemCidade1.largura = imagemCidade1.width - 3200;
+imagemCidade1.altura = imagemCidade1.height - 3200;
+
+//contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
+
+//
 
 var imagemPlayer1 = new Image();
 imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
 var loop;
 
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
 ////////////////////////////////////
 
 loopDesenho()
@@ -688,7 +711,8 @@ function loopDesenho()
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.clearRect(0, 0, telaCanvas.width, telaCanvas.height);
 
-    contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
+    // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+    contexto.drawImage(imagemCidade1, imagemCidade1.posicaoXRecorte, imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
 
     //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
     // se o usuário precionar para cima
@@ -733,6 +757,13 @@ function loopDesenho()
         if (controle1.teclaSetaParaDireitaPressionada)
         {
             // se a bola não sair da tela
+
+            status1.innerHTML = player1.posicaoX;
+            status2.innerHTML = telaCanvas.width - player1.largura;
+            status3.innerHTML = telaCanvas.width;
+            status4.innerHTML = player1.largura;
+            status5.innerHTML = telaCanvas.width;
+
             if (player1.posicaoX <= telaCanvas.width - player1.largura)
             {
                 player1.posicaoX += player1.velocidade;
@@ -801,10 +832,25 @@ function loopDesenho()
                     imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD1;
                 }
 
+            } else
+            {
+                //ALTERANDO O MAPA POSICAO X:
+
+                if (player1.posicaoX >= telaCanvas.width - player1.largura)
+                {
+                    imagemCidade1.posicaoXRecorte += player1.velocidade;
+                }
             }
+
         } else
         // se for para esquerda
         {
+            status1.innerHTML = player1.posicaoX;
+            status2.innerHTML = telaCanvas.width - player1.largura;
+            status3.innerHTML = telaCanvas.width;
+            status4.innerHTML = player1.largura;
+            status5.innerHTML = telaCanvas.width;
+
             // se a bola não saiu da tela
             if (player1.posicaoX >= 0)
             {
@@ -875,6 +921,20 @@ function loopDesenho()
                     imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE1;
                 }
 
+            } else
+            {
+                //MOVENDO MAPA POSICAO -X:
+
+                if (player1.posicaoX <= 0)
+                {
+                    if (imagemCidade1.posicaoXRecorte <= 0)
+                    {
+                        imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
+                    } else
+                    {
+                        imagemCidade1.posicaoXRecorte -= player1.velocidade;
+                    }
+                }
             }
         }
     } else
@@ -969,7 +1029,7 @@ function loopDesenho()
     //contexto.fillStyle = estiloImagem;
 
     //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
-    contexto.fillStyle = "rgba(0,0,0,0.0)";
+    //  contexto.fillStyle = "rgba(0,0,0,0.0)";
 
     // SOMBREAMENTO DE ELEMENTOS:
     // COR DA SOMBRA
@@ -991,9 +1051,9 @@ function loopDesenho()
     */
 
     //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO PLAYER 1:
-
-    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
-
+    /*
+        contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+    */
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
