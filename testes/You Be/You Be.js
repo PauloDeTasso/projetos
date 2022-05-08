@@ -708,7 +708,7 @@ var imagemPlayer1PosInicialXCorrendoD3 = 66;
 var imagemPlayer1PosInicialXCorrendoD4 = 99;
 
 var imagemPlayer1PosInicialYCorrendoD1 = 39;
-var imagemPlayer1PosInicialYCorrendoD2 = 38;
+var imagemPlayer1PosInicialYCorrendoD2 = 39;
 var imagemPlayer1PosInicialYCorrendoD3 = 39;
 var imagemPlayer1PosInicialYCorrendoD4 = 39;
 
@@ -731,10 +731,10 @@ var imagemPlayer1PosInicialXCorrendoE4 = 16;
 
 var imagemPlayer1PosInicialYCorrendoE1 = 139;
 var imagemPlayer1PosInicialYCorrendoE2 = 139;
-var imagemPlayer1PosInicialYCorrendoE3 = 138;
+var imagemPlayer1PosInicialYCorrendoE3 = 139;
 var imagemPlayer1PosInicialYCorrendoE4 = 139;
 
-var imagemPlayer1CorteLarguraCorrendoE1 = 9;
+var imagemPlayer1CorteLarguraCorrendoE1 = 12;
 var imagemPlayer1CorteLarguraCorrendoE2 = 12;
 var imagemPlayer1CorteLarguraCorrendoE3 = 12;
 var imagemPlayer1CorteLarguraCorrendoE4 = 12;
@@ -752,7 +752,7 @@ var imagemPlayer1PosInicialXCorrendoC3 = 66;
 var imagemPlayer1PosInicialXCorrendoC4 = 99;
 
 var imagemPlayer1PosInicialYCorrendoC1 = 39;
-var imagemPlayer1PosInicialYCorrendoC2 = 38;
+var imagemPlayer1PosInicialYCorrendoC2 = 39;
 var imagemPlayer1PosInicialYCorrendoC3 = 39;
 var imagemPlayer1PosInicialYCorrendoC4 = 39;
 
@@ -775,10 +775,10 @@ var imagemPlayer1PosInicialXCorrendoB4 = 16;
 
 var imagemPlayer1PosInicialYCorrendoB1 = 139;
 var imagemPlayer1PosInicialYCorrendoB2 = 139;
-var imagemPlayer1PosInicialYCorrendoB3 = 138;
+var imagemPlayer1PosInicialYCorrendoB3 = 139;
 var imagemPlayer1PosInicialYCorrendoB4 = 139;
 
-var imagemPlayer1CorteLarguraCorrendoB1 = 9;
+var imagemPlayer1CorteLarguraCorrendoB1 = 12;
 var imagemPlayer1CorteLarguraCorrendoB2 = 12;
 var imagemPlayer1CorteLarguraCorrendoB3 = 12;
 var imagemPlayer1CorteLarguraCorrendoB4 = 12;
@@ -888,16 +888,9 @@ var imagemPlayer1CorteAltura = 15;
 // POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
 
 var imagemCivil1PosInicialX = 6;
-var imagemCivil1PosInicialY = 211;
-var imagemCivil1CorteLargura = 36;
-var imagemCivil1CorteAltura = 38;
-
-/*
-var imagemCivil1PosInicialX = 6;
 var imagemCivil1PosInicialY = 161;
 var imagemCivil1CorteLargura = 36;
 var imagemCivil1CorteAltura = 36;
-*/
 
 var loop;
 
@@ -913,32 +906,40 @@ function imagensCorrendoDireitaPlayer1()
 
     if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD1)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD2)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1; }, imagensTempo)
+
     }
 
     //imagemPlayer1PosInicialY:
 
     if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD1)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD2)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1; }, imagensTempo)
+
     }
 
     //imagemPlayer1CorteLargura:
@@ -982,32 +983,40 @@ function imagensCorrendoEsquerdaPlayer1()
 
     if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE1)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE2)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1; }, imagensTempo)
+
     }
 
     //imagemPlayer1PosInicialY:
 
     if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE1)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE2)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1; }, imagensTempo)
+
     }
 
     //imagemPlayer1CorteLargura:
@@ -1051,32 +1060,40 @@ function imagensCorrendoParaCimaPlayer1()
 
     if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC1)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC2;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC2)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC3;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC3)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC4;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC1;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC1; }, imagensTempo)
+
     }
 
     //imagemPlayer1PosInicialY:
 
     if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC1)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC2;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC2; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC2)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC3;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC3; }, imagensTempo)
+
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC3)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC4;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC4; }, imagensTempo)
+
     } else
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1; }, imagensTempo)
+
     }
 
     //imagemPlayer1CorteLargura:
@@ -1120,38 +1137,46 @@ function imagensCorrendoParaBaixoPlayer1()
 
     if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB1)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB2;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB2; }, imagensTempo)
+
 
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB2)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB3;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB3; }, imagensTempo)
+
 
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB3)
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB4;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB4; }, imagensTempo)
+
 
     } else
     {
-        imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB1;
+        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB1; }, imagensTempo)
+
     }
 
     //imagemPlayer1PosInicialY:
 
     if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB1)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB2;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB2; }, imagensTempo)
+
 
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB2)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB3;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB3; }, imagensTempo)
+
 
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB3)
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB4;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB4; }, imagensTempo)
+
 
     } else
     {
-        imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB1;
+        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB1; }, imagensTempo)
+
     }
 
     //imagemPlayer1CorteLargura:
