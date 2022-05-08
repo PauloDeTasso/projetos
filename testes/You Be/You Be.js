@@ -670,7 +670,35 @@ var imagemEmBranco = new Image();
 
 imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
 
-//VARIAVEIS IMAGENS DE AÇÕES DO PLAYER 1
+//
+
+var imagemCidade1 = new Image();
+imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
+
+imagemCidade1.posicaoXRecorte = 0;
+imagemCidade1.posicaoYRecorte = 0;
+imagemCidade1.larguraRecorte = imagemCidade1.width;
+imagemCidade1.alturaRecorte = imagemCidade1.height;
+imagemCidade1.posicaoX = 0;
+imagemCidade1.posicaoY = 0;
+imagemCidade1.largura = imagemCidade1.width;
+imagemCidade1.altura = imagemCidade1.height;
+
+//contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
+
+//
+
+var imagemPlayer1 = new Image();
+imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
+
+//
+
+var imagemCivil1 = new Image();
+imagemCivil1.src = "../../imagens/texture/2D/pacman3d.png"
+
+//VARIAVEIS IMAGENS DE AÇÕES:
+
+////PLAYER 1:
 
 // CORRENDO DIREITA:
 
@@ -760,6 +788,96 @@ var imagemPlayer1CorteAlturaCorrendoB2 = 15;
 var imagemPlayer1CorteAlturaCorrendoB3 = 15;
 var imagemPlayer1CorteAlturaCorrendoB4 = 15;
 
+////CIVIL 1:
+
+// CORRENDO DIREITA:
+
+var imagemCivil1PosInicialXCorrendoD1 = 5;
+var imagemCivil1PosInicialXCorrendoD2 = 5;
+var imagemCivil1PosInicialXCorrendoD3 = 5;
+var imagemCivil1PosInicialXCorrendoD4 = 5;
+
+var imagemCivil1PosInicialYCorrendoD1 = 11;
+var imagemCivil1PosInicialYCorrendoD2 = 61;
+var imagemCivil1PosInicialYCorrendoD3 = 111;
+var imagemCivil1PosInicialYCorrendoD4 = 61;
+
+var imagemCivil1CorteLarguraCorrendoD1 = 36;
+var imagemCivil1CorteLarguraCorrendoD2 = 36;
+var imagemCivil1CorteLarguraCorrendoD3 = 36;
+var imagemCivil1CorteLarguraCorrendoD4 = 36;
+
+var imagemCivil1CorteAlturaCorrendoD1 = 36;
+var imagemCivil1CorteAlturaCorrendoD2 = 36;
+var imagemCivil1CorteAlturaCorrendoD3 = 36;
+var imagemCivil1CorteAlturaCorrendoD4 = 36;
+
+// CORRENDO ESQUERDA:
+
+var imagemCivil1PosInicialXCorrendoE1 = 6;
+var imagemCivil1PosInicialXCorrendoE2 = 6;
+var imagemCivil1PosInicialXCorrendoE3 = 9;
+var imagemCivil1PosInicialXCorrendoE4 = 6;
+
+var imagemCivil1PosInicialYCorrendoE1 = 310;
+var imagemCivil1PosInicialYCorrendoE2 = 360;
+var imagemCivil1PosInicialYCorrendoE3 = 410;
+var imagemCivil1PosInicialYCorrendoE4 = 360;
+
+var imagemCivil1CorteLarguraCorrendoE1 = 36;
+var imagemCivil1CorteLarguraCorrendoE2 = 36;
+var imagemCivil1CorteLarguraCorrendoE3 = 36;
+var imagemCivil1CorteLarguraCorrendoE4 = 36;
+
+var imagemCivil1CorteAlturaCorrendoE1 = 36;
+var imagemCivil1CorteAlturaCorrendoE2 = 36;
+var imagemCivil1CorteAlturaCorrendoE3 = 36;
+var imagemCivil1CorteAlturaCorrendoE4 = 36;
+
+// CORRENDO PARA CIMA:
+
+var imagemCivil1PosInicialXCorrendoC1 = 6;
+var imagemCivil1PosInicialXCorrendoC2 = 6;
+var imagemCivil1PosInicialXCorrendoC3 = 6;
+var imagemCivil1PosInicialXCorrendoC4 = 6;
+
+var imagemCivil1PosInicialYCorrendoC1 = 460;
+var imagemCivil1PosInicialYCorrendoC2 = 509;
+var imagemCivil1PosInicialYCorrendoC3 = 560;
+var imagemCivil1PosInicialYCorrendoC4 = 509;
+
+var imagemCivil1CorteLarguraCorrendoC1 = 36;
+var imagemCivil1CorteLarguraCorrendoC2 = 36;
+var imagemCivil1CorteLarguraCorrendoC3 = 36;
+var imagemCivil1CorteLarguraCorrendoC4 = 36;
+
+var imagemCivil1CorteAlturaCorrendoC1 = 36;
+var imagemCivil1CorteAlturaCorrendoC2 = 36;
+var imagemCivil1CorteAlturaCorrendoC3 = 36;
+var imagemCivil1CorteAlturaCorrendoC4 = 36;
+
+// CORRENDO PARA BAIXO:
+
+var imagemCivil1PosInicialXCorrendoB1 = 5;
+var imagemCivil1PosInicialXCorrendoB2 = 5;
+var imagemCivil1PosInicialXCorrendoB3 = 5;
+var imagemCivil1PosInicialXCorrendoB4 = 5;
+
+var imagemCivil1PosInicialYCorrendoB1 = 160;
+var imagemCivil1PosInicialYCorrendoB2 = 211;
+var imagemCivil1PosInicialYCorrendoB3 = 261;
+var imagemCivil1PosInicialYCorrendoB4 = 211;
+
+var imagemCivil1CorteLarguraCorrendoB1 = 36;
+var imagemCivil1CorteLarguraCorrendoB2 = 36;
+var imagemCivil1CorteLarguraCorrendoB3 = 36;
+var imagemCivil1CorteLarguraCorrendoB4 = 36;
+
+var imagemCivil1CorteAlturaCorrendoB1 = 36;
+var imagemCivil1CorteAlturaCorrendoB2 = 36;
+var imagemCivil1CorteAlturaCorrendoB3 = 38;
+var imagemCivil1CorteAlturaCorrendoB4 = 36;
+
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
 var imagemPlayer1PosInicialX = 19;
@@ -767,28 +885,25 @@ var imagemPlayer1PosInicialY = 23;
 var imagemPlayer1CorteLargura = 10;
 var imagemPlayer1CorteAltura = 15;
 
-//
+// POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
 
-var imagemCidade1 = new Image();
-imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
+var imagemCivil1PosInicialX = 6;
+var imagemCivil1PosInicialY = 211;
+var imagemCivil1CorteLargura = 36;
+var imagemCivil1CorteAltura = 38;
 
-imagemCidade1.posicaoXRecorte = 0;
-imagemCidade1.posicaoYRecorte = 0;
-imagemCidade1.larguraRecorte = imagemCidade1.width;
-imagemCidade1.alturaRecorte = imagemCidade1.height;
-imagemCidade1.posicaoX = 0;
-imagemCidade1.posicaoY = 0;
-imagemCidade1.largura = imagemCidade1.width;
-imagemCidade1.altura = imagemCidade1.height;
-
-//contexto.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
-
-//
-
-var imagemPlayer1 = new Image();
-imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
+/*
+var imagemCivil1PosInicialX = 6;
+var imagemCivil1PosInicialY = 161;
+var imagemCivil1CorteLargura = 36;
+var imagemCivil1CorteAltura = 36;
+*/
 
 var loop;
+
+var imagensTempo = 200;
+
+////PLAYER 1:
 
 // SPRITE - CORRENDO DIREITA:
 
@@ -1078,6 +1193,326 @@ function imagensCorrendoParaBaixoPlayer1()
     }
 }
 
+////CIVIL 1:
+
+// SPRITE - CORRENDO DIREITA:
+
+function imagensCorrendoDireitaCivil1()
+{
+    //imagemCivil1PosInicialX:
+
+    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1PosInicialY:
+
+    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1CorteLargura:
+
+    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD1)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD2;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD2)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD3;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD3)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD4;
+    } else
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD1;
+    }
+
+    //imagemCivil1CorteAltura:
+
+    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD1)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD2;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD2)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD3;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD3)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD4;
+    } else
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD1;
+    }
+}
+
+// SPRITE - CORRENDO ESQUERDA:
+
+function imagensCorrendoEsquerdaCivil1()
+{
+    //imagemCivil1PosInicialX:
+
+    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1PosInicialY:
+
+    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE1; }, imagensTempo)
+    }
+
+    //imagemCivil1CorteLargura:
+
+    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE1)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE2;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE2)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE3;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE3)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE4;
+    } else
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE1;
+    }
+
+    //imagemCivil1CorteAltura:
+
+    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE1)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE2;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE2)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE3;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE3)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE4;
+    } else
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE1;
+    }
+}
+
+// SPRITE - CORRENDO PARA CIMA:
+
+function imagensCorrendoParaCimaCivil1()
+{
+    //imagemCivil1PosInicialX:
+
+    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1PosInicialY:
+
+    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC3; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1CorteLargura:
+
+    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC1)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC2;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC2)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC3;
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC3)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC4;
+    } else
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC1;
+    }
+
+    //imagemCivil1CorteAltura:
+
+    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC1)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC2;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC2)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC3;
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC3)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC4;
+    } else
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC1;
+    }
+}
+
+// SPRITE - CORRENDO PARA BAIXO:
+
+function imagensCorrendoParaBaixoCivil1()
+{
+    //imagemCivil1PosInicialX:
+
+    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB2; }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB2)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB3; }, imagensTempo)
+
+
+    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB4; }, imagensTempo)
+
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB1; }, imagensTempo)
+
+    }
+
+    //imagemCivil1PosInicialY:
+
+    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB1)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB2; }, imagensTempo)
+
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB2)
+    {
+        setTimeout(() =>
+        {
+            imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB3;
+        }, imagensTempo)
+
+    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB3)
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB4; }, imagensTempo)
+
+    } else
+    {
+        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB1; }, imagensTempo)
+    }
+
+    //imagemCivil1CorteLargura:
+
+    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB1)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB2;
+
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB2)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB3;
+
+    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB3)
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB4;
+
+    } else
+    {
+        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB1;
+    }
+
+    //imagemCivil1CorteAltura:
+
+    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB1)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB2;
+
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB2)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB3;
+
+    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB3)
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB4;
+
+    } else
+    {
+        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB1;
+    }
+}
+
 //
 
 
@@ -1088,15 +1523,19 @@ function caminharNaCidade()
     status3.innerHTML = civil1.direcaoX;
     status4.innerHTML = civil1.direcaoY;
 
-    if (civil1.posicaoY >= 600 - civil1.altura)
+    if (civil1.posicaoY >= imagemCidade1.width - civil1.altura)
     {
         civil1.direcaoY = -1;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoParaBaixoCivil1();
 
     } else if (civil1.posicaoY <= 0)
     {
         civil1.direcaoY = 1;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoParaCimaCivil1();
 
     } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
     {
@@ -1105,12 +1544,16 @@ function caminharNaCidade()
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
 
+        imagensCorrendoEsquerdaCivil1();
+
     } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
     {
         civil1.direcaoY = 1;
         civil1.direcaoX = -1;
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoParaBaixoCivil1();
 
     } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
     {
@@ -1119,12 +1562,16 @@ function caminharNaCidade()
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
 
+        imagensCorrendoParaBaixoCivil1();
+
     } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
     {
         civil1.direcaoY = -1;
         civil1.direcaoX = 1;
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoDireitaCivil1();
 
     } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
     {
@@ -1133,12 +1580,16 @@ function caminharNaCidade()
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
 
+        imagensCorrendoEsquerdaCivil1();
+
     } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
     {
         civil1.direcaoY = 0;
         civil1.direcaoX = 1;
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoDireitaCivil1();
 
     } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
     {
@@ -1147,12 +1598,16 @@ function caminharNaCidade()
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
 
+        imagensCorrendoParaCimaCivil1();
+
     } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
     {
         civil1.direcaoY = 1;
         civil1.direcaoX = 0;
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
+
+        imagensCorrendoParaBaixoCivil1();
 
     } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY)
     {
@@ -1465,7 +1920,7 @@ function loopDesenho()
 
     //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 1:
 
-    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayer1CorteLargura, imagemPlayer1CorteAltura, civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
+    contexto.drawImage(imagemCivil1, imagemCivil1PosInicialX, imagemCivil1PosInicialY, imagemCivil1CorteLargura, imagemCivil1CorteAltura, civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
 
     // DESENHA RETANGULO - PLAYER 2       
     contexto.fillRect(civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
