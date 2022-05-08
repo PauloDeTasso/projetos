@@ -1098,11 +1098,6 @@ function caminharNaCidade()
         civil1.direcaoY = 1;
         civil1.posicaoY += civil1.direcaoY;
 
-    } else if (civil1.posicaoY == player1.posicaoY)
-    {
-        civil1.direcaoY = 0;
-        civil1.posicaoX -= 1;
-
     } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
     {
         civil1.direcaoY = -1;
@@ -1131,6 +1126,54 @@ function caminharNaCidade()
         civil1.posicaoX += civil1.direcaoX;
         civil1.posicaoY += civil1.direcaoY;
 
+    } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+    {
+        civil1.direcaoY = 0;
+        civil1.direcaoX = -1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+    {
+        civil1.direcaoY = 0;
+        civil1.direcaoX = 1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+    {
+        civil1.direcaoY = -1;
+        civil1.direcaoX = 0;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+    {
+        civil1.direcaoY = 1;
+        civil1.direcaoX = 0;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+    {
+        civil1.direcaoY = 0;
+        civil1.direcaoX = 0;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+        alert("Você Perdeu Aline!!! Tente Outra Vez!");
+        var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
+
+        if (confirma)
+        {
+            alert("Oxen... Cade a Aline que nunca perde? kkk")
+        } else
+        {
+            alert("Essa é a Aline que eu conheço nunca aceita que perdeu!!! kkkkkkkk")
+        }
+
+        reiniciar();
+
     } else
     {
         civil1.posicaoY += civil1.direcaoY;
@@ -1139,6 +1182,14 @@ function caminharNaCidade()
     // setTimeout(civil1.caminhar, 0)
 }
 
+function reiniciar()
+{
+    player1.posicaoX = 0;
+    player1.posicaoY = 200;
+
+    civil1.posicaoX = 740;
+    civil1.posicaoY = 540;
+}
 //
 
 ////////////////////////////////////
