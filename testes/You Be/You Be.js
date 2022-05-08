@@ -541,8 +541,24 @@ function Player()
     this.largura = 50; //
     this.altura = 50; // 
     this.posicaoX = 0; //
-    this.posicaoY = 0; //   
+    this.posicaoY = 200; //   
     this.velocidade = 3; //
+}
+
+function Civil()
+{
+    this.largura = 50; //
+    this.altura = 50; // 
+    this.posicaoX = 740; //
+    this.posicaoY = 540; //   
+    this.velocidade = 3; //
+    this.direcaoX = 0; //
+    this.direcaoY = 1; //
+
+    this.caminhar = function ()
+    {
+        caminharNaCidade();
+    }
 }
 
 // CONTROLE
@@ -632,6 +648,8 @@ function Controle(key1, key2, key3, key4)
 }
 
 var player1 = new Player();
+
+var civil1 = new Civil();
 
 var controle1 = new Controle(87, 83, 68, 65);
 
@@ -1062,6 +1080,67 @@ function imagensCorrendoParaBaixoPlayer1()
 
 //
 
+
+function caminharNaCidade()
+{
+    status1.innerHTML = civil1.posicaoX;
+    status2.innerHTML = civil1.posicaoY;
+    status3.innerHTML = civil1.direcaoX;
+    status4.innerHTML = civil1.direcaoY;
+
+    if (civil1.posicaoY >= 600 - civil1.altura)
+    {
+        civil1.direcaoY = -1;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoY <= 0)
+    {
+        civil1.direcaoY = 1;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoY == player1.posicaoY)
+    {
+        civil1.direcaoY = 0;
+        civil1.posicaoX -= 1;
+
+    } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+    {
+        civil1.direcaoY = -1;
+        civil1.direcaoX = -1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+    {
+        civil1.direcaoY = 1;
+        civil1.direcaoX = -1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+    {
+        civil1.direcaoY = 1;
+        civil1.direcaoX = 1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+    {
+        civil1.direcaoY = -1;
+        civil1.direcaoX = 1;
+        civil1.posicaoX += civil1.direcaoX;
+        civil1.posicaoY += civil1.direcaoY;
+
+    } else
+    {
+        civil1.posicaoY += civil1.direcaoY;
+    }
+    requestAnimationFrame(civil1.caminhar);
+    // setTimeout(civil1.caminhar, 0)
+}
+
+//
+
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -1217,7 +1296,7 @@ function loopDesenho()
             imagemPlayer1PosInicialY = 23;
             imagemPlayerCorteLargura = 10;
             imagemPlayerCorteAltura = 15;
-        */
+            */
         }
     }
 
@@ -1329,6 +1408,12 @@ function loopDesenho()
 
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+
+    //
+    contexto.fillStyle = "rgba(255,0,255,1)";
+
+    // DESENHA RETANGULO - PLAYER 2       
+    contexto.fillRect(civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
 
     // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
     //contexto.fill();
@@ -1467,11 +1552,7 @@ window.addEventListener('keydown', controle1.keyDown, false);
 
 function play(eventoAcionado)
 {
-    status1.innerHTML = eventoAcionado.screenX;
-    status2.innerHTML = eventoAcionado.screenY;
-    status3.innerHTML = eventoAcionado.clientX;
-    status4.innerHTML = eventoAcionado.clientY;
-    status5.innerHTML = eventoAcionado.shiftKey;
+    civil1.caminhar();
 }
 
 function stop()
