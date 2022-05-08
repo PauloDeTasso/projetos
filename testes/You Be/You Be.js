@@ -688,6 +688,11 @@ imagemCidade1.altura = imagemCidade1.height;
 
 //
 
+var imagemCidade2 = new Image();
+imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
+
+//
+
 var imagemPlayer1 = new Image();
 imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
