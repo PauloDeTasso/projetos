@@ -684,15 +684,15 @@ var imagemPlayer1PosInicialYCorrendoD2 = 38;
 var imagemPlayer1PosInicialYCorrendoD3 = 39;
 var imagemPlayer1PosInicialYCorrendoD4 = 39;
 
-var imagemPlayerCorteLarguraCorrendoD1 = 12;
-var imagemPlayerCorteLarguraCorrendoD2 = 12;
-var imagemPlayerCorteLarguraCorrendoD3 = 12;
-var imagemPlayerCorteLarguraCorrendoD4 = 12;
+var imagemPlayer1CorteLarguraCorrendoD1 = 12;
+var imagemPlayer1CorteLarguraCorrendoD2 = 12;
+var imagemPlayer1CorteLarguraCorrendoD3 = 12;
+var imagemPlayer1CorteLarguraCorrendoD4 = 12;
 
-var imagemPlayerCorteAlturaCorrendoD1 = 15;
-var imagemPlayerCorteAlturaCorrendoD2 = 15;
-var imagemPlayerCorteAlturaCorrendoD3 = 15;
-var imagemPlayerCorteAlturaCorrendoD4 = 15;
+var imagemPlayer1CorteAlturaCorrendoD1 = 15;
+var imagemPlayer1CorteAlturaCorrendoD2 = 15;
+var imagemPlayer1CorteAlturaCorrendoD3 = 15;
+var imagemPlayer1CorteAlturaCorrendoD4 = 15;
 
 // CORRENDO ESQUERDA:
 
@@ -706,15 +706,15 @@ var imagemPlayer1PosInicialYCorrendoE2 = 139;
 var imagemPlayer1PosInicialYCorrendoE3 = 138;
 var imagemPlayer1PosInicialYCorrendoE4 = 139;
 
-var imagemPlayerCorteLarguraCorrendoE1 = 9;
-var imagemPlayerCorteLarguraCorrendoE2 = 12;
-var imagemPlayerCorteLarguraCorrendoE3 = 12;
-var imagemPlayerCorteLarguraCorrendoE4 = 12;
+var imagemPlayer1CorteLarguraCorrendoE1 = 9;
+var imagemPlayer1CorteLarguraCorrendoE2 = 12;
+var imagemPlayer1CorteLarguraCorrendoE3 = 12;
+var imagemPlayer1CorteLarguraCorrendoE4 = 12;
 
-var imagemPlayerCorteAlturaCorrendoE1 = 15;
-var imagemPlayerCorteAlturaCorrendoE2 = 15;
-var imagemPlayerCorteAlturaCorrendoE3 = 15;
-var imagemPlayerCorteAlturaCorrendoE4 = 15;
+var imagemPlayer1CorteAlturaCorrendoE1 = 15;
+var imagemPlayer1CorteAlturaCorrendoE2 = 15;
+var imagemPlayer1CorteAlturaCorrendoE3 = 15;
+var imagemPlayer1CorteAlturaCorrendoE4 = 15;
 
 // CORRENDO PARA CIMA:
 
@@ -728,15 +728,15 @@ var imagemPlayer1PosInicialYCorrendoC2 = 38;
 var imagemPlayer1PosInicialYCorrendoC3 = 39;
 var imagemPlayer1PosInicialYCorrendoC4 = 39;
 
-var imagemPlayerCorteLarguraCorrendoC1 = 12;
-var imagemPlayerCorteLarguraCorrendoC2 = 12;
-var imagemPlayerCorteLarguraCorrendoC3 = 12;
-var imagemPlayerCorteLarguraCorrendoC4 = 12;
+var imagemPlayer1CorteLarguraCorrendoC1 = 12;
+var imagemPlayer1CorteLarguraCorrendoC2 = 12;
+var imagemPlayer1CorteLarguraCorrendoC3 = 12;
+var imagemPlayer1CorteLarguraCorrendoC4 = 12;
 
-var imagemPlayerCorteAlturaCorrendoC1 = 15;
-var imagemPlayerCorteAlturaCorrendoC2 = 15;
-var imagemPlayerCorteAlturaCorrendoC3 = 15;
-var imagemPlayerCorteAlturaCorrendoC4 = 15;
+var imagemPlayer1CorteAlturaCorrendoC1 = 15;
+var imagemPlayer1CorteAlturaCorrendoC2 = 15;
+var imagemPlayer1CorteAlturaCorrendoC3 = 15;
+var imagemPlayer1CorteAlturaCorrendoC4 = 15;
 
 // CORRENDO PARA BAIXO:
 
@@ -750,22 +750,22 @@ var imagemPlayer1PosInicialYCorrendoB2 = 139;
 var imagemPlayer1PosInicialYCorrendoB3 = 138;
 var imagemPlayer1PosInicialYCorrendoB4 = 139;
 
-var imagemPlayerCorteLarguraCorrendoB1 = 9;
-var imagemPlayerCorteLarguraCorrendoB2 = 12;
-var imagemPlayerCorteLarguraCorrendoB3 = 12;
-var imagemPlayerCorteLarguraCorrendoB4 = 12;
+var imagemPlayer1CorteLarguraCorrendoB1 = 9;
+var imagemPlayer1CorteLarguraCorrendoB2 = 12;
+var imagemPlayer1CorteLarguraCorrendoB3 = 12;
+var imagemPlayer1CorteLarguraCorrendoB4 = 12;
 
-var imagemPlayerCorteAlturaCorrendoB1 = 15;
-var imagemPlayerCorteAlturaCorrendoB2 = 15;
-var imagemPlayerCorteAlturaCorrendoB3 = 15;
-var imagemPlayerCorteAlturaCorrendoB4 = 15;
+var imagemPlayer1CorteAlturaCorrendoB1 = 15;
+var imagemPlayer1CorteAlturaCorrendoB2 = 15;
+var imagemPlayer1CorteAlturaCorrendoB3 = 15;
+var imagemPlayer1CorteAlturaCorrendoB4 = 15;
 
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
 var imagemPlayer1PosInicialX = 19;
 var imagemPlayer1PosInicialY = 23;
-var imagemPlayerCorteLargura = 10;
-var imagemPlayerCorteAltura = 15;
+var imagemPlayer1CorteLargura = 10;
+var imagemPlayer1CorteAltura = 15;
 
 //
 
@@ -826,36 +826,36 @@ function imagensCorrendoDireitaPlayer1()
         imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1;
     }
 
-    //imagemPlayerCorteLargura:
+    //imagemPlayer1CorteLargura:
 
-    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD1)
+    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD1)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD2;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD2)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD2;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD2)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD3;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoD3)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD3;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD3)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD4;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD4;
     } else
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoD1;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD1;
     }
 
-    //imagemPlayerCorteAltura:
+    //imagemPlayer1CorteAltura:
 
-    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD1)
+    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD1)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD2;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD2)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD2;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD2)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD3;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoD3)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD3;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD3)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD4;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD4;
     } else
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoD1;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD1;
     }
 }
 
@@ -895,36 +895,36 @@ function imagensCorrendoEsquerdaPlayer1()
         imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1;
     }
 
-    //imagemPlayerCorteLargura:
+    //imagemPlayer1CorteLargura:
 
-    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE1)
+    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE1)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE2;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE2)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE2;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE2)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE3;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoE3)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE3;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE3)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE4;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE4;
     } else
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoE1;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE1;
     }
 
-    //imagemPlayerCorteAltura:
+    //imagemPlayer1CorteAltura:
 
-    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE1)
+    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE1)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE2;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE2)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE2;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE2)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE3;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoE3)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE3;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE3)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE4;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE4;
     } else
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoE1;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE1;
     }
 }
 
@@ -964,36 +964,36 @@ function imagensCorrendoParaCimaPlayer1()
         imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1;
     }
 
-    //imagemPlayerCorteLargura:
+    //imagemPlayer1CorteLargura:
 
-    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC1)
+    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC1)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC2;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC2)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC2;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC2)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC3;
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoC3)
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC3;
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC3)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC4;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC4;
     } else
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoC1;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC1;
     }
 
-    //imagemPlayerCorteAltura:
+    //imagemPlayer1CorteAltura:
 
-    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC1)
+    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC1)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC2;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC2)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC2;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC2)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC3;
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoC3)
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC3;
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC3)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC4;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC4;
     } else
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoC1;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC1;
     }
 }
 
@@ -1039,42 +1039,42 @@ function imagensCorrendoParaBaixoPlayer1()
         imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB1;
     }
 
-    //imagemPlayerCorteLargura:
+    //imagemPlayer1CorteLargura:
 
-    if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB1)
+    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB1)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB2;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB2;
 
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB2)
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB2)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB3;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB3;
 
-    } else if (imagemPlayerCorteLargura == imagemPlayerCorteLarguraCorrendoB3)
+    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB3)
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB4;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB4;
 
     } else
     {
-        imagemPlayerCorteLargura = imagemPlayerCorteLarguraCorrendoB1;
+        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB1;
     }
 
-    //imagemPlayerCorteAltura:
+    //imagemPlayer1CorteAltura:
 
-    if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB1)
+    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB1)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB2;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB2;
 
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB2)
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB2)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB3;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB3;
 
-    } else if (imagemPlayerCorteAltura == imagemPlayerCorteAlturaCorrendoB3)
+    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB3)
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB4;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB4;
 
     } else
     {
-        imagemPlayerCorteAltura = imagemPlayerCorteAlturaCorrendoB1;
+        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB1;
     }
 }
 
@@ -1278,8 +1278,8 @@ function loopDesenho()
             /*
             imagemPlayer1PosInicialX = 19;
             imagemPlayer1PosInicialY = 23;
-            imagemPlayerCorteLargura = 10;
-            imagemPlayerCorteAltura = 15;
+            imagemPlayer1CorteLargura = 10;
+            imagemPlayer1CorteAltura = 15;
         */
         }
     }
@@ -1345,8 +1345,8 @@ function loopDesenho()
             /*
             imagemPlayer1PosInicialX = 19;
             imagemPlayer1PosInicialY = 23;
-            imagemPlayerCorteLargura = 10;
-            imagemPlayerCorteAltura = 15;
+            imagemPlayer1CorteLargura = 10;
+            imagemPlayer1CorteAltura = 15;
             */
         }
     }
@@ -1455,13 +1455,17 @@ function loopDesenho()
 
     //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO PLAYER 1:
 
-    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayerCorteLargura, imagemPlayerCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayer1CorteLargura, imagemPlayer1CorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
     // DESENHA RETANGULO - PLAYER 1       
     contexto.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
     //
-    contexto.fillStyle = "rgba(255,0,255,1)";
+    contexto.fillStyle = "rgba(255,0,255,0.0)";
+
+    //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 1:
+
+    contexto.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayer1CorteLargura, imagemPlayer1CorteAltura, civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
 
     // DESENHA RETANGULO - PLAYER 2       
     contexto.fillRect(civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
