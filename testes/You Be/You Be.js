@@ -898,6 +898,12 @@ var imagemCivil1PosInicialY = 161;
 var imagemCivil1CorteLargura = 36;
 var imagemCivil1CorteAltura = 36;
 
+//
+
+var sombraHorizontal = 3;
+var sombraVertical = 3;
+var incrementoSombra;
+var tempoSol = 5000;
 var loop;
 
 var imagensTempo = 200;
@@ -921,11 +927,9 @@ function imagensCorrendoDireitaPlayer1()
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4; }, imagensTempo)
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1; }, imagensTempo)
-
     }
 
     //imagemPlayer1PosInicialY:
@@ -941,11 +945,9 @@ function imagensCorrendoDireitaPlayer1()
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
     {
         setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4; }, imagensTempo)
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1; }, imagensTempo)
-
     }
 
     //imagemPlayer1CorteLargura:
@@ -998,11 +1000,9 @@ function imagensCorrendoEsquerdaPlayer1()
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4; }, imagensTempo)
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1; }, imagensTempo)
-
     }
 
     //imagemPlayer1PosInicialY:
@@ -1018,11 +1018,9 @@ function imagensCorrendoEsquerdaPlayer1()
     } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
     {
         setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4; }, imagensTempo)
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1; }, imagensTempo)
-
     }
 
     //imagemPlayer1CorteLargura:
@@ -1075,7 +1073,6 @@ function imagensCorrendoParaCimaPlayer1()
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC3)
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC4; }, imagensTempo)
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC1; }, imagensTempo)
@@ -1099,7 +1096,6 @@ function imagensCorrendoParaCimaPlayer1()
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1; }, imagensTempo)
-
     }
 
     //imagemPlayer1CorteLargura:
@@ -1145,21 +1141,17 @@ function imagensCorrendoParaBaixoPlayer1()
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB2; }, imagensTempo)
 
-
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB2)
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB3; }, imagensTempo)
-
 
     } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB3)
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB4; }, imagensTempo)
 
-
     } else
     {
         setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB1; }, imagensTempo)
-
     }
 
     //imagemPlayer1PosInicialY:
@@ -1247,7 +1239,6 @@ function imagensCorrendoDireitaCivil1()
     } else
     {
         setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD1; }, imagensTempo)
-
     }
 
     //imagemCivil1PosInicialY:
@@ -1267,7 +1258,6 @@ function imagensCorrendoDireitaCivil1()
     } else
     {
         setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD1; }, imagensTempo)
-
     }
 
     //imagemCivil1CorteLargura:
@@ -1420,7 +1410,6 @@ function imagensCorrendoParaCimaCivil1()
     } else
     {
         setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC1; }, imagensTempo)
-
     }
 
     //imagemCivil1CorteLargura:
@@ -1696,8 +1685,40 @@ function loopDesenho()
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contexto.clearRect(0, 0, telaCanvas.width, telaCanvas.height);
 
+    status1.innerHTML = sombraHorizontal;
+    status2.innerHTML = sombraVertical;
+    status3.innerHTML = incrementoSombra;
+
     if (canvasLigado)
     {
+
+        // SOMBRA HORINZONTAL:
+
+        switch (incrementoSombra)
+        {
+            case 0.01:
+                sombraHorizontal += incrementoSombra;
+
+                if (sombraHorizontal >= 20)
+                {
+                    incrementoSombra = -0.01;
+                }
+                break;
+            case -0.01:
+                sombraHorizontal += incrementoSombra;
+
+                if (sombraHorizontal <= -20)
+                {
+                    incrementoSombra = 0.01;
+                }
+                break;
+
+            default:
+                incrementoSombra = 0.01;
+                break;
+        }
+
+
         // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
         contexto.drawImage(imagemCidade1, imagemCidade1.posicaoXRecorte, imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
 
@@ -1844,64 +1865,64 @@ function loopDesenho()
         // "repeat-x" (somente na horizontal)
         // "repeat-y" (somente verticais)
         // "no-repeat" (nenhuma direção)
-    
+     
         //USANDO A IMAGEM PARA PREENCHIMENTO DO DESENHO:
         // contexto.fillStyle = estiloImagem;
-    
+     
         // DESENHA A IMAGEM NA POSIÇÃO DESEJADA
         // (URL IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
         //contexto.drawImage(imagem, 0, 0, 500, 500);
-    
+     
         // SOBREPOSIÇÃO DO METODO:
         // PODE RECORTAR A IMAGEM 
         // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
         contexto.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
-    
+     
         ////DESENHANDO RETANGULOS:
-    
+     
         ////DESENHANDO UM RETANGULO - RETANGULO 1
-    
+     
         // DEFINE A COR DO PREENCHIMENTO 
         contexto.fillStyle = "rgb(000,00,100)";
-    
+     
         // DESENHA RETANGULO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
         contexto.fillRect(0, 0, 100, 200);
-    
+     
         //FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 1: 
         //contexto.fill();
-    
+     
         // LIMPA A AREA DE DESENHO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
         contexto.clearRect(10, 10, 40, 40);
-    
+     
         //// RETANGULO 2 - PLAYER 1:
-    
+     
         // USANDO TRANSPARENCIA RGBA COMO PREENCHIMENTO
         contexto.fillStyle = "rgba(000,200,200,0.5)";
-    
+     
         */
 
         // INSERINDO TEXTOS:
         /*
-    
+     
         // TAMANHO E FONT
         contexto.font = "20px Comic Sans MS";
         
         // ALINHAMENTO
         contexto.textAlign = "center";
-    
+     
         // COR
         contexto.fillStyle = "blue";
-    
+     
         //BORDA
         // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
         contexto.strokeText("Paulo de Tasso",10,100,100)
         contexto.strokeText("Paulo de Tasso",10,100)
-    
+     
         //PREENCHIMENTO DO TEXTO
         // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
         contexto.fillText("Paulo de Tasso", 250, 20,100);  
         contexto.fillText("Paulo de Tasso", 250, 20);  
-    
+     
         */
 
         //IMAGENS: 
@@ -1926,9 +1947,9 @@ function loopDesenho()
         // BLUR
         contexto.shadowBlur = 10;
         // DESLOCAMENTO DA SOMBRA NA POSIÇÃOX
-        contexto.shadowOffsetX = 3;
+        contexto.shadowOffsetX = sombraHorizontal;
         // DESLOCAMENTO DA SOMBRA NA POSIÇÃOY
-        contexto.shadowOffsetY = 3;
+        contexto.shadowOffsetY = sombraVertical;
 
         // LINHAS EM CURVA:
         /*
@@ -1970,47 +1991,47 @@ function loopDesenho()
         
         // COMEÇA MOVENDO O PONTO DE DESENHO DE LINHA NA POSSIÇÃO - (POSICAO X, POSICAO Y)
         contexto.moveTo(300, 300);
-    
+     
         // FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
         contexto.lineTo(400, 400);
-    
+     
         // DESENHA UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO DESENHADA E FINALIZA A LINHA NAS NOVAS POSIÇÕES PASSADAS 
         contexto.lineTo(400, 450);
-    
+     
         // DESENHA MAIS UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO
         contexto.lineTo(300, 450);
-    
+     
         // FECHA O DESENHO DE LINHA NA MESMA POSIÇÃO DE INICIO
         contexto.lineTo(300, 300);
-    
+     
         // AGORA MOVE O PONTO, A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
         contexto.moveTo(400, 470);
-    
+     
         // E AGORA FINALIZAR O DESENHO DE LINHA NESSA NOVA POSIÇÃO:
         contexto.lineTo(450, 470);
-    
+     
         // DESENHA UM RETANGULO DE LINHA
         // (USADO MAIS COMO CONTORNO DE PREENCHIMENTOS)
         // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
         contexto.strokeRect(150, 150, 100, 100);
-    
+     
         //MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA
         contexto.moveTo(350, 100);
-    
+     
         // DESENHA UM CIRCULO:
         // (POSICAO X, POSICAO Y, RAIO, ANGULO INICIAL, ANGULO FINAL, SENTIDO)
         // SENTIDO = TRUE (SENTIDO HORÁRIO / = FALSE (SENTIDO ANTI HORARIO)
         contexto.arc(circuloPosicaoX, circuloPosicaoY, circuloTamanho, anguloInicial, anguloFinal, sentidoCirculo);
-    
+     
         // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE
         contexto.fill();
-    
+     
         //beginPath - INICIA UM NOVO DESENHO
         //contexto.beginPath();
-    
+     
         //closePath - FINALIZA O DESENHO
         //contexto.closePath();
-    
+     
         //DESENHA CIRCULOS POR ANIMAÇÕES - COM POSIÇÕES, TAMANHOS, CORES VARIADAS
         function gerarCirculosAleatorios()
         {
@@ -2022,22 +2043,22 @@ function loopDesenho()
                 contexto.fill();
             }
         }
-    
+     
         //MOVE O PONTO DE DESENHO PARA ESSA POSIÇÃO
         contexto.moveTo(10, 400);
-    
+     
         //CRIA UM ARCO ONDE (POSICÃOX-INICIAL, POSIÇÃOY-INICIAL, POSICÃOX-FINAL, POSIÇÃOY-FINAL, RAIO)
         contexto.arcTo(50, 400, 50, 0, 50);
-    
-    
+     
+     
         // REDENRIZA/ CONTORNA OS DESENHOS FEITOS DE LINHA:
         contexto.stroke();
-    
+     
         // DEFINE OUTRA FORMA DE PREENCHIMENTO, USANDO UMA IMAGEM
         var estiloImagem = contexto.createPattern(imagem, "repeat");
-    
+     
         contexto.fillStyle = estiloImagem;
-    
+     
         // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
         contexto.fill();
     */
@@ -2157,11 +2178,19 @@ function irParaBaixo()
 
 //DEFININDO NOME USUARIO:
 
-if (localStorage.nome == "null" || localStorage.nome == null || localStorage.nome == "undefined" || localStorage.nome == undefined)
+if (localStorage.nome == "null" || localStorage.nome == null || localStorage.nome == "undefined" || localStorage.nome == undefined || localStorage.nome == "Sem Nome")
 {
     var nomePrompt = prompt("Qual seu nome?");
 
-    localStorage.nome = nomePrompt;
+    localStorage.setItem("nome", nomePrompt);
+
+    if (localStorage.nome == "null" || localStorage.nome == "Sem nome")
+    {
+        localStorage.setItem("nome", "Sem Nome");
+    } else
+    {
+        localStorage.setItem("nome", nomePrompt);
+    }
 }
 
 //
