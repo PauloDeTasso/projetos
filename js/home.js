@@ -1822,6 +1822,7 @@ function Bola()
     this.tempo = 0; // bola1.tempo
     this.velocidade = 0; // bola1.velocidade
     this.velocidadeEmMemoria = 0; // bola1.velocidadeEmMemoria
+    this.cor = "rgba(255,255,255,1)"
 }
 
 var bola1 = new Bola();
@@ -1835,6 +1836,7 @@ function Jogador()
     this.velocidade = 17; // usuario1.velocidade / oponente1.velocidade
     this.pontos = 0; //usuario1.pontos / oponente1.pontos
     this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+    this.cor = "rgba(255,255,000,1)"
 }
 
 var usuario1 = new Jogador();
@@ -1848,6 +1850,7 @@ function Oponente()
     this.velocidade = 30; // usuario1.velocidade / oponente1.velocidade
     this.pontos = 0; //usuario1.pontos / oponente1.pontos
     this.movimentoParaCima = false; // jogadorParaCima/ usuario1.movimentoParaCima
+    this.cor = "rgba(255,000,000,1)"
 }
 
 var oponente1 = new Oponente();
@@ -1951,7 +1954,6 @@ function iniciarJogo()
     setInterval(loopGame, 30);
 }
 
-
 function loopGame()
 {
 
@@ -2004,8 +2006,9 @@ function loopGame()
             { // caso o jogador encoste na bola no eixo X
                 if ((bola1.posicaoY + bola1.raio > usuario1.posicaoY) && (bola1.posicaoY - bola1.raio < usuario1.posicaoY + usuario1.altura))
                 { // caso o jogador encoste na bola no eixo Y
+                    usuario1.cor = "rgba(100,100,000,1)"
                     bola1.movimentoParaDireita = true;
-
+                    setTimeout(() => { usuario1.cor = "rgba(255,255,000,1)" }, 300)
                     if (controle1.teclaSetaParaBaixoPressionada)
                     { // se o usuário estiver indo para baixo e tocar na bola
                         bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
@@ -2022,8 +2025,10 @@ function loopGame()
                 { // se o oponente encostar na bola no eixo X
                     if ((bola1.posicaoY + bola1.raio) > oponente1.posicaoY && (bola1.posicaoY - bola1.raio < oponente1.posicaoY + usuario1.altura))
                     { // se o oponente encostar na bola no eixo Y
-
+                        oponente1.cor = "rgba(100,000,000,1)"
                         bola1.movimentoParaDireita = false;
+
+                        setTimeout(() => { oponente1.cor = "rgba(255,000,000,1)" }, 300)
                         if (usuario1.movimentoParaCima)
                         { // caso oponetne estiver indo para cima ao tocar na bola
                             bola1.angulo = Math.floor(Math.random() * 10) - 9; // manda bola para diagonal para cima
@@ -2082,10 +2087,18 @@ function loopGame()
         canvas1.contexto.clearRect(0, 0, canvas1.canvas.width, canvas1.canvas.height); // limpar a tela antes de desenhar
 
         //  JOGADOR E OPONENTE ***********************************************************************************
+        canvas1.contexto.fillStyle = usuario1.cor;
+
         canvas1.contexto.fillRect(usuario1.posicaoX, usuario1.posicaoY, usuario1.largura, usuario1.altura); /// desenha jogador       
+
+        canvas1.contexto.fillStyle = oponente1.cor;
+
         canvas1.contexto.fillRect(oponente1.posicaoX, oponente1.posicaoY, usuario1.largura, usuario1.altura); /// desenha ioponente
 
         // BOLA ***********************************************************************************
+
+
+        canvas1.contexto.fillStyle = bola1.cor;
 
         canvas1.contexto.beginPath(); // modo desenho 
         canvas1.contexto.arc(bola1.posicaoX, bola1.posicaoY, bola1.raio, 0, Math.PI * 2, true); // desenha o circulo com coordenadas no centro
@@ -2109,14 +2122,14 @@ function loopGame()
         }
 
         canvas1.contexto.font = "38pt Arial"; // tamanho e fonte
-        canvas1.contexto.fillStyle = "#c4c4c4";
+        canvas1.contexto.fillStyle = "rgba(0,255,0)";
         canvas1.contexto.fillText(pontosA + "  " + pontosB, (canvas1.canvas.width / 2) - 70, 50); // escrevendo texto no centro da tela no top
 
         //  LINHA DIVISÓRIA
         canvas1.contexto.beginPath();
         canvas1.contexto.moveTo(canvas1.canvas.width / 2, 0); // arrumar lapis para fazer a escrita da linha
         canvas1.contexto.lineTo(canvas1.canvas.width / 2, canvas1.canvas.height);// faz risco na tela no centro
-        canvas1.contexto.strokeStyle = "#c4c4c4";
+        canvas1.contexto.strokeStyle = "rgba(255,255,255,1";
         canvas1.contexto.stroke();
         canvas1.contexto.closePath();
 
