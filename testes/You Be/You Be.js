@@ -1615,6 +1615,14 @@ function reiniciar()
     civil1.posicaoY = 540;
 }
 
+var canvasPrincipalLigado = true;
+
+var alertaInimigo;
+
+var distanciaInimigo = 200;
+
+var x1 = 17, y1 = 20;
+
 //
 
 ////////////////////////////////////
@@ -1629,26 +1637,35 @@ function reiniciar()
 ////////////////////////////////////
 ////////////////////////////////////
 
-var canvasPrincipalLigado = true;
+var objetoTeste = {};
 
-var alertaInimigo;
-
-var distanciaInimigo = 200;
-
-var x1 = 17, y1 = 20;
-
-civil1.posicaoX = imagemCidade1.posicaoXRecorte - civil1.posicaoX;
-civil1.posicaoY = imagemCidade1.posicaoYRecorte - civil1.posicaoY;
+civil1.posicaoX = imagemCidade1.posicaoXRecorte;
+civil1.posicaoY = imagemCidade1.posicaoYRecorte;
 
 loopDesenho();
 
+/*
+  contextoTelaCanvasPrincipal.drawImage(imagemCidade1, , imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
+*/
+
 function loopDesenho()
 {
+    civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte;
+    civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte;
+
+    status1.innerHTML = imagemCidade1.posicaoXRecorte + " magemCidade1.posicaoXRecorte"
+    status2.innerHTML = imagemCidade1.posicaoYRecorte + " imagemCidade1.posicaoYRecorte "
+    status3.innerHTML = civil1.posicaoX + "  civil1.posicaoX";
+    status4.innerHTML = civil1.posicaoY + " civil1.posicaoY";
+    status5.innerHTML = ""
+
+    /*
     status1.innerHTML = (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY);
     status2.innerHTML = "POSICAO CIVIL X: " + civil1.posicaoX;
     status3.innerHTML = "POSICAO CIVIL Y: " + civil1.posicaoY;
     status4.innerHTML = "POSICAO X RECORTE: " + imagemCidade1.posicaoXRecorte;
     status5.innerHTML = "POSICAO Y RECORTE: " + imagemCidade1.posicaoYRecorte;
+*/
 
     if ((player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) >= -distanciaInimigo && (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) <= distanciaInimigo)
     {
@@ -1747,6 +1764,7 @@ function loopDesenho()
     contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
 
     ///////////////////////////////////
+    //CANVAS PRINCIPAL
     //////////////////////////////////
 
     if (canvasPrincipalLigado)
