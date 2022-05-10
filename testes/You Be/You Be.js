@@ -656,8 +656,8 @@ function Civil()
 {
     this.largura = 50; //
     this.altura = 50; // 
-    this.posicaoX = 0; //
-    this.posicaoY = 0; //
+    this.posicaoX = 740; //
+    this.posicaoY = 540; //
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
@@ -665,6 +665,7 @@ function Civil()
     this.alerta = function ()
     {
         inimigoEmAlerta();
+        //inimigoEmAlerta(inimigo);
     }
 }
 
@@ -1639,20 +1640,17 @@ var x1 = 17, y1 = 20;
 
 var objetoTeste = {};
 
-civil1.posicaoX = imagemCidade1.posicaoXRecorte;
-civil1.posicaoY = imagemCidade1.posicaoYRecorte;
-
 loopDesenho();
 
 /*
   contextoTelaCanvasPrincipal.drawImage(imagemCidade1, , imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
 */
 
+civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 710;
+civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 540;
+
 function loopDesenho()
 {
-    civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte;
-    civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte;
-
     status1.innerHTML = imagemCidade1.posicaoXRecorte + " magemCidade1.posicaoXRecorte"
     status2.innerHTML = imagemCidade1.posicaoYRecorte + " imagemCidade1.posicaoYRecorte "
     status3.innerHTML = civil1.posicaoX + "  civil1.posicaoX";
