@@ -587,6 +587,44 @@ status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
 
 status5.innerHTML = localStorage.getObj('sentimentosRuins')[10];
 
+//IMAGENS:
+
+var imagemEmBranco = new Image();
+
+imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
+
+//
+
+var imagemCidade1 = new Image();
+imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
+
+imagemCidade1.posicaoXRecorte = 0;
+imagemCidade1.posicaoYRecorte = 0;
+imagemCidade1.larguraRecorte = imagemCidade1.width;
+imagemCidade1.alturaRecorte = imagemCidade1.height;
+imagemCidade1.posicaoX = 0;
+imagemCidade1.posicaoY = 0;
+imagemCidade1.largura = imagemCidade1.width;
+imagemCidade1.altura = imagemCidade1.height;
+
+//contextoTelaCanvasPrincipal.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
+
+//
+
+var imagemCidade2 = new Image();
+imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
+
+//
+
+var imagemPlayer1 = new Image();
+imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
+
+//
+
+var imagemCivil1 = new Image();
+imagemCivil1.src = "../../imagens/texture/2D/pacman3d.png"
+
+
 //////////////////// CANVAS:
 
 // FUNÇÕES CONSTRUTORAS
@@ -606,15 +644,15 @@ function Civil()
 {
     this.largura = 50; //
     this.altura = 50; // 
-    this.posicaoX = 740; //
-    this.posicaoY = 540; //   
+    this.posicaoX = 0; //
+    this.posicaoY = 0; //
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
 
-    this.caminhar = function ()
+    this.alerta = function ()
     {
-        caminharNaCidade();
+        inimigoEmAlerta();
     }
 }
 
@@ -722,41 +760,6 @@ var anguloFinal = (Math.PI / 180) * 360;
 
 //O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
 var sentidoCirculo = true;
-
-var imagemEmBranco = new Image();
-
-imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
-
-//
-
-var imagemCidade1 = new Image();
-imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
-
-imagemCidade1.posicaoXRecorte = 0;
-imagemCidade1.posicaoYRecorte = 0;
-imagemCidade1.larguraRecorte = imagemCidade1.width;
-imagemCidade1.alturaRecorte = imagemCidade1.height;
-imagemCidade1.posicaoX = 0;
-imagemCidade1.posicaoY = 0;
-imagemCidade1.largura = imagemCidade1.width;
-imagemCidade1.altura = imagemCidade1.height;
-
-//contextoTelaCanvasPrincipal.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
-
-//
-
-var imagemCidade2 = new Image();
-imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
-
-//
-
-var imagemPlayer1 = new Image();
-imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
-
-//
-
-var imagemCivil1 = new Image();
-imagemCivil1.src = "../../imagens/texture/2D/pacman3d.png"
 
 //VARIAVEIS IMAGENS DE AÇÕES:
 
@@ -1591,144 +1594,6 @@ function imagensCorrendoParaBaixoCivil1()
 
 //
 
-function caminharNaCidade()
-{
-    if (loopGame)
-    {
-
-        status1.innerHTML = player1.posicaoX - civil1.posicaoX;
-        status2.innerHTML = player1.posicaoY - civil1.posicaoY;
-        status3.innerHTML = player1.posicaoX;
-        status4.innerHTML = civil1.posicaoX;
-
-        if (player1.posicaoX - civil1.posicaoX >= -300)
-        {
-            alert("X: " + (player1.posicaoX - civil1.posicaoX))
-
-        } else if (player1.posicaoY - civil1.posicaoY >= -300)
-        {
-            alert("Y: " + (player1.posicaoY - civil1.posicaoY))
-
-        } else
-        {
-
-        }
-
-
-        if (civil1.posicaoY >= imagemCidade1.width - civil1.altura)
-        {
-            civil1.direcaoY = -1;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaBaixoCivil1();
-
-        } else if (civil1.posicaoY <= 0)
-        {
-            civil1.direcaoY = 1;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaCimaCivil1();
-
-        } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-        {
-            civil1.direcaoY = -1;
-            civil1.direcaoX = -1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoEsquerdaCivil1();
-
-        } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
-        {
-            civil1.direcaoY = 1;
-            civil1.direcaoX = -1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaBaixoCivil1();
-
-        } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
-        {
-            civil1.direcaoY = 1;
-            civil1.direcaoX = 1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaBaixoCivil1();
-
-        } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-        {
-            civil1.direcaoY = -1;
-            civil1.direcaoX = 1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoDireitaCivil1();
-
-        } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
-        {
-            civil1.direcaoY = 0;
-            civil1.direcaoX = -1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoEsquerdaCivil1();
-
-        } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
-        {
-            civil1.direcaoY = 0;
-            civil1.direcaoX = 1;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoDireitaCivil1();
-
-        } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-        {
-            civil1.direcaoY = -1;
-            civil1.direcaoX = 0;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaCimaCivil1();
-
-        } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
-        {
-            civil1.direcaoY = 1;
-            civil1.direcaoX = 0;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            imagensCorrendoParaBaixoCivil1();
-
-        } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 1 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 1 || civil1.posicaoX == player1.posicaoX + 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 2 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 2 || civil1.posicaoX == player1.posicaoX + 2 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 2 && civil1.posicaoY == player1.posicaoY)
-        {
-            civil1.direcaoY = 0;
-            civil1.direcaoX = 0;
-            civil1.posicaoX += civil1.direcaoX;
-            civil1.posicaoY += civil1.direcaoY;
-
-            alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
-            var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
-
-            if (confirma)
-            {
-                alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
-            } else
-            {
-                alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
-            }
-
-            reiniciar();
-
-        } else
-        {
-            civil1.posicaoY += civil1.direcaoY;
-        }
-        requestAnimationFrame(civil1.caminhar);
-    }
-}
-
 function reiniciar()
 {
     player1.posicaoX = 0;
@@ -1753,14 +1618,35 @@ function reiniciar()
 ////////////////////////////////////
 
 var canvasPrincipalLigado = true;
-var loopGame = false;
+
+var alertaInimigo;
+
+var distanciaInimigo = 200;
 
 var x1 = 17, y1 = 20;
+
+civil1.posicaoX = imagemCidade1.posicaoXRecorte - civil1.posicaoX;
+civil1.posicaoY = imagemCidade1.posicaoYRecorte - civil1.posicaoY;
 
 loopDesenho();
 
 function loopDesenho()
 {
+    status1.innerHTML = (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY);
+    status2.innerHTML = "POSICAO CIVIL X: " + civil1.posicaoX;
+    status3.innerHTML = "POSICAO CIVIL Y: " + civil1.posicaoY;
+    status4.innerHTML = "POSICAO X RECORTE: " + imagemCidade1.posicaoXRecorte;
+    status5.innerHTML = "POSICAO Y RECORTE: " + imagemCidade1.posicaoYRecorte;
+
+    if ((player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) >= -distanciaInimigo && (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) <= distanciaInimigo)
+    {
+        alertaInimigo = true;
+
+    } else
+    {
+        alertaInimigo = false;
+    }
+
     // LIMPA A AREA ESPECIFICADA DO DESENHO
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contextoTelaCanvasPrincipal.clearRect(0, 0, telaCanvasPrincipal.width, telaCanvasPrincipal.height);
@@ -2227,6 +2113,121 @@ function loopDesenho()
         // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
         // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
 
+        // INIMIGO EM ALERTA:
+
+        if (alertaInimigo)
+        {
+            if (civil1.posicaoY >= imagemCidade1.width - civil1.altura)
+            {
+                civil1.direcaoY = -1;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoY <= 0)
+            {
+                civil1.direcaoY = 1;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaCimaCivil1();
+
+            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = -1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoEsquerdaCivil1();
+
+            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = -1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = 1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoDireitaCivil1();
+
+            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = -1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoEsquerdaCivil1();
+
+            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 1;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoDireitaCivil1();
+
+            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 0;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaCimaCivil1();
+
+            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = 0;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 1 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 1 || civil1.posicaoX == player1.posicaoX + 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 2 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 2 || civil1.posicaoX == player1.posicaoX + 2 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 2 && civil1.posicaoY == player1.posicaoY)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 0;
+                civil1.posicaoX += civil1.direcaoX;
+                civil1.posicaoY += civil1.direcaoY;
+
+                alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
+                var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
+
+                if (confirma)
+                {
+                    alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
+                } else
+                {
+                    alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
+                }
+
+                reiniciar();
+
+            } else
+            {
+                civil1.posicaoY += civil1.direcaoY;
+            }
+        }
         loop = requestAnimationFrame(loopDesenho);
     }
 }
@@ -2292,26 +2293,23 @@ function ligar()
     {
         botaoLigar.innerHTML = "Off"
         canvasPrincipalLigado = false;
-        loopGame = false;
 
     } else
     {
         botaoLigar.innerHTML = "On"
         canvasPrincipalLigado = true;
-        loopGame = true;
         loopDesenho()
     }
 }
 
 function play()
 {
-    loopGame = true;
-    civil1.caminhar();
+    civil1.alerta();
 }
 
 function stop()
 {
-    loopGame = false;
+    alertaInimigo = false;
 }
 
 function irParaEsquerda()
