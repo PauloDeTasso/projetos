@@ -61,6 +61,18 @@ telaCanvasLeste.height = secaoLesteAltura;
 
 var contextoTelaCanvasLeste = telaCanvasLeste.getContext('2d');
 
+//
+
+/*
+
+var estiloCss = window.getComputedStyle(secaoTelaPersonagem);
+
+var secaoTelaPersonagemWidthCss = estiloCss.getPropertyValue('width');
+
+var secaoTelaPersonagemHeightCss = estiloCss.getPropertyValue('height');
+
+*/
+
 //CANVAS TELA PRINCIPAL:
 
 var telaCanvasPrincipal = document.getElementById('telaCanvasPrincipal');

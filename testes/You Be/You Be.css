@@ -3,10 +3,12 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     background-color: rgb(125, 125, 125);
     color: rgb(255, 255, 255);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #corpo {
@@ -18,6 +20,8 @@ html {
     height: 100%;
     background-color: rgb(0, 0, 0);
     color: aliceblue;
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoPrincipal {
@@ -28,6 +32,8 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoNorte {
@@ -47,8 +53,10 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgb(0, 0, 0);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoOeste {
@@ -59,6 +67,8 @@ html {
     width: 5%;
     height: 100%;
     background-color: rgb(0, 0, 0);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoTelaPersonagem {
@@ -66,9 +76,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     background-color: rgb(73, 73, 73);
+
+    border: 10px solid rgb(255, 0, 0);
 }
 
 #secaoLeste {
@@ -79,6 +91,8 @@ html {
     width: 5%;
     height: 100%;
     background-color: rgb(0, 0, 0);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoSul {
@@ -100,6 +114,8 @@ html {
     width: 100%;
     height: auto;
     background-color: rgb(77, 77, 77);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoStatusEsquerdo {
@@ -111,6 +127,8 @@ html {
     height: auto;
     background-color: rgb(77, 77, 77);
     color: #04AA6D;
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoStatusDireito {
@@ -121,6 +139,8 @@ html {
     width: 100%;
     height: auto;
     background-color: rgb(77, 77, 77);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoSul2 {
@@ -131,17 +151,24 @@ html {
     width: 100%;
     height: 5%;
     background-color: rgb(77, 77, 77);
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #corpoBarra {
     width: 100%;
     background-color: #ddd;
+
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #barra {
     width: 1%;
     height: 30px;
     background-color: #04AA6D;
+
+    border: 10px solid rgb(40, 44, 41);
 }
 
 #secaoFome {
@@ -205,7 +232,7 @@ html {
 }
 
 #telaCanvasPrincipal {
-    border: 10px solid rgb(51, 51, 51);
+    border: 10px solid rgb(0, 106, 255);
     background-color: rgb(107, 107, 107);
 }
 
