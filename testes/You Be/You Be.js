@@ -577,11 +577,11 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //////////////////// SAIDAS:
 
-status1.innerHTML = "Oi";
+status1.innerHTML = "...";
 
-status2.innerHTML = "Oi";
+status2.innerHTML = "...";
 
-status3.innerHTML = "Oi";
+status3.innerHTML = "...";
 
 status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
 
@@ -1595,6 +1595,26 @@ function caminharNaCidade()
 {
     if (loopGame)
     {
+
+        status1.innerHTML = player1.posicaoX - civil1.posicaoX;
+        status2.innerHTML = player1.posicaoY - civil1.posicaoY;
+        status3.innerHTML = player1.posicaoX;
+        status4.innerHTML = civil1.posicaoX;
+
+        if (player1.posicaoX - civil1.posicaoX >= -300)
+        {
+            alert("X: " + (player1.posicaoX - civil1.posicaoX))
+
+        } else if (player1.posicaoY - civil1.posicaoY >= -300)
+        {
+            alert("Y: " + (player1.posicaoY - civil1.posicaoY))
+
+        } else
+        {
+
+        }
+
+
         if (civil1.posicaoY >= imagemCidade1.width - civil1.altura)
         {
             civil1.direcaoY = -1;
@@ -1773,9 +1793,6 @@ function loopDesenho()
 
     contextoTelaCanvasOeste.fillStyle = "rgba(0,255,255,1";
 
-    status1.innerHTML = y1;
-    status2.innerHTML = telaCanvasOeste.height;
-
     if (y1 >= telaCanvasOeste.height - 20)
     {
         direcaoX = -1;
@@ -1813,9 +1830,6 @@ function loopDesenho()
     contextoTelaCanvasLeste.closePath();
 
     contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1";
-
-    status1.innerHTML = y1;
-    status2.innerHTML = telaCanvasLeste.height;
 
     if (y1 >= telaCanvasLeste.height - 20)
     {
