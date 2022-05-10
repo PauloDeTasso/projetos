@@ -11,6 +11,48 @@ Storage.prototype.getObj = function (key)
 
 ///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
 
+// SECAO LESTE:
+
+var secaoLeste = document.getElementById('secaoLeste');
+
+var secaoLestePropriedades = secaoLeste.getBoundingClientRect();
+
+var secaoLesteLargura = secaoLestePropriedades.width;
+
+var secaoLesteAltura = secaoLestePropriedades.height;
+
+// SECAO OESTE:
+
+var secaoOeste = document.getElementById('secaoOeste');
+
+var secaoOestePropriedades = secaoOeste.getBoundingClientRect();
+
+var secaoOesteLargura = secaoOestePropriedades.width;
+
+var secaoOesteAltura = secaoOestePropriedades.height;
+
+// CANVAS OESTE:
+
+var telaCanvasOeste = document.getElementById('telaCanvasOeste');
+
+telaCanvasOeste.width = secaoOesteLargura;
+
+telaCanvasOeste.height = secaoOesteAltura;
+
+var contextoTelaCanvasOeste = telaCanvasOeste.getContext('2d');
+
+// CANVAS LESTE:
+
+var telaCanvasLeste = document.getElementById('telaCanvasLeste');
+
+telaCanvasLeste.width = secaoLesteLargura;
+
+telaCanvasLeste.height = secaoLesteAltura;
+
+var contextoTelaCanvasLeste = telaCanvasLeste.getContext('2d');
+
+//
+
 //BARRAS NECESSIDADES:
 
 var barraFome = document.getElementById('barraFome');
@@ -29,10 +71,10 @@ var barraSocial = document.getElementById('barraSocial');
 
 var barraSaude = document.getElementById('barraSaude');
 
-//CANVAS:
+//CANVAS TELA PRINCIPAL:
 
-var telaCanvas = document.getElementById('telaCanvas');
-var contexto = telaCanvas.getContext('2d');
+var telaCanvasPrincipal = document.getElementById('telaCanvasPrincipal');
+var contexto = telaCanvasPrincipal.getContext('2d');
 
 //STATUS SAIDAS:
 
@@ -1676,22 +1718,113 @@ function reiniciar()
 ////////////////////////////////////
 ////////////////////////////////////
 
-var canvasLigado = false;
+var canvasPrincipalLigado = true;
 var loopGame = false;
+
+var x1 = 17, y1 = 20;
+
+loopDesenho();
 
 function loopDesenho()
 {
     // LIMPA A AREA ESPECIFICADA DO DESENHO
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
-    contexto.clearRect(0, 0, telaCanvas.width, telaCanvas.height);
+    contexto.clearRect(0, 0, telaCanvasPrincipal.width, telaCanvasPrincipal.height);
 
-    status1.innerHTML = sombraHorizontal;
-    status2.innerHTML = sombraVertical;
-    status3.innerHTML = incrementoSombra;
+    // LIMPA A TELA OESTE
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contextoTelaCanvasOeste.clearRect(0, 0, telaCanvasOeste.width, telaCanvasOeste.height);
 
-    if (canvasLigado)
+    // LIMPA A TELA LESTE
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contextoTelaCanvasLeste.clearRect(0, 0, telaCanvasLeste.width, telaCanvasLeste.height);
+
+    //CANVAS OESTE:
+
+    contextoTelaCanvasOeste.beginPath();
+
+    contextoTelaCanvasOeste.fillStyle = "rgba(255,255,255,1)";
+    contextoTelaCanvasOeste.moveTo(10, 10);
+
+    contextoTelaCanvasOeste.lineTo(10, telaCanvasOeste.height - 10)
+
+    contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, telaCanvasOeste.height - 10)
+
+    contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, 10)
+
+    contextoTelaCanvasOeste.stroke();
+    contextoTelaCanvasOeste.fill();
+
+    contextoTelaCanvasOeste.closePath();
+
+    contextoTelaCanvasOeste.fillStyle = "rgba(0,255,255,1";
+
+    status1.innerHTML = y1;
+    status2.innerHTML = telaCanvasOeste.height;
+
+    if (y1 >= telaCanvasOeste.height - 20)
     {
+        direcaoX = -1;
 
+    } else if (y1 <= 20)
+    {
+        direcaoX = 1;
+
+    } else
+    {
+        direcaoX = direcaoX;
+    }
+
+    y1 += direcaoX;
+
+    contextoTelaCanvasOeste.fillRect(x1, y1, telaCanvasOeste.width / 2, 50);
+
+
+    //CANVAS LESTE:
+
+    contextoTelaCanvasLeste.beginPath();
+
+    contextoTelaCanvasLeste.fillStyle = "rgba(255,255,255,1)";
+    contextoTelaCanvasLeste.moveTo(10, 10);
+
+    contextoTelaCanvasLeste.lineTo(10, telaCanvasLeste.height - 10)
+
+    contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, telaCanvasLeste.height - 10)
+
+    contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, 10)
+
+    contextoTelaCanvasLeste.stroke();
+    contextoTelaCanvasLeste.fill();
+
+    contextoTelaCanvasLeste.closePath();
+
+    contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1";
+
+    status1.innerHTML = y1;
+    status2.innerHTML = telaCanvasLeste.height;
+
+    if (y1 >= telaCanvasLeste.height - 20)
+    {
+        direcaoX = -1;
+
+    } else if (y1 <= 20)
+    {
+        direcaoX = 1;
+
+    } else
+    {
+        direcaoX = direcaoX;
+    }
+
+    y1 += direcaoX;
+
+    contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
+
+    ///////////////////////////////////
+    //////////////////////////////////
+
+    if (canvasPrincipalLigado)
+    {
         // SOMBRA HORINZONTAL:
 
         switch (incrementoSombra)
@@ -1717,7 +1850,6 @@ function loopDesenho()
                 incrementoSombra = 0.01;
                 break;
         }
-
 
         // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
         contexto.drawImage(imagemCidade1, imagemCidade1.posicaoXRecorte, imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
@@ -1756,7 +1888,7 @@ function loopDesenho()
             // SE TECLA PARA BAIXO PRESSIONADA:
             {
                 // SE O PLAYER NAO ULTRAPASSA A TELA DO CANVAS:
-                if (player1.posicaoY <= (telaCanvas.height - player1.altura))
+                if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura))
                 {
                     // MOVE PARA BAIXO
                     player1.posicaoY += player1.velocidade;
@@ -1767,7 +1899,7 @@ function loopDesenho()
                 {
                     //MOVENDO MAPA PARA BAIXAO - POSICAO Y:
 
-                    if (imagemCidade1.posicaoYRecorte >= imagemCidade1.height - telaCanvas.height)
+                    if (imagemCidade1.posicaoYRecorte >= imagemCidade1.height - telaCanvasPrincipal.height)
                     {
                         imagemCidade1.posicaoYRecorte = imagemCidade1.posicaoYRecorte;
                     } else
@@ -1800,7 +1932,7 @@ function loopDesenho()
             {
                 // SE O PLAYER NAO SAIR DA TELA DO CANVAS
 
-                if (player1.posicaoX <= telaCanvas.width - player1.largura)
+                if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
                 {
                     player1.posicaoX += player1.velocidade;
 
@@ -1812,7 +1944,7 @@ function loopDesenho()
 
                     imagensCorrendoDireitaPlayer1();
 
-                    if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvas.width)
+                    if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvasPrincipal.width)
                     {
                         imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
                     } else
@@ -2131,13 +2263,13 @@ function ligar()
     if (botaoLigar.innerHTML == "On")
     {
         botaoLigar.innerHTML = "Off"
-        canvasLigado = false;
+        canvasPrincipalLigado = false;
         loopGame = false;
 
     } else
     {
         botaoLigar.innerHTML = "On"
-        canvasLigado = true;
+        canvasPrincipalLigado = true;
         loopGame = true;
         loopDesenho()
     }
