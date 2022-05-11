@@ -109,6 +109,11 @@ status2 = document.getElementById('status2');
 status3 = document.getElementById('status3');
 status4 = document.getElementById('status4');
 status5 = document.getElementById('status5');
+status6 = document.getElementById('status6');
+status7 = document.getElementById('status7');
+status8 = document.getElementById('status8');
+status9 = document.getElementById('status9');
+status10 = document.getElementById('status10');
 
 ///////////////////////////// VARIAVEIS LOCAIS:
 
@@ -589,6 +594,7 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //////////////////// SAIDAS:
 
+/*
 status1.innerHTML = "...";
 
 status2.innerHTML = "...";
@@ -598,6 +604,7 @@ status3.innerHTML = "...";
 status4.innerHTML = localStorage.getObj('sentimentosBons')[0];
 
 status5.innerHTML = localStorage.getObj('sentimentosRuins')[10];
+*/
 
 //IMAGENS:
 
@@ -656,15 +663,16 @@ function Civil()
 {
     this.largura = 50; //
     this.altura = 50; // 
-    this.posicaoX = 740; //
-    this.posicaoY = 540; //
+    this.posicaoXAtual = 740; //
+    this.posicaoYAtual = 200; //
+    this.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoXAtual; //
+    this.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoYAtual; //    
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
 
     this.alerta = function ()
     {
-        inimigoEmAlerta();
         //inimigoEmAlerta(inimigo);
     }
 }
@@ -878,17 +886,17 @@ var imagemCivil1PosInicialXCorrendoD4 = 5;
 var imagemCivil1PosInicialYCorrendoD1 = 11;
 var imagemCivil1PosInicialYCorrendoD2 = 61;
 var imagemCivil1PosInicialYCorrendoD3 = 111;
-var imagemCivil1PosInicialYCorrendoD4 = 61;
+var imagemCivil1PosInicialYCorrendoD4 = 11;
 
 var imagemCivil1CorteLarguraCorrendoD1 = 36;
 var imagemCivil1CorteLarguraCorrendoD2 = 36;
 var imagemCivil1CorteLarguraCorrendoD3 = 36;
 var imagemCivil1CorteLarguraCorrendoD4 = 36;
 
-var imagemCivil1CorteAlturaCorrendoD1 = 36;
-var imagemCivil1CorteAlturaCorrendoD2 = 36;
-var imagemCivil1CorteAlturaCorrendoD3 = 36;
-var imagemCivil1CorteAlturaCorrendoD4 = 36;
+var imagemCivil1CorteAlturaCorrendoD1 = 37;
+var imagemCivil1CorteAlturaCorrendoD2 = 37;
+var imagemCivil1CorteAlturaCorrendoD3 = 37;
+var imagemCivil1CorteAlturaCorrendoD4 = 37;
 
 // CORRENDO ESQUERDA:
 
@@ -900,17 +908,17 @@ var imagemCivil1PosInicialXCorrendoE4 = 6;
 var imagemCivil1PosInicialYCorrendoE1 = 310;
 var imagemCivil1PosInicialYCorrendoE2 = 360;
 var imagemCivil1PosInicialYCorrendoE3 = 410;
-var imagemCivil1PosInicialYCorrendoE4 = 360;
+var imagemCivil1PosInicialYCorrendoE4 = 310;
 
 var imagemCivil1CorteLarguraCorrendoE1 = 36;
 var imagemCivil1CorteLarguraCorrendoE2 = 36;
 var imagemCivil1CorteLarguraCorrendoE3 = 36;
 var imagemCivil1CorteLarguraCorrendoE4 = 36;
 
-var imagemCivil1CorteAlturaCorrendoE1 = 36;
-var imagemCivil1CorteAlturaCorrendoE2 = 36;
-var imagemCivil1CorteAlturaCorrendoE3 = 36;
-var imagemCivil1CorteAlturaCorrendoE4 = 36;
+var imagemCivil1CorteAlturaCorrendoE1 = 37;
+var imagemCivil1CorteAlturaCorrendoE2 = 37;
+var imagemCivil1CorteAlturaCorrendoE3 = 37;
+var imagemCivil1CorteAlturaCorrendoE4 = 37;
 
 // CORRENDO PARA CIMA:
 
@@ -922,17 +930,17 @@ var imagemCivil1PosInicialXCorrendoC4 = 6;
 var imagemCivil1PosInicialYCorrendoC1 = 460;
 var imagemCivil1PosInicialYCorrendoC2 = 509;
 var imagemCivil1PosInicialYCorrendoC3 = 560;
-var imagemCivil1PosInicialYCorrendoC4 = 509;
+var imagemCivil1PosInicialYCorrendoC4 = 460;
 
 var imagemCivil1CorteLarguraCorrendoC1 = 36;
 var imagemCivil1CorteLarguraCorrendoC2 = 36;
 var imagemCivil1CorteLarguraCorrendoC3 = 36;
 var imagemCivil1CorteLarguraCorrendoC4 = 36;
 
-var imagemCivil1CorteAlturaCorrendoC1 = 36;
-var imagemCivil1CorteAlturaCorrendoC2 = 36;
-var imagemCivil1CorteAlturaCorrendoC3 = 36;
-var imagemCivil1CorteAlturaCorrendoC4 = 36;
+var imagemCivil1CorteAlturaCorrendoC1 = 37;
+var imagemCivil1CorteAlturaCorrendoC2 = 37;
+var imagemCivil1CorteAlturaCorrendoC3 = 37;
+var imagemCivil1CorteAlturaCorrendoC4 = 37;
 
 // CORRENDO PARA BAIXO:
 
@@ -944,17 +952,17 @@ var imagemCivil1PosInicialXCorrendoB4 = 5;
 var imagemCivil1PosInicialYCorrendoB1 = 160;
 var imagemCivil1PosInicialYCorrendoB2 = 211;
 var imagemCivil1PosInicialYCorrendoB3 = 261;
-var imagemCivil1PosInicialYCorrendoB4 = 211;
+var imagemCivil1PosInicialYCorrendoB4 = 160;
 
 var imagemCivil1CorteLarguraCorrendoB1 = 36;
 var imagemCivil1CorteLarguraCorrendoB2 = 36;
 var imagemCivil1CorteLarguraCorrendoB3 = 36;
 var imagemCivil1CorteLarguraCorrendoB4 = 36;
 
-var imagemCivil1CorteAlturaCorrendoB1 = 36;
-var imagemCivil1CorteAlturaCorrendoB2 = 36;
-var imagemCivil1CorteAlturaCorrendoB3 = 38;
-var imagemCivil1CorteAlturaCorrendoB4 = 36;
+var imagemCivil1CorteAlturaCorrendoB1 = 37;
+var imagemCivil1CorteAlturaCorrendoB2 = 37;
+var imagemCivil1CorteAlturaCorrendoB3 = 37;
+var imagemCivil1CorteAlturaCorrendoB4 = 37;
 
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
@@ -1645,17 +1653,30 @@ loopDesenho();
 /*
   contextoTelaCanvasPrincipal.drawImage(imagemCidade1, , imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
 */
+/*
+ civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740;
+ civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 200;
+*/
 
-civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 710;
-civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 540;
+
 
 function loopDesenho()
 {
-    status1.innerHTML = imagemCidade1.posicaoXRecorte + " magemCidade1.posicaoXRecorte"
-    status2.innerHTML = imagemCidade1.posicaoYRecorte + " imagemCidade1.posicaoYRecorte "
-    status3.innerHTML = civil1.posicaoX + "  civil1.posicaoX";
-    status4.innerHTML = civil1.posicaoY + " civil1.posicaoY";
-    status5.innerHTML = ""
+    //ATUALIZAR POSICAO CIVIL1:
+    civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + civil1.posicaoXAtual;
+    civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + civil1.posicaoYAtual;
+
+    status1.innerHTML = "civil1.posicaoX: " + civil1.posicaoX;
+    status2.innerHTML = "civil1.posicaoY: " + civil1.posicaoY;
+    status3.innerHTML = "civil1.posicaoXAtual " + civil1.posicaoXAtual;
+    status4.innerHTML = "civil1.posicaoYAtual " + civil1.posicaoYAtual;
+    status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+
+    status6.innerHTML = "imagemCidade1.posicaoX: " + imagemCidade1.posicaoX;
+    status7.innerHTML = "imagemCidade1.posicaoY: " + imagemCidade1.posicaoY;
+    status8.innerHTML = "imagemCidade1.posicaoXRecorte: " + imagemCidade1.posicaoXRecorte;
+    status9.innerHTML = "imagemCidade1.posicaoYRecorte: " + imagemCidade1.posicaoYRecorte;
+    status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
 
     /*
     status1.innerHTML = (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY);
@@ -1690,7 +1711,7 @@ function loopDesenho()
 
     contextoTelaCanvasOeste.beginPath();
 
-    contextoTelaCanvasOeste.fillStyle = "rgba(255,255,255,1)";
+    contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
     contextoTelaCanvasOeste.moveTo(10, 10);
 
     contextoTelaCanvasOeste.lineTo(10, telaCanvasOeste.height - 10)
@@ -1728,7 +1749,7 @@ function loopDesenho()
 
     contextoTelaCanvasLeste.beginPath();
 
-    contextoTelaCanvasLeste.fillStyle = "rgba(255,255,255,1)";
+    contextoTelaCanvasLeste.fillStyle = "rgba(0,0,0,1)";
     contextoTelaCanvasLeste.moveTo(10, 10);
 
     contextoTelaCanvasLeste.lineTo(10, telaCanvasLeste.height - 10)
@@ -1742,7 +1763,7 @@ function loopDesenho()
 
     contextoTelaCanvasLeste.closePath();
 
-    contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1";
+    contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1)";
 
     if (y1 >= telaCanvasLeste.height - 20)
     {
@@ -2145,17 +2166,17 @@ function loopDesenho()
 
         if (alertaInimigo)
         {
-            if (civil1.posicaoY >= imagemCidade1.width - civil1.altura)
+            if (civil1.posicaoY >= imagemCidade1.height - civil1.altura)
             {
                 civil1.direcaoY = -1;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
 
-            } else if (civil1.posicaoY <= 0)
+            } else if (civil1.posicaoY <= imagemCidade1.posicaoY)
             {
                 civil1.direcaoY = 1;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaCimaCivil1();
 
@@ -2163,8 +2184,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = -1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoEsquerdaCivil1();
 
@@ -2172,8 +2193,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = -1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
 
@@ -2181,8 +2202,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
 
@@ -2190,8 +2211,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
 
@@ -2199,8 +2220,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = -1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoEsquerdaCivil1();
 
@@ -2208,8 +2229,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = 1;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
 
@@ -2217,8 +2238,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 0;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaCimaCivil1();
 
@@ -2226,8 +2247,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 0;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
 
@@ -2235,8 +2256,8 @@ function loopDesenho()
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = 0;
-                civil1.posicaoX += civil1.direcaoX;
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
 
                 alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
                 var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
@@ -2253,9 +2274,16 @@ function loopDesenho()
 
             } else
             {
-                civil1.posicaoY += civil1.direcaoY;
+                civil1.posicaoYAtual += civil1.direcaoY;
             }
+        } else
+        {
+            imagemCivil1PosInicialX = 6;
+            imagemCivil1PosInicialY = 161;
+            imagemCivil1CorteLargura = 36;
+            imagemCivil1CorteAltura = 36;
         }
+
         loop = requestAnimationFrame(loopDesenho);
     }
 }
