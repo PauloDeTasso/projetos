@@ -670,11 +670,6 @@ function Civil()
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
-
-    this.alerta = function ()
-    {
-        //inimigoEmAlerta(inimigo);
-    }
 }
 
 // CONTROLE
