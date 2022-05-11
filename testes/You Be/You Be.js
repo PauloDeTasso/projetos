@@ -1630,10 +1630,24 @@ var x1 = 17, y1 = 20;
 //LUGARES
 
 var quarteirao1 = {}
-quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 0;
-quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 0;
-quarteirao1.largura = 180;
-quarteirao1.altura = 180;
+quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 20;
+
+quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20;
+
+quarteirao1.largura = 100;
+
+quarteirao1.altura = 100;
+
+//
+
+var quarteirao2 = {}
+quarteirao2.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 320;
+
+quarteirao2.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 17;
+
+quarteirao2.largura = 180;
+
+quarteirao2.altura = 120;
 
 //
 
@@ -1655,6 +1669,19 @@ loopDesenho();
 
 function loopDesenho()
 {
+    //AREAS PROIBIDAS DE MOVIMENTAÇÃO:
+
+    topouQuarteirao1 = player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura && player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura;
+    //
+
+    topouQuarteirao2 = player1.posicaoX + player1.largura >= quarteirao2.posicaoX && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura || player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX + player1.largura > quarteirao2.posicaoX;
+
+    //
+
+    topouQuarteirao2Y = player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura;
+
+    //
+
     //ATUALIZAR POSICAO CIVIL1:
 
     civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + civil1.posicaoXAtual;
@@ -1662,8 +1689,8 @@ function loopDesenho()
 
     //ATUALIZAR POSICAO AREA 1:
 
-    quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 0;
-    quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 0;
+    quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 30;
+    quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 30;
 
     //STATUS SISTEMA:
 
@@ -1823,11 +1850,11 @@ function loopDesenho()
                 if (player1.posicaoY >= 0)
                 {
                     // MOVE PARA CIMA
-                    //   player1.posicaoY -= player1.velocidade;
+                    //   player1.posicaoY -= player1.velocidade;             
 
-                    if (player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura)
+                    if (topouQuarteirao1 || topouQuarteirao2)
                     {
-                        player1.posicaoY = player1.posicaoY;
+                        //player1.posicaoY = player1.posicaoY;
                     } else
                     {
                         player1.posicaoY -= player1.velocidade;
@@ -1900,7 +1927,14 @@ function loopDesenho()
 
                 if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
                 {
-                    player1.posicaoX += player1.velocidade;
+
+                    if (topouQuarteirao1 || topouQuarteirao2)
+                    {
+                        //player1.posicaoX = player1.posicaoX;
+                    } else
+                    {
+                        player1.posicaoX += player1.velocidade;
+                    }
 
                     imagensCorrendoDireitaPlayer1();
 
@@ -1927,10 +1961,9 @@ function loopDesenho()
                 {
                     // muda posição
 
-
-                    if (player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura)
+                    if (topouQuarteirao1 || topouQuarteirao2)
                     {
-                        player1.posicaoX = player1.posicaoX;
+                        //player1.posicaoX = player1.posicaoX;
                     } else
                     {
                         player1.posicaoX -= player1.velocidade;
@@ -2091,12 +2124,11 @@ function loopDesenho()
         // DEFINE A LARGURA DE LINHA:
         contextoTelaCanvasPrincipal.lineWidth = 3;
 
-
         //
         /*
                 contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";
         
-                contextoTelaCanvasPrincipal.fillRect(quarteirao1.posicaoX, quarteirao1.posicaoY, quarteirao1.largura, quarteirao1.altura);
+                contextoTelaCanvasPrincipal.fillRect(quarteirao2.posicaoX, quarteirao2.posicaoY, quarteirao2.largura, quarteirao2.altura);
         */
         //
 
