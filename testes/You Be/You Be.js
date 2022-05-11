@@ -664,7 +664,7 @@ function Civil()
     this.largura = 50; //
     this.altura = 50; // 
     this.posicaoXAtual = 740; //
-    this.posicaoYAtual = 200; //
+    this.posicaoYAtual = 200; // /*
     this.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoXAtual; //
     this.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoYAtual; //    
     this.velocidade = 3; //
@@ -1620,8 +1620,8 @@ function reiniciar()
     player1.posicaoX = 0;
     player1.posicaoY = 200;
 
-    civil1.posicaoX = 740;
-    civil1.posicaoY = 540;
+    civil1.posicaoXAtual = 740;
+    civil1.posicaoYAtual = 200;
 }
 
 var canvasPrincipalLigado = true;
@@ -1650,21 +1650,14 @@ var objetoTeste = {};
 
 loopDesenho();
 
-/*
-  contextoTelaCanvasPrincipal.drawImage(imagemCidade1, , imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
-*/
-/*
- civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740;
- civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 200;
-*/
-
-
-
 function loopDesenho()
 {
     //ATUALIZAR POSICAO CIVIL1:
+
     civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + civil1.posicaoXAtual;
     civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + civil1.posicaoYAtual;
+
+    //STATUS SISTEMA:
 
     status1.innerHTML = "civil1.posicaoX: " + civil1.posicaoX;
     status2.innerHTML = "civil1.posicaoY: " + civil1.posicaoY;
@@ -1678,13 +1671,7 @@ function loopDesenho()
     status9.innerHTML = "imagemCidade1.posicaoYRecorte: " + imagemCidade1.posicaoYRecorte;
     status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
 
-    /*
-    status1.innerHTML = (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY);
-    status2.innerHTML = "POSICAO CIVIL X: " + civil1.posicaoX;
-    status3.innerHTML = "POSICAO CIVIL Y: " + civil1.posicaoY;
-    status4.innerHTML = "POSICAO X RECORTE: " + imagemCidade1.posicaoXRecorte;
-    status5.innerHTML = "POSICAO Y RECORTE: " + imagemCidade1.posicaoYRecorte;
-*/
+    //CODIÇÃO INIMIGO EM ALERTA:
 
     if ((player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) >= -distanciaInimigo && (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) <= distanciaInimigo)
     {
