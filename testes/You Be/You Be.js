@@ -657,6 +657,10 @@ function Player()
     this.posicaoX = 0; //
     this.posicaoY = 200; //   
     this.velocidade = 3; //
+
+    this.posicaoXGlobal = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoX;
+
+    this.posicaoYGlobal = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoY;
 }
 
 function Civil()
@@ -1619,7 +1623,7 @@ function reiniciar()
     civil1.posicaoYAtual = 200;
 }
 
-var canvasPrincipalLigado = true;
+var canvasPrincipalLigado = false;
 
 var alertaInimigo;
 
@@ -1694,6 +1698,19 @@ function loopDesenho()
 
     //STATUS SISTEMA:
 
+    status1.innerHTML = "quarteirao1.posicaoX + largura: " + quarteirao1.posicaoX + quarteirao1.largura;
+    status2.innerHTML = "quarteirao1.posicaoY + altura: " + quarteirao1.posicaoY + quarteirao1.altura;
+    status3.innerHTML = "civil1.posicaoXAtual " + civil1.posicaoXAtual;
+    status4.innerHTML = "civil1.posicaoYAtual " + civil1.posicaoYAtual;
+    status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+
+    status6.innerHTML = "quarteirao1.posicaoX: " + quarteirao1.posicaoX;
+    status7.innerHTML = "quarteirao1.posicaoY: " + quarteirao1.posicaoY;
+    status8.innerHTML = "quarteirao1.largura: " + quarteirao1.largura;
+    status9.innerHTML = "quarteirao1.altura: " + quarteirao1.altura;
+    status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
+
+    /*
     status1.innerHTML = "civil1.posicaoX: " + civil1.posicaoX;
     status2.innerHTML = "civil1.posicaoY: " + civil1.posicaoY;
     status3.innerHTML = "civil1.posicaoXAtual " + civil1.posicaoXAtual;
@@ -1705,7 +1722,7 @@ function loopDesenho()
     status8.innerHTML = "imagemCidade1.posicaoXRecorte: " + imagemCidade1.posicaoXRecorte;
     status9.innerHTML = "imagemCidade1.posicaoYRecorte: " + imagemCidade1.posicaoYRecorte;
     status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
-
+*/
     //CODIÇÃO INIMIGO EM ALERTA:
 
     if ((player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) >= -distanciaInimigo && (player1.posicaoX - civil1.posicaoX) - (player1.posicaoY - civil1.posicaoY) <= distanciaInimigo)
@@ -1728,82 +1745,82 @@ function loopDesenho()
     // LIMPA A TELA LESTE
     // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
     contextoTelaCanvasLeste.clearRect(0, 0, telaCanvasLeste.width, telaCanvasLeste.height);
-
-    //CANVAS OESTE:
-
-    contextoTelaCanvasOeste.beginPath();
-
-    contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-    contextoTelaCanvasOeste.moveTo(10, 10);
-
-    contextoTelaCanvasOeste.lineTo(10, telaCanvasOeste.height - 10)
-
-    contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, telaCanvasOeste.height - 10)
-
-    contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, 10)
-
-    contextoTelaCanvasOeste.stroke();
-    contextoTelaCanvasOeste.fill();
-
-    contextoTelaCanvasOeste.closePath();
-
-    contextoTelaCanvasOeste.fillStyle = "rgba(0,255,255,1";
-
-    if (y1 >= telaCanvasOeste.height - 20)
-    {
-        direcaoX = -1;
-
-    } else if (y1 <= 20)
-    {
-        direcaoX = 1;
-
-    } else
-    {
-        direcaoX = direcaoX;
-    }
-
-    y1 += direcaoX;
-
-    contextoTelaCanvasOeste.fillRect(x1, y1, telaCanvasOeste.width / 2, 50);
-
-
-    //CANVAS LESTE:
-
-    contextoTelaCanvasLeste.beginPath();
-
-    contextoTelaCanvasLeste.fillStyle = "rgba(0,0,0,1)";
-    contextoTelaCanvasLeste.moveTo(10, 10);
-
-    contextoTelaCanvasLeste.lineTo(10, telaCanvasLeste.height - 10)
-
-    contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, telaCanvasLeste.height - 10)
-
-    contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, 10)
-
-    contextoTelaCanvasLeste.stroke();
-    contextoTelaCanvasLeste.fill();
-
-    contextoTelaCanvasLeste.closePath();
-
-    contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1)";
-
-    if (y1 >= telaCanvasLeste.height - 20)
-    {
-        direcaoX = -1;
-
-    } else if (y1 <= 20)
-    {
-        direcaoX = 1;
-
-    } else
-    {
-        direcaoX = direcaoX;
-    }
-
-    y1 += direcaoX;
-
-    contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
-
+    /*
+        //CANVAS OESTE:
+    
+        contextoTelaCanvasOeste.beginPath();
+    
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasOeste.moveTo(10, 10);
+    
+        contextoTelaCanvasOeste.lineTo(10, telaCanvasOeste.height - 10)
+    
+        contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, telaCanvasOeste.height - 10)
+    
+        contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, 10)
+    
+        contextoTelaCanvasOeste.stroke();
+        contextoTelaCanvasOeste.fill();
+    
+        contextoTelaCanvasOeste.closePath();
+    
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,255,255,1";
+    
+        if (y1 >= telaCanvasOeste.height - 20)
+        {
+            direcaoX = -1;
+    
+        } else if (y1 <= 20)
+        {
+            direcaoX = 1;
+    
+        } else
+        {
+            direcaoX = direcaoX;
+        }
+    
+        y1 += direcaoX;
+    
+        contextoTelaCanvasOeste.fillRect(x1, y1, telaCanvasOeste.width / 2, 50);
+    
+    
+        //CANVAS LESTE:
+    
+        contextoTelaCanvasLeste.beginPath();
+    
+        contextoTelaCanvasLeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasLeste.moveTo(10, 10);
+    
+        contextoTelaCanvasLeste.lineTo(10, telaCanvasLeste.height - 10)
+    
+        contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, telaCanvasLeste.height - 10)
+    
+        contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, 10)
+    
+        contextoTelaCanvasLeste.stroke();
+        contextoTelaCanvasLeste.fill();
+    
+        contextoTelaCanvasLeste.closePath();
+    
+        contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1)";
+    
+        if (y1 >= telaCanvasLeste.height - 20)
+        {
+            direcaoX = -1;
+    
+        } else if (y1 <= 20)
+        {
+            direcaoX = 1;
+    
+        } else
+        {
+            direcaoX = direcaoX;
+        }
+    
+        y1 += direcaoX;
+    
+        contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
+    */
     ///////////////////////////////////
     //CANVAS PRINCIPAL
     //////////////////////////////////
