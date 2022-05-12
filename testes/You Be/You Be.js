@@ -1623,7 +1623,7 @@ function reiniciar()
     civil1.posicaoYAtual = 200;
 }
 
-var canvasPrincipalLigado = false;
+var canvasPrincipalLigado = true;
 
 var alertaInimigo;
 
@@ -1675,16 +1675,22 @@ function loopDesenho()
 {
     //AREAS PROIBIDAS DE MOVIMENTAÇÃO:
 
-    topouQuarteirao1 = player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura && player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura;
+    topouQuarteirao1Leste = player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura && player1.posicaoY + player1.altura <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoY >= quarteirao1.posicaoY;
+
+    topouQuarteirao1Oeste = player1.posicaoX + player1.largura >= quarteirao1.posicaoX && player1.posicaoY + player1.altura <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoY >= quarteirao1.posicaoY;
+
+    topouQuarteirao1Norte = player1.posicaoY >= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX >= quarteirao1.posicaoX && player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura;
+
+    topouQuarteirao1Sul = player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX >= quarteirao1.posicaoX && player1.posicaoX + player1.largura <= quarteirao1.posicaoX + quarteirao1.largura;
+
     //
 
     topouQuarteirao2 = player1.posicaoX + player1.largura >= quarteirao2.posicaoX && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura || player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX + player1.largura > quarteirao2.posicaoX;
 
-    //
+    //ATUALIZAR POSICAO PLAYER1:
 
-    topouQuarteirao2Y = player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura;
-
-    //
+    player1.posicaoXGlobal = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + player1.posicaoX;
+    player1.posicaoYGlobal = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + player1.posicaoY;
 
     //ATUALIZAR POSICAO CIVIL1:
 
@@ -1698,10 +1704,10 @@ function loopDesenho()
 
     //STATUS SISTEMA:
 
-    status1.innerHTML = "quarteirao1.posicaoX + largura: " + quarteirao1.posicaoX + quarteirao1.largura;
-    status2.innerHTML = "quarteirao1.posicaoY + altura: " + quarteirao1.posicaoY + quarteirao1.altura;
-    status3.innerHTML = "civil1.posicaoXAtual " + civil1.posicaoXAtual;
-    status4.innerHTML = "civil1.posicaoYAtual " + civil1.posicaoYAtual;
+    status1.innerHTML = "quarteirao1.posicaoX + largura: " + (quarteirao1.posicaoX + quarteirao1.largura);
+    status2.innerHTML = "quarteirao1.posicaoY + altura: " + (quarteirao1.posicaoY + quarteirao1.altura);
+    status3.innerHTML = "player1.posicaoXGlobal " + player1.posicaoXGlobal;
+    status4.innerHTML = " player1.posicaoYGlobal " + player1.posicaoYGlobal;
     status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
 
     status6.innerHTML = "quarteirao1.posicaoX: " + quarteirao1.posicaoX;
@@ -1869,7 +1875,7 @@ function loopDesenho()
                     // MOVE PARA CIMA
                     //   player1.posicaoY -= player1.velocidade;             
 
-                    if (topouQuarteirao1 || topouQuarteirao2)
+                    if (topouQuarteirao1Sul)
                     {
                         //player1.posicaoY = player1.posicaoY;
                     } else
@@ -1901,7 +1907,16 @@ function loopDesenho()
                 if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura))
                 {
                     // MOVE PARA BAIXO
-                    player1.posicaoY += player1.velocidade;
+
+                    if (topouQuarteirao1Norte)
+                    {
+                        //player1.posicaoY = player1.posicaoY;
+                    } else
+                    {
+                        player1.posicaoY += player1.velocidade;
+                    }
+
+
 
                     imagensCorrendoParaBaixoPlayer1();
 
@@ -1945,7 +1960,7 @@ function loopDesenho()
                 if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
                 {
 
-                    if (topouQuarteirao1 || topouQuarteirao2)
+                    if (topouQuarteirao1Oeste)
                     {
                         //player1.posicaoX = player1.posicaoX;
                     } else
@@ -1978,7 +1993,7 @@ function loopDesenho()
                 {
                     // muda posição
 
-                    if (topouQuarteirao1 || topouQuarteirao2)
+                    if (topouQuarteirao1Leste)
                     {
                         //player1.posicaoX = player1.posicaoX;
                     } else
