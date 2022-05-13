@@ -704,6 +704,23 @@ Storage.prototype.getObj = function (key)
 
 ///////////////////////////// VARIAVEIS LOCAIS:
 
+//DEFININDO NOME USUARIO:
+
+if (localStorage.nome == "null" || localStorage.nome == null || localStorage.nome == "undefined" || localStorage.nome == undefined || localStorage.nome == "Sem Nome")
+{
+    var nomePrompt = prompt("Qual seu nome?");
+
+    localStorage.setItem("nome", nomePrompt);
+
+    if (localStorage.nome == "null" || localStorage.nome == "Sem nome")
+    {
+        localStorage.setItem("nome", "Sem Nome");
+    } else
+    {
+        localStorage.setItem("nome", nomePrompt);
+    }
+}
+
 // NECESSIDADES:
 
 if (localStorage.primeiroAcesso == undefined)
