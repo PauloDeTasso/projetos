@@ -641,14 +641,8 @@ imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
 
 //
 
-var imagemPlayer1 = new Image();
-imagemPlayer1.src = "../../imagens/texture/2D/player1.png"
 
 //
-
-var imagemCivil1 = new Image();
-imagemCivil1.src = "../../imagens/texture/2D/pacman3d.png"
-
 
 //////////////////// CANVAS:
 
@@ -667,12 +661,106 @@ function Player()
     this.posicaoXGlobal = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoX;
 
     this.posicaoYGlobal = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoY;
+
+    //IMAGEM:
+
+    this.imagem = new Image();
+    this.imagem.src = "../../imagens/texture/2D/player1.png"
+
+    // CORRENDO DIREITA:
+
+    this.imagemPosInicialXCorrendoD1 = 52;
+    this.imagemPosInicialXCorrendoD2 = 34;
+    this.imagemPosInicialXCorrendoD3 = 66;
+    this.imagemPosInicialXCorrendoD4 = 99;
+
+    this.imagemPosInicialYCorrendoD1 = 39;
+    this.imagemPosInicialYCorrendoD2 = 39;
+    this.imagemPosInicialYCorrendoD3 = 39;
+    this.imagemPosInicialYCorrendoD4 = 39;
+
+    this.imagemCorteLarguraCorrendoD1 = 12;
+    this.imagemCorteLarguraCorrendoD2 = 12;
+    this.imagemCorteLarguraCorrendoD3 = 12;
+    this.imagemCorteLarguraCorrendoD4 = 12;
+
+    this.imagemCorteAlturaCorrendoD1 = 15;
+    this.imagemCorteAlturaCorrendoD2 = 15;
+    this.imagemCorteAlturaCorrendoD3 = 15;
+    this.imagemCorteAlturaCorrendoD4 = 15;
+
+    // CORRENDO ESQUERDA:
+
+    this.imagemPosInicialXCorrendoE1 = 66;
+    this.imagemPosInicialXCorrendoE2 = 80;
+    this.imagemPosInicialXCorrendoE3 = 32;
+    this.imagemPosInicialXCorrendoE4 = 16;
+
+    this.imagemPosInicialYCorrendoE1 = 139;
+    this.imagemPosInicialYCorrendoE2 = 139;
+    this.imagemPosInicialYCorrendoE3 = 139;
+    this.imagemPosInicialYCorrendoE4 = 139;
+
+    this.imagemCorteLarguraCorrendoE1 = 12;
+    this.imagemCorteLarguraCorrendoE2 = 12;
+    this.imagemCorteLarguraCorrendoE3 = 12;
+    this.imagemCorteLarguraCorrendoE4 = 12;
+
+    this.imagemCorteAlturaCorrendoE1 = 15;
+    this.imagemCorteAlturaCorrendoE2 = 15;
+    this.imagemCorteAlturaCorrendoE3 = 15;
+    this.imagemCorteAlturaCorrendoE4 = 15;
+
+    // CORRENDO PARA CIMA:
+
+    this.imagemPosInicialXCorrendoC1 = 52;
+    this.imagemPosInicialXCorrendoC2 = 34;
+    this.imagemPosInicialXCorrendoC3 = 66;
+    this.imagemPosInicialXCorrendoC4 = 99;
+
+    this.imagemPosInicialYCorrendoC1 = 39;
+    this.imagemPosInicialYCorrendoC2 = 39;
+    this.imagemPosInicialYCorrendoC3 = 39;
+    this.imagemPosInicialYCorrendoC4 = 39;
+
+    this.imagemCorteLarguraCorrendoC1 = 12;
+    this.imagemCorteLarguraCorrendoC2 = 12;
+    this.imagemCorteLarguraCorrendoC3 = 12;
+    this.imagemCorteLarguraCorrendoC4 = 12;
+
+    this.imagemCorteAlturaCorrendoC1 = 15;
+    this.imagemCorteAlturaCorrendoC2 = 15;
+    this.imagemCorteAlturaCorrendoC3 = 15;
+    this.imagemCorteAlturaCorrendoC4 = 15;
+
+    // CORRENDO PARA BAIXO:
+
+    this.imagemPosInicialXCorrendoB1 = 66;
+    this.imagemPosInicialXCorrendoB2 = 80;
+    this.imagemPosInicialXCorrendoB3 = 32;
+    this.imagemPosInicialXCorrendoB4 = 16;
+
+    this.imagemPosInicialYCorrendoB1 = 139;
+    this.imagemPosInicialYCorrendoB2 = 139;
+    this.imagemPosInicialYCorrendoB3 = 139;
+    this.imagemPosInicialYCorrendoB4 = 139;
+
+    this.imagemCorteLarguraCorrendoB1 = 12;
+    this.imagemCorteLarguraCorrendoB2 = 12;
+    this.imagemCorteLarguraCorrendoB3 = 12;
+    this.imagemCorteLarguraCorrendoB4 = 12;
+
+    this.imagemCorteAlturaCorrendoB1 = 15;
+    this.imagemCorteAlturaCorrendoB2 = 15;
+    this.imagemCorteAlturaCorrendoB3 = 15;
+    this.imagemCorteAlturaCorrendoB4 = 15;
+
 }
 
 function Civil()
 {
     this.largura = 50; //
-    this.altura = 50; // 
+    this.altura = 50; //     
     this.posicaoXAtual = 740; //
     this.posicaoYAtual = 20; //
     this.posicaoXFixo = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740; //
@@ -682,6 +770,97 @@ function Civil()
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
+
+    this.imagem = new Image();
+    this.imagem.src = "../../imagens/texture/2D/pacman3d.png"
+
+    // CORRENDO DIREITA:
+
+    this.imagemPosInicialXCorrendoD1 = 5;
+    this.imagemPosInicialXCorrendoD2 = 5;
+    this.imagemPosInicialXCorrendoD3 = 5;
+    this.imagemPosInicialXCorrendoD4 = 5;
+
+    this.imagemPosInicialYCorrendoD1 = 11;
+    this.imagemPosInicialYCorrendoD2 = 61;
+    this.imagemPosInicialYCorrendoD3 = 111;
+    this.imagemPosInicialYCorrendoD4 = 11;
+
+    this.imagemCorteLarguraCorrendoD1 = 36;
+    this.imagemCorteLarguraCorrendoD2 = 36;
+    this.imagemCorteLarguraCorrendoD3 = 36;
+    this.imagemCorteLarguraCorrendoD4 = 36;
+
+    this.imagemCorteAlturaCorrendoD1 = 37;
+    this.imagemCorteAlturaCorrendoD2 = 37;
+    this.imagemCorteAlturaCorrendoD3 = 37;
+    this.imagemCorteAlturaCorrendoD4 = 37;
+
+    // CORRENDO ESQUERDA:
+
+    this.imagemPosInicialXCorrendoE1 = 6;
+    this.imagemPosInicialXCorrendoE2 = 6;
+    this.imagemPosInicialXCorrendoE3 = 9;
+    this.imagemPosInicialXCorrendoE4 = 6;
+
+    this.imagemPosInicialYCorrendoE1 = 310;
+    this.imagemPosInicialYCorrendoE2 = 360;
+    this.imagemPosInicialYCorrendoE3 = 410;
+    this.imagemPosInicialYCorrendoE4 = 310;
+
+    this.imagemCorteLarguraCorrendoE1 = 36;
+    this.imagemCorteLarguraCorrendoE2 = 36;
+    this.imagemCorteLarguraCorrendoE3 = 36;
+    this.imagemCorteLarguraCorrendoE4 = 36;
+
+    this.imagemCorteAlturaCorrendoE1 = 37;
+    this.imagemCorteAlturaCorrendoE2 = 37;
+    this.imagemCorteAlturaCorrendoE3 = 37;
+    this.imagemCorteAlturaCorrendoE4 = 37;
+
+    // CORRENDO PARA CIMA:
+
+    this.imagemPosInicialXCorrendoC1 = 6;
+    this.imagemPosInicialXCorrendoC2 = 6;
+    this.imagemPosInicialXCorrendoC3 = 6;
+    this.imagemPosInicialXCorrendoC4 = 6;
+
+    this.imagemPosInicialYCorrendoC1 = 460;
+    this.imagemPosInicialYCorrendoC2 = 509;
+    this.imagemPosInicialYCorrendoC3 = 560;
+    this.imagemPosInicialYCorrendoC4 = 460;
+
+    this.imagemCorteLarguraCorrendoC1 = 36;
+    this.imagemCorteLarguraCorrendoC2 = 36;
+    this.imagemCorteLarguraCorrendoC3 = 36;
+    this.imagemCorteLarguraCorrendoC4 = 36;
+
+    this.imagemCorteAlturaCorrendoC1 = 37;
+    this.imagemCorteAlturaCorrendoC2 = 37;
+    this.imagemCorteAlturaCorrendoC3 = 37;
+    this.imagemCorteAlturaCorrendoC4 = 37;
+
+    // CORRENDO PARA BAIXO:
+
+    this.imagemPosInicialXCorrendoB1 = 5;
+    this.imagemPosInicialXCorrendoB2 = 5;
+    this.imagemPosInicialXCorrendoB3 = 5;
+    this.imagemPosInicialXCorrendoB4 = 5;
+
+    this.imagemPosInicialYCorrendoB1 = 160;
+    this.imagemPosInicialYCorrendoB2 = 211;
+    this.imagemPosInicialYCorrendoB3 = 261;
+    this.imagemPosInicialYCorrendoB4 = 160;
+
+    this.imagemCorteLarguraCorrendoB1 = 36;
+    this.imagemCorteLarguraCorrendoB2 = 36;
+    this.imagemCorteLarguraCorrendoB3 = 36;
+    this.imagemCorteLarguraCorrendoB4 = 36;
+
+    this.imagemCorteAlturaCorrendoB1 = 37;
+    this.imagemCorteAlturaCorrendoB2 = 37;
+    this.imagemCorteAlturaCorrendoB3 = 37;
+    this.imagemCorteAlturaCorrendoB4 = 37;
 }
 
 // CONTROLE
@@ -789,201 +968,19 @@ var anguloFinal = (Math.PI / 180) * 360;
 //O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
 var sentidoCirculo = true;
 
-//VARIAVEIS IMAGENS DE AÇÕES:
-
-////PLAYER 1:
-
-// CORRENDO DIREITA:
-
-var imagemPlayer1PosInicialXCorrendoD1 = 52;
-var imagemPlayer1PosInicialXCorrendoD2 = 34;
-var imagemPlayer1PosInicialXCorrendoD3 = 66;
-var imagemPlayer1PosInicialXCorrendoD4 = 99;
-
-var imagemPlayer1PosInicialYCorrendoD1 = 39;
-var imagemPlayer1PosInicialYCorrendoD2 = 39;
-var imagemPlayer1PosInicialYCorrendoD3 = 39;
-var imagemPlayer1PosInicialYCorrendoD4 = 39;
-
-var imagemPlayer1CorteLarguraCorrendoD1 = 12;
-var imagemPlayer1CorteLarguraCorrendoD2 = 12;
-var imagemPlayer1CorteLarguraCorrendoD3 = 12;
-var imagemPlayer1CorteLarguraCorrendoD4 = 12;
-
-var imagemPlayer1CorteAlturaCorrendoD1 = 15;
-var imagemPlayer1CorteAlturaCorrendoD2 = 15;
-var imagemPlayer1CorteAlturaCorrendoD3 = 15;
-var imagemPlayer1CorteAlturaCorrendoD4 = 15;
-
-// CORRENDO ESQUERDA:
-
-var imagemPlayer1PosInicialXCorrendoE1 = 66;
-var imagemPlayer1PosInicialXCorrendoE2 = 80;
-var imagemPlayer1PosInicialXCorrendoE3 = 32;
-var imagemPlayer1PosInicialXCorrendoE4 = 16;
-
-var imagemPlayer1PosInicialYCorrendoE1 = 139;
-var imagemPlayer1PosInicialYCorrendoE2 = 139;
-var imagemPlayer1PosInicialYCorrendoE3 = 139;
-var imagemPlayer1PosInicialYCorrendoE4 = 139;
-
-var imagemPlayer1CorteLarguraCorrendoE1 = 12;
-var imagemPlayer1CorteLarguraCorrendoE2 = 12;
-var imagemPlayer1CorteLarguraCorrendoE3 = 12;
-var imagemPlayer1CorteLarguraCorrendoE4 = 12;
-
-var imagemPlayer1CorteAlturaCorrendoE1 = 15;
-var imagemPlayer1CorteAlturaCorrendoE2 = 15;
-var imagemPlayer1CorteAlturaCorrendoE3 = 15;
-var imagemPlayer1CorteAlturaCorrendoE4 = 15;
-
-// CORRENDO PARA CIMA:
-
-var imagemPlayer1PosInicialXCorrendoC1 = 52;
-var imagemPlayer1PosInicialXCorrendoC2 = 34;
-var imagemPlayer1PosInicialXCorrendoC3 = 66;
-var imagemPlayer1PosInicialXCorrendoC4 = 99;
-
-var imagemPlayer1PosInicialYCorrendoC1 = 39;
-var imagemPlayer1PosInicialYCorrendoC2 = 39;
-var imagemPlayer1PosInicialYCorrendoC3 = 39;
-var imagemPlayer1PosInicialYCorrendoC4 = 39;
-
-var imagemPlayer1CorteLarguraCorrendoC1 = 12;
-var imagemPlayer1CorteLarguraCorrendoC2 = 12;
-var imagemPlayer1CorteLarguraCorrendoC3 = 12;
-var imagemPlayer1CorteLarguraCorrendoC4 = 12;
-
-var imagemPlayer1CorteAlturaCorrendoC1 = 15;
-var imagemPlayer1CorteAlturaCorrendoC2 = 15;
-var imagemPlayer1CorteAlturaCorrendoC3 = 15;
-var imagemPlayer1CorteAlturaCorrendoC4 = 15;
-
-// CORRENDO PARA BAIXO:
-
-var imagemPlayer1PosInicialXCorrendoB1 = 66;
-var imagemPlayer1PosInicialXCorrendoB2 = 80;
-var imagemPlayer1PosInicialXCorrendoB3 = 32;
-var imagemPlayer1PosInicialXCorrendoB4 = 16;
-
-var imagemPlayer1PosInicialYCorrendoB1 = 139;
-var imagemPlayer1PosInicialYCorrendoB2 = 139;
-var imagemPlayer1PosInicialYCorrendoB3 = 139;
-var imagemPlayer1PosInicialYCorrendoB4 = 139;
-
-var imagemPlayer1CorteLarguraCorrendoB1 = 12;
-var imagemPlayer1CorteLarguraCorrendoB2 = 12;
-var imagemPlayer1CorteLarguraCorrendoB3 = 12;
-var imagemPlayer1CorteLarguraCorrendoB4 = 12;
-
-var imagemPlayer1CorteAlturaCorrendoB1 = 15;
-var imagemPlayer1CorteAlturaCorrendoB2 = 15;
-var imagemPlayer1CorteAlturaCorrendoB3 = 15;
-var imagemPlayer1CorteAlturaCorrendoB4 = 15;
-
-////CIVIL 1:
-
-// CORRENDO DIREITA:
-
-var imagemCivil1PosInicialXCorrendoD1 = 5;
-var imagemCivil1PosInicialXCorrendoD2 = 5;
-var imagemCivil1PosInicialXCorrendoD3 = 5;
-var imagemCivil1PosInicialXCorrendoD4 = 5;
-
-var imagemCivil1PosInicialYCorrendoD1 = 11;
-var imagemCivil1PosInicialYCorrendoD2 = 61;
-var imagemCivil1PosInicialYCorrendoD3 = 111;
-var imagemCivil1PosInicialYCorrendoD4 = 11;
-
-var imagemCivil1CorteLarguraCorrendoD1 = 36;
-var imagemCivil1CorteLarguraCorrendoD2 = 36;
-var imagemCivil1CorteLarguraCorrendoD3 = 36;
-var imagemCivil1CorteLarguraCorrendoD4 = 36;
-
-var imagemCivil1CorteAlturaCorrendoD1 = 37;
-var imagemCivil1CorteAlturaCorrendoD2 = 37;
-var imagemCivil1CorteAlturaCorrendoD3 = 37;
-var imagemCivil1CorteAlturaCorrendoD4 = 37;
-
-// CORRENDO ESQUERDA:
-
-var imagemCivil1PosInicialXCorrendoE1 = 6;
-var imagemCivil1PosInicialXCorrendoE2 = 6;
-var imagemCivil1PosInicialXCorrendoE3 = 9;
-var imagemCivil1PosInicialXCorrendoE4 = 6;
-
-var imagemCivil1PosInicialYCorrendoE1 = 310;
-var imagemCivil1PosInicialYCorrendoE2 = 360;
-var imagemCivil1PosInicialYCorrendoE3 = 410;
-var imagemCivil1PosInicialYCorrendoE4 = 310;
-
-var imagemCivil1CorteLarguraCorrendoE1 = 36;
-var imagemCivil1CorteLarguraCorrendoE2 = 36;
-var imagemCivil1CorteLarguraCorrendoE3 = 36;
-var imagemCivil1CorteLarguraCorrendoE4 = 36;
-
-var imagemCivil1CorteAlturaCorrendoE1 = 37;
-var imagemCivil1CorteAlturaCorrendoE2 = 37;
-var imagemCivil1CorteAlturaCorrendoE3 = 37;
-var imagemCivil1CorteAlturaCorrendoE4 = 37;
-
-// CORRENDO PARA CIMA:
-
-var imagemCivil1PosInicialXCorrendoC1 = 6;
-var imagemCivil1PosInicialXCorrendoC2 = 6;
-var imagemCivil1PosInicialXCorrendoC3 = 6;
-var imagemCivil1PosInicialXCorrendoC4 = 6;
-
-var imagemCivil1PosInicialYCorrendoC1 = 460;
-var imagemCivil1PosInicialYCorrendoC2 = 509;
-var imagemCivil1PosInicialYCorrendoC3 = 560;
-var imagemCivil1PosInicialYCorrendoC4 = 460;
-
-var imagemCivil1CorteLarguraCorrendoC1 = 36;
-var imagemCivil1CorteLarguraCorrendoC2 = 36;
-var imagemCivil1CorteLarguraCorrendoC3 = 36;
-var imagemCivil1CorteLarguraCorrendoC4 = 36;
-
-var imagemCivil1CorteAlturaCorrendoC1 = 37;
-var imagemCivil1CorteAlturaCorrendoC2 = 37;
-var imagemCivil1CorteAlturaCorrendoC3 = 37;
-var imagemCivil1CorteAlturaCorrendoC4 = 37;
-
-// CORRENDO PARA BAIXO:
-
-var imagemCivil1PosInicialXCorrendoB1 = 5;
-var imagemCivil1PosInicialXCorrendoB2 = 5;
-var imagemCivil1PosInicialXCorrendoB3 = 5;
-var imagemCivil1PosInicialXCorrendoB4 = 5;
-
-var imagemCivil1PosInicialYCorrendoB1 = 160;
-var imagemCivil1PosInicialYCorrendoB2 = 211;
-var imagemCivil1PosInicialYCorrendoB3 = 261;
-var imagemCivil1PosInicialYCorrendoB4 = 160;
-
-var imagemCivil1CorteLarguraCorrendoB1 = 36;
-var imagemCivil1CorteLarguraCorrendoB2 = 36;
-var imagemCivil1CorteLarguraCorrendoB3 = 36;
-var imagemCivil1CorteLarguraCorrendoB4 = 36;
-
-var imagemCivil1CorteAlturaCorrendoB1 = 37;
-var imagemCivil1CorteAlturaCorrendoB2 = 37;
-var imagemCivil1CorteAlturaCorrendoB3 = 37;
-var imagemCivil1CorteAlturaCorrendoB4 = 37;
-
 // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
-var imagemPlayer1PosInicialX = 19;
-var imagemPlayer1PosInicialY = 23;
-var imagemPlayer1CorteLargura = 10;
-var imagemPlayer1CorteAltura = 15;
+player1.imagemPosInicialX = 19;
+player1.imagemPosInicialY = 23;
+player1.imagemCorteLargura = 10;
+player1.imagemCorteAltura = 15;
 
 // POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
 
-var imagemCivil1PosInicialX = 6;
-var imagemCivil1PosInicialY = 161;
-var imagemCivil1CorteLargura = 36;
-var imagemCivil1CorteAltura = 36;
+civil1.imagemPosInicialX = 6;
+civil1.imagemPosInicialY = 161;
+civil1.imagemCorteLargura = 36;
+civil1.imagemCorteAltura = 36;
 
 //
 
@@ -995,628 +992,311 @@ var loop;
 
 var imagensTempo = 200;
 
-////PLAYER 1:
+////SPRITES:
 
 // SPRITE - CORRENDO DIREITA:
 
-function imagensCorrendoDireitaPlayer1()
+function imagensCorrendoDireita(elemento)
 {
-    //imagemPlayer1PosInicialX:
+    //elemento.imagemPosInicialX:
 
-    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD1)
+    if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD2)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoD3)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD4; }, imagensTempo)
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoD1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD1; }, imagensTempo)
     }
 
-    //imagemPlayer1PosInicialY:
+    //elemento.imagemPosInicialY:
 
-    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD1)
+    if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD2)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoD3)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD4; }, imagensTempo)
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoD1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD1; }, imagensTempo)
     }
 
-    //imagemPlayer1CorteLargura:
+    //elemento.imagemCorteLargura:
 
-    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD1)
+    if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD1)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD2;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD2)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD2;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD2)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD3;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoD3)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD3;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD3)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD4;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD4;
     } else
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoD1;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD1;
     }
 
-    //imagemPlayer1CorteAltura:
+    //elemento.imagemCorteAltura:
 
-    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD1)
+    if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD1)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD2;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD2)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD2;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD2)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD3;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoD3)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD3;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD3)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD4;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD4;
     } else
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoD1;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD1;
     }
 }
 
 // SPRITE - CORRENDO ESQUERDA:
 
-function imagensCorrendoEsquerdaPlayer1()
+function imagensCorrendoEsquerda(elemento)
 {
-    //imagemPlayer1PosInicialX:
+    //elemento.imagemPosInicialX:
 
-    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE1)
+    if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE2)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoE3)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE4; }, imagensTempo)
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoE1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE1; }, imagensTempo)
     }
 
-    //imagemPlayer1PosInicialY:
+    //elemento.imagemPosInicialY:
 
-    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE1)
+    if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE2)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoE3)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE4; }, imagensTempo)
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoE1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE1; }, imagensTempo)
     }
 
-    //imagemPlayer1CorteLargura:
+    //elemento.imagemCorteLargura:
 
-    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE1)
+    if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE1)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE2;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE2)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE2;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE2)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE3;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoE3)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE3;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE3)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE4;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE4;
     } else
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoE1;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE1;
     }
 
-    //imagemPlayer1CorteAltura:
+    //elemento.imagemCorteAltura:
 
-    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE1)
+    if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE1)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE2;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE2)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE2;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE2)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE3;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoE3)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE3;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE3)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE4;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE4;
     } else
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoE1;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE1;
     }
 }
 
 // SPRITE - CORRENDO PARA CIMA:
 
-function imagensCorrendoParaCimaPlayer1()
+function imagensCorrendoParaCima(elemento)
 {
-    //imagemPlayer1PosInicialX:
+    //elemento.imagemPosInicialX:
 
-    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC1)
+    if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC2)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoC3)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC4; }, imagensTempo)
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC1; }, imagensTempo)
 
     }
 
-    //imagemPlayer1PosInicialY:
+    //elemento.imagemPosInicialY:
 
-    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC1)
+    if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC2)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoC3)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC4; }, imagensTempo)
 
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC1; }, imagensTempo)
     }
 
-    //imagemPlayer1CorteLargura:
+    //elemento.imagemCorteLargura:
 
-    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC1)
+    if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC1)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC2;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC2)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC2;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC2)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC3;
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoC3)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC3;
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC3)
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC4;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC4;
     } else
     {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoC1;
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC1;
     }
 
-    //imagemPlayer1CorteAltura:
+    //elemento.imagemCorteAltura:
 
-    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC1)
+    if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC1)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC2;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC2)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC2;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC2)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC3;
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoC3)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC3;
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC3)
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC4;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC4;
     } else
     {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoC1;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC1;
     }
 }
 
 // SPRITE - CORRENDO PARA BAIXO:
 
-function imagensCorrendoParaBaixoPlayer1()
+function imagensCorrendoParaBaixo(elemento)
 {
-    //imagemPlayer1PosInicialX:
+    //elemento.imagemPosInicialX:
 
-    if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB1)
+    if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB2; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB2)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB3; }, imagensTempo)
 
-    } else if (imagemPlayer1PosInicialX == imagemPlayer1PosInicialXCorrendoB3)
+    } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB4; }, imagensTempo)
 
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialX = imagemPlayer1PosInicialXCorrendoB1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB1; }, imagensTempo)
     }
 
-    //imagemPlayer1PosInicialY:
+    //elemento.imagemPosInicialY:
 
-    if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB1)
+    if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB1)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB2; }, imagensTempo)
 
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB2)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB2)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB3; }, imagensTempo)
 
 
-    } else if (imagemPlayer1PosInicialY == imagemPlayer1PosInicialYCorrendoB3)
+    } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB3)
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB4; }, imagensTempo)
 
 
     } else
     {
-        setTimeout(() => { imagemPlayer1PosInicialY = imagemPlayer1PosInicialYCorrendoB1; }, imagensTempo)
-
-    }
-
-    //imagemPlayer1CorteLargura:
-
-    if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB1)
-    {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB2;
-
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB2)
-    {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB3;
-
-    } else if (imagemPlayer1CorteLargura == imagemPlayer1CorteLarguraCorrendoB3)
-    {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB4;
-
-    } else
-    {
-        imagemPlayer1CorteLargura = imagemPlayer1CorteLarguraCorrendoB1;
-    }
-
-    //imagemPlayer1CorteAltura:
-
-    if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB1)
-    {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB2;
-
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB2)
-    {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB3;
-
-    } else if (imagemPlayer1CorteAltura == imagemPlayer1CorteAlturaCorrendoB3)
-    {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB4;
-
-    } else
-    {
-        imagemPlayer1CorteAltura = imagemPlayer1CorteAlturaCorrendoB1;
-    }
-}
-
-////CIVIL 1:
-
-// SPRITE - CORRENDO DIREITA:
-
-function imagensCorrendoDireitaCivil1()
-{
-    //imagemCivil1PosInicialX:
-
-    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD3; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoD3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD4; }, imagensTempo)
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoD1; }, imagensTempo)
-    }
-
-    //imagemCivil1PosInicialY:
-
-    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD3; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoD3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD4; }, imagensTempo)
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoD1; }, imagensTempo)
-    }
-
-    //imagemCivil1CorteLargura:
-
-    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD1)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD2;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD2)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD3;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoD3)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD4;
-    } else
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoD1;
-    }
-
-    //imagemCivil1CorteAltura:
-
-    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD1)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD2;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD2)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD3;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoD3)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD4;
-    } else
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoD1;
-    }
-}
-
-// SPRITE - CORRENDO ESQUERDA:
-
-function imagensCorrendoEsquerdaCivil1()
-{
-    //imagemCivil1PosInicialX:
-
-    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE3; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoE3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE4; }, imagensTempo)
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoE1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB1; }, imagensTempo)
 
     }
 
-    //imagemCivil1PosInicialY:
+    //elemento.imagemCorteLargura:
 
-    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE1)
+    if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB1)
     {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE2; }, imagensTempo)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB2;
 
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE2)
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB2)
     {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE3; }, imagensTempo)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB3;
 
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoE3)
+    } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB3)
     {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE4; }, imagensTempo)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB4;
 
     } else
     {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoE1; }, imagensTempo)
+        elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB1;
     }
 
-    //imagemCivil1CorteLargura:
+    //elemento.imagemCorteAltura:
 
-    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE1)
+    if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB1)
     {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE2;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE2)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE3;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoE3)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE4;
-    } else
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoE1;
-    }
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB2;
 
-    //imagemCivil1CorteAltura:
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB2)
+    {
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB3;
 
-    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE1)
+    } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB3)
     {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE2;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE2)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE3;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoE3)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE4;
-    } else
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoE1;
-    }
-}
-
-// SPRITE - CORRENDO PARA CIMA:
-
-function imagensCorrendoParaCimaCivil1()
-{
-    //imagemCivil1PosInicialX:
-
-    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC3; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoC3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC4; }, imagensTempo)
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB4;
 
     } else
     {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoC1; }, imagensTempo)
-
-    }
-
-    //imagemCivil1PosInicialY:
-
-    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC3; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoC3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC4; }, imagensTempo)
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoC1; }, imagensTempo)
-    }
-
-    //imagemCivil1CorteLargura:
-
-    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC1)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC2;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC2)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC3;
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoC3)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC4;
-    } else
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoC1;
-    }
-
-    //imagemCivil1CorteAltura:
-
-    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC1)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC2;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC2)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC3;
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoC3)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC4;
-    } else
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoC1;
-    }
-}
-
-// SPRITE - CORRENDO PARA BAIXO:
-
-function imagensCorrendoParaBaixoCivil1()
-{
-    //imagemCivil1PosInicialX:
-
-    if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB2; }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB2)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB3; }, imagensTempo)
-
-
-    } else if (imagemCivil1PosInicialX == imagemCivil1PosInicialXCorrendoB3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB4; }, imagensTempo)
-
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialX = imagemCivil1PosInicialXCorrendoB1; }, imagensTempo)
-
-    }
-
-    //imagemCivil1PosInicialY:
-
-    if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB1)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB2; }, imagensTempo)
-
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB2)
-    {
-        setTimeout(() =>
-        {
-            imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB3;
-        }, imagensTempo)
-
-    } else if (imagemCivil1PosInicialY == imagemCivil1PosInicialYCorrendoB3)
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB4; }, imagensTempo)
-
-    } else
-    {
-        setTimeout(() => { imagemCivil1PosInicialY = imagemCivil1PosInicialYCorrendoB1; }, imagensTempo)
-    }
-
-    //imagemCivil1CorteLargura:
-
-    if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB1)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB2;
-
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB2)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB3;
-
-    } else if (imagemCivil1CorteLargura == imagemCivil1CorteLarguraCorrendoB3)
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB4;
-
-    } else
-    {
-        imagemCivil1CorteLargura = imagemCivil1CorteLarguraCorrendoB1;
-    }
-
-    //imagemCivil1CorteAltura:
-
-    if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB1)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB2;
-
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB2)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB3;
-
-    } else if (imagemCivil1CorteAltura == imagemCivil1CorteAlturaCorrendoB3)
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB4;
-
-    } else
-    {
-        imagemCivil1CorteAltura = imagemCivil1CorteAlturaCorrendoB1;
+        elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB1;
     }
 }
 
@@ -1631,7 +1311,46 @@ function reiniciar()
     civil1.posicaoYAtual = 200;
 }
 
-var canvasPrincipalLigado = false;
+//
+
+function patrulhar(elemento)
+{
+
+    if (elemento.posicaoYFixo >= 200)
+    {
+        elemento.direcaoY = -1;
+    }
+    else if (elemento.posicaoY <= 20)
+    {
+        elemento.direcaoY = 1;
+    } else
+    {
+        elemento.direcaoY = elemento.direcaoY;
+    }
+    elemento.posicaoY += elemento.direcaoY;
+}
+
+function imagemParado(elemento)
+{
+    if (elemento)
+    {
+        elemento.imagemPosInicialX = 6;
+        elemento.imagemPosInicialY = 161;
+        elemento.imagemCorteLargura = 36;
+        elemento.imagemCorteAltura = 36;
+    } else
+    {
+        imagemPosInicialX = 6;
+        imagemPosInicialY = 161;
+        imagemCorteLargura = 36;
+        imagemCorteAltura = 36;
+    }
+}
+//
+
+var canvasPrincipalLigado = true;
+
+var loopAlerta = true
 
 var alertaInimigo;
 
@@ -1751,7 +1470,7 @@ function loopDesenho()
     status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
     status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
     status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
-    status12.innerHTML = "quarteirao3.altura: " + quarteirao3.altura;
+    status12.innerHTML = "loopAlerta: " + loopAlerta;
 
     /*
     status1.innerHTML = "quarteirao1.posicaoX + largura: " + (quarteirao1.posicaoX + quarteirao1.largura);
@@ -1933,7 +1652,7 @@ function loopDesenho()
                         player1.posicaoY -= player1.velocidade;
                     }
 
-                    imagensCorrendoParaCimaPlayer1();
+                    imagensCorrendoParaCima(player1);
 
                 } else
                 {
@@ -1946,7 +1665,7 @@ function loopDesenho()
                     {
                         imagemCidade1.posicaoYRecorte -= player1.velocidade;
 
-                        imagensCorrendoParaCimaPlayer1();
+                        imagensCorrendoParaCima(player1);
                     }
                 }
             }
@@ -1966,9 +1685,7 @@ function loopDesenho()
                         player1.posicaoY += player1.velocidade;
                     }
 
-
-
-                    imagensCorrendoParaBaixoPlayer1();
+                    imagensCorrendoParaBaixo(player1);
 
                 } else
                 {
@@ -1981,7 +1698,7 @@ function loopDesenho()
                     {
                         imagemCidade1.posicaoYRecorte += player1.velocidade;
 
-                        imagensCorrendoParaBaixoPlayer1();
+                        imagensCorrendoParaBaixo(player1);
                     }
                 }
             }
@@ -2018,13 +1735,13 @@ function loopDesenho()
                         player1.posicaoX += player1.velocidade;
                     }
 
-                    imagensCorrendoDireitaPlayer1();
+                    imagensCorrendoDireita(player1);
 
                 } else
                 {
                     //ALTERANDO O MAPA POSICAO X:
 
-                    imagensCorrendoDireitaPlayer1();
+                    imagensCorrendoDireita(player1);
 
                     if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvasPrincipal.width)
                     {
@@ -2051,7 +1768,7 @@ function loopDesenho()
                         player1.posicaoX -= player1.velocidade;
                     }
 
-                    imagensCorrendoEsquerdaPlayer1();
+                    imagensCorrendoEsquerda(player1);
 
                 } else
                 {
@@ -2183,7 +1900,7 @@ function loopDesenho()
 
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO PLAYER 1:
 
-        contextoTelaCanvasPrincipal.drawImage(imagemPlayer1, imagemPlayer1PosInicialX, imagemPlayer1PosInicialY, imagemPlayer1CorteLargura, imagemPlayer1CorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
+        contextoTelaCanvasPrincipal.drawImage(player1.imagem, player1.imagemPosInicialX, player1.imagemPosInicialY, player1.imagemCorteLargura, player1.imagemCorteAltura, player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
 
         // DESENHA RETANGULO - PLAYER 1       
         contextoTelaCanvasPrincipal.fillRect(player1.posicaoX, player1.posicaoY, player1.largura, player1.altura);
@@ -2193,7 +1910,7 @@ function loopDesenho()
 
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 1:
 
-        contextoTelaCanvasPrincipal.drawImage(imagemCivil1, imagemCivil1PosInicialX, imagemCivil1PosInicialY, imagemCivil1CorteLargura, imagemCivil1CorteAltura, civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
+        contextoTelaCanvasPrincipal.drawImage(civil1.imagem, civil1.imagemPosInicialX, civil1.imagemPosInicialY, civil1.imagemCorteLargura, civil1.imagemCorteAltura, civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
 
         // DESENHA RETANGULO - PLAYER 2       
         contextoTelaCanvasPrincipal.fillRect(civil1.posicaoX, civil1.posicaoY, civil1.largura, civil1.altura);
@@ -2296,324 +2013,332 @@ function loopDesenho()
         // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
         // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
 
-        // INIMIGO EM ALERTA:
-
-        if (alertaInimigo)
+        if (loopAlerta)
         {
-            //SE SAIR DO MAPA PELO NORTE:
-            if (civil1.posicaoY < imagemCidade1.margemNorte)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO SUL:
-            else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO LESTE:
-            else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO OESTE:
-            else if (civil1.posicaoX < imagemCidade1.margemOeste)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
-            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
+            // INIMIGO EM ALERTA:
 
-                imagensCorrendoEsquerdaCivil1();
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
-            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            if (alertaInimigo)
             {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
-            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
-            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoDireitaCivil1();
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
-            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoEsquerdaCivil1();
-
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
-            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoDireitaCivil1();
-            }
-            // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
-            else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaCimaCivil1();
-            }
-            // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
-            else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 1 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 1 || civil1.posicaoX == player1.posicaoX + 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 1 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY + 2 || civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY - 2 || civil1.posicaoX == player1.posicaoX + 2 && civil1.posicaoY == player1.posicaoY || civil1.posicaoX == player1.posicaoX - 2 && civil1.posicaoY == player1.posicaoY)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
-                var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
-
-                if (confirma)
+                //SE SAIR DO MAPA PELO NORTE:
+                if (civil1.posicaoY < imagemCidade1.margemNorte)
                 {
-                    alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO SUL:
+                else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO LESTE:
+                else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO OESTE:
+                else if (civil1.posicaoX < imagemCidade1.margemOeste)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+                else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoEsquerda(civil1);
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+                else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+                else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+                else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoDireita(civil1);
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+                else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoEsquerda(civil1);
+
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+                else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoDireita(civil1);
+                }
+                // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+                else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaCima(civil1);
+                }
+                // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+                else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+
+                } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
+                    var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
+
+                    if (confirma)
+                    {
+                        alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
+                    } else
+                    {
+                        alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
+                    }
+
+                    reiniciar();
+
                 } else
                 {
-                    alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
+                    //NÃO FAZ NADA
                 }
-
-                reiniciar();
-
+                ////SE NAO ESTIVER EM ALERTA:
             } else
             {
-                //NÃO FAZ NADA
+                //SE SAIR DO MAPA PELO NORTE:
+                if (civil1.posicaoY < imagemCidade1.margemNorte)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO SUL:
+                else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO LESTE:
+                else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                //SE SAIR DO MAPA PELO OESTE:
+                else if (civil1.posicaoX < imagemCidade1.margemOeste)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+                else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoEsquerda(civil1);
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+                else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+                else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+                else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoDireita(civil1);
+                }
+                // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+                else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = -1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoEsquerda(civil1);
+
+                }
+                // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+                else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = 0;
+                    civil1.direcaoX = 1;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoDireita(civil1);
+                }
+                // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+                else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = -1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaCima(civil1);
+                }
+                // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+                else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+                {
+                    civil1.direcaoY = 1;
+                    civil1.direcaoX = 0;
+                    civil1.posicaoXAtual += civil1.direcaoX;
+                    civil1.posicaoYAtual += civil1.direcaoY;
+
+                    imagensCorrendoParaBaixo(civil1);
+
+                } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+                {
+                    //civil1.direcaoY = 0;
+                    //civil1.direcaoX = 0;
+                    //civil1.posicaoXAtual += civil1.direcaoX;
+                    // civil1.posicaoYAtual += civil1.direcaoY;
+
+                    //MUDA IMAGEM PARA PARADO
+
+                    imagemParado(civil1);
+
+                    patrulhar(civil1);
+
+                } else
+                {
+                    //NÃO FAZ NADA
+                }
             }
-            ////SE NAO ESTIVER EM ALERTA:
+            /*
+                    //TEXTES X:
+                    contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+                    contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+                    contextoTelaCanvasPrincipal.beginPath();
+                    contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+                    contextoTelaCanvasPrincipal.lineTo(player1.posicaoX + 10, player1.posicaoY)
+                    contextoTelaCanvasPrincipal.stroke();
+                    contextoTelaCanvasPrincipal.fill();
+                    contextoTelaCanvasPrincipal.closePath();
+            
+                    //TEXTES Y:
+                    contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+                    contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+                    contextoTelaCanvasPrincipal.beginPath();
+                    contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+                    contextoTelaCanvasPrincipal.lineTo(player1.posicaoX, player1.posicaoY + 10)
+                    contextoTelaCanvasPrincipal.stroke();
+                    contextoTelaCanvasPrincipal.fill();
+                    contextoTelaCanvasPrincipal.closePath();
+            
+                    //TEXTES X:
+                    contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+                    contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+                    contextoTelaCanvasPrincipal.beginPath();
+                    contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+                    contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
+                    contextoTelaCanvasPrincipal.stroke();
+                    contextoTelaCanvasPrincipal.fill();
+                    contextoTelaCanvasPrincipal.closePath();
+            
+                    //TEXTES Y:
+                    contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+                    contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+                    contextoTelaCanvasPrincipal.beginPath();
+                    contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+                    contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
+                    contextoTelaCanvasPrincipal.stroke();
+                    contextoTelaCanvasPrincipal.fill();
+                    contextoTelaCanvasPrincipal.closePath();
+            */
         } else
         {
-            //SE SAIR DO MAPA PELO NORTE:
-            if (civil1.posicaoY < imagemCidade1.margemNorte)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO SUL:
-            else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO LESTE:
-            else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            //SE SAIR DO MAPA PELO OESTE:
-            else if (civil1.posicaoX < imagemCidade1.margemOeste)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
-            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
 
-                imagensCorrendoEsquerdaCivil1();
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
-            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
-            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
-            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoDireitaCivil1();
-            }
-            // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
-            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = -1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoEsquerdaCivil1();
-
-            }
-            // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
-            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 1;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoDireitaCivil1();
-            }
-            // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
-            else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = -1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaCimaCivil1();
-            }
-            // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
-            else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 1;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo + 1 || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo - 1 || civil1.posicaoX == civil1.posicaoXFixo + 1 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo - 1 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo + 2 || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo - 2 || civil1.posicaoX == civil1.posicaoXFixo + 2 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo - 2 && civil1.posicaoY == civil1.posicaoYFixo)
-            {
-                civil1.direcaoY = 0;
-                civil1.direcaoX = 0;
-                civil1.posicaoXAtual += civil1.direcaoX;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                //MUDA IMAGEM PARA PARADO
-                imagemCivil1PosInicialX = 6;
-                imagemCivil1PosInicialY = 161;
-                imagemCivil1CorteLargura = 36;
-                imagemCivil1CorteAltura = 36;
-
-            } else
-            {
-                //NÃO FAZ NADA
-            }
         }
-        /*
-                //TEXTES X:
-                contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-                contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
-                contextoTelaCanvasPrincipal.beginPath();
-                contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
-                contextoTelaCanvasPrincipal.lineTo(player1.posicaoX + 10, player1.posicaoY)
-                contextoTelaCanvasPrincipal.stroke();
-                contextoTelaCanvasPrincipal.fill();
-                contextoTelaCanvasPrincipal.closePath();
-        
-                //TEXTES Y:
-                contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
-                contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
-                contextoTelaCanvasPrincipal.beginPath();
-                contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
-                contextoTelaCanvasPrincipal.lineTo(player1.posicaoX, player1.posicaoY + 10)
-                contextoTelaCanvasPrincipal.stroke();
-                contextoTelaCanvasPrincipal.fill();
-                contextoTelaCanvasPrincipal.closePath();
-        
-                //TEXTES X:
-                contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-                contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
-                contextoTelaCanvasPrincipal.beginPath();
-                contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-                contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
-                contextoTelaCanvasPrincipal.stroke();
-                contextoTelaCanvasPrincipal.fill();
-                contextoTelaCanvasPrincipal.closePath();
-        
-                //TEXTES Y:
-                contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
-                contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
-                contextoTelaCanvasPrincipal.beginPath();
-                contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-                contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
-                contextoTelaCanvasPrincipal.stroke();
-                contextoTelaCanvasPrincipal.fill();
-                contextoTelaCanvasPrincipal.closePath();
-        */
         loop = requestAnimationFrame(loopDesenho);
     }
+    //SE loopAlerta FOR IGUAL A FALSE:
+
 }
 
 ////////////////////////////////////////////////////////
