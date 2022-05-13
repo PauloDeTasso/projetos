@@ -1312,38 +1312,37 @@ function reiniciar()
 }
 
 //
+var contagemTestePatrulha = 0;
 
 function patrulhar(elemento)
 {
-
-    if (elemento.posicaoYFixo >= 200)
-    {
-        elemento.direcaoY = -1;
-    }
-    else if (elemento.posicaoY <= 20)
-    {
-        elemento.direcaoY = 1;
-    } else
-    {
-        elemento.direcaoY = elemento.direcaoY;
-    }
-    elemento.posicaoY += elemento.direcaoY;
+    contagemTestePatrulha++;
+    status12.innerHTML = "Patrulhando " + contagemTestePatrulha + " vezes!";
 }
 
 function imagemParado(elemento)
 {
-    if (elemento)
+    switch (elemento)
     {
-        elemento.imagemPosInicialX = 6;
-        elemento.imagemPosInicialY = 161;
-        elemento.imagemCorteLargura = 36;
-        elemento.imagemCorteAltura = 36;
-    } else
-    {
-        imagemPosInicialX = 6;
-        imagemPosInicialY = 161;
-        imagemCorteLargura = 36;
-        imagemCorteAltura = 36;
+        case player1:
+
+            elemento.imagemPosInicialX = 19;
+            elemento.imagemPosInicialY = 23;
+            elemento.imagemCorteLargura = 10;
+            elemento.imagemCorteAltura = 15;
+            break;
+
+        case civil1:
+
+            elemento.imagemPosInicialX = 6;
+            elemento.imagemPosInicialY = 161;
+            elemento.imagemCorteLargura = 36;
+            elemento.imagemCorteAltura = 36;
+            break;
+
+        default:
+
+            break;
     }
 }
 //
@@ -1706,12 +1705,7 @@ function loopDesenho()
         {
             if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
             {
-                /*
-                imagemPlayer1PosInicialX = 19;
-                imagemPlayer1PosInicialY = 23;
-                imagemPlayer1CorteLargura = 10;
-                imagemPlayer1CorteAltura = 15;
-            */
+                imagemParado(player1);
             }
         }
 
@@ -2274,13 +2268,6 @@ function loopDesenho()
 
                 } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
                 {
-                    //civil1.direcaoY = 0;
-                    //civil1.direcaoX = 0;
-                    //civil1.posicaoXAtual += civil1.direcaoX;
-                    // civil1.posicaoYAtual += civil1.direcaoY;
-
-                    //MUDA IMAGEM PARA PARADO
-
                     imagemParado(civil1);
 
                     patrulhar(civil1);
