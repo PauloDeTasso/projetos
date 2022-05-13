@@ -114,6 +114,8 @@ status7 = document.getElementById('status7');
 status8 = document.getElementById('status8');
 status9 = document.getElementById('status9');
 status10 = document.getElementById('status10');
+status11 = document.getElementById('status11');
+status12 = document.getElementById('status12');
 
 ///////////////////////////// VARIAVEIS LOCAIS:
 
@@ -625,6 +627,10 @@ imagemCidade1.posicaoX = 0;
 imagemCidade1.posicaoY = 0;
 imagemCidade1.largura = imagemCidade1.width;
 imagemCidade1.altura = imagemCidade1.height;
+imagemCidade1.margemNorte = imagemCidade1.posicaoY;
+imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height;
+imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width;
+imagemCidade1.margemOeste = imagemCidade1.posicaoX;
 
 //contextoTelaCanvasPrincipal.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
 
@@ -667,10 +673,10 @@ function Civil()
 {
     this.largura = 50; //
     this.altura = 50; // 
-    this.posicaoXFixo = 740; //
-    this.posicaoYFixo = 20; //
     this.posicaoXAtual = 740; //
     this.posicaoYAtual = 20; //
+    this.posicaoXFixo = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740; //
+    this.posicaoYFixo = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20; //
     this.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoXAtual; //
     this.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoYAtual; //    
     this.velocidade = 3; //
@@ -1625,7 +1631,7 @@ function reiniciar()
     civil1.posicaoYAtual = 200;
 }
 
-var canvasPrincipalLigado = true;
+var canvasPrincipalLigado = false;
 
 var alertaInimigo;
 
@@ -1695,13 +1701,13 @@ function loopDesenho()
 {
     //AREAS PROIBIDAS DE MOVIMENTAÇÃO:
 
-    topouQuarteirao1Leste = player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoX + player1.largura >= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY + player1.altura <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY >= quarteirao3.posicaoY;
+    topouQuarteirao1Direita = player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoX + player1.largura >= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura;
 
-    topouQuarteirao1Oeste = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX && player1.posicaoY + player1.altura <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY >= quarteirao3.posicaoY;
+    topouQuarteirao1Esquerda = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura;
 
-    topouQuarteirao1Norte = player1.posicaoY <= quarteirao3.posicaoY && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoX >= quarteirao3.posicaoX && player1.posicaoX + player1.largura <= quarteirao3.posicaoX + quarteirao3.largura;
+    topouQuarteirao1EmCima = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY <= quarteirao3.posicaoY && player1.posicaoY + player1.altura >= quarteirao3.posicaoY;
 
-    topouQuarteirao1Sul = player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoX >= quarteirao3.posicaoX && player1.posicaoX + player1.largura <= quarteirao3.posicaoX + quarteirao3.largura;
+    topouQuarteirao1EmBaixo = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY + quarteirao3.altura;
 
     //ATUALIZAR POSICAO PLAYER1:
 
@@ -1713,6 +1719,19 @@ function loopDesenho()
     civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + civil1.posicaoXAtual;
     civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + civil1.posicaoYAtual;
 
+    //ATUALIZAR POSICAO FIXO CIVIL1:
+
+    civil1.posicaoXFixo = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740; //
+
+    civil1.posicaoYFixo = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20; //   
+
+    //IMAGEM CIDADE 1 POSICAO FIXA NORTE:
+
+    imagemCidade1.margemNorte = imagemCidade1.posicaoY;
+    imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height;
+    imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width;
+    imagemCidade1.margemOeste = imagemCidade1.posicaoX;
+
     //ATUALIZAR POSICAO AREA 1:
 
     quarteirao3.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + quarteirao3.posicaoXAtual;
@@ -1720,6 +1739,21 @@ function loopDesenho()
 
     //STATUS SISTEMA:
 
+    status1.innerHTML = "civil1.posicaoXFixo: " + (civil1.posicaoXFixo);
+    status2.innerHTML = " civil1.posicaoYFixo: " + (civil1.posicaoYFixo);
+    status3.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
+    status4.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
+    status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+
+    status6.innerHTML = "player1.posicaoY: " + player1.posicaoY;
+    status7.innerHTML = "topouQuarteirao1EmCima: " + topouQuarteirao1Direita;
+    status8.innerHTML = "topouQuarteirao1EmBaixo: " + topouQuarteirao1Direita;
+    status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
+    status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
+    status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
+    status12.innerHTML = "quarteirao3.altura: " + quarteirao3.altura;
+
+    /*
     status1.innerHTML = "quarteirao1.posicaoX + largura: " + (quarteirao1.posicaoX + quarteirao1.largura);
     status2.innerHTML = "quarteirao1.posicaoY + altura: " + (quarteirao1.posicaoY + quarteirao1.altura);
     status3.innerHTML = "player1.posicaoXGlobal " + player1.posicaoXGlobal;
@@ -1731,7 +1765,7 @@ function loopDesenho()
     status8.innerHTML = "quarteirao1.largura: " + quarteirao1.largura;
     status9.innerHTML = "quarteirao1.altura: " + quarteirao1.altura;
     status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
-
+*/
     /*
     status1.innerHTML = "civil1.posicaoX: " + civil1.posicaoX;
     status2.innerHTML = "civil1.posicaoY: " + civil1.posicaoY;
@@ -1891,7 +1925,7 @@ function loopDesenho()
                     // MOVE PARA CIMA
                     //   player1.posicaoY -= player1.velocidade;             
 
-                    if (topouQuarteirao1Sul)
+                    if (topouQuarteirao1EmBaixo)
                     {
                         // NÃO FAZ NADA
                     } else
@@ -1924,7 +1958,7 @@ function loopDesenho()
                 {
                     // MOVE PARA BAIXO
 
-                    if (topouQuarteirao1Norte)
+                    if (topouQuarteirao1EmCima)
                     {
                         // NÃO FAZ NADA
                     } else
@@ -1976,7 +2010,7 @@ function loopDesenho()
                 if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
                 {
 
-                    if (topouQuarteirao1Oeste)
+                    if (topouQuarteirao1Esquerda)
                     {
                         // NÃO FAZ NADA
                     } else
@@ -2009,7 +2043,7 @@ function loopDesenho()
                 {
                     // muda posição
 
-                    if (topouQuarteirao1Leste)
+                    if (topouQuarteirao1Direita)
                     {
                         // NÃO FAZ NADA
                     } else
@@ -2266,21 +2300,40 @@ function loopDesenho()
 
         if (alertaInimigo)
         {
-            if (civil1.posicaoY >= imagemCidade1.height - civil1.altura)
-            {
-                civil1.direcaoY = -1;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoY <= imagemCidade1.posicaoY)
+            //SE SAIR DO MAPA PELO NORTE:
+            if (civil1.posicaoY < imagemCidade1.margemNorte)
             {
                 civil1.direcaoY = 1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
                 civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaCimaCivil1();
-
-            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            }
+            //SE SAIR DO MAPA PELO SUL:
+            else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            //SE SAIR DO MAPA PELO LESTE:
+            else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = -1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            //SE SAIR DO MAPA PELO OESTE:
+            else if (civil1.posicaoX < imagemCidade1.margemOeste)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY > player1.posicaoY)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = -1;
@@ -2288,8 +2341,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoEsquerdaCivil1();
-
-            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY < player1.posicaoY)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = -1;
@@ -2297,8 +2351,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY < player1.posicaoY)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 1;
@@ -2306,8 +2361,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY > player1.posicaoY)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 1;
@@ -2315,8 +2371,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
-
-            } else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+            else if (civil1.posicaoX > player1.posicaoX && civil1.posicaoY == player1.posicaoY)
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = -1;
@@ -2325,7 +2382,9 @@ function loopDesenho()
 
                 imagensCorrendoEsquerdaCivil1();
 
-            } else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+            else if (civil1.posicaoX < player1.posicaoX && civil1.posicaoY == player1.posicaoY)
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = 1;
@@ -2333,8 +2392,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
-
-            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+            else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY > player1.posicaoY)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 0;
@@ -2342,8 +2402,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaCimaCivil1();
-
-            } else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
+            }
+            // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+            else if (civil1.posicaoX == player1.posicaoX && civil1.posicaoY < player1.posicaoY)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 0;
@@ -2374,26 +2435,45 @@ function loopDesenho()
 
             } else
             {
-                civil1.posicaoYAtual += civil1.direcaoY;
+                //NÃO FAZ NADA
             }
-            //SE NAO ESTIVER EM ALERTA:
+            ////SE NAO ESTIVER EM ALERTA:
         } else
         {
-            if (civil1.posicaoY + civil1.altura >= imagemCidade1.height)
-            {
-                civil1.direcaoY = -1;
-                civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaCimaCivil1();
-
-            } else if (civil1.posicaoY <= imagemCidade1.posicaoY)
+            //SE SAIR DO MAPA PELO NORTE:
+            if (civil1.posicaoY < imagemCidade1.margemNorte)
             {
                 civil1.direcaoY = 1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
                 civil1.posicaoYAtual += civil1.direcaoY;
-
-                imagensCorrendoParaCimaCivil1();
-
-            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            }
+            //SE SAIR DO MAPA PELO SUL:
+            else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            //SE SAIR DO MAPA PELO LESTE:
+            else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = -1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            //SE SAIR DO MAPA PELO OESTE:
+            else if (civil1.posicaoX < imagemCidade1.margemOeste)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = -1;
@@ -2401,8 +2481,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoEsquerdaCivil1();
-
-            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = -1;
@@ -2410,8 +2491,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 1;
@@ -2419,8 +2501,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaBaixoCivil1();
-
-            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 1;
@@ -2428,8 +2511,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
-
-            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+            else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = -1;
@@ -2438,7 +2522,9 @@ function loopDesenho()
 
                 imagensCorrendoEsquerdaCivil1();
 
-            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+            else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
             {
                 civil1.direcaoY = 0;
                 civil1.direcaoX = 1;
@@ -2446,8 +2532,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoDireitaCivil1();
-
-            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+            else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
             {
                 civil1.direcaoY = -1;
                 civil1.direcaoX = 0;
@@ -2455,8 +2542,9 @@ function loopDesenho()
                 civil1.posicaoYAtual += civil1.direcaoY;
 
                 imagensCorrendoParaCimaCivil1();
-
-            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            }
+            // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+            else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
             {
                 civil1.direcaoY = 1;
                 civil1.direcaoX = 0;
@@ -2480,10 +2568,49 @@ function loopDesenho()
 
             } else
             {
-                civil1.posicaoYAtual += civil1.direcaoY;
+                //NÃO FAZ NADA
             }
-
         }
+
+        //TEXTES X:
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+        contextoTelaCanvasPrincipal.beginPath();
+        contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+        contextoTelaCanvasPrincipal.lineTo(player1.posicaoX + 10, player1.posicaoY)
+        contextoTelaCanvasPrincipal.stroke();
+        contextoTelaCanvasPrincipal.fill();
+        contextoTelaCanvasPrincipal.closePath();
+
+        //TEXTES Y:
+        contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+        contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+        contextoTelaCanvasPrincipal.beginPath();
+        contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+        contextoTelaCanvasPrincipal.lineTo(player1.posicaoX, player1.posicaoY + 10)
+        contextoTelaCanvasPrincipal.stroke();
+        contextoTelaCanvasPrincipal.fill();
+        contextoTelaCanvasPrincipal.closePath();
+
+        //TEXTES X:
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+        contextoTelaCanvasPrincipal.beginPath();
+        contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+        contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
+        contextoTelaCanvasPrincipal.stroke();
+        contextoTelaCanvasPrincipal.fill();
+        contextoTelaCanvasPrincipal.closePath();
+
+        //TEXTES Y:
+        contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+        contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+        contextoTelaCanvasPrincipal.beginPath();
+        contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+        contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
+        contextoTelaCanvasPrincipal.stroke();
+        contextoTelaCanvasPrincipal.fill();
+        contextoTelaCanvasPrincipal.closePath();
 
         loop = requestAnimationFrame(loopDesenho);
     }
