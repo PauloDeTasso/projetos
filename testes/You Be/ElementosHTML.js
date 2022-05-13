@@ -216,6 +216,20 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //CONFIGURAÇÕES EVENTOS BOTÕES:
 
+var imagemCarregada = false;
+
+cidade1.imagem.addEventListener('load', () => { imagemCarregada = true }, false);
+
+if (imagemCarregada)
+{
+    location.reload(false);
+} else
+{
+    status12.innerHTML = "Aguarde..."
+}
+
+//
+
 botaoLigar.addEventListener('click', ligar, false);
 botaoPlay.addEventListener('click', play, false);
 botaoStop.addEventListener('click', stop, false);
