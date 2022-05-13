@@ -616,31 +616,8 @@ imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
 
 //
 
-var imagemCidade1 = new Image();
-imagemCidade1.src = "../../imagens/texture/2D/cidade1.png"
-
-imagemCidade1.posicaoXRecorte = 0;
-imagemCidade1.posicaoYRecorte = 0;
-imagemCidade1.larguraRecorte = imagemCidade1.width;
-imagemCidade1.alturaRecorte = imagemCidade1.height;
-imagemCidade1.posicaoX = 0;
-imagemCidade1.posicaoY = 0;
-imagemCidade1.largura = imagemCidade1.width;
-imagemCidade1.altura = imagemCidade1.height;
-imagemCidade1.margemNorte = imagemCidade1.posicaoY;
-imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height;
-imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width;
-imagemCidade1.margemOeste = imagemCidade1.posicaoX;
-
-//contextoTelaCanvasPrincipal.drawImage(imagemCidade1, 0, 0, 1000, 1000, 0, 0, 500, 500);
-
-//
-
 var imagemCidade2 = new Image();
 imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
-
-//
-
 
 //
 
@@ -648,9 +625,30 @@ imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
 
 // FUNÇÕES CONSTRUTORAS
 
+// CIDADES:
+
+function Cidade()
+{
+    this.imagem = new Image();
+    this.imagem.src = "../../imagens/texture/2D/cidade1.png"
+
+    this.imagem.posicaoXRecorte = 0;
+    this.imagem.posicaoYRecorte = 0;
+    this.imagem.larguraRecorte = this.imagem.width;
+    this.imagem.alturaRecorte = this.imagem.height;
+    this.imagem.posicaoX = 0;
+    this.imagem.posicaoY = 0;
+    this.imagem.largura = this.imagem.width;
+    this.imagem.altura = this.imagem.height;
+    this.imagem.margemNorte = this.imagem.posicaoY;
+    this.imagem.margemSul = this.imagem.posicaoY + this.imagem.height;
+    this.imagem.margemLeste = this.imagem.posicaoX + this.imagem.width;
+    this.imagem.margemOeste = this.imagem.posicaoX;
+}
+
 // PLAYER
 
-function Player()
+function Player(cidade)
 {
     this.largura = 50; //
     this.altura = 50; // 
@@ -658,9 +656,9 @@ function Player()
     this.posicaoY = 200; //   
     this.velocidade = 3; //
 
-    this.posicaoXGlobal = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoX;
+    this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
 
-    this.posicaoYGlobal = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoY;
+    this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoY;
 
     //IMAGEM:
 
@@ -757,16 +755,16 @@ function Player()
 
 }
 
-function Civil()
+function Civil(cidade)
 {
     this.largura = 50; //
     this.altura = 50; //     
     this.posicaoXAtual = 740; //
-    this.posicaoYAtual = 20; //
-    this.posicaoXFixo = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740; //
-    this.posicaoYFixo = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20; //
-    this.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoXAtual; //
-    this.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoYAtual; //    
+    this.posicaoYAtual = 400; //
+    this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740; //
+    this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20; //
+    this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
+    this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
@@ -949,9 +947,11 @@ function Controle(key1, key2, key3, key4)
     }
 }
 
-var player1 = new Player();
+var cidade1 = new Cidade();
 
-var civil1 = new Civil();
+var player1 = new Player(cidade1);
+
+var civil1 = new Civil(cidade1);
 
 var controle1 = new Controle(87, 83, 68, 65);
 
@@ -1312,12 +1312,10 @@ function reiniciar()
 }
 
 //
-var contagemTestePatrulha = 0;
 
 function patrulhar(elemento)
 {
-    contagemTestePatrulha++;
-    status12.innerHTML = "Patrulhando " + contagemTestePatrulha + " vezes!";
+
 }
 
 function imagemParado(elemento)
@@ -1361,9 +1359,9 @@ var x1 = 17, y1 = 20;
 
 var quarteirao1 = {}
 
-quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 20;
+quarteirao1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 20;
 
-quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20;
+quarteirao1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 20;
 
 quarteirao1.largura = 100;
 
@@ -1373,9 +1371,9 @@ quarteirao1.altura = 100;
 
 var quarteirao2 = {}
 
-quarteirao2.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 320;
+quarteirao2.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 320;
 
-quarteirao2.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 17;
+quarteirao2.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 17;
 
 quarteirao2.largura = 180;
 
@@ -1389,9 +1387,9 @@ quarteirao3.posicaoXAtual = 430;
 
 quarteirao3.posicaoYAtual = 310;
 
-quarteirao3.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + quarteirao3.posicaoXAtual;
+quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
 
-quarteirao3.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + quarteirao3.posicaoYAtual;
+quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
 
 quarteirao3.largura = 250;
 
@@ -1429,31 +1427,31 @@ function loopDesenho()
 
     //ATUALIZAR POSICAO PLAYER1:
 
-    player1.posicaoXGlobal = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + player1.posicaoX;
-    player1.posicaoYGlobal = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + player1.posicaoY;
+    player1.posicaoXGlobal = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + player1.posicaoX;
+    player1.posicaoYGlobal = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + player1.posicaoY;
 
     //ATUALIZAR POSICAO CIVIL1:
 
-    civil1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + civil1.posicaoXAtual;
-    civil1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + civil1.posicaoYAtual;
+    civil1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + civil1.posicaoXAtual;
+    civil1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + civil1.posicaoYAtual;
 
     //ATUALIZAR POSICAO FIXO CIVIL1:
 
-    civil1.posicaoXFixo = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 740; //
+    civil1.posicaoXFixo = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 740; //
 
-    civil1.posicaoYFixo = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20; //   
+    civil1.posicaoYFixo = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 20; //   
 
     //IMAGEM CIDADE 1 POSICAO FIXA NORTE:
 
-    imagemCidade1.margemNorte = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte;
-    imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height - imagemCidade1.posicaoYRecorte;
-    imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width - imagemCidade1.posicaoXRecorte;
-    imagemCidade1.margemOeste = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte;
+    cidade1.imagem.margemNorte = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte;
+    cidade1.imagem.margemSul = cidade1.imagem.posicaoY + cidade1.imagem.height - cidade1.imagem.posicaoYRecorte;
+    cidade1.imagem.margemLeste = cidade1.imagem.posicaoX + cidade1.imagem.width - cidade1.imagem.posicaoXRecorte;
+    cidade1.imagem.margemOeste = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte;
 
     //ATUALIZAR POSICAO AREA 1:
 
-    quarteirao3.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + quarteirao3.posicaoXAtual;
-    quarteirao3.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + quarteirao3.posicaoYAtual;
+    quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
+    quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
 
     //STATUS SISTEMA:
 
@@ -1491,10 +1489,10 @@ function loopDesenho()
     status4.innerHTML = "civil1.posicaoYAtual " + civil1.posicaoYAtual;
     status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
 
-    status6.innerHTML = "imagemCidade1.posicaoX: " + imagemCidade1.posicaoX;
-    status7.innerHTML = "imagemCidade1.posicaoY: " + imagemCidade1.posicaoY;
-    status8.innerHTML = "imagemCidade1.posicaoXRecorte: " + imagemCidade1.posicaoXRecorte;
-    status9.innerHTML = "imagemCidade1.posicaoYRecorte: " + imagemCidade1.posicaoYRecorte;
+    status6.innerHTML = "cidade1.imagem.posicaoX: " + cidade1.imagem.posicaoX;
+    status7.innerHTML = "cidade1.imagem.posicaoY: " + cidade1.imagem.posicaoY;
+    status8.innerHTML = "cidade1.imagem.posicaoXRecorte: " + cidade1.imagem.posicaoXRecorte;
+    status9.innerHTML = "cidade1.imagem.posicaoYRecorte: " + cidade1.imagem.posicaoYRecorte;
     status10.innerHTML = "player1.posicaoY: " + player1.posicaoY;
 */
     //CODIÇÃO INIMIGO EM ALERTA:
@@ -1628,7 +1626,7 @@ function loopDesenho()
         }
 
         // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
-        contextoTelaCanvasPrincipal.drawImage(imagemCidade1, imagemCidade1.posicaoXRecorte, imagemCidade1.posicaoYRecorte, imagemCidade1.larguraRecorte, imagemCidade1.alturaRecorte, imagemCidade1.posicaoX, imagemCidade1.posicaoY, imagemCidade1.largura, imagemCidade1.altura);
+        contextoTelaCanvasPrincipal.drawImage(cidade1.imagem, cidade1.imagem.posicaoXRecorte, cidade1.imagem.posicaoYRecorte, cidade1.imagem.larguraRecorte, cidade1.imagem.alturaRecorte, cidade1.imagem.posicaoX, cidade1.imagem.posicaoY, cidade1.imagem.largura, cidade1.imagem.altura);
 
         //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
         // SE PRESSIONOU UMA TECLA
@@ -1657,12 +1655,12 @@ function loopDesenho()
                 {
                     //MOVE MAPA PARA CIMA SE POSICAO Y DA IMAGEM É MAIOR QUE ZERO '0':
 
-                    if (imagemCidade1.posicaoYRecorte <= 0)
+                    if (cidade1.imagem.posicaoYRecorte <= 0)
                     {
-                        imagemCidade1.posicaoYRecorte = imagemCidade1.posicaoYRecorte;
+                        cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
                     } else
                     {
-                        imagemCidade1.posicaoYRecorte -= player1.velocidade;
+                        cidade1.imagem.posicaoYRecorte -= player1.velocidade;
 
                         imagensCorrendoParaCima(player1);
                     }
@@ -1690,12 +1688,12 @@ function loopDesenho()
                 {
                     //MOVENDO MAPA PARA BAIXAO - POSICAO Y:
 
-                    if (imagemCidade1.posicaoYRecorte >= imagemCidade1.height - telaCanvasPrincipal.height)
+                    if (cidade1.imagem.posicaoYRecorte >= cidade1.imagem.height - telaCanvasPrincipal.height)
                     {
-                        imagemCidade1.posicaoYRecorte = imagemCidade1.posicaoYRecorte;
+                        cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
                     } else
                     {
-                        imagemCidade1.posicaoYRecorte += player1.velocidade;
+                        cidade1.imagem.posicaoYRecorte += player1.velocidade;
 
                         imagensCorrendoParaBaixo(player1);
                     }
@@ -1737,12 +1735,12 @@ function loopDesenho()
 
                     imagensCorrendoDireita(player1);
 
-                    if (imagemCidade1.posicaoXRecorte >= imagemCidade1.width - telaCanvasPrincipal.width)
+                    if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
                     {
-                        imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
+                        cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
                     } else
                     {
-                        imagemCidade1.posicaoXRecorte += player1.velocidade;
+                        cidade1.imagem.posicaoXRecorte += player1.velocidade;
                     }
                 }
 
@@ -1768,12 +1766,12 @@ function loopDesenho()
                 {
                     //MOVENDO MAPA POSICAO -X:
 
-                    if (imagemCidade1.posicaoXRecorte <= 0)
+                    if (cidade1.imagem.posicaoXRecorte <= 0)
                     {
-                        imagemCidade1.posicaoXRecorte = imagemCidade1.posicaoXRecorte;
+                        cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
                     } else
                     {
-                        imagemCidade1.posicaoXRecorte -= player1.velocidade;
+                        cidade1.imagem.posicaoXRecorte -= player1.velocidade;
                     }
                 }
             }
@@ -2001,12 +1999,13 @@ function loopDesenho()
      
         // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
         contextoTelaCanvasPrincipal.fill();
-    */
+        */
         //
 
         // DEFINE A VARIAVEL COM A FUNCAO PARECIDA COM SETINTERVAL()
         // A DIFERENÇA ESTA QUE ELE SO CHAMA NOVAMENTE A FUNCAO QUANDO O SISTEMA ESTÁ OCIOSO.
 
+        // SE loopAlerta TRUE:
         if (loopAlerta)
         {
             // INIMIGO EM ALERTA:
@@ -2014,7 +2013,7 @@ function loopDesenho()
             if (alertaInimigo)
             {
                 //SE SAIR DO MAPA PELO NORTE:
-                if (civil1.posicaoY < imagemCidade1.margemNorte)
+                if (civil1.posicaoY < cidade1.imagem.margemNorte)
                 {
                     civil1.direcaoY = 1;
                     civil1.direcaoX = 0;
@@ -2022,7 +2021,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO SUL:
-                else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+                else if (civil1.posicaoY + civil1.altura > cidade1.imagem.margemSul)
                 {
                     civil1.direcaoY = -1;
                     civil1.direcaoX = 0;
@@ -2030,7 +2029,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO LESTE:
-                else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+                else if (civil1.posicaoX + civil1.largura > cidade1.imagem.margemLeste)
                 {
                     civil1.direcaoY = 0;
                     civil1.direcaoX = -1;
@@ -2038,7 +2037,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO OESTE:
-                else if (civil1.posicaoX < imagemCidade1.margemOeste)
+                else if (civil1.posicaoX < cidade1.imagem.margemOeste)
                 {
                     civil1.direcaoY = 0;
                     civil1.direcaoX = 1;
@@ -2154,7 +2153,7 @@ function loopDesenho()
             } else
             {
                 //SE SAIR DO MAPA PELO NORTE:
-                if (civil1.posicaoY < imagemCidade1.margemNorte)
+                if (civil1.posicaoY < cidade1.imagem.margemNorte)
                 {
                     civil1.direcaoY = 1;
                     civil1.direcaoX = 0;
@@ -2162,7 +2161,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO SUL:
-                else if (civil1.posicaoY + civil1.altura > imagemCidade1.margemSul)
+                else if (civil1.posicaoY + civil1.altura > cidade1.imagem.margemSul)
                 {
                     civil1.direcaoY = -1;
                     civil1.direcaoX = 0;
@@ -2170,7 +2169,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO LESTE:
-                else if (civil1.posicaoX + civil1.largura > imagemCidade1.margemLeste)
+                else if (civil1.posicaoX + civil1.largura > cidade1.imagem.margemLeste)
                 {
                     civil1.direcaoY = 0;
                     civil1.direcaoX = -1;
@@ -2178,7 +2177,7 @@ function loopDesenho()
                     civil1.posicaoYAtual += civil1.direcaoY;
                 }
                 //SE SAIR DO MAPA PELO OESTE:
-                else if (civil1.posicaoX < imagemCidade1.margemOeste)
+                else if (civil1.posicaoX < cidade1.imagem.margemOeste)
                 {
                     civil1.direcaoY = 0;
                     civil1.direcaoX = 1;
@@ -2297,34 +2296,19 @@ function loopDesenho()
                     contextoTelaCanvasPrincipal.stroke();
                     contextoTelaCanvasPrincipal.fill();
                     contextoTelaCanvasPrincipal.closePath();
-            
-                    //TEXTES X:
-                    contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-                    contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
-                    contextoTelaCanvasPrincipal.beginPath();
-                    contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-                    contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
-                    contextoTelaCanvasPrincipal.stroke();
-                    contextoTelaCanvasPrincipal.fill();
-                    contextoTelaCanvasPrincipal.closePath();
-            
-                    //TEXTES Y:
-                    contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
-                    contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
-                    contextoTelaCanvasPrincipal.beginPath();
-                    contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-                    contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
-                    contextoTelaCanvasPrincipal.stroke();
-                    contextoTelaCanvasPrincipal.fill();
-                    contextoTelaCanvasPrincipal.closePath();
             */
+            //SE loopAlerta É FALSE:
         } else
         {
-
+            status12.innerHTML = "loopAlerta Desligado!"
         }
         loop = requestAnimationFrame(loopDesenho);
     }
-    //SE loopAlerta FOR IGUAL A FALSE:
+    //SE canvasPrincipalLigado É FALSE:
+    else
+    {
+        status12.innerHTML = "Canvas Desligado!"
+    }
 
 }
 
