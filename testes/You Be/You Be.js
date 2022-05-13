@@ -1727,10 +1727,10 @@ function loopDesenho()
 
     //IMAGEM CIDADE 1 POSICAO FIXA NORTE:
 
-    imagemCidade1.margemNorte = imagemCidade1.posicaoY;
-    imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height;
-    imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width;
-    imagemCidade1.margemOeste = imagemCidade1.posicaoX;
+    imagemCidade1.margemNorte = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte;
+    imagemCidade1.margemSul = imagemCidade1.posicaoY + imagemCidade1.height - imagemCidade1.posicaoYRecorte;
+    imagemCidade1.margemLeste = imagemCidade1.posicaoX + imagemCidade1.width - imagemCidade1.posicaoXRecorte;
+    imagemCidade1.margemOeste = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte;
 
     //ATUALIZAR POSICAO AREA 1:
 
@@ -2571,47 +2571,47 @@ function loopDesenho()
                 //NÃO FAZ NADA
             }
         }
-
-        //TEXTES X:
-        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-        contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
-        contextoTelaCanvasPrincipal.beginPath();
-        contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
-        contextoTelaCanvasPrincipal.lineTo(player1.posicaoX + 10, player1.posicaoY)
-        contextoTelaCanvasPrincipal.stroke();
-        contextoTelaCanvasPrincipal.fill();
-        contextoTelaCanvasPrincipal.closePath();
-
-        //TEXTES Y:
-        contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
-        contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
-        contextoTelaCanvasPrincipal.beginPath();
-        contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
-        contextoTelaCanvasPrincipal.lineTo(player1.posicaoX, player1.posicaoY + 10)
-        contextoTelaCanvasPrincipal.stroke();
-        contextoTelaCanvasPrincipal.fill();
-        contextoTelaCanvasPrincipal.closePath();
-
-        //TEXTES X:
-        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
-        contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
-        contextoTelaCanvasPrincipal.beginPath();
-        contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-        contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
-        contextoTelaCanvasPrincipal.stroke();
-        contextoTelaCanvasPrincipal.fill();
-        contextoTelaCanvasPrincipal.closePath();
-
-        //TEXTES Y:
-        contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
-        contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
-        contextoTelaCanvasPrincipal.beginPath();
-        contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
-        contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
-        contextoTelaCanvasPrincipal.stroke();
-        contextoTelaCanvasPrincipal.fill();
-        contextoTelaCanvasPrincipal.closePath();
-
+        /*
+                //TEXTES X:
+                contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+                contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+                contextoTelaCanvasPrincipal.beginPath();
+                contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+                contextoTelaCanvasPrincipal.lineTo(player1.posicaoX + 10, player1.posicaoY)
+                contextoTelaCanvasPrincipal.stroke();
+                contextoTelaCanvasPrincipal.fill();
+                contextoTelaCanvasPrincipal.closePath();
+        
+                //TEXTES Y:
+                contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+                contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+                contextoTelaCanvasPrincipal.beginPath();
+                contextoTelaCanvasPrincipal.moveTo(player1.posicaoX, player1.posicaoY)
+                contextoTelaCanvasPrincipal.lineTo(player1.posicaoX, player1.posicaoY + 10)
+                contextoTelaCanvasPrincipal.stroke();
+                contextoTelaCanvasPrincipal.fill();
+                contextoTelaCanvasPrincipal.closePath();
+        
+                //TEXTES X:
+                contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+                contextoTelaCanvasOeste.fillStroke = "rgba(0,0,0,1)";
+                contextoTelaCanvasPrincipal.beginPath();
+                contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+                contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX + 10, quarteirao3.posicaoY)
+                contextoTelaCanvasPrincipal.stroke();
+                contextoTelaCanvasPrincipal.fill();
+                contextoTelaCanvasPrincipal.closePath();
+        
+                //TEXTES Y:
+                contextoTelaCanvasOeste.fillStyle = "rgba(255,0,0,1)";
+                contextoTelaCanvasOeste.fillStroke = "rgba(255,0,0,1)";
+                contextoTelaCanvasPrincipal.beginPath();
+                contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX, quarteirao3.posicaoY)
+                contextoTelaCanvasPrincipal.lineTo(quarteirao3.posicaoX, quarteirao3.posicaoY + 10)
+                contextoTelaCanvasPrincipal.stroke();
+                contextoTelaCanvasPrincipal.fill();
+                contextoTelaCanvasPrincipal.closePath();
+        */
         loop = requestAnimationFrame(loopDesenho);
     }
 }
