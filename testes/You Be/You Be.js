@@ -667,8 +667,10 @@ function Civil()
 {
     this.largura = 50; //
     this.altura = 50; // 
+    this.posicaoXFixo = 740; //
+    this.posicaoYFixo = 20; //
     this.posicaoXAtual = 740; //
-    this.posicaoYAtual = 200; // /*
+    this.posicaoYAtual = 20; //
     this.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + this.posicaoXAtual; //
     this.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + this.posicaoYAtual; //    
     this.velocidade = 3; //
@@ -1634,6 +1636,7 @@ var x1 = 17, y1 = 20;
 //LUGARES
 
 var quarteirao1 = {}
+
 quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 20;
 
 quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 20;
@@ -1645,6 +1648,7 @@ quarteirao1.altura = 100;
 //
 
 var quarteirao2 = {}
+
 quarteirao2.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 320;
 
 quarteirao2.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 17;
@@ -1652,6 +1656,22 @@ quarteirao2.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 
 quarteirao2.largura = 180;
 
 quarteirao2.altura = 120;
+
+//
+
+var quarteirao3 = {}
+
+quarteirao3.posicaoXAtual = 430;
+
+quarteirao3.posicaoYAtual = 310;
+
+quarteirao3.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + quarteirao3.posicaoXAtual;
+
+quarteirao3.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + quarteirao3.posicaoYAtual;
+
+quarteirao3.largura = 250;
+
+quarteirao3.altura = 100;
 
 //
 
@@ -1675,17 +1695,13 @@ function loopDesenho()
 {
     //AREAS PROIBIDAS DE MOVIMENTAÇÃO:
 
-    topouQuarteirao1Leste = player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura && player1.posicaoY + player1.altura <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoY >= quarteirao1.posicaoY;
+    topouQuarteirao1Leste = player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoX + player1.largura >= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY + player1.altura <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY >= quarteirao3.posicaoY;
 
-    topouQuarteirao1Oeste = player1.posicaoX + player1.largura >= quarteirao1.posicaoX && player1.posicaoY + player1.altura <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoY >= quarteirao1.posicaoY;
+    topouQuarteirao1Oeste = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX && player1.posicaoY + player1.altura <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY >= quarteirao3.posicaoY;
 
-    topouQuarteirao1Norte = player1.posicaoY >= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX >= quarteirao1.posicaoX && player1.posicaoX <= quarteirao1.posicaoX + quarteirao1.largura;
+    topouQuarteirao1Norte = player1.posicaoY <= quarteirao3.posicaoY && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoX >= quarteirao3.posicaoX && player1.posicaoX + player1.largura <= quarteirao3.posicaoX + quarteirao3.largura;
 
-    topouQuarteirao1Sul = player1.posicaoY <= quarteirao1.posicaoY + quarteirao1.altura && player1.posicaoX >= quarteirao1.posicaoX && player1.posicaoX + player1.largura <= quarteirao1.posicaoX + quarteirao1.largura;
-
-    //
-
-    topouQuarteirao2 = player1.posicaoX + player1.largura >= quarteirao2.posicaoX && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura || player1.posicaoX < quarteirao2.posicaoX + quarteirao2.largura && player1.posicaoY < quarteirao2.posicaoY + quarteirao2.altura && player1.posicaoX + player1.largura > quarteirao2.posicaoX;
+    topouQuarteirao1Sul = player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoX >= quarteirao3.posicaoX && player1.posicaoX + player1.largura <= quarteirao3.posicaoX + quarteirao3.largura;
 
     //ATUALIZAR POSICAO PLAYER1:
 
@@ -1699,8 +1715,8 @@ function loopDesenho()
 
     //ATUALIZAR POSICAO AREA 1:
 
-    quarteirao1.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + 30;
-    quarteirao1.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + 30;
+    quarteirao3.posicaoX = imagemCidade1.posicaoX - imagemCidade1.posicaoXRecorte + quarteirao3.posicaoXAtual;
+    quarteirao3.posicaoY = imagemCidade1.posicaoY - imagemCidade1.posicaoYRecorte + quarteirao3.posicaoYAtual;
 
     //STATUS SISTEMA:
 
@@ -1877,7 +1893,7 @@ function loopDesenho()
 
                     if (topouQuarteirao1Sul)
                     {
-                        //player1.posicaoY = player1.posicaoY;
+                        // NÃO FAZ NADA
                     } else
                     {
                         player1.posicaoY -= player1.velocidade;
@@ -1910,7 +1926,7 @@ function loopDesenho()
 
                     if (topouQuarteirao1Norte)
                     {
-                        //player1.posicaoY = player1.posicaoY;
+                        // NÃO FAZ NADA
                     } else
                     {
                         player1.posicaoY += player1.velocidade;
@@ -1962,7 +1978,7 @@ function loopDesenho()
 
                     if (topouQuarteirao1Oeste)
                     {
-                        //player1.posicaoX = player1.posicaoX;
+                        // NÃO FAZ NADA
                     } else
                     {
                         player1.posicaoX += player1.velocidade;
@@ -1995,7 +2011,7 @@ function loopDesenho()
 
                     if (topouQuarteirao1Leste)
                     {
-                        //player1.posicaoX = player1.posicaoX;
+                        // NÃO FAZ NADA
                     } else
                     {
                         player1.posicaoX -= player1.velocidade;
@@ -2157,11 +2173,11 @@ function loopDesenho()
         contextoTelaCanvasPrincipal.lineWidth = 3;
 
         //
-        /*
-                contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";
-        
-                contextoTelaCanvasPrincipal.fillRect(quarteirao2.posicaoX, quarteirao2.posicaoY, quarteirao2.largura, quarteirao2.altura);
-        */
+
+        contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";
+
+        contextoTelaCanvasPrincipal.fillRect(quarteirao3.posicaoX, quarteirao3.posicaoY, quarteirao3.largura, quarteirao3.altura);
+
         //
 
         /*
@@ -2360,12 +2376,113 @@ function loopDesenho()
             {
                 civil1.posicaoYAtual += civil1.direcaoY;
             }
+            //SE NAO ESTIVER EM ALERTA:
         } else
         {
-            imagemCivil1PosInicialX = 6;
-            imagemCivil1PosInicialY = 161;
-            imagemCivil1CorteLargura = 36;
-            imagemCivil1CorteAltura = 36;
+            if (civil1.posicaoY + civil1.altura >= imagemCidade1.height)
+            {
+                civil1.direcaoY = -1;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaCimaCivil1();
+
+            } else if (civil1.posicaoY <= imagemCidade1.posicaoY)
+            {
+                civil1.direcaoY = 1;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaCimaCivil1();
+
+            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = -1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoEsquerdaCivil1();
+
+            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = -1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = 1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoDireitaCivil1();
+
+            } else if (civil1.posicaoX > civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = -1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoEsquerdaCivil1();
+
+            } else if (civil1.posicaoX < civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 1;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoDireitaCivil1();
+
+            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY > civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = -1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaCimaCivil1();
+
+            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY < civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 1;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                imagensCorrendoParaBaixoCivil1();
+
+            } else if (civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo + 1 || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo - 1 || civil1.posicaoX == civil1.posicaoXFixo + 1 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo - 1 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo + 2 || civil1.posicaoX == civil1.posicaoXFixo && civil1.posicaoY == civil1.posicaoYFixo - 2 || civil1.posicaoX == civil1.posicaoXFixo + 2 && civil1.posicaoY == civil1.posicaoYFixo || civil1.posicaoX == civil1.posicaoXFixo - 2 && civil1.posicaoY == civil1.posicaoYFixo)
+            {
+                civil1.direcaoY = 0;
+                civil1.direcaoX = 0;
+                civil1.posicaoXAtual += civil1.direcaoX;
+                civil1.posicaoYAtual += civil1.direcaoY;
+
+                //MUDA IMAGEM PARA PARADO
+                imagemCivil1PosInicialX = 6;
+                imagemCivil1PosInicialY = 161;
+                imagemCivil1CorteLargura = 36;
+                imagemCivil1CorteAltura = 36;
+
+            } else
+            {
+                civil1.posicaoYAtual += civil1.direcaoY;
+            }
+
         }
 
         loop = requestAnimationFrame(loopDesenho);
