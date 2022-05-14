@@ -58,7 +58,7 @@ function loopDesenho()
     status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
     status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
     status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
-    //status12.innerHTML = "loopAlerta: " + loopAlerta;
+    status12.innerHTML = "player1.imagemPosInicialX : " + player1.imagemPosInicialX;
 
     //CODIÇÃO INIMIGO EM ALERTA:
 

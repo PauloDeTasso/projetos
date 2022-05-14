@@ -1,3 +1,25 @@
+//
+
+var sombraHorizontal = 3;
+var sombraVertical = 3;
+var incrementoSombra;
+var tempoSol = 5000;
+var loop;
+
+var imagensTempo = 200;
+
+//IMAGENS:
+
+var imagemEmBranco = new Image();
+
+imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
+
+//
+
+var imagemCidade2 = new Image();
+imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
+
+//
 
 // FUNÇÕES CONSTRUTORAS
 
@@ -57,7 +79,17 @@ function Player(cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem)
     //IMAGEM:
 
     this.imagem = new Image();
-    this.imagem.src = imagem ? imagem : "../../imagens/texture/2D/player1.png";
+    this.imagem.src = imagem ? imagem : "../../imagens/texture/2D/personagem1.png";
+
+    //
+
+    // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
+
+this.imagemPosInicialX = 0;
+this.imagemPosInicialY = 125;
+this.imagemCorteLargura = 37;
+this.imagemCorteAltura = 54;
+
 
     // CORRENDO DIREITA:
 
@@ -147,6 +179,29 @@ function Player(cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem)
     this.imagemCorteAlturaCorrendoB3 = 15;
     this.imagemCorteAlturaCorrendoB4 = 15;
 
+    //PARADO:
+
+    this.imagemPosInicialXParado1 = 1;
+    this.imagemPosInicialYParado1 = 127;
+    this.imagemCorteLarguraParado1 = 30;
+    this.imagemCorteAlturaParado1 = 49;
+
+    this.imagemPosInicialXParado2 = 66;
+    this.imagemPosInicialYParado2 = 127;
+    this.imagemCorteLarguraParado2 = 30;
+    this.imagemCorteAlturaParado2 = 49;
+
+    this.imagemPosInicialXParado3 = 384;
+    this.imagemPosInicialYParado3 = 127;
+    this.imagemCorteLarguraParado3 = 34;
+    this.imagemCorteAlturaParado3 = 49;
+
+    this.imagemPosInicialXParado4 = 1;
+    this.imagemPosInicialYParado4 = 640;
+    this.imagemCorteLarguraParado4 = 30;
+    this.imagemCorteAlturaParado4 = 49;
+
+    //
 }
 
 function Civil(cidade)
@@ -165,6 +220,13 @@ function Civil(cidade)
 
     this.imagem = new Image();
     this.imagem.src = "../../imagens/texture/2D/pacman3d.png"
+
+    // POSIÇÃO ATUAL DA IMAGEM:
+    
+    this.imagemPosInicialX = 6;
+    this.imagemPosInicialY = 161;
+    this.imagemCorteLargura = 36;
+    this.imagemCorteAltura = 36;
 
     // CORRENDO DIREITA:
 
@@ -673,6 +735,126 @@ function imagensCorrendoParaBaixo(elemento)
     }
 }
 
+//PARADO
+
+function imagemParado(elemento)
+{
+    switch (elemento)
+    {
+        case player1:
+     
+            //elemento.imagemPosInicialX:
+
+            if (elemento.imagemPosInicialX == elemento.imagemPosInicialX)
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
+
+            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, imagensTempo)
+
+            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado2)
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado3; }, imagensTempo)
+
+            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado3)
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, imagensTempo)
+
+            }else
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialX; }, imagensTempo)
+            }
+
+            //elemento.imagemPosInicialY:
+
+            if (elemento.imagemPosInicialY == elemento.imagemPosInicialY)
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
+
+
+            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, imagensTempo)
+
+
+            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado2)
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado3; }, imagensTempo)
+
+
+            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado3)
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, imagensTempo)
+
+
+            } else
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialY; }, imagensTempo)
+
+            }
+
+            //elemento.imagemCorteLargura:
+
+            if (elemento.imagemCorteLargura == elemento.imagemCorteLargura )
+            {
+                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1;
+
+            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1)
+            {
+                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2;
+
+            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
+            {
+                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3;
+
+            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado3)
+            {
+                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4;
+
+            } else
+            {
+                elemento.imagemCorteLargura = elemento.imagemCorteLargura;
+            }
+
+            //elemento.imagemCorteAltura:
+
+            if (elemento.imagemCorteAltura == elemento.imagemCorteAltura)
+            {
+                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1;
+
+            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
+            {
+                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2;
+
+            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado2)
+            {
+                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3;
+
+            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
+            {
+                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4;
+
+            } else
+            {
+                elemento.imagemCorteAltura = elemento.imagemCorteAltura ;
+            }
+            break;
+
+        case civil1:
+
+            elemento.imagemPosInicialX = 6;
+            elemento.imagemPosInicialY = 161;
+            elemento.imagemCorteLargura = 36;
+            elemento.imagemCorteAltura = 36;
+            break;
+
+        default:
+
+            break;
+    }
+}
+
 //// AÇÕES DO PERSONAGEM:
 
 // COMER:
@@ -1000,32 +1182,6 @@ function patrulhar(elemento)
 
 }
 
-function imagemParado(elemento)
-{
-    switch (elemento)
-    {
-        case player1:
-
-            elemento.imagemPosInicialX = 19;
-            elemento.imagemPosInicialY = 23;
-            elemento.imagemCorteLargura = 10;
-            elemento.imagemCorteAltura = 15;
-            break;
-
-        case civil1:
-
-            elemento.imagemPosInicialX = 6;
-            elemento.imagemPosInicialY = 161;
-            elemento.imagemCorteLargura = 36;
-            elemento.imagemCorteAltura = 36;
-            break;
-
-        default:
-
-            break;
-    }
-}
-
 //
 
 var cidade1 = new Cidade();
@@ -1056,43 +1212,6 @@ var anguloFinal = (Math.PI / 180) * 360;
 
 //O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
 var sentidoCirculo = true;
-
-// POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
-
-player1.imagemPosInicialX = 19;
-player1.imagemPosInicialY = 23;
-player1.imagemCorteLargura = 10;
-player1.imagemCorteAltura = 15;
-
-// POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
-
-civil1.imagemPosInicialX = 6;
-civil1.imagemPosInicialY = 161;
-civil1.imagemCorteLargura = 36;
-civil1.imagemCorteAltura = 36;
-
-//
-
-var sombraHorizontal = 3;
-var sombraVertical = 3;
-var incrementoSombra;
-var tempoSol = 5000;
-var loop;
-
-var imagensTempo = 200;
-
-//IMAGENS:
-
-var imagemEmBranco = new Image();
-
-imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
-
-//
-
-var imagemCidade2 = new Image();
-imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
-
-//
 
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
