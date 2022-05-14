@@ -83,6 +83,27 @@ function Player(cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem)
 
     //
 
+/*
+    this.imagemPosInicialXCorrendoE1 = 7;
+    this.imagemPosInicialXCorrendoE2 = 67;
+    this.imagemPosInicialXCorrendoE3 = 134;
+    this.imagemPosInicialXCorrendoE4 = 198;
+
+    this.imagemPosInicialYCorrendoE1 = 576;
+    this.imagemPosInicialYCorrendoE2 = 577;
+    this.imagemPosInicialYCorrendoE3 = 576;
+    this.imagemPosInicialYCorrendoE4 = 576;
+
+    this.imagemCorteLarguraCorrendoE1 = 21;
+    this.imagemCorteLarguraCorrendoE2 = 25;
+    this.imagemCorteLarguraCorrendoE3 = 22;
+    this.imagemCorteLarguraCorrendoE4 = 23;
+
+    this.imagemCorteAlturaCorrendoE1 = 48;
+    this.imagemCorteAlturaCorrendoE2 = 47;
+    this.imagemCorteAlturaCorrendoE3 = 47;
+    this.imagemCorteAlturaCorrendoE4 = 47;
+    */
     // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
 this.imagemPosInicialX = 0;
@@ -95,7 +116,7 @@ this.imagemCorteAltura = 54;
     this.imagemPosInicialXCorrendoD1 = 5;
     this.imagemPosInicialXCorrendoD2 = 68;
     this.imagemPosInicialXCorrendoD3 = 133;
-    this.imagemPosInicialXCorrendoD4 = 195;
+    this.imagemPosInicialXCorrendoD4 = 197;
 
     this.imagemPosInicialYCorrendoD1 = 704;
     this.imagemPosInicialYCorrendoD2 = 705;
@@ -114,69 +135,69 @@ this.imagemCorteAltura = 54;
 
     // CORRENDO ESQUERDA:
 
-    this.imagemPosInicialXCorrendoE1 = 66;
-    this.imagemPosInicialXCorrendoE2 = 80;
-    this.imagemPosInicialXCorrendoE3 = 32;
-    this.imagemPosInicialXCorrendoE4 = 16;
+    this.imagemPosInicialXCorrendoE1 = 6;
+    this.imagemPosInicialXCorrendoE2 = 69;
+    this.imagemPosInicialXCorrendoE3 = 133;
+    this.imagemPosInicialXCorrendoE4 = 198;
 
-    this.imagemPosInicialYCorrendoE1 = 139;
-    this.imagemPosInicialYCorrendoE2 = 139;
-    this.imagemPosInicialYCorrendoE3 = 139;
-    this.imagemPosInicialYCorrendoE4 = 139;
+    this.imagemPosInicialYCorrendoE1 = 576;
+    this.imagemPosInicialYCorrendoE2 = 578;
+    this.imagemPosInicialYCorrendoE3 = 578;
+    this.imagemPosInicialYCorrendoE4 = 577;
 
-    this.imagemCorteLarguraCorrendoE1 = 12;
-    this.imagemCorteLarguraCorrendoE2 = 12;
-    this.imagemCorteLarguraCorrendoE3 = 12;
-    this.imagemCorteLarguraCorrendoE4 = 12;
+    this.imagemCorteLarguraCorrendoE1 = 21;
+    this.imagemCorteLarguraCorrendoE2 = 25;
+    this.imagemCorteLarguraCorrendoE3 = 22;
+    this.imagemCorteLarguraCorrendoE4 = 23;
 
-    this.imagemCorteAlturaCorrendoE1 = 15;
-    this.imagemCorteAlturaCorrendoE2 = 15;
-    this.imagemCorteAlturaCorrendoE3 = 15;
-    this.imagemCorteAlturaCorrendoE4 = 15;
+    this.imagemCorteAlturaCorrendoE1 = 48;
+    this.imagemCorteAlturaCorrendoE2 = 47;
+    this.imagemCorteAlturaCorrendoE3 = 47;
+    this.imagemCorteAlturaCorrendoE4 = 47;
 
     // CORRENDO PARA CIMA:
 
-    this.imagemPosInicialXCorrendoC1 = 52;
-    this.imagemPosInicialXCorrendoC2 = 34;
-    this.imagemPosInicialXCorrendoC3 = 66;
-    this.imagemPosInicialXCorrendoC4 = 99;
+    this.imagemPosInicialXCorrendoC1 = 1;
+    this.imagemPosInicialXCorrendoC2 = 65;
+    this.imagemPosInicialXCorrendoC3 = 129;
+    this.imagemPosInicialXCorrendoC4 = 193;
 
-    this.imagemPosInicialYCorrendoC1 = 39;
-    this.imagemPosInicialYCorrendoC2 = 39;
-    this.imagemPosInicialYCorrendoC3 = 39;
-    this.imagemPosInicialYCorrendoC4 = 39;
+    this.imagemPosInicialYCorrendoC1 = 511;
+    this.imagemPosInicialYCorrendoC2 = 511;
+    this.imagemPosInicialYCorrendoC3 = 511;
+    this.imagemPosInicialYCorrendoC4 = 512;
 
-    this.imagemCorteLarguraCorrendoC1 = 12;
-    this.imagemCorteLarguraCorrendoC2 = 12;
-    this.imagemCorteLarguraCorrendoC3 = 12;
-    this.imagemCorteLarguraCorrendoC4 = 12;
+    this.imagemCorteLarguraCorrendoC1 = 30;
+    this.imagemCorteLarguraCorrendoC2 = 30;
+    this.imagemCorteLarguraCorrendoC3 = 30;
+    this.imagemCorteLarguraCorrendoC4 = 29;
 
-    this.imagemCorteAlturaCorrendoC1 = 15;
-    this.imagemCorteAlturaCorrendoC2 = 15;
-    this.imagemCorteAlturaCorrendoC3 = 15;
-    this.imagemCorteAlturaCorrendoC4 = 15;
+    this.imagemCorteAlturaCorrendoC1 = 48;
+    this.imagemCorteAlturaCorrendoC2 = 48;
+    this.imagemCorteAlturaCorrendoC3 = 49;
+    this.imagemCorteAlturaCorrendoC4 = 49;
 
     // CORRENDO PARA BAIXO:
 
-    this.imagemPosInicialXCorrendoB1 = 66;
-    this.imagemPosInicialXCorrendoB2 = 80;
-    this.imagemPosInicialXCorrendoB3 = 32;
-    this.imagemPosInicialXCorrendoB4 = 16;
+    this.imagemPosInicialXCorrendoB1 = 194;
+    this.imagemPosInicialXCorrendoB2 = 257;
+    this.imagemPosInicialXCorrendoB3 = 321;
+    this.imagemPosInicialXCorrendoB4 = 385;
 
-    this.imagemPosInicialYCorrendoB1 = 139;
-    this.imagemPosInicialYCorrendoB2 = 139;
-    this.imagemPosInicialYCorrendoB3 = 139;
-    this.imagemPosInicialYCorrendoB4 = 139;
+    this.imagemPosInicialYCorrendoB1 = 640;
+    this.imagemPosInicialYCorrendoB2 = 639;
+    this.imagemPosInicialYCorrendoB3 = 639;
+    this.imagemPosInicialYCorrendoB4 = 639;
 
-    this.imagemCorteLarguraCorrendoB1 = 12;
-    this.imagemCorteLarguraCorrendoB2 = 12;
-    this.imagemCorteLarguraCorrendoB3 = 12;
-    this.imagemCorteLarguraCorrendoB4 = 12;
+    this.imagemCorteLarguraCorrendoB1 = 29;
+    this.imagemCorteLarguraCorrendoB2 = 30;
+    this.imagemCorteLarguraCorrendoB3 = 30;
+    this.imagemCorteLarguraCorrendoB4 = 30;
 
-    this.imagemCorteAlturaCorrendoB1 = 15;
-    this.imagemCorteAlturaCorrendoB2 = 15;
-    this.imagemCorteAlturaCorrendoB3 = 15;
-    this.imagemCorteAlturaCorrendoB4 = 15;
+    this.imagemCorteAlturaCorrendoB1 = 49;
+    this.imagemCorteAlturaCorrendoB2 = 50;
+    this.imagemCorteAlturaCorrendoB3 = 49;
+    this.imagemCorteAlturaCorrendoB4 = 50;
 
     //PARADO:
 
@@ -185,12 +206,12 @@ this.imagemCorteAltura = 54;
     this.imagemCorteLarguraParado1 = 30;
     this.imagemCorteAlturaParado1 = 49;
 
-    this.imagemPosInicialXParado2 = 66;
+    this.imagemPosInicialXParado2 = 65;
     this.imagemPosInicialYParado2 = 127;
     this.imagemCorteLarguraParado2 = 30;
     this.imagemCorteAlturaParado2 = 49;
 
-    this.imagemPosInicialXParado3 = 384;
+    this.imagemPosInicialXParado3 = 386;
     this.imagemPosInicialYParado3 = 127;
     this.imagemCorteLarguraParado3 = 34;
     this.imagemCorteAlturaParado3 = 49;
@@ -744,11 +765,7 @@ function imagemParado(elemento)
      
             //elemento.imagemPosInicialX:
 
-            if (elemento.imagemPosInicialX == elemento.imagemPosInicialX)
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
-
-            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
+            if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
             {
                 setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, imagensTempo)
 
@@ -760,19 +777,18 @@ function imagemParado(elemento)
             {
                 setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, imagensTempo)
 
+            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado4)
+            {
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
+
             }else
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialX; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
             }
 
             //elemento.imagemPosInicialY:
 
-            if (elemento.imagemPosInicialY == elemento.imagemPosInicialY)
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
-
-
-            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
+            if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
             {
                 setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, imagensTempo)
 
@@ -786,21 +802,22 @@ function imagemParado(elemento)
             {
                 setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, imagensTempo)
 
+
+            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado4)
+            {
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
+
             } else
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialY; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
 
             }
 
             //elemento.imagemCorteLargura:
 
-            if (elemento.imagemCorteLargura == elemento.imagemCorteLargura )
+            if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1 )
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)
-
-            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1)
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, imagensTempo)
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
             {
@@ -810,19 +827,19 @@ function imagemParado(elemento)
             {
                 setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, imagensTempo)                
 
+            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado4)
+            {
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)                
+
             } else
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLargura; }, imagensTempo)               
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)             
                 
             }
 
             //elemento.imagemCorteAltura:
 
-            if (elemento.imagemCorteAltura == elemento.imagemCorteAltura)
-            {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, imagensTempo)                
-
-            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
+            if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
             {
                 setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, imagensTempo)                
 
@@ -832,12 +849,16 @@ function imagemParado(elemento)
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
             {
-                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, imagensTempo)            
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, imagensTempo)                
+
+            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado4)
+            {
+                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, imagensTempo)            
 
             } else
             {
                 setTimeout(() => {
-                    elemento.imagemCorteAltura = elemento.imagemCorteAltura ; }, imagensTempo)                
+                    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1 ; }, imagensTempo)                
             }
             break;
 

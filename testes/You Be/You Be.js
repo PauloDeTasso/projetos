@@ -184,7 +184,7 @@ function loopDesenho()
         {
             if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
             {
-                imagemParado(player1);
+                //     imagemParado(player1);
             }
         }
 
@@ -260,7 +260,7 @@ function loopDesenho()
         {
             if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
             {
-                imagemParado(player1);
+                //    imagemParado(player1);
             }
         }
 
