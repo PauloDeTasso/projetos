@@ -90,28 +90,27 @@ this.imagemPosInicialY = 125;
 this.imagemCorteLargura = 37;
 this.imagemCorteAltura = 54;
 
-
     // CORRENDO DIREITA:
 
-    this.imagemPosInicialXCorrendoD1 = 52;
-    this.imagemPosInicialXCorrendoD2 = 34;
-    this.imagemPosInicialXCorrendoD3 = 66;
-    this.imagemPosInicialXCorrendoD4 = 99;
+    this.imagemPosInicialXCorrendoD1 = 5;
+    this.imagemPosInicialXCorrendoD2 = 68;
+    this.imagemPosInicialXCorrendoD3 = 133;
+    this.imagemPosInicialXCorrendoD4 = 195;
 
-    this.imagemPosInicialYCorrendoD1 = 39;
-    this.imagemPosInicialYCorrendoD2 = 39;
-    this.imagemPosInicialYCorrendoD3 = 39;
-    this.imagemPosInicialYCorrendoD4 = 39;
+    this.imagemPosInicialYCorrendoD1 = 704;
+    this.imagemPosInicialYCorrendoD2 = 705;
+    this.imagemPosInicialYCorrendoD3 = 704;
+    this.imagemPosInicialYCorrendoD4 = 704;
 
-    this.imagemCorteLarguraCorrendoD1 = 12;
-    this.imagemCorteLarguraCorrendoD2 = 12;
-    this.imagemCorteLarguraCorrendoD3 = 12;
-    this.imagemCorteLarguraCorrendoD4 = 12;
+    this.imagemCorteLarguraCorrendoD1 = 22;
+    this.imagemCorteLarguraCorrendoD2 = 25;
+    this.imagemCorteLarguraCorrendoD3 = 22;
+    this.imagemCorteLarguraCorrendoD4 = 23;
 
-    this.imagemCorteAlturaCorrendoD1 = 15;
-    this.imagemCorteAlturaCorrendoD2 = 15;
-    this.imagemCorteAlturaCorrendoD3 = 15;
-    this.imagemCorteAlturaCorrendoD4 = 15;
+    this.imagemCorteAlturaCorrendoD1 = 48;
+    this.imagemCorteAlturaCorrendoD2 = 47;
+    this.imagemCorteAlturaCorrendoD3 = 47;
+    this.imagemCorteAlturaCorrendoD4 = 47;
 
     // CORRENDO ESQUERDA:
 
@@ -197,7 +196,7 @@ this.imagemCorteAltura = 54;
     this.imagemCorteAlturaParado3 = 49;
 
     this.imagemPosInicialXParado4 = 1;
-    this.imagemPosInicialYParado4 = 640;
+    this.imagemPosInicialYParado4 = 639;
     this.imagemCorteLarguraParado4 = 30;
     this.imagemCorteAlturaParado4 = 49;
 
@@ -787,7 +786,6 @@ function imagemParado(elemento)
             {
                 setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, imagensTempo)
 
-
             } else
             {
                 setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialY; }, imagensTempo)
@@ -798,46 +796,48 @@ function imagemParado(elemento)
 
             if (elemento.imagemCorteLargura == elemento.imagemCorteLargura )
             {
-                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1;
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1)
             {
-                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2;
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, imagensTempo)                
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
             {
-                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3;
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3; }, imagensTempo)                
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado3)
             {
-                elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4;
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, imagensTempo)                
 
             } else
             {
-                elemento.imagemCorteLargura = elemento.imagemCorteLargura;
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLargura; }, imagensTempo)               
+                
             }
 
             //elemento.imagemCorteAltura:
 
             if (elemento.imagemCorteAltura == elemento.imagemCorteAltura)
             {
-                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1;
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, imagensTempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
             {
-                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2;
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, imagensTempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado2)
             {
-                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3;
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3; }, imagensTempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
             {
-                elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4;
+                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, imagensTempo)            
 
             } else
             {
-                elemento.imagemCorteAltura = elemento.imagemCorteAltura ;
+                setTimeout(() => {
+                    elemento.imagemCorteAltura = elemento.imagemCorteAltura ; }, imagensTempo)                
             }
             break;
 
