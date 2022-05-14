@@ -1181,3 +1181,345 @@ localStorage.sentimentoMaisUsado;
 localStorage.sentimentoMenosUsado;
 localStorage.alimentoMaisUsado;
 localStorage.alimentoMenosUsado;
+
+// VARIAVÉIS
+
+var canvasPrincipalLigado = true;
+
+var loopAlerta = true
+
+var alertaInimigo;
+
+var distanciaInimigo = 200;
+
+var x1 = 17, y1 = 20;
+
+
+//
+
+
+//
+
+/*
+    function irParaCima()
+    {
+        if (player1.posicaoY > 0)
+        { // se a bola nçao sair da tela
+            player1.posicaoY -= player1.velocidade; // muda posição do jogador
+        }
+    }
+
+    function irParaBaixo()
+    {
+        // se for para baixo
+        if (player1.posicaoY < (canvas1.canvas.height - player1.altura))
+        { // se a bola não saiu da tela
+            player1.posicaoY += player1.velocidade; // muda posição
+        }
+    }
+*/
+
+//
+
+//////////////////// RASCUNHOS:
+
+/*
+
+// Obtém a data/hora atual
+var data = new Date();
+
+// Guarda cada pedaço em uma variável
+var dia     = data.getDate();           // 1-31
+var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+var ano2    = data.getYear();           // 2 dígitos
+var ano4    = data.getFullYear();       // 4 dígitos
+var hora    = data.getHours();          // 0-23
+var min     = data.getMinutes();        // 0-59
+var seg     = data.getSeconds();        // 0-59
+var mseg    = data.getMilliseconds();   // 0-999
+var tz      = data.getTimezoneOffset(); // em minutos
+
+// Formata a data e a hora (note o mês + 1)
+var str_data = dia + '/' + (mes+1) + '/' + ano4;
+var str_hora = hora + ':' + min + ':' + seg;
+
+// Mostra o resultado
+alert('Hoje é ' + str_data + ' às ' + str_hora);
+
+//////////////////////
+
+
+var secaoPingPong = document.getElementById('secaoCanvas');
+
+function abrirSecaoPingPong()
+{
+    var style = window.getComputedStyle(secaoPingPong);
+    var top = style.getPropertyValue('display');
+
+    if (top == "none")    
+    {
+        secaoPingPong.style.display = 'flex';
+    } else
+    {
+        secaoPingPong.style.display = 'none';
+    }
+}
+*/
+
+/* CANVAS
+ /*
+ 
+    // LIMPA A AREA ESPECIFICADA DO DESENHO
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contextoTelaCanvasPrincipal.clearRect(0, 0, telaCanvasPrincipal.width, telaCanvasPrincipal.height);
+
+    // LIMPA A TELA OESTE
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contextoTelaCanvasOeste.clearRect(0, 0, telaCanvasOeste.width, telaCanvasOeste.height);
+    
+        //CANVAS OESTE:
+    
+        contextoTelaCanvasOeste.beginPath();
+    
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasOeste.moveTo(10, 10);
+    
+        contextoTelaCanvasOeste.lineTo(10, telaCanvasOeste.height - 10)
+    
+        contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, telaCanvasOeste.height - 10)
+    
+        contextoTelaCanvasOeste.lineTo(telaCanvasOeste.width - 10, 10)
+    
+        contextoTelaCanvasOeste.stroke();
+        contextoTelaCanvasOeste.fill();
+    
+        contextoTelaCanvasOeste.closePath();
+    
+        contextoTelaCanvasOeste.fillStyle = "rgba(0,255,255,1";
+    
+        if (y1 >= telaCanvasOeste.height - 20)
+        {
+            direcaoX = -1;
+    
+        } else if (y1 <= 20)
+        {
+            direcaoX = 1;
+    
+        } else
+        {
+            direcaoX = direcaoX;
+        }
+    
+        y1 += direcaoX;
+    
+        contextoTelaCanvasOeste.fillRect(x1, y1, telaCanvasOeste.width / 2, 50);
+    
+    
+        //CANVAS LESTE:
+    
+        contextoTelaCanvasLeste.beginPath();
+    
+        contextoTelaCanvasLeste.fillStyle = "rgba(0,0,0,1)";
+        contextoTelaCanvasLeste.moveTo(10, 10);
+    
+        contextoTelaCanvasLeste.lineTo(10, telaCanvasLeste.height - 10)
+    
+        contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, telaCanvasLeste.height - 10)
+    
+        contextoTelaCanvasLeste.lineTo(telaCanvasLeste.width - 10, 10)
+    
+        contextoTelaCanvasLeste.stroke();
+        contextoTelaCanvasLeste.fill();
+    
+        contextoTelaCanvasLeste.closePath();
+    
+        contextoTelaCanvasLeste.fillStyle = "rgba(0,255,255,1)";
+    
+        if (y1 >= telaCanvasLeste.height - 20)
+        {
+            direcaoX = -1;
+    
+        } else if (y1 <= 20)
+        {
+            direcaoX = 1;
+    
+        } else
+        {
+            direcaoX = direcaoX;
+        }
+    
+        y1 += direcaoX;
+    
+        contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
+    */
+
+        // LINHAS EM CURVA:
+        /*
+            contextoTelaCanvasPrincipal.beginPath();
+            contextoTelaCanvasPrincipal.moveTo(0, 0);
+            contextoTelaCanvasPrincipal.quadraticCurveTo(250, 500, 500, 0);
+            contextoTelaCanvasPrincipal.stroke();
+            contextoTelaCanvasPrincipal.closePath();    
+        */
+
+        /*
+        // USANDO UMA IMAGEM COMO PREENCHIMENTO DO DESENHO:
+        // var estiloImagem = contextoTelaCanvasPrincipal.createPattern(imagem, "no-repeat");
+        // "repeat" (ambas direcoes)
+        // "repeat-x" (somente na horizontal)
+        // "repeat-y" (somente verticais)
+        // "no-repeat" (nenhuma direção)
+     
+        //USANDO A IMAGEM PARA PREENCHIMENTO DO DESENHO:
+        // contextoTelaCanvasPrincipal.fillStyle = estiloImagem;
+     
+        // DESENHA A IMAGEM NA POSIÇÃO DESEJADA
+        // (URL IMAGEM, POSICAO X, POSICAO Y, LARGURA, ALTURA))
+        //contextoTelaCanvasPrincipal.drawImage(imagem, 0, 0, 500, 500);
+     
+        // SOBREPOSIÇÃO DO METODO:
+        // PODE RECORTAR A IMAGEM 
+        // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+        contextoTelaCanvasPrincipal.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
+     
+        ////DESENHANDO RETANGULOS:
+     
+        ////DESENHANDO UM RETANGULO - RETANGULO 1
+     
+        // DEFINE A COR DO PREENCHIMENTO 
+        contextoTelaCanvasPrincipal.fillStyle = "rgb(000,00,100)";
+     
+        // DESENHA RETANGULO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+        contextoTelaCanvasPrincipal.fillRect(0, 0, 100, 200);
+     
+        //FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 1: 
+        //contextoTelaCanvasPrincipal.fill();
+     
+        // LIMPA A AREA DE DESENHO - (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+        contextoTelaCanvasPrincipal.clearRect(10, 10, 40, 40);
+     
+        //// RETANGULO 2 - PLAYER 1:
+     
+        // USANDO TRANSPARENCIA RGBA COMO PREENCHIMENTO
+        contextoTelaCanvasPrincipal.fillStyle = "rgba(000,200,200,0.5)";
+     
+        */
+
+        // INSERINDO TEXTOS:
+        /*
+     
+        // TAMANHO E FONT
+        contextoTelaCanvasPrincipal.font = "20px Comic Sans MS";
+        
+        // ALINHAMENTO
+        contextoTelaCanvasPrincipal.textAlign = "center";
+     
+        // COR
+        contextoTelaCanvasPrincipal.fillStyle = "blue";
+     
+        //BORDA
+        // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
+        contextoTelaCanvasPrincipal.strokeText("Paulo de Tasso",10,100,100)
+        contextoTelaCanvasPrincipal.strokeText("Paulo de Tasso",10,100)
+     
+        //PREENCHIMENTO DO TEXTO
+        // (TEXTO, POSIÇÃOX, POSIÇÃOY, TAMANHOMAXIMODOTEXTO*OPCIONAL)
+        contextoTelaCanvasPrincipal.fillText("Paulo de Tasso", 250, 20,100);  
+        contextoTelaCanvasPrincipal.fillText("Paulo de Tasso", 250, 20);  
+     
+        */
+
+        //IMAGENS: 
+
+        //var estiloImagem = contextoTelaCanvasPrincipal.createPattern(imagem, "no-repeat")
+
+        //contextoTelaCanvasPrincipal.fillStyle = estiloImagem;
+
+        // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+        //contextoTelaCanvasPrincipal.drawImage(imagem, 50, 0, 50, 50, 150, 50, 50, 50);
+
+        //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
+        //var estiloImagem = contextoTelaCanvasPrincipal.createPattern(imagemEmBranco, "repeat")
+        //contextoTelaCanvasPrincipal.fillStyle = estiloImagem;
+
+        //
+
+        /*
+        // DEFINE O ESTILO/COR DA LINHA:
+        contextoTelaCanvasPrincipal.strokeStyle = "rgb(200,200,0)";
+        
+        // COMEÇA MOVENDO O PONTO DE DESENHO DE LINHA NA POSSIÇÃO - (POSICAO X, POSICAO Y)
+        contextoTelaCanvasPrincipal.moveTo(300, 300);
+     
+        // FINALIZAR O DESENHO DE LINHA NESSA POSIÇÃO - (POSICAO X, POSICAO Y)
+        contextoTelaCanvasPrincipal.lineTo(400, 400);
+     
+        // DESENHA UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO DESENHADA E FINALIZA A LINHA NAS NOVAS POSIÇÕES PASSADAS 
+        contextoTelaCanvasPrincipal.lineTo(400, 450);
+     
+        // DESENHA MAIS UMA NOVA LINHA A PARTIR DA ULTIMA POSIÇÃO
+        contextoTelaCanvasPrincipal.lineTo(300, 450);
+     
+        // FECHA O DESENHO DE LINHA NA MESMA POSIÇÃO DE INICIO
+        contextoTelaCanvasPrincipal.lineTo(300, 300);
+     
+        // AGORA MOVE O PONTO, A POSIÇÃO DE INICIO DE DESENHO DE LINHA PARA OUTRA POSIÇÃO, SEM SER A ULTIMA POSIÇÃO:
+        contextoTelaCanvasPrincipal.moveTo(400, 470);
+     
+        // E AGORA FINALIZAR O DESENHO DE LINHA NESSA NOVA POSIÇÃO:
+        contextoTelaCanvasPrincipal.lineTo(450, 470);
+     
+        // DESENHA UM RETANGULO DE LINHA
+        // (USADO MAIS COMO CONTORNO DE PREENCHIMENTOS)
+        // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+        contextoTelaCanvasPrincipal.strokeRect(150, 150, 100, 100);
+     
+        //MOVE A POSIÇÃO DE INICIO DE DESENHO DE LINHA
+        contextoTelaCanvasPrincipal.moveTo(350, 100);
+     
+        // DESENHA UM CIRCULO:
+        // (POSICAO X, POSICAO Y, RAIO, ANGULO INICIAL, ANGULO FINAL, SENTIDO)
+        // SENTIDO = TRUE (SENTIDO HORÁRIO / = FALSE (SENTIDO ANTI HORARIO)
+        contextoTelaCanvasPrincipal.arc(circuloPosicaoX, circuloPosicaoY, circuloTamanho, anguloInicial, anguloFinal, sentidoCirculo);
+     
+        // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE
+        contextoTelaCanvasPrincipal.fill();
+     
+        //beginPath - INICIA UM NOVO DESENHO
+        //contextoTelaCanvasPrincipal.beginPath();
+     
+        //closePath - FINALIZA O DESENHO
+        //contextoTelaCanvasPrincipal.closePath();
+     
+        //DESENHA CIRCULOS POR ANIMAÇÕES - COM POSIÇÕES, TAMANHOS, CORES VARIADAS
+        function gerarCirculosAleatorios()
+        {
+            for (var i = 0; i < 10; i++)
+            {
+                contextoTelaCanvasPrincipal.beginPath();
+                contextoTelaCanvasPrincipal.fillStyle = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ")";
+                contextoTelaCanvasPrincipal.arc(Math.random() * 500, Math.random() * 500, Math.random() * circuloTamanho, anguloInicial, anguloFinal, sentidoCirculo);
+                contextoTelaCanvasPrincipal.fill();
+            }
+        }
+     
+        //MOVE O PONTO DE DESENHO PARA ESSA POSIÇÃO
+        contextoTelaCanvasPrincipal.moveTo(10, 400);
+     
+        //CRIA UM ARCO ONDE (POSICÃOX-INICIAL, POSIÇÃOY-INICIAL, POSICÃOX-FINAL, POSIÇÃOY-FINAL, RAIO)
+        contextoTelaCanvasPrincipal.arcTo(50, 400, 50, 0, 50);
+     
+     
+        // REDENRIZA/ CONTORNA OS DESENHOS FEITOS DE LINHA:
+        contextoTelaCanvasPrincipal.stroke();
+     
+        // DEFINE OUTRA FORMA DE PREENCHIMENTO, USANDO UMA IMAGEM
+        var estiloImagem = contextoTelaCanvasPrincipal.createPattern(imagem, "repeat");
+     
+        contextoTelaCanvasPrincipal.fillStyle = estiloImagem;
+     
+        // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
+        contextoTelaCanvasPrincipal.fill();
+        
+        */

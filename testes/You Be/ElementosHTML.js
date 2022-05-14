@@ -1,8 +1,19 @@
-class Elementos
+class Elemento
 {
-    constructor()
+    constructor(nome)
     {
+        this.nome = nome;
+        this.tipo;
+    }
+}
 
+class Animal extends Elemento
+{
+    constructor(cor)
+    {
+        super("Tasso")
+        super.tipo = 10;
+        this.cor = cor;
     }
 }
 
@@ -215,7 +226,6 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //
 
-
 //CONFIGURAÇÕES EVENTOS BOTÕES:
 
 var imagemCarregada = false;
@@ -310,5 +320,3 @@ function irParaBaixo()
 {
     player1.posicaoY = player1.posicaoY + player1.velocidade;
 }
-
-
