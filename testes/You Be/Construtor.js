@@ -22,15 +22,33 @@ function Cidade()
     this.imagem.margemOeste = this.imagem.posicaoX;
 }
 
+function Quarteirao(cidade, posicaoX, posicaoY, largura, altura)
+{
+    this.posicaoXAtual = posicaoX;
+
+    this.posicaoYAtual = posicaoY;
+
+    this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual;
+
+    this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual;
+
+    this.largura = largura;
+
+    this.altura = altura;
+}
+
 // PLAYER
 
-function Player(cidade)
+function Player(cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem)
 {
-    this.largura = 50; //
-    this.altura = 50; // 
-    this.posicaoX = 0; //
-    this.posicaoY = 200; //   
-    this.velocidade = 3; //
+
+    this.posicaoX = posicaoX ? posicaoX : 0; //
+    this.posicaoY = posicaoY ? posicaoY : 200; //
+    this.largura = largura ? largura : 50; //
+    this.altura = altura ? altura : 50; //   
+    this.velocidade = velocidade ? velocidade : 3; //
+    this.direcaoX = 0; //
+    this.direcaoY = 0; //
 
     this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
 
@@ -39,7 +57,7 @@ function Player(cidade)
     //IMAGEM:
 
     this.imagem = new Image();
-    this.imagem.src = "../../imagens/texture/2D/player1.png"
+    this.imagem.src = imagem ? imagem : "../../imagens/texture/2D/player1.png";
 
     // CORRENDO DIREITA:
 
@@ -133,14 +151,14 @@ function Player(cidade)
 
 function Civil(cidade)
 {
-    this.largura = 50; //
-    this.altura = 50; //     
     this.posicaoXAtual = 740; //
     this.posicaoYAtual = 400; //
     this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740; //
     this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20; //
     this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
     this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
+    this.largura = 50; //
+    this.altura = 50; //     
     this.velocidade = 3; //
     this.direcaoX = 0; //
     this.direcaoY = 1; //
@@ -323,50 +341,29 @@ function Controle(key1, key2, key3, key4)
     }
 }
 
-var cidade1 = new Cidade();
-
-var player1 = new Player(cidade1);
-
-var civil1 = new Civil(cidade1);
-
-var controle1 = new Controle(87, 83, 68, 65);
-
-var circuloPosicaoX = 350;
-
-var circuloPosicaoY = 100;
-
-var circuloTamanho = 100;
-
-var anguloInicial = (Math.PI / 180) * 0;
-
-var anguloFinal = (Math.PI / 180) * 360;
-
-//O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
-var sentidoCirculo = true;
-
-// POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
-
-player1.imagemPosInicialX = 19;
-player1.imagemPosInicialY = 23;
-player1.imagemCorteLargura = 10;
-player1.imagemCorteAltura = 15;
-
-// POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
-
-civil1.imagemPosInicialX = 6;
-civil1.imagemPosInicialY = 161;
-civil1.imagemCorteLargura = 36;
-civil1.imagemCorteAltura = 36;
-
 //
 
-var sombraHorizontal = 3;
-var sombraVertical = 3;
-var incrementoSombra;
-var tempoSol = 5000;
-var loop;
+function quarteiraoEmCima(quarteirao, player)
+{
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY && player.posicaoY + player.altura >= quarteirao.posicaoY;
+}
 
-var imagensTempo = 200;
+function quarteiraoEmBaixo(quarteirao, player)
+{
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura >= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoX;
+
+}
+
+function quarteiraoEsquerda(quarteirao, player)
+{
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
+}
+
+
+function quarteiraoDireita(quarteirao, player)
+{
+    return player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoX + player.largura >= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
+}
 
 ////SPRITES:
 
@@ -675,109 +672,6 @@ function imagensCorrendoParaBaixo(elemento)
         elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB1;
     }
 }
-
-//
-
-//IMAGENS:
-
-var imagemEmBranco = new Image();
-
-imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
-
-//
-
-var imagemCidade2 = new Image();
-imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
-
-//
-
-///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
-
-Storage.prototype.setObj = function (key, obj)
-{
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function (key)
-{
-    return JSON.parse(this.getItem(key))
-}
-
-///////////////////////////// VARIAVEIS LOCAIS:
-
-//DEFININDO NOME USUARIO:
-
-if (localStorage.nome == "null" || localStorage.nome == null || localStorage.nome == "undefined" || localStorage.nome == undefined || localStorage.nome == "Sem Nome")
-{
-    var nomePrompt = prompt("Qual seu nome?");
-
-    localStorage.setItem("nome", nomePrompt);
-
-    if (localStorage.nome == "null" || localStorage.nome == "Sem nome")
-    {
-        localStorage.setItem("nome", "Sem Nome");
-    } else
-    {
-        localStorage.setItem("nome", nomePrompt);
-    }
-}
-
-// NECESSIDADES:
-
-if (localStorage.primeiroAcesso == undefined)
-{
-    localStorage.fomeStatus = new Number();
-    localStorage.sedeStatus = new Number();
-    localStorage.banheiroStatus = new Number();
-    localStorage.higieneStatus = new Number();
-    localStorage.energiaStatus = new Number();
-    localStorage.estresseStatus = new Number();
-    localStorage.socialStatus = new Number();
-    localStorage.saudeStatus = new Number();
-
-    localStorage.primeiroAcesso = "Definido";
-} else
-{
-    localStorage.primeiroAcesso = "Definido";
-}
-
-// SENTIMENTOS - EMOÇÃO:
-
-var sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
-
-var sentimentosRuins = ['LUTO', 'INGRATIDÃO', 'DEPRESSÃO', 'RAIVA', 'DESCONFIANÇA', 'MEDO', 'CIUMES', 'AUTOESTIMA BAIXA', 'APAVORAÇÃO', 'FRAQUEZA', 'INQUIETAÇÃO', 'FÚRIA', 'NEUROZE', 'DOR', 'LOUCURA', 'DESESPERO', 'ÓDIO', 'ARREPENDIMENTO', 'ANSIEDADE', 'CONFUSÃO', 'ESPANTO', 'INVEJA', 'HORROR', 'NOJO', 'TÉDIO', 'VIGANÇA', 'TRISTEZA', 'DECEPÇÃO', 'CARENCIA'];
-
-localStorage.setObj('sentimentosBons', sentimentosBons);
-
-localStorage.setObj('sentimentosRuins', sentimentosRuins);
-
-// ITENS:
-
-localStorage.dinheiro;
-localStorage.celular;
-localStorage.relogio;
-localStorage.computador;
-
-// DADOS:
-
-localStorage.nome;
-localStorage.generoSexo;
-localStorage.idade;
-localStorage.vivo;
-
-// REGISTROS:
-
-localStorage.dataAtual;
-localStorage.horaAtual;
-localStorage.dataCriação;
-localStorage.horaCriação;
-localStorage.primeiraAcao;
-localStorage.ultimaAcao;
-localStorage.acaoMaisUsada;
-localStorage.acaoMenosUsada;
-localStorage.sentimentoMaisUsado;
-localStorage.sentimentoMenosUsado;
-localStorage.alimentoMaisUsado;
-localStorage.alimentoMenosUsado;
 
 //// AÇÕES DO PERSONAGEM:
 
@@ -1131,3 +1025,159 @@ function imagemParado(elemento)
             break;
     }
 }
+
+//
+
+var cidade1 = new Cidade();
+
+//LUGARES BLOQUEADOS:
+
+var quarteirao1 = new Quarteirao(cidade1, 20, 20, 100, 100);
+var quarteirao2 = new Quarteirao(cidade1, 320, 17, 180, 120);
+var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
+
+//
+
+var player1 = new Player(cidade1);
+
+var civil1 = new Civil(cidade1);
+
+var controle1 = new Controle(87, 83, 68, 65);
+
+var circuloPosicaoX = 350;
+
+var circuloPosicaoY = 100;
+
+var circuloTamanho = 100;
+
+var anguloInicial = (Math.PI / 180) * 0;
+
+var anguloFinal = (Math.PI / 180) * 360;
+
+//O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
+var sentidoCirculo = true;
+
+// POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
+
+player1.imagemPosInicialX = 19;
+player1.imagemPosInicialY = 23;
+player1.imagemCorteLargura = 10;
+player1.imagemCorteAltura = 15;
+
+// POSIÇÕES ATUAIS DA IMAGEM DO CIVIL 1:
+
+civil1.imagemPosInicialX = 6;
+civil1.imagemPosInicialY = 161;
+civil1.imagemCorteLargura = 36;
+civil1.imagemCorteAltura = 36;
+
+//
+
+var sombraHorizontal = 3;
+var sombraVertical = 3;
+var incrementoSombra;
+var tempoSol = 5000;
+var loop;
+
+var imagensTempo = 200;
+
+//IMAGENS:
+
+var imagemEmBranco = new Image();
+
+imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
+
+//
+
+var imagemCidade2 = new Image();
+imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
+
+//
+
+///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
+
+Storage.prototype.setObj = function (key, obj)
+{
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function (key)
+{
+    return JSON.parse(this.getItem(key))
+}
+
+///////////////////////////// VARIAVEIS LOCAIS:
+
+//DEFININDO NOME USUARIO:
+
+if (localStorage.nome == "null" || localStorage.nome == null || localStorage.nome == "undefined" || localStorage.nome == undefined || localStorage.nome == "Sem Nome")
+{
+    var nomePrompt = prompt("Qual seu nome?");
+
+    localStorage.setItem("nome", nomePrompt);
+
+    if (localStorage.nome == "null" || localStorage.nome == "Sem nome")
+    {
+        localStorage.setItem("nome", "Sem Nome");
+    } else
+    {
+        localStorage.setItem("nome", nomePrompt);
+    }
+}
+
+// NECESSIDADES:
+
+if (localStorage.primeiroAcesso == undefined)
+{
+    localStorage.fomeStatus = new Number();
+    localStorage.sedeStatus = new Number();
+    localStorage.banheiroStatus = new Number();
+    localStorage.higieneStatus = new Number();
+    localStorage.energiaStatus = new Number();
+    localStorage.estresseStatus = new Number();
+    localStorage.socialStatus = new Number();
+    localStorage.saudeStatus = new Number();
+
+    localStorage.primeiroAcesso = "Definido";
+} else
+{
+    localStorage.primeiroAcesso = "Definido";
+}
+
+// SENTIMENTOS - EMOÇÃO:
+
+var sentimentosBons = ['FELICIDADE', 'ALEGRIA', 'GRATIDÃO', 'ESPERANÇA', 'ANIMAÇÃO', 'EUFORIA', 'PAIXÃO', 'AUTOESTIMA ALTA', 'ADMIRAÇÃO', 'ADORAÇÃO', 'ALIVIO', 'EXCITAÇÃO', 'DESEJO', 'CURIOSIDADE', 'SURPRESA', 'ESPIRITUAL', 'SATIFAÇÃO', 'CALMA', 'CORAGEM', 'AMOR', 'CONFIANÇA', 'FORÇA', 'SAÚDAVEL', 'PAZ', 'CARIDADE', 'COMPREENSÃO', 'ENTUSIASMO', 'ORGULHO', 'PROSPERIDADE'];
+
+var sentimentosRuins = ['LUTO', 'INGRATIDÃO', 'DEPRESSÃO', 'RAIVA', 'DESCONFIANÇA', 'MEDO', 'CIUMES', 'AUTOESTIMA BAIXA', 'APAVORAÇÃO', 'FRAQUEZA', 'INQUIETAÇÃO', 'FÚRIA', 'NEUROZE', 'DOR', 'LOUCURA', 'DESESPERO', 'ÓDIO', 'ARREPENDIMENTO', 'ANSIEDADE', 'CONFUSÃO', 'ESPANTO', 'INVEJA', 'HORROR', 'NOJO', 'TÉDIO', 'VIGANÇA', 'TRISTEZA', 'DECEPÇÃO', 'CARENCIA'];
+
+localStorage.setObj('sentimentosBons', sentimentosBons);
+
+localStorage.setObj('sentimentosRuins', sentimentosRuins);
+
+// ITENS:
+
+localStorage.dinheiro;
+localStorage.celular;
+localStorage.relogio;
+localStorage.computador;
+
+// DADOS:
+
+localStorage.nome;
+localStorage.generoSexo;
+localStorage.idade;
+localStorage.vivo;
+
+// REGISTROS:
+
+localStorage.dataAtual;
+localStorage.horaAtual;
+localStorage.dataCriação;
+localStorage.horaCriação;
+localStorage.primeiraAcao;
+localStorage.ultimaAcao;
+localStorage.acaoMaisUsada;
+localStorage.acaoMenosUsada;
+localStorage.sentimentoMaisUsado;
+localStorage.sentimentoMenosUsado;
+localStorage.alimentoMaisUsado;
+localStorage.alimentoMenosUsado;

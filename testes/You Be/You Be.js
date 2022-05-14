@@ -1,5 +1,29 @@
 //
 
+function quarteiraoEmCima(quarteirao, player)
+{
+  return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY && player.posicaoY + player.altura >= quarteirao.posicaoY;
+}
+
+function quarteiraoEmBaixo(quarteirao, player)
+{
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura >= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoX;
+
+}
+
+function quarteiraoEsquerda(quarteirao, player)
+{
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
+}
+
+
+function quarteiraoDireita(quarteirao, player)
+{
+    return player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoX + player.largura >= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
+}
+
+//
+
 var canvasPrincipalLigado = true;
 
 var loopAlerta = true
@@ -9,48 +33,6 @@ var alertaInimigo;
 var distanciaInimigo = 200;
 
 var x1 = 17, y1 = 20;
-
-//LUGARES
-
-var quarteirao1 = {}
-
-quarteirao1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 20;
-
-quarteirao1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 20;
-
-quarteirao1.largura = 100;
-
-quarteirao1.altura = 100;
-
-//
-
-var quarteirao2 = {}
-
-quarteirao2.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 320;
-
-quarteirao2.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 17;
-
-quarteirao2.largura = 180;
-
-quarteirao2.altura = 120;4
-
-//
-
-var quarteirao3 = {}
-
-quarteirao3.posicaoXAtual = 430;
-
-quarteirao3.posicaoYAtual = 310;
-
-quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
-
-quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
-
-quarteirao3.largura = 250;
-
-quarteirao3.altura = 100;
-
-//
 
 ////////////////////////////////////
 ////////////////////////////////////
@@ -71,14 +53,6 @@ loopDesenho();
 function loopDesenho()
 {
     //AREAS PROIBIDAS DE MOVIMENTAÇÃO:
-
-    topouQuarteirao1Direita = player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoX + player1.largura >= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura;
-
-    topouQuarteirao1Esquerda = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX && player1.posicaoY + player1.altura >= quarteirao3.posicaoY && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura;
-
-    topouQuarteirao1EmCima = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY <= quarteirao3.posicaoY && player1.posicaoY + player1.altura >= quarteirao3.posicaoY;
-
-    topouQuarteirao1EmBaixo = player1.posicaoX + player1.largura >= quarteirao3.posicaoX && player1.posicaoX <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY <= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY + player1.altura >= quarteirao3.posicaoY + quarteirao3.altura && player1.posicaoY + player1.altura <= quarteirao3.posicaoX + quarteirao3.largura && player1.posicaoY + player1.altura >= quarteirao3.posicaoX;
 
     //ATUALIZAR POSICAO PLAYER1:
 
@@ -117,12 +91,12 @@ function loopDesenho()
     status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
 
     status6.innerHTML = "player1.posicaoY: " + player1.posicaoY;
-    status7.innerHTML = "topouQuarteirao1EmCima: " + topouQuarteirao1Direita;
-    status8.innerHTML = "topouQuarteirao1EmBaixo: " + topouQuarteirao1Direita;
+    status7.innerHTML = "topouQuarteirao1EmCima: " ;
+    status8.innerHTML = "topouQuarteirao1EmBaixo: ";
     status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
     status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
     status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
-    status12.innerHTML = "loopAlerta: " + loopAlerta;
+    //status12.innerHTML = "loopAlerta: " + loopAlerta;
 
     //CODIÇÃO INIMIGO EM ALERTA:
 
@@ -186,7 +160,7 @@ function loopDesenho()
                     // MOVE PARA CIMA
                     //   player1.posicaoY -= player1.velocidade;             
 
-                    if (topouQuarteirao1EmBaixo)
+                    if (quarteiraoEmBaixo(quarteirao3,player1))
                     {
                         // NÃO FAZ NADA
                     } else
@@ -219,7 +193,7 @@ function loopDesenho()
                 {
                     // MOVE PARA BAIXO
 
-                    if (topouQuarteirao1EmCima)
+                    if (quarteiraoEmCima(quarteirao3,player1))
                     {
                         // NÃO FAZ NADA
                     } else
@@ -264,7 +238,7 @@ function loopDesenho()
                 if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
                 {
 
-                    if (topouQuarteirao1Esquerda)
+                    if (quarteiraoEsquerda(quarteirao3,player1))
                     {
                         // NÃO FAZ NADA
                     } else
@@ -297,7 +271,7 @@ function loopDesenho()
                 {
                     // muda posição
 
-                    if (topouQuarteirao1Direita)
+                    if (quarteiraoDireita(quarteirao3,player1))
                     {
                         // NÃO FAZ NADA
                     } else
@@ -652,6 +626,21 @@ function loopDesenho()
         {
             status12.innerHTML = "loopAlerta Desligado!"
         }
+        
+if (imagemCarregada)
+{
+    if (paginaRecarregada >= 1)
+    {
+
+    } else
+    {
+        document.location.reload(false);
+    }
+} else
+{
+    status12.innerHTML = "Aguarde... " + imagemCarregada + " - " + paginaRecarregada;
+}
+
         loop = requestAnimationFrame(loopDesenho);
     }
     //SE canvasPrincipalLigado É FALSE:

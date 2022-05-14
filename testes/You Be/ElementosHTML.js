@@ -8,6 +8,8 @@ class Elementos
 
 ///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
 
+var corpo = document.getElementById('corpo')
+
 // SECAO TELA PERSONAGEM:
 
 var secaoTelaPersonagem = document.getElementById('secaoTelaPersonagem');
@@ -217,16 +219,8 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 //CONFIGURAÇÕES EVENTOS BOTÕES:
 
 var imagemCarregada = false;
-
-cidade1.imagem.addEventListener('load', () => { imagemCarregada = true }, false);
-
-if (imagemCarregada)
-{
-    location.reload(false);
-} else
-{
-    status12.innerHTML = "Aguarde..."
-}
+var paginaRecarregada = 0;
+corpo.addEventListener("load", () => { imagemCarregada = true; paginaRecarregada += 1; }, false);
 
 //
 
