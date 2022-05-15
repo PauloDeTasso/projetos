@@ -1,4 +1,4 @@
-//
+// VARIAVÉIS
 
 var sombraHorizontal = 3;
 var sombraVertical = 3;
@@ -7,6 +7,31 @@ var tempoSol = 5000;
 var loop;
 
 var imagensTempo = 200;
+
+var canvasPrincipalLigado = true;
+
+var loopAlerta = true;
+
+var distanciaInimigo = 200;
+
+var x1 = 17, y1 = 20;
+
+//
+
+var circuloPosicaoX = 350;
+
+var circuloPosicaoY = 100;
+
+var circuloTamanho = 100;
+
+var anguloInicial = (Math.PI / 180) * 0;
+
+var anguloFinal = (Math.PI / 180) * 360;
+
+//O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
+var sentidoCirculo = true;
+
+//
 
 //IMAGENS:
 
@@ -189,7 +214,7 @@ class Player
         this.imagemCorteLarguraParado2 = 30;
         this.imagemCorteAlturaParado2 = 49;
 
-        this.imagemPosInicialXParado3 = 386;
+        this.imagemPosInicialXParado3 = 385;
         this.imagemPosInicialYParado3 = 127;
         this.imagemCorteLarguraParado3 = 34;
         this.imagemCorteAlturaParado3 = 49;
@@ -1224,26 +1249,13 @@ var quarteirao1 = new Quarteirao(cidade1, 20, 20, 100, 100);
 var quarteirao2 = new Quarteirao(cidade1, 320, 17, 180, 120);
 var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
 
-//
+//INSTANCIAS:
 
 var player1 = new Player(cidade1);
 
 var civil1 = new Civil(cidade1);
 
 var controle1 = new Controle(87, 83, 68, 65);
-
-var circuloPosicaoX = 350;
-
-var circuloPosicaoY = 100;
-
-var circuloTamanho = 100;
-
-var anguloInicial = (Math.PI / 180) * 0;
-
-var anguloFinal = (Math.PI / 180) * 360;
-
-//O SENTIDO DE DESENHO É APARTIR DO ANGULO FINAL
-var sentidoCirculo = true;
 
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
@@ -1333,19 +1345,7 @@ localStorage.sentimentoMenosUsado;
 localStorage.alimentoMaisUsado;
 localStorage.alimentoMenosUsado;
 
-// VARIAVÉIS
-
-var canvasPrincipalLigado = true;
-
-var loopAlerta = true;
-
-var distanciaInimigo = 200;
-
-var x1 = 17, y1 = 20;
-
-
 //
-
 
 function atualizarPosicao(elemento, cidade)
 {
@@ -1395,20 +1395,19 @@ function atualizarPosicao(elemento, cidade)
 }
 
 function statusSistema()
-{
-    status1.innerHTML = "player1.posicaoXGlobal: " + (player1.posicaoXGlobal);
-    status2.innerHTML = " player1.posicaoYGlobal: " + (player1.posicaoYGlobal);
-    status3.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
-    status4.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
-    status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
-
-    status6.innerHTML = "player1.posicaoY: " + player1.posicaoY;
-    status7.innerHTML = "topouQuarteirao1EmCima: ";
-    status8.innerHTML = "topouQuarteirao1EmBaixo: ";
+{  
+    status1.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+    status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
+    status3.innerHTML = "player1.posicaoXGlobal: " + (player1.posicaoXGlobal);
+    status4.innerHTML = " player1.posicaoYGlobal: " + (player1.posicaoYGlobal);
+    status5.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
+    status6.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
+    status7.innerHTML = "quarteirao3.posicaoY + quarteirao3.altura: " + (quarteirao3.posicaoY + quarteirao3.altura);
+    status8.innerHTML = "quarteiraoEmBaixo: " + quarteiraoEmBaixo(quarteirao3, player1);
     status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
     status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
-    status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
-    status12.innerHTML = "player1.imagemPosInicialX : " + player1.imagemPosInicialX;
+    status11.innerHTML = "quarteirao3.posicaoXGlobal: " + quarteirao3.posicaoXGlobal;
+    status12.innerHTML = "quarteirao3.posicaoYGlobal: " + quarteirao3.posicaoYGlobal;
 }
 
 function alertaInimigo(player, civil)
@@ -1425,7 +1424,540 @@ function alertaInimigo(player, civil)
 
 //
 
-/*
+function limparTela(canvas, contexto)
+{
+    // LIMPA A TELA
+    // (POSICAO X, POSICAO Y, LARGURA, ALTURA)
+    contexto.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+//
+
+function desenharCidade(contexto, cidade)
+{
+    // (URL IMAGEM, POSICAORECORTEINICIALX, POSICAORECORTEINICIALY, LARGURADORECORTE, ALTURADORECORTE, POSICAOIMAGEMX, POSICAOIMAGEMY, LARGURAIMAGEM, ALTURAIMAGEM))
+    contexto.drawImage(cidade.imagem, cidade.imagem.posicaoXRecorte, cidade.imagem.posicaoYRecorte, cidade.imagem.larguraRecorte, cidade.imagem.alturaRecorte, cidade.imagem.posicaoX, cidade.imagem.posicaoY, cidade.imagem.largura, cidade.imagem.altura);
+}
+
+//
+
+function atualizarSombras()
+        {
+            // SOMBRA HORINZONTAL:
+
+            switch (incrementoSombra)
+            {
+                case 0.01:
+                    sombraHorizontal += incrementoSombra;
+
+                    if (sombraHorizontal >= 20)
+                    {
+                        incrementoSombra = -0.01;
+                    }
+                    break;
+                case -0.01:
+                    sombraHorizontal += incrementoSombra;
+
+                    if (sombraHorizontal <= -20)
+                    {
+                        incrementoSombra = 0.01;
+                    }
+                    break;
+
+                default:
+                    incrementoSombra = 0.01;
+                    break;
+            }
+    
+        //DEIXA O FUNDO DOS DESENHOS TRANSPARENTE:
+        contextoTelaCanvasPrincipal.fillStyle = "rgba(0,0,0,0.0)";
+
+        // SOMBREAMENTO DE ELEMENTOS:
+        // COR DA SOMBRA
+        contextoTelaCanvasPrincipal.shadowColor = 'rgba(0, 0, 0, 0.5)';
+
+        // BLUR
+        contextoTelaCanvasPrincipal.shadowBlur = 10;
+
+        // DESLOCAMENTO DA SOMBRA NA POSIÇÃOX
+        contextoTelaCanvasPrincipal.shadowOffsetX = sombraHorizontal;
+
+        // DESLOCAMENTO DA SOMBRA NA POSIÇÃOY
+        contextoTelaCanvasPrincipal.shadowOffsetY = sombraVertical;
+}
+        
+        //
+
+function movimentosPlayer()
+{
+    //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
+    // SE PRESSIONOU UMA TECLA
+    if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+    {
+        // TECLA PARA CIMA
+        if (controle1.teclaSetaParaCimaPressionada)
+        {
+            // SE A POSICAO Y É MAIOR QUE ZERO '0'
+            if (player1.posicaoY >= 0)
+            {
+                // MOVE PARA CIMA
+                //   player1.posicaoY -= player1.velocidade;             
+
+                if (quarteiraoEmBaixo(quarteirao3, player1))
+                {
+                    // NÃO FAZ NADA
+                } else
+                {
+                    player1.posicaoY -= player1.velocidade;
+                }
+
+                imagensCorrendoParaCima(player1);
+
+            } else
+            {
+                //MOVE MAPA PARA CIMA SE POSICAO Y DA IMAGEM É MAIOR QUE ZERO '0':
+
+                if (cidade1.imagem.posicaoYRecorte <= 0)
+                {
+                    cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
+                } else
+                {
+                    cidade1.imagem.posicaoYRecorte -= player1.velocidade;
+
+                    imagensCorrendoParaCima(player1);
+                }
+            }
+        }
+        else
+        // SE TECLA PARA BAIXO PRESSIONADA:
+        {
+            // SE O PLAYER NAO ULTRAPASSA A TELA DO CANVAS:
+            if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura))
+            {
+                // MOVE PARA BAIXO
+
+                if (quarteiraoEmCima(quarteirao3, player1))
+                {
+                    // NÃO FAZ NADA
+                } else
+                {
+                    player1.posicaoY += player1.velocidade;
+                }
+
+                imagensCorrendoParaBaixo(player1);
+
+            } else
+            {
+                //MOVENDO MAPA PARA BAIXAO - POSICAO Y:
+
+                if (cidade1.imagem.posicaoYRecorte >= cidade1.imagem.height - telaCanvasPrincipal.height)
+                {
+                    cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
+                } else
+                {
+                    cidade1.imagem.posicaoYRecorte += player1.velocidade;
+
+                    imagensCorrendoParaBaixo(player1);
+                }
+            }
+        }
+    } else
+    {
+        if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
+        {
+            imagemParado(player1);
+        }
+    }
+
+    //  MOVIMENTAR JOGADOR ESQUERDA / DIREITA ********************************************************************
+
+    if (controle1.teclaSetaParaDireitaPressionada != controle1.teclaSetaParaEsquerdaPressionada)
+    {
+        // TECLA PARA DIREITA PRESSIONADA
+        if (controle1.teclaSetaParaDireitaPressionada)
+        {
+            // SE O PLAYER NAO SAIR DA TELA DO CANVAS
+
+            if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
+            {
+
+                if (quarteiraoEsquerda(quarteirao3, player1))
+                {
+                    // NÃO FAZ NADA
+                } else
+                {
+                    player1.posicaoX += player1.velocidade;
+                }
+
+                imagensCorrendoDireita(player1);
+
+            } else
+            {
+                //ALTERANDO O MAPA POSICAO X:
+
+                imagensCorrendoDireita(player1);
+
+                if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
+                {
+                    cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
+                } else
+                {
+                    cidade1.imagem.posicaoXRecorte += player1.velocidade;
+                }
+            }
+
+        } else
+        // se for para esquerda
+        {
+            // se a bola não saiu da tela
+            if (player1.posicaoX >= 0)
+            {
+                // muda posição
+
+                if (quarteiraoDireita(quarteirao3, player1))
+                {
+                    // NÃO FAZ NADA
+                } else
+                {
+                    player1.posicaoX -= player1.velocidade;
+                }
+
+                imagensCorrendoEsquerda(player1);
+
+            } else
+            {
+                //MOVENDO MAPA POSICAO -X:
+
+                if (cidade1.imagem.posicaoXRecorte <= 0)
+                {
+                    cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
+                } else
+                {
+                    cidade1.imagem.posicaoXRecorte -= player1.velocidade;
+                }
+            }
+        }
+    } else
+    {
+        if (controle1.teclaSetaParaCimaPressionada == controle1.teclaSetaParaBaixoPressionada)
+        {
+            imagemParado(player1);
+        }
+    }
+}
+
+//
+
+function elementoEmAlerta(elemento,player,cidade)
+{
+     // SE loopAlerta TRUE:
+     if (loopAlerta)
+     {
+         // INIMIGO EM ALERTA:
+         
+         if (elemento.emAlerta)
+         {
+             //SE SAIR DO MAPA PELO NORTE:
+             if (elemento.posicaoY < cidade.imagem.margemNorte)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO SUL:
+             else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO LESTE:
+             else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO OESTE:
+             else if (elemento.posicaoX < cidade.imagem.margemOeste)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+             else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY > player.posicaoY)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoEsquerda(elemento);
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+             else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY < player.posicaoY)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+             else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY < player.posicaoY)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+             else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY > player.posicaoY)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoDireita(elemento);
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+             else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY == player.posicaoY)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoEsquerda(elemento);
+
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+             else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY == player.posicaoY)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoDireita(elemento);
+             }
+             // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+             else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY > player.posicaoY)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaCima(elemento);
+             }
+             // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+             else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY < player.posicaoY)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+
+             } else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY == player.posicaoY)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
+                 var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
+
+                 if (confirma)
+                 {
+                     alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
+                 } else
+                 {
+                     alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
+                 }
+
+                 reiniciar();
+
+             } else
+             {
+                 //NÃO FAZ NADA
+             }
+             ////SE NAO ESTIVER EM ALERTA:
+         } else
+         {
+             //SE SAIR DO MAPA PELO NORTE:
+             if (elemento.posicaoY < cidade.imagem.margemNorte)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO SUL:
+             else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO LESTE:
+             else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             //SE SAIR DO MAPA PELO OESTE:
+             else if (elemento.posicaoX < cidade.imagem.margemOeste)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+             else if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoEsquerda(elemento);
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+             else if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY < elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+             else if (elemento.posicaoX < elemento.posicaoXFixo && elemento.posicaoY < elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+             else if (elemento.posicaoX < elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoDireita(elemento);
+             }
+             // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+             else if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY == elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = -1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoEsquerda(elemento);
+
+             }
+             // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+             else if (elemento.posicaoX < elemento.posicaoXFixo && elemento.posicaoY == elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = 0;
+                 elemento.direcaoX = 1;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoDireita(elemento);
+             }
+             // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+             else if (elemento.posicaoX == elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = -1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaCima(elemento);
+             }
+             // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+             else if (elemento.posicaoX == elemento.posicaoXFixo && elemento.posicaoY < elemento.posicaoYFixo)
+             {
+                 elemento.direcaoY = 1;
+                 elemento.direcaoX = 0;
+                 elemento.posicaoXAtual += elemento.direcaoX;
+                 elemento.posicaoYAtual += elemento.direcaoY;
+
+                 imagensCorrendoParaBaixo(elemento);
+
+             } else if (elemento.posicaoX == elemento.posicaoXFixo && elemento.posicaoY == elemento.posicaoYFixo)
+             {
+                 imagemParado(elemento);
+
+                 patrulhar(elemento);
+
+             } else
+             {
+                 //NÃO FAZ NADA
+             }
+         }
+
+         //SE loopAlerta É FALSE:
+     } else
+     {
+         status12.innerHTML = "loopAlerta Desligado!"
+     }
+}
+
+//
+
+function desenharImagensElemento(contexto, player)
+{  
+    contexto.drawImage(player.imagem, player.imagemPosInicialX, player.imagemPosInicialY, player.imagemCorteLargura, player.imagemCorteAltura, player.posicaoX, player.posicaoY, player.largura, player.altura);
+}
+
+//
+
+function recarregarPagina()
+{
+    if (imagemCarregada)
+    {
+        if (paginaRecarregada >= 1)
+        {
+
+        } else
+        {
+            document.location.reload(false);
+        }
+    } else
+    {
+        // status12.innerHTML = "Aguarde... " + imagemCarregada + " - " + paginaRecarregada;
+    }
+}
+
+//
+
+        /*
     function irParaCima()
     {
         if (player1.posicaoY > 0)
@@ -1579,6 +2111,18 @@ function abrirSecaoPingPong()
         contextoTelaCanvasLeste.fillRect(x1, y1, telaCanvasLeste.width / 2, 50);
     */
 
+
+        // FINALIZAR PREENCHENDO O DESENHO COM O ESTILO PASSADO ANTERIORMENTE DO RETANGULO 2: 
+        //contextoTelaCanvasPrincipal.fill();
+
+
+        
+        //// DESENHANDO LINHAS:
+
+        // DEFINE A LARGURA DE LINHA:
+        //contextoTelaCanvasPrincipal.lineWidth = 3;
+
+        
         // LINHAS EM CURVA:
         /*
             contextoTelaCanvasPrincipal.beginPath();
