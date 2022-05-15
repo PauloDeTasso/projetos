@@ -417,7 +417,7 @@ function quarteiraoEmCima(quarteirao, player)
 
 function quarteiraoEmBaixo(quarteirao, player)
 {
-    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura >= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoX;
+    return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura && player.posicaoY + player.altura >= quarteirao.posicaoY + quarteirao.altura;
 
 }
 
@@ -1337,9 +1337,7 @@ localStorage.alimentoMenosUsado;
 
 var canvasPrincipalLigado = true;
 
-var loopAlerta = true
-
-var alertaInimigo;
+var loopAlerta = true;
 
 var distanciaInimigo = 200;
 
@@ -1348,6 +1346,82 @@ var x1 = 17, y1 = 20;
 
 //
 
+
+function atualizarPosicao(elemento, cidade)
+{
+    if (elemento)
+    {
+        switch (elemento)
+        {
+            case player1:
+
+                elemento.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoX;
+                elemento.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoY;
+                break;
+
+            case civil1:
+
+                elemento.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoXAtual;
+                elemento.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoYAtual;
+
+                elemento.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740;
+
+                elemento.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20;
+                break;
+
+            case cidade1:
+
+                elemento.imagem.margemNorte = elemento.imagem.posicaoY - elemento.imagem.posicaoYRecorte;
+                elemento.imagem.margemSul = elemento.imagem.posicaoY + elemento.imagem.height - elemento.imagem.posicaoYRecorte;
+                elemento.imagem.margemLeste = elemento.imagem.posicaoX + elemento.imagem.width - elemento.imagem.posicaoXRecorte;
+                elemento.imagem.margemOeste = elemento.imagem.posicaoX - elemento.imagem.posicaoXRecorte;
+                break;
+
+            default:
+
+                break;
+        }
+    } else
+    {
+        //ATUALIZA POSIÇÕES PROIBIDAS:
+
+        //QUARTEIRAO3:
+
+        quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
+        quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
+
+        //
+    }
+}
+
+function statusSistema()
+{
+    status1.innerHTML = "civil1.posicaoXFixo: " + (civil1.posicaoXFixo);
+    status2.innerHTML = " civil1.posicaoYFixo: " + (civil1.posicaoYFixo);
+    status3.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
+    status4.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
+    status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+
+    status6.innerHTML = "player1.posicaoY: " + player1.posicaoY;
+    status7.innerHTML = "topouQuarteirao1EmCima: ";
+    status8.innerHTML = "topouQuarteirao1EmBaixo: ";
+    status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
+    status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
+    status11.innerHTML = "quarteirao3.largura: " + quarteirao3.largura;
+    status12.innerHTML = "player1.imagemPosInicialX : " + player1.imagemPosInicialX;
+}
+
+function alertaInimigo(player, civil)
+{
+    if ((player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) >= -distanciaInimigo && (player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) <= distanciaInimigo)
+    {
+        civil.emAlerta = true;
+
+    } else
+    {
+        civil.emAlerta = false;
+    }
+}
 
 //
 
