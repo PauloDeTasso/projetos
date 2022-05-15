@@ -42,12 +42,6 @@ imagemEmBranco.src = "../../imagens/texture/2D/emBranco.png";
 var imagemCidade2 = new Image();
 imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
 
-//
-
-///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
-
-var corpo = document.getElementById('corpo')
-
 // SECAO TELA PERSONAGEM:
 
 var secaoTelaPersonagem = document.getElementById('secaoTelaPersonagem');
@@ -57,46 +51,6 @@ var secaoTelaPersonagemPropriedades = secaoTelaPersonagem.getBoundingClientRect(
 var secaoTelaPersonagemLargura = secaoTelaPersonagemPropriedades.width;
 
 var secaoTelaPersonagemAltura = secaoTelaPersonagemPropriedades.height;
-
-// SECAO LESTE:
-
-var secaoLeste = document.getElementById('secaoLeste');
-
-var secaoLestePropriedades = secaoLeste.getBoundingClientRect();
-
-var secaoLesteLargura = secaoLestePropriedades.width;
-
-var secaoLesteAltura = secaoLestePropriedades.height;
-
-// SECAO OESTE:
-
-var secaoOeste = document.getElementById('secaoOeste');
-
-var secaoOestePropriedades = secaoOeste.getBoundingClientRect();
-
-var secaoOesteLargura = secaoOestePropriedades.width;
-
-var secaoOesteAltura = secaoOestePropriedades.height;
-
-// CANVAS OESTE:
-
-var telaCanvasOeste = document.getElementById('telaCanvasOeste');
-
-telaCanvasOeste.width = secaoOesteLargura;
-
-telaCanvasOeste.height = secaoOesteAltura;
-
-var contextoTelaCanvasOeste = telaCanvasOeste.getContext('2d');
-
-// CANVAS LESTE:
-
-var telaCanvasLeste = document.getElementById('telaCanvasLeste');
-
-telaCanvasLeste.width = secaoLesteLargura;
-
-telaCanvasLeste.height = secaoLesteAltura;
-
-var contextoTelaCanvasLeste = telaCanvasLeste.getContext('2d');
 
 //CANVAS TELA PRINCIPAL:
 

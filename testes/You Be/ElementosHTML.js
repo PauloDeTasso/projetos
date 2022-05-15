@@ -17,19 +17,10 @@ class Animal extends Elemento
     }
 }
 
+
 ///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
 
 var corpo = document.getElementById('corpo')
-
-// SECAO TELA PERSONAGEM:
-
-var secaoTelaPersonagem = document.getElementById('secaoTelaPersonagem');
-
-var secaoTelaPersonagemPropriedades = secaoTelaPersonagem.getBoundingClientRect();
-
-var secaoTelaPersonagemLargura = secaoTelaPersonagemPropriedades.width;
-
-var secaoTelaPersonagemAltura = secaoTelaPersonagemPropriedades.height;
 
 // SECAO LESTE:
 
@@ -71,8 +62,6 @@ telaCanvasLeste.height = secaoLesteAltura;
 
 var contextoTelaCanvasLeste = telaCanvasLeste.getContext('2d');
 
-//
-
 /*
 
 var estiloCss = window.getComputedStyle(secaoTelaPersonagem);
@@ -82,17 +71,6 @@ var secaoTelaPersonagemWidthCss = estiloCss.getPropertyValue('width');
 var secaoTelaPersonagemHeightCss = estiloCss.getPropertyValue('height');
 
 */
-
-//CANVAS TELA PRINCIPAL:
-
-var telaCanvasPrincipal = document.getElementById('telaCanvasPrincipal');
-
-var contextoTelaCanvasPrincipal = telaCanvasPrincipal.getContext('2d');
-
-telaCanvasPrincipal.width = secaoTelaPersonagemLargura;
-
-telaCanvasPrincipal.height = secaoTelaPersonagemAltura;
-
 
 //BARRAS NECESSIDADES:
 
