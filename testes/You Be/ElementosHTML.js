@@ -298,7 +298,7 @@ function play()
 
 function stop()
 {
-    alertaInimigo = false;
+    civil1.emAlerta = false;
 }
 
 function irParaEsquerda()

@@ -1396,8 +1396,8 @@ function atualizarPosicao(elemento, cidade)
 
 function statusSistema()
 {
-    status1.innerHTML = "civil1.posicaoXFixo: " + (civil1.posicaoXFixo);
-    status2.innerHTML = " civil1.posicaoYFixo: " + (civil1.posicaoYFixo);
+    status1.innerHTML = "player1.posicaoXGlobal: " + (player1.posicaoXGlobal);
+    status2.innerHTML = " player1.posicaoYGlobal: " + (player1.posicaoYGlobal);
     status3.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
     status4.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
     status5.innerHTML = "player1.posicaoX: " + player1.posicaoX;
