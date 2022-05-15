@@ -1,12 +1,9 @@
-player1.posicaoX = telaCanvasPrincipal.width / 2;
-player1.posicaoY = telaCanvasPrincipal.height / 2;
 
 civil2.posicaoXAtual = 0;
 civil2.posicaoYAtual = 0;
 
 civil2.posicaoXMorada = 0;
 civil2.posicaoYMorada = 0;
-
 
 ////////////////////////////////////
 ////////////////////////////////////
@@ -68,10 +65,10 @@ function loopDesenho()
         alertaInimigo(player1, civil2);
 
         //AUTOMOTIZA CIVIL1:
-        elementoEmAlerta(civil1, player1, cidade1);
+        elementoEmAlerta(civil1, player1);
 
         //AUTOMOTIZA CIVIL2:
-        elementoEmAlerta(civil2, player1, cidade1);
+        elementoEmAlerta(civil2, player1);
 
         //RECARREGADA PAGINA QUANDO OS ELEMENTOS DE BODY CARREGA:
         recarregarPagina();

@@ -12,8 +12,6 @@ var canvasPrincipalLigado = true;
 
 var loopAlerta = true;
 
-var distanciaInimigo = 100;
-
 var x1 = 17, y1 = 20;
 
 //
@@ -45,6 +43,70 @@ var imagemCidade2 = new Image();
 imagemCidade2.src = "../../imagens/texture/2D/cidade2.png"
 
 //
+
+///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
+
+var corpo = document.getElementById('corpo')
+
+// SECAO TELA PERSONAGEM:
+
+var secaoTelaPersonagem = document.getElementById('secaoTelaPersonagem');
+
+var secaoTelaPersonagemPropriedades = secaoTelaPersonagem.getBoundingClientRect();
+
+var secaoTelaPersonagemLargura = secaoTelaPersonagemPropriedades.width;
+
+var secaoTelaPersonagemAltura = secaoTelaPersonagemPropriedades.height;
+
+// SECAO LESTE:
+
+var secaoLeste = document.getElementById('secaoLeste');
+
+var secaoLestePropriedades = secaoLeste.getBoundingClientRect();
+
+var secaoLesteLargura = secaoLestePropriedades.width;
+
+var secaoLesteAltura = secaoLestePropriedades.height;
+
+// SECAO OESTE:
+
+var secaoOeste = document.getElementById('secaoOeste');
+
+var secaoOestePropriedades = secaoOeste.getBoundingClientRect();
+
+var secaoOesteLargura = secaoOestePropriedades.width;
+
+var secaoOesteAltura = secaoOestePropriedades.height;
+
+// CANVAS OESTE:
+
+var telaCanvasOeste = document.getElementById('telaCanvasOeste');
+
+telaCanvasOeste.width = secaoOesteLargura;
+
+telaCanvasOeste.height = secaoOesteAltura;
+
+var contextoTelaCanvasOeste = telaCanvasOeste.getContext('2d');
+
+// CANVAS LESTE:
+
+var telaCanvasLeste = document.getElementById('telaCanvasLeste');
+
+telaCanvasLeste.width = secaoLesteLargura;
+
+telaCanvasLeste.height = secaoLesteAltura;
+
+var contextoTelaCanvasLeste = telaCanvasLeste.getContext('2d');
+
+//CANVAS TELA PRINCIPAL:
+
+var telaCanvasPrincipal = document.getElementById('telaCanvasPrincipal');
+
+var contextoTelaCanvasPrincipal = telaCanvasPrincipal.getContext('2d');
+
+telaCanvasPrincipal.width = secaoTelaPersonagemLargura;
+
+telaCanvasPrincipal.height = secaoTelaPersonagemAltura;
 
 // FUNÇÕES CONSTRUTORAS
 
@@ -90,10 +152,10 @@ class Player
 {
     constructor( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem )
     {
-        this.posicaoX = posicaoX ? posicaoX : 0; //
-        this.posicaoY = posicaoY ? posicaoY : 200; //
-        this.largura = largura ? largura : 50; //
-        this.altura = altura ? altura : 50; //   
+        this.posicaoX = parseInt(posicaoX ? posicaoX : telaCanvasPrincipal.width / 2);// 
+        this.posicaoY = parseInt(posicaoY ? posicaoY : telaCanvasPrincipal.height / 2); //
+        this.largura = largura ? largura : cidade.imagem.largura/100; //
+        this.altura = altura ? altura : cidade.imagem.altura/100; //   
         this.velocidade = velocidade ? velocidade : 3; //
         this.direcaoX = 0; //
         this.direcaoY = 0; //
@@ -243,8 +305,8 @@ class Civil extends Player
         this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYMorada; //
         this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
         this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
-        this.largura = largura ? largura : 50; //
-        this.altura = altura ? altura : 50; //     
+        this.largura = largura ? largura : cidade.imagem.largura/100; //
+        this.altura = altura ? altura : cidade.imagem.altura/100; //  
         this.velocidade = velocidade ? velocidade : 3; //
         this.direcaoX = 0; //
         this.direcaoY = 1; //
@@ -294,15 +356,15 @@ class Civil extends Player
         this.imagemPosInicialYCorrendoE3 = 410;
         this.imagemPosInicialYCorrendoE4 = 310;
 
-        this.imagemCorteLarguraCorrendoE1 = 36;
-        this.imagemCorteLarguraCorrendoE2 = 36;
-        this.imagemCorteLarguraCorrendoE3 = 36;
-        this.imagemCorteLarguraCorrendoE4 = 36;
+        this.imagemCorteLarguraCorrendoE1 = 39;
+        this.imagemCorteLarguraCorrendoE2 = 39;
+        this.imagemCorteLarguraCorrendoE3 = 39;
+        this.imagemCorteLarguraCorrendoE4 = 39;
 
-        this.imagemCorteAlturaCorrendoE1 = 37;
-        this.imagemCorteAlturaCorrendoE2 = 37;
-        this.imagemCorteAlturaCorrendoE3 = 37;
-        this.imagemCorteAlturaCorrendoE4 = 37;
+        this.imagemCorteAlturaCorrendoE1 = 39;
+        this.imagemCorteAlturaCorrendoE2 = 39;
+        this.imagemCorteAlturaCorrendoE3 = 39;
+        this.imagemCorteAlturaCorrendoE4 = 39;
 
         // CORRENDO PARA CIMA:
 
@@ -316,37 +378,37 @@ class Civil extends Player
         this.imagemPosInicialYCorrendoC3 = 560;
         this.imagemPosInicialYCorrendoC4 = 460;
 
-        this.imagemCorteLarguraCorrendoC1 = 36;
-        this.imagemCorteLarguraCorrendoC2 = 36;
-        this.imagemCorteLarguraCorrendoC3 = 36;
-        this.imagemCorteLarguraCorrendoC4 = 36;
+        this.imagemCorteLarguraCorrendoC1 = 37;
+        this.imagemCorteLarguraCorrendoC2 = 37;
+        this.imagemCorteLarguraCorrendoC3 = 37;
+        this.imagemCorteLarguraCorrendoC4 = 37;
 
-        this.imagemCorteAlturaCorrendoC1 = 37;
-        this.imagemCorteAlturaCorrendoC2 = 37;
-        this.imagemCorteAlturaCorrendoC3 = 37;
-        this.imagemCorteAlturaCorrendoC4 = 37;
+        this.imagemCorteAlturaCorrendoC1 = 39;
+        this.imagemCorteAlturaCorrendoC2 = 39;
+        this.imagemCorteAlturaCorrendoC3 = 39;
+        this.imagemCorteAlturaCorrendoC4 = 39;
 
         // CORRENDO PARA BAIXO:
 
-        this.imagemPosInicialXCorrendoB1 = 5;
-        this.imagemPosInicialXCorrendoB2 = 5;
-        this.imagemPosInicialXCorrendoB3 = 5;
-        this.imagemPosInicialXCorrendoB4 = 5;
+        this.imagemPosInicialXCorrendoB1 = 6;
+        this.imagemPosInicialXCorrendoB2 = 6;
+        this.imagemPosInicialXCorrendoB3 = 6;
+        this.imagemPosInicialXCorrendoB4 = 6;
 
         this.imagemPosInicialYCorrendoB1 = 160;
         this.imagemPosInicialYCorrendoB2 = 211;
         this.imagemPosInicialYCorrendoB3 = 261;
         this.imagemPosInicialYCorrendoB4 = 160;
 
-        this.imagemCorteLarguraCorrendoB1 = 36;
-        this.imagemCorteLarguraCorrendoB2 = 36;
-        this.imagemCorteLarguraCorrendoB3 = 36;
-        this.imagemCorteLarguraCorrendoB4 = 36;
+        this.imagemCorteLarguraCorrendoB1 = 37;
+        this.imagemCorteLarguraCorrendoB2 = 37;
+        this.imagemCorteLarguraCorrendoB3 = 37;
+        this.imagemCorteLarguraCorrendoB4 = 37;
 
-        this.imagemCorteAlturaCorrendoB1 = 37;
-        this.imagemCorteAlturaCorrendoB2 = 37;
-        this.imagemCorteAlturaCorrendoB3 = 37;
-        this.imagemCorteAlturaCorrendoB4 = 37; 
+        this.imagemCorteAlturaCorrendoB1 = 39;
+        this.imagemCorteAlturaCorrendoB2 = 39;
+        this.imagemCorteAlturaCorrendoB3 = 39;
+        this.imagemCorteAlturaCorrendoB4 = 39; 
 }
 }
 
@@ -796,7 +858,7 @@ function imagensCorrendoParaBaixo(elemento)
 
 //PARADO
 
-function imagemParado(elemento)
+function imagemParado(elemento,tempo)
 {
     switch (elemento)
     {
@@ -806,49 +868,49 @@ function imagemParado(elemento)
 
             if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, tempo)
 
             } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado2)
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado3; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado3; }, tempo)
 
             } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado3)
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, tempo)
 
             } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado4)
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
 
             }else
             {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
             }
 
             //elemento.imagemPosInicialY:
 
             if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, tempo)
 
 
             } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado2)
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado3; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado3; }, tempo)
 
 
             } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado3)
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, tempo)
 
 
             } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado4)
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
 
             } else
             {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, imagensTempo)
+                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
 
             }
 
@@ -856,23 +918,23 @@ function imagemParado(elemento)
 
             if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1 )
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, imagensTempo)
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, tempo)
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3; }, tempo)                
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado3)
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, tempo)                
 
             } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado4)
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)                
 
             } else
             {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, imagensTempo)             
+                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)             
                 
             }
 
@@ -880,24 +942,24 @@ function imagemParado(elemento)
 
             if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
             {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, tempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado2)
             {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3; }, tempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
             {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, imagensTempo)                
+                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, tempo)                
 
             } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado4)
             {
-                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, imagensTempo)            
+                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, tempo)            
 
             } else
             {
                 setTimeout(() => {
-                    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1 ; }, imagensTempo)                
+                    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1 ; }, tempo)                
             }
             break;
 
@@ -1236,15 +1298,17 @@ function saude()
 
 function reiniciar()
 {
-    player1.posicaoX = 0;
-    player1.posicaoY = 200;
+    cidade1.imagem.posicaoXRecorte = 0;
+    cidade1.imagem.posicaoYRecorte = 0;
+    
+    player1.posicaoX = parseInt(telaCanvasPrincipal.width/2);
+    player1.posicaoY = parseInt(telaCanvasPrincipal.height/2);
 
-    civil1.posicaoXAtual = 740;
-    civil1.posicaoYAtual = 200;
+    civil1.posicaoXAtual = civil1.posicaoXMorada;
+    civil1.posicaoYAtual = civil1.posicaoYMorada;
 
-    civil2.posicaoXAtual = 400;
-    civil2.posicaoYAtual = 20;
-
+    civil2.posicaoXAtual = civil2.posicaoXMorada;
+    civil2.posicaoYAtual = civil2.posicaoYMorada ;
 }
 
 //
@@ -1389,9 +1453,13 @@ function atualizarPosicao(elemento, cidade)
             case cidade1:
 
                 elemento.imagem.margemNorte = elemento.imagem.posicaoY - elemento.imagem.posicaoYRecorte;
+                
                 elemento.imagem.margemSul = elemento.imagem.posicaoY + elemento.imagem.height - elemento.imagem.posicaoYRecorte;
+                
                 elemento.imagem.margemLeste = elemento.imagem.posicaoX + elemento.imagem.width - elemento.imagem.posicaoXRecorte;
+                
                 elemento.imagem.margemOeste = elemento.imagem.posicaoX - elemento.imagem.posicaoXRecorte;
+
                 break;
 
             default:
@@ -1430,7 +1498,7 @@ function statusSistema()
 
 function alertaInimigo(player, civil)
 {
-    if ((player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) >= -distanciaInimigo && (player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) <= distanciaInimigo)
+    if ((player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) >= -player.distanciaInimigo && (player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) <= player.distanciaInimigo)
     {
         civil.emAlerta = true;
 
@@ -1583,7 +1651,7 @@ function movimentosPlayer()
     {
         if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
         {
-            imagemParado(player1);
+         //   imagemParado(player1,imagensTempo);
         }
     }
 
@@ -1659,14 +1727,14 @@ function movimentosPlayer()
     {
         if (controle1.teclaSetaParaCimaPressionada == controle1.teclaSetaParaBaixoPressionada)
         {
-            imagemParado(player1);
+            imagemParado(player1,770);
         }
     }
 }
 
 //
 
-function elementoEmAlerta(elemento,player,cidade)
+function elementoEmAlerta(elemento,player)
 {
      // SE loopAlerta TRUE:
      if (loopAlerta)
@@ -1675,44 +1743,8 @@ function elementoEmAlerta(elemento,player,cidade)
          
          if (elemento.emAlerta)
          {
-             //SE SAIR DO MAPA PELO NORTE:
-             if (elemento.posicaoY < cidade.imagem.margemNorte)
-             {
-                 elemento.direcaoY = 1;
-                 elemento.direcaoX = 0;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                 imagensCorrendoParaBaixo(elemento);
-             }
-             //SE SAIR DO MAPA PELO SUL:
-             else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
-             {
-                 elemento.direcaoY = -1;
-                 elemento.direcaoX = 0;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                 imagensCorrendoParaCima(elemento);
-             }
-             //SE SAIR DO MAPA PELO LESTE:
-             else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
-             {
-                 elemento.direcaoY = 0;
-                 elemento.direcaoX = -1;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                 imagensCorrendoEsquerda(elemento);
-             }
-             //SE SAIR DO MAPA PELO OESTE:
-             else if (elemento.posicaoX < cidade.imagem.margemOeste)
-             {
-                 elemento.direcaoY = 0;
-                 elemento.direcaoX = 1;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                 imagensCorrendoDireita(elemento);
-             }
              // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
-             else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY > player.posicaoY)
+             if (elemento.posicaoX > player.posicaoX && elemento.posicaoY > player.posicaoY)
              {
                  elemento.direcaoY = -1;
                  elemento.direcaoX = -1;
@@ -1809,50 +1841,19 @@ function elementoEmAlerta(elemento,player,cidade)
                  {
                      alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
                  }
-
                  reiniciar();
-
-             } else
+             }
+            // SE NÃO ESTIVER EM NENHUMA DAS CONDIÇÕES DE POSIÇÃO:
+             else
              {
                  //NÃO FAZ NADA
              }
+
              ////SE NAO ESTIVER EM ALERTA:
          } else
          {
-             //SE SAIR DO MAPA PELO NORTE:
-             if (elemento.posicaoY < cidade.imagem.margemNorte)
-             {
-                 elemento.direcaoY = 1;
-                 elemento.direcaoX = 0;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;            
-                }
-             //SE SAIR DO MAPA PELO SUL:
-             else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
-             {
-                 elemento.direcaoY = -1;
-                 elemento.direcaoX = 0;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                }
-             //SE SAIR DO MAPA PELO LESTE:
-             else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
-             {
-                 elemento.direcaoY = 0;
-                 elemento.direcaoX = -1;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                }
-             //SE SAIR DO MAPA PELO OESTE:
-             else if (elemento.posicaoX < cidade.imagem.margemOeste)
-             {
-                 elemento.direcaoY = 0;
-                 elemento.direcaoX = 1;
-                 elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-                }
              // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
-             else if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
+             if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
              {
                  elemento.direcaoY = -1;
                  elemento.direcaoX = -1;
@@ -1934,11 +1935,13 @@ function elementoEmAlerta(elemento,player,cidade)
 
              } else if (elemento.posicaoX == elemento.posicaoXFixo && elemento.posicaoY == elemento.posicaoYFixo)
              {
-                 imagemParado(elemento);
+                 imagemParado(elemento,imagensTempo);
 
                  patrulhar(elemento);
 
-             } else
+             }
+             // SE NÃO ESTIVER EM NENHUMA DAS CONDIÇÕES DE POSIÇÃO:
+             else
              {
                  //NÃO FAZ NADA
              }
