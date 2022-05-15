@@ -12,7 +12,7 @@ var canvasPrincipalLigado = true;
 
 var loopAlerta = true;
 
-var distanciaInimigo = 200;
+var distanciaInimigo = 100;
 
 var x1 = 17, y1 = 20;
 
@@ -66,7 +66,7 @@ function Cidade()
     this.imagem.margemNorte = this.imagem.posicaoY;
     this.imagem.margemSul = this.imagem.posicaoY + this.imagem.height;
     this.imagem.margemLeste = this.imagem.posicaoX + this.imagem.width;
-    this.imagem.margemOeste = this.imagem.posicaoX;
+    this.imagem.margemOeste = this.imagem.posicaoX;    
 }
 
 function Quarteirao(cidade, posicaoX, posicaoY, largura, altura)
@@ -97,7 +97,8 @@ class Player
         this.velocidade = velocidade ? velocidade : 3; //
         this.direcaoX = 0; //
         this.direcaoY = 0; //
-
+        this.distanciaInimigo = 100;
+        
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
 
         this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoY;
@@ -230,14 +231,16 @@ class Player
 
 class Civil extends Player
 {
-    constructor ( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem, emAlerta)
+    constructor ( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem, emAlerta,moradaX,moradaY)
     {
         super( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem);
 
+        this.posicaoXMorada = moradaX ? moradaX : 740; //
+        this.posicaoYMorada = moradaY ? moradaY : 20; //
         this.posicaoXAtual = posicaoX ? posicaoX : 740; //
         this.posicaoYAtual = posicaoY ? posicaoY : 400; //
-        this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740; //
-        this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20; //
+        this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXMorada; //
+        this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYMorada; //
         this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
         this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
         this.largura = largura ? largura : 50; //
@@ -905,7 +908,15 @@ function imagemParado(elemento)
             elemento.imagemCorteLargura = 36;
             elemento.imagemCorteAltura = 36;
             break;
+        
+            case civil2:
 
+                elemento.imagemPosInicialX = 6;
+                elemento.imagemPosInicialY = 161;
+                elemento.imagemCorteLargura = 36;
+                elemento.imagemCorteAltura = 36;
+                break;
+    
         default:
 
             break;
@@ -1230,6 +1241,10 @@ function reiniciar()
 
     civil1.posicaoXAtual = 740;
     civil1.posicaoYAtual = 200;
+
+    civil2.posicaoXAtual = 400;
+    civil2.posicaoYAtual = 20;
+
 }
 
 //
@@ -1248,14 +1263,6 @@ var cidade1 = new Cidade();
 var quarteirao1 = new Quarteirao(cidade1, 20, 20, 100, 100);
 var quarteirao2 = new Quarteirao(cidade1, 320, 17, 180, 120);
 var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
-
-//INSTANCIAS:
-
-var player1 = new Player(cidade1);
-
-var civil1 = new Civil(cidade1);
-
-var controle1 = new Controle(87, 83, 68, 65);
 
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
@@ -1364,10 +1371,20 @@ function atualizarPosicao(elemento, cidade)
                 elemento.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoXAtual;
                 elemento.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoYAtual;
 
-                elemento.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740;
+                elemento.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoXMorada;
 
-                elemento.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20;
+                elemento.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoYMorada;
                 break;
+            
+                case civil2:
+
+                    elemento.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoXAtual;
+                    elemento.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoYAtual;
+                
+                    elemento.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoXMorada;
+    
+                    elemento.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoYMorada;
+                    break;
 
             case cidade1:
 
@@ -1398,16 +1415,17 @@ function statusSistema()
 {  
     status1.innerHTML = "player1.posicaoX: " + player1.posicaoX;
     status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
-    status3.innerHTML = "player1.posicaoXGlobal: " + (player1.posicaoXGlobal);
-    status4.innerHTML = " player1.posicaoYGlobal: " + (player1.posicaoYGlobal);
-    status5.innerHTML = " civil1.posicaoX: " + civil1.posicaoX;
-    status6.innerHTML = " civil1.posicaoY: " + civil1.posicaoY;
-    status7.innerHTML = "quarteirao3.posicaoY + quarteirao3.altura: " + (quarteirao3.posicaoY + quarteirao3.altura);
-    status8.innerHTML = "quarteiraoEmBaixo: " + quarteiraoEmBaixo(quarteirao3, player1);
-    status9.innerHTML = "quarteirao3.posicaoX: " + quarteirao3.posicaoX;
-    status10.innerHTML = "quarteirao3.posicaoY: " + quarteirao3.posicaoY;
-    status11.innerHTML = "quarteirao3.posicaoXGlobal: " + quarteirao3.posicaoXGlobal;
-    status12.innerHTML = "quarteirao3.posicaoYGlobal: " + quarteirao3.posicaoYGlobal;
+    status3.innerHTML = " civil2.posicaoXMorada: " + civil2.posicaoXMorada;
+    status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
+    status5.innerHTML = " civil2.emAlerta: " + civil2.emAlerta;
+    status6.innerHTML = " loopAlerta: " + loopAlerta;
+    status7.innerHTML = " civil2.posicaoX: " + civil2.posicaoX;
+    status8.innerHTML = " civil2.posicaoY: " + civil2.posicaoY;
+    status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
+    status10.innerHTML = " civil2.posicaoYFixo: " + civil2.posicaoYFixo;
+    status11.innerHTML = " civil2.posicaoXAtual: " + civil2.posicaoXAtual;
+    status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual;
+ 
 }
 
 function alertaInimigo(player, civil)
@@ -1664,6 +1682,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = 0;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
+                 imagensCorrendoParaBaixo(elemento);
              }
              //SE SAIR DO MAPA PELO SUL:
              else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
@@ -1672,6 +1691,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = 0;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
+                 imagensCorrendoParaCima(elemento);
              }
              //SE SAIR DO MAPA PELO LESTE:
              else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
@@ -1680,6 +1700,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = -1;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
+                 imagensCorrendoEsquerda(elemento);
              }
              //SE SAIR DO MAPA PELO OESTE:
              else if (elemento.posicaoX < cidade.imagem.margemOeste)
@@ -1688,6 +1709,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = 1;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
+                 imagensCorrendoDireita(elemento);
              }
              // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
              else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY > player.posicaoY)
@@ -1803,8 +1825,8 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoY = 1;
                  elemento.direcaoX = 0;
                  elemento.posicaoXAtual += elemento.direcaoX;
-                 elemento.posicaoYAtual += elemento.direcaoY;
-             }
+                 elemento.posicaoYAtual += elemento.direcaoY;            
+                }
              //SE SAIR DO MAPA PELO SUL:
              else if (elemento.posicaoY + elemento.altura > cidade.imagem.margemSul)
              {
@@ -1812,7 +1834,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = 0;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
-             }
+                }
              //SE SAIR DO MAPA PELO LESTE:
              else if (elemento.posicaoX + elemento.largura > cidade.imagem.margemLeste)
              {
@@ -1820,7 +1842,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = -1;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
-             }
+                }
              //SE SAIR DO MAPA PELO OESTE:
              else if (elemento.posicaoX < cidade.imagem.margemOeste)
              {
@@ -1828,7 +1850,7 @@ function elementoEmAlerta(elemento,player,cidade)
                  elemento.direcaoX = 1;
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
-             }
+                }
              // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
              else if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
              {
@@ -1954,6 +1976,16 @@ function recarregarPagina()
         // status12.innerHTML = "Aguarde... " + imagemCarregada + " - " + paginaRecarregada;
     }
 }
+
+//INSTANCIAS:
+
+var controle1 = new Controle(87, 83, 68, 65);
+
+var player1 = new Player(cidade1);
+
+var civil1 = new Civil(cidade1);
+
+var civil2 = new Civil(cidade1);
 
 //
 

@@ -1,6 +1,6 @@
 class Elemento
 {
-    constructor(nome)
+    constructor (nome)
     {
         this.nome = nome;
         this.tipo;
@@ -9,7 +9,7 @@ class Elemento
 
 class Animal extends Elemento
 {
-    constructor(cor)
+    constructor (cor)
     {
         super("Tasso")
         super.tipo = 10;
@@ -298,7 +298,7 @@ function play()
 
 function stop()
 {
-    civil1.emAlerta = false;
+    loopAlerta = false;
 }
 
 function irParaEsquerda()
