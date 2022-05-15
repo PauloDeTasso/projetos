@@ -61,280 +61,265 @@ function Quarteirao(cidade, posicaoX, posicaoY, largura, altura)
 
 // PLAYER
 
-function Player(cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem)
+class Player
 {
+    constructor( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem )
+    {
+        this.posicaoX = posicaoX ? posicaoX : 0; //
+        this.posicaoY = posicaoY ? posicaoY : 200; //
+        this.largura = largura ? largura : 50; //
+        this.altura = altura ? altura : 50; //   
+        this.velocidade = velocidade ? velocidade : 3; //
+        this.direcaoX = 0; //
+        this.direcaoY = 0; //
 
-    this.posicaoX = posicaoX ? posicaoX : 0; //
-    this.posicaoY = posicaoY ? posicaoY : 200; //
-    this.largura = largura ? largura : 50; //
-    this.altura = altura ? altura : 50; //   
-    this.velocidade = velocidade ? velocidade : 3; //
-    this.direcaoX = 0; //
-    this.direcaoY = 0; //
+        this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
 
-    this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
+        this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoY;
 
-    this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoY;
+        //IMAGEM:
 
-    //IMAGEM:
+        this.imagem = new Image();
+        this.imagem.src = imagem ? imagem : "../../imagens/texture/2D/personagem1.png";
 
-    this.imagem = new Image();
-    this.imagem.src = imagem ? imagem : "../../imagens/texture/2D/personagem1.png";
+        // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
 
-    //
+        this.imagemPosInicialX = 0;
+        this.imagemPosInicialY = 125;
+        this.imagemCorteLargura = 37;
+        this.imagemCorteAltura = 54;
 
-/*
-    this.imagemPosInicialXCorrendoE1 = 7;
-    this.imagemPosInicialXCorrendoE2 = 67;
-    this.imagemPosInicialXCorrendoE3 = 134;
-    this.imagemPosInicialXCorrendoE4 = 198;
+        // CORRENDO DIREITA:
 
-    this.imagemPosInicialYCorrendoE1 = 576;
-    this.imagemPosInicialYCorrendoE2 = 577;
-    this.imagemPosInicialYCorrendoE3 = 576;
-    this.imagemPosInicialYCorrendoE4 = 576;
+        this.imagemPosInicialXCorrendoD1 = 6;
+        this.imagemPosInicialXCorrendoD2 = 67;
+        this.imagemPosInicialXCorrendoD3 = 133;
+        this.imagemPosInicialXCorrendoD4 = 197;
 
-    this.imagemCorteLarguraCorrendoE1 = 21;
-    this.imagemCorteLarguraCorrendoE2 = 25;
-    this.imagemCorteLarguraCorrendoE3 = 22;
-    this.imagemCorteLarguraCorrendoE4 = 23;
+        this.imagemPosInicialYCorrendoD1 = 704;
+        this.imagemPosInicialYCorrendoD2 = 705;
+        this.imagemPosInicialYCorrendoD3 = 704;
+        this.imagemPosInicialYCorrendoD4 = 704;
 
-    this.imagemCorteAlturaCorrendoE1 = 48;
-    this.imagemCorteAlturaCorrendoE2 = 47;
-    this.imagemCorteAlturaCorrendoE3 = 47;
-    this.imagemCorteAlturaCorrendoE4 = 47;
-    */
-    // POSIÇÕES ATUAIS DA IMAGEM DO PLAYER 1:
+        this.imagemCorteLarguraCorrendoD1 = 25;
+        this.imagemCorteLarguraCorrendoD2 = 25;
+        this.imagemCorteLarguraCorrendoD3 = 25;
+        this.imagemCorteLarguraCorrendoD4 = 25;
 
-this.imagemPosInicialX = 0;
-this.imagemPosInicialY = 125;
-this.imagemCorteLargura = 37;
-this.imagemCorteAltura = 54;
+        this.imagemCorteAlturaCorrendoD1 = 48;
+        this.imagemCorteAlturaCorrendoD2 = 48;
+        this.imagemCorteAlturaCorrendoD3 = 48;
+        this.imagemCorteAlturaCorrendoD4 = 48;
 
-    // CORRENDO DIREITA:
+        // CORRENDO ESQUERDA:
 
-    this.imagemPosInicialXCorrendoD1 = 6;
-    this.imagemPosInicialXCorrendoD2 = 67;
-    this.imagemPosInicialXCorrendoD3 = 133;
-    this.imagemPosInicialXCorrendoD4 = 197;
+        this.imagemPosInicialXCorrendoE1 = 6;
+        this.imagemPosInicialXCorrendoE2 = 69;
+        this.imagemPosInicialXCorrendoE3 = 133;
+        this.imagemPosInicialXCorrendoE4 = 198;
 
-    this.imagemPosInicialYCorrendoD1 = 704;
-    this.imagemPosInicialYCorrendoD2 = 705;
-    this.imagemPosInicialYCorrendoD3 = 704;
-    this.imagemPosInicialYCorrendoD4 = 704;
+        this.imagemPosInicialYCorrendoE1 = 576;
+        this.imagemPosInicialYCorrendoE2 = 578;
+        this.imagemPosInicialYCorrendoE3 = 578;
+        this.imagemPosInicialYCorrendoE4 = 577;
 
-    this.imagemCorteLarguraCorrendoD1 = 25;
-    this.imagemCorteLarguraCorrendoD2 = 25;
-    this.imagemCorteLarguraCorrendoD3 = 25;
-    this.imagemCorteLarguraCorrendoD4 = 25;
+        this.imagemCorteLarguraCorrendoE1 = 21;
+        this.imagemCorteLarguraCorrendoE2 = 25;
+        this.imagemCorteLarguraCorrendoE3 = 22;
+        this.imagemCorteLarguraCorrendoE4 = 23;
 
-    this.imagemCorteAlturaCorrendoD1 = 48;
-    this.imagemCorteAlturaCorrendoD2 = 48;
-    this.imagemCorteAlturaCorrendoD3 = 48;
-    this.imagemCorteAlturaCorrendoD4 = 48;
+        this.imagemCorteAlturaCorrendoE1 = 48;
+        this.imagemCorteAlturaCorrendoE2 = 47;
+        this.imagemCorteAlturaCorrendoE3 = 47;
+        this.imagemCorteAlturaCorrendoE4 = 47;
 
-    // CORRENDO ESQUERDA:
+        // CORRENDO PARA CIMA:
 
-    this.imagemPosInicialXCorrendoE1 = 6;
-    this.imagemPosInicialXCorrendoE2 = 69;
-    this.imagemPosInicialXCorrendoE3 = 133;
-    this.imagemPosInicialXCorrendoE4 = 198;
+        this.imagemPosInicialXCorrendoC1 = 1;
+        this.imagemPosInicialXCorrendoC2 = 65;
+        this.imagemPosInicialXCorrendoC3 = 129;
+        this.imagemPosInicialXCorrendoC4 = 193;
 
-    this.imagemPosInicialYCorrendoE1 = 576;
-    this.imagemPosInicialYCorrendoE2 = 578;
-    this.imagemPosInicialYCorrendoE3 = 578;
-    this.imagemPosInicialYCorrendoE4 = 577;
+        this.imagemPosInicialYCorrendoC1 = 511;
+        this.imagemPosInicialYCorrendoC2 = 511;
+        this.imagemPosInicialYCorrendoC3 = 511;
+        this.imagemPosInicialYCorrendoC4 = 512;
 
-    this.imagemCorteLarguraCorrendoE1 = 21;
-    this.imagemCorteLarguraCorrendoE2 = 25;
-    this.imagemCorteLarguraCorrendoE3 = 22;
-    this.imagemCorteLarguraCorrendoE4 = 23;
+        this.imagemCorteLarguraCorrendoC1 = 30;
+        this.imagemCorteLarguraCorrendoC2 = 30;
+        this.imagemCorteLarguraCorrendoC3 = 30;
+        this.imagemCorteLarguraCorrendoC4 = 29;
 
-    this.imagemCorteAlturaCorrendoE1 = 48;
-    this.imagemCorteAlturaCorrendoE2 = 47;
-    this.imagemCorteAlturaCorrendoE3 = 47;
-    this.imagemCorteAlturaCorrendoE4 = 47;
+        this.imagemCorteAlturaCorrendoC1 = 48;
+        this.imagemCorteAlturaCorrendoC2 = 48;
+        this.imagemCorteAlturaCorrendoC3 = 49;
+        this.imagemCorteAlturaCorrendoC4 = 49;
 
-    // CORRENDO PARA CIMA:
+        // CORRENDO PARA BAIXO:
 
-    this.imagemPosInicialXCorrendoC1 = 1;
-    this.imagemPosInicialXCorrendoC2 = 65;
-    this.imagemPosInicialXCorrendoC3 = 129;
-    this.imagemPosInicialXCorrendoC4 = 193;
+        this.imagemPosInicialXCorrendoB1 = 194;
+        this.imagemPosInicialXCorrendoB2 = 257;
+        this.imagemPosInicialXCorrendoB3 = 321;
+        this.imagemPosInicialXCorrendoB4 = 385;
 
-    this.imagemPosInicialYCorrendoC1 = 511;
-    this.imagemPosInicialYCorrendoC2 = 511;
-    this.imagemPosInicialYCorrendoC3 = 511;
-    this.imagemPosInicialYCorrendoC4 = 512;
+        this.imagemPosInicialYCorrendoB1 = 640;
+        this.imagemPosInicialYCorrendoB2 = 639;
+        this.imagemPosInicialYCorrendoB3 = 639;
+        this.imagemPosInicialYCorrendoB4 = 639;
 
-    this.imagemCorteLarguraCorrendoC1 = 30;
-    this.imagemCorteLarguraCorrendoC2 = 30;
-    this.imagemCorteLarguraCorrendoC3 = 30;
-    this.imagemCorteLarguraCorrendoC4 = 29;
+        this.imagemCorteLarguraCorrendoB1 = 29;
+        this.imagemCorteLarguraCorrendoB2 = 30;
+        this.imagemCorteLarguraCorrendoB3 = 30;
+        this.imagemCorteLarguraCorrendoB4 = 30;
 
-    this.imagemCorteAlturaCorrendoC1 = 48;
-    this.imagemCorteAlturaCorrendoC2 = 48;
-    this.imagemCorteAlturaCorrendoC3 = 49;
-    this.imagemCorteAlturaCorrendoC4 = 49;
+        this.imagemCorteAlturaCorrendoB1 = 49;
+        this.imagemCorteAlturaCorrendoB2 = 50;
+        this.imagemCorteAlturaCorrendoB3 = 49;
+        this.imagemCorteAlturaCorrendoB4 = 50;
 
-    // CORRENDO PARA BAIXO:
+        //PARADO:
 
-    this.imagemPosInicialXCorrendoB1 = 194;
-    this.imagemPosInicialXCorrendoB2 = 257;
-    this.imagemPosInicialXCorrendoB3 = 321;
-    this.imagemPosInicialXCorrendoB4 = 385;
+        this.imagemPosInicialXParado1 = 1;
+        this.imagemPosInicialYParado1 = 127;
+        this.imagemCorteLarguraParado1 = 30;
+        this.imagemCorteAlturaParado1 = 49;
 
-    this.imagemPosInicialYCorrendoB1 = 640;
-    this.imagemPosInicialYCorrendoB2 = 639;
-    this.imagemPosInicialYCorrendoB3 = 639;
-    this.imagemPosInicialYCorrendoB4 = 639;
+        this.imagemPosInicialXParado2 = 65;
+        this.imagemPosInicialYParado2 = 127;
+        this.imagemCorteLarguraParado2 = 30;
+        this.imagemCorteAlturaParado2 = 49;
 
-    this.imagemCorteLarguraCorrendoB1 = 29;
-    this.imagemCorteLarguraCorrendoB2 = 30;
-    this.imagemCorteLarguraCorrendoB3 = 30;
-    this.imagemCorteLarguraCorrendoB4 = 30;
+        this.imagemPosInicialXParado3 = 386;
+        this.imagemPosInicialYParado3 = 127;
+        this.imagemCorteLarguraParado3 = 34;
+        this.imagemCorteAlturaParado3 = 49;
 
-    this.imagemCorteAlturaCorrendoB1 = 49;
-    this.imagemCorteAlturaCorrendoB2 = 50;
-    this.imagemCorteAlturaCorrendoB3 = 49;
-    this.imagemCorteAlturaCorrendoB4 = 50;
+        this.imagemPosInicialXParado4 = 1;
+        this.imagemPosInicialYParado4 = 639;
+        this.imagemCorteLarguraParado4 = 30;
+        this.imagemCorteAlturaParado4 = 49;
 
-    //PARADO:
-
-    this.imagemPosInicialXParado1 = 1;
-    this.imagemPosInicialYParado1 = 127;
-    this.imagemCorteLarguraParado1 = 30;
-    this.imagemCorteAlturaParado1 = 49;
-
-    this.imagemPosInicialXParado2 = 65;
-    this.imagemPosInicialYParado2 = 127;
-    this.imagemCorteLarguraParado2 = 30;
-    this.imagemCorteAlturaParado2 = 49;
-
-    this.imagemPosInicialXParado3 = 386;
-    this.imagemPosInicialYParado3 = 127;
-    this.imagemCorteLarguraParado3 = 34;
-    this.imagemCorteAlturaParado3 = 49;
-
-    this.imagemPosInicialXParado4 = 1;
-    this.imagemPosInicialYParado4 = 639;
-    this.imagemCorteLarguraParado4 = 30;
-    this.imagemCorteAlturaParado4 = 49;
-
-    //
+        //
+    }
 }
 
-function Civil(cidade)
+class Civil extends Player
 {
-    this.posicaoXAtual = 740; //
-    this.posicaoYAtual = 400; //
-    this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740; //
-    this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20; //
-    this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
-    this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
-    this.largura = 50; //
-    this.altura = 50; //     
-    this.velocidade = 3; //
-    this.direcaoX = 0; //
-    this.direcaoY = 1; //
+    constructor ( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem, emAlerta)
+    {
+        super( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem);
 
-    this.imagem = new Image();
-    this.imagem.src = "../../imagens/texture/2D/pacman3d.png"
+        this.posicaoXAtual = posicaoX ? posicaoX : 740; //
+        this.posicaoYAtual = posicaoY ? posicaoY : 400; //
+        this.posicaoXFixo = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 740; //
+        this.posicaoYFixo = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 20; //
+        this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual; //
+        this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual; //    
+        this.largura = largura ? largura : 50; //
+        this.altura = altura ? altura : 50; //     
+        this.velocidade = velocidade ? velocidade : 3; //
+        this.direcaoX = 0; //
+        this.direcaoY = 1; //
+        this.emAlerta = emAlerta ? emAlerta : false; //
 
-    // POSIÇÃO ATUAL DA IMAGEM:
+        this.imagem = new Image();
+        this.imagem.src = "../../imagens/texture/2D/pacman3d.png"
+
+        // POSIÇÃO ATUAL DA IMAGEM:
     
-    this.imagemPosInicialX = 6;
-    this.imagemPosInicialY = 161;
-    this.imagemCorteLargura = 36;
-    this.imagemCorteAltura = 36;
+        this.imagemPosInicialX = 6;
+        this.imagemPosInicialY = 161;
+        this.imagemCorteLargura = 36;
+        this.imagemCorteAltura = 36;
 
-    // CORRENDO DIREITA:
+        // CORRENDO DIREITA:
 
-    this.imagemPosInicialXCorrendoD1 = 5;
-    this.imagemPosInicialXCorrendoD2 = 5;
-    this.imagemPosInicialXCorrendoD3 = 5;
-    this.imagemPosInicialXCorrendoD4 = 5;
+        this.imagemPosInicialXCorrendoD1 = 5;
+        this.imagemPosInicialXCorrendoD2 = 5;
+        this.imagemPosInicialXCorrendoD3 = 5;
+        this.imagemPosInicialXCorrendoD4 = 5;
 
-    this.imagemPosInicialYCorrendoD1 = 11;
-    this.imagemPosInicialYCorrendoD2 = 61;
-    this.imagemPosInicialYCorrendoD3 = 111;
-    this.imagemPosInicialYCorrendoD4 = 11;
+        this.imagemPosInicialYCorrendoD1 = 11;
+        this.imagemPosInicialYCorrendoD2 = 61;
+        this.imagemPosInicialYCorrendoD3 = 111;
+        this.imagemPosInicialYCorrendoD4 = 11;
 
-    this.imagemCorteLarguraCorrendoD1 = 36;
-    this.imagemCorteLarguraCorrendoD2 = 36;
-    this.imagemCorteLarguraCorrendoD3 = 36;
-    this.imagemCorteLarguraCorrendoD4 = 36;
+        this.imagemCorteLarguraCorrendoD1 = 36;
+        this.imagemCorteLarguraCorrendoD2 = 36;
+        this.imagemCorteLarguraCorrendoD3 = 36;
+        this.imagemCorteLarguraCorrendoD4 = 36;
 
-    this.imagemCorteAlturaCorrendoD1 = 37;
-    this.imagemCorteAlturaCorrendoD2 = 37;
-    this.imagemCorteAlturaCorrendoD3 = 37;
-    this.imagemCorteAlturaCorrendoD4 = 37;
+        this.imagemCorteAlturaCorrendoD1 = 37;
+        this.imagemCorteAlturaCorrendoD2 = 37;
+        this.imagemCorteAlturaCorrendoD3 = 37;
+        this.imagemCorteAlturaCorrendoD4 = 37;
 
-    // CORRENDO ESQUERDA:
+        // CORRENDO ESQUERDA:
 
-    this.imagemPosInicialXCorrendoE1 = 6;
-    this.imagemPosInicialXCorrendoE2 = 6;
-    this.imagemPosInicialXCorrendoE3 = 9;
-    this.imagemPosInicialXCorrendoE4 = 6;
+        this.imagemPosInicialXCorrendoE1 = 6;
+        this.imagemPosInicialXCorrendoE2 = 6;
+        this.imagemPosInicialXCorrendoE3 = 9;
+        this.imagemPosInicialXCorrendoE4 = 6;
 
-    this.imagemPosInicialYCorrendoE1 = 310;
-    this.imagemPosInicialYCorrendoE2 = 360;
-    this.imagemPosInicialYCorrendoE3 = 410;
-    this.imagemPosInicialYCorrendoE4 = 310;
+        this.imagemPosInicialYCorrendoE1 = 310;
+        this.imagemPosInicialYCorrendoE2 = 360;
+        this.imagemPosInicialYCorrendoE3 = 410;
+        this.imagemPosInicialYCorrendoE4 = 310;
 
-    this.imagemCorteLarguraCorrendoE1 = 36;
-    this.imagemCorteLarguraCorrendoE2 = 36;
-    this.imagemCorteLarguraCorrendoE3 = 36;
-    this.imagemCorteLarguraCorrendoE4 = 36;
+        this.imagemCorteLarguraCorrendoE1 = 36;
+        this.imagemCorteLarguraCorrendoE2 = 36;
+        this.imagemCorteLarguraCorrendoE3 = 36;
+        this.imagemCorteLarguraCorrendoE4 = 36;
 
-    this.imagemCorteAlturaCorrendoE1 = 37;
-    this.imagemCorteAlturaCorrendoE2 = 37;
-    this.imagemCorteAlturaCorrendoE3 = 37;
-    this.imagemCorteAlturaCorrendoE4 = 37;
+        this.imagemCorteAlturaCorrendoE1 = 37;
+        this.imagemCorteAlturaCorrendoE2 = 37;
+        this.imagemCorteAlturaCorrendoE3 = 37;
+        this.imagemCorteAlturaCorrendoE4 = 37;
 
-    // CORRENDO PARA CIMA:
+        // CORRENDO PARA CIMA:
 
-    this.imagemPosInicialXCorrendoC1 = 6;
-    this.imagemPosInicialXCorrendoC2 = 6;
-    this.imagemPosInicialXCorrendoC3 = 6;
-    this.imagemPosInicialXCorrendoC4 = 6;
+        this.imagemPosInicialXCorrendoC1 = 6;
+        this.imagemPosInicialXCorrendoC2 = 6;
+        this.imagemPosInicialXCorrendoC3 = 6;
+        this.imagemPosInicialXCorrendoC4 = 6;
 
-    this.imagemPosInicialYCorrendoC1 = 460;
-    this.imagemPosInicialYCorrendoC2 = 509;
-    this.imagemPosInicialYCorrendoC3 = 560;
-    this.imagemPosInicialYCorrendoC4 = 460;
+        this.imagemPosInicialYCorrendoC1 = 460;
+        this.imagemPosInicialYCorrendoC2 = 509;
+        this.imagemPosInicialYCorrendoC3 = 560;
+        this.imagemPosInicialYCorrendoC4 = 460;
 
-    this.imagemCorteLarguraCorrendoC1 = 36;
-    this.imagemCorteLarguraCorrendoC2 = 36;
-    this.imagemCorteLarguraCorrendoC3 = 36;
-    this.imagemCorteLarguraCorrendoC4 = 36;
+        this.imagemCorteLarguraCorrendoC1 = 36;
+        this.imagemCorteLarguraCorrendoC2 = 36;
+        this.imagemCorteLarguraCorrendoC3 = 36;
+        this.imagemCorteLarguraCorrendoC4 = 36;
 
-    this.imagemCorteAlturaCorrendoC1 = 37;
-    this.imagemCorteAlturaCorrendoC2 = 37;
-    this.imagemCorteAlturaCorrendoC3 = 37;
-    this.imagemCorteAlturaCorrendoC4 = 37;
+        this.imagemCorteAlturaCorrendoC1 = 37;
+        this.imagemCorteAlturaCorrendoC2 = 37;
+        this.imagemCorteAlturaCorrendoC3 = 37;
+        this.imagemCorteAlturaCorrendoC4 = 37;
 
-    // CORRENDO PARA BAIXO:
+        // CORRENDO PARA BAIXO:
 
-    this.imagemPosInicialXCorrendoB1 = 5;
-    this.imagemPosInicialXCorrendoB2 = 5;
-    this.imagemPosInicialXCorrendoB3 = 5;
-    this.imagemPosInicialXCorrendoB4 = 5;
+        this.imagemPosInicialXCorrendoB1 = 5;
+        this.imagemPosInicialXCorrendoB2 = 5;
+        this.imagemPosInicialXCorrendoB3 = 5;
+        this.imagemPosInicialXCorrendoB4 = 5;
 
-    this.imagemPosInicialYCorrendoB1 = 160;
-    this.imagemPosInicialYCorrendoB2 = 211;
-    this.imagemPosInicialYCorrendoB3 = 261;
-    this.imagemPosInicialYCorrendoB4 = 160;
+        this.imagemPosInicialYCorrendoB1 = 160;
+        this.imagemPosInicialYCorrendoB2 = 211;
+        this.imagemPosInicialYCorrendoB3 = 261;
+        this.imagemPosInicialYCorrendoB4 = 160;
 
-    this.imagemCorteLarguraCorrendoB1 = 36;
-    this.imagemCorteLarguraCorrendoB2 = 36;
-    this.imagemCorteLarguraCorrendoB3 = 36;
-    this.imagemCorteLarguraCorrendoB4 = 36;
+        this.imagemCorteLarguraCorrendoB1 = 36;
+        this.imagemCorteLarguraCorrendoB2 = 36;
+        this.imagemCorteLarguraCorrendoB3 = 36;
+        this.imagemCorteLarguraCorrendoB4 = 36;
 
-    this.imagemCorteAlturaCorrendoB1 = 37;
-    this.imagemCorteAlturaCorrendoB2 = 37;
-    this.imagemCorteAlturaCorrendoB3 = 37;
-    this.imagemCorteAlturaCorrendoB4 = 37;
+        this.imagemCorteAlturaCorrendoB1 = 37;
+        this.imagemCorteAlturaCorrendoB2 = 37;
+        this.imagemCorteAlturaCorrendoB3 = 37;
+        this.imagemCorteAlturaCorrendoB4 = 37; 
+}
 }
 
 // CONTROLE
