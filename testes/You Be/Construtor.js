@@ -6,9 +6,10 @@ var incrementoSombra;
 var tempoSol = 5000;
 var loop;
 
-var imagensTempo = 200;
+var tempoSpriteCorrendo = 200;
+var tempoSpriteParado = 770;
 
-var canvasPrincipalLigado = true;
+var canvasPrincipalLigado = false;
 
 var loopAlerta = true;
 
@@ -128,7 +129,7 @@ class Player
         this.velocidade = velocidade ? velocidade : 3; //
         this.direcaoX = 0; //
         this.direcaoY = 0; //
-        this.distanciaInimigo = 100;
+        this.distanciaInimigo = 200; //
         
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
 
@@ -175,20 +176,20 @@ class Player
         this.imagemPosInicialXCorrendoE3 = 133;
         this.imagemPosInicialXCorrendoE4 = 198;
 
-        this.imagemPosInicialYCorrendoE1 = 576;
-        this.imagemPosInicialYCorrendoE2 = 578;
-        this.imagemPosInicialYCorrendoE3 = 578;
+        this.imagemPosInicialYCorrendoE1 = 577;
+        this.imagemPosInicialYCorrendoE2 = 577;
+        this.imagemPosInicialYCorrendoE3 = 577;
         this.imagemPosInicialYCorrendoE4 = 577;
 
-        this.imagemCorteLarguraCorrendoE1 = 21;
+        this.imagemCorteLarguraCorrendoE1 = 25;
         this.imagemCorteLarguraCorrendoE2 = 25;
-        this.imagemCorteLarguraCorrendoE3 = 22;
-        this.imagemCorteLarguraCorrendoE4 = 23;
+        this.imagemCorteLarguraCorrendoE3 = 25;
+        this.imagemCorteLarguraCorrendoE4 = 25;
 
-        this.imagemCorteAlturaCorrendoE1 = 48;
-        this.imagemCorteAlturaCorrendoE2 = 47;
-        this.imagemCorteAlturaCorrendoE3 = 47;
-        this.imagemCorteAlturaCorrendoE4 = 47;
+        this.imagemCorteAlturaCorrendoE1 = 49;
+        this.imagemCorteAlturaCorrendoE2 = 49;
+        this.imagemCorteAlturaCorrendoE3 = 49;
+        this.imagemCorteAlturaCorrendoE4 = 49;
 
         // CORRENDO PARA CIMA:
 
@@ -532,55 +533,55 @@ function imagensCorrendoDireita(elemento)
 
     if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD1)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD2)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoD3)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD4; }, tempoSpriteCorrendo)
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoD1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemPosInicialY:
 
     if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD1)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD2)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoD3)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD4; }, tempoSpriteCorrendo)
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoD1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemCorteLargura:
 
     if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD1)
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD2; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD2; }, tempoSpriteCorrendo)
        
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD2)
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD3; }, imagensTempo)        
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD3; }, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoD3)
     {
-        setTimeout(() => {   elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD4; }, imagensTempo)
+        setTimeout(() => {   elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD4; }, tempoSpriteCorrendo)
        
     } else
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD1; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD1; }, tempoSpriteCorrendo)
         
     }
 
@@ -588,19 +589,19 @@ function imagensCorrendoDireita(elemento)
 
     if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD1)
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD2; }, imagensTempo)        
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD2; }, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD2)
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD3; }, imagensTempo)        
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD3; }, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoD3)
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD4; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD4; }, tempoSpriteCorrendo)
 
     } else
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD1; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoD1; }, tempoSpriteCorrendo)
 
     }
 }
@@ -613,55 +614,55 @@ function imagensCorrendoEsquerda(elemento)
 
     if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE1)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE2)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoE3)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE4; }, tempoSpriteCorrendo)
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoE1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemPosInicialY:
 
     if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE1)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE2)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoE3)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE4; }, tempoSpriteCorrendo)
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoE1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemCorteLargura:
 
     if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE1)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE2; }, tempoSpriteCorrendo)
     
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE2)
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE3; }, imagensTempo)        
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE3; }, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoE3)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE4; }, tempoSpriteCorrendo)
         
     } else
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE1; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoE1; }, tempoSpriteCorrendo)
         
     }
 
@@ -669,19 +670,19 @@ function imagensCorrendoEsquerda(elemento)
 
     if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE1)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE2; }, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE2; }, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE2)
     {
-        setTimeout( () => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE3; }, imagensTempo )
+        setTimeout( () => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE3; }, tempoSpriteCorrendo )
         
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoE3)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE4;}, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE4;}, tempoSpriteCorrendo)
         
     } else
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE1; }, imagensTempo)
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoE1; }, tempoSpriteCorrendo)
         
     }
 }
@@ -694,18 +695,18 @@ function imagensCorrendoParaCima(elemento)
 
     if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC1)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC2)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoC3)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC4; }, tempoSpriteCorrendo)
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoC1; }, tempoSpriteCorrendo)
 
     }
 
@@ -713,38 +714,38 @@ function imagensCorrendoParaCima(elemento)
 
     if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC1)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC2)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoC3)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC4; }, tempoSpriteCorrendo)
 
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoC1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemCorteLargura:
 
     if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC1)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC2; }, tempoSpriteCorrendo)
     
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC2)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC3;}, imagensTempo)       
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC3;}, tempoSpriteCorrendo)       
 
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoC3)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC4; }, tempoSpriteCorrendo)
         
     } else
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoC1; }, tempoSpriteCorrendo)
         
     }
 
@@ -752,19 +753,19 @@ function imagensCorrendoParaCima(elemento)
 
     if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC1)
     {
-        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC2; }, imagensTempo)       
+        setTimeout(() => {  elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC2; }, tempoSpriteCorrendo)       
     
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC2)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC3;}, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC3;}, tempoSpriteCorrendo)        
     
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoC3)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC4; }, tempoSpriteCorrendo)
         
     } else
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoC1; }, tempoSpriteCorrendo)
         
     }
 }
@@ -777,41 +778,41 @@ function imagensCorrendoParaBaixo(elemento)
 
     if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB1)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB2)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB3; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXCorrendoB3)
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB4; }, tempoSpriteCorrendo)
 
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXCorrendoB1; }, tempoSpriteCorrendo)
     }
 
     //elemento.imagemPosInicialY:
 
     if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB1)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB2; }, tempoSpriteCorrendo)
 
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB2)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB3; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB3; }, tempoSpriteCorrendo)
 
 
     } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYCorrendoB3)
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB4; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB4; }, tempoSpriteCorrendo)
 
 
     } else
     {
-        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYCorrendoB1; }, tempoSpriteCorrendo)
 
     }
 
@@ -819,19 +820,19 @@ function imagensCorrendoParaBaixo(elemento)
 
     if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB1)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB2; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB2; }, tempoSpriteCorrendo)
 
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB2)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB3; }, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB3; }, tempoSpriteCorrendo)        
 
     } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraCorrendoB3)
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB4; }, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB4; }, tempoSpriteCorrendo)        
 
     } else
     {
-        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB1; }, imagensTempo)
+        setTimeout(() => { elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoB1; }, tempoSpriteCorrendo)
         
     }
 
@@ -839,19 +840,19 @@ function imagensCorrendoParaBaixo(elemento)
 
     if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB1)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB2; }, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB2; }, tempoSpriteCorrendo)        
 
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB2)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB3;}, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB3;}, tempoSpriteCorrendo)        
 
     } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaCorrendoB3)
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB4; }, imagensTempo)        
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB4; }, tempoSpriteCorrendo)        
 
     } else
     {
-        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB1;}, imagensTempo)       
+        setTimeout(() => { elemento.imagemCorteAltura = elemento.imagemCorteAlturaCorrendoB1;}, tempoSpriteCorrendo)       
         
     }
 }
@@ -860,129 +861,133 @@ function imagensCorrendoParaBaixo(elemento)
 
 function imagemParado(elemento,tempo)
 {
-    switch (elemento)
+    setTimeout(() =>
     {
-        case player1:
-     
-            //elemento.imagemPosInicialX:
-
-            if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, tempo)
-
-            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado2)
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado3; }, tempo)
-
-            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado3)
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, tempo)
-
-            } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado4)
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
-
-            }else
-            {
-                setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
-            }
-
-            //elemento.imagemPosInicialY:
-
-            if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, tempo)
-
-
-            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado2)
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado3; }, tempo)
-
-
-            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado3)
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, tempo)
-
-
-            } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado4)
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
-
-            } else
-            {
-                setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
-
-            }
-
-            //elemento.imagemCorteLargura:
-
-            if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1 )
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, tempo)
-
-            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3; }, tempo)                
-
-            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado3)
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, tempo)                
-
-            } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado4)
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)                
-
-            } else
-            {
-                setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)             
-                
-            }
-
-            //elemento.imagemCorteAltura:
-
-            if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
-            {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, tempo)                
-
-            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado2)
-            {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3; }, tempo)                
-
-            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
-            {
-                setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, tempo)                
-
-            } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado4)
-            {
-                 setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, tempo)            
-
-            } else
-            {
-                setTimeout(() => {
-                    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1 ; }, tempo)                
-            }
-            break;
-
-        case civil1:
-
-            elemento.imagemPosInicialX = 6;
-            elemento.imagemPosInicialY = 161;
-            elemento.imagemCorteLargura = 36;
-            elemento.imagemCorteAltura = 36;
-            break;
-        
-            case civil2:
-
+        switch (elemento)
+        {
+            case player1:
+         
+                //elemento.imagemPosInicialX:
+    
+                if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado1)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado2; }, tempo)
+    
+                } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado2)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado3; }, tempo)
+    
+                } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado3)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado4; }, tempo)
+    
+                } else if (elemento.imagemPosInicialX == elemento.imagemPosInicialXParado4)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
+    
+                }else
+                {
+                    setTimeout(() => { elemento.imagemPosInicialX = elemento.imagemPosInicialXParado1; }, tempo)
+                }
+    
+                //elemento.imagemPosInicialY:
+    
+                if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado1)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado2; }, tempo)
+    
+    
+                } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado2)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado3; }, tempo)
+    
+    
+                } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado3)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado4; }, tempo)
+    
+    
+                } else if (elemento.imagemPosInicialY == elemento.imagemPosInicialYParado4)
+                {
+                    setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
+    
+                } else
+                {
+                    setTimeout(() => { elemento.imagemPosInicialY = elemento.imagemPosInicialYParado1; }, tempo)
+    
+                }
+    
+                //elemento.imagemCorteLargura:
+    
+                if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado1 )
+                {
+                    setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado2; }, tempo)
+    
+                } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado2)
+                {
+                    setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado3; }, tempo)                
+    
+                } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado3)
+                {
+                    setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado4; }, tempo)                
+    
+                } else if (elemento.imagemCorteLargura == elemento.imagemCorteLarguraParado4)
+                {
+                    setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)                
+    
+                } else
+                {
+                    setTimeout(() => {elemento.imagemCorteLargura = elemento.imagemCorteLarguraParado1; }, tempo)             
+                    
+                }
+    
+                //elemento.imagemCorteAltura:
+    
+                if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado1)
+                {
+                    setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado2; }, tempo)                
+    
+                } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado2)
+                {
+                    setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado3; }, tempo)                
+    
+                } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado3)
+                {
+                    setTimeout(() => {elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado4; }, tempo)                
+    
+                } else if (elemento.imagemCorteAltura == elemento.imagemCorteAlturaParado4)
+                {
+                     setTimeout(() => {    elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1; }, tempo)            
+    
+                } else
+                {
+                    setTimeout(() => {
+                        elemento.imagemCorteAltura = elemento.imagemCorteAlturaParado1 ; }, tempo)                
+                }
+                break;
+    
+            case civil1:
+    
                 elemento.imagemPosInicialX = 6;
                 elemento.imagemPosInicialY = 161;
                 elemento.imagemCorteLargura = 36;
                 elemento.imagemCorteAltura = 36;
                 break;
+            
+                case civil2:
     
-        default:
-
-            break;
-    }
+                    elemento.imagemPosInicialX = 6;
+                    elemento.imagemPosInicialY = 161;
+                    elemento.imagemCorteLargura = 36;
+                    elemento.imagemCorteAltura = 36;
+                    break;
+        
+            default:
+    
+                break;
+        }
+     },tempo)
+   
 }
 
 //// AÇÕES DO PERSONAGEM:
@@ -1474,6 +1479,16 @@ function atualizarPosicao(elemento, cidade)
     {
         //ATUALIZA POSIÇÕES PROIBIDAS:
 
+        //QUARTEIRAO1:
+                  
+        quarteirao1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao1.posicaoXAtual;
+        quarteirao1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao1.posicaoYAtual;
+            
+        //QUARTEIRAO2:
+            
+        quarteirao2.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao2.posicaoXAtual;
+        quarteirao2.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao2.posicaoYAtual;
+            
         //QUARTEIRAO3:
 
         quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
@@ -1492,20 +1507,24 @@ function statusSistema()
     status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
     status3.innerHTML = " civil2.posicaoXMorada: " + civil2.posicaoXMorada;
     status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
-    status5.innerHTML = " controle1.teclaEPressionada: " + controle1.teclaEPressionada;
-    status6.innerHTML = "  interacao(portaCasa01, player1): " +  interacao(portaCasa01, player1);
+
+    status5.innerHTML = "Distancia1: " + Math.abs((Math.abs(player1.posicaoX - civil1.posicaoX)) + (Math.abs(player1.posicaoY - civil1.posicaoY))) + " Distancia2: " + Math.abs((Math.abs(player1.posicaoX - civil2.posicaoX)) + (Math.abs(player1.posicaoY - civil2.posicaoY)));
+    
+    status6.innerHTML = " calculoDistancia1: " + alertaInimigo(player1, civil1) + " calculoDistancia2: " + alertaInimigo(player1, civil2);
+
     status7.innerHTML = " civil2.posicaoX: " + civil2.posicaoX;
     status8.innerHTML = " civil2.posicaoY: " + civil2.posicaoY;
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
     status10.innerHTML = " civil2.posicaoYFixo: " + civil2.posicaoYFixo;
     status11.innerHTML = " civil2.posicaoXAtual: " + civil2.posicaoXAtual;
-    status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual;
- 
+    status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
 }
 
 function alertaInimigo(player, civil)
 {
-    if ((player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) >= -player.distanciaInimigo && (player.posicaoX - civil.posicaoX) - (player.posicaoY - civil.posicaoY) <= player.distanciaInimigo)
+    var calculoDistancia = Math.abs((Math.abs(player.posicaoX - civil.posicaoX)) + (Math.abs(player.posicaoY - civil.posicaoY))) <= player.distanciaInimigo;
+
+    if (calculoDistancia)
     {
         civil.emAlerta = true;
 
@@ -1513,6 +1532,7 @@ function alertaInimigo(player, civil)
     {
         civil.emAlerta = false;
     }
+    return calculoDistancia;
 }
 
 //
@@ -1579,7 +1599,7 @@ function atualizarSombras()
         contextoTelaCanvasPrincipal.shadowOffsetY = sombraVertical;
 }
         
-        //
+//
 
 function movimentosPlayer()
 {
@@ -1593,10 +1613,9 @@ function movimentosPlayer()
             // SE A POSICAO Y É MAIOR QUE ZERO '0'
             if (player1.posicaoY >= 0)
             {
-                // MOVE PARA CIMA
-                //   player1.posicaoY -= player1.velocidade;             
+                // MOVE PARA CIMA     
 
-                if (quarteiraoEmBaixo(quarteirao3, player1))
+                if (obstaculos("Sul"))
                 {
                     // NÃO FAZ NADA
                 } else
@@ -1629,7 +1648,7 @@ function movimentosPlayer()
             {
                 // MOVE PARA BAIXO
 
-                if (quarteiraoEmCima(quarteirao3, player1))
+                if (obstaculos("Norte"))
                 {
                     // NÃO FAZ NADA
                 } else
@@ -1658,7 +1677,7 @@ function movimentosPlayer()
     {
         if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
         {
-         //   imagemParado(player1,imagensTempo);
+         //   imagemParado(player1,tempoSpriteCorrendo);
         }
     }
 
@@ -1669,12 +1688,12 @@ function movimentosPlayer()
         // TECLA PARA DIREITA PRESSIONADA
         if (controle1.teclaSetaParaDireitaPressionada)
         {
-            // SE O PLAYER NAO SAIR DA TELA DO CANVAS
+            // SE O PLAYER NAO SAIU DA TELA DO CANVAS
 
             if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
             {
 
-                if (quarteiraoEsquerda(quarteirao3, player1))
+                if (obstaculos("Oeste"))
                 {
                     // NÃO FAZ NADA
                 } else
@@ -1700,14 +1719,12 @@ function movimentosPlayer()
             }
 
         } else
-        // se for para esquerda
+        // SE FOI A TECLA PARA A ESQUERDA
         {
-            // se a bola não saiu da tela
+            // SE NÃO SAIU DA TELA
             if (player1.posicaoX >= 0)
             {
-                // muda posição
-
-                if (quarteiraoDireita(quarteirao3, player1))
+                if (obstaculos("Leste"))
                 {
                     // NÃO FAZ NADA
                 } else
@@ -1770,7 +1787,7 @@ function elementoEmAlerta(elemento,player)
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
 
-                 imagensCorrendoParaBaixo(elemento);
+                 imagensCorrendoEsquerda(elemento);
              }
              // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
              else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY < player.posicaoY)
@@ -1780,7 +1797,7 @@ function elementoEmAlerta(elemento,player)
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
 
-                 imagensCorrendoParaBaixo(elemento);
+                 imagensCorrendoDireita(elemento);
              }
              // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
              else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY > player.posicaoY)
@@ -1879,7 +1896,7 @@ function elementoEmAlerta(elemento,player)
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
 
-                 imagensCorrendoParaBaixo(elemento);
+                 imagensCorrendoEsquerda(elemento);
              }
              // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
              else if (elemento.posicaoX < elemento.posicaoXFixo && elemento.posicaoY < elemento.posicaoYFixo)
@@ -1889,7 +1906,7 @@ function elementoEmAlerta(elemento,player)
                  elemento.posicaoXAtual += elemento.direcaoX;
                  elemento.posicaoYAtual += elemento.direcaoY;
 
-                 imagensCorrendoParaBaixo(elemento);
+                 imagensCorrendoDireita(elemento);
              }
              // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
              else if (elemento.posicaoX < elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
@@ -1944,7 +1961,7 @@ function elementoEmAlerta(elemento,player)
 
              } else if (elemento.posicaoX == elemento.posicaoXFixo && elemento.posicaoY == elemento.posicaoYFixo)
              {
-                 imagemParado(elemento,imagensTempo);
+                 imagemParado(elemento,tempoSpriteParado);
 
                  patrulhar(elemento);
 
@@ -1988,6 +2005,80 @@ function recarregarPagina()
         // status12.innerHTML = "Aguarde... " + imagemCarregada + " - " + paginaRecarregada;
     }
 }
+
+//
+
+function atualizarInteracoes()
+{
+    //PORTA CASA 01:
+    if (interacao(portaCasa01, player1))
+    {
+        if (controle1.teclaEPressionada)
+        {
+            status12.innerHTML = "TECLA E APERTADO!";
+        } else
+        {
+            status12.innerHTML = "ESPERANDO APERTAR TECLA E";
+        }
+    } else
+    {
+        status12.innerHTML = "Interação: " + interacao(portaCasa01, player1);
+    }
+    //
+}
+
+//OBSTACULOS - AREAS PROIBIDAS DE MOVIMENTAÇÃO
+
+function obstaculos(local)
+{
+    switch (local)
+    {
+        case "Norte":
+
+            if (quarteiraoEmCima(quarteirao1, player1) || quarteiraoEmCima(quarteirao2, player1) || quarteiraoEmCima(quarteirao3, player1) == true)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        
+        case "Sul":
+            
+            if (quarteiraoEmBaixo(quarteirao1, player1) || quarteiraoEmBaixo(quarteirao2, player1) || quarteiraoEmBaixo(quarteirao3, player1) == true)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        
+            case "Leste":
+            
+                if (quarteiraoDireita(quarteirao1, player1) || quarteiraoDireita(quarteirao2, player1) || quarteiraoDireita(quarteirao3, player1) == true)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+        
+            case "Oeste":
+            
+                if (quarteiraoEsquerda(quarteirao1, player1) || quarteiraoEsquerda(quarteirao2, player1) || quarteiraoEsquerda(quarteirao3, player1) == true)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+        
+            default:
+                break;
+    }
+}
+
+
 
 //INSTANCIAS:
 

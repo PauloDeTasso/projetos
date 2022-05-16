@@ -1,3 +1,4 @@
+//
 
 civil2.posicaoXAtual = 0;
 civil2.posicaoYAtual = 0;
@@ -21,6 +22,7 @@ loopDesenho();
 
 function loopDesenho()
 {
+    //LIMPA TELA CANVAS PRINCIPAL:
     limparTela(telaCanvasPrincipal, contextoTelaCanvasPrincipal);
 
     if (canvasPrincipalLigado)
@@ -73,23 +75,12 @@ function loopDesenho()
         //RECARREGA PAGINA QUANDO OS ELEMENTOS DO BODY CARREGA:
         recarregarPagina();
 
+        // PONTOS DE INTERAÇÃO:
+        atualizarInteracoes();
+
         //ATUALIZAR STATUS DO SISTEMA:
         statusSistema();
 
-        if (interacao(portaCasa01, player1))
-        {
-            if (controle1.teclaEPressionada)
-            {
-                status12.innerHTML = "TECLA E APERTADO!";
-            } else
-            {
-                status12.innerHTML = "ESPERANDO APERTAR TECLA E";
-            }
-        } else
-        {
-            status12.innerHTML = "Interação: " + interacao(portaCasa01, player1);
-        }
-        //
         /*
         contextoTelaCanvasPrincipal.beginPath();
  
@@ -112,7 +103,7 @@ function loopDesenho()
         contextoTelaCanvasPrincipal.fill();
  
         contextoTelaCanvasPrincipal.closePath();
-/*
+        /*
  
         //DESENHOS TESTES:
         /*
@@ -123,6 +114,7 @@ function loopDesenho()
 
         //LOOP DESENHO:
         loop = requestAnimationFrame(loopDesenho);
+        // loop = setInterval(loopDesenho, 0);
     }
 
     //SE canvasPrincipalLigado É FALSE:

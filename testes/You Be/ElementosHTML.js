@@ -17,7 +17,6 @@ class Animal extends Elemento
     }
 }
 
-
 ///////////////////////////// VARIAVEIS DOS ELEMENTOS HTML:
 
 var corpo = document.getElementById('corpo')
