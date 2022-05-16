@@ -9,12 +9,11 @@ var loop;
 var tempoSpriteCorrendo = 200;
 var tempoSpriteParado = 770;
 
-var canvasPrincipalLigado = false;
+var canvasPrincipalLigado = true;
 
 var loopAlerta = true;
 
 var x1 = 17, y1 = 20;
-
 //
 
 var circuloPosicaoX = 350;
@@ -1507,11 +1506,8 @@ function statusSistema()
     status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
     status3.innerHTML = " civil2.posicaoXMorada: " + civil2.posicaoXMorada;
     status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
-
-    status5.innerHTML = "Distancia1: " + Math.abs((Math.abs(player1.posicaoX - civil1.posicaoX)) + (Math.abs(player1.posicaoY - civil1.posicaoY))) + " Distancia2: " + Math.abs((Math.abs(player1.posicaoX - civil2.posicaoX)) + (Math.abs(player1.posicaoY - civil2.posicaoY)));
-    
-    status6.innerHTML = " calculoDistancia1: " + alertaInimigo(player1, civil1) + " calculoDistancia2: " + alertaInimigo(player1, civil2);
-
+    status5.innerHTML = "corpoCarregado: ";
+    status6.innerHTML = "paginaRecarregada: " ;
     status7.innerHTML = " civil2.posicaoX: " + civil2.posicaoX;
     status8.innerHTML = " civil2.posicaoY: " + civil2.posicaoY;
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
@@ -1752,13 +1748,13 @@ function movimentosPlayer()
 
        } else
        {
-               //MOVE MAPA POSICAO Y PARA CIMA:
-
+              
            if (cidade1.imagem.posicaoYRecorte <= 0)
            {
                   //NÃO MUDA A POSICAO DO RECORTE
            } else
            {
+                //MOVE MAPA POSICAO Y PARA CIMA:
                cidade1.imagem.posicaoYRecorte -= player1.velocidade;
 
                imagensCorrendoDireita(player1);
@@ -2153,25 +2149,6 @@ function desenharImagensElemento(contexto, player)
 
 //
 
-function recarregarPagina()
-{
-    if (imagemCarregada)
-    {
-        if (paginaRecarregada >= 1)
-        {
-
-        } else
-        {
-            document.location.reload(false);
-        }
-    } else
-    {
-        // status12.innerHTML = "Aguarde... " + imagemCarregada + " - " + paginaRecarregada;
-    }
-}
-
-//
-
 function atualizarInteracoes()
 {
     //PORTA CASA 01:
@@ -2241,8 +2218,6 @@ function obstaculos(local)
                 break;
     }
 }
-
-
 
 //INSTANCIAS:
 

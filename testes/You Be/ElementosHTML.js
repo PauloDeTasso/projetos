@@ -206,12 +206,6 @@ botaoTomarRemedio.addEventListener("click", tomarRemedio, false);
 
 //CONFIGURAÇÕES EVENTOS BOTÕES:
 
-var imagemCarregada = false;
-var paginaRecarregada = 0;
-corpo.addEventListener("load", () => { imagemCarregada = true; paginaRecarregada += 1; }, false);
-
-//
-
 botaoLigar.addEventListener('click', ligar, false);
 botaoPlay.addEventListener('click', play, false);
 botaoStop.addEventListener('click', stop, false);
@@ -270,7 +264,6 @@ function ligar()
     {
         botaoLigar.innerHTML = "On"
         canvasPrincipalLigado = true;
-        loopDesenho()
     }
 }
 

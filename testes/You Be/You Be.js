@@ -72,9 +72,6 @@ function loopDesenho()
         //AUTOMATIZA CIVIL2:
         elementoEmAlerta(civil2, player1);
 
-        //RECARREGA PAGINA QUANDO OS ELEMENTOS DO BODY CARREGA:
-        recarregarPagina();
-
         // PONTOS DE INTERAÇÃO:
         atualizarInteracoes();
 
