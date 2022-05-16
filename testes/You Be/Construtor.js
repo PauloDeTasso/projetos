@@ -1603,23 +1603,18 @@ function atualizarSombras()
 
 function movimentosPlayer()
 {
-    //  MOVIMENTAR JOGADOR CIMA / BAIXO ********************************************************************
-    // SE PRESSIONOU UMA TECLA
-    if (controle1.teclaSetaParaCimaPressionada != controle1.teclaSetaParaBaixoPressionada)
+    // TECLA PARA CIMA
+    if (controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
     {
-        // TECLA PARA CIMA
-        if (controle1.teclaSetaParaCimaPressionada)
-        {
             // SE A POSICAO Y É MAIOR QUE ZERO '0'
             if (player1.posicaoY >= 0)
             {
-                // MOVE PARA CIMA     
-
                 if (obstaculos("Sul"))
                 {
-                    // NÃO FAZ NADA
+                    // SE HOUVER OBSTACULOS - NÃO FAZ NADA
                 } else
-                {
+                {                    
+                    // MOVE PARA CIMA     
                     player1.posicaoY -= player1.velocidade;
                 }
 
@@ -1627,11 +1622,11 @@ function movimentosPlayer()
 
             } else
             {
-                //MOVE MAPA PARA CIMA SE POSICAO Y DA IMAGEM É MAIOR QUE ZERO '0':
+                    //MOVE MAPA POSICAO Y PARA CIMA:
 
                 if (cidade1.imagem.posicaoYRecorte <= 0)
                 {
-                    cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
+                    //NÃO MUDA A POSICAO DO RECORTE
                 } else
                 {
                     cidade1.imagem.posicaoYRecorte -= player1.velocidade;
@@ -1639,20 +1634,19 @@ function movimentosPlayer()
                     imagensCorrendoParaCima(player1);
                 }
             }
-        }
-        else
+        
         // SE TECLA PARA BAIXO PRESSIONADA:
-        {
+    }else if(!controle1.teclaSetaParaCimaPressionada && controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
+    {
             // SE O PLAYER NAO ULTRAPASSA A TELA DO CANVAS:
             if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura))
-            {
-                // MOVE PARA BAIXO
-
+            {            
                 if (obstaculos("Norte"))
                 {
-                    // NÃO FAZ NADA
+                    // SE HOUVER OBSTACULOS - NÃO FAZ NADA
                 } else
                 {
+                    // MOVE PARA BAIXO
                     player1.posicaoY += player1.velocidade;
                 }
 
@@ -1660,44 +1654,31 @@ function movimentosPlayer()
 
             } else
             {
-                //MOVENDO MAPA PARA BAIXAO - POSICAO Y:
+                    //MOVE MAPA POSICAO Y PARA BAIXO:
 
                 if (cidade1.imagem.posicaoYRecorte >= cidade1.imagem.height - telaCanvasPrincipal.height)
                 {
-                    cidade1.imagem.posicaoYRecorte = cidade1.imagem.posicaoYRecorte;
+                    //NÃO MUDA A POSICAO DO RECORTE
                 } else
                 {
                     cidade1.imagem.posicaoYRecorte += player1.velocidade;
 
                     imagensCorrendoParaBaixo(player1);
                 }
-            }
         }
-    } else
-    {
-        if (controle1.teclaSetaParaDireitaPressionada == controle1.teclaSetaParaEsquerdaPressionada)
-        {
-         //   imagemParado(player1,tempoSpriteCorrendo);
-        }
-    }
-
-    //  MOVIMENTAR JOGADOR ESQUERDA / DIREITA ********************************************************************
-
-    if (controle1.teclaSetaParaDireitaPressionada != controle1.teclaSetaParaEsquerdaPressionada)
-    {
-        // TECLA PARA DIREITA PRESSIONADA
-        if (controle1.teclaSetaParaDireitaPressionada)
-        {
+        
+     // SE TECLA PARA DIREITA PRESSIONADA:
+    }else if (!controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
+    {       
             // SE O PLAYER NAO SAIU DA TELA DO CANVAS
-
             if (player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
             {
-
                 if (obstaculos("Oeste"))
                 {
-                    // NÃO FAZ NADA
+                    // SE HOUVER OBSTACULOS - NÃO FAZ NADA
                 } else
                 {
+                    // MOVE PARA DIREITA
                     player1.posicaoX += player1.velocidade;
                 }
 
@@ -1705,11 +1686,11 @@ function movimentosPlayer()
 
             } else
             {
-                //ALTERANDO O MAPA POSICAO X:
+                    //MOVE MAPA POSICAO X PARA DIREITA:
 
                 if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
                 {
-                    cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
+                    //NÃO MUDA A POSICAO DO RECORTE
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte += player1.velocidade;
@@ -1717,18 +1698,19 @@ function movimentosPlayer()
                     imagensCorrendoDireita(player1);
                 }
             }
-
-        } else
-        // SE FOI A TECLA PARA A ESQUERDA
-        {
-            // SE NÃO SAIU DA TELA
+        
+      // SE TECLA PARA ESQUERDA PRESSIONADA:
+    } else if (!controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && controle1.teclaSetaParaEsquerdaPressionada)
+    {
+            // SE NÃO SAIU DA TELA:
             if (player1.posicaoX >= 0)
             {
                 if (obstaculos("Leste"))
                 {
-                    // NÃO FAZ NADA
+                    // SE HOUVER OBSTACULOS - NÃO FAZ NADA
                 } else
                 {
+                    // MOVE PARA ESQUERDA
                     player1.posicaoX -= player1.velocidade;
                 }
 
@@ -1736,11 +1718,11 @@ function movimentosPlayer()
 
             } else
             {
-                //MOVENDO MAPA POSICAO -X:
+                //MOVE MAPA POSICAO X PARA ESQUERDA:
 
                 if (cidade1.imagem.posicaoXRecorte <= 0)
                 {
-                    cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
+                    //NÃO MUDA A POSICAO DO RECORTE
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte -= player1.velocidade;
@@ -1748,13 +1730,195 @@ function movimentosPlayer()
                     imagensCorrendoEsquerda(player1);
                 }
             }
-        }
-    } else
+     
+     // SE TECLA PARA CIMA E PARA DIREITA PRESSIONADA:
+    }else if (controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
     {
-        if (controle1.teclaSetaParaCimaPressionada == controle1.teclaSetaParaBaixoPressionada)
+      // SE O PLAYER NAO SAIU DA TELA DO CANVAS
+       if (player1.posicaoY >= 0 && player1.posicaoX <= telaCanvasPrincipal.width - player1.largura)
+       {
+           if (obstaculos("Sul") || obstaculos("Oeste"))
+           {
+               // SE HOUVER OBSTACULOS - NÃO FAZ NADA
+           } else
+           {                    
+               // MOVE PARA CIMA     
+               player1.posicaoY -= player1.velocidade;
+               // MOVE PARA DIREITA     
+               player1.posicaoX += player1.velocidade;
+           }
+
+           imagensCorrendoDireita(player1);
+
+       } else
+       {
+               //MOVE MAPA POSICAO Y PARA CIMA:
+
+           if (cidade1.imagem.posicaoYRecorte <= 0)
+           {
+                  //NÃO MUDA A POSICAO DO RECORTE
+           } else
+           {
+               cidade1.imagem.posicaoYRecorte -= player1.velocidade;
+
+               imagensCorrendoDireita(player1);
+           }
+
+              //MOVE MAPA POSICAO X PARA DIREITA:
+
+              if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
+              {
+                 //NÃO MUDA A POSICAO DO RECORTE
+              } else
+              {
+                  cidade1.imagem.posicaoXRecorte += player1.velocidade;
+                  
+                  imagensCorrendoDireita(player1);
+              }
+       }
+       
+        // SE TECLA PARA CIMA E PARA ESQUERDA PRESSIONADA:
+    }else if (controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && controle1.teclaSetaParaEsquerdaPressionada)
+    {
+       // SE O PLAYER NAO SAIU DA TELA DO CANVAS
+        if (player1.posicaoY >= 0 && player1.posicaoX >= 0)
         {
-            imagemParado(player1,770);
+            if (obstaculos("Sul") || obstaculos("Leste"))
+            {
+                // SE HOUVER OBSTACULOS - NÃO FAZ NADA
+            } else
+            {                    
+                // MOVE PARA CIMA     
+                player1.posicaoY -= player1.velocidade;
+                // MOVE PARA ESQUERDA  
+                player1.posicaoX -= player1.velocidade;
+            }
+
+            imagensCorrendoEsquerda(player1);
+
+        } else
+        {
+                //MOVE MAPA POSICAO Y PARA CIMA:
+
+            if (cidade1.imagem.posicaoYRecorte <= 0)
+            {
+                    //NÃO MUDA A POSICAO DO RECORTE
+            } else
+            {
+                cidade1.imagem.posicaoYRecorte -= player1.velocidade;
+
+                imagensCorrendoEsquerda(player1);
+            }
+
+             //MOVE MAPA POSICAO X PARA ESQUERDA:
+
+             if (cidade1.imagem.posicaoXRecorte <= 0)
+             {
+                    //NÃO MUDA A POSICAO DO RECORTE
+             } else
+             {
+                 cidade1.imagem.posicaoXRecorte -= player1.velocidade;
+                 
+                 imagensCorrendoEsquerda(player1);
+             }
         }
+
+        // SE TECLA PARA BAIXO E PARA DIREITA PRESSIONADA:
+    }else if (!controle1.teclaSetaParaCimaPressionada && controle1.teclaSetaParaBaixoPressionada && controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
+    {
+      // SE O PLAYER NAO SAIU DA TELA DO CANVAS
+       if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura) && player1.posicaoX <= (telaCanvasPrincipal.width - player1.largura))
+       {
+           if (obstaculos("Norte") || obstaculos("Oeste"))
+           {
+               // SE HOUVER OBSTACULOS - NÃO FAZ NADA
+           } else
+           {                    
+               // MOVE PARA BAIXO     
+               player1.posicaoY += player1.velocidade;
+               // MOVE PARA DIREITA     
+               player1.posicaoX += player1.velocidade;
+           }
+
+           imagensCorrendoDireita(player1);
+
+       } else
+       {
+            //MOVE MAPA POSICAO Y PARA BAIXO:
+
+            if (cidade1.imagem.posicaoYRecorte >= cidade1.imagem.height - telaCanvasPrincipal.height)
+            {
+                //NÃO MUDA A POSICAO DO RECORTE
+            } else
+            {
+                cidade1.imagem.posicaoYRecorte += player1.velocidade;
+
+                imagensCorrendoDireita(player1);
+           }
+           
+           //MOVE MAPA POSICAO X PARA DIREITA:
+
+           if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
+           {
+               //NÃO MUDA A POSICAO DO RECORTE
+           } else
+           {
+               cidade1.imagem.posicaoXRecorte += player1.velocidade;
+               
+               imagensCorrendoDireita(player1);
+           }
+       }
+
+        // SE TECLA PARA BAIXO E PARA ESQUERDA PRESSIONADA:
+    }else if (!controle1.teclaSetaParaCimaPressionada && controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && controle1.teclaSetaParaEsquerdaPressionada)
+    {
+        // SE O PLAYER NAO SAIU DA TELA DO CANVAS
+      if (player1.posicaoY <= (telaCanvasPrincipal.height - player1.altura) && player1.posicaoX >= 0)
+      {
+          if (obstaculos("Norte") || obstaculos("Leste"))
+          {
+              // SE HOUVER OBSTACULOS - NÃO FAZ NADA
+          } else
+          {                    
+              // MOVE PARA BAIXO     
+              player1.posicaoY += player1.velocidade;
+              // MOVE PARA ESQUERDA     
+              player1.posicaoX -= player1.velocidade;
+          }
+
+          imagensCorrendoEsquerda(player1);
+
+      } else
+      {
+             //MOVE MAPA POSICAO Y PARA BAIXO:
+
+             if (cidade1.imagem.posicaoYRecorte >= cidade1.imagem.height - telaCanvasPrincipal.height)
+             {
+                  //NÃO MUDA A POSICAO DO RECORTE
+             } else
+             {
+                 cidade1.imagem.posicaoYRecorte += player1.velocidade;
+ 
+                 imagensCorrendoEsquerda(player1);
+          }
+          
+          //MOVE MAPA POSICAO X PARA ESQUERDA:
+
+          if (cidade1.imagem.posicaoXRecorte <= 0)
+          {
+             //NÃO MUDA A POSICAO DO RECORTE
+          } else
+          {
+              cidade1.imagem.posicaoXRecorte -= player1.velocidade;
+              
+              imagensCorrendoEsquerda(player1);
+          }
+      }
+    }
+      // SE NENHUMA TECLA PRESSIONADA:
+    else
+    {
+        //NÃO FAZ NADA   
     }
 }
 
