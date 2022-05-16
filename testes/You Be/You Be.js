@@ -64,18 +64,56 @@ function loopDesenho()
         //SE PLAYER 1 APROXIMAR DE CIVIL2:
         alertaInimigo(player1, civil2);
 
-        //AUTOMOTIZA CIVIL1:
+        //AUTOMATIZA CIVIL1:
         elementoEmAlerta(civil1, player1);
 
-        //AUTOMOTIZA CIVIL2:
+        //AUTOMATIZA CIVIL2:
         elementoEmAlerta(civil2, player1);
 
-        //RECARREGADA PAGINA QUANDO OS ELEMENTOS DE BODY CARREGA:
+        //RECARREGA PAGINA QUANDO OS ELEMENTOS DO BODY CARREGA:
         recarregarPagina();
 
         //ATUALIZAR STATUS DO SISTEMA:
         statusSistema();
 
+        if (interacao(portaCasa01, player1))
+        {
+            if (controle1.teclaEPressionada)
+            {
+                status12.innerHTML = "TECLA E APERTADO!";
+            } else
+            {
+                status12.innerHTML = "ESPERANDO APERTAR TECLA E";
+            }
+        } else
+        {
+            status12.innerHTML = "Interação: " + interacao(portaCasa01, player1);
+        }
+        //
+        /*
+        contextoTelaCanvasPrincipal.beginPath();
+ 
+        contextoTelaCanvasPrincipal.fillStyle = "rgba(0,0,0,1)";
+ 
+        contextoTelaCanvasPrincipal.lineWidth = 10;
+        
+                contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX + 50, (quarteirao3.posicaoY + quarteirao3.altura));
+        
+                contextoTelaCanvasPrincipal.lineTo((quarteirao3.posicaoX + 100), (quarteirao3.posicaoY + quarteirao3.altura));
+        
+                contextoTelaCanvasPrincipal.lineTo((quarteirao3.posicaoX + 100), (quarteirao3.posicaoY + quarteirao3.altura + 50));
+        
+                contextoTelaCanvasPrincipal.lineTo((quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura + 50));
+      
+        contextoTelaCanvasPrincipal.fillRect((quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
+ 
+        contextoTelaCanvasPrincipal.stroke();
+ 
+        contextoTelaCanvasPrincipal.fill();
+ 
+        contextoTelaCanvasPrincipal.closePath();
+/*
+ 
         //DESENHOS TESTES:
         /*
                 contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";

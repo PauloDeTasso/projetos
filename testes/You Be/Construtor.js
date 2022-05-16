@@ -100,6 +100,21 @@ function Quarteirao(cidade, posicaoX, posicaoY, largura, altura)
     this.altura = altura;
 }
 
+//
+
+function localDeInteracao(cidade, posicaoX, posicaoY, largura, altura)
+{
+    this.posicaoXAtual = posicaoX;
+    this.posicaoYAtual = posicaoY;
+    this.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoXAtual;
+
+    this.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoYAtual;
+
+    this.largura = largura;
+
+    this.altura = altura;
+}
+
 // PLAYER
 
 class Player
@@ -368,13 +383,15 @@ class Civil extends Player
 
 // CONTROLE
 
-function Controle(key1, key2, key3, key4)
+function Controle(key1, key2, key3, key4,key5)
 {
     this.teclaSetaParaCimaPressionada = false;
     this.teclaSetaParaBaixoPressionada = false;
 
     this.teclaSetaParaDireitaPressionada = false;
     this.teclaSetaParaEsquerdaPressionada = false;
+
+    this.teclaEPressionada = false;
 
     this.keyUp = function (eventoAcionado)
     {
@@ -392,6 +409,10 @@ function Controle(key1, key2, key3, key4)
         } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = false;
+
+        } else if (eventoAcionado.keyCode == key5)
+        {
+            controle1.teclaEPressionada = false;
         }
     }
 
@@ -411,6 +432,10 @@ function Controle(key1, key2, key3, key4)
         } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = true;
+
+        }else if (eventoAcionado.keyCode == key5)
+        {
+            controle1.teclaEPressionada = true;
         }
     }
 
@@ -449,6 +474,21 @@ function Controle(key1, key2, key3, key4)
         controle1.teclaSetaParaBaixoPressionada = false;
         controle1.teclaSetaParaDireitaPressionada = false;
         controle1.teclaSetaParaEsquerdaPressionada = false;
+        controle1.teclaEPressionada = false;
+    }
+
+    this.apertar = function (tecla)
+    {
+        switch (tecla) 
+        {
+            case "letraE":
+                controle1.teclaEPressionada = true;
+                break;            
+
+            default:
+              
+                break;
+        }
     }
 }
 
@@ -470,10 +510,16 @@ function quarteiraoEsquerda(quarteirao, player)
     return player.posicaoX + player.largura >= quarteirao.posicaoX && player.posicaoX <= quarteirao.posicaoX && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
 }
 
-
 function quarteiraoDireita(quarteirao, player)
 {
     return player.posicaoX <= quarteirao.posicaoX + quarteirao.largura && player.posicaoX + player.largura >= quarteirao.posicaoX + quarteirao.largura && player.posicaoY + player.altura >= quarteirao.posicaoY && player.posicaoY <= quarteirao.posicaoY + quarteirao.altura;
+}
+
+//
+
+function interacao(local, player)
+{
+    return player.posicaoX + player.largura >= local.posicaoX && player.posicaoX <= local.posicaoX + local.largura && player.posicaoY <= local.posicaoY + local.altura && player.posicaoY + player.altura >= local.posicaoY;
 }
 
 ////SPRITES:
@@ -1282,6 +1328,10 @@ var quarteirao1 = new Quarteirao(cidade1, 20, 20, 100, 100);
 var quarteirao2 = new Quarteirao(cidade1, 320, 17, 180, 120);
 var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
 
+// LOCAIS DE INTERAÇÃO:
+
+var portaCasa01 = new localDeInteracao(cidade1, (quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
+
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
 Storage.prototype.setObj = function (key, obj)
@@ -1429,7 +1479,10 @@ function atualizarPosicao(elemento, cidade)
         quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
         quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
 
-        //
+        // PORTACASA1:
+
+        portaCasa01.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + portaCasa01.posicaoXAtual;
+        portaCasa01.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + portaCasa01.posicaoYAtual;
     }
 }
 
@@ -1439,8 +1492,8 @@ function statusSistema()
     status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
     status3.innerHTML = " civil2.posicaoXMorada: " + civil2.posicaoXMorada;
     status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
-    status5.innerHTML = " civil2.emAlerta: " + civil2.emAlerta;
-    status6.innerHTML = " loopAlerta: " + loopAlerta;
+    status5.innerHTML = " controle1.teclaEPressionada: " + controle1.teclaEPressionada;
+    status6.innerHTML = "  interacao(portaCasa01, player1): " +  interacao(portaCasa01, player1);
     status7.innerHTML = " civil2.posicaoX: " + civil2.posicaoX;
     status8.innerHTML = " civil2.posicaoY: " + civil2.posicaoY;
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
@@ -1635,14 +1688,14 @@ function movimentosPlayer()
             {
                 //ALTERANDO O MAPA POSICAO X:
 
-                imagensCorrendoDireita(player1);
-
                 if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
                 {
                     cidade1.imagem.posicaoXRecorte = cidade1.imagem.posicaoXRecorte;
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte += player1.velocidade;
+                    
+                    imagensCorrendoDireita(player1);
                 }
             }
 
@@ -1674,6 +1727,8 @@ function movimentosPlayer()
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte -= player1.velocidade;
+                    
+                    imagensCorrendoEsquerda(player1);
                 }
             }
         }
@@ -1936,7 +1991,7 @@ function recarregarPagina()
 
 //INSTANCIAS:
 
-var controle1 = new Controle(87, 83, 68, 65);
+var controle1 = new Controle(87, 83, 68, 65, 69);
 
 var player1 = new Player(cidade1);
 

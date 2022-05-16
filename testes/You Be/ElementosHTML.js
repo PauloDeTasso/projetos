@@ -127,6 +127,7 @@ var botaoIrParaDireita = document.getElementById('botaoIrParaDireita');
 var botaoIrParaEsquerda = document.getElementById('botaoIrParaEsquerda');
 var botaoIrParaCima = document.getElementById('botaoIrParaCima');
 var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
+var botaoAcao = document.getElementById('botaoAcao');
 
 /////////////////////////////VARIAVEIS DATA E HORA:
 
@@ -222,6 +223,9 @@ botaoIrParaEsquerda.addEventListener('mousedown', () => { controle1.mover("paraE
 botaoIrParaDireita.addEventListener('mousedown', () => { controle1.mover("paraDireita") }, false);
 botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
+botaoAcao.addEventListener('mousedown', () => { controle1.apertar("letraE") }, false);
+
+//
 
 //
 
@@ -229,6 +233,7 @@ botaoIrParaEsquerda.addEventListener('touchstart', () => { controle1.mover("para
 botaoIrParaDireita.addEventListener('touchstart', () => { controle1.mover("paraDireita") }, false);
 botaoIrParaCima.addEventListener('touchstart', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('touchstart', () => { controle1.mover("paraBaixo") }, false);
+botaoAcao.addEventListener('touchstart', () => { controle1.apertar("lertraE") }, false);
 
 // PARANDO
 
@@ -243,6 +248,7 @@ botaoIrParaEsquerda.addEventListener('touchend', controle1.parar, false);
 botaoIrParaDireita.addEventListener('touchend', controle1.parar, false);
 botaoIrParaCima.addEventListener('touchend', controle1.parar, false);
 botaoIrParaBaixo.addEventListener('touchend', controle1.parar, false);
+botaoAcao.addEventListener('touchend', controle1.parar, false);
 
 // TECLAS PRESSIONADAS
 
