@@ -1336,6 +1336,8 @@ var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
 
 var portaCasa01 = new localDeInteracao(cidade1, (quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
 
+var farol1 = new localDeInteracao(cidade1, 750, 400, 50, 50);
+
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
 Storage.prototype.setObj = function (key, obj)
@@ -1497,6 +1499,11 @@ function atualizarPosicao(elemento, cidade)
 
         portaCasa01.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + portaCasa01.posicaoXAtual;
         portaCasa01.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + portaCasa01.posicaoYAtual;
+
+        // FAROL1:
+
+        farol1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + farol1.posicaoXAtual;
+        farol1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + farol1.posicaoYAtual;
     }
 }
 
@@ -1513,7 +1520,7 @@ function statusSistema()
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
     status10.innerHTML = " civil2.posicaoYFixo: " + civil2.posicaoYFixo;
     status11.innerHTML = " civil2.posicaoXAtual: " + civil2.posicaoXAtual;
-    status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
+    //status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
 }
 
 function alertaInimigo(player, civil)
@@ -2165,7 +2172,23 @@ function atualizarInteracoes()
     {
         status12.innerHTML = "Interação: " + interacao(portaCasa01, player1);
     }
+    
+    //FAROL 01:
+    if (interacao(farol1, player1))
+    {
+        if (controle1.teclaEPressionada)
+        {
+            status12.innerHTML = "TECLA E APERTADO!";
+        } else
+        {
+            status12.innerHTML = "ESPERANDO APERTAR TECLA E";
+        }
+    } else
+    {
+        status12.innerHTML = "Interação: " + interacao(farol1, player1);
+    }
     //
+
 }
 
 //OBSTACULOS - AREAS PROIBIDAS DE MOVIMENTAÇÃO
