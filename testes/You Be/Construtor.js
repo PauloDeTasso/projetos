@@ -2001,7 +2001,7 @@ var civil2 = new Civil(cidade1);
 
 //
 
-        /*
+/*
     function irParaCima()
     {
         if (player1.posicaoY > 0)
@@ -2018,13 +2018,8 @@ var civil2 = new Civil(cidade1);
             player1.posicaoY += player1.velocidade; // muda posição
         }
     }
-*/
-
-//
 
 //////////////////// RASCUNHOS:
-
-/*
 
 // Obtém a data/hora atual
 var data = new Date();
