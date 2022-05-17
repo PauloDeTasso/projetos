@@ -80,9 +80,9 @@ function loopDesenho()
 
         /*
         contextoTelaCanvasPrincipal.beginPath();
- 
+     
         contextoTelaCanvasPrincipal.fillStyle = "rgba(0,0,0,1)";
- 
+     
         contextoTelaCanvasPrincipal.lineWidth = 10;
         
                 contextoTelaCanvasPrincipal.moveTo(quarteirao3.posicaoX + 50, (quarteirao3.posicaoY + quarteirao3.altura));
@@ -94,11 +94,11 @@ function loopDesenho()
                 contextoTelaCanvasPrincipal.lineTo((quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura + 50));
       
         contextoTelaCanvasPrincipal.fillRect((quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
- 
+     
         contextoTelaCanvasPrincipal.stroke();
- 
+     
         contextoTelaCanvasPrincipal.fill();
- 
+     
         contextoTelaCanvasPrincipal.closePath();
         */
 

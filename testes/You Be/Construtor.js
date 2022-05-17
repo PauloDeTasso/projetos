@@ -5,6 +5,7 @@ var sombraVertical = 3;
 var incrementoSombra;
 var tempoSol = 5000;
 var loop;
+var contador = 0;
 
 var tempoSpriteCorrendo = 200;
 var tempoSpriteParado = 770;
@@ -1338,7 +1339,7 @@ var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
 
 var portaCasa01 = new localDeInteracao(cidade1, (quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
 
-var farol1 = new localDeInteracao(cidade1, -150, -350, 50, 50);
+var farol1 = new localDeInteracao(cidade1, 750, 1200, 50, 50);
 
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
@@ -1430,6 +1431,12 @@ localStorage.alimentoMenosUsado;
 
 //
 
+function atualizarPosicaoLugar(lugar,cidade)
+{
+    lugar.posicaoX = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + lugar.posicaoXAtual;
+    lugar.posicaoY = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + lugar.posicaoYAtual;
+}
+
 function atualizarPosicao(elemento, cidade)
 {
     if (elemento)
@@ -1482,30 +1489,11 @@ function atualizarPosicao(elemento, cidade)
     {
         //ATUALIZA POSIÇÕES PROIBIDAS:
 
-        //QUARTEIRAO1:
-                  
-        quarteirao1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao1.posicaoXAtual;
-        quarteirao1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao1.posicaoYAtual;
-            
-        //QUARTEIRAO2:
-            
-        quarteirao2.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao2.posicaoXAtual;
-        quarteirao2.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao2.posicaoYAtual;
-            
-        //QUARTEIRAO3:
-
-        quarteirao3.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + quarteirao3.posicaoXAtual;
-        quarteirao3.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + quarteirao3.posicaoYAtual;
-
-        // PORTACASA1:
-
-        portaCasa01.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + portaCasa01.posicaoXAtual;
-        portaCasa01.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + portaCasa01.posicaoYAtual;
-
-        // FAROL1:
-
-        farol1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 750;
-        farol1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 1200;
+        atualizarPosicaoLugar(quarteirao1, cidade1);
+        atualizarPosicaoLugar(quarteirao2, cidade1);
+        atualizarPosicaoLugar(quarteirao3, cidade1);
+        atualizarPosicaoLugar(portaCasa01, cidade1);
+        atualizarPosicaoLugar(farol1, cidade1);      
     }
 }
 
@@ -2160,7 +2148,8 @@ function desenharImagensElemento(contexto, player)
 
 function atualizarInteracoes()
 {
-    //PORTA CASA 01:
+    //PORTA CASA 01:    
+    //TECLA E:
     if (interacao(portaCasa01, player1))
     {
         if (controle1.teclaEPressionada)
@@ -2170,9 +2159,26 @@ function atualizarInteracoes()
         {
             status12.innerHTML = "ESPERANDO APERTAR TECLA E";
         }
+
+        //MOVE MAPA:
+        if (contador >= 100)
+        {
+
+        } else
+        {
+            cidade1.imagem.posicaoXRecorte++;
+            cidade1.imagem.posicaoYRecorte++;
+            player1.posicaoX--;
+            player1.posicaoY--;
+            contador++;
+        }
+    } else
+    {
+        contador = 0;
     }
     
     //FAROL 01:
+    //TECLA E:
     if (interacao(farol1, player1))
     {   
         if (controle1.teclaEPressionada)
