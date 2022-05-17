@@ -1515,8 +1515,8 @@ function statusSistema()
     status2.innerHTML = "player1.posicaoY: " + player1.posicaoY;
     status3.innerHTML = " civil2.posicaoXMorada: " + civil2.posicaoXMorada;
     status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
-    status5.innerHTML = "corpoCarregado: ";
-    status6.innerHTML = "paginaRecarregada: " ;
+    status5.innerHTML = "cidade1.imagem.posicaoXRecorte: " + cidade1.imagem.posicaoXRecorte;
+    status6.innerHTML = "cidade1.imagem.posicaoYRecorte: " + cidade1.imagem.posicaoYRecorte;
     status7.innerHTML = " player1.posicaoXGlobal: " + player1.posicaoXGlobal;
     status8.innerHTML = " player1.posicaoYGlobal: " + player1.posicaoYGlobal;
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
@@ -2174,7 +2174,7 @@ function atualizarInteracoes()
     
     //FAROL 01:
     if (interacao(farol1, player1))
-    {
+    {   
         if (controle1.teclaEPressionada)
         {
             status12.innerHTML = "TECLA E APERTADO!";
