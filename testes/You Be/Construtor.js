@@ -1,5 +1,11 @@
 // VARIAVÉIS
 
+// CONTROLES:
+
+var controlesDeMovimentosPlayer = true;
+
+//
+
 var sombraHorizontal = 3;
 var sombraVertical = 3;
 var incrementoSombra;
@@ -1601,13 +1607,16 @@ function movimentosPlayer()
     // TECLA PARA CIMA
     if (controle1.teclaSetaParaCimaPressionada && !controle1.teclaSetaParaBaixoPressionada && !controle1.teclaSetaParaDireitaPressionada && !controle1.teclaSetaParaEsquerdaPressionada)
     {
-            // SE A POSICAO Y É MAIOR QUE ZERO '0'
+           // SE O PLAYER NAO ULTRAPASSA A TELA DO CANVAS:
             if (player1.posicaoY >= 0)
             {
+                // SE HÁ OBSTACULOS NA REGIÃO SUL DOS ELEMENTOS: 
                 if (obstaculos("Sul"))
                 {
-                    // SE HOUVER OBSTACULOS - NÃO FAZ NADA
-                } else
+                    //NÃO FAZ NADA
+                }
+                // SE NÃO HOUVER OBSTACULOS:
+                else
                 {                    
                     // MOVE PARA CIMA     
                     player1.posicaoY -= player1.velocidade;
@@ -1685,7 +1694,8 @@ function movimentosPlayer()
 
                 if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
                 {
-                    //NÃO MUDA A POSICAO DO RECORTE
+                    cidade1.imagem.posicaoXRecorte = 0;
+                    //NÃO MUDA A POSICAO DO RECORTE                    
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte += player1.velocidade;
@@ -1718,6 +1728,7 @@ function movimentosPlayer()
                 if (cidade1.imagem.posicaoXRecorte <= 0)
                 {
                     //NÃO MUDA A POSICAO DO RECORTE
+                    cidade1.imagem.posicaoXRecorte = 4000;
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte -= player1.velocidade;
@@ -2150,39 +2161,43 @@ function desenharImagensElemento(contexto, player)
 
 function atualizarInteracoes()
 {
-    //PORTA CASA 01:    
-    //TECLA E:
+    //SE TEM INTERACAO COM A PORTA CASA 01:        
     if (interacao(portaCasa01, player1))
     {
+         //MOVE MAPA:
+         if (contador >= 300)
+         {
+             controlesDeMovimentosPlayer = true;
+         } else
+         {
+             controlesDeMovimentosPlayer = false;
+             cidade1.imagem.posicaoXRecorte++;
+             cidade1.imagem.posicaoYRecorte++;
+             player1.posicaoX--;
+             player1.posicaoY--;
+             contador++;
+        }
+        
+        //SE TECLA "E" PRESSIONADA:
         if (controle1.teclaEPressionada)
         {
             status12.innerHTML = "TECLA E APERTADO!";
         } else
-        {
+        {            
             status12.innerHTML = "ESPERANDO APERTAR TECLA E";
-        }
-
-        //MOVE MAPA:
-        if (contador >= 100)
-        {
-
-        } else
-        {
-            cidade1.imagem.posicaoXRecorte++;
-            cidade1.imagem.posicaoYRecorte++;
-            player1.posicaoX--;
-            player1.posicaoY--;
-            contador++;
-        }
-    } else
+        }       
+    }
+    //SE NÃO HOUVE INTERAÇÃO COM A PORTA CASA 01:  
+    else
     {
+        //somConversaInterna(casa01,cidade01,audio4);
         contador = 0;
     }
     
-    //FAROL 01:
-    //TECLA E:
+    //SE TEM INTERACAO COM farol1:      
     if (interacao(farol1, player1))
     {   
+        //SE TECLA "E" PRESSIONADA:
         if (controle1.teclaEPressionada)
         {
             status12.innerHTML = "TECLA E APERTADO!";
@@ -2190,6 +2205,11 @@ function atualizarInteracoes()
         {
             status12.innerHTML = "ESPERANDO APERTAR TECLA E";
         }
+    }    
+    //SE NÃO HOUVE INTERAÇÃO COM farol1:
+    else
+    {
+        //farol1Ligado();
     }
 }
 
