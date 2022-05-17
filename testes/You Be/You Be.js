@@ -100,14 +100,14 @@ function loopDesenho()
         contextoTelaCanvasPrincipal.fill();
  
         contextoTelaCanvasPrincipal.closePath();
-        /*
- 
-        //DESENHOS TESTES:
-        /*
-                contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";
-        
-                contextoTelaCanvasPrincipal.fillRect(quarteirao3.posicaoX, quarteirao3.posicaoY, quarteirao3.largura, quarteirao3.altura);
         */
+
+        //DESENHOS TESTES:
+
+        contextoTelaCanvasPrincipal.fillStyle = "rgba(200,200,200,1)";
+
+        contextoTelaCanvasPrincipal.fillRect(farol1.posicaoX, farol1.posicaoY, farol1.largura, farol1.altura);
+
 
         //LOOP DESENHO:
         loop = requestAnimationFrame(loopDesenho);

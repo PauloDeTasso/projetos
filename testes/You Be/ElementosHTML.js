@@ -264,6 +264,7 @@ function ligar()
     {
         botaoLigar.innerHTML = "On"
         canvasPrincipalLigado = true;
+        document.location.reload();
     }
 }
 

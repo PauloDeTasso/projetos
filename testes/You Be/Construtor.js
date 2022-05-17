@@ -120,9 +120,11 @@ function localDeInteracao(cidade, posicaoX, posicaoY, largura, altura)
 class Player
 {
     constructor( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem )
-    {
+    { 
         this.posicaoX = parseInt(posicaoX ? posicaoX : telaCanvasPrincipal.width / 2);// 
-        this.posicaoY = parseInt(posicaoY ? posicaoY : telaCanvasPrincipal.height / 2); //
+        this.posicaoY = parseInt(posicaoY ? posicaoY : telaCanvasPrincipal.height / 2); //        
+        this.posicaoXFixo = this.posicaoX;
+        this.posicaoYFixo = this.posicaoY;
         this.largura = largura ? largura : cidade.imagem.largura/100; //
         this.altura = altura ? altura : cidade.imagem.altura/100; //   
         this.velocidade = velocidade ? velocidade : 3; //
@@ -130,9 +132,9 @@ class Player
         this.direcaoY = 0; //
         this.distanciaInimigo = 200; //
         
-        this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + this.posicaoX;
+        this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
 
-        this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + this.posicaoY;
+        this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 0;
 
         //IMAGEM:
 
@@ -1336,7 +1338,7 @@ var quarteirao3 = new Quarteirao(cidade1, 430, 310, 250, 100);
 
 var portaCasa01 = new localDeInteracao(cidade1, (quarteirao3.posicaoX + 50), (quarteirao3.posicaoY + quarteirao3.altura), 50, 50);
 
-var farol1 = new localDeInteracao(cidade1, 750, 400, 50, 50);
+var farol1 = new localDeInteracao(cidade1, -150, -350, 50, 50);
 
 ///////////////////////////// ATRIBUIÇÃO DE METODOS DO SISTEMA NATIVO:
 
@@ -1436,8 +1438,8 @@ function atualizarPosicao(elemento, cidade)
         {
             case player1:
 
-                elemento.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + elemento.posicaoX;
-                elemento.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + elemento.posicaoY;
+                elemento.posicaoXGlobal = -(cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte - player1.posicaoX);
+                elemento.posicaoYGlobal = -(cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte - player1.posicaoY);
                 break;
 
             case civil1:
@@ -1502,8 +1504,8 @@ function atualizarPosicao(elemento, cidade)
 
         // FAROL1:
 
-        farol1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + farol1.posicaoXAtual;
-        farol1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + farol1.posicaoYAtual;
+        farol1.posicaoX = cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 750;
+        farol1.posicaoY = cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 1200;
     }
 }
 
@@ -1515,11 +1517,11 @@ function statusSistema()
     status4.innerHTML = " civil2.posicaoYMorada: " + civil2.posicaoYMorada;
     status5.innerHTML = "corpoCarregado: ";
     status6.innerHTML = "paginaRecarregada: " ;
-    status7.innerHTML = " civil2.posicaoX: " + civil2.posicaoX;
-    status8.innerHTML = " civil2.posicaoY: " + civil2.posicaoY;
+    status7.innerHTML = " player1.posicaoXGlobal: " + player1.posicaoXGlobal;
+    status8.innerHTML = " player1.posicaoYGlobal: " + player1.posicaoYGlobal;
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
     status10.innerHTML = " civil2.posicaoYFixo: " + civil2.posicaoYFixo;
-    status11.innerHTML = " civil2.posicaoXAtual: " + civil2.posicaoXAtual;
+    status11.innerHTML = "Interação: " + interacao(farol1, player1);
     //status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
 }
 
@@ -2168,9 +2170,6 @@ function atualizarInteracoes()
         {
             status12.innerHTML = "ESPERANDO APERTAR TECLA E";
         }
-    } else
-    {
-        status12.innerHTML = "Interação: " + interacao(portaCasa01, player1);
     }
     
     //FAROL 01:
@@ -2183,12 +2182,7 @@ function atualizarInteracoes()
         {
             status12.innerHTML = "ESPERANDO APERTAR TECLA E";
         }
-    } else
-    {
-        status12.innerHTML = "Interação: " + interacao(farol1, player1);
     }
-    //
-
 }
 
 //OBSTACULOS - AREAS PROIBIDAS DE MOVIMENTAÇÃO
