@@ -1315,7 +1315,9 @@ function reiniciar()
     civil1.posicaoYAtual = civil1.posicaoYMorada;
 
     civil2.posicaoXAtual = civil2.posicaoXMorada;
-    civil2.posicaoYAtual = civil2.posicaoYMorada ;
+    civil2.posicaoYAtual = civil2.posicaoYMorada;
+    
+    location.reload();
 }
 
 //
