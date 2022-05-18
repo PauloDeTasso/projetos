@@ -7,6 +7,7 @@ civil2.posicaoXMorada = 0;
 civil2.posicaoYMorada = 0;
 
 statusLigado = false;
+
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -31,6 +32,9 @@ function loopDesenho()
 
         //ATUALIZAR POSICAO CIVIL2:
         atualizarPosicao(civil2, cidade1);
+
+        //ATUALIZAR BALAS:
+        atualizarPosicao(balaPistola);
 
         //ATUALIZAR POSICÕES PROIBIDAS:
         atualizarPosicao();
@@ -60,7 +64,7 @@ function loopDesenho()
         desenharImagensElemento(contextoTelaCanvasPrincipal, balaPistola);
 
         status1.innerHTML = civil2.alertaLigado;
-        status2.innerHTML = player1.atirando;
+        status2.innerHTML = player1.atirou;
 
         if (metodosDeAlertaLigado)
         {
@@ -89,22 +93,18 @@ function loopDesenho()
 
         if (controle1.teclaFPressionada)
         {
-            if (player1.atirando)
-            {
-
-            } else
-            {
-                player1.balas--;
-                controle1.atirar(balaPistola);
-            }
-            if (balaPistola.posicaoX >= telaCanvasPrincipal.width || balaPistola.posicaoX <= 0)
-            {
-                player1.atirando = false;
-            }
+            controle1.atirar(balaPistola);
         }
 
-        status5.innerHTML = "Balas: " + player1.balas;
-        status6.innerHTML = "Atirando: " + player1.atirando;
+        status1.innerHTML = "player1.atirou: " + player1.atirou;
+        status2.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
+        status3.innerHTML = "player1.balas: " + player1.balas;
+        status4.innerHTML = "player1.posicaoParado: " + player1.posicaoParado;
+        status5.innerHTML = "balaPistola.posicaoX: " + balaPistola.posicaoX;
+        status6.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+        status7.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
+        status8.innerHTML = "telaCanvasPrincipal.width: " + telaCanvasPrincipal.width;
+
         //
 
         //

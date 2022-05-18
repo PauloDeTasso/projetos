@@ -128,6 +128,7 @@ var botaoIrParaCima = document.getElementById('botaoIrParaCima');
 var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
 var botaoAcao = document.getElementById('botaoAcao');
 var botaoAtirar = document.getElementById('botaoAtirar');
+var botaoMostrarStatus = document.getElementById('botaoMostrarStatus');
 
 /////////////////////////////VARIAVEIS DATA E HORA:
 
@@ -219,6 +220,8 @@ botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima"
 botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
 botaoAcao.addEventListener('mousedown', () => { controle1.apertar("letraE") }, false);
 botaoAtirar.addEventListener('mousedown', () => { controle1.atirar(balaPistola) }, false);
+
+botaoMostrarStatus.addEventListener('mousedown', () => { statusLigado = true; }, false);
 
 //
 

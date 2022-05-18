@@ -14,7 +14,7 @@ var statusLigado = true;
 
 //
 
-var canvasPrincipalLigado = false;
+var canvasPrincipalLigado = true;
 
 //
 
@@ -196,8 +196,8 @@ class Player
         this.direcaoY = 0; //
         this.distanciaInimigo = 200; //
 
-        this.balas = 10;
-        this.atirando = false;
+        this.balas = 100;
+        this.atirou = false;
         
         this.posicaoParado = "Direita";
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
@@ -578,24 +578,18 @@ function Controle(key1, key2, key3, key4, key5, key6)
     // ATIRAR:
     this.atirar = function (elemento)
     {
-        if (elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoX <= 0)
-        {
-            // clearInterval(this.setInterval())              
-            player1.atirando = false;
-        } else
-        {            
-            player1.atirando = true;                        
-            status7.innerHTML = player1.balas;
+        player1.atirou = true;
+
+        if (player1.atirou)
+        {                
             if (player1.balas > 0)
             {
                 switch (player1.posicaoParado)
                 {
-                    case "Direita":
-
-                        setInterval(() => 
-                        {
-                            elemento.posicaoX++;                             
-                        }, tempoTiro)
+                    case "Direita":     
+                        
+                        setInterval(() => { elemento.posicaoX++; }, tempoTiro);                       
+                        
                         break;
 
                     case "Esquerda":
@@ -613,17 +607,24 @@ function Controle(key1, key2, key3, key4, key5, key6)
                     default:
 
                         break;
-                }
-            } else
+                }                           
+                
+            }
+            // SE A BALAS ACABARAM:
+            else
             {
                 if (player1.balas <= 0)
                 {
                     player1.balas = 0;
                 }
-
-            }
+            }                
+            
+        }
+        //SE NÃO EXISTE DISPARO NA TELA
+        else
+        {
+        
         }   
-        //
     }
 }
 
@@ -1577,18 +1578,9 @@ function atualizarPosicao(elemento, cidade)
             case player1:
 
                 elemento.posicaoXGlobal = -(cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte - player1.posicaoX);
-                elemento.posicaoYGlobal = -(cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte - player1.posicaoY);
-
-                if (player1.atirando)
-                {
-                    //NÃO ATUALIZAR
-                } else
-                {                    
-                    balaPistola.posicaoX = player1.posicaoX + player1.largura;
-                    balaPistola.posicaoY = player1.posicaoY + player1.altura/8;
-                }
-
-                player1.balas = player1.balas;
+                
+                elemento.posicaoYGlobal = -(cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte - player1.posicaoY);             
+                                          
                 break;
 
             case civil1:
@@ -1622,7 +1614,26 @@ function atualizarPosicao(elemento, cidade)
                 elemento.imagem.margemOeste = elemento.imagem.posicaoX - elemento.imagem.posicaoXRecorte;
 
                 break;
+            
+            case balaPistola:
 
+                //BALA:
+                if (player1.atirou)
+                {
+                    if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
+                    {
+                        player1.atirou = false;
+                    } else
+                    {
+                        elemento.posicaoX = player1.posicaoX + player1.largura;
+
+                        elemento.posicaoY = player1.posicaoY + player1.altura / 8;
+                    
+                        player1.balas = player1.balas;
+                    }
+                }
+
+                
             default:
 
                 break;
@@ -1652,7 +1663,7 @@ function statusSistema()
     status9.innerHTML = " civil2.posicaoXFixo: " + civil2.posicaoXFixo;
     status10.innerHTML = " civil2.posicaoYFixo: " + civil2.posicaoYFixo;
     status11.innerHTML = "Interação: " + interacao(farol1, player1);
-    //status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
+    status12.innerHTML = " civil2.posicaoYAtual: " + civil2.posicaoYAtual; 
 }
 
 function alertaInimigo(player, civil)
