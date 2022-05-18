@@ -197,7 +197,7 @@ class Player
         this.distanciaInimigo = 200; //
 
         this.balas = 100;
-        this.atirou = false;
+        this.disparou = false;
         
         this.posicaoParado = "Direita";
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
@@ -577,13 +577,10 @@ function Controle(key1, key2, key3, key4, key5, key6)
 
     // ATIRAR:
     this.atirar = function (elemento)
-    {
-        player1.atirou = true;
-
-        if (player1.atirou)
-        {                
+    {                
             if (player1.balas > 0)
-            {
+            {                    
+                player1.disparou = true;
                 switch (player1.posicaoParado)
                 {
                     case "Direita":     
@@ -607,24 +604,14 @@ function Controle(key1, key2, key3, key4, key5, key6)
                     default:
 
                         break;
-                }                           
-                
+                }            
             }
-            // SE A BALAS ACABARAM:
+            // SE AS BALAS ACABARAM:
             else
             {
-                if (player1.balas <= 0)
-                {
-                    player1.balas = 0;
-                }
-            }                
-            
-        }
-        //SE NÃO EXISTE DISPARO NA TELA
-        else
-        {
-        
-        }   
+                    player1.balas = 0;                    
+                    player1.disparou = false;             
+            }           
     }
 }
 
@@ -1618,19 +1605,23 @@ function atualizarPosicao(elemento, cidade)
             case balaPistola:
 
                 //BALA:
-                if (player1.atirou)
+                if (player1.disparou)
                 {
                     if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
                     {
-                        player1.atirou = false;
+                        player1.disparou =  false;                        
+                        
+                        player1.balas--;
+                        
                     } else
                     {
-                        elemento.posicaoX = player1.posicaoX + player1.largura;
-
-                        elemento.posicaoY = player1.posicaoY + player1.altura / 8;
-                    
-                        player1.balas = player1.balas;
+                                      
                     }
+                } else
+                {
+                    elemento.posicaoX = player1.posicaoX + player1.largura;
+
+                        elemento.posicaoY = player1.posicaoY + player1.altura / 8;      
                 }
 
                 
