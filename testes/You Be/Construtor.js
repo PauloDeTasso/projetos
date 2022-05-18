@@ -2,7 +2,19 @@
 
 // CONTROLES:
 
-var controlesDeMovimentosPlayer = true;
+var controlesDeMovimentosPlayerLigado = true;
+
+//
+
+var metodosDeAlertaLigado = true;
+
+//
+
+var statusLigado = true;
+
+//
+
+var canvasPrincipalLigado = false;
 
 //
 
@@ -16,7 +28,6 @@ var contador = 0;
 var tempoSpriteCorrendo = 200;
 var tempoSpriteParado = 770;
 
-var canvasPrincipalLigado = true;
 
 var loopAlerta = true;
 
@@ -289,6 +300,7 @@ class Civil extends Player
         this.direcaoX = 0; //
         this.direcaoY = 1; //
         this.emAlerta = emAlerta ? emAlerta : false; //
+        this.alertaLigado = true; //
 
         this.imagem = new Image();
         this.imagem.src = "../../imagens/texture/2D/pacman3d.png"
@@ -1525,14 +1537,16 @@ function alertaInimigo(player, civil)
 {
     var calculoDistancia = Math.abs((Math.abs(player.posicaoX - civil.posicaoX)) + (Math.abs(player.posicaoY - civil.posicaoY))) <= player.distanciaInimigo;
 
-    if (calculoDistancia)
     {
-        civil.emAlerta = true;
-
-    } else
-    {
-        civil.emAlerta = false;
-    }
+        if (calculoDistancia)
+        {
+            civil.emAlerta = true;
+    
+        } else
+        {
+            civil.emAlerta = false;
+        }    
+    }        
     return calculoDistancia;
 }
 
@@ -1694,8 +1708,8 @@ function movimentosPlayer()
 
                 if (cidade1.imagem.posicaoXRecorte >= cidade1.imagem.width - telaCanvasPrincipal.width)
                 {
-                    cidade1.imagem.posicaoXRecorte = 0;
-                    //NÃO MUDA A POSICAO DO RECORTE                    
+                    //NÃO MUDA A POSICAO DO RECORTE
+                    //cidade1.imagem.posicaoXRecorte = 0;                    
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte += player1.velocidade;
@@ -1728,7 +1742,7 @@ function movimentosPlayer()
                 if (cidade1.imagem.posicaoXRecorte <= 0)
                 {
                     //NÃO MUDA A POSICAO DO RECORTE
-                    cidade1.imagem.posicaoXRecorte = 4000;
+                    //cidade1.imagem.posicaoXRecorte = 4000;
                 } else
                 {
                     cidade1.imagem.posicaoXRecorte -= player1.velocidade;
@@ -1931,9 +1945,8 @@ function movimentosPlayer()
 //
 
 function elementoEmAlerta(elemento,player)
-{
-     // SE loopAlerta TRUE:
-     if (loopAlerta)
+{    
+     if (elemento.alertaLigado)
      {
          // INIMIGO EM ALERTA:
          
@@ -2043,10 +2056,10 @@ function elementoEmAlerta(elemento,player)
              else
              {
                  //NÃO FAZ NADA
-             }
-
-             ////SE NAO ESTIVER EM ALERTA:
-         } else
+             }             
+         }
+         ////SE NAO ESTIVER EM ALERTA:
+         else
          {
              // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
              if (elemento.posicaoX > elemento.posicaoXFixo && elemento.posicaoY > elemento.posicaoYFixo)
@@ -2163,14 +2176,14 @@ function atualizarInteracoes()
 {
     //SE TEM INTERACAO COM A PORTA CASA 01:        
     if (interacao(portaCasa01, player1))
-    {
+    {         
          //MOVE MAPA:
          if (contador >= 300)
          {
-             controlesDeMovimentosPlayer = true;
+             controlesDeMovimentosPlayerLigado = true;
          } else
          {
-             controlesDeMovimentosPlayer = false;
+             controlesDeMovimentosPlayerLigado = false;
              cidade1.imagem.posicaoXRecorte++;
              cidade1.imagem.posicaoYRecorte++;
              player1.posicaoX--;
@@ -2182,16 +2195,22 @@ function atualizarInteracoes()
         if (controle1.teclaEPressionada)
         {
             status12.innerHTML = "TECLA E APERTADO!";
+            civil2.alertaLigado = true;
         } else
         {            
-            status12.innerHTML = "ESPERANDO APERTAR TECLA E";
+            status12.innerHTML = "ESPERANDO APERTAR TECLA E";            
+            alertarElemento(civil1, player1);
+            alertarElemento(civil2, player1);
         }       
+        
     }
     //SE NÃO HOUVE INTERAÇÃO COM A PORTA CASA 01:  
     else
     {
         //somConversaInterna(casa01,cidade01,audio4);
         contador = 0;
+        civil1.alertaLigado = true;
+        civil2.alertaLigado = true;
     }
     
     //SE TEM INTERACAO COM farol1:      
@@ -2263,6 +2282,121 @@ function obstaculos(local)
                 break;
     }
 }
+
+//METODO PARA COLOCAR ELEMENTO EM ALERTA:
+
+function alertarElemento(elemento,player)
+{
+    elemento.alertaLigado = false;
+
+     // SE ELEMENTO ESTIVER A DIREITA E ABAIXO DO ALVO:
+     if (elemento.posicaoX > player.posicaoX && elemento.posicaoY > player.posicaoY)
+     {
+         elemento.direcaoY = -1;
+         elemento.direcaoX = -1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoEsquerda(elemento);
+     }
+     // SE ELEMENTO ESTIVER A DIREITA E ACIMA DO ALVO:
+     else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY < player.posicaoY)
+     {
+         elemento.direcaoY = 1;
+         elemento.direcaoX = -1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoEsquerda(elemento);
+     }
+     // SE ELEMENTO ESTIVER A ESQUERDA E ACIMA DO ALVO:
+     else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY < player.posicaoY)
+     {
+         elemento.direcaoY = 1;
+         elemento.direcaoX = 1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoDireita(elemento);
+     }
+     // SE ELEMENTO ESTIVER A ESQUERDA E ABAIXO DO ALVO:
+     else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY > player.posicaoY)
+     {
+         elemento.direcaoY = -1;
+         elemento.direcaoX = 1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoDireita(elemento);
+     }
+     // SE ELEMENTO ESTIVER A DIREITA E Y É IGUAL AO ALVO:
+     else if (elemento.posicaoX > player.posicaoX && elemento.posicaoY == player.posicaoY)
+     {
+         elemento.direcaoY = 0;
+         elemento.direcaoX = -1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoEsquerda(elemento);
+    
+     }
+     // SE ELEMENTO ESTIVER A ESQUERDA E Y É IGUAL AO ALVO:
+     else if (elemento.posicaoX < player.posicaoX && elemento.posicaoY == player.posicaoY)
+     {
+         elemento.direcaoY = 0;
+         elemento.direcaoX = 1;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoDireita(elemento);
+     }
+     // SE ELEMENTO ESTIVER ABAIXO E X É IGUAL AO ALVO:
+     else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY > player.posicaoY)
+     {
+         elemento.direcaoY = -1;
+         elemento.direcaoX = 0;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoParaCima(elemento);
+     }
+     // SE ELEMENTO ESTIVER ACIMA E X É IGUAL AO ALVO:
+     else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY < player.posicaoY)
+     {
+         elemento.direcaoY = 1;
+         elemento.direcaoX = 0;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         imagensCorrendoParaBaixo(elemento);
+    
+     } else if (elemento.posicaoX == player.posicaoX && elemento.posicaoY == player.posicaoY)
+     {
+         elemento.direcaoY = 0;
+         elemento.direcaoX = 0;
+         elemento.posicaoXAtual += elemento.direcaoX;
+         elemento.posicaoYAtual += elemento.direcaoY;
+    
+         alert("Você Perdeu " + localStorage.nome + "!!! Tente Outra Vez!");
+         var confirma = confirm("Você aceita que perdeu pra mim? kkkkkkk")
+    
+         if (confirma)
+         {
+             alert("Oxen... Cade " + localStorage.nome + " que nunca perde? kkk")
+         } else
+         {
+             alert(localStorage.nome + ", nunca aceita que perdeu!!! kkkkkkkk")
+         }
+         reiniciar();
+     }
+    // SE NÃO ESTIVER EM NENHUMA DAS CONDIÇÕES DE POSIÇÃO:
+     else
+    {
+     //NÃO FAZ NADA
+    }
+}
+
+//
 
 //INSTANCIAS:
 

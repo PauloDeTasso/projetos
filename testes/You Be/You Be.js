@@ -6,6 +6,7 @@ civil2.posicaoYAtual = 0;
 civil2.posicaoXMorada = 0;
 civil2.posicaoYMorada = 0;
 
+statusLigado = false;
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -40,7 +41,7 @@ function loopDesenho()
         //ATUALIZAR AS SOMBRAS:
         atualizarSombras();
 
-        if (controlesDeMovimentosPlayer)
+        if (controlesDeMovimentosPlayerLigado)
         {
             //DEFINE OS CONTROLES DE MOVIMENTO DO PLAYER1:
             movimentosPlayer();
@@ -55,23 +56,35 @@ function loopDesenho()
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
         desenharImagensElemento(contextoTelaCanvasPrincipal, civil2);
 
-        //SE PLAYER 1 APROXIMAR DE CIVIL1:
-        alertaInimigo(player1, civil1);
+        status1.innerHTML = civil2.alertaLigado;
 
-        //SE PLAYER 1 APROXIMAR DE CIVIL2:
-        alertaInimigo(player1, civil2);
+        if (metodosDeAlertaLigado)
+        {
+            //SE PLAYER 1 APROXIMAR DE CIVIL1:
+            alertaInimigo(player1, civil1);
 
-        //AUTOMATIZA CIVIL1:
-        elementoEmAlerta(civil1, player1);
+            //SE PLAYER 1 APROXIMAR DE CIVIL2:
+            alertaInimigo(player1, civil2);
 
-        //AUTOMATIZA CIVIL2:
-        elementoEmAlerta(civil2, player1);
+
+            //AUTOMATIZA CIVIL1:
+            elementoEmAlerta(civil1, player1);
+
+            //AUTOMATIZA CIVIL2:
+            elementoEmAlerta(civil2, player1);
+        }
 
         // PONTOS DE INTERAÇÃO:
         atualizarInteracoes();
 
-        //ATUALIZAR STATUS DO SISTEMA:
-        statusSistema();
+        if (statusLigado)
+        {
+            //ATUALIZAR STATUS DO SISTEMA:
+            statusSistema();
+        }
+        //
+
+        //
 
         /*
         contextoTelaCanvasPrincipal.beginPath();
@@ -105,7 +118,7 @@ function loopDesenho()
         */
 
         //LOOP DESENHO:
-        loop = requestAnimationFrame(loopDesenho);
+        //loop = requestAnimationFrame(loopDesenho);
         // loop = setInterval(loopDesenho, 0);
     }
 
@@ -114,6 +127,7 @@ function loopDesenho()
     {
         status12.innerHTML = "Canvas Desligado!"
     }
+    loop = requestAnimationFrame(loopDesenho);
 }
 
 ////////////////////////////////////////////////////////
