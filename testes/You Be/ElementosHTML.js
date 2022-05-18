@@ -127,6 +127,7 @@ var botaoIrParaEsquerda = document.getElementById('botaoIrParaEsquerda');
 var botaoIrParaCima = document.getElementById('botaoIrParaCima');
 var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
 var botaoAcao = document.getElementById('botaoAcao');
+var botaoAtirar = document.getElementById('botaoAtirar');
 
 /////////////////////////////VARIAVEIS DATA E HORA:
 
@@ -217,6 +218,7 @@ botaoIrParaDireita.addEventListener('mousedown', () => { controle1.mover("paraDi
 botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
 botaoAcao.addEventListener('mousedown', () => { controle1.apertar("letraE") }, false);
+botaoAtirar.addEventListener('mousedown', () => { controle1.atirar(balaPistola) }, false);
 
 //
 
@@ -227,6 +229,7 @@ botaoIrParaDireita.addEventListener('touchstart', () => { controle1.mover("paraD
 botaoIrParaCima.addEventListener('touchstart', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('touchstart', () => { controle1.mover("paraBaixo") }, false);
 botaoAcao.addEventListener('touchstart', () => { controle1.apertar("lertraE") }, false);
+balaPistola.addEventListener('touchstart', () => { controle1.atirar(balaPistola) }, false);
 
 // PARANDO
 
@@ -242,6 +245,7 @@ botaoIrParaDireita.addEventListener('touchend', controle1.parar, false);
 botaoIrParaCima.addEventListener('touchend', controle1.parar, false);
 botaoIrParaBaixo.addEventListener('touchend', controle1.parar, false);
 botaoAcao.addEventListener('touchend', controle1.parar, false);
+botaoAtirar.addEventListener('touchend', controle1.parar, false);
 
 // TECLAS PRESSIONADAS
 

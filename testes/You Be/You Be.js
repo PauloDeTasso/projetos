@@ -56,6 +56,9 @@ function loopDesenho()
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
         desenharImagensElemento(contextoTelaCanvasPrincipal, civil2);
 
+        //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
+        desenharImagensElemento(contextoTelaCanvasPrincipal, balaPistola);
+
         status1.innerHTML = civil2.alertaLigado;
 
         if (metodosDeAlertaLigado)

@@ -133,6 +133,51 @@ function localDeInteracao(cidade, posicaoX, posicaoY, largura, altura)
     this.altura = altura;
 }
 
+//BALAS:
+
+function Bala(tipo,posicaoX,posicaoY,largura,altura)
+{
+    this.tipo = tipo;
+    this.posicaoX = posicaoX;
+    this.posicaoY = posicaoY;
+    this.largura = largura;
+    this.altura = altura;
+
+    this.imagem = new Image();
+    this.imagem.src = "../../imagens/texture/2D/balas.png";
+
+     // POSIÇÕES DA IMAGEM:
+
+    switch (tipo)
+    {
+        case "Pistola":
+            this.imagemPosInicialX = 77;
+            this.imagemPosInicialY = 40;
+            this.imagemCorteLargura = 290;
+            this.imagemCorteAltura = 122;
+            break;
+        case "Fuzil":
+            this.imagemPosInicialX = 74;
+            this.imagemPosInicialY = 215;
+            this.imagemCorteLargura = 582;
+            this.imagemCorteAltura = 127;
+            break;
+        case "Snipe":
+            this.imagemPosInicialX = 70;
+            this.imagemPosInicialY = 397;
+            this.imagemCorteLargura = 774;
+            this.imagemCorteAltura = 137;
+            break;
+        
+        default:
+            this.imagemPosInicialX = 77;
+            this.imagemPosInicialY = 40;
+            this.imagemCorteLargura = 290;
+            this.imagemCorteAltura = 122;
+            break;
+    }
+}
+
 // PLAYER
 
 class Player
@@ -404,7 +449,7 @@ class Civil extends Player
 
 // CONTROLE
 
-function Controle(key1, key2, key3, key4,key5)
+function Controle(key1, key2, key3, key4, key5)
 {
     this.teclaSetaParaCimaPressionada = false;
     this.teclaSetaParaBaixoPressionada = false;
@@ -454,7 +499,7 @@ function Controle(key1, key2, key3, key4,key5)
         {
             controle1.teclaSetaParaEsquerdaPressionada = true;
 
-        }else if (eventoAcionado.keyCode == key5)
+        } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = true;
         }
@@ -504,16 +549,27 @@ function Controle(key1, key2, key3, key4,key5)
         {
             case "letraE":
                 controle1.teclaEPressionada = true;
-                break;            
+                break;
 
             default:
               
                 break;
         }
     }
-}
 
-//
+    // ATIRAR:
+    this.atirar = function (elemento)
+    {
+        if (elemento.posicaoX >= telaCanvasPrincipal.width)
+        {
+          //  clearInterval(this.setInterval())  
+        } else
+        {
+            this.setInterval(() => {elemento.posicaoX++; },5) 
+        }        
+    }    
+    //
+}
 
 function quarteiraoEmCima(quarteirao, player)
 {
@@ -2395,7 +2451,6 @@ function alertarElemento(elemento,player)
      //NÃO FAZ NADA
     }
 }
-
 //
 
 //INSTANCIAS:
@@ -2408,8 +2463,9 @@ var civil1 = new Civil(cidade1);
 
 var civil2 = new Civil(cidade1);
 
-//
+var balaPistola = new Bala("Pistola",(player1.posicaoX + player1.largura),(player1.posicaoY + player1.largura/4),player1.largura/8,player1.largura/8);
 
+//
 /*
     function irParaCima()
     {
