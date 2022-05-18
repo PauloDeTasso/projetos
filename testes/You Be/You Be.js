@@ -60,6 +60,7 @@ function loopDesenho()
         desenharImagensElemento(contextoTelaCanvasPrincipal, balaPistola);
 
         status1.innerHTML = civil2.alertaLigado;
+        status2.innerHTML = player1.atirando;
 
         if (metodosDeAlertaLigado)
         {
@@ -84,6 +85,12 @@ function loopDesenho()
         {
             //ATUALIZAR STATUS DO SISTEMA:
             statusSistema();
+        }
+
+        if (controle1.teclaFPressionada)
+        {
+            status3.innerHTML = "OI"
+            controle1.atirar(balaPistola);
         }
         //
 

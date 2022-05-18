@@ -194,6 +194,7 @@ class Player
         this.direcaoX = 0; //
         this.direcaoY = 0; //
         this.distanciaInimigo = 200; //
+        this.atirando = false;
         
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
 
@@ -449,7 +450,7 @@ class Civil extends Player
 
 // CONTROLE
 
-function Controle(key1, key2, key3, key4, key5)
+function Controle(key1, key2, key3, key4, key5, key6)
 {
     this.teclaSetaParaCimaPressionada = false;
     this.teclaSetaParaBaixoPressionada = false;
@@ -458,6 +459,7 @@ function Controle(key1, key2, key3, key4, key5)
     this.teclaSetaParaEsquerdaPressionada = false;
 
     this.teclaEPressionada = false;
+    this.teclaFPressionada = false;
 
     this.keyUp = function (eventoAcionado)
     {
@@ -479,6 +481,9 @@ function Controle(key1, key2, key3, key4, key5)
         } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = false;
+        }else if (eventoAcionado.keyCode == key6)
+        {
+            controle1.teclaFPressionada = false;
         }
     }
 
@@ -502,6 +507,10 @@ function Controle(key1, key2, key3, key4, key5)
         } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = true;
+            
+        } else if (eventoAcionado.keyCode == key6)
+        {
+            controle1.teclaFPressionada = true;
         }
     }
 
@@ -541,6 +550,7 @@ function Controle(key1, key2, key3, key4, key5)
         controle1.teclaSetaParaDireitaPressionada = false;
         controle1.teclaSetaParaEsquerdaPressionada = false;
         controle1.teclaEPressionada = false;
+        controle1.teclaFPressionada = false;
     }
 
     this.apertar = function (tecla)
@@ -550,6 +560,10 @@ function Controle(key1, key2, key3, key4, key5)
             case "letraE":
                 controle1.teclaEPressionada = true;
                 break;
+            
+                case "letraF":
+                    controle1.teclaFPressionada = true;
+                    break;
 
             default:
               
@@ -560,12 +574,14 @@ function Controle(key1, key2, key3, key4, key5)
     // ATIRAR:
     this.atirar = function (elemento)
     {
-        if (elemento.posicaoX >= telaCanvasPrincipal.width)
+        if (elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoX <= 0)
         {
-          //  clearInterval(this.setInterval())  
+          // clearInterval(this.setInterval())  
+            player1.atirando = false;             
         } else
         {
-            this.setInterval(() => {elemento.posicaoX++; },5) 
+            player1.atirando = true; 
+            setInterval(() => {elemento.posicaoX++; },5) 
         }        
     }    
     //
@@ -1523,6 +1539,14 @@ function atualizarPosicao(elemento, cidade)
 
                 elemento.posicaoXGlobal = -(cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte - player1.posicaoX);
                 elemento.posicaoYGlobal = -(cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte - player1.posicaoY);
+
+                if (player1.atirando)
+                {                    
+                  //NÃO ATUALIZAR                    
+                } else
+                {                    
+                balaPistola.posicaoX = player1.posicaoX;
+                }
                 break;
 
             case civil1:
@@ -2455,7 +2479,7 @@ function alertarElemento(elemento,player)
 
 //INSTANCIAS:
 
-var controle1 = new Controle(87, 83, 68, 65, 69);
+var controle1 = new Controle(87, 83, 68, 65, 69,70);
 
 var player1 = new Player(cidade1);
 

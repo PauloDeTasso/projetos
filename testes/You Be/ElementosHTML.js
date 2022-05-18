@@ -229,7 +229,7 @@ botaoIrParaDireita.addEventListener('touchstart', () => { controle1.mover("paraD
 botaoIrParaCima.addEventListener('touchstart', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('touchstart', () => { controle1.mover("paraBaixo") }, false);
 botaoAcao.addEventListener('touchstart', () => { controle1.apertar("lertraE") }, false);
-balaPistola.addEventListener('touchstart', () => { controle1.atirar(balaPistola) }, false);
+botaoAtirar.addEventListener('touchstart', () => { controle1.atirar(balaPistola) }, false);
 
 // PARANDO
 
