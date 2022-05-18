@@ -89,9 +89,22 @@ function loopDesenho()
 
         if (controle1.teclaFPressionada)
         {
-            status3.innerHTML = "OI"
-            controle1.atirar(balaPistola);
+            if (player1.atirando)
+            {
+
+            } else
+            {
+                player1.balas--;
+                controle1.atirar(balaPistola);
+            }
+            if (balaPistola.posicaoX >= telaCanvasPrincipal.width || balaPistola.posicaoX <= 0)
+            {
+                player1.atirando = false;
+            }
         }
+
+        status5.innerHTML = "Balas: " + player1.balas;
+        status6.innerHTML = "Atirando: " + player1.atirando;
         //
 
         //

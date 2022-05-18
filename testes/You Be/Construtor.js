@@ -28,6 +28,7 @@ var contador = 0;
 var tempoSpriteCorrendo = 200;
 var tempoSpriteParado = 770;
 
+var tempoTiro = 10;
 
 var loopAlerta = true;
 
@@ -194,8 +195,11 @@ class Player
         this.direcaoX = 0; //
         this.direcaoY = 0; //
         this.distanciaInimigo = 200; //
+
+        this.balas = 10;
         this.atirando = false;
         
+        this.posicaoParado = "Direita";
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
 
         this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 0;
@@ -481,7 +485,7 @@ function Controle(key1, key2, key3, key4, key5, key6)
         } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = false;
-        }else if (eventoAcionado.keyCode == key6)
+        } else if (eventoAcionado.keyCode == key6)
         {
             controle1.teclaFPressionada = false;
         }
@@ -561,9 +565,9 @@ function Controle(key1, key2, key3, key4, key5, key6)
                 controle1.teclaEPressionada = true;
                 break;
             
-                case "letraF":
-                    controle1.teclaFPressionada = true;
-                    break;
+            case "letraF":
+                controle1.teclaFPressionada = true;
+                break;
 
             default:
               
@@ -576,15 +580,51 @@ function Controle(key1, key2, key3, key4, key5, key6)
     {
         if (elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoX <= 0)
         {
-          // clearInterval(this.setInterval())  
-            player1.atirando = false;             
+            // clearInterval(this.setInterval())              
+            player1.atirando = false;
         } else
-        {
-            player1.atirando = true; 
-            setInterval(() => {elemento.posicaoX++; },5) 
-        }        
-    }    
-    //
+        {            
+            player1.atirando = true;                        
+            status7.innerHTML = player1.balas;
+            if (player1.balas > 0)
+            {
+                switch (player1.posicaoParado)
+                {
+                    case "Direita":
+
+                        setInterval(() => 
+                        {
+                            elemento.posicaoX++;                             
+                        }, tempoTiro)
+                        break;
+
+                    case "Esquerda":
+
+                        break;
+
+                    case "Cima":
+
+                        break;
+
+                    case "Baixo":
+
+                        break;
+
+                    default:
+
+                        break;
+                }
+            } else
+            {
+                if (player1.balas <= 0)
+                {
+                    player1.balas = 0;
+                }
+
+            }
+        }   
+        //
+    }
 }
 
 function quarteiraoEmCima(quarteirao, player)
@@ -673,8 +713,7 @@ function imagensCorrendoDireita(elemento)
        
     } else
     {
-        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD1; }, tempoSpriteCorrendo)
-        
+        setTimeout(() => {  elemento.imagemCorteLargura = elemento.imagemCorteLarguraCorrendoD1; }, tempoSpriteCorrendo)        
     }
 
     //elemento.imagemCorteAltura:
@@ -1541,12 +1580,15 @@ function atualizarPosicao(elemento, cidade)
                 elemento.posicaoYGlobal = -(cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte - player1.posicaoY);
 
                 if (player1.atirando)
-                {                    
-                  //NÃO ATUALIZAR                    
+                {
+                    //NÃO ATUALIZAR
                 } else
                 {                    
-                balaPistola.posicaoX = player1.posicaoX;
+                    balaPistola.posicaoX = player1.posicaoX + player1.largura;
+                    balaPistola.posicaoY = player1.posicaoY + player1.altura/8;
                 }
+
+                player1.balas = player1.balas;
                 break;
 
             case civil1:
