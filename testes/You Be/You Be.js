@@ -102,11 +102,13 @@ function loopDesenho()
         status1.innerHTML = "player1.disparou: " + player1.disparou;
         status2.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
         status3.innerHTML = "player1.balas: " + player1.balas;
-        status4.innerHTML = "player1.posicaoBala: " + player1.posicaoBala;
+        status4.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
         status5.innerHTML = "balaPistola.posicaoX: " + balaPistola.posicaoX;
         status6.innerHTML = "player1.posicaoX: " + player1.posicaoX;
         status7.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
         status8.innerHTML = "telaCanvasPrincipal.width: " + telaCanvasPrincipal.width;
+        status9.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
+        status10.innerHTML = "controle1.teclaSetaParaCimaPressionada: " + controle1.teclaSetaParaCimaPressionada;
 
         //
 

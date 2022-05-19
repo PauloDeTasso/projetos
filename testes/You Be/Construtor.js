@@ -14,7 +14,7 @@ var statusLigado = true;
 
 //
 
-var canvasPrincipalLigado = true;
+var canvasPrincipalLigado = false;
 
 //
 
@@ -196,10 +196,9 @@ class Player
         this.direcaoY = 0; //
         this.distanciaInimigo = 200; //
 
-        this.balas = 100;
+        this.balas = parseInt(100);
         this.disparou = false;
         
-        this.posicaoBala = "Direita";
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
 
         this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 0;
@@ -465,26 +464,34 @@ function Controle(key1, key2, key3, key4, key5, key6)
     this.teclaEPressionada = false;
     this.teclaFPressionada = false;
 
+    this.posicaoBala;
+
     this.keyUp = function (eventoAcionado)
     {
         if (eventoAcionado.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = false;
+            controle1.posicaoBala = "paraCima";
 
         } else if (eventoAcionado.keyCode == key2)
         {
             controle1.teclaSetaParaBaixoPressionada = false;
+            controle1.posicaoBala = "paraBaixo";
+
         } else if (eventoAcionado.keyCode == key3)
         {
             controle1.teclaSetaParaDireitaPressionada = false;
+            controle1.posicaoBala = "paraDireita";
 
         } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = false;
+            controle1.posicaoBala = "paraEsquerda";
 
         } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = false;
+
         } else if (eventoAcionado.keyCode == key6)
         {
             controle1.teclaFPressionada = false;
@@ -496,24 +503,29 @@ function Controle(key1, key2, key3, key4, key5, key6)
         if (eventoAcionado.keyCode == key1)
         {
             controle1.teclaSetaParaCimaPressionada = true;
+            controle1.posicaoBala = "paraCima";
 
         } else if (eventoAcionado.keyCode == key2)
         {
             controle1.teclaSetaParaBaixoPressionada = true;
+            controle1.posicaoBala = "paraBaixo";
+
         } else if (eventoAcionado.keyCode == key3)
         {
             controle1.teclaSetaParaDireitaPressionada = true;
-
+            controle1.posicaoBala = "paraDireita";
+            
         } else if (eventoAcionado.keyCode == key4)
         {
             controle1.teclaSetaParaEsquerdaPressionada = true;
-
+            controle1.posicaoBala = "paraEsquerda";
+            
         } else if (eventoAcionado.keyCode == key5)
         {
             controle1.teclaEPressionada = true;
             
         } else if (eventoAcionado.keyCode == key6)
-        {
+        {       
             controle1.teclaFPressionada = true;
         }
     }
@@ -591,7 +603,7 @@ function Controle(key1, key2, key3, key4, key5, key6)
             else
             {
                     //SE A BALA SAIR DA TELA:                
-                if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
+                if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoY <= 0 || elemento.posicaoY >= telaCanvasPrincipal.height)
                 {
                     //NÃO FAZ NADA    
                 }
@@ -599,30 +611,33 @@ function Controle(key1, key2, key3, key4, key5, key6)
                 else
                 {
                     //VERIFICA A POSICAO DA DIRECAO DA BALA
-                    switch (player1.posicaoBala)
+                    switch (controle1.posicaoBala)
                     {
-                        case "Direita":
+                        case "paraDireita":
                         
-                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);                       
+                          this.disparoParaDireita = setInterval(() =>
+                            {
+                                elemento.posicaoX++;
+                            }, tempoTiro);                       
                             break;
 
-                        case "Esquerda":
+                        case "paraEsquerda":
 
-                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            this.disparoParaEsquerda = setInterval(() => { elemento.posicaoX--; }, tempoTiro);
                             break;
 
-                        case "Cima":
+                        case "paraCima":
 
-                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            this.disparoParaCima =  setInterval(() => { elemento.posicaoY--; }, tempoTiro);
                             break;
 
-                        case "Baixo":
+                        case "paraBaixo":
 
-                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            this.disparoParaBaixo = setInterval(() => { elemento.posicaoY++; }, tempoTiro);
                             break;
 
                         default:
-
+                            
                             break;
                     }
                 }                                    
@@ -1633,8 +1648,16 @@ function atualizarPosicao(elemento, cidade)
                 if (player1.disparou)
                 {
                     // SE A BALA NÃO SAIU DA TELA:
-                    if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
+                    if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoY <= 0 || elemento.posicaoY >= telaCanvasPrincipal.height)
                     {
+                        clearInterval(controle1.disparoParaCima);
+
+                        clearInterval(controle1.disparoParaBaixo);
+
+                        clearInterval(controle1.disparoParaDireita);
+
+                        clearInterval(controle1.disparoParaEsquerda);
+                        
                         player1.disparou = false;          
                         player1.balas--;
                     } else
