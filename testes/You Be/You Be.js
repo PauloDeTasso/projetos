@@ -63,9 +63,6 @@ function loopDesenho()
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
         desenharImagensElemento(contextoTelaCanvasPrincipal, balaPistola);
 
-        status1.innerHTML = civil2.alertaLigado;
-        status2.innerHTML = player1.atirou;
-
         if (metodosDeAlertaLigado)
         {
             //SE PLAYER 1 APROXIMAR DE CIVIL1:
@@ -93,13 +90,19 @@ function loopDesenho()
 
         if (controle1.teclaFPressionada)
         {
-            controle1.atirar(balaPistola);
+            if (player1.disparou)
+            {
+
+            } else
+            {
+                controle1.atirar(balaPistola);
+            }
         }
 
-        status1.innerHTML = "player1.atirou: " + player1.atirou;
+        status1.innerHTML = "player1.disparou: " + player1.disparou;
         status2.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
         status3.innerHTML = "player1.balas: " + player1.balas;
-        status4.innerHTML = "player1.posicaoParado: " + player1.posicaoParado;
+        status4.innerHTML = "player1.posicaoBala: " + player1.posicaoBala;
         status5.innerHTML = "balaPistola.posicaoX: " + balaPistola.posicaoX;
         status6.innerHTML = "player1.posicaoX: " + player1.posicaoX;
         status7.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;

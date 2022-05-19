@@ -199,7 +199,7 @@ class Player
         this.balas = 100;
         this.disparou = false;
         
-        this.posicaoParado = "Direita";
+        this.posicaoBala = "Direita";
         this.posicaoXGlobal = cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 0;
 
         this.posicaoYGlobal = cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 0;
@@ -576,42 +576,65 @@ function Controle(key1, key2, key3, key4, key5, key6)
     }
 
     // ATIRAR:
+
     this.atirar = function (elemento)
     {                
-            if (player1.balas > 0)
-            {                    
-                player1.disparou = true;
-                switch (player1.posicaoParado)
-                {
-                    case "Direita":     
-                        
-                        setInterval(() => { elemento.posicaoX++; }, tempoTiro);                       
-                        
-                        break;
-
-                    case "Esquerda":
-
-                        break;
-
-                    case "Cima":
-
-                        break;
-
-                    case "Baixo":
-
-                        break;
-
-                    default:
-
-                        break;
-                }            
+        // SE TÊM BALAS:
+        if (player1.balas > 0)
+        {
+            // SE FOI DISPARADO:
+            if (player1.disparou)
+            {
+                //NÃO FAZ NADA    
             }
-            // SE AS BALAS ACABARAM:
+            // SE NÃO FOI DISPARADO:
             else
             {
-                    player1.balas = 0;                    
-                    player1.disparou = false;             
-            }           
+                    //SE A BALA SAIR DA TELA:                
+                if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
+                {
+                    //NÃO FAZ NADA    
+                }
+                    ////SE A BALA NÃO SAIU DA TELA:       
+                else
+                {
+                    //VERIFICA A POSICAO DA DIRECAO DA BALA
+                    switch (player1.posicaoBala)
+                    {
+                        case "Direita":
+                        
+                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);                       
+                            break;
+
+                        case "Esquerda":
+
+                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            break;
+
+                        case "Cima":
+
+                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            break;
+
+                        case "Baixo":
+
+                            setInterval(() => { elemento.posicaoX++; }, tempoTiro);
+                            break;
+
+                        default:
+
+                            break;
+                    }
+                }                                    
+                player1.disparou = true;
+            }
+        }
+        // SE AS BALAS ACABARAM:
+        else
+        {
+            player1.balas = 0;
+            player1.disparou = false;
+        }           
     }
 }
 
@@ -1605,25 +1628,27 @@ function atualizarPosicao(elemento, cidade)
             case balaPistola:
 
                 //BALA:
+                
+                //SE BALA DISPARADA:
                 if (player1.disparou)
                 {
+                    // SE A BALA NÃO SAIU DA TELA:
                     if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width)
                     {
-                        player1.disparou =  false;                        
-                        
+                        player1.disparou = false;          
                         player1.balas--;
-                        
                     } else
                     {
                                       
                     }
-                } else
+                }
+                // SE NÃO DISPAROU:
+                else
                 {
                     elemento.posicaoX = player1.posicaoX + player1.largura;
 
-                        elemento.posicaoY = player1.posicaoY + player1.altura / 8;      
+                    elemento.posicaoY = player1.posicaoY + player1.altura / 8;      
                 }
-
                 
             default:
 
