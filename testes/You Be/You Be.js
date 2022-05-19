@@ -8,6 +8,14 @@ civil2.posicaoYMorada = 0;
 
 statusLigado = false;
 
+//var pessoa1 = new Objeto();
+
+//pessoa1.itens.pistola = pistola;
+
+//civil001 = new Arma();
+
+//civil001.itens.pistola = "pistola String";
+
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -126,8 +134,8 @@ function loopDesenho()
         status8.innerHTML = "telaCanvasPrincipal.width: " + telaCanvasPrincipal.width;
         status9.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
         status10.innerHTML = "controle1.teclaSetaParaCimaPressionada: " + controle1.teclaSetaParaCimaPressionada;
-        status11.innerHTML = "controle1.teclaItem1: " + controle1.teclaItem1;
-        //status12.innerHTML = "pistola.nome - pistola.tipo: " + pistola.nome + " - " + pistola.tipo;
+        //status11.innerHTML = "Object.getOwnPropertyNames(pessoa1): " + Object.getOwnPropertyNames(pessoa1.itens);
+        // status12.innerHTML = "Object.getOwnPropertyNames(pessoa1): " + Object.getOwnPropertyNames(civil001.itens);
         //
 
         //

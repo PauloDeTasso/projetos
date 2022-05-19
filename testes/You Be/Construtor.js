@@ -14,7 +14,7 @@ var statusLigado = true;
 
 //
 
-var canvasPrincipalLigado = false;
+var canvasPrincipalLigado = true;
 
 //
 
@@ -324,6 +324,10 @@ class Player
         this.imagemPosInicialYParado4 = 639;
         this.imagemCorteLarguraParado4 = 30;
         this.imagemCorteAlturaParado4 = 49;
+
+        //
+
+        this.itens = {};
 
         //
     }
@@ -667,7 +671,7 @@ function Controle(key1, key2, key3, key4, key5, key6, key7)
     }
 }
 
-class Objetos
+class Objeto
 {
     constructor (nome, tipo,estado,posicaoX,posicaoY,largura,altura,imagem)
     {
@@ -720,7 +724,7 @@ class Objetos
     }
 }
 
-class Arma extends Objetos
+class Arma extends Objeto
 {
     constructor (nome, tipo,estado,posicaoX,posicaoY,largura,altura,imagem,penteBalas)
     {
@@ -2999,4 +3003,21 @@ function abrirSecaoPingPong()
         // PREENCHE OS DESENHOS FEITOS COM O ULTIMO ESTILO DE COR DEFINIDO
         contextoTelaCanvasPrincipal.fill();
         
+        //
+fuctions Test()
+{
+    //outro objeto na construtor
+         this.olhos =
+    {
+        corDosOlhos: "", //String
+        tamanhoDosOlhos: 0, //Numero
+        olhosAbertos: false, //Boleano
+
+        olhar: function () //Função
+        {
+            this.olhos.olhosAbertos = true; //Boleano
+            this.bateria.consumindoBateria(); //Funcão
+        }
+    };
+    
         */
