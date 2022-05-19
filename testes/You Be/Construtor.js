@@ -453,7 +453,7 @@ class Civil extends Player
 
 // CONTROLE
 
-function Controle(key1, key2, key3, key4, key5, key6)
+function Controle(key1, key2, key3, key4, key5, key6, key7)
 {
     this.teclaSetaParaCimaPressionada = false;
     this.teclaSetaParaBaixoPressionada = false;
@@ -463,6 +463,7 @@ function Controle(key1, key2, key3, key4, key5, key6)
 
     this.teclaEPressionada = false;
     this.teclaFPressionada = false;
+    this.teclaItem1 = false;
 
     this.posicaoBala;
 
@@ -495,6 +496,10 @@ function Controle(key1, key2, key3, key4, key5, key6)
         } else if (eventoAcionado.keyCode == key6)
         {
             controle1.teclaFPressionada = false;
+
+        } else if (eventoAcionado.keyCode == key7)
+        {
+            controle1.teclaItem1 = false;
         }
     }
 
@@ -527,6 +532,10 @@ function Controle(key1, key2, key3, key4, key5, key6)
         } else if (eventoAcionado.keyCode == key6)
         {       
             controle1.teclaFPressionada = true;
+        }
+        else if (eventoAcionado.keyCode == key7)
+        {       
+            controle1.teclaItem1 = true;
         }
     }
 
@@ -567,19 +576,24 @@ function Controle(key1, key2, key3, key4, key5, key6)
         controle1.teclaSetaParaEsquerdaPressionada = false;
         controle1.teclaEPressionada = false;
         controle1.teclaFPressionada = false;
+        controle1.teclaItem1 = false;
     }
 
     this.apertar = function (tecla)
     {
         switch (tecla) 
         {
-            case "letraE":
+            case "teclaE":
                 controle1.teclaEPressionada = true;
                 break;
             
-            case "letraF":
+            case "teclaF":
                 controle1.teclaFPressionada = true;
                 break;
+            
+                case "tecla1":
+                    controle1.teclaItem1 = true;
+                    break;
 
             default:
               
@@ -650,6 +664,39 @@ function Controle(key1, key2, key3, key4, key5, key6)
             player1.balas = 0;
             player1.disparou = false;
         }           
+    }
+}
+
+class Objetos
+{
+    constructor (nome, tipo,estado,posicaoX,posicaoY,largura,altura,imagem)
+    {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.estado = estado;
+        this.posicaoX = posicaoX;
+        this.posicaoY = posicaoY;
+        this.largura = largura;
+        this.altura = altura;
+        
+        this.imagem = new Image();
+        this.imagem.src = imagem;
+
+        //
+        this.visivel = function ()
+        {
+          
+        }
+
+    }
+}
+
+class Arma extends Objetos
+{
+    constructor (nome, tipo,estado,posicaoX,posicaoY,largura,altura,imagem,penteBalas)
+    {
+        super(nome, tipo,estado,posicaoX,posicaoY,largura,altura,imagem);
+        this.penteBalas = penteBalas;
     }
 }
 
@@ -2571,13 +2618,15 @@ function alertarElemento(elemento,player)
 
 //INSTANCIAS:
 
-var controle1 = new Controle(87, 83, 68, 65, 69,70);
+var controle1 = new Controle(87, 83, 68, 65, 69,70,49);
 
 var player1 = new Player(cidade1);
 
 var civil1 = new Civil(cidade1);
 
 var civil2 = new Civil(cidade1);
+
+var pistola = new Arma("Pistola", "Letal", 100, (player1.posicaoX + player1.largura), (player1.posicaoY + player1.altura / 8), 20, 20, "../../imagens/texture/2D/Pistola.png", 18);
 
 var balaPistola = new Bala("Pistola",(player1.posicaoX + player1.largura),(player1.posicaoY + player1.largura/4),player1.largura/8,player1.largura/8);
 

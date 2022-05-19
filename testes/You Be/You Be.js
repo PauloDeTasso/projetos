@@ -99,6 +99,17 @@ function loopDesenho()
             }
         }
 
+        // SE TECLA 1 PRESSIONADA:
+        if (controle1.teclaItem1)
+        {
+            pistola.visivel(true);
+        }
+        // SE TECLA 1 NÃO FOI PRESSIONADA
+        else
+        {
+            pistola.visivel(false);
+        }
+
         status1.innerHTML = "player1.disparou: " + player1.disparou;
         status2.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
         status3.innerHTML = "player1.balas: " + player1.balas;
@@ -109,7 +120,8 @@ function loopDesenho()
         status8.innerHTML = "telaCanvasPrincipal.width: " + telaCanvasPrincipal.width;
         status9.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
         status10.innerHTML = "controle1.teclaSetaParaCimaPressionada: " + controle1.teclaSetaParaCimaPressionada;
-
+        status11.innerHTML = "controle1.teclaItem1: " + controle1.teclaItem1;
+        //status12.innerHTML = "pistola.nome - pistola.tipo: " + pistola.nome + " - " + pistola.tipo;
         //
 
         //
@@ -145,9 +157,6 @@ function loopDesenho()
                 contextoTelaCanvasPrincipal.fillRect(farol1.posicaoX, farol1.posicaoY, farol1.largura, farol1.altura);
         */
 
-        //LOOP DESENHO:
-        //loop = requestAnimationFrame(loopDesenho);
-        // loop = setInterval(loopDesenho, 0);
     }
 
     //SE canvasPrincipalLigado É FALSE:
@@ -155,6 +164,10 @@ function loopDesenho()
     {
         status12.innerHTML = "Canvas Desligado!"
     }
+    //LOOP DESENHO:
+    //loop = requestAnimationFrame(loopDesenho);
+    //loop = setInterval(loopDesenho, 0);
+
     loop = requestAnimationFrame(loopDesenho);
 }
 
