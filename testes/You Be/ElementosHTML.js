@@ -128,6 +128,7 @@ var botaoIrParaCima = document.getElementById('botaoIrParaCima');
 var botaoIrParaBaixo = document.getElementById('botaoIrParaBaixo');
 var botaoAcao = document.getElementById('botaoAcao');
 var botaoAtirar = document.getElementById('botaoAtirar');
+var botaoItem1 = document.getElementById('botaoItem1');
 var botaoMostrarStatus = document.getElementById('botaoMostrarStatus');
 
 /////////////////////////////VARIAVEIS DATA E HORA:
@@ -218,7 +219,8 @@ botaoIrParaEsquerda.addEventListener('mousedown', () => { controle1.mover("paraE
 botaoIrParaDireita.addEventListener('mousedown', () => { controle1.mover("paraDireita") }, false);
 botaoIrParaCima.addEventListener('mousedown', () => { controle1.mover("paraCima") }, false);
 botaoIrParaBaixo.addEventListener('mousedown', () => { controle1.mover("paraBaixo") }, false);
-botaoAcao.addEventListener('mousedown', () => { controle1.apertar("letraE") }, false);
+botaoAcao.addEventListener('mousedown', () => { controle1.apertar("teclaE") }, false);
+botaoItem1.addEventListener('mousedown', () => { controle1.apertar("tecla1") }, false);
 botaoAtirar.addEventListener('mousedown', () => { controle1.atirar(balaPistola) }, false);
 
 botaoMostrarStatus.addEventListener('mousedown', () => { statusLigado = true; }, false);

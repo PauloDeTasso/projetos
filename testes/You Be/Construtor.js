@@ -682,7 +682,36 @@ class Objetos
         this.imagem = new Image();
         this.imagem.src = imagem;
 
+        // POSIÇÃO ATUAL DA IMAGEM:
+    
+         this.imagemPosInicialX = 50;
+         this.imagemPosInicialY = 107;
+         this.imagemCorteLargura = 925;
+         this.imagemCorteAltura = 705;
+       
+        // POSIÇÃO ATUAL DA IMAGEM DIREITA:
+    
+         this.imagemPosInicialXD = 50;
+         this.imagemPosInicialYD = 107;
+         this.imagemCorteLarguraD = 925;
+         this.imagemCorteAlturaD = 705;
+        
+         // POSIÇÃO ATUAL DA IMAGEM ESQUERDA:
+    
+         this.imagemPosInicialXE = 1057;
+         this.imagemPosInicialYE = 100;
+         this.imagemCorteLarguraE = 930;
+         this.imagemCorteAlturaE = 710;
+        
+         // POSIÇÃO ATUAL DA IMAGEM BAIXO:
+    
+         this.imagemPosInicialXB = 55;
+         this.imagemPosInicialYB = 930;
+         this.imagemCorteLarguraB = 200;
+         this.imagemCorteAlturaB = 750;
+
         //
+
         this.visivel = function ()
         {
           
@@ -1720,6 +1749,16 @@ function atualizarPosicao(elemento, cidade)
                     elemento.posicaoY = player1.posicaoY + player1.altura / 8;      
                 }
                 
+                break;
+            
+            case pistola:
+
+                elemento.posicaoX = player1.posicaoX + player1.largura -14;
+
+                elemento.posicaoY = player1.posicaoY + player1.altura / 3;      
+                
+                break;
+            
             default:
 
                 break;
@@ -2626,7 +2665,7 @@ var civil1 = new Civil(cidade1);
 
 var civil2 = new Civil(cidade1);
 
-var pistola = new Arma("Pistola", "Letal", 100, (player1.posicaoX + player1.largura), (player1.posicaoY + player1.altura / 8), 20, 20, "../../imagens/texture/2D/Pistola.png", 18);
+var pistola = new Arma("Pistola", "Letal", 100, (player1.posicaoX + player1.largura), (player1.posicaoY + player1.altura / 8), 17, 17, "../../imagens/texture/2D/Pistola.png", 18);
 
 var balaPistola = new Bala("Pistola",(player1.posicaoX + player1.largura),(player1.posicaoY + player1.largura/4),player1.largura/8,player1.largura/8);
 

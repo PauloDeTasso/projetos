@@ -36,6 +36,9 @@ function loopDesenho()
         //ATUALIZAR BALAS:
         atualizarPosicao(balaPistola);
 
+        //ATUALIZAR PISTOLA:
+        atualizarPosicao(pistola);
+
         //ATUALIZAR POSICÕES PROIBIDAS:
         atualizarPosicao();
 
@@ -62,6 +65,9 @@ function loopDesenho()
 
         //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
         desenharImagensElemento(contextoTelaCanvasPrincipal, balaPistola);
+
+        //DEFINE AS IMAGENS EM SPRITE DO ELEMENTO CIVIL 2:
+        desenharImagensElemento(contextoTelaCanvasPrincipal, pistola);
 
         if (metodosDeAlertaLigado)
         {
