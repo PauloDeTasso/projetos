@@ -2526,7 +2526,6 @@ function abrirSecaoSecreta()
         }
     } else
     {
-        alert("OI")
         //PEDE A SENHA
         var senhaDigitada = prompt("Digite a senha de acesso:")
 
