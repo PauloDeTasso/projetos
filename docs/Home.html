@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html id="html5" lang="en-US">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/estilo_home.css">
-    <link id="favIcon" rel="icon" href="/icones/PLAYICON.png" type="image/gif">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilos/estilo_home.css">
+        <link id="favIcon" rel="icon" href="/icones/PLAYICON.png" type="image/gif">
 
-    <title>Paulo de Tasso - Developer</title>
+        <title>Paulo de Tasso - Developer</title>
 
-</head>
+    </head>
 
-<button id="botaoAbrirStatus" type="button" onclick="abrirFecharStatus()" onmousemove="statusStatus()"
-    onmouseleave="statusStatusOff()" type="button">
-    <img id="imagemAbrirBotaoStatus" src="../icones/interrogation.png" alt="Icone fechar status!" width="20px"
-        height="auto">
-</button>
+    <button id="botaoAbrirStatus" type="button" onclick="abrirFecharStatus()" onmousemove="statusStatus()"
+        onmouseleave="statusStatusOff()" type="button">
+        <img id="imagemAbrirBotaoStatus" src="../icones/interrogation.png" alt="Icone fechar status!" width="20px"
+            height="auto">
+    </button>
 
-<body class="corpo" oncut="colar()" oncopy="copiou()" onpaste="colou()" onload="bodyCarregado()">
+    <body class="corpo" oncut="colar()" oncopy="copiou()" onpaste="colou()" onload="bodyCarregado()">
 
-    <header id="audios">
+        <header id="audios">
 
-        <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
-            <source id="audioSource" src="../audios/ventobaixo.ogg" type="audio/ogg">
-        </audio>
+            <audio id='somDoVento' class="audios" preload="auto" onended="somTerminou()">
+                <source id="audioSource" src="../audios/ventobaixo.ogg" type="audio/ogg">
+            </audio>
 
-        <audio class=" audios" id='audioPrincipal' loop onplaying="audioAmbienteTocando()">
-            <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
-        </audio>
+            <audio class=" audios" id='audioPrincipal' loop onplaying="audioAmbienteTocando()">
+                <source id="audioSource" src="../audios/relaxing.ogg" type="audio/ogg">
+            </audio>
 
-        <audio class="audios" id='audio1'>
-            <source id="audioSource1" src="../audios/alarme.ogg" type="audio/ogg">
-        </audio>
+            <audio class="audios" id='audio1'>
+                <source id="audioSource1" src="../audios/alarme.ogg" type="audio/ogg">
+            </audio>
 
-        <audio class="audios" id='audio2'>
-            <source id="audioSource2" src="../audios/orchestra.ogg" type="audio/ogg">
-        </audio>
+            <audio class="audios" id='audio2'>
+                <source id="audioSource2" src="../audios/orchestra.ogg" type="audio/ogg">
+            </audio>
 
-        <audio class="audios" id='audio3'>
-            <source id="audioSource3" src="../audios/clock.ogg" type="audio/ogg">
-        </audio>
+            <audio class="audios" id='audio3'>
+                <source id="audioSource3" src="../audios/clock.ogg" type="audio/ogg">
+            </audio>
 
-        <audio class="audios" id='audio4'>
-            <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
-        </audio>
+            <audio class="audios" id='audio4'>
+                <source id="audioSource4" src="../audios/laser.ogg" type="audio/ogg">
+            </audio>
 
-        <audio autoplay loop class="audios" id='Cachoeira' onplaying="audioCachoeiraTocando()">
-            <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
-        </audio>
+            <audio autoplay loop class="audios" id='Cachoeira' onplaying="audioCachoeiraTocando()">
+                <source id="audioSource5" src="../audios/cachoeira.ogg" type="audio/ogg">
+            </audio>
 
-        <audio autoplay loop class="audios" id='somDaFloresta'>
-            <source id="audioSource5" src="../audios/som da floresta.ogg" type="audio/ogg">
-        </audio>
+            <audio autoplay loop class="audios" id='somDaFloresta'>
+                <source id="audioSource5" src="../audios/som da floresta.ogg" type="audio/ogg">
+            </audio>
 
-        <audio id='fx1' class="audios" preload="auto">
-            <source id="audioSource3" src="../audios/fx1.ogg" type="audio/ogg">
-        </audio>
+            <audio id='fx1' class="audios" preload="auto">
+                <source id="audioSource3" src="../audios/fx1.ogg" type="audio/ogg">
+            </audio>
 
-        <audio id='fx2' class="audios" preload="auto">
-            <source id="audioSource4" src="../audios/fx2.ogg" type="audio/ogg">
-        </audio>
+            <audio id='fx2' class="audios" preload="auto">
+                <source id="audioSource4" src="../audios/fx2.ogg" type="audio/ogg">
+            </audio>
 
-    </header>
+        </header>
 
-    <section id="secaoNorte">
+        <section id="secaoNorte">
 
-        <img id="icone01" onclick="history.back()" src="../icones/RETROCEDER.png" alt="Icon back!" width="20px"
-            height="20px">
+            <img id="icone01" onclick="history.back()" src="../icones/RETROCEDER.png" alt="Icon back!" width="20px"
+                height="20px">
 
-        <section id="secaoBarraDeProgresso">
+            <section id="secaoBarraDeProgresso">
 
-            <!--
+                <!--
             <section id="secaoRelogio">
 
                 <section id="secaoBotaoRelogio">
@@ -85,476 +85,485 @@
             </section>
             -->
 
-            <progress id="barraDeProgresso" value="0" max="100">
+                <progress id="barraDeProgresso" value="0" max="100">
 
-            </progress>
+                </progress>
 
-            <section id="statusSistema">
+                <section id="statusSistema">
+
+                </section>
 
             </section>
 
+            <img id="icone04" src="../icones/AVANÇAR.png" alt="Icon forward " width="20px" height="20px"
+                onclick="history.forward()">
+
         </section>
 
-        <img id="icone04" src="../icones/AVANÇAR.png" alt="Icon forward " width="20px" height="20px"
-            onclick="history.forward()">
 
-    </section>
+        <section id="flutuante">
 
+            <p id="status">
+                Hello! How can I help you!
+            </p>
 
-    <section id="flutuante">
-
-        <p id="status">
-            Hello! How can I help you!
-        </p>
-
-        <button id="botaoAbrirStatus" type="button" onclick="abrirFecharStatus()">
-            <img id="imagemBotaoStatus" src="../icones/fechar01.png" alt="Icone fechar status!" width="10px"
-                height="auto">
-        </button>
-
-    </section>
-
-    <!--  -->
-    <!--  -->
-
-    <section id="secaoCentro">
-
-        <!--  -->
-
-        <section id="secaoOeste">
-
-            <img id="secaoOesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias" width="10px"
-                height="70%">
+            <button id="botaoAbrirStatus" type="button" onclick="abrirFecharStatus()">
+                <img id="imagemBotaoStatus" src="../icones/fechar01.png" alt="Icone fechar status!" width="10px"
+                    height="auto">
+            </button>
 
         </section>
 
         <!--  -->
+        <!--  -->
 
-        <section id="secaoPrincipal">
-
-            <header class="cabecalhoPrincipal">
-
-                <nav class="headerBotaoSomInicio">
-
-                    <section class="secaoMudo">
-
-                        <button class="botoes" onclick="diminuir_volume()" onmousemove="diminuir_volume()"
-                            onmouseleave="diminuir_volume()" type="button">
-
-                            <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
-                                onmouseleave="statusBaixarVolumeOff()" src="../icones/800x600/volumebaixo.png"
-                                alt="Diminuir Volume" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section id="iconeVolumeAltoDemais">
-
-                        <button class="botoes" type="button">
-
-                            <img id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
-                                onmouseleave="statusVolumeMaximoOff()" src="../icones/800x600/volumehigh.png"
-                                alt="Icone de volume alto!" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section class="secaoPause">
-
-                        <button class="botoes" onclick="pausar()" type="button">
-
-                            <img id="iconePause" onmousemove="statusPause()" onmouseleave="statusPauseOff()"
-                                src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section class="secaoMudo">
-
-                        <button class="botoes" onclick="mudo()" type="button">
-
-                            <img id="iconeMudo" onmousemove="statusMudo()" onmouseleave="statusMudoOff()"
-                                src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section class="secaoPlay">
-
-                        <button class="botoes" onclick="play()" type="button">
-
-                            <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
-                                src="../icones/playBrancoTocando.png" alt="Icone de som" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section id="iconeVolumeBaixoDemais">
-
-                        <button class="botoes" type="button">
-
-                            <img id="iconeVolumeBaixo" onmousemove="statusSilencio()" onmouseleave="statusSilencioOff()"
-                                src="../icones/silencio2.png" alt="Icone de volume baixo!" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                    <section class="secaoMudo">
-
-                        <button class="botoes" onclick="aumentar_volume()" onmousemove="aumentar_volume()"
-                            onmouseleave="aumentar_volume()" type="button">
-
-                            <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
-                                onmouseleave="statusAumentarVolumeOff()" src="../icones/800x600/volumealto.png"
-                                alt="Aumentar Volume" width="31px" height="31px">
-
-                        </button>
-
-                    </section>
-
-                </nav>
-
-                <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(), mudarCorBotaoGif()"
-                    onmouseleave="statusGifPrincipalOff(), mudarCorBotaoGifOff()" type="button"
-                    onclick="abrirSecaoGifPrincipal()">
-                </button>
-
-                <section id="secaoCabecalho">
-
-                    <section id="secaoTitulos" class="quadro">
-
-                        <p id="tituloPrincipal" class="marquee" onmousemove="alterarTexto1(), statusTextoEmMovimento()"
-                            onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()" onclick="contagemRegresiva()">
-                            “It's not a faith in technology. It's faith in people.” - Steve Jobs
-                        </p>
-
-                    </section>
-
-                    <section class="divCabecalhoPrincipal">
-
-                        <a href="https://html.spec.whatwg.org/multipage/" target="_blank">
-                            <img id="iconeHtml" onmousemove="statusHtml()" onmouseleave="statusHtmlOff()"
-                                src="../icones/800x600/html5.png" alt="Icone HTML5" width="57%"></a>
-
-                        <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss"
-                                onmousemove="statusCss()" onmouseleave="statusCssOff()" src="../icones/800x600/css3.png"
-                                alt="Icone CSS3" width="57%"></a>
-
-                        <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
-                                onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
-                                src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="57%"></a>
-
-                        <a href="https://www.java.com" target="_blank"><img id="iconeJava" onmousemove="statusJava()"
-                                onmouseleave="statusJavaOff()" src="../icones/800x600/java.png" alt="Icone JAVA"
-                                width="57%"></a>
-
-                        <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql" onmousemove="statusMysql()"
-                                onmouseleave="statusMysqlOff()" src="../icones/800x600/mysql.png" alt="Icone MYSQL"
-                                width="57%"></a>
-
-                        <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl"
-                                onmousemove="statusNtsl()" onmouseleave="statusNtslOff()"
-                                src="../icones/800x600/ntsl.png" alt="Icone NTSL" width="57%"></a>
-
-                    </section>
-
-                </section>
-
-                <section id="botaoTabela">
-
-                    <button id="botaoTabela" type="button">
-                        <img id="iconeJanela" onclick="abrirFecharTabela()"
-                            onmousemove="moveMouseIconeJanela(), statusIconeTabela()"
-                            onmouseleave="statusIconeTabelaOff()" src="../icones/fecharJanelaBranco.png"
-                            alt="Icone para abrir tabela!" width="21px" height="21px">
-                    </button>
-
-                </section>
-
-                <section id="secaoTabela">
-
-                    <table id="tabelaRoadmap">
-
-                        <thead id="cabecalhoTabela">
-
-                            <tr id="linhaTabela">
-
-                                <caption id="tituloTabela">
-                                    ...ALWAYS LEARNING...
-                                </caption>
-
-                            </tr>
-
-                            <tr id="linhaTabela">
-
-                                <th id="thTabela">PROTOCOLS AND API'S</th>
-                                <th id="thTabela">FRONT-END</th>
-                                <th id="thTabela">BACK-END</th>
-                                <th id="thTabela">DATABASE</th>
-                                <th id="thTabela">PLATFORMS</th>
-                                <th id="thTabela">EXTRAS</th>
-
-                            </tr>
-
-                        </thead>
-
-                        <tbody id="corpoTabela">
-
-                            <tr id="linhaTabela">
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #API
-                                    </p>
-                                    <p>
-                                        #WEBSOCKETS
-                                    </p>
-
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #HTML5
-                                    </p>
-                                    <p>
-                                        #CSS3
-                                    </p>
-                                    <p>
-                                        #JAVASCRIPT
-                                    </p>
-                                    <p>
-                                        #TYPESCRIPT
-                                    </p>
-                                    <p>
-                                        #ES6
-                                    </p>
-                                    <p>
-                                        #BOOTSTRAP
-                                    </p>
-                                    <p>
-                                        #REACT JS
-                                    </p>
-                                    <p>
-                                        #REACT NATIVE
-                                    </p>
-                                    <p>
-                                        #REDUX
-                                    </p>
-                                    <p>
-                                        #JQUERY
-                                    </p>
-                                    <p>
-                                        #JSON
-                                    </p>
-                                    <p>
-                                        #VS CODE
-                                    </p>
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #JAVA
-                                    </p>
-                                    <p>
-                                        #NODE JS
-                                    </p>
-                                    <p>
-                                        #SPRING BOOT
-                                    </p>
-                                    <p>
-                                        #ECLISPE
-                                    </p>
-                                    <p>
-                                        #NET BEANS
-                                    </p>
-                                    <p>
-                                        #ANDROID STUDIO
-                                    </p>
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #MYSQL
-                                    </p>
-                                    <p>
-                                        #POSTGRESQL
-                                    </p>
-                                    <p>
-                                        #MONGODB
-                                    </p>
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #WINDOWS
-                                    </p>
-                                    <p>
-                                        #ANDROID
-                                    </p>
-                                    <p>
-                                        #IOS
-                                    </p>
-                                    <p>
-                                        #AWS
-                                    </p>
-
-                                <td class="colunaTabela">
-
-                                    <p>
-                                        #GIT
-                                    </p>
-                                    <p>
-                                        #GITHUB
-                                    </p>
-                                    <p>
-                                        #GOOGLE ADS
-                                    </p>
-                                    <p>
-                                        #NELOGICA #NTSL
-                                    </p>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </section>
-
-            </header>
+        <section id="secaoCentro">
 
             <!--  -->
 
-            <main class="main" oncut="colar()" oncopy="copiou()" onpaste="colou()">
+            <section id="secaoOeste">
 
-                <section class="secao01">
+                <img id="secaoOesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias"
+                    width="10px" height="70%">
 
-                    <article class="artigoSecao01">
+            </section>
 
-                        <h2 class="tituloArtigoSecao01">
-                            The Begin
-                        </h2>
+            <!--  -->
 
-                        <p class="paragrafoArtigo">
-                            Creativity is something wonderful when an inspiration arises in our thoughts, the feeling of
-                            joy,
-                            euphoria and desire to act, appear as a divine gift!
-                            Lives with the most diverse experiences are now all around us, needing practical and precise
-                            solutions that improve their experiences even more, life gets easier when inspired people
-                            with a
-                            spontaneous desire to make it happen, help!
-                        </p>
+            <section id="secaoPrincipal">
 
-                        <p class="paragrafoArtigo">
-                            It was with this idea that life led me here.
-                            The infinity of creativity and the vision of contributing to a greater good, inspires me to
-                            this day
-                            to
-                            follow, and like any well-chosen profession, survive on the work you love!
+                <header class="cabecalhoPrincipal">
 
-                            I continue to apprehend more of this magnificent and splendid universe of codes, and for
-                            that, I
-                            count on
-                            you to transform and improve our world even more!
+                    <nav class="headerBotaoSomInicio">
 
-                        <p id="paragrafoArtigoRodape">
-                            Paulo de Tasso
-                            <br>
-                            Senior Full Stack Software Developer.
-                        </p>
+                        <section class="secaoMudo">
 
-                        <!-- <input> 
-                        <p id="log"></p>
-                        -->
+                            <button class="botoes" onclick="diminuir_volume()" onmousemove="diminuir_volume()"
+                                onmouseleave="diminuir_volume()" type="button">
 
-                    </article>
+                                <img id="iconeMudoDiminuirVolume" onmousemove="statusBaixarVolume()"
+                                    onmouseleave="statusBaixarVolumeOff()" src="../icones/800x600/volumebaixo.png"
+                                    alt="Diminuir Volume" width="31px" height="31px">
 
-                </section>
-
-            </main>
-
-            <button id="botaoPingPong" onmousemove="statusSecaoPingPong(), mudarCorBotaoPingPong()"
-                onmouseleave="statusSecaoPingPongOff(), mudarCorBotaoPingPongOff()" type="button"
-                onclick="abrirSecaoPingPong(), ligarDesligarPingPong()">
-                <img src="../icones/games/02.png" alt="Image Game" width="31px" height="31px">
-            </button>
-
-            <section id="secaoCanvas">
-
-                <img id="imagemIconePingPong" src="../icones/games/03.png" alt="Image Game" width="31px" height="31px">
-
-                <canvas id="canvas" width="700px" height="470px" onmousemove="statusCanvas()"
-                    onmouseleave="limparStatusPingPong()">
-                    YOUR BROWSER DOES NOT SUPPORT THIS SECTION! <br>
-                    Please update your browser or try to view with another one!
-                </canvas>
-
-                <h2 id="statusPingPong2">
-                    ...
-                </h2>
-
-                <section id="secaoBotoesPingPong">
-
-                    <section id="controles1">
-                        <button class="botoesPingPong" type="button" onclick="irParaBaixo()"
-                            onmousemove="irParaBaixo(), statusBotaoParaBaixo()" onmouseleave="limparStatusPingPong()">
-                            <img src="../icones/DOWN01.png" alt="Button Down" width="57px">
-                        </button>
-                    </section>
-
-                    <section id="secaoOpcoesPingPong">
-
-                        <button class="botoesPingPong" type="button" onclick="mudarVelocidade()"
-                            onmousemove="statusBotaoVelocidade()" onmouseleave="limparStatusPingPong()">
-                            <img id="imagemBotaoOpcaoVelocidade" src="../icones/0.png" alt="Button Charge Speed"
-                                width="31px">
-
-                        </button>
-                        <button class="botoesPingPong" type="button" onmousemove="statusZerarPlacar()"
-                            onmouseleave="limparStatusPingPong()">
-                            <img id="botaoZerarPlacar" src="../icones/ATUALIZAR02.png" alt="Button Clear Time"
-                                width="57px" onclick="zerarPlacar()">
-                        </button>
-
-                        <section id="secaoBotoesTamanhoTela">
-
-                            <button class="botoesPingPong" type="button" onmousemove="statusTamanhoTela()"
-                                onmouseleave="limparStatusPingPong()">
-                                <img id="botaoAlterarTamanhoTela" src="../icones/AlterarTamanhoTela.png"
-                                    alt="Button Charge Screen" width="57px" onclick="alterarTamanhoTela()">
-                            </button>
-
-                            <button class="botoesPingPong" type="button" onmousemove="statusTamanhoTela()"
-                                onmouseleave="limparStatusPingPong()">
-                                <img id="botaoAlterarTamanhoTela" src="../icones/AlterarTamanhoTela.png"
-                                    alt="Button Charge Screen" width="57px" onclick="alterarTamanhoTela()">
                             </button>
 
                         </section>
 
-                        <h2 id="statusPingPong">
-                            CHANGE SPEED TO PLAY!
-                        </h2>
+                        <section id="iconeVolumeAltoDemais">
+
+                            <button class="botoes" type="button">
+
+                                <img id="iconeVolumeAlto" onmousemove="statusVolumeMaximo()"
+                                    onmouseleave="statusVolumeMaximoOff()" src="../icones/800x600/volumehigh.png"
+                                    alt="Icone de volume alto!" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                        <section class="secaoPause">
+
+                            <button class="botoes" onclick="pausar()" type="button">
+
+                                <img id="iconePause" onmousemove="statusPause()" onmouseleave="statusPauseOff()"
+                                    src="../icones/pauseBranco.png" alt="Icone de som" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                        <section class="secaoMudo">
+
+                            <button class="botoes" onclick="mudo()" type="button">
+
+                                <img id="iconeMudo" onmousemove="statusMudo()" onmouseleave="statusMudoOff()"
+                                    src="../icones/800x600/sound.png" alt="Icone de som" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                        <section class="secaoPlay">
+
+                            <button class="botoes" onclick="play()" type="button">
+
+                                <img id="iconePlay" onmousemove="statusPlay()" onmouseleave="statusPlayOff()"
+                                    src="../icones/playBrancoTocando.png" alt="Icone de som" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                        <section id="iconeVolumeBaixoDemais">
+
+                            <button class="botoes" type="button">
+
+                                <img id="iconeVolumeBaixo" onmousemove="statusSilencio()"
+                                    onmouseleave="statusSilencioOff()" src="../icones/silencio2.png"
+                                    alt="Icone de volume baixo!" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                        <section class="secaoMudo">
+
+                            <button class="botoes" onclick="aumentar_volume()" onmousemove="aumentar_volume()"
+                                onmouseleave="aumentar_volume()" type="button">
+
+                                <img id="iconeMudoAumentarVolume" onmousemove="statusAumentarVolume()"
+                                    onmouseleave="statusAumentarVolumeOff()" src="../icones/800x600/volumealto.png"
+                                    alt="Aumentar Volume" width="31px" height="31px">
+
+                            </button>
+
+                        </section>
+
+                    </nav>
+
+                    <button id="botaoGifPrincipal" onmousemove="statusGifPrincipal(), mudarCorBotaoGif()"
+                        onmouseleave="statusGifPrincipalOff(), mudarCorBotaoGifOff()" type="button"
+                        onclick="abrirSecaoGifPrincipal()">
+                    </button>
+
+                    <section id="secaoCabecalho">
+
+                        <section id="secaoTitulos" class="quadro">
+
+                            <p id="tituloPrincipal" class="marquee"
+                                onmousemove="alterarTexto1(), statusTextoEmMovimento()"
+                                onmouseleave="alterarTexto2(),statusTextoEmMovimentoOff()"
+                                onclick="contagemRegresiva()">
+                                “It's not a faith in technology. It's faith in people.” - Steve Jobs
+                            </p>
+
+                        </section>
+
+                        <section class="divCabecalhoPrincipal">
+
+                            <a href="https://html.spec.whatwg.org/multipage/" target="_blank">
+                                <img id="iconeHtml" onmousemove="statusHtml()" onmouseleave="statusHtmlOff()"
+                                    src="../icones/800x600/html5.png" alt="Icone HTML5" width="57%"></a>
+
+                            <a href="https://www.w3.org/Style/CSS/" target="_blank"><img id="iconeCss"
+                                    onmousemove="statusCss()" onmouseleave="statusCssOff()"
+                                    src="../icones/800x600/css3.png" alt="Icone CSS3" width="57%"></a>
+
+                            <a href="https://www.ecma-international.org/" target="_blank"><img id="iconeJavascript"
+                                    onmousemove="statusJavascript()" onmouseleave="statusJavascriptOff()"
+                                    src="../icones/800x600/javascript.png" alt="Icone JAVASCRIPT" width="57%"></a>
+
+                            <a href="https://www.java.com" target="_blank"><img id="iconeJava"
+                                    onmousemove="statusJava()" onmouseleave="statusJavaOff()"
+                                    src="../icones/800x600/java.png" alt="Icone JAVA" width="57%"></a>
+
+                            <a href="https://www.mysql.com" target="_blank"><img id="iconeMysql"
+                                    onmousemove="statusMysql()" onmouseleave="statusMysqlOff()"
+                                    src="../icones/800x600/mysql.png" alt="Icone MYSQL" width="57%"></a>
+
+                            <a href="https://www.nelogica.com.br/" target="_blank"><img id="iconeNtsl"
+                                    onmousemove="statusNtsl()" onmouseleave="statusNtslOff()"
+                                    src="../icones/800x600/ntsl.png" alt="Icone NTSL" width="57%"></a>
+
+                        </section>
 
                     </section>
 
-                    <section id="controles2">
-                        <button class="botoesPingPong" type="button" onclick="irParaCima()"
-                            onmousemove="irParaCima(), statusBotaoParaCima()" onmouseleave="limparStatusPingPong()">
-                            <img src="../icones/UP01.png" alt="Button Down" width="57px">
+                    <section id="botaoTabela">
+
+                        <button id="botaoTabela" type="button">
+                            <img id="iconeJanela" onclick="abrirFecharTabela()"
+                                onmousemove="moveMouseIconeJanela(), statusIconeTabela()"
+                                onmouseleave="statusIconeTabelaOff()" src="../icones/fecharJanelaBranco.png"
+                                alt="Icone para abrir tabela!" width="21px" height="21px">
                         </button>
+
                     </section>
 
-                </section>
+                    <section id="secaoTabela">
 
-                <!-- 
+                        <table id="tabelaRoadmap">
+
+                            <thead id="cabecalhoTabela">
+
+                                <tr id="linhaTabela">
+
+                                    <caption id="tituloTabela">
+                                        ...ALWAYS LEARNING...
+                                    </caption>
+
+                                </tr>
+
+                                <tr id="linhaTabela">
+
+                                    <th id="thTabela">PROTOCOLS AND API'S</th>
+                                    <th id="thTabela">FRONT-END</th>
+                                    <th id="thTabela">BACK-END</th>
+                                    <th id="thTabela">DATABASE</th>
+                                    <th id="thTabela">PLATFORMS</th>
+                                    <th id="thTabela">EXTRAS</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="corpoTabela">
+
+                                <tr id="linhaTabela">
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #API
+                                        </p>
+                                        <p>
+                                            #WEBSOCKETS
+                                        </p>
+
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #HTML5
+                                        </p>
+                                        <p>
+                                            #CSS3
+                                        </p>
+                                        <p>
+                                            #JAVASCRIPT
+                                        </p>
+                                        <p>
+                                            #TYPESCRIPT
+                                        </p>
+                                        <p>
+                                            #ES6
+                                        </p>
+                                        <p>
+                                            #BOOTSTRAP
+                                        </p>
+                                        <p>
+                                            #REACT JS
+                                        </p>
+                                        <p>
+                                            #REACT NATIVE
+                                        </p>
+                                        <p>
+                                            #REDUX
+                                        </p>
+                                        <p>
+                                            #JQUERY
+                                        </p>
+                                        <p>
+                                            #JSON
+                                        </p>
+                                        <p>
+                                            #VS CODE
+                                        </p>
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #JAVA
+                                        </p>
+                                        <p>
+                                            #NODE JS
+                                        </p>
+                                        <p>
+                                            #SPRING BOOT
+                                        </p>
+                                        <p>
+                                            #ECLISPE
+                                        </p>
+                                        <p>
+                                            #NET BEANS
+                                        </p>
+                                        <p>
+                                            #ANDROID STUDIO
+                                        </p>
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #MYSQL
+                                        </p>
+                                        <p>
+                                            #POSTGRESQL
+                                        </p>
+                                        <p>
+                                            #MONGODB
+                                        </p>
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #WINDOWS
+                                        </p>
+                                        <p>
+                                            #ANDROID
+                                        </p>
+                                        <p>
+                                            #IOS
+                                        </p>
+                                        <p>
+                                            #AWS
+                                        </p>
+
+                                    <td class="colunaTabela">
+
+                                        <p>
+                                            #GIT
+                                        </p>
+                                        <p>
+                                            #GITHUB
+                                        </p>
+                                        <p>
+                                            #GOOGLE ADS
+                                        </p>
+                                        <p>
+                                            #NELOGICA #NTSL
+                                        </p>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                </header>
+
+                <!--  -->
+
+                <main class="main" oncut="colar()" oncopy="copiou()" onpaste="colou()">
+
+                    <section class="secao01">
+
+                        <article class="artigoSecao01">
+
+                            <h2 class="tituloArtigoSecao01">
+                                The Begin
+                            </h2>
+
+                            <p class="paragrafoArtigo">
+                                Creativity is something wonderful when an inspiration arises in our thoughts, the
+                                feeling of
+                                joy,
+                                euphoria and desire to act, appear as a divine gift!
+                                Lives with the most diverse experiences are now all around us, needing practical and
+                                precise
+                                solutions that improve their experiences even more, life gets easier when inspired
+                                people
+                                with a
+                                spontaneous desire to make it happen, help!
+                            </p>
+
+                            <p class="paragrafoArtigo">
+                                It was with this idea that life led me here.
+                                The infinity of creativity and the vision of contributing to a greater good, inspires me
+                                to
+                                this day
+                                to
+                                follow, and like any well-chosen profession, survive on the work you love!
+
+                                I continue to apprehend more of this magnificent and splendid universe of codes, and for
+                                that, I
+                                count on
+                                you to transform and improve our world even more!
+
+                            <p id="paragrafoArtigoRodape">
+                                Paulo de Tasso
+                                <br>
+                                Senior Full Stack Software Developer.
+                            </p>
+
+                            <!-- <input> 
+                        <p id="log"></p>
+                        -->
+
+                        </article>
+
+                    </section>
+
+                </main>
+
+                <button id="botaoPingPong" onmousemove="statusSecaoPingPong(), mudarCorBotaoPingPong()"
+                    onmouseleave="statusSecaoPingPongOff(), mudarCorBotaoPingPongOff()" type="button"
+                    onclick="abrirSecaoPingPong(), ligarDesligarPingPong()">
+                    <img src="../icones/games/02.png" alt="Image Game" width="31px" height="31px">
+                </button>
+
+                <section id="secaoCanvas">
+
+                    <img id="imagemIconePingPong" src="../icones/games/03.png" alt="Image Game" width="31px"
+                        height="31px">
+
+                    <canvas id="canvas" width="700px" height="470px" onmousemove="statusCanvas()"
+                        onmouseleave="limparStatusPingPong()">
+                        YOUR BROWSER DOES NOT SUPPORT THIS SECTION! <br>
+                        Please update your browser or try to view with another one!
+                    </canvas>
+
+                    <h2 id="statusPingPong2">
+                        ...
+                    </h2>
+
+                    <section id="secaoBotoesPingPong">
+
+                        <section id="controles1">
+                            <button class="botoesPingPong" type="button" onclick="irParaBaixo()"
+                                onmousemove="irParaBaixo(), statusBotaoParaBaixo()"
+                                onmouseleave="limparStatusPingPong()">
+                                <img src="../icones/DOWN01.png" alt="Button Down" width="57px">
+                            </button>
+                        </section>
+
+                        <section id="secaoOpcoesPingPong">
+
+                            <button class="botoesPingPong" type="button" onclick="mudarVelocidade()"
+                                onmousemove="statusBotaoVelocidade()" onmouseleave="limparStatusPingPong()">
+                                <img id="imagemBotaoOpcaoVelocidade" src="../icones/0.png" alt="Button Charge Speed"
+                                    width="31px">
+
+                            </button>
+                            <button class="botoesPingPong" type="button" onmousemove="statusZerarPlacar()"
+                                onmouseleave="limparStatusPingPong()">
+                                <img id="botaoZerarPlacar" src="../icones/ATUALIZAR02.png" alt="Button Clear Time"
+                                    width="57px" onclick="zerarPlacar()">
+                            </button>
+
+                            <section id="secaoBotoesTamanhoTela">
+
+                                <button class="botoesPingPong" type="button" onmousemove="statusTamanhoTela()"
+                                    onmouseleave="limparStatusPingPong()">
+                                    <img id="botaoAlterarTamanhoTela" src="../icones/AlterarTamanhoTela.png"
+                                        alt="Button Charge Screen" width="57px" onclick="alterarTamanhoTela()">
+                                </button>
+
+                                <button class="botoesPingPong" type="button" onmousemove="statusTamanhoTela()"
+                                    onmouseleave="limparStatusPingPong()">
+                                    <img id="botaoAlterarTamanhoTela" src="../icones/AlterarTamanhoTela.png"
+                                        alt="Button Charge Screen" width="57px" onclick="alterarTamanhoTela()">
+                                </button>
+
+                            </section>
+
+                            <h2 id="statusPingPong">
+                                CHANGE SPEED TO PLAY!
+                            </h2>
+
+                        </section>
+
+                        <section id="controles2">
+                            <button class="botoesPingPong" type="button" onclick="irParaCima()"
+                                onmousemove="irParaCima(), statusBotaoParaCima()" onmouseleave="limparStatusPingPong()">
+                                <img src="../icones/UP01.png" alt="Button Down" width="57px">
+                            </button>
+                        </section>
+
+                    </section>
+
+                    <!-- 
                 <section>
 
                     <p>Click to move the rectangle to the mouseclick</p>
@@ -568,7 +577,7 @@
                 </section>
                  -->
 
-                <!--
+                    <!--
                 <section hidden>
                     <form name="form_main">
                         <div>
@@ -584,194 +593,199 @@
                     </form>
                 </section>
                 -->
-            </section>
-
-            <footer id="rodapePrincipal">
-
-                <section id="secaoRodape">
-
-                    <section id="secaoBotaoLicense">
-                        <br>
-                        <address class="secaoRodapePrincipalIcones2">
-
-                            <a href="https://api.whatsapp.com/send?phone=5583998454848" target="_blank">
-                                <img onmousemove="statusWhatsapp()" onmouseleave="statusWhatsappOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png" alt="Logo Whatsapp" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href=mailto:atendimentos.site@gmail.com target="_blank">
-                                <img onmousemove="statusEnviarEmail()" onmouseleave="statusEnviarEmailOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/email 3d.png" alt="Logo Gmail" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href="https://join.skype.com/invite/zc4AHKVGTz7v" target="_blank">
-                                <img onmousemove="statusSkype()" onmouseleave="statusSkypeOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png" alt="Logo SKYPE" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/paulodetasso/" target="_blank">
-                                <img onmousemove="statusLinkedIn()" onmouseleave="statusLinkedInOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/LinkedIn 3d 2.png" alt="Logo linkedin"
-                                    width="31px" height="31px">
-                            </a>
-
-                            <a href="https://twitter.com/tassodjhalls" target="_blank">
-                                <img onmousemove="statusTwitter()" onmouseleave="statusTwitterOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt="Logo Twitter" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href="https://www.facebook.com/paulodetassoDJ" target="_blank">
-                                <img onmousemove="statusFacebook()" onmouseleave="statusFacebookOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt="Logo Facebook" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href="https://www.instagram.com/paulo_de_tasso/" target="_blank">
-                                <img onmousemove="statusInstagram()" onmouseleave="statusInstagramOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt="Logo Instagram"
-                                    width="31px" height="31px">
-                            </a>
-
-                            <a href="https://www.youtube.com/user/tassodjhalls11/videos" target="_blank">
-                                <img onmousemove="statusYoutube()" onmouseleave="statusYoutubeOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/youtube.png" alt="Logo Youtube" width="31px"
-                                    height="31px">
-                            </a>
-
-                            <a href="https://github.com/PauloDeTasso" target="_blank">
-                                <img onmousemove="statusGithub()" onmouseleave="statusGithubOff()"
-                                    src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png" alt="Logo Github" width="31px"
-                                    height="31px">
-                            </a>
-
-                        </address>
-
-                        <nav id="navLicense">
-                            <br>
-                            <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
-                                onmousemove="statusLicenseJavascript(), sfssdCode(), corBotaoLicense()"
-                                onmouseleave="statusLicenseJavascriptOff(), sfssdCodeOff()">
-                                <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
-                            </button>
-                            <br>
-                            <section id="license">
-                                <a onclick="abrirFecharPopup()" onmousemove="statusLinkLicenseJavascript()"
-                                    onmouseleave="statusLinkLicenseJavascriptOff()" rel="jslicense" target="_blank"
-                                    href="../licenses/copying.txt">JavaScript license
-                                    information</a>
-
-                            </section><br>
-
-                        </nav>
-
-                    </section>
-
                 </section>
 
-                <nav id="navRodapePrincipal">
+                <footer id="rodapePrincipal">
 
-                    <section id="secaoRodapePrincipalIcones1">
+                    <section id="secaoRodape">
 
-                        <img id="iconeUsuario" src="../icones/800x600/usuario.png" alt="Icone de usuário">
+                        <section id="secaoBotaoLicense">
+                            <br>
+                            <address class="secaoRodapePrincipalIcones2">
 
-                        <a id="linkFraseRodape"
-                            href="https://www.google.com/search?q=Senior Full Stack Software Developer" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=5583998454848" target="_blank">
+                                    <img onmousemove="statusWhatsapp()" onmouseleave="statusWhatsappOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png" alt="Logo Whatsapp"
+                                        width="31px" height="31px">
+                                </a>
 
-                            <p id="SFSSD">
-                                Paulo de Tasso
+                                <a href=mailto:atendimentos.site@gmail.com target="_blank">
+                                    <img onmousemove="statusEnviarEmail()" onmouseleave="statusEnviarEmailOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/email 3d.png" alt="Logo Gmail" width="31px"
+                                        height="31px">
+                                </a>
+
+                                <a href="https://join.skype.com/invite/zc4AHKVGTz7v" target="_blank">
+                                    <img onmousemove="statusSkype()" onmouseleave="statusSkypeOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/SKYPE.png" alt="Logo SKYPE" width="31px"
+                                        height="31px">
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/paulodetasso/" target="_blank">
+                                    <img onmousemove="statusLinkedIn()" onmouseleave="statusLinkedInOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/LinkedIn 3d 2.png" alt="Logo linkedin"
+                                        width="31px" height="31px">
+                                </a>
+
+                                <a href="https://twitter.com/tassodjhalls" target="_blank">
+                                    <img onmousemove="statusTwitter()" onmouseleave="statusTwitterOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt="Logo Twitter"
+                                        width="31px" height="31px">
+                                </a>
+
+                                <a href="https://www.facebook.com/paulodetassoDJ" target="_blank">
+                                    <img onmousemove="statusFacebook()" onmouseleave="statusFacebookOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt="Logo Facebook"
+                                        width="31px" height="31px">
+                                </a>
+
+                                <a href="https://www.instagram.com/paulo_de_tasso/" target="_blank">
+                                    <img onmousemove="statusInstagram()" onmouseleave="statusInstagramOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt="Logo Instagram"
+                                        width="31px" height="31px">
+                                </a>
+
+                                <a href="https://www.youtube.com/user/tassodjhalls11/videos" target="_blank">
+                                    <img onmousemove="statusYoutube()" onmouseleave="statusYoutubeOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/youtube.png" alt="Logo Youtube" width="31px"
+                                        height="31px">
+                                </a>
+
+                                <a href="https://github.com/PauloDeTasso" target="_blank">
+                                    <img onmousemove="statusGithub()" onmouseleave="statusGithubOff()"
+                                        src="../icones/LOGOS/REDES SOCIAIS/GitHub 3d 3.png" alt="Logo Github"
+                                        width="31px" height="31px">
+                                </a>
+
+                            </address>
+
+                            <nav id="navLicense">
                                 <br>
-                                - Senior Full Stack Software Developer -
-                            </p>
+                                <button id="botaoLicense" type="button" onclick="abrirSecaoLicense()"
+                                    onmousemove="statusLicenseJavascript(), sfssdCode(), corBotaoLicense()"
+                                    onmouseleave="statusLicenseJavascriptOff(), sfssdCodeOff()">
+                                    <img src="../icones/LICENSE1.png" alt="Icone License" width="21px" height="21px">
+                                </button>
+                                <br>
+                                <section id="license">
+                                    <a onclick="abrirFecharPopup()" onmousemove="statusLinkLicenseJavascript()"
+                                        onmouseleave="statusLinkLicenseJavascriptOff()" rel="jslicense" target="_blank"
+                                        href="../licenses/copying.txt">JavaScript license
+                                        information</a>
 
-                        </a>
+                                </section><br>
+
+                            </nav>
+
+                        </section>
 
                     </section>
 
-                </nav>
+                    <nav id="navRodapePrincipal">
 
-            </footer>
+                        <section id="secaoRodapePrincipalIcones1">
+
+                            <img id="iconeUsuario" src="../icones/800x600/usuario.png" alt="Icone de usuário">
+
+                            <a id="linkFraseRodape"
+                                href="https://www.google.com/search?q=Senior Full Stack Software Developer"
+                                target="_blank">
+
+                                <p id="SFSSD">
+                                    Paulo de Tasso
+                                    <br>
+                                    - Senior Full Stack Software Developer -
+                                </p>
+
+                            </a>
+
+                        </section>
+
+                    </nav>
+
+                </footer>
+
+            </section>
+
+            <!--  -->
+
+            <section id="secaoLeste">
+
+                <img id="secaoLesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias"
+                    width="10px" height="70%">
+
+            </section>
 
         </section>
 
         <!--  -->
+        <!--  -->
 
-        <section id="secaoLeste">
+        <section id="secaoSul">
 
-            <img id="secaoLesteImagem" src="../imagens/luzes/preto e branco/0.jpg" alt="Cores Aleatorias" width="10px"
-                height="70%">
+            <section id="secaoPopup" class="modal-container">
 
-        </section>
+                <section class="modal">
 
-    </section>
+                    <button class="fechar" onclick="abrirFecharPopup()">
+                        x
+                    </button>
 
-    <!--  -->
-    <!--  -->
+                    <h3 class="subtitulo">MIT License</h3>
 
-    <section id="secaoSul">
+                    <h5>
+                        Copyright (c) 2021 Paulo de Tasso
+                    </h5>
 
-        <section id="secaoPopup" class="modal-container">
+                    <p>
+                        Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the "Software"), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:
+                    </p>
 
-            <section class="modal">
+                    <p>
+                        The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.
+                    </p>
 
-                <button class="fechar" onclick="abrirFecharPopup()">
-                    x
-                </button>
+                    <p>
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                        SOFTWARE.
+                    </p>
 
-                <h3 class="subtitulo">MIT License</h3>
-
-                <h5>
-                    Copyright (c) 2021 Paulo de Tasso
-                </h5>
-
-                <p>
-                    Permission is hereby granted, free of charge, to any person obtaining a copy
-                    of this software and associated documentation files (the "Software"), to deal
-                    in the Software without restriction, including without limitation the rights
-                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                    copies of the Software, and to permit persons to whom the Software is
-                    furnished to do so, subject to the following conditions:
-                </p>
-
-                <p>
-                    The above copyright notice and this permission notice shall be included in all
-                    copies or substantial portions of the Software.
-                </p>
-
-                <p>
-                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-                    SOFTWARE.
-                </p>
+                </section>
 
             </section>
 
         </section>
 
-    </section>
+        <!--  -->
+        <!--  -->
 
-    <!--  -->
-    <!--  -->
+        <section id="secaoSecreta">
 
-    <script src="../js/home.js" onload="scriptCarregado()">
+            <button id="botaoBestBusiness" type="button" onclick="abrirUrl(urlInterno)">
+                BB
+            </button>
 
-    </script>
+            <button id="botaoBestBusiness" type="button" onclick="abrirUrl(urlYouBe)">
+                You Be
+            </button>
 
-    <button id="botaoBestBusiness" type="button" onclick="abrirUrl(urlInterno)">
-        BB
-    </button>
+        </section>
 
-    <button id="botaoBestBusiness" type="button" onclick="abrirUrl(urlYouBe)">
-        You Be
-    </button>
+        <script src="../js/home.js" onload="scriptCarregado()">
 
-</body>
+        </script>
+
+    </body>
 
 </html>

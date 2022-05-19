@@ -1,5 +1,11 @@
 /* var 'S*/
 
+localStorage.senha;
+
+localStorage.acessoLiberado;
+
+var secaoSecreta = document.getElementById('secaoSecreta');
+
 var botaoBestBusiness = document.getElementById('botaoBestBusiness');
 
 var html5 = document.getElementById('html5');
@@ -99,7 +105,7 @@ var gifCodeFooter = document.getElementById('codeFooter');
 
 var secaoGifPrincipal = document.getElementById('SecaoGifPrincipal');
 
-/*var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');*/
+var secaoRodapePrincipalIcones = document.getElementById('secaoRodapePrincipalIcones1');
 
 var secaoFooter = document.getElementById('rodapePrincipal');
 
@@ -779,7 +785,7 @@ function abrirLink()
 function fraseAleatoria()
 {
     numeroAleatorioFrase(1, frases.length);
-    mensagemAleatoria = frases[numeroAleatorioFraseInterno];
+    mensagemAleatoria = frases[ numeroAleatorioFraseInterno ];
     return mensagemAleatoria;
 }
 
@@ -1405,6 +1411,10 @@ function abrirUrl(url)
 {
     window.open(url, "_blank");
 }
+
+//
+
+secaoRodapePrincipalIcones1.addEventListener("click", () => { abrirSecaoSecreta() }, false)
 
 //botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("/testes/Best Business/Mercadorias.html") }, false);
 
@@ -2439,6 +2449,115 @@ function statusTamanhoTela()
 
 }
 
+//
+
+function abrirSecaoSecreta()
+{
+    var estiloCssSecaoSecreta = window.getComputedStyle(secaoSecreta);
+
+    var propriedadeCssSecaoSecreta = estiloCssSecaoSecreta.getPropertyValue('display');
+
+    //SE ACESSO LIBERADO:
+    if (localStorage.acessoLiberado == "true")
+    {
+        //MUDA O DISPLAY:
+        if (propriedadeCssSecaoSecreta == "none")    
+        {
+            secaoSecreta.style.display = 'flex';
+        } else
+        {
+            secaoSecreta.style.display = 'none';
+        }
+    }
+    //SE ACESSO NÃO LIBERADO:
+    else if (localStorage.acessoLiberado == "false")
+    {
+        //PEDE A SENHA
+        var senhaDigitada = prompt("Digite a senha de acesso:")
+
+        localStorage.senha = senhaDigitada;
+        //SE A SENHA FOR CORRETA:
+
+        if (localStorage.senha.toLowerCase() == "oxi")
+        {
+            //LIBERA ACESSO TEMPORARIO:
+            localStorage.acessoLiberado = true;
+
+            //MUDA O DISPLAY:
+            if (propriedadeCssSecaoSecreta == "none")    
+            {
+                secaoSecreta.style.display = 'flex';
+            } else
+            {
+                secaoSecreta.style.display = 'none';
+            }
+        }
+        // SE SENHA INCORRETA
+        else
+        {
+            //PEDE A SENHA
+            var senhaDigitada = prompt("Digite a senha de acesso:")
+
+            localStorage.senha = senhaDigitada;
+            //SE A SENHA FOR CORRETA:
+            if (localStorage.senha.toLowerCase() == "oxi")
+            {
+                //LIBERA ACESSO TEMPORARIO:
+                localStorage.acessoLiberado = true;
+
+                //SE SECAO FECHADA:
+                if (propriedadeCss == "none")    
+                {
+                    //ABRE A SECAO:
+                    secaoSecreta.style.display = 'flex';
+                }
+                //SE SECAO ABERTA:
+                else
+                {
+                    // FECHA A SECAO
+                    secaoSecreta.style.display = 'none';
+                }
+            }
+            //SE A SENHA NÃO FOR CORRETA:
+            else
+            {
+                nome.innerHTML = "SENHA INCORRETA!"
+            }
+        }
+    } else
+    {
+        alert("OI")
+        //PEDE A SENHA
+        var senhaDigitada = prompt("Digite a senha de acesso:")
+
+        localStorage.senha = senhaDigitada;
+
+        //SE A SENHA FOR CORRETA:
+        if (localStorage.senha.toLowerCase() == "oxi")
+        {
+            //LIBERA ACESSO TEMPORARIO:
+            localStorage.acessoLiberado = true;
+
+            //SE SECAO FECHADA:
+            if (propriedadeCss == "none")    
+            {
+                //ABRE A SECAO:
+                secaoSecreta.style.display = 'flex';
+            }
+            //SE SECAO ABERTA:
+            else
+            {
+                // FECHA A SECAO
+                secaoSecreta.style.display = 'none';
+            }
+        }
+        //SE A SENHA NÃO FOR CORRETA:
+        else
+        {
+            nome.innerHTML = "SENHA INCORRETA!"
+        }
+    }
+}
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
 
