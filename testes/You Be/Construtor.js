@@ -185,8 +185,8 @@ class Player
 {
     constructor( cidade, posicaoX, posicaoY, largura, altura, velocidade, imagem )
     { 
-        this.posicaoX = parseInt(posicaoX ? posicaoX : telaCanvasPrincipal.width / 2);// 
-        this.posicaoY = parseInt(posicaoY ? posicaoY : telaCanvasPrincipal.height / 2); //        
+        this.posicaoX = parseInt(posicaoX ? posicaoX : cidade.imagem.posicaoX - cidade.imagem.posicaoXRecorte + 300);// 
+        this.posicaoY = parseInt(posicaoY ? posicaoY : cidade.imagem.posicaoY - cidade.imagem.posicaoYRecorte + 400); //        
         this.posicaoXFixo = this.posicaoX;
         this.posicaoYFixo = this.posicaoY;
         this.largura = largura ? largura : cidade.imagem.largura/100; //
@@ -1543,8 +1543,8 @@ function reiniciar()
     cidade1.imagem.posicaoXRecorte = 0;
     cidade1.imagem.posicaoYRecorte = 0;
     
-    player1.posicaoX = parseInt(telaCanvasPrincipal.width/2);
-    player1.posicaoY = parseInt(telaCanvasPrincipal.height/2);
+    player1.posicaoX = parseInt(cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + 300);
+    player1.posicaoY = parseInt(cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + 300);
 
     civil1.posicaoXAtual = civil1.posicaoXMorada;
     civil1.posicaoYAtual = civil1.posicaoYMorada;
