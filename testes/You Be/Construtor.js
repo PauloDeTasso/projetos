@@ -28,7 +28,7 @@ var contador = 0;
 var tempoSpriteCorrendo = 200;
 var tempoSpriteParado = 770;
 
-var tempoTiro = 10;
+var tempoTiro = 1;
 
 var loopAlerta = true;
 
@@ -139,8 +139,8 @@ function localDeInteracao(cidade, posicaoX, posicaoY, largura, altura)
 function Bala(tipo,posicaoX,posicaoY,largura,altura)
 {
     this.tipo = tipo;
-    this.posicaoX = posicaoX;
-    this.posicaoY = posicaoY;
+    this.posicaoX = parseInt(posicaoX);
+    this.posicaoY = parseInt(posicaoY);
     this.largura = largura;
     this.altura = altura;
 
@@ -620,7 +620,7 @@ function Controle(key1, key2, key3, key4, key5, key6, key7)
             // SE NÃO FOI DISPARADO:
             else
             {
-                    //SE A BALA SAIR DA TELA:                
+                    //SE A BALA SAIR DA TELA:
                 if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoY <= 0 || elemento.posicaoY >= telaCanvasPrincipal.height)
                 {
                     //NÃO FAZ NADA    
@@ -634,8 +634,8 @@ function Controle(key1, key2, key3, key4, key5, key6, key7)
                         case "paraDireita":
                         
                           this.disparoParaDireita = setInterval(() =>
-                            {
-                                elemento.posicaoX++;
+                            {    
+                              elemento.posicaoX++;
                             }, tempoTiro);                       
                             break;
 
@@ -1727,7 +1727,7 @@ function atualizarPosicao(elemento, cidade)
                 //SE BALA DISPARADA:
                 if (player1.disparou)
                 {
-                    // SE A BALA NÃO SAIU DA TELA:
+                    // SE A BALA SAIU DA TELA:
                     if (elemento.posicaoX <= 0 || elemento.posicaoX >= telaCanvasPrincipal.width || elemento.posicaoY <= 0 || elemento.posicaoY >= telaCanvasPrincipal.height)
                     {
                         clearInterval(controle1.disparoParaCima);
@@ -1740,17 +1740,19 @@ function atualizarPosicao(elemento, cidade)
                         
                         player1.disparou = false;          
                         player1.balas--;
-                    } else
+                    }
+                    // SE A BALA ESTÁ DENTRO DA TELA
+                    else
                     {
-                                      
+                    // NÃO FAZ NADA
                     }
                 }
                 // SE NÃO DISPAROU:
                 else
                 {
-                    elemento.posicaoX = player1.posicaoX + player1.largura;
+                    elemento.posicaoX = parseInt(cidade1.imagem.posicaoX - cidade1.imagem.posicaoXRecorte + player1.posicaoXGlobal + player1.largura);
 
-                    elemento.posicaoY = player1.posicaoY + player1.altura / 8;      
+                    elemento.posicaoY = parseInt(cidade1.imagem.posicaoY - cidade1.imagem.posicaoYRecorte + player1.posicaoYGlobal + player1.altura / 8);      
                 }
                 
                 break;

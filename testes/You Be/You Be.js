@@ -129,13 +129,13 @@ function loopDesenho()
         status3.innerHTML = "player1.balas: " + player1.balas;
         status4.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
         status5.innerHTML = "balaPistola.posicaoX: " + balaPistola.posicaoX;
-        status6.innerHTML = "player1.posicaoX: " + player1.posicaoX;
+        status6.innerHTML = "balaPistola.posicaoY: " + balaPistola.posicaoY;
         status7.innerHTML = "controle1.teclaFPressionada: " + controle1.teclaFPressionada;
         status8.innerHTML = "telaCanvasPrincipal.width: " + telaCanvasPrincipal.width;
-        status9.innerHTML = "controle1.posicaoBala: " + controle1.posicaoBala;
+        status9.innerHTML = "controle1.posicaoBalaY: " + controle1.posicaoBalaY;
         status10.innerHTML = "controle1.teclaSetaParaCimaPressionada: " + controle1.teclaSetaParaCimaPressionada;
-        //status11.innerHTML = "Object.getOwnPropertyNames(pessoa1): " + Object.getOwnPropertyNames(pessoa1.itens);
-        // status12.innerHTML = "Object.getOwnPropertyNames(pessoa1): " + Object.getOwnPropertyNames(civil001.itens);
+        status11.innerHTML = "cidade1.imagem.posicaoXRecorte: " + cidade1.imagem.posicaoXRecorte;
+        status12.innerHTML = "cidade1.imagem.posicaoYRecorte: " + cidade1.imagem.posicaoYRecorte;
         //
 
         //
