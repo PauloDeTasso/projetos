@@ -138,8 +138,6 @@ function loopDesenho()
         status12.innerHTML = "cidade1.imagem.posicaoYRecorte: " + cidade1.imagem.posicaoYRecorte;
         //
 
-        //
-
         /*
         contextoTelaCanvasPrincipal.beginPath();
      
