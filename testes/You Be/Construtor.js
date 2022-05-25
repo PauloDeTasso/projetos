@@ -2887,8 +2887,6 @@ function abrirSecaoPingPong()
         // USANDO TRANSPARENCIA RGBA COMO PREENCHIMENTO
         contextoTelaCanvasPrincipal.fillStyle = "rgba(000,200,200,0.5)";
      
-        */
-
         // INSERINDO TEXTOS:
         /*
      
