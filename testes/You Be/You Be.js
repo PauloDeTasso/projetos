@@ -136,7 +136,6 @@ function loopDesenho()
         status10.innerHTML = "controle1.teclaSetaParaCimaPressionada: " + controle1.teclaSetaParaCimaPressionada;
         status11.innerHTML = "cidade1.imagem.posicaoXRecorte: " + cidade1.imagem.posicaoXRecorte;
         status12.innerHTML = "cidade1.imagem.posicaoYRecorte: " + cidade1.imagem.posicaoYRecorte;
-        //
 
         /*
         contextoTelaCanvasPrincipal.beginPath();
