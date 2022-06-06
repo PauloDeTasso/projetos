@@ -52,7 +52,11 @@ var volumeArredondado = Math.round(audioPrincipal.volume * 10);
 
 var tituloPrincipal = document.getElementById('tituloPrincipal');
 
+var marquee = document.getElementsByClassName('marquee');
+
 var nome = document.getElementById("status");
+
+var flutuante = document.getElementById("flutuante");
 
 var portaPrincipal = document.getElementById('portaPrincipal');
 
@@ -1416,6 +1420,43 @@ function abrirUrl(url)
 
 secaoRodapePrincipalIcones1.addEventListener("click", () => { abrirSecaoSecreta() }, false)
 
+//marquee.addEventListener("mousemove", () => { animarAjudar() }, false)
+
+function animarAjudar()
+{
+    let estiloPopup = window.getComputedStyle(flutuante);
+    let estiloPropriedade = estiloPopup.getPropertyValue('justify-content');
+
+    //alert(Object.getOwnPropertyNames(flutuante.style));
+
+    /*
+        if (estiloPropriedade == "none")    
+        {
+            secaoPopup.style.display = 'flex';
+        } else
+        {
+            secaoPopup.style.display = 'none';
+        }
+    */
+
+    let tempo = 1000;
+
+    if (estiloPropriedade == "left")
+    {
+        setTimeout(() => { flutuante.style.justifyContent = 'center'; }, tempo);
+
+    } else if (estiloPropriedade == "right")
+    {
+        setTimeout(() => { flutuante.style.justifyContent = 'left'; }, tempo);
+    } else if (estiloPropriedade == "center")
+    {
+        setTimeout(() => { flutuante.style.justifyContent = 'right'; }, tempo);
+    } else
+    {
+        setTimeout(() => { flutuante.style.justifyContent = 'center'; }, tempo);
+    }
+}
+
 //botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("/testes/Best Business/Mercadorias.html") }, false);
 
 /*
@@ -2409,8 +2450,6 @@ function checarTecla(e)
     statusPingPong.innerText = (evento.keyCode);
 }
 
-
-
 // //////////////////////////////////////////////////
 
 var botaoStatus = document.getElementById('imagemBotaoStatus');
@@ -2428,8 +2467,8 @@ function abrirFecharStatus()
     } else
     {
         nome.style.visibility = 'hidden';
-        botaoStatus.style.opacity = 0.0;
         flutuante.style.display = 'none';
+        botaoStatus.style.opacity = 0.0;
     }
 }
 
