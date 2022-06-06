@@ -1,5 +1,3 @@
-//
-
 civil2.posicaoXAtual = 0;
 civil2.posicaoYAtual = 0;
 
@@ -166,7 +164,6 @@ function loopDesenho()
         
                 contextoTelaCanvasPrincipal.fillRect(farol1.posicaoX, farol1.posicaoY, farol1.largura, farol1.altura);
         */
-
     }
 
     //SE canvasPrincipalLigado É FALSE:
