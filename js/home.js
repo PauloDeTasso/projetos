@@ -12,7 +12,7 @@ var html5 = document.getElementById('html5');
 
 var numeroDePaginas = window.history.length;
 
-var botaoGif = document.getElementById('botaoGifPrincipal');
+var botaoGifPrincipal = document.getElementById('botaoGifPrincipal');
 
 var audioPrincipal = document.getElementById("audioPrincipal");
 
@@ -1348,14 +1348,33 @@ function sfssdCodeOff()
     iconeUsuario.style.visibility = 'hidden';
 }
 
-function mudarCorBotaoGif()
+function mudarCorBotaoGifPrincipal()
 {
-    botaoGif.style.backgroundColor = 'aqua';
+    botaoGifPrincipal.style.backgroundColor = 'aqua';
 }
 
-function mudarCorBotaoGifOff()
+function mudarCorBotaoGifPrincipal()
 {
-    botaoGif.style.backgroundColor = 'rgb(42, 150, 0)';
+    let estiloPopup = window.getComputedStyle(botaoGifPrincipal);
+    let estiloPropriedade = estiloPopup.getPropertyValue('background-color');
+    let tempo = 50;
+
+    if (estiloPropriedade == "rgb(42, 150, 0)")
+    {
+        setTimeout(() => { botaoGifPrincipal.style.backgroundColor = 'rgb(100, 0, 0)'; }, tempo);
+
+    } else if (estiloPropriedade == "rgb(100, 0, 0)")
+    {
+        setTimeout(() => { botaoGifPrincipal.style.backgroundColor = 'rgb(200, 0, 200)'; }, tempo);
+
+    } else if (estiloPropriedade == "rgb(200, 0, 200)")
+    {
+        setTimeout(() => { botaoGifPrincipal.style.backgroundColor = 'rgb(1, 200, 100)'; }, tempo);
+
+    } else
+    {
+        setTimeout(() => { botaoGifPrincipal.style.backgroundColor = 'rgb(42, 150, 0)'; }, tempo);
+    }
 }
 
 var botaoSecaoPingPong = document.getElementById('botaoPingPong');
