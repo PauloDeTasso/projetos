@@ -875,7 +875,6 @@ function abrirSecaoGifPrincipal()
 
 function abrirFecharTabela()
 {
-
     var iconeJanela = document.getElementById('iconeJanela');
     let getStyle = window.getComputedStyle(secaoTabela);
     var getDisplay = getStyle.getPropertyValue('display');
@@ -883,38 +882,42 @@ function abrirFecharTabela()
     if (getDisplay == "none")    
     {
         secaoTabela.style.display = 'flex';
-        iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png')
+        setTimeout(() => { iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png') }, 0);
     } else
     {
         secaoTabela.style.display = 'none';
-        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png')
+        setTimeout(() => { iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png') }, 0);
     }
 }
 
 function moveMouseIconeJanela()
 {
-
     var iconeJanela = document.getElementById('iconeJanela');
+
+    let tempo = 100;
 
     if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2.png')
     {
-        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2p.png')
+        setTimeout(() => { iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2p.png') }, tempo);
 
     } else if (iconeJanela.getAttribute('src') == '../icones/AbrirJanelaBranco2p.png')
     {
-        iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png')
+        setTimeout(() => { iconeJanela.setAttribute('src', '../icones/AbrirJanelaBranco2.png') }, tempo);
+
     } else
     {
         if (iconeJanela.getAttribute('src') == '../icones/fecharJanelaBranco.png')
         {
-            iconeJanela.setAttribute('src', '../icones/fecharJanelaBrancop.png')
+            setTimeout(() => { iconeJanela.setAttribute('src', '../icones/fecharJanelaBrancop.png') }, tempo);
+
 
         } else if (iconeJanela.getAttribute('src') == '../icones/fecharJanelaBrancop.png')
         {
-            iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png')
+            setTimeout(() => { iconeJanela.setAttribute('src', '../icones/fecharJanelaBranco.png') }, tempo);
+
         } else
         {
-            iconeJanela.setAttribute('src', '../icones/GRAVAR.png')
+            setTimeout(() => { iconeJanela.setAttribute('src', '../icones/GRAVAR.png') }, tempo);
         }
     }
 }
