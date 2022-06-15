@@ -442,9 +442,20 @@ main {
     padding: 3%;
     letter-spacing: 1px;
     font-weight: bolder;
-    text-shadow: 2px 3px 1px rgb(0, 64, 160);
+    /*text-shadow: 2px 3px 1px rgb(0, 64, 160);*/
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow:
+        1px -1px 0 rgba(0, 0, 0, 0.55),
+        2px -2px 0 rgba(0, 0, 0, 0.55),
+        3px -3px 0 rgba(0, 0, 0, 0.55),
+        4px -4px 0 rgba(0, 0, 0, 0.55),
+        5px -5px 0 rgba(0, 0, 0, 0.55),
+        6px -6px 0 rgba(0, 0, 0, 0.55),
+        7px -7px 0 rgba(0, 0, 0, 0.55),
+        8px -8px 0 rgba(0, 0, 0, 0.55),
+        9px -9px 0 rgba(0, 0, 0, 0.55),
+        10px -10px 1px rgba(0, 0, 0, 0.5);
 }
 
 /**/

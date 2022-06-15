@@ -62,6 +62,10 @@ var portaPrincipal = document.getElementById('portaPrincipal');
 
 var botaoAlterarTamanhoTela = document.getElementById('botaoAlterarTamanhoTela');
 
+var secaoCentro = document.getElementById('secaoCentro');
+
+var paragrafoArtigoRodape = document.getElementById('paragrafoArtigoRodape');
+
 var canvasHTML5 = document.getElementById('canvas');
 
 var aleatorio;
@@ -2618,6 +2622,53 @@ function abrirSecaoSecreta()
         }
     }
 }
+
+var coordenadaMouseX, coordenadaMouseY;
+
+secaoCentro.addEventListener('mousemove', function (event) 
+{
+    coordenadaMouseX = event.clientX;
+    coordenadaMouseY = event.clientY;
+}
+);
+
+function alterarCorNome()
+{
+    let estiloElemento = window.getComputedStyle(paragrafoArtigoRodape);
+    let propriedade = estiloElemento.getPropertyValue('color');
+
+    if (coordenadaMouseX > 255)
+    {
+        coordenadaMouseX = coordenadaMouseX / 3;
+
+    } else if (coordenadaMouseX < 0)
+    {
+        coordenadaMouseX = coordenadaMouseX * 2;
+    } else
+    {
+        coordenadaMouseX = coordenadaMouseX;
+    }
+
+    if (coordenadaMouseY > 255)
+    {
+        coordenadaMouseY = coordenadaMouseY / 3;
+
+    } else if (coordenadaMouseY < 0)
+    {
+        coordenadaMouseY = coordenadaMouseY * 2;
+
+    } else
+    {
+        coordenadaMouseY = coordenadaMouseY;
+    }
+
+    let corR = coordenadaMouseX;
+    let corG = coordenadaMouseY;
+    let corB = coordenadaMouseX;
+
+    paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
+}
+
 // ////////////////////////////////////////////////// CANVAS 2:
 /*
 
