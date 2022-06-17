@@ -2637,6 +2637,7 @@ function alterarCorNome()
     let estiloElemento = window.getComputedStyle(paragrafoArtigoRodape);
     let propriedade = estiloElemento.getPropertyValue('color');
 
+    /*
     if (coordenadaMouseX > 255)
     {
         coordenadaMouseX = coordenadaMouseX / 3;
@@ -2662,9 +2663,11 @@ function alterarCorNome()
         coordenadaMouseY = coordenadaMouseY;
     }
 
-    let corR = coordenadaMouseX;
+    */
+
+    let corR = coordenadaMouseY;
     let corG = coordenadaMouseY;
-    let corB = coordenadaMouseX;
+    let corB = coordenadaMouseY;
 
     paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
 }
