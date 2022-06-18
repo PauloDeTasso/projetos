@@ -2665,11 +2665,21 @@ function alterarCorNome()
 
     */
 
-    let corR = coordenadaMouseY;
+    if (coordenadaMouseX < 255)
+    {
+        coordenadaMouseX2 = coordenadaMouseX;
+    } else
+    {
+        coordenadaMouseX2 = coordenadaMouseX / 3;
+    }
+
+    let corR = coordenadaMouseX2;
     let corG = coordenadaMouseY;
-    let corB = coordenadaMouseY;
+    let corB = coordenadaMouseX;
 
     paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
+
+    nome.innerHTML = coordenadaMouseX2;
 }
 
 // ////////////////////////////////////////////////// CANVAS 2:
