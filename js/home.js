@@ -2632,38 +2632,19 @@ secaoCentro.addEventListener('mousemove', function (event)
 }
 );
 
+
+var sombraHorizontal = 1;
+var sombraVertical = 1;
+var distanciaDoBlur = 0;
+
+var variavel = 1;
+
 function alterarCorNome()
 {
     let estiloElemento = window.getComputedStyle(paragrafoArtigoRodape);
     let propriedade = estiloElemento.getPropertyValue('color');
 
-    /*
-    if (coordenadaMouseX > 255)
-    {
-        coordenadaMouseX = coordenadaMouseX / 3;
-
-    } else if (coordenadaMouseX < 0)
-    {
-        coordenadaMouseX = coordenadaMouseX * 2;
-    } else
-    {
-        coordenadaMouseX = coordenadaMouseX;
-    }
-
-    if (coordenadaMouseY > 255)
-    {
-        coordenadaMouseY = coordenadaMouseY / 3;
-
-    } else if (coordenadaMouseY < 0)
-    {
-        coordenadaMouseY = coordenadaMouseY * 2;
-
-    } else
-    {
-        coordenadaMouseY = coordenadaMouseY;
-    }
-
-    */
+    let propriedade2 = estiloElemento.getPropertyValue('text-shadow');
 
     if (coordenadaMouseX < 255)
     {
@@ -2677,9 +2658,29 @@ function alterarCorNome()
     let corG = coordenadaMouseY;
     let corB = coordenadaMouseX;
 
+    sombraHorizontal = coordenadaMouseX / 50;
+    sombraVertical = coordenadaMouseY / 50;
+
+    let corSombra = "rgba(0, 0, 0, 0.55)";
+
+    var valorSombra =
+        " " + sombraHorizontal + "px " + sombraVertical + "px " + distanciaDoBlur + "px " + corSombra + "," +
+        " " + (sombraHorizontal + 1) + "px " + (sombraVertical + 1) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 2) + "px " + (sombraVertical + 2) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 3) + "px " + (sombraVertical + 3) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 4) + "px " + (sombraVertical + 4) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 5) + "px " + (sombraVertical + 5) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 6) + "px " + (sombraVertical + 6) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 7) + "px " + (sombraVertical + 7) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 8) + "px " + (sombraVertical + 8) + "px " + (distanciaDoBlur) + "px " + corSombra + ", " +
+        " " + (sombraHorizontal + 9) + "px " + (sombraVertical + 9) + "px " + (distanciaDoBlur) + "px " + corSombra;
+
+    paragrafoArtigoRodape.style.textShadow = valorSombra;
+
     paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
 
-    //nome.innerHTML = coordenadaMouseX2;
+    //nome.innerHTML = sombraHorizontal;
+
 }
 
 // ////////////////////////////////////////////////// CANVAS 2:
