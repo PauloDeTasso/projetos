@@ -2679,7 +2679,7 @@ function alterarCorNome()
 
     paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
 
-    nome.innerHTML = coordenadaMouseX2;
+    //nome.innerHTML = coordenadaMouseX2;
 }
 
 // ////////////////////////////////////////////////// CANVAS 2:
