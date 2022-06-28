@@ -2632,7 +2632,6 @@ secaoCentro.addEventListener('mousemove', function (event)
 }
 );
 
-
 var sombraHorizontal = 1;
 var sombraVertical = 1;
 var distanciaDoBlur = 0;
