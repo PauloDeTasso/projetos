@@ -520,6 +520,41 @@ main {
     height: auto;
 }
 
+/*
+.secaoRodapePrincipalIcones2 .secaoBotoes {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+}
+
+.secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(1) {
+    background: url("../icones/LOGOS/REDES SOCIAIS/whatsapp 3d.png");
+    background: cover;
+}
+
+.secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(2) {
+    background: url("../icones/LOGOS/REDES SOCIAIS/email 3d.png");
+    background: cover;
+}
+
+.secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(3) {
+    background: url("../icones/LOGOS/REDES SOCIAIS/SKYPE.png");
+    background: cover;
+}
+
+.secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(4) {
+    background: url("../icones/LOGOS/REDES SOCIAIS/LinkedIn 3d 2.png");
+    background: cover;
+}
+
+.secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(5) {
+    background: url("../icones/LOGOS/REDES SOCIAIS/twitter 3d.png");
+    background: fixed;
+    */
+}
+
 #secaoRodapePrincipalIcones1 {
     display: flex;
     flex-direction: row;
