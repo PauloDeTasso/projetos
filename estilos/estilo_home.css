@@ -552,8 +552,9 @@ main {
 .secaoRodapePrincipalIcones2 .secaoBotoes:nth-child(5) {
     background: url("../icones/LOGOS/REDES SOCIAIS/twitter 3d.png");
     background: fixed;
-    */
+    
 }
+*/
 
 #secaoRodapePrincipalIcones1 {
     display: flex;
