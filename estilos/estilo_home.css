@@ -1304,6 +1304,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 10pt;
 }
 
+.secaoBotoes {
+    visibility: visible;
+}
+
 /*#botaoBestBusiness {
     display: none;
     flex-direction: row;

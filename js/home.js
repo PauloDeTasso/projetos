@@ -68,6 +68,8 @@ var paragrafoArtigoRodape = document.getElementById('paragrafoArtigoRodape');
 
 var canvasHTML5 = document.getElementById('canvas');
 
+var secaoBotoes = document.getElementsByClassName('secaoBotoes');
+
 var aleatorio;
 
 var caminho;
@@ -2680,6 +2682,21 @@ function alterarCorNome()
     paragrafoArtigoRodape.style.color = 'rgb(' + corR + ',' + corG + ',' + corB + ')';
 
     //nome.innerHTML = sombraHorizontal;
+
+}
+
+function mouseTocaBotoesRedesSociais()
+{
+
+}
+
+function mouseForaBotoesRedesSociais()
+{
+
+}
+
+function mouseMovendoBotoesRedesSociais()
+{
 
 }
 
