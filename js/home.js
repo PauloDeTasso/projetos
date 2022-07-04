@@ -2687,17 +2687,35 @@ function alterarCorNome()
 
 function mouseTocaBotoesRedesSociais()
 {
+    let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 1 ];
+    alert(estiloElemento);
 
+    let propriedade = estiloElemento.getPropertyValue('visibility');
+
+    alert(propriedade);
+
+    secaoBotoes.style.visibility[ 0 ] = "hidden";
 }
 
 function mouseForaBotoesRedesSociais()
 {
+    let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 0 ];
+    let propriedade = estiloElemento.getPropertyValue('visibility');
 
+    alert(propriedade);
+
+    secaoBotoes.style.visibility[ 0 ] = "hidden";
 }
 
 function mouseMovendoBotoesRedesSociais()
 {
+    let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 0 ];
+    let propriedade = estiloElemento.getPropertyValue('visibility');
 
+    alert(propriedade);
+    //secaoBotoes.style.visibility = "visible";
+
+    secaoBotoes.style.visibility[ 0 ] = "hidden";
 }
 
 // ////////////////////////////////////////////////// CANVAS 2:
