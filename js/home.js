@@ -2877,11 +2877,19 @@ function detectar_mobile()
 
 if (detectar_mobile())
 {
-    alert("Celular");
+    secaoBotaoWhatsapp.style.opacity = "1";
+    secaoBotaoEmail.style.opacity = "1";
+    secaoBotaoSkype.style.opacity = "1";
+    secaoBotaoLinkedin.style.opacity = "1";
+    secaoBotaoTwitter.style.opacity = "1";
+    secaoBotaoFacebook.style.opacity = "1";
+    secaoBotaoInstagram.style.opacity = "1";
+    secaoBotaoYoutube.style.opacity = "1";
+    secaoBotaoGithub.style.opacity = "1";
 
 } else
 {
-    alert("Computador");
+
 }
 
 /*
