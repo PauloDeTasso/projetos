@@ -2687,9 +2687,8 @@ function alterarCorNome()
 
 function mouseTocaBotoesRedesSociais()
 {
-    let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 1 ];
-    alert(estiloElemento);
-
+    let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 0 ];
+    alert(propriedade);
     let propriedade = estiloElemento.getPropertyValue('visibility');
 
     alert(propriedade);
