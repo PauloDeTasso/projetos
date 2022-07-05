@@ -68,7 +68,23 @@ var paragrafoArtigoRodape = document.getElementById('paragrafoArtigoRodape');
 
 var canvasHTML5 = document.getElementById('canvas');
 
-var secaoBotoes = document.getElementsByClassName('secaoBotoes');
+var secaoBotaoWhatsapp = document.getElementById('secaoBotaoWhatsapp');
+
+var secaoBotaoEmail = document.getElementById('secaoBotaoEmail');
+
+var secaoBotaoSkype = document.getElementById('secaoBotaoSkype');
+
+var secaoBotaoLinkedin = document.getElementById('secaoBotaoLinkedin');
+
+var secaoBotaoTwitter = document.getElementById('secaoBotaoTwitter');
+
+var secaoBotaoFacebook = document.getElementById('secaoBotaoFacebook');
+
+var secaoBotaoInstagram = document.getElementById('secaoBotaoInstagram');
+
+var secaoBotaoYoutube = document.getElementById('secaoBotaoYoutube');
+
+var secaoBotaoGithub = document.getElementById('secaoBotaoGithub');
 
 var aleatorio;
 
@@ -2685,6 +2701,162 @@ function alterarCorNome()
 
 }
 
+////
+
+function mouseTocaWhatsapp()
+{
+    secaoBotaoWhatsapp.style.opacity = "1";
+}
+
+function mouseForaWhatsapp()
+{
+    secaoBotaoWhatsapp.style.opacity = "0.2";
+}
+
+function mouseMovendoWhatsapp()
+{
+    secaoBotaoWhatsapp.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaEmail()
+{
+    secaoBotaoEmail.style.opacity = "1";
+}
+
+function mouseForaEmail()
+{
+    secaoBotaoEmail.style.opacity = "0.2";
+}
+
+function mouseMovendoEmail()
+{
+    secaoBotaoEmail.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaSkype()
+{
+    secaoBotaoSkype.style.opacity = "1";
+}
+
+function mouseForaSkype()
+{
+    secaoBotaoSkype.style.opacity = "0.2";
+}
+
+function mouseMovendoSkype()
+{
+    secaoBotaoSkype.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaLinkedin()
+{
+    secaoBotaoLinkedin.style.opacity = "1";
+}
+
+function mouseForaLinkedin()
+{
+    secaoBotaoLinkedin.style.opacity = "0.2";
+}
+
+function mouseMovendoLinkedin()
+{
+    secaoBotaoLinkedin.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaTwitter()
+{
+    secaoBotaoTwitter.style.opacity = "1";
+}
+
+function mouseForaTwitter()
+{
+    secaoBotaoTwitter.style.opacity = "0.2";
+}
+
+function mouseMovendoTwitter()
+{
+    secaoBotaoTwitter.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaFacebook()
+{
+    secaoBotaoFacebook.style.opacity = "1";
+}
+
+function mouseForaFacebook()
+{
+    secaoBotaoFacebook.style.opacity = "0.2";
+}
+
+function mouseMovendoFacebook()
+{
+    secaoBotaoFacebook.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaInstagram()
+{
+    secaoBotaoInstagram.style.opacity = "1";
+}
+
+function mouseForaInstagram()
+{
+    secaoBotaoInstagram.style.opacity = "0.2";
+}
+
+function mouseMovendoInstagram()
+{
+    secaoBotaoInstagram.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaYoutube()
+{
+    secaoBotaoYoutube.style.opacity = "1";
+}
+
+function mouseForaYoutube()
+{
+    secaoBotaoYoutube.style.opacity = "0.2";
+}
+
+function mouseMovendoYoutube()
+{
+    secaoBotaoYoutube.style.opacity = "0.0";
+}
+
+////
+
+function mouseTocaGithub()
+{
+    secaoBotaoGithub.style.opacity = "1";
+}
+
+function mouseForaGithub()
+{
+    secaoBotaoGithub.style.opacity = "0.2";
+}
+
+function mouseMovendoGithub()
+{
+    secaoBotaoGithub.style.opacity = "0.0";
+}
+
+////
+
+/*
 function mouseTocaBotoesRedesSociais()
 {
     let estiloElemento = window.getComputedStyle(secaoBotoes, null)[ 0 ];
@@ -2716,6 +2888,8 @@ function mouseMovendoBotoesRedesSociais()
 
     secaoBotoes.style.visibility[ 0 ] = "hidden";
 }
+
+*/
 
 // ////////////////////////////////////////////////// CANVAS 2:
 /*

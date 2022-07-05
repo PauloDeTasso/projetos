@@ -1304,8 +1304,40 @@ body::-webkit-scrollbar-thumb {
     font-size: 10pt;
 }
 
-.secaoBotoes {
-    visibility: visible;
+#secaoBotaoWhatsapp {
+    opacity: 0.5;
+}
+
+#secaoBotaoEmail {
+    opacity: 0.5;
+}
+
+#secaoBotaoSkype {
+    opacity: 0.5;
+}
+
+#secaoBotaoLinkedin {
+    opacity: 0.5;
+}
+
+#secaoBotaoTwitter {
+    opacity: 0.5;
+}
+
+#secaoBotaoFacebook {
+    opacity: 0.5;
+}
+
+#secaoBotaoInstagram {
+    opacity: 0.5;
+}
+
+#secaoBotaoYoutube {
+    opacity: 0.5;
+}
+
+#secaoBotaoGithub {
+    opacity: 0.5;
 }
 
 /*#botaoBestBusiness {
