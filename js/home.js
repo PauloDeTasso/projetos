@@ -68,6 +68,18 @@ var paragrafoArtigoRodape = document.getElementById('paragrafoArtigoRodape');
 
 var canvasHTML5 = document.getElementById('canvas');
 
+var iconeHtml = document.getElementById('iconeHtml');
+
+var iconeCss = document.getElementById('iconeCss');
+
+var iconeJavascript = document.getElementById('iconeJavascript');
+
+var iconeJava = document.getElementById('iconeJava');
+
+var iconeMysql = document.getElementById('iconeMysql');
+
+var iconeNtsl = document.getElementById('iconeNtsl');
+
 var secaoBotaoWhatsapp = document.getElementById('secaoBotaoWhatsapp');
 
 var secaoBotaoEmail = document.getElementById('secaoBotaoEmail');
@@ -2700,6 +2712,98 @@ function alterarCorNome()
     //nome.innerHTML = sombraHorizontal;
 
 }
+
+////
+
+iconeHtml.addEventListener("mouseover", mouseTocaIconeHtml, false);
+iconeHtml.addEventListener("mouseout", mouseForaIconeHtml, false);
+
+iconeCss.addEventListener("mouseover", mouseTocaIconeCss, false);
+iconeCss.addEventListener("mouseout", mouseForaIconeCss, false);
+
+iconeJavascript.addEventListener("mouseover", mouseTocaIconeJavascript, false);
+iconeJavascript.addEventListener("mouseout", mouseForaIconeJavascript, false);
+
+iconeJava.addEventListener("mouseover", mouseTocaIconeJava, false);
+iconeJava.addEventListener("mouseout", mouseForaIconeJava, false);
+
+iconeMysql.addEventListener("mouseover", mouseTocaIconeMysql, false);
+iconeMysql.addEventListener("mouseout", mouseForaIconeMysql, false);
+
+iconeNtsl.addEventListener("mouseover", mouseTocaIconeNtsl, false);
+iconeNtsl.addEventListener("mouseout", mouseForaIconeNtsl, false);
+
+function mouseTocaIconeHtml()
+{
+    iconeHtml.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeHtml()
+{
+    iconeHtml.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconeCss()
+{
+    iconeCss.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeCss()
+{
+    iconeCss.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconeJavascript()
+{
+    iconeJavascript.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeJavascript()
+{
+    iconeJavascript.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconeJava()
+{
+    iconeJava.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeJava()
+{
+    iconeJava.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconeMysql()
+{
+    iconeMysql.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeMysql()
+{
+    iconeMysql.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconeNtsl()
+{
+    iconeNtsl.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconeNtsl()
+{
+    iconeNtsl.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////////
 
 ////
 

@@ -1304,6 +1304,30 @@ body::-webkit-scrollbar-thumb {
     font-size: 10pt;
 }
 
+#iconeHtml {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
+#iconeCss {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
+#iconeJavascript {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
+#iconeJava {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
+#iconeMysql {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
+#iconeNtsl {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
 #secaoBotaoWhatsapp {
     opacity: 0.5;
 }
