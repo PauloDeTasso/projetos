@@ -1,0 +1,23 @@
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    height: 97%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(255, 0, 0);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    height: 97%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(91, 91, 91);
+}
