@@ -3,11 +3,10 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 97%;
-    height: 200%;
+    width: 100%;
+    height: auto;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    border: 10px solid rgb(255, 0, 0);
 }
 
 body {
@@ -15,26 +14,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 97%;
-    height: 97%;
-    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, .5);
     color: rgb(255, 255, 255);
-    border: 10px solid rgb(91, 91, 91);
 }
 
 #cabecalho {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: space-around;
     align-items: center;
-    width: 97%;
-    height: 10%;
-    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    /*background-color: rgba(0, 0, 0, 0);
     background-image: url("../../imagens/outros/03.png");
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;*/
     color: rgb(255, 255, 255);
-    border: 10px solid rgb(0, 255, 47);
-    padding: 1%;
+    opacity: .5;
 }
 
 #centro {
@@ -42,18 +39,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 97%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 1);
-    background-image: url("../../imagens/start9.png"), url("../../imagens/outros/03.png"), url("../../imagens/outros/terra_p.png");
-    background-repeat: repeat-x, repeat-y, repeat;
-    background-size: 200px 200px;
+    background-image: url("../../imagens/outros/terra_p.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-position: 0px 0px;
     background-origin: content-box;
-    background-attachment: scroll;
+    background-attachment: fixed;
     color: rgb(255, 255, 255);
-    border: 10px solid rgb(255, 255, 255);
-    padding: 1%;
 }
 
 #rodape {
@@ -61,11 +56,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 97%;
-    height: 20%;
+    width: 100%;
+    height: auto;
     background-color: rgb(0, 0, 0);
     background-image: url("../../imagens/outros/03.png");
     color: rgb(255, 255, 255);
-    border: 10px solid rgb(0, 82, 15);
-    padding: 1%;
 }
