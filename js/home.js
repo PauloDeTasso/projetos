@@ -1469,7 +1469,7 @@ var urlInterno = "../testes/BestBusiness/BestBusiness.html";
 
 var urlYouBe = "../testes/You Be/You Be.html";
 
-var urlLookalike3d = "../testes/Lookalike 3D/Lookalike3d.html";
+var urlLookalike3d = "../testes/Lookalike3D/Lookalike3d.html";
 
 function abrirUrl(url)
 {
