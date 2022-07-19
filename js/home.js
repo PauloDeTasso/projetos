@@ -8,6 +8,8 @@ var secaoSecreta = document.getElementById('secaoSecreta');
 
 var botaoBestBusiness = document.getElementById('botaoBestBusiness');
 
+var botaoLookalike3d = document.getElementById('botaoLookalike3d');
+
 var html5 = document.getElementById('html5');
 
 var numeroDePaginas = window.history.length;
@@ -1466,6 +1468,8 @@ function audioCachoeiraTocando()
 var urlInterno = "../testes/BestBusiness/BestBusiness.html";
 
 var urlYouBe = "../testes/You Be/You Be.html";
+
+var urlLookalike3d = "../testes/Lookalike 3D/Lookalike3d.html";
 
 function abrirUrl(url)
 {
