@@ -5,7 +5,13 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("../../imagens/outros/terra_p.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0px 0px;
+    background-origin: content-box;
+    background-attachment: fixed;
     color: rgb(255, 255, 255);
 }
 
@@ -41,13 +47,7 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 1);
-    background-image: url("../../imagens/outros/terra_p.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 0px 0px;
-    background-origin: content-box;
-    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
 }
 
