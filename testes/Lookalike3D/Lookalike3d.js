@@ -1,16 +1,16 @@
 var imagensProjetos3d = document.getElementsByClassName('imagensProjetos3d');
 
-var distanciaImagens = 100;
+var distanciaImagens = 200;
 
 var ultimaDirecaoScroll = 0;
-
+/*
 function atualizarDistanciaImagens()
 {
     /*
     var estiloStatus = window.getComputedStyle(imagensProjetos3d[ 1 ]);
     var valorEstiloStatus = estiloStatus.getPropertyValue('border');
 */
-
+/*
     var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
@@ -19,6 +19,8 @@ function atualizarDistanciaImagens()
     }
 
 }
+* /
+
 /*
 window.addEventListener('scroll', function (e)
 {
