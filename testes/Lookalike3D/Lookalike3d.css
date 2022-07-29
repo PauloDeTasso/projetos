@@ -13,6 +13,7 @@ html {
     background-attachment: fixed;
     background-position: center;
     color: rgb(76, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -31,11 +32,15 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
     width: 100%;
-    height: auto;
-    background-color: rgba(194, 140, 32, 0.24);
+    height: 7%;
+    background-color: rgba(233, 176, 63, 0.499);
     background-repeat: no-repeat;
-    color: rgba(76, 0, 255, 0.509);
+    color: rgba(23, 0, 78, 0.509);
+    opacity: 1;
 }
 
 #centro {

@@ -52,3 +52,33 @@ window.addEventListener('scroll', function (e)
 
 }, false);
 */
+
+
+/////////
+
+var statusSistema = document.getElementById('statusSistema');
+var cabecalho = document.getElementById('cabecalho');
+var tempoIntervalo = 200;
+
+setInterval(() =>
+{
+    if (this.scrollY == 0)
+    {
+        setTimeout(() =>
+        {
+            cabecalho.style.backgroundColor = "rgba(233, 176, 63, 0.499)";
+            cabecalho.style.height = "12%";
+
+        }, tempoIntervalo);
+
+    } else
+    {
+        setTimeout(() =>
+        {
+            cabecalho.style.backgroundColor = "rgba(214, 177, 104, 0.499)";
+            cabecalho.style.height = "7%";
+        }, tempoIntervalo);
+
+    }
+}, 1);
+
