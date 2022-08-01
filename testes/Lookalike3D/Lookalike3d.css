@@ -5,7 +5,8 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgb(234, 234, 234);
+    background-color: rgba(229, 255, 0, 0.135);
+    background-image: ;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: 0px 0px;
@@ -37,7 +38,7 @@ body {
     position: fixed;
     width: 100%;
     height: 7%;
-    background-color: rgba(233, 176, 63, 0.499);
+    background-color: rgba(255, 152, 27, 0.532);
     background-repeat: no-repeat;
     color: rgba(23, 0, 78, 0.509);
     opacity: 1;
@@ -73,5 +74,5 @@ body {
     width: 100%;
     height: auto;
     width: 100%;
-    border: 300px solid rgba(255, 255, 255, 0);
+    border: 200px solid rgba(255, 255, 255, 0);
 }
