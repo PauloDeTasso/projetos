@@ -21,6 +21,7 @@ function atualizarDistanciaImagens()
 }
 * /
 
+
 /*
 window.addEventListener('scroll', function (e)
 {
