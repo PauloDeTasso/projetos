@@ -82,3 +82,34 @@ setInterval(() =>
     }
 }, 1);
 
+function tamanhoJanela()
+{
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var larguraTela = screen.width;
+    var alturaTela = screen.height;
+
+    document.querySelector('.window-size').innerHTML = larguraJanela + 'x' + alturaJanela;
+    document.querySelector('.screen-size').innerHTML = larguraTela + 'x' + alturaTela;
+
+    distanciaImagens = alturaTela / 2;
+
+    var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
+
+    for (let index = 0; index < imagensProjetos3d.length; index++)
+    {
+        imagensProjetos3d[ index ].style.border = valorDistancia;
+
+        imagensProjetos3d[ index ].style.width = larguraJanela;
+        imagensProjetos3d[ index ].style.height = alturaTela;
+    }
+
+};
+
+tamanhoJanela();
+
+window.addEventListener('resize', function ()
+{
+    tamanhoJanela();
+});
