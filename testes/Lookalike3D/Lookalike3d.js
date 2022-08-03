@@ -101,7 +101,6 @@ function tamanhoJanela()
     for (let index = 0; index < imagensProjetos3d.length; index++)
     {
         imagensProjetos3d[ index ].style.border = valorDistancia;
-
         imagensProjetos3d[ index ].style.width = larguraJanela;
         imagensProjetos3d[ index ].style.height = alturaTela;
     }
