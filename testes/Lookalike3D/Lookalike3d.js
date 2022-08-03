@@ -1,5 +1,7 @@
 var imagensProjetos3d = document.getElementsByClassName('imagensProjetos3d');
 
+var cabecalho = document.getElementById('cabecalho');
+
 var distanciaImagens = 200;
 
 var ultimaDirecaoScroll = 0;
@@ -58,8 +60,11 @@ window.addEventListener('scroll', function (e)
 /////////
 
 var statusSistema = document.getElementById('statusSistema');
-var cabecalho = document.getElementById('cabecalho');
+
 var tempoIntervalo = 200;
+
+//
+
 
 setInterval(() =>
 {
@@ -96,7 +101,7 @@ function tamanhoJanela()
 
     distanciaImagens = alturaTela / 2;
 
-    var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
+    valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
     {
@@ -105,11 +110,23 @@ function tamanhoJanela()
         imagensProjetos3d[ index ].style.height = alturaTela;
     }
 
+    /*
+        var estiloStatus = window.getComputedStyle(cabecalho);
+    
+        var valorEstiloStatus = estiloStatus.getPropertyValue('height');
+    
+        var valorDistancia = valorEstiloStatus + ' solid rgba(255,255,255,0)';
+    
+        imagensProjetos3d[ 0 ].style.border = valorDistancia;
+    */
 };
 
-tamanhoJanela();
+//
+
+
+//
 
 window.addEventListener('resize', function ()
 {
     tamanhoJanela();
-});
+}, false);
