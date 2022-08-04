@@ -145,12 +145,11 @@ var primeiraImagem = 0;
 
 setInterval(() =>
 {
-    statusSistema.innerHTML = imagensProjetos3d[ 0 ].y;
+    statusSistema.innerHTML = imagensProjetos3d[ 0 ];
 }, 1);
 
 if (imagensProjetos3d[ primeiraImagem ].y < imagensProjetos3d[ primeiraImagem + 1 ].y)
 {
-
 
 } else if (imagensProjetos3d[ 0 ].y > -488)
 {
