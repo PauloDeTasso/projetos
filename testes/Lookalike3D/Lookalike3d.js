@@ -10,6 +10,8 @@ var distanciaImagens;
 
 var ultimaDirecaoScroll = 0;
 
+
+
 /*
 function atualizarDistanciaImagens()
 {
@@ -139,17 +141,18 @@ function tamanhoJanela()
 
 //statusSistema.innerHTML = imagensProjetos3d[ 0 ].height + "/" + imagensProjetos3d[ 0 ].width;
 
+var primeiraImagem = 0;
+
 setInterval(() =>
 {
-    statusSistema.innerHTML = imagensProjetos3d[ imagensProjetos3d.length - 1 ].x + "/"
-        + imagensProjetos3d[ imagensProjetos3d.length - 1 ].y;
+    statusSistema.innerHTML = imagensProjetos3d[ 0 ].y;
 }, 1);
 
-
-if (imagensProjetos3d[ imagensProjetos3d.length - 1 ].y == -488)
+if (imagensProjetos3d[ primeiraImagem ].y < imagensProjetos3d[ primeiraImagem + 1 ].y)
 {
-    rodape.style.height = "20%";
-} else if (imagensProjetos3d[ imagensProjetos3d.length - 1 ].y > -488)
+
+
+} else if (imagensProjetos3d[ 0 ].y > -488)
 {
 
 } else
