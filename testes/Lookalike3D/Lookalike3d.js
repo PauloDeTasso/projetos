@@ -1,5 +1,7 @@
 var imagensProjetos3d = document.getElementsByClassName('imagensProjetos3d');
 
+var imagemDeFundo01 = document.getElementById('imagemDeFundo01');
+
 var cabecalho = document.getElementById('cabecalho');
 
 var rodape = document.getElementById('rodape');
@@ -10,7 +12,11 @@ var distanciaImagens;
 
 var ultimaDirecaoScroll = 0;
 
+var primeiraImagem = 0;
 
+var statusSistema2 = document.getElementById('statusSistema2');
+
+var tempoIntervalo = 200;
 
 /*
 function atualizarDistanciaImagens()
@@ -64,10 +70,6 @@ window.addEventListener('scroll', function (e)
 
 /////////
 
-var statusSistema = document.getElementById('statusSistema');
-
-var tempoIntervalo = 200;
-
 //
 
 setInterval(() =>
@@ -86,10 +88,32 @@ setInterval(() =>
         setTimeout(() =>
         {
             cabecalho.style.backgroundColor = "rgba(214, 177, 104, 0.499)";
-            cabecalho.style.height = "7%";
+            cabecalho.style.height = "5%";
         }, tempoIntervalo);
 
     }
+
+    ////
+    /*
+        //IMAGEM EM BAIXO
+        if (imagensProjetos3d[ primeiraImagem ].y > 0)
+        {
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+    
+            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MENOR QUE alturaJanela " + alturaJanela;
+    
+            //IMAGEM EM CIMA
+        } else if (imagensProjetos3d[ primeiraImagem ].y < 0)
+        {
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/00.png')";
+    
+            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MAIOR QUE alturaJanela" + alturaJanela;
+    
+        } else
+        {
+            statusSistema.innerHTML = "IGUAL A alturaJanela";
+        }
+    */
 }, 1);
 
 //
@@ -144,32 +168,6 @@ function tamanhoJanela()
 
 //statusSistema.innerHTML = imagensProjetos3d[ 0 ].height + "/" + imagensProjetos3d[ 0 ].width;
 
-var primeiraImagem = 0;
-
-setInterval(() =>
-{
-    //IMAGEM EM BAIXO
-    if (imagensProjetos3d[ primeiraImagem ].y > 0)
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
-
-        statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MENOR QUE alturaJanela " + alturaJanela;
-
-        //IMAGEM EM CIMA
-    } else if (imagensProjetos3d[ primeiraImagem ].y < 0)
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/00.png')";
-
-        statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MAIOR QUE alturaJanela" + alturaJanela;
-
-    } else
-    {
-        statusSistema.innerHTML = "IGUAL A alturaJanela";
-    }
-}, 1);
-
-
-
 //
 tamanhoJanela();
 
@@ -177,3 +175,5 @@ window.addEventListener('resize', function ()
 {
     tamanhoJanela();
 }, false);
+
+//statusSistema2.innerHTML = ;
