@@ -78,7 +78,7 @@ setInterval(() =>
     {
         setTimeout(() =>
         {
-            cabecalho.style.backgroundColor = "rgba(233, 176, 63, 0.499)";
+            cabecalho.style.backgroundColor = "rgba(170, 70, 0, 0.5)";
             cabecalho.style.height = "12%";
 
         }, tempoIntervalo);

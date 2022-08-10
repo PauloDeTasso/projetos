@@ -9,7 +9,7 @@ html {
     background-image: url("../../imagens/Projetos3d/background01.png");
     /*background-image: url(#imagemDeFundo01);*/
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: auto auto;
     background-position: 0px 0px;
     background-origin: content-box;
     background-attachment: fixed;
