@@ -79,3 +79,9 @@ body {
     height: auto;
     border: 0px solid rgb(0, 0, 0, 0);
 }
+
+.menu {}
+
+#redesSociais {
+    padding: 2%;
+}
