@@ -7,7 +7,9 @@ html {
     height: auto;
     background-color: rgba(229, 255, 0, 0.135);
     background-image: url("../../imagens/Projetos3d/background01.png");
-    /*background-image: url(#imagemDeFundo01);*/
+    /*
+    background-image: url(#imagemDeFundo01);
+    */
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: 0px 0px;
@@ -65,15 +67,15 @@ body {
     height: auto;
     background-color: rgba(194, 140, 32, 0.24);
     color: rgb(255, 255, 255);
+    font-size: 70%;
 }
 
 .imagensProjetos3d {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    width: 100%;
     border: 0px solid rgb(0, 0, 0, 0);
 }
