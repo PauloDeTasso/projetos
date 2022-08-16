@@ -8,6 +8,8 @@ var rodape = document.getElementById('rodape');
 
 var htmlPrincipal = document.getElementById('htmlPrincipal');
 
+var imagemAbrirBotaoMenu = document.getElementById('imagemAbrirBotaoMenu');
+
 var distanciaImagens;
 
 var ultimaDirecaoScroll = 0;
@@ -168,7 +170,25 @@ function tamanhoJanela()
 
 //statusSistema.innerHTML = imagensProjetos3d[ 0 ].height + "/" + imagensProjetos3d[ 0 ].width;
 
-//
+function statusMenu()
+{
+    imagemAbrirBotaoMenu.style.width = "28px";
+    imagemAbrirBotaoMenu.style.height = "28px";
+}
+
+function statusMenuOff()
+{
+    imagemAbrirBotaoMenu.style.width = "27px";
+    imagemAbrirBotaoMenu.style.height = "27px";
+}
+
+function abrirFecharMenu()
+{
+    alert("Olá");
+}
+
+//////////////////////////////////////////
+
 tamanhoJanela();
 
 window.addEventListener('resize', function ()
