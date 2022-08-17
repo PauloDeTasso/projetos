@@ -31,6 +31,21 @@ body {
     color: rgb(76, 0, 255);
 }
 
+#statusSistema {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 50%;
+    background-color: rgba(255, 152, 27, 0.532);
+    background-repeat: no-repeat;
+    color: rgba(23, 0, 78, 0.509);
+    border: 100px solid rgba(0, 0, 0, 0);
+}
+
 #cabecalho {
     display: flex;
     flex-direction: row;
@@ -67,7 +82,7 @@ body {
     height: auto;
     background-color: rgba(194, 140, 32, 0.24);
     color: rgb(255, 255, 255);
-    font-size: 70%;
+    font-size: 50%;
 }
 
 .imagensProjetos3d {
