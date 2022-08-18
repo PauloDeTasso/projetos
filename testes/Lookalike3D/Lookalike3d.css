@@ -51,22 +51,24 @@ body {
 .menu {
     padding: 1%;
     opacity: 0;
+    color: aqua;
+    background-color: rgba(255, 152, 27, 0.532);
+    ;
 }
 
 #cabecalho {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     top: 0;
     left: 0;
     position: fixed;
     width: 100%;
-    height: 12%;
+    height: 10%;
     background-color: rgba(255, 152, 27, 0.532);
     background-repeat: no-repeat;
-    color: rgba(23, 0, 78, 0.509);
-    opacity: 1;
+    color: rgba(23, 0, 78, 1);
 }
 
 #centro {
@@ -79,9 +81,8 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
 
-    animation: testeAnimacao 5s;
-
     /*
+    animation: testeAnimacao 5s;
     animation-name: testeAnimacao;
     animation-duration: 20s;
     animation-iteration-count: infinite; "REPETIR ANIMAÇÃO"
@@ -108,7 +109,7 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    border: 0px solid rgb(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
 }
 
 #redesSociais {
@@ -123,7 +124,7 @@ body {
 @keyframes testeAnimacao {
     0% {
 
-        opacity: 1;
+        opacity: 0;
 
         transform: scale(1);
 
@@ -148,8 +149,9 @@ body {
 
         transform: translateX(0%);
     }
+}
 
-    /*
+/*
 
     @keyframes testeAnimacao
     {
@@ -164,4 +166,46 @@ body {
     }
 
     */
-}
+
+/**
+ * This is a simplified version without
+ * vendor prefixes. With them included
+ * (which you will need), things get far
+ * more verbose!
+ 
+ 
+.box {
+
+    animation-name: movingBox;  
+    
+    animation-duration: 2300ms;  
+    
+    animation-iteration-count: infinite;  
+    
+    animation-direction: alternate;
+  }
+  
+  @keyframes movingBox {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.4;
+    }
+  
+    25% {
+      opacity: 0.9;
+    }
+  
+    50% {
+      transform: translate(150px, 200px);
+      opacity: 0.2;
+    }
+  
+    100% {
+      transform: translate(40px, 30px);
+      opacity: 0.8;
+    }
+  }
+
+  /////
+
+  */
