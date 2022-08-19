@@ -7,9 +7,11 @@ html {
     height: auto;
     background-color: rgba(229, 255, 0, 0.135);
     background-image: url("../../imagens/Projetos3d/background01.png");
+
     /*
     background-image: url(#imagemDeFundo01);
     */
+
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 0px 0px;
@@ -79,13 +81,13 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
 
+    animation: testeAnimacao 3s;
     /*
-    animation: testeAnimacao 5s;
     animation-name: testeAnimacao;
-    animation-duration: 20s;
-    animation-iteration-count: infinite; "REPETIR ANIMAÇÃO"
-*/
-
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    */
 }
 
 #rodape {
@@ -132,7 +134,7 @@ body {
 
     50% {
 
-        opacity: .5;
+        opacity: 1;
 
         transform: scale(0.9);
 
@@ -141,7 +143,7 @@ body {
 
     100% {
 
-        opacity: 1;
+        opacity: .7;
 
         transform: scale(1);
 
@@ -207,3 +209,136 @@ body {
   /////
 
   */
+
+/*
+  //////////////////////////////ANIMAÇÃO:
+
+////TRANSFORM:
+
+//SCALE:
+
+        transform: scale(1); "TRANSFORMA TODA A ESCALA - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scaleX(2); "TRANSFORMA A ESCALA DO EIXO X - EX VALORES: 0, 0.5,1,2,10" 
+
+        transform: scaleY(0.5); "TRANSFORMA A ESCALA DO EIXO Y - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scaleZ(3); "TRANSFORMA A ESCALA DO EIXO Z - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scale3d(2.5,1,0.3); "TRANSFORMA AS ESCALA DO EIXO X,Y,Z - EX VALORES: 0, 0.5,1,2,10"
+
+//TRANSLATE:
+
+        transform: translate(100px, -200px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X E Y.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translateX(-35%);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X.
+        EX.: "100%, 100px, 2em, 3in."   
+
+        transform: translateY(-300px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO Y.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translateZ(-300px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO Z.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translate3d(12px, 50%, 3em);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X, Y, Z.
+        EX.: "100%, 100px, 2em, 3in."
+
+//ROTATE:
+
+        transform: rotate(45deg);
+        "ROTACIONA TODO O ELEMENTO 45 GRAUS.
+        EX.: (45deg = 45 graus), OU (-45deg = -45 graus),
+         (0.5turn = MEIA VOLTA - OU 180 GRAUS - SENTIDO HORARIO),
+        (-0.25turn - 90 GRAUS - SENTIDO ANTI HORARIO)" 
+
+        transform: rotateX(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO X.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotateY(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO Y.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotateZ(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO Y.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotate3d(1, 2.0, 3.0, 10deg);
+        "ROTACIONA O ELEMENTO NO EIXO X,Y E Z.
+        EX.: (45deg), (0.5turn).
+
+//SKEW:
+
+        transform: skew(20deg);
+        "INCLINA 20 GRAUS NO EIXO X"
+        EX.: (90deg), (.75turn) - OBS.: UM VALOR PASSADO.
+
+        transform: skew(45deg, 90deg);
+        "INCLINA 45 GRAUS NO EIXO X, E 90 GRAUS NO EIXO Y"
+        EX.: (90deg), (.75turn) - OBS.: DOIS VALORES PASSADOS.
+
+        transform: skewX(20deg);
+        "INCLINA 20 GRAUS NO EIXO X"
+        EX.: (90deg), (.75turn)
+
+        transform: skewY(-20deg);
+        "INCLINA 20 GRAUS NO EIXO Y"
+        EX.: (90deg), (-.75turn)
+
+//PERSPECTIVE: 
+
+        transform: perspective(300px);
+        "ATRIBUI UMA PERSPECTIVA 3D AO ELEMENTO"
+        EX.: (150px), () - OBS.: UM VALOR PASSADO.
+
+    
+        /////////////////ESTILOS DE LINKS:
+
+/* LINK NAO VISITADO */
+a:link {
+    color: rgb(0, 6, 191);
+}
+
+/* LINK VISITADO */
+a:visited {
+    color: rgb(63, 0, 158);
+}
+
+/* MOUSE EM CIMA DO LINK */
+a:hover {
+    color: rgb(0, 255, 255);
+}
+
+/* LINK SELECIONADO */
+a:active {
+    color: yellow;
+}
+
+
+
+.resposta3 {
+    border: solid black 3px;
+    width: 400px;
+    height: 200px;
+    background-image: url(../../imagens/outros/03.png);
+}
+
+.voando {
+    animation: voar 1s linear alternate infinite;
+}
+
+@keyframes voar {
+    0% {
+        margin-top: -50px;
+    }
+
+    100% {
+        margin-top: 30px;
+    }
+}

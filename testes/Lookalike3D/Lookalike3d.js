@@ -6,6 +6,8 @@ var imagemDeFundo01 = document.getElementById('imagemDeFundo01');
 
 var cabecalho = document.getElementById('cabecalho');
 
+var centro = document.getElementById('centro');
+
 var rodape = document.getElementById('rodape');
 
 var htmlPrincipal = document.getElementById('htmlPrincipal');
@@ -505,18 +507,29 @@ cabecalho.animate([
     iterations: Infinity
 });
  
- 
- 
+ */
+
+/////
+/*
+var repeticao = 0
+
+centro.addEventListener('animationiteration', () =>
+{
+    alert("repetiu " + ++repeticao + " vezes. ");
+});
+
+centro.addEventListener('animationstart', () =>
+{
+    alert("começou");
+});
+
+centro.addEventListener('animationend', animacaoFinalizada);
+
 function animacaoFinalizada()
 {
     alert("A animação foi finalizada!");
 }
- 
 */
-/////
-
-
-
 //////////////////////////////////////////
 
 tamanhoJanela();
@@ -529,3 +542,27 @@ window.addEventListener('resize', function ()
 }, false);
 
 //statusSistema2.innerHTML = ;
+
+/*
+var menu = document.getElementById('menu');
+
+var mexer = false;           // variavel de controle de clique no botao
+
+function action()
+{
+    mexer = !mexer;
+    // nega o valor conforme o clique no botao
+
+    if (mexer)
+    {
+        menu.classList.toggle('voando');
+    } else
+    {
+        menu.classList.remove('voando');
+    }
+}
+*/
+
+
+
+
