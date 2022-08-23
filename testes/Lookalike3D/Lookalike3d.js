@@ -207,6 +207,48 @@ function scrollImagens()
     }
 };
 
+//
+
+var botoes = document.getElementsByName("tema");
+
+for (let index = 0; index < botoes.length; index++)
+{
+    botoes[ index ].addEventListener('change', checar, false);
+}
+
+function checar()
+{
+    let i = 0;
+    for (i in botoes)
+        if (botoes[ i ].checked)
+        {
+            switch (botoes[ i ].value)
+            {
+                case "A":
+                    htmlPrincipal.style.backgroundColor = "rgba(255, 191, 0, 0.332)";
+
+                    rodape.style.backgroundColor = "rgb(111, 0, 255);";
+
+                    rodape.style.color = "rgb(111, 0, 255);";
+                    break;
+
+                case "B":
+                    htmlPrincipal.style.backgroundColor = "rgba(0, 0, 0, 1)";
+
+                    rodape.style.backgroundColor = "rgb(111, 0, 255);";
+
+                    rodape.style.color = "rgb(111, 0, 255);";
+                    break;
+
+                default:
+                    statusSistema2.innerHTML = "THEME ERRO"
+            }
+        } else
+        {
+
+        }
+};
+
 //////////////////////////////////////////
 
 tamanhoJanela();
