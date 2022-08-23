@@ -26,88 +26,6 @@ var statusSistema2 = document.getElementById('statusSistema2');
 
 var tempoIntervalo = 100;
 
-/*
-function atualizarDistanciaImagens()
-{
-    /*
-    var estiloStatus = window.getComputedStyle(imagensProjetos3d[ 1 ]);
-    var valorEstiloStatus = estiloStatus.getPropertyValue('border');
-*/
-/*
-    var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
-
-    for (let index = 0; index < imagensProjetos3d.length; index++)
-    {
-        imagensProjetos3d[ index ].style.border = valorDistancia;
-    }
-}
-* /
-
-/*
-window.addEventListener('scroll', function (e)
-{
-    // mesma posição
-    //if (e.scrollY === ultimaDirecaoScroll) return;
-
-    var resultado = this.scrollY < ultimaDirecaoScroll ? "Cima" : "Baixo"
-
-    if (e.scrollY === ultimaDirecaoScroll)
-    {
-        resultado = "Igual"
-    }
-
-    ultimaDirecaoScroll = this.scrollY;
-
-    if (resultado == "Cima")
-    {
-        distanciaImagens -= 1;
-        atualizarDistanciaImagens();
-    } else if (resultado == "Baixo")
-    {
-        distanciaImagens += 1;
-
-        atualizarDistanciaImagens();
-    } else
-    {
-        distanciaImagens = distanciaImagens;
-    }
-
-}, false);
-*/
-
-/////////
-
-//
-/*
-setInterval(() =>
-{
-   
-    ////
-    /*
-        //IMAGEM EM BAIXO
-        if (imagensProjetos3d[ primeiraImagem ].y > 0)
-        {
-            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
-    
-            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MENOR QUE alturaJanela " + alturaJanela;
-    
-            //IMAGEM EM CIMA
-        } else if (imagensProjetos3d[ primeiraImagem ].y < 0)
-        {
-            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/00.png')";
-    
-            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MAIOR QUE alturaJanela" + alturaJanela;
-    
-        } else
-        {
-            statusSistema.innerHTML = "IGUAL A alturaJanela";
-        }
-  */
-/*
-}, 1);
-*/
-//
-
 var larguraJanela = window.outerWidth;
 var alturaJanela = window.outerHeight;
 
@@ -123,17 +41,10 @@ function tamanhoJanela()
 {
     //statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;;
 
-    /*
-    document.querySelector('.window-size').innerHTML = larguraJanela + 'x' + alturaJanela;
-
-    document.querySelector('.screen-size').innerHTML = larguraTela + 'x' + alturaTela;
-*/
     distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
     {
-        //imagensProjetos3d[ index ].style.border = distanciaImagens;
-
         imagensProjetos3d[ index ].style.borderStyle = "solid";
 
         imagensProjetos3d[ index ].style.borderColor = "rgba(0,0,0,0)";
@@ -145,21 +56,9 @@ function tamanhoJanela()
         imagensProjetos3d[ index ].style.height = alturaJanela;
     }
 
-    /*
-        var estiloStatus = window.getComputedStyle(cabecalho);
-    
-        var valorEstiloStatus = estiloStatus.getPropertyValue('height');
-    
-        var valorDistancia = valorEstiloStatus + ' solid rgba(255,255,255,0)';
-    
-        imagensProjetos3d[ 0 ].style.border = valorDistancia;
-    */
-
 };
 
 //
-
-//statusSistema.innerHTML = imagensProjetos3d[ 0 ].height + "/" + imagensProjetos3d[ 0 ].width;
 
 function statusMenu()
 {
@@ -198,24 +97,6 @@ function abrirFecharMenu()
             menu[ i ].style.opacity = "1";
         }
     }
-
-    /*
-    cabecalho.animate([
-        // keyframes
-        {
-            transform: 'translateY(0px)'
-        },
-
-        {
-            transform: 'translateY(300px)'
-        }
-    ], {
-        // timing options
-        duration: 1000,
-        //iterations: Infinity
-    });
-*/
-
 }
 
 function scrollImagens()
@@ -278,29 +159,6 @@ function scrollImagens()
 
     var topoDaImagem9 = imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height / 2;
 
-    /*
-        statusSistema.innerHTML =
-            "//screen.availWidth: " + screen.availWidth +
-            "\n//screen.availHeight: " + screen.availHeight +
-            "\n//screen.width..: " + screen.width +
-            "\n//screen.heigh: " + screen.height +
-            "\n//window.outerWidth: " + window.outerWidth +
-            "\n/window.outerHeight: " + window.outerHeight +
-            "\n//window.innerWidth: " + window.innerWidth +
-            "\n//window.innerHeight: " + window.innerHeight +
-            "\n//imagensProjetos3d[0].width: " + imagensProjetos3d[ 0 ].width +
-            "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
-            "\n//imagensProjetos3d[0].naturalWidth: " + imagensProjetos3d[ 0 ].naturalWidth +
-            "\n//imagensProjetos3d[0].naturalHeight: " + imagensProjetos3d[ 0 ].naturalHeight +
-            "\n//imagensProjetos3d[0].x: " + imagensProjetos3d[ 0 ].x +
-            "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
-            "\n/window.outerHeight: " + window.outerHeight +
-            "\n//window.innerHeight: " + -window.innerHeight +
-            "\n//imagensProjetos3d[0].y: " + imagensProjetos3d[ 0 ].y +
-            "\n//topoDaImagem0:.... " + topoDaImagem0 +
-            "\n//imagensProjetos3d[1].y: " + imagensProjetos3d[ 1 ].y +
-            "\n//topoDaImagem1: " + topoDaImagem1;
-    */
     //
 
     if (topoDaImagem0 < 0 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
@@ -347,8 +205,142 @@ function scrollImagens()
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
     }
-
 };
+
+//////////////////////////////////////////
+
+tamanhoJanela();
+
+window.addEventListener('scroll', scrollImagens, false);
+
+window.addEventListener('resize', function ()
+{
+    tamanhoJanela();
+}, false);
+
+//statusSistema2.innerHTML = ;
+
+/*
+var menu = document.getElementById('menu');
+
+var mexer = false;           // variavel de controle de clique no botao
+
+function action()
+{
+    mexer = !mexer;
+    // nega o valor conforme o clique no botao
+
+    if (mexer)
+    {
+        menu.classList.toggle('voando');
+    } else
+    {
+        menu.classList.remove('voando');
+    }
+}
+*/
+
+
+/*
+function atualizarDistanciaImagens()
+{
+    /*
+    var estiloStatus = window.getComputedStyle(imagensProjetos3d[ 1 ]);
+    var valorEstiloStatus = estiloStatus.getPropertyValue('border');
+*/
+/*
+    var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
+
+    for (let index = 0; index < imagensProjetos3d.length; index++)
+    {
+        imagensProjetos3d[ index ].style.border = valorDistancia;
+    }
+}
+* /
+
+/*
+window.addEventListener('scroll', function (e)
+{
+    // mesma posição
+    //if (e.scrollY === ultimaDirecaoScroll) return;
+
+    var resultado = this.scrollY < ultimaDirecaoScroll ? "Cima" : "Baixo"
+
+    if (e.scrollY === ultimaDirecaoScroll)
+    {
+        resultado = "Igual"
+    }
+
+    ultimaDirecaoScroll = this.scrollY;
+
+    if (resultado == "Cima")
+    {
+        distanciaImagens -= 1;
+        atualizarDistanciaImagens();
+    } else if (resultado == "Baixo")
+    {
+        distanciaImagens += 1;
+
+        atualizarDistanciaImagens();
+    } else
+    {
+        distanciaImagens = distanciaImagens;
+    }
+
+}, false);
+*/
+
+/////////
+
+//
+/*
+setInterval(() =>
+{
+
+    ////
+    /*
+        //IMAGEM EM BAIXO
+        if (imagensProjetos3d[ primeiraImagem ].y > 0)
+        {
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+
+            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MENOR QUE alturaJanela " + alturaJanela;
+
+            //IMAGEM EM CIMA
+        } else if (imagensProjetos3d[ primeiraImagem ].y < 0)
+        {
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/00.png')";
+
+            statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MAIOR QUE alturaJanela" + alturaJanela;
+
+        } else
+        {
+            statusSistema.innerHTML = "IGUAL A alturaJanela";
+        }
+  */
+/*
+}, 1);
+*/
+//
+
+
+/*
+cabecalho.animate([
+    // keyframes
+    {
+        transform: 'translateY(0px)'
+    },
+
+    {
+        transform: 'translateY(300px)'
+    }
+], {
+    // timing options
+    duration: 1000,
+    //iterations: Infinity
+});
+*/
+
 
 ////backup funcao scrool
 /*
@@ -409,7 +401,7 @@ function scrollImagens()
         "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
         "\n//imagensProjetos3d[0].naturalWidth: " + imagensProjetos3d[ 0 ].naturalWidth +
         "\n//imagensProjetos3d[0].naturalHeight: " + imagensProjetos3d[ 0 ].naturalHeight +
-        "\n//imagensProjetos3d[0].x: " + imagensProjetos3d[ 0 ].x + 
+        "\n//imagensProjetos3d[0].x: " + imagensProjetos3d[ 0 ].x +
         "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
         "\n/window.outerHeight: " + window.outerHeight +
         "\n//window.innerHeight: " + -window.innerHeight +
@@ -472,23 +464,23 @@ function scrollImagens()
 var elementosDaClasse = document.getElementsByClassName('elementosDaClasse'),
     tamanhoArrai = elementosDaClasse.length,
     i;
- 
+
 for (i = 0; i < tamanhoArrai; i++)
 {
     elementosDaClasse[ i ].classList.add('move');
 }
- 
+
 //var elementosDaClasse = document.querySelector('.box');
- 
+
 elementosDaClasse.addEventListener('transitionend', animacaoFinalizada, false);
- 
+
 var elementosDaClasse = document.querySelector('.elementosDaClasse');
- 
+
 var animation = elementosDaClasse.animate([
     { transform: 'translate(0)' },
     { transform: 'translate(150px, 200px)' }
 ], 500);
- 
+
 animation.addEventListener('finish', function ()
 {
     elementosDaClasse.style.transform = 'translate(150px, 200px)';
@@ -506,7 +498,7 @@ cabecalho.animate([
     duration: 1000,
     iterations: Infinity
 });
- 
+
  */
 
 /////
@@ -530,39 +522,28 @@ function animacaoFinalizada()
     alert("A animação foi finalizada!");
 }
 */
-//////////////////////////////////////////
 
-tamanhoJanela();
-
-window.addEventListener('scroll', scrollImagens, false);
-
-window.addEventListener('resize', function ()
-{
-    tamanhoJanela();
-}, false);
-
-//statusSistema2.innerHTML = ;
 
 /*
-var menu = document.getElementById('menu');
-
-var mexer = false;           // variavel de controle de clique no botao
-
-function action()
-{
-    mexer = !mexer;
-    // nega o valor conforme o clique no botao
-
-    if (mexer)
-    {
-        menu.classList.toggle('voando');
-    } else
-    {
-        menu.classList.remove('voando');
-    }
-}
+    statusSistema.innerHTML =
+        "//screen.availWidth: " + screen.availWidth +
+        "\n//screen.availHeight: " + screen.availHeight +
+        "\n//screen.width..: " + screen.width +
+        "\n//screen.heigh: " + screen.height +
+        "\n//window.outerWidth: " + window.outerWidth +
+        "\n/window.outerHeight: " + window.outerHeight +
+        "\n//window.innerWidth: " + window.innerWidth +
+        "\n//window.innerHeight: " + window.innerHeight +
+        "\n//imagensProjetos3d[0].width: " + imagensProjetos3d[ 0 ].width +
+        "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
+        "\n//imagensProjetos3d[0].naturalWidth: " + imagensProjetos3d[ 0 ].naturalWidth +
+        "\n//imagensProjetos3d[0].naturalHeight: " + imagensProjetos3d[ 0 ].naturalHeight +
+        "\n//imagensProjetos3d[0].x: " + imagensProjetos3d[ 0 ].x +
+        "\n//imagensProjetos3d[0].height: " + imagensProjetos3d[ 0 ].height +
+        "\n/window.outerHeight: " + window.outerHeight +
+        "\n//window.innerHeight: " + -window.innerHeight +
+        "\n//imagensProjetos3d[0].y: " + imagensProjetos3d[ 0 ].y +
+        "\n//topoDaImagem0:.... " + topoDaImagem0 +
+        "\n//imagensProjetos3d[1].y: " + imagensProjetos3d[ 1 ].y +
+        "\n//topoDaImagem1: " + topoDaImagem1;
 */
-
-
-
-
