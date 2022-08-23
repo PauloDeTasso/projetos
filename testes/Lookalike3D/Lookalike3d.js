@@ -12,6 +12,8 @@ var rodape = document.getElementById('rodape');
 
 var htmlPrincipal = document.getElementById('htmlPrincipal');
 
+var secaoTemas = document.getElementById('secaoTemas');
+
 var imagemAbrirBotaoMenu = document.getElementById('imagemAbrirBotaoMenu');
 
 var statusSistema = document.getElementById('statusSistema');
@@ -82,6 +84,8 @@ function abrirFecharMenu()
     {
         cabecalho.style.height = "10%"
 
+        secaoTemas.style.visibility = "hidden"
+
         for (let i = 0; i < menu.length; i++) 
         {
             menu[ i ].style.opacity = "0";
@@ -91,6 +95,7 @@ function abrirFecharMenu()
         cabecalho.style.height = "400px";
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
+        secaoTemas.style.visibility = "visible"
 
         for (let i = 0; i < menu.length; i++) 
         {
@@ -132,6 +137,7 @@ function scrollImagens()
             {
                 menu[ i ].style.opacity = "0";
             }
+            secaoTemas.style.visibility = "hidden"
 
         }, tempoIntervalo);
 
