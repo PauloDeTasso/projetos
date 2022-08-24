@@ -43,7 +43,7 @@ body {
     left: 0;
     position: fixed;
     width: 100%;
-    height: 10%;
+    height: 35px;
     background-color: rgba(255, 152, 27, 0.532);
     background-repeat: no-repeat;
     color: rgba(23, 0, 78, 1);
@@ -146,10 +146,62 @@ a:active {
 /*/////////////*/
 
 .abrirMenu {
-    animation: abrirMenuCss 1s;
+    animation: abrirMenuCss 3s;
 }
 
 @keyframes abrirMenuCss {
+    0% {
+        opacity: 0;
+        height: 35px;
+        align-items: flex-start;
+        /*
+        background-image: url(../../icones/2.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 0px 0px;
+        background-origin: content-box;
+        background-attachment: fixed;
+        background-position: center;
+        */
+    }
+
+    100% {
+        opacity: 1;
+        height: 200px;
+        align-items: flex-start;
+        /*
+        background-image: url(../../icones/4.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 0px 0px;
+        background-origin: content-box;
+        background-attachment: fixed;
+        background-position: center;
+*/
+    }
+}
+
+.fecharMenu {
+    animation: fecharMenuCss 3s;
+}
+
+@keyframes fecharMenuCss {
+    0% {
+        opacity: 1;
+        height: 200px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 35px;
+    }
+}
+
+.abrirMenuImagemIcone {
+    animation: abrirMenuImagemIconeCss 1s;
+}
+
+@keyframes abrirMenuImagemIconeCss {
     0% {
         opacity: 1;
         /*
