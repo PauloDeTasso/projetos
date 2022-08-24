@@ -16,7 +16,13 @@ var secaoTemas = document.getElementById('secaoTemas');
 
 var imagemAbrirBotaoMenu = document.getElementById('imagemAbrirBotaoMenu');
 
+var botaoMenu = document.getElementById('botaoMenu');
+
 var statusSistema = document.getElementById('statusSistema');
+
+var imagemBotaoMenu = document.getElementById('imagemBotaoMenu');
+
+var botoesCabecalho = document.getElementById('botoesCabecalho');
 
 var distanciaImagens;
 
@@ -599,13 +605,16 @@ function animacaoFinalizada()
 
 /////////////
 
-var balao = document.getElementById('balao');
-
 var mexer = false;
 
-function acaoAlternada() 
+function playImagens() 
 {
-    statusSistema.classList.toggle('voando');
+    htmlPrincipal.classList.toggle('playImagens');
+}
+
+function abrirMenu() 
+{
+    imagemBotaoMenu.classList.toggle('abrirMenu');
 }
 
 function acaoUnica() 
@@ -614,14 +623,14 @@ function acaoUnica()
 
     if (mexer)
     {
-        statusSistema.classList.add('voando');
+        cabecalho.classList.add('abrirMenu');
 
     } else
     {
-        statusSistema.classList.remove('voando');
+        cabecalho.classList.remove('abrirMenu');
     }
 }
 
-statusSistema.innerHTML = 1;
+statusSistema.innerHTML = '';
 
-statusSistema.addEventListener('click', acaoAlternada, false);
+imagemBotaoMenu.addEventListener('click', abrirMenu, false);
