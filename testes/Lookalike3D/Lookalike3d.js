@@ -41,8 +41,9 @@ var alturaTela = screen.height;
 
 function tamanhoJanela()
 {
-    //statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;;
-
+    /*
+    statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;
+*/
     distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
@@ -595,3 +596,32 @@ function animacaoFinalizada()
         "\n//imagensProjetos3d[1].y: " + imagensProjetos3d[ 1 ].y +
         "\n//topoDaImagem1: " + topoDaImagem1;
 */
+
+/////////////
+
+var balao = document.getElementById('balao');
+
+var mexer = false;
+
+function acaoAlternada() 
+{
+    statusSistema.classList.toggle('voando');
+}
+
+function acaoUnica() 
+{
+    mexer = !mexer;
+
+    if (mexer)
+    {
+        statusSistema.classList.add('voando');
+
+    } else
+    {
+        statusSistema.classList.remove('voando');
+    }
+}
+
+statusSistema.innerHTML = 1;
+
+statusSistema.addEventListener('click', acaoAlternada, false);
