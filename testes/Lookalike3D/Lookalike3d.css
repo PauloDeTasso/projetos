@@ -5,16 +5,33 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(255, 191, 0, 0.332);
+    background-color: rgba(255, 191, 0, 0.448);
     background-image: url("../../imagens/Projetos3d/background01.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: 0px 0px;
+    /*
     background-origin: content-box;
+    */
     background-attachment: fixed;
     background-position: center;
-    color: rgb(76, 0, 255);
-    font-family: 'Courier New', Courier, monospace;
+}
+
+#secaoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#secaoCabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 body {
@@ -24,8 +41,17 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0);
     color: rgb(76, 0, 255);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoRodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .menu {
@@ -39,8 +65,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     position: fixed;
     width: 100%;
     height: 35px;
@@ -56,8 +82,7 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 #rodape {
@@ -79,7 +104,6 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    border: 0px solid rgba(0, 0, 0, 0);
 }
 
 #redesSociais {
@@ -87,8 +111,8 @@ body {
 }
 
 #botaoMenu {
-    background-color: rgba(0, 0, 0, 0);
     border: 0px solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
 }
 
 #secaoTemas {
@@ -96,8 +120,8 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    top: 0;
-    right: 0%;
+    top: 0px;
+    right: 70px;
     position: relative;
     width: auto;
     height: auto;
@@ -107,7 +131,6 @@ body {
 }
 
 #imagemBotaoMenu {
-    opacity: 1;
     content: url("../../icones/menu02.png");
     /*
     background-repeat: no-repeat;
@@ -119,6 +142,8 @@ body {
     */
     width: 25px;
     height: 25px;
+    top: 0px;
+    right: 30px;
 }
 
 /*/////////////////ESTILOS DE LINKS:
@@ -230,7 +255,7 @@ a:active {
 }
 
 .playImagens {
-    animation: playImagensCss 30s;
+    animation: playImagensCss 20s;
 }
 
 @keyframes playImagensCss {
@@ -279,12 +304,46 @@ a:active {
     }
 }
 
+;
+
+
 /* REFLEXOS NA IMAGEM:
 img {
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
 }
 
 /* //////////////////////////////ANIMAÇÃO:
+
+////ANIMATION:
+
+        animation-name: play; 
+        "O NOME DO KEYFRAME DA ANIMAÇÃO A SER CHAMADA"
+        EX.: STRINGS.
+
+        animation-duration: 1s; 
+         "O TEMPO DA ANIMAÇÃO".
+        EX.: 2s, 500ms.
+
+        animation-timing-function: ease-in;
+        "O TIPO DE VELOCIDADE DA ANIMAÇÃO"
+        EX.: linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(int,start|end), cubic-bezier(n,n,n,n), initial, inherit.
+
+        animation-delay: 1s;
+        "O ATRASO PARA COMEÇAR A ANIMAÇÃO".
+        EX.: 2s, 500ms. 
+ 
+        animation-iteration-count: 3;
+        "O NUMERO DE VEZES PARA REPETIR A ANIMAÇÃO".
+        EX.: 2, 2.5, 5, 20, infinity.
+
+        animation-direction: normal;
+        "DETERMINA A DIREÇÃO DA ANIMAÇÃO, PARA FRENTE, PARA TRAZ"
+        EX.: normal, reverse, alternate, alternate-reverse, initial, inherit;
+        OBS.: DEFINA "infinity" PARA "alternate"
+        
+        animation-fill-mode: backwards;
+        "DEFINE O QUE ACONTECE QUANDO TERMINA A ANIMAÇÃO"
+        EX.: none, backwards, forwards, none, initial, inherit.
 
 ////TRANSFORM:
 
@@ -410,7 +469,7 @@ length, retorna a quantidade de classes naquele elemento.
     background-color: rgba(255, 152, 27, 0.532);
     background-repeat: no-repeat;
     color: rgba(23, 0, 78, 0.509);
-    border: 100px solid rgba(0, 0, 0, 0);
+    border: 100px solid rgba(0, 0, 0, 0); 
 }
 
 */

@@ -62,7 +62,7 @@ function tamanhoJanela()
 
         imagensProjetos3d[ index ].style.width = larguraJanela;
 
-        imagensProjetos3d[ index ].style.height = alturaJanela;
+        // imagensProjetos3d[ index ].style.height = alturaJanela;
     }
 
 };
@@ -144,7 +144,7 @@ function scrollImagens()
 
     //
 
-    if (topoDaImagem0 < 0 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
+    if (topoDaImagem0 < -50 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/10.png')";
 
@@ -208,7 +208,7 @@ function checar()
             switch (botoes[ i ].value)
             {
                 case "A":
-                    htmlPrincipal.style.backgroundColor = "rgba(255, 191, 0, 0.332)";
+                    htmlPrincipal.style.backgroundColor = "rgba(255, 191, 0, 0.448)";
 
                     rodape.style.backgroundColor = "rgb(111, 0, 255);";
 
