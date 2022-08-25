@@ -6,7 +6,7 @@ var imagemDeFundo01 = document.getElementById('imagemDeFundo01');
 
 var cabecalho = document.getElementById('cabecalho');
 
-var centro = document.getElementById('centro');
+var secaoImagens = document.getElementById('secaoImagens');
 
 var rodape = document.getElementById('rodape');
 
@@ -25,6 +25,8 @@ var imagemBotaoMenu = document.getElementById('imagemBotaoMenu');
 var botoesCabecalho = document.getElementById('botoesCabecalho');
 
 var distanciaImagens;
+
+var menuAberto = false;
 
 var ultimaDirecaoScroll = 0;
 
@@ -50,19 +52,23 @@ function tamanhoJanela()
     /*
     statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;
 */
-    distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
+    //distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
     {
+
         imagensProjetos3d[ index ].style.borderStyle = "solid";
 
         imagensProjetos3d[ index ].style.borderColor = "rgba(0,0,0,0)";
 
+        imagensProjetos3d[ index ].style.opacity = 1;
+
         imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
 
-        imagensProjetos3d[ index ].style.width = larguraJanela;
+        imagensProjetos3d[ index ].style.width = "100%";
 
-        // imagensProjetos3d[ index ].style.height = alturaJanela;
+        imagensProjetos3d[ index ].style.height = "auto";
+
     }
 
 };
@@ -88,15 +94,12 @@ function scrollImagens()
     {
         setTimeout(() =>
         {
-
-            //cabecalho.style.opacity = ".5";
             cabecalho.style.height = "50px";
-            cabecalho.style.alignItems = "center"
-            // cabecalho.style.backgroundColor = "rgba(255, 152, 27, 0.532)";
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
 
             for (let i = 0; i < menu.length; i++) 
             {
-                menu[ i ].style.opacity = "0";
+                menu[ i ].style.visibility = "hidden";
             }
 
         }, tempoIntervalo);
@@ -105,14 +108,12 @@ function scrollImagens()
     {
         setTimeout(() =>
         {
-            //cabecalho.style.opacity = "0";
             cabecalho.style.height = "35px";
             cabecalho.style.alignItems = "flex-start"
-            //cabecalho.style.backgroundColor = "rgba(255, 152, 27, 0.5)";
 
             for (let i = 0; i < menu.length; i++) 
             {
-                menu[ i ].style.opacity = "0";
+                menu[ i ].style.visibility = "hidden";
             }
             secaoTemas.style.visibility = "hidden"
 
@@ -186,7 +187,7 @@ function scrollImagens()
 
     } else
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+        //  htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
     }
 };
 
@@ -244,27 +245,6 @@ window.addEventListener('resize', function ()
 }, false);
 
 //statusSistema2.innerHTML = ;
-
-/*
-var menu = document.getElementById('menu');
-
-var mexer = false;           // variavel de controle de clique no botao
-
-function action()
-{
-    mexer = !mexer;
-    // nega o valor conforme o clique no botao
-
-    if (mexer)
-    {
-        menu.classList.toggle('voando');
-    } else
-    {
-        menu.classList.remove('voando');
-    }
-}
-*/
-
 
 /*
 function atualizarDistanciaImagens()
@@ -530,17 +510,17 @@ cabecalho.animate([
 /*
 var repeticao = 0
 
-centro.addEventListener('animationiteration', () =>
+secaoImagens.addEventListener('animationiteration', () =>
 {
     alert("repetiu " + ++repeticao + " vezes. ");
 });
 
-centro.addEventListener('animationstart', () =>
+secaoImagens.addEventListener('animationstart', () =>
 {
     alert("começou");
 });
 
-centro.addEventListener('animationend', animacaoFinalizada);
+secaoImagens.addEventListener('animationend', animacaoFinalizada);
 
 function animacaoFinalizada()
 {
@@ -583,43 +563,53 @@ function abrirFecharMenu()
 
     if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "50px")
     {
+        menuAberto = true;
         abrirMenu();
     } else 
     {
+        menuAberto = false;
         fecharMenu();
     }
 }
 
 function abrindoFechandoMenu()
 {
+    /*
     var estiloCabecalho = window.getComputedStyle(cabecalho);
     var propriedadeCabecalho = estiloCabecalho.getPropertyValue('height');
+    */
 
+    /*
     if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "50px")
+    */
+    alert(menuAberto)
+    if (menuAberto = true)
     {
+
         cabecalho.style.height = "200px";
-        cabecalho.style.opacity = "1";
+        secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
-        secaoTemas.style.visibility = "visible"
+        cabecalho.style.opacity = 1;
 
         for (let i = 0; i < menu.length; i++) 
         {
-            menu[ i ].style.opacity = "1";
+            menu[ i ].style.visibility = "visible";
+            menu[ i ].style.opacity = 1;
         }
     } else
     {
         cabecalho.style.height = "35px"
+        cabecalho.style.opacity = "1";
+        cabecalho.style.alignItems = "flex-start";
 
         secaoTemas.style.visibility = "hidden"
 
         for (let i = 0; i < menu.length; i++) 
         {
-            menu[ i ].style.opacity = "0";
+            menu[ i ].style.visibility = "hidden";
         }
     }
 }
-
-var mexer = false;
 
 function playImagens() 
 {
@@ -643,14 +633,16 @@ function fecharMenu()
     cabecalho.classList.add('fecharMenu');
 }
 
-statusSistema.innerHTML = '';
+//statusSistema.innerHTML = '';
 
 /*
+
 imagemBotaoMenu.addEventListener('click', () =>
 {
     abrirMenuImagemIcone();
     abrirMenu();
 }, false);
+
 */
 
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
