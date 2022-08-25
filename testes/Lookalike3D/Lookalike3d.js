@@ -24,6 +24,12 @@ var imagemBotaoMenu = document.getElementById('imagemBotaoMenu');
 
 var botoesCabecalho = document.getElementById('botoesCabecalho');
 
+var relogio = document.getElementById('relogio');
+
+var cordenadas;
+
+var propriedadeCoordenada;
+
 var distanciaImagens;
 
 var menuAberto = false;
@@ -209,7 +215,7 @@ function checar()
             switch (botoes[ i ].value)
             {
                 case "A":
-                    htmlPrincipal.style.backgroundColor = "rgba(255, 191, 0, 0.448)";
+                    htmlPrincipal.style.backgroundColor = "rgba(0, 0, 0, 0)";
 
                     rodape.style.backgroundColor = "rgb(111, 0, 255);";
 
@@ -217,7 +223,7 @@ function checar()
                     break;
 
                 case "B":
-                    htmlPrincipal.style.backgroundColor = "rgba(0, 0, 0, 1)";
+                    htmlPrincipal.style.backgroundColor = "rgba(0, 0, 0, 0)";
 
                     rodape.style.backgroundColor = "rgb(111, 0, 255);";
 
@@ -233,6 +239,57 @@ function checar()
         }
 };
 
+// RELOGIO
+
+setInterval(showTime, 1000);
+
+function showTime()
+{
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = "AM";
+
+    if (hour > 12)
+    {
+        hour -= 12;
+        am_pm = " || PM";
+    }
+    if (hour == 0)
+    {
+        hr = 12;
+        am_pm = " || AM";
+    }
+
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    let currentTime = hour + ":"
+        + min + ":" + sec + am_pm;
+
+    document.getElementById("relogio")
+        .innerHTML = "Lookalike 3D || " + "\n" + currentTime;
+
+
+    function coordenada(elemento, propriedade)
+    {
+        coordenadas = elemento.getBoundingClientRect();
+
+        propriedadeCoordenada = coordenadas.propriedade;
+
+        return propriedadeCoordenada;
+    }
+
+    var teste = imagensProjetos3d[ 0 ];
+
+    statusSistema2.innerHTML = coordenada(teste, "top");
+
+}
+
+showTime();
+
 //////////////////////////////////////////
 
 tamanhoJanela();
@@ -244,7 +301,6 @@ window.addEventListener('resize', function ()
     tamanhoJanela();
 }, false);
 
-//statusSistema2.innerHTML = ;
 
 /*
 function atualizarDistanciaImagens()
@@ -582,14 +638,15 @@ function abrindoFechandoMenu()
     /*
     if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "50px")
     */
-    alert(menuAberto)
-    if (menuAberto = true)
+    //alert(menuAberto)
+    if (menuAberto)
     {
 
         cabecalho.style.height = "200px";
-        secaoTemas.style.visibility = "visible";
+        //secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;
+        relogio.style.visibility = "hidden";
 
         for (let i = 0; i < menu.length; i++) 
         {
@@ -601,6 +658,7 @@ function abrindoFechandoMenu()
         cabecalho.style.height = "35px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
+        relogio.style.visibility = "visible";
 
         secaoTemas.style.visibility = "hidden"
 
@@ -647,3 +705,109 @@ imagemBotaoMenu.addEventListener('click', () =>
 
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
 
+/*
+function scrollImagens()
+{
+
+    if (this.scrollY == 0)
+    {
+        setTimeout(() =>
+        {
+            cabecalho.style.height = "50px";
+            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+
+            for (let i = 0; i < menu.length; i++) 
+            {
+                menu[ i ].style.visibility = "hidden";
+            }
+
+        }, tempoIntervalo);
+
+    } else
+    {
+        setTimeout(() =>
+        {
+            cabecalho.style.height = "35px";
+            cabecalho.style.alignItems = "flex-start"
+
+            for (let i = 0; i < menu.length; i++) 
+            {
+                menu[ i ].style.visibility = "hidden";
+            }
+            secaoTemas.style.visibility = "hidden"
+
+        }, tempoIntervalo);
+
+    }
+
+    //
+
+    var topoDaImagem0 = imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height / 2;
+
+    var topoDaImagem1 = imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height / 2;
+
+    var topoDaImagem2 = imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height / 2;
+
+    var topoDaImagem3 = imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height / 2;
+
+    var topoDaImagem4 = imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height / 2;
+
+    var topoDaImagem5 = imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height / 2;
+
+    var topoDaImagem6 = imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height / 2;
+
+    var topoDaImagem7 = imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height / 2;
+
+    var topoDaImagem8 = imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height / 2;
+
+    var topoDaImagem9 = imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height / 2;
+
+    //
+
+    if (topoDaImagem0 < -50 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/10.png')";
+
+    } else if (topoDaImagem1 < 0 && topoDaImagem1 > (-window.outerHeight - imagensProjetos3d[ 1 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/09.png')";
+
+    } else if (topoDaImagem2 < 0 && topoDaImagem2 > (-window.outerHeight - imagensProjetos3d[ 2 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/08.png')";
+
+    } else if (topoDaImagem3 < 0 && topoDaImagem3 > (-window.outerHeight - imagensProjetos3d[ 3 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/07.png')";
+
+    } else if (topoDaImagem4 < 0 && topoDaImagem4 > (-window.outerHeight - imagensProjetos3d[ 4 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/06.png')";
+
+    } else if (topoDaImagem5 < 0 && topoDaImagem5 > (-window.outerHeight - imagensProjetos3d[ 5 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/05.png')";
+
+    } else if (topoDaImagem6 < 0 && topoDaImagem6 > (-window.outerHeight - imagensProjetos3d[ 6 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/04.png')";
+
+    } else if (topoDaImagem7 < 0 && topoDaImagem7 > (-window.outerHeight - imagensProjetos3d[ 7 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/03.png')";
+
+    } else if (topoDaImagem8 < 0 && topoDaImagem8 > (-window.outerHeight - imagensProjetos3d[ 8 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/02.png')";
+
+    } else if (topoDaImagem9 < 0 && topoDaImagem9 > (-window.outerHeight - imagensProjetos3d[ 9 ].height))
+    {
+        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/01.png')";
+
+    } else
+    {
+        //  htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+    }
+};
+
+*/

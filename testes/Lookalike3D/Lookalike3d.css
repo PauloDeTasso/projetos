@@ -5,25 +5,12 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(255, 191, 0, 0.448);
+    background-color: rgba(0, 0, 0, 0);
     background-image: url("../../imagens/Projetos3d/background01.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    /*
-    background-origin: content-box;
-    */
     background-attachment: fixed;
     background-position: center;
-}
-
-.imagensProjetos3d {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0);
 }
 
 #secaoPrincipal {
@@ -44,8 +31,6 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-
-
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -71,9 +56,20 @@ html {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
     padding: 1%;
     visibility: hidden;
-    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 110%;
+    color: rgb(35, 240, 255);
+    text-shadow: 1.3px 3px 10px rgb(55, 0, 255), 0 0 5px rgb(140, 0, 255), 0 0 5px rgb(255, 255, 255);
+
 }
 
 #cabecalho {
@@ -88,6 +84,24 @@ html {
     height: 35px;
     background-color: rgba(255, 152, 27, 0.532);
     color: rgba(23, 0, 78, 1);
+}
+
+#relogio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    padding: 0%;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: overline;
 }
 
 #secaoImagens {
@@ -110,7 +124,7 @@ html {
     height: auto;
     background-color: rgba(255, 145, 0, 0.549);
     color: rgb(111, 0, 255);
-    font-size: 50%;
+    font-size: 70%;
 }
 
 #redesSociais {
@@ -122,19 +136,31 @@ html {
     background-color: rgba(0, 0, 0, 0);
 }
 
+#botaoCabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    padding: 1%;
+    border: 200px solid rgba(143, 143, 143, 0.363);
+    opacity: 0;
+}
+
 #secaoTemas {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    top: 0px;
-    right: 70px;
-    position: relative;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     color: aqua;
     visibility: hidden;
     padding: 1%;
+    border: 2px solid rgba(143, 143, 143, 0.363);
+    opacity: 0;
 }
 
 #imagemBotaoMenu {
@@ -183,7 +209,7 @@ a:active {
 
 @keyframes abrirMenuCss {
     0% {
-        opacity: 0;
+        opacity: 1;
         height: 35px;
         align-items: flex-start;
     }
@@ -276,6 +302,17 @@ a:active {
 }
 
 ;
+
+.imagensProjetos3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 
 
 /* REFLEXOS NA IMAGEM:
