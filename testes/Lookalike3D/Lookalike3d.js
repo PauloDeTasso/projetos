@@ -26,9 +26,13 @@ var botoesCabecalho = document.getElementById('botoesCabecalho');
 
 var relogio = document.getElementById('relogio');
 
-var cordenadas;
+var secaoImagemDeFundo = document.getElementById('secaoImagemDeFundo');
 
-var propriedadeCoordenada;
+var imagemDeFundo = document.getElementById('imagemDeFundo');
+
+var coordenadas = {};
+
+var propriedadeCoordenada = {};
 
 var distanciaImagens;
 
@@ -56,8 +60,8 @@ var alturaTela = screen.height;
 function tamanhoJanela()
 {
     /*
-    statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;
-*/
+        statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;
+    */
     //distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
@@ -96,12 +100,65 @@ function statusMenuOff()
 function scrollImagens()
 {
 
+    /*    statusSistema.innerHTML =
+            "top: " + coordenada(imagensProjetos3d[ 0 ], "top") +
+            " bottom: " + coordenada(htmlPrincipal, "bottom") +
+            " left: " + coordenada(imagensProjetos3d[ 0 ], "left") + " right: " + coordenada(imagensProjetos3d[ 0 ], "right") +
+            " x: " + coordenada(imagensProjetos3d[ 0 ], "x") +
+            " y: " + coordenada(imagensProjetos3d[ 0 ], "y") +
+            " width: " + coordenada(imagensProjetos3d[ 0 ], "width") +
+            " height: " + coordenada(imagensProjetos3d[ 0 ], "height");
+    
+    statusSistema.innerHTML = "se" + coordenada(imagensProjetos3d[ 0 ], "top") + " for menor que " + coordenada(htmlPrincipal, "top") + " e " + coordenada(imagensProjetos3d[ 0 ], "bottom") + "< " + (-window.outerHeight - imagensProjetos3d[ 0 ].height);
+*/
+
+    var xxx = imagemDeFundo.src;
+    /*
+        setInterval(() =>
+        {
+            *//*
+statusSistema.innerHTML = /*"top: " + coordenada(secaoImagemDeFundo, "top") +
+" bottom: " + coordenada(secaoImagemDeFundo, "bottom") +
+" left: " + coordenada(secaoImagemDeFundo, "left") + " right: " + coordenada(secaoImagemDeFundo, "right") +
+" x: " + coordenada(secaoImagemDeFundo, "x") +
+" y: " + coordenada(secaoImagemDeFundo, "y") +
+" width: " + coordenada(secaoImagemDeFundo, "width") +
+" height: " + coordenada(secaoImagemDeFundo, "height") + "/-------------/ " +
+"top: " + coordenada(imagemDeFundo, "top") +
+" bottom: " + coordenada(imagemDeFundo, "bottom") +
+" left: " + coordenada(imagemDeFundo, "left") + " right: " + coordenada(imagemDeFundo, "right") +
+" x: " + coordenada(imagemDeFundo, "x") +
+" y: " + coordenada(imagemDeFundo, "y") +
+" width: " + coordenada(imagemDeFundo, "width") +
+" height: " + coordenada(imagemDeFundo, "height") + "/-------------/ " +
+"top: " + coordenada(imagensProjetos3d[ 0 ], "top") +
+" bottom: " + coordenada(imagensProjetos3d[ 0 ], "bottom") +
+" left: " + coordenada(imagensProjetos3d[ 0 ], "left") + " right: " + coordenada(imagensProjetos3d[ 0 ], "right") +
+" x: " + coordenada(imagensProjetos3d[ 0 ], "x") +
+" y: " + coordenada(imagensProjetos3d[ 0 ], "y") +
+" width: " + coordenada(imagensProjetos3d[ 0 ], "width") +
+" height: " + coordenada(imagensProjetos3d[ 0 ], "height") +
+" ALTURA IMG0: " + (imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height) + " ALTURA FUNDO: " + (imagemDeFundo.y) +
+" ////////////////////////////////////////////////// SE TOP DA IMG0: " + (imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height) + " FOR < MENOR QUE " + (imagemDeFundo.y) + " TOP DA IMAGEM DE FUNDO" + imagensProjetos3d[ imagensProjetos3d.length - 1 ].y + "----" +
+document.height + " ///***////" + document.documentElement.scrollTop + "*** " + document.documentElement.scrollHeight*/
+
+    /*
+}, 10000);
+*/
+    //statusSistema.innerHTML = coordenada(secaoImagemDeFundo, "top");
+
+    /*
+        statusSistema.innerHTML = "SE " + imagensProjetos3d[ 0 ].y + " FOR MENOR QUE -550 E " + coordenada(imagensProjetos3d[ 0 ], "bottom") + " FOR MENOR QUE -550";
+    */
+
     if (this.scrollY == 0)
     {
         setTimeout(() =>
         {
             cabecalho.style.height = "50px";
-            htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+            imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
+
+            imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -110,12 +167,25 @@ function scrollImagens()
 
         }, tempoIntervalo);
 
+    } else if (Math.abs(document.documentElement.scrollHeight - document.documentElement.clientHeight - document.documentElement.scrollTop) < 1)
+    {
+        setTimeout(() =>
+        {
+            imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
+
+            imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.borderWidth = imagemDeFundo.height * 2 + "px 0px " + imagemDeFundo.height * 2 + "px 0px";
+
+        }, tempoIntervalo);
+
     } else
     {
         setTimeout(() =>
         {
+            scrollImagens();
             cabecalho.style.height = "35px";
             cabecalho.style.alignItems = "flex-start"
+
+            imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -124,77 +194,134 @@ function scrollImagens()
             secaoTemas.style.visibility = "hidden"
 
         }, tempoIntervalo);
-
     }
 
     //
-
-    var topoDaImagem0 = imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height / 2;
-
-    var topoDaImagem1 = imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height / 2;
-
-    var topoDaImagem2 = imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height / 2;
-
-    var topoDaImagem3 = imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height / 2;
-
-    var topoDaImagem4 = imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height / 2;
-
-    var topoDaImagem5 = imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height / 2;
-
-    var topoDaImagem6 = imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height / 2;
-
-    var topoDaImagem7 = imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height / 2;
-
-    var topoDaImagem8 = imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height / 2;
-
-    var topoDaImagem9 = imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height / 2;
-
+    /*
+        var topoDaImagem0 = imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height / 2;
+    
+        var topoDaImagem1 = imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height / 2;
+    
+        var topoDaImagem2 = imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height / 2;
+    
+        var topoDaImagem3 = imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height / 2;
+    
+        var topoDaImagem4 = imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height / 2;
+    
+        var topoDaImagem5 = imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height / 2;
+    
+        var topoDaImagem6 = imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height / 2;
+    
+        var topoDaImagem7 = imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height / 2;
+    
+        var topoDaImagem8 = imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height / 2;
+    
+        var topoDaImagem9 = imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height / 2;
+    */
     //
 
-    if (topoDaImagem0 < -50 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/10.png')";
+    var topoImagem1 = (imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height);
 
-    } else if (topoDaImagem1 < 0 && topoDaImagem1 > (-window.outerHeight - imagensProjetos3d[ 1 ].height))
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/09.png')";
+    var topoImagemDeFundo = imagemDeFundo.y;
 
-    } else if (topoDaImagem2 < 0 && topoDaImagem2 > (-window.outerHeight - imagensProjetos3d[ 2 ].height))
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/08.png')";
+    var baseImagem1 = coordenada(imagensProjetos3d[ 0 ], "bottom");
 
-    } else if (topoDaImagem3 < 0 && topoDaImagem3 > (-window.outerHeight - imagensProjetos3d[ 3 ].height))
-    {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/07.png')";
+    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height) * 2;
 
-    } else if (topoDaImagem4 < 0 && topoDaImagem4 > (-window.outerHeight - imagensProjetos3d[ 4 ].height))
+    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height) * 2;
+    if (topoImagem1 < topoImagemDeFundo && baseImagem1 < baseImagemDeFundo) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/06.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
 
-    } else if (topoDaImagem5 < 0 && topoDaImagem5 > (-window.outerHeight - imagensProjetos3d[ 5 ].height))
+    } else if (baseImagem1 > baseImagemDeFundo && topoImagem1 > topoImagemDeFundo) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/05.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
-    } else if (topoDaImagem6 < 0 && topoDaImagem6 > (-window.outerHeight - imagensProjetos3d[ 6 ].height))
+        /*
+    } else if ((imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 1 ], "bottom") > (imagemDeFundo.y)) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/04.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
 
-    } else if (topoDaImagem7 < 0 && topoDaImagem7 > (-window.outerHeight - imagensProjetos3d[ 7 ].height))
+    } else if ((imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 2 ], "bottom") > (imagemDeFundo.y)) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/03.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
 
-    } else if (topoDaImagem8 < 0 && topoDaImagem8 > (-window.outerHeight - imagensProjetos3d[ 8 ].height))
+    } else if ((imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 3 ], "bottom") > (imagemDeFundo.y)) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/02.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
 
-    } else if (topoDaImagem9 < 0 && topoDaImagem9 > (-window.outerHeight - imagensProjetos3d[ 9 ].height))
+    } else if ((imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 4 ], "bottom") > (imagemDeFundo.y)) 
     {
-        htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/01.png')";
+        imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
 
+    } else if ((imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 5 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+
+    } else if ((imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 6 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
+
+    } else if ((imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 7 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
+
+    } else if ((imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 8 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
+
+    } else if ((imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height) < (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 9 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/01.png";
+
+        /////
+        /*
+    } else if ((imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 0 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/background10.png";
+
+    } else if ((imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 1 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
+
+    } else if ((imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 2 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
+
+    } else if ((imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 3 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
+
+    } else if ((imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 4 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
+
+    } else if ((imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 5 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+
+    } else if ((imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 6 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
+
+    } else if ((imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 7 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
+
+    } else if ((imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 8 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
+
+    } else if ((imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height) > (imagemDeFundo.y) && coordenada(imagensProjetos3d[ 9 ], "bottom") > (imagemDeFundo.y)) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/01.png";
+*/
     } else
     {
-        //  htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
+        //  imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
     }
+
+    statusSistema.innerHTML = xxx + "///////// # topotopoImagem1: " + topoImagem1 + " # topoImagemDeFundo: " + topoImagemDeFundo + " # baseImagem1: " + baseImagem1 + " # baseImagemDeFundo: " + baseImagemDeFundo;
 };
 
 //
@@ -239,6 +366,15 @@ function checar()
         }
 };
 
+function coordenada(elemento, propriedade)
+{
+    coordenadas = elemento.getBoundingClientRect();
+
+    propriedadeCoordenada = coordenadas[ propriedade ];
+
+    return parseInt(propriedadeCoordenada);
+}
+
 // RELOGIO
 
 setInterval(showTime, 1000);
@@ -272,19 +408,7 @@ function showTime()
     document.getElementById("relogio")
         .innerHTML = "Lookalike 3D || " + "\n" + currentTime;
 
-
-    function coordenada(elemento, propriedade)
-    {
-        coordenadas = elemento.getBoundingClientRect();
-
-        propriedadeCoordenada = coordenadas.propriedade;
-
-        return propriedadeCoordenada;
-    }
-
-    var teste = imagensProjetos3d[ 0 ];
-
-    statusSistema2.innerHTML = coordenada(teste, "top");
+    //statusSistema2.innerHTML = coordenada(imagensProjetos3d[ 0 ], "top");
 
 }
 
@@ -311,29 +435,29 @@ function atualizarDistanciaImagens()
 */
 /*
     var valorDistancia = distanciaImagens + 'px solid rgba(255,255,255,0)';;
-
+ 
     for (let index = 0; index < imagensProjetos3d.length; index++)
     {
         imagensProjetos3d[ index ].style.border = valorDistancia;
     }
 }
 * /
-
+ 
 /*
 window.addEventListener('scroll', function (e)
 {
     // mesma posição
     //if (e.scrollY === ultimaDirecaoScroll) return;
-
+ 
     var resultado = this.scrollY < ultimaDirecaoScroll ? "Cima" : "Baixo"
-
+ 
     if (e.scrollY === ultimaDirecaoScroll)
     {
         resultado = "Igual"
     }
-
+ 
     ultimaDirecaoScroll = this.scrollY;
-
+ 
     if (resultado == "Cima")
     {
         distanciaImagens -= 1;
@@ -341,13 +465,13 @@ window.addEventListener('scroll', function (e)
     } else if (resultado == "Baixo")
     {
         distanciaImagens += 1;
-
+ 
         atualizarDistanciaImagens();
     } else
     {
         distanciaImagens = distanciaImagens;
     }
-
+ 
 }, false);
 */
 
@@ -357,23 +481,23 @@ window.addEventListener('scroll', function (e)
 /*
 setInterval(() =>
 {
-
+ 
     ////
     /*
         //IMAGEM EM BAIXO
         if (imagensProjetos3d[ primeiraImagem ].y > 0)
         {
             htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
-
+ 
             statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MENOR QUE alturaJanela " + alturaJanela;
-
+ 
             //IMAGEM EM CIMA
         } else if (imagensProjetos3d[ primeiraImagem ].y < 0)
         {
             htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/00.png')";
-
+ 
             statusSistema.innerHTML = imagensProjetos3d[ primeiraImagem ].y + "MAIOR QUE alturaJanela" + alturaJanela;
-
+ 
         } else
         {
             statusSistema.innerHTML = "IGUAL A alturaJanela";
@@ -391,7 +515,7 @@ cabecalho.animate([
     {
         transform: 'translateY(0px)'
     },
-
+ 
     {
         transform: 'translateY(300px)'
     }
@@ -405,19 +529,19 @@ cabecalho.animate([
 
 ////backup funcao scrool
 /*
-
+ 
 function scrollImagens()
 {
-
+ 
     if (this.scrollY == 0)
     {
         setTimeout(() =>
         {
             cabecalho.style.backgroundColor = "rgba(250, 200, 120, .7)";
             cabecalho.style.height = "12%";
-
+ 
         }, tempoIntervalo);
-
+ 
     } else
     {
         setTimeout(() =>
@@ -425,29 +549,29 @@ function scrollImagens()
             cabecalho.style.backgroundColor = "rgba(214, 177, 104, 0.499)";
             cabecalho.style.height = "5%";
         }, tempoIntervalo);
-
+ 
     }
-
+ 
     var topoDaImagem0 = imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height / 2;
-
+ 
     var topoDaImagem1 = imagensProjetos3d[ 1 ].y + imagensProjetos3d[ 1 ].height / 2;
-
+ 
     var topoDaImagem2 = imagensProjetos3d[ 2 ].y + imagensProjetos3d[ 2 ].height / 2;
-
+ 
     var topoDaImagem3 = imagensProjetos3d[ 3 ].y + imagensProjetos3d[ 3 ].height / 2;
-
+ 
     var topoDaImagem4 = imagensProjetos3d[ 4 ].y + imagensProjetos3d[ 4 ].height / 2;
-
+ 
     var topoDaImagem5 = imagensProjetos3d[ 5 ].y + imagensProjetos3d[ 5 ].height / 2;
-
+ 
     var topoDaImagem6 = imagensProjetos3d[ 6 ].y + imagensProjetos3d[ 6 ].height / 2;
-
+ 
     var topoDaImagem7 = imagensProjetos3d[ 7 ].y + imagensProjetos3d[ 7 ].height / 2;
-
+ 
     var topoDaImagem8 = imagensProjetos3d[ 8 ].y + imagensProjetos3d[ 8 ].height / 2;
-
+ 
     var topoDaImagem9 = imagensProjetos3d[ 9 ].y + imagensProjetos3d[ 9 ].height / 2;
-
+ 
     /*
     statusSistema.innerHTML =
         /*"//screen.availWidth: " + screen.availWidth +
@@ -470,78 +594,78 @@ function scrollImagens()
         "\n//topoDaImagem0:.... " + topoDaImagem0 +
         "\n//imagensProjetos3d[1].y: " + imagensProjetos3d[ 1 ].y +
         "\n//topoDaImagem1: " + topoDaImagem1;
-
+ 
     //
-
+ 
     if (topoDaImagem0 < 0 && topoDaImagem0 > (-window.outerHeight - imagensProjetos3d[ 0 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/10.png')";
-
+ 
     } else if (topoDaImagem1 < 0 && topoDaImagem1 > (-window.outerHeight - imagensProjetos3d[ 1 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/09.png')";
-
+ 
     } else if (topoDaImagem2 < 0 && topoDaImagem2 > (-window.outerHeight - imagensProjetos3d[ 2 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/08.png')";
-
+ 
     } else if (topoDaImagem3 < 0 && topoDaImagem3 > (-window.outerHeight - imagensProjetos3d[ 3 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/07.png')";
-
+ 
     } else if (topoDaImagem4 < 0 && topoDaImagem4 > (-window.outerHeight - imagensProjetos3d[ 4 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/06.png')";
-
+ 
     } else if (topoDaImagem5 < 0 && topoDaImagem5 > (-window.outerHeight - imagensProjetos3d[ 5 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/05.png')";
-
+ 
     } else if (topoDaImagem6 < 0 && topoDaImagem6 > (-window.outerHeight - imagensProjetos3d[ 6 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/04.png')";
-
+ 
     } else if (topoDaImagem7 < 0 && topoDaImagem7 > (-window.outerHeight - imagensProjetos3d[ 7 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/03.png')";
-
+ 
     } else if (topoDaImagem8 < 0 && topoDaImagem8 > (-window.outerHeight - imagensProjetos3d[ 8 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/02.png')";
-
+ 
     } else if (topoDaImagem9 < 0 && topoDaImagem9 > (-window.outerHeight - imagensProjetos3d[ 9 ].height))
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/01.png')";
-
+ 
     } else
     {
         htmlPrincipal.style.backgroundImage = "url('../../imagens/Projetos3d/background01.png')";
     }
 };
-
+ 
 */
 
 /*
 var elementosDaClasse = document.getElementsByClassName('elementosDaClasse'),
     tamanhoArrai = elementosDaClasse.length,
     i;
-
+ 
 for (i = 0; i < tamanhoArrai; i++)
 {
     elementosDaClasse[ i ].classList.add('move');
 }
-
+ 
 //var elementosDaClasse = document.querySelector('.box');
-
+ 
 elementosDaClasse.addEventListener('transitionend', animacaoFinalizada, false);
-
+ 
 var elementosDaClasse = document.querySelector('.elementosDaClasse');
-
+ 
 var animation = elementosDaClasse.animate([
     { transform: 'translate(0)' },
     { transform: 'translate(150px, 200px)' }
 ], 500);
-
+ 
 animation.addEventListener('finish', function ()
 {
     elementosDaClasse.style.transform = 'translate(150px, 200px)';
@@ -549,7 +673,7 @@ animation.addEventListener('finish', function ()
 */
 ////
 /*
-
+ 
 cabecalho.animate([
     // keyframes
     { transform: 'translateX(0px)' },
@@ -559,25 +683,25 @@ cabecalho.animate([
     duration: 1000,
     iterations: Infinity
 });
-
+ 
  */
 
 /////
 /*
 var repeticao = 0
-
+ 
 secaoImagens.addEventListener('animationiteration', () =>
 {
     alert("repetiu " + ++repeticao + " vezes. ");
 });
-
+ 
 secaoImagens.addEventListener('animationstart', () =>
 {
     alert("começou");
 });
-
+ 
 secaoImagens.addEventListener('animationend', animacaoFinalizada);
-
+ 
 function animacaoFinalizada()
 {
     alert("A animação foi finalizada!");
@@ -694,13 +818,13 @@ function fecharMenu()
 //statusSistema.innerHTML = '';
 
 /*
-
+ 
 imagemBotaoMenu.addEventListener('click', () =>
 {
     abrirMenuImagemIcone();
     abrirMenu();
 }, false);
-
+ 
 */
 
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);

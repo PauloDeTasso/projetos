@@ -6,11 +6,48 @@ html {
     width: 100%;
     height: auto;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("../../imagens/Projetos3d/background01.png");
+    /*background-image: url("../../imagens/Projetos3d/background01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center;*/
+}
+
+#secaoImagemDeFundo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: -99999;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: fixed;
     background-position: center;
+
+}
+
+#imagemDeFundo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /*position: fixed;
+    top: 0%;
+    left: 0%;
+    */
+    z-index: -99999;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center;
+    ;
 }
 
 #secaoPrincipal {
@@ -464,20 +501,20 @@ length, retorna a quantidade de classes naquele elemento.
     animation-iteration-count: 3;    
     
 }
-
+*/
+/*
 #statusSistema {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    top: 0;
+    top: 700px;
     left: 0;
     position: fixed;
-    width: 50%;
-    background-color: rgba(255, 152, 27, 0.532);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 1);
     background-repeat: no-repeat;
-    color: rgba(23, 0, 78, 0.509);
-    border: 100px solid rgba(0, 0, 0, 0); 
+    color: rgba(255, 255, 255, 0.509);
+    font-size: 140%;
+    border: 100px solid rgba(0, 0, 0, 0);
 }
-
-*/
