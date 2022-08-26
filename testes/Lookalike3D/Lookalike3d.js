@@ -228,7 +228,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height) * 2;
 
-    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height) * 2;
+    ////////
+
     if (topoImagem1 < topoImagemDeFundo && baseImagem1 < baseImagemDeFundo) 
     {
         imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
@@ -406,7 +407,7 @@ function showTime()
         + min + ":" + sec + "s || 3D";
 
     document.getElementById("relogio")
-        .innerHTML = "Lookalike 3D || " + "\n" + currentTime;
+        .innerHTML = "Lookalike || " + "\n" + currentTime;
 
     //statusSistema2.innerHTML = coordenada(imagensProjetos3d[ 0 ], "top");
 

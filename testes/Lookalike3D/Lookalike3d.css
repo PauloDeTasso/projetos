@@ -508,11 +508,11 @@ length, retorna a quantidade de classes naquele elemento.
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    top: 700px;
-    left: 0;
+    top: 0px;
+    left: 0px;
     position: fixed;
     width: 80%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 249, 249, 0);
     background-repeat: no-repeat;
     color: rgba(255, 255, 255, 0.509);
     font-size: 140%;
