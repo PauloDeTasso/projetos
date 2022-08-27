@@ -523,64 +523,64 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     */
 
     ////////////////////
-
-    statusSistema.innerHTML = xxx + "<br>" + "<br>" +
-        /*
-        "imagem1width: " + imagem1width + "<br>" +
-        "imagem1LarguraCoordenada: " + imagem1LarguraCoordenada + "<br>" +
-        "imagem1offsetWidth: " + imagem1offsetWidth + "<br>" +
-        "imagem1clientWidth: " + imagem1clientWidth + "<br>" +
-        "imagem1height: " + imagem1height + "<br>" +
-        "imagem1clientHeight: " + imagem1clientHeight + "<br>" +
-        "imagem1AlturaCoordenada: " + imagem1AlturaCoordenada + "<br>" +
-        "imagem1offsetHeight: " + imagem1offsetHeight + "<br>" +
-        "imagem1offsetTop: " + imagem1offsetTop + "<br>" +
-        "imagem1offsetLeft: " + imagem1offsetLeft + "<br>" +
-        "imagem1offsetParent: " + imagem1offsetParent + "<br>" +
-        "imagem1clientTop: " + imagem1clientTop + "<br>" +
-        "imagem1clientLeft: " + imagem1clientLeft + "<br>" +
-        "imagem1elementFromPoint: " + imagem1elementFromPoint + "<br>" +
-        "imagem1X: " + imagem1X + "<br>" +
-        "imagemDeFundoX: " + imagemDeFundoX + "<br>" +
-        "imagem1Y: " + imagem1Y + "<br>" +
-        "imagemDeFundoY: " + imagemDeFundoY + "<br>" +
-        */
-        "topoImagem11: " + topoImagem11 + "<br>" +
-        "baseImagem11: " + baseImagem11 + "<br>" + "<br>" +
-        "topoImagem12: " + topoImagem12 + "<br>" +
-        "baseImagem12: " + baseImagem12 + "<br>" + "<br>" +
-        "topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
-        "baseImagemDeFundo: " + baseImagemDeFundo;
-
-    //////////
-
     /*
-        statusSistema2.innerHTML = xxx + "<br>" + "<br>" +
-            
-            "imagemDeFundowidth: " + imagemDeFundowidth + "<br>" +
-            "imagemDeFundoLarguraCoordenada: " + imagemDeFundoLarguraCoordenada + "<br>" +
-            "imagemDeFundooffsetWidth: " + imagemDeFundooffsetWidth + "<br>" +
-            "imagemDeFundoclientWidth: " + imagemDeFundoclientWidth + "<br>" +
-            "imagemDeFundoheight: " + imagemDeFundoheight + "<br>" +
-            "imagemDeFundoclientHeight: " + imagemDeFundoclientHeight + "<br>" +
-            "imagemDeFundoAlturaCoordenada: " + imagemDeFundoAlturaCoordenada + "<br>" +
-            "imagemDeFundooffsetHeight: " + imagemDeFundooffsetHeight + "<br>" +
-            "imagemDeFundooffsetTop: " + imagemDeFundooffsetTop + "<br>" +
-            "imagemDeFundooffsetLeft: " + imagemDeFundooffsetLeft + "<br>" +
-            "imagemDeFundooffsetParent: " + imagemDeFundooffsetParent + "<br>" +
-            "imagemDeFundoclientTop: " + imagemDeFundoclientTop + "<br>" +
-            "imagemDeFundoclientLeft: " + imagemDeFundoclientLeft + "<br>" +
-            "imagemDeFundoelementFromPoint: " + imagemDeFundoelementFromPoint + "<br>" +
+        statusSistema.innerHTML = xxx + "<br>" + "<br>" +
+            /*
+            "imagem1width: " + imagem1width + "<br>" +
+            "imagem1LarguraCoordenada: " + imagem1LarguraCoordenada + "<br>" +
+            "imagem1offsetWidth: " + imagem1offsetWidth + "<br>" +
+            "imagem1clientWidth: " + imagem1clientWidth + "<br>" +
+            "imagem1height: " + imagem1height + "<br>" +
+            "imagem1clientHeight: " + imagem1clientHeight + "<br>" +
+            "imagem1AlturaCoordenada: " + imagem1AlturaCoordenada + "<br>" +
+            "imagem1offsetHeight: " + imagem1offsetHeight + "<br>" +
+            "imagem1offsetTop: " + imagem1offsetTop + "<br>" +
+            "imagem1offsetLeft: " + imagem1offsetLeft + "<br>" +
+            "imagem1offsetParent: " + imagem1offsetParent + "<br>" +
+            "imagem1clientTop: " + imagem1clientTop + "<br>" +
+            "imagem1clientLeft: " + imagem1clientLeft + "<br>" +
+            "imagem1elementFromPoint: " + imagem1elementFromPoint + "<br>" +
             "imagem1X: " + imagem1X + "<br>" +
             "imagemDeFundoX: " + imagemDeFundoX + "<br>" +
             "imagem1Y: " + imagem1Y + "<br>" +
             "imagemDeFundoY: " + imagemDeFundoY + "<br>" +
-            
-            "topoImagem1: " + topoImagem1 + "<br>" +
-            "topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
-            "baseImagem1: " + baseImagem1 + "<br>" +
-            "baseImagemDeFundo: " + baseImagemDeFundo;
-        */
+            *//*
+"topoImagem11: " + topoImagem11 + "<br>" +
+"baseImagem11: " + baseImagem11 + "<br>" + "<br>" +
+"topoImagem12: " + topoImagem12 + "<br>" +
+"baseImagem12: " + baseImagem12 + "<br>" + "<br>" +
+"topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
+"baseImagemDeFundo: " + baseImagemDeFundo;
+
+//////////
+
+/*
+statusSistema2.innerHTML = xxx + "<br>" + "<br>" +
+ 
+"imagemDeFundowidth: " + imagemDeFundowidth + "<br>" +
+"imagemDeFundoLarguraCoordenada: " + imagemDeFundoLarguraCoordenada + "<br>" +
+"imagemDeFundooffsetWidth: " + imagemDeFundooffsetWidth + "<br>" +
+"imagemDeFundoclientWidth: " + imagemDeFundoclientWidth + "<br>" +
+"imagemDeFundoheight: " + imagemDeFundoheight + "<br>" +
+"imagemDeFundoclientHeight: " + imagemDeFundoclientHeight + "<br>" +
+"imagemDeFundoAlturaCoordenada: " + imagemDeFundoAlturaCoordenada + "<br>" +
+"imagemDeFundooffsetHeight: " + imagemDeFundooffsetHeight + "<br>" +
+"imagemDeFundooffsetTop: " + imagemDeFundooffsetTop + "<br>" +
+"imagemDeFundooffsetLeft: " + imagemDeFundooffsetLeft + "<br>" +
+"imagemDeFundooffsetParent: " + imagemDeFundooffsetParent + "<br>" +
+"imagemDeFundoclientTop: " + imagemDeFundoclientTop + "<br>" +
+"imagemDeFundoclientLeft: " + imagemDeFundoclientLeft + "<br>" +
+"imagemDeFundoelementFromPoint: " + imagemDeFundoelementFromPoint + "<br>" +
+"imagem1X: " + imagem1X + "<br>" +
+"imagemDeFundoX: " + imagemDeFundoX + "<br>" +
+"imagem1Y: " + imagem1Y + "<br>" +
+"imagemDeFundoY: " + imagemDeFundoY + "<br>" +
+ 
+"topoImagem1: " + topoImagem1 + "<br>" +
+"topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
+"baseImagem1: " + baseImagem1 + "<br>" +
+"baseImagemDeFundo: " + baseImagemDeFundo;
+*/
     /*
 
     if (statusSistema.y == undefined || statusSistema.y == "undefined")

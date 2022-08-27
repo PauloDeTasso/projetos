@@ -105,7 +105,7 @@ html {
     padding: 1%;
     visibility: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 110%;
+    font-size: 100%;
     color: rgb(35, 240, 255);
     text-shadow: 1.3px 3px 10px rgb(55, 0, 255), 0 0 5px rgb(140, 0, 255), 0 0 5px rgb(255, 255, 255);
 
@@ -291,7 +291,8 @@ a:active {
 }
 
 .playImagens {
-    animation: playImagensCss 20s;
+    animation: playImagensCss 5s alternate-reverse;
+    animation-iteration-count: 1;
 }
 
 @keyframes playImagensCss {
@@ -525,7 +526,7 @@ length, retorna a quantidade de classes naquele elemento.
     color: rgba(200, 200, 200, 1);
 }
 */
-
+/*
 #statusSistema {
     display: flex;
     flex-direction: column;
