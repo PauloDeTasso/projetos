@@ -197,7 +197,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         }, tempoIntervalo);
     }
 
-    ///////////
+    ///////////1
 
     var imagem1width = imagensProjetos3d[ 0 ].width;
 
@@ -245,13 +245,63 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     var imagemDeFundoX = imagemDeFundo.x;
     var imagemDeFundoY = imagemDeFundo.y;
 
+    ///////////2
+
+    var imagemDeFundowidth = imagemDeFundo.width;
+
+    var imagemDeFundoheight = imagemDeFundo.height;
+
     //
 
-    var topoImagem1 = (imagensProjetos3d[ 0 ].y + imagensProjetos3d[ 0 ].height);
+    var imagemDeFundoLarguraCoordenada = coordenada(imagemDeFundo, "width");
 
-    var topoImagemDeFundo = coordenada(imagemDeFundo, "bottom");;
+    var imagemDeFundoAlturaCoordenada = coordenada(imagemDeFundo, "height");
 
-    var baseImagem1 = coordenada(imagensProjetos3d[ 0 ], "bottom");
+    //
+
+    var imagemDeFundooffsetWidth = imagemDeFundo.offsetWidth;
+
+    var imagemDeFundooffsetHeight = imagemDeFundo.offsetHeight;
+
+    //
+
+    var imagemDeFundooffsetTop = imagemDeFundo.offsetTop;
+
+    var imagemDeFundooffsetLeft = imagemDeFundo.offsetLeft;
+
+    var imagemDeFundooffsetParent = imagemDeFundo.offsetParent;
+
+    //
+
+    var imagemDeFundoclientWidth = imagemDeFundo.clientWidth;
+
+    var imagemDeFundoclientHeight = imagemDeFundo.clientHeight;
+
+    var imagemDeFundoclientTop = imagemDeFundo.clientTop;
+
+    var imagemDeFundoclientLeft = imagemDeFundo.clientLeft;
+
+    //
+
+    var imagemDeFundoelementFromPoint = document.elementFromPoint(0, 0);
+
+    //
+
+    var topoImagem1 = imagensProjetos3d[ 0 ].y;
+
+    var topoImagemDeFundo = imagemDeFundo.y;
+
+    var baseImagem1 = (imagensProjetos3d[ 0 ].y) + (imagensProjetos3d[ 0 ].height);
+
+    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
+
+    //
+
+    var topoimagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
+
+    var topoImagemDeFundo = coordenada(imagemDeFundo, "bottom");
+
+    var baseimagemDeFundo = coordenada(imagemDeFundo, "bottom");
 
     var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height) * 2;
 
@@ -261,7 +311,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     ////////
 
-    if (imagem1Y < imagemDeFundoY && ) 
+    if (imagem1Y < imagemDeFundoY) 
     {
         imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
 
@@ -317,7 +367,34 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         "topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
         "baseImagem1: " + baseImagem1 + "<br>" +
         "baseImagemDeFundo: " + baseImagemDeFundo;
+
+
+    statusSistema2.innerHTML = xxx + "<br>" +
+        "imagemDeFundowidth: " + imagemDeFundowidth + "<br>" +
+        "imagemDeFundoLarguraCoordenada: " + imagemDeFundoLarguraCoordenada + "<br>" +
+        "imagemDeFundooffsetWidth: " + imagemDeFundooffsetWidth + "<br>" +
+        "imagemDeFundoclientWidth: " + imagemDeFundoclientWidth + "<br>" +
+        "imagemDeFundoheight: " + imagemDeFundoheight + "<br>" +
+        "imagemDeFundoclientHeight: " + imagemDeFundoclientHeight + "<br>" +
+        "imagemDeFundoAlturaCoordenada: " + imagemDeFundoAlturaCoordenada + "<br>" +
+        "imagemDeFundooffsetHeight: " + imagemDeFundooffsetHeight + "<br>" +
+        "imagemDeFundooffsetTop: " + imagemDeFundooffsetTop + "<br>" +
+        "imagemDeFundooffsetLeft: " + imagemDeFundooffsetLeft + "<br>" +
+        "imagemDeFundooffsetParent: " + imagemDeFundooffsetParent + "<br>" +
+        "imagemDeFundoclientTop: " + imagemDeFundoclientTop + "<br>" +
+        "imagemDeFundoclientLeft: " + imagemDeFundoclientLeft + "<br>" +
+        "imagemDeFundoelementFromPoint: " + imagemDeFundoelementFromPoint + "<br>" +
+        "imagem1X: " + imagem1X + "<br>" +
+        "imagemDeFundoX: " + imagemDeFundoX + "<br>" +
+        "imagem1Y: " + imagem1Y + "<br>" +
+        "imagemDeFundoY: " + imagemDeFundoY + "<br>" +
+        "baseImagem1Y: " + baseImagem1Y + "<br>" + "<br>" +
+        "topoImagem1: " + topoImagem1 + "<br>" +
+        "topoImagemDeFundo: " + topoImagemDeFundo + "<br>" +
+        "baseImagem1: " + baseImagem1 + "<br>" +
+        "baseImagemDeFundo: " + baseImagemDeFundo;
 };
+
 
 //
 
