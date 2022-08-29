@@ -15,11 +15,14 @@ var htmlPrincipal = document.getElementById('htmlPrincipal');
 
 var secaoTemas = document.getElementById('secaoTemas');
 
-var imagemAbrirBotaoMenu = document.getElementById('imagemAbrirBotaoMenu');
-
 var botaoMenu = document.getElementById('botaoMenu');
 
 var statusSistema = document.getElementById('statusSistema');
+
+var secaoItemsHome = document.getElementById('secaoItemsHome');
+var secaoItemsProducts = document.getElementById('secaoItemsProducts');
+var secaoItemsCollections = document.getElementById('secaoItemsCollections');
+var secaoItemsHome = document.getElementById('secaoItemsHome');
 
 var imagemBotaoMenu = document.getElementById('imagemBotaoMenu');
 
@@ -30,6 +33,8 @@ var relogio = document.getElementById('relogio');
 var secaoImagemDeFundo = document.getElementById('secaoImagemDeFundo');
 
 var bloco = document.getElementById('bloco');
+
+var secaoOptions = document.getElementById('secaoOptions');
 
 var imagemDeFundo = document.getElementById('imagemDeFundo');
 
@@ -90,14 +95,14 @@ function tamanhoJanela()
 
 function statusMenu()
 {
-    imagemAbrirBotaoMenu.style.width = "28px";
-    imagemAbrirBotaoMenu.style.height = "28px";
+    imagemBotaoMenu.style.width = "28px";
+    imagemBotaoMenu.style.height = "28px";
 }
 
 function statusMenuOff()
 {
-    imagemAbrirBotaoMenu.style.width = "27px";
-    imagemAbrirBotaoMenu.style.height = "27px";
+    imagemBotaoMenu.style.width = "27px";
+    imagemBotaoMenu.style.height = "27px";
 }
 
 function scrollImagens()
@@ -158,28 +163,14 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            cabecalho.style.height = "50px";
+            cabecalho.style.height = "70px";
             imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
-            /*
-                        for (let i = 0; i < imagensProjetos3d.length; i++) 
-                        {
-                            imagensProjetos3d[ i ].style.borderWidth = alturaJanela + "px 0px " + alturaJanela + "px 0px";
-            
-                            imagensProjetos3d[ i ].style.borderColor = "rgba(0,0,0,0)";
-            
-                            imagensProjetos3d[ index ].style.borderStyle = "solid";
-            
-                            imagensProjetos3d[ index ].style.width = "100%";
-            
-                            imagensProjetos3d[ index ].style.height = "auto";
-                           
-                          }
-                */
             for (let i = 0; i < menu.length; i++) 
             {
                 menu[ i ].style.visibility = "hidden";
             }
+            secaoTemas.style.visibility = "hidden";
 
         }, tempoIntervalo);
 
@@ -188,17 +179,14 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         setTimeout(() =>
         {
             imagemDeFundo.style.top = "420px";
-            /*
-                        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.borderWidth = imagemDeFundo.height + "px 0px " + imagemDeFundo.height + "px 0px";
-            
-                        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.borderColor = "rgba(0,0,0,0)";
-            
-                        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.borderStyle = "solid";
-            
-                        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.width = "100%";
-            
-                        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.height = "auto";
-            */
+            cabecalho.style.height = "35px";
+
+            for (let i = 0; i < menu.length; i++) 
+            {
+                menu[ i ].style.visibility = "hidden";
+            }
+            secaoTemas.style.visibility = "hidden";
+
         }, tempoIntervalo);
 
     } else
@@ -207,29 +195,13 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
         setTimeout(() =>
         {
-            scrollImagens();
             cabecalho.style.height = "35px";
-            cabecalho.style.alignItems = "flex-start"
 
-            /*
-            for (let i = 0; i < imagensProjetos3d.length; i++) 
-            {
-                imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
-     
-                imagensProjetos3d[ i ].style.borderColor = "rgba(0,0,0,0)";
-     
-                imagensProjetos3d[ index ].style.borderStyle = "solid";
-     
-                imagensProjetos3d[ index ].style.width = "100%";
-     
-                imagensProjetos3d[ index ].style.height = "auto";
-            }
-    */
             for (let i = 0; i < menu.length; i++) 
             {
                 menu[ i ].style.visibility = "hidden";
             }
-            secaoTemas.style.visibility = "hidden"
+            secaoTemas.style.visibility = "hidden";
 
         }, tempoIntervalo);
     }
@@ -676,8 +648,7 @@ function showTime()
     let currentTime = hour + ":"
         + min + ":" + sec + "s || 3D™";
 
-    document.getElementById("relogio")
-        .innerHTML = "Lookalike® || " + "\n" + currentTime;
+    relogio.innerHTML = "Lookalike® || " + "\n" + currentTime;
 
     //statusSistema2.innerHTML = coordenada(imagensProjetos3d[ 0 ], "top");
 
@@ -1012,7 +983,7 @@ function abrirFecharMenu()
     var estiloCabecalho = window.getComputedStyle(cabecalho);
     var propriedadeCabecalho = estiloCabecalho.getPropertyValue('height');
 
-    if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "50px")
+    if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "70px")
     {
         menuAberto = true;
         abrirMenu();
@@ -1036,9 +1007,8 @@ function abrindoFechandoMenu()
     //alert(menuAberto)
     if (menuAberto)
     {
-
         cabecalho.style.height = "200px";
-        //secaoTemas.style.visibility = "visible";
+        secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;
         relogio.style.visibility = "hidden";
@@ -1046,8 +1016,8 @@ function abrindoFechandoMenu()
         for (let i = 0; i < menu.length; i++) 
         {
             menu[ i ].style.visibility = "visible";
-            menu[ i ].style.opacity = 1;
         }
+
     } else
     {
         cabecalho.style.height = "35px"
@@ -1078,12 +1048,34 @@ function abrirMenu()
 {
     cabecalho.classList.remove('fecharMenu');
     cabecalho.classList.add('abrirMenu');
+    relogio.classList.remove('opacidade10')
+    relogio.classList.add('opacidade10')
 }
 
 function fecharMenu() 
 {
     cabecalho.classList.remove('abrirMenu');
     cabecalho.classList.add('fecharMenu');
+}
+
+function abrirOptions()
+{
+    secaoOptions.classList.remove('abrirItemMenu');
+    secaoOptions.classList.add('abrirItemMenu');
+}
+
+function abrirFecharItemMenu(elemento)
+{
+    var estiloElemento = window.getComputedStyle(elemento);
+    var propriedadeCabecalho = estiloElemento.getPropertyValue('visibility');
+
+    if (propriedadeCabecalho == "visible")
+    {
+        elemento.style.visibility = "hidden";
+    } else
+    {
+        elemento.style.visibility = "visible";
+    }
 }
 
 //statusSistema.innerHTML = '';
@@ -1098,7 +1090,18 @@ imagemBotaoMenu.addEventListener('click', () =>
  
 */
 
+function itemMenuAnimacaoFinalizada()
+{
+    for (let i = 0; i < secaoTemas.length; i++) 
+    {
+        secaoTemas[ i ].style.visibility = "visible";
+        secaoTemas[ i ].style.opacity = 1;
+    }
+}
+
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
+
+secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
 
 /*
 function scrollImagens()
