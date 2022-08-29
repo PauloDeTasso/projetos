@@ -1071,9 +1071,6 @@ function abrirOptions()
 
 function abrirFecharItemMenu(elemento, acao)
 {
-    var estiloElemento = window.getComputedStyle(elemento);
-    var propriedadeCabecalho = estiloElemento.getPropertyValue('visibility');
-
     var i;
 
     switch (elemento)
