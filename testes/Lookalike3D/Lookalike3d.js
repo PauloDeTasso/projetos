@@ -38,6 +38,8 @@ var secaoOptions = document.getElementById('secaoOptions');
 
 var imagemDeFundo = document.getElementById('imagemDeFundo');
 
+var titulosMenu = document.getElementsByClassName('titulosMenu');
+
 var coordenadas = {};
 
 var propriedadeCoordenada = {};
@@ -1064,18 +1066,55 @@ function abrirOptions()
     secaoOptions.classList.add('abrirItemMenu');
 }
 
-function abrirFecharItemMenu(elemento)
+
+//var acao;
+
+function abrirFecharItemMenu(elemento, acao)
 {
     var estiloElemento = window.getComputedStyle(elemento);
     var propriedadeCabecalho = estiloElemento.getPropertyValue('visibility');
 
-    if (propriedadeCabecalho == "visible")
+    var i;
+
+    switch (elemento)
     {
-        elemento.style.visibility = "hidden";
-    } else
+        case secaoItemsHome:
+            i = 0;
+            break;
+
+        case secaoItemsProducts:
+            i = 1;
+            break;
+
+        case secaoItemsCollections:
+            i = 2;
+            break;
+
+        case secaoItemsOptions:
+            i = 3;
+            break;
+
+        case secaoItemsContact:
+            i = 4;
+            break;
+
+        default:
+            i = 0;
+    }
+
+    if (acao)
     {
         elemento.style.visibility = "visible";
+
+        titulosMenu[ i ].style.color = "rgb(255,255,255)";
+
+    } else
+    {
+        elemento.style.visibility = "hidden";
+
+        titulosMenu[ i ].style.color = "rgb(35, 240, 255)";
     }
+
 }
 
 //statusSistema.innerHTML = '';

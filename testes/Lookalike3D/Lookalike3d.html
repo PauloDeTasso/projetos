@@ -25,9 +25,10 @@
 
                 </section>
 
-                <section class="menu" id="secaoHome">
+                <section class="menu" id="secaoHome" onmouseleave="abrirFecharItemMenu(secaoItemsHome,false)">
 
-                    <section id="nomeHome" onclick="abrirFecharItemMenu(secaoItemsHome)">
+                    <section class="titulosMenu" id="nomeHome" onclick="abrirFecharItemMenu(secaoItemsHome,true)"
+                        onmouseenter="abrirFecharItemMenu(secaoItemsHome,true)">
                         HOME
                     </section>
 
@@ -43,9 +44,11 @@
 
                 </section>
 
-                <section class="menu" id="secaoProduts">
+                <section class="menu" id="secaoProduts" onmouseleave="abrirFecharItemMenu(secaoItemsProducts,false)">
 
-                    <section id="nomeProducts" onclick="abrirFecharItemMenu(secaoItemsProducts)">
+                    <section class="titulosMenu" id="nomeProducts"
+                        onclick="abrirFecharItemMenu(secaoItemsProducts,true)"
+                        onmouseenter="abrirFecharItemMenu(secaoItemsProducts,true)">
                         PRODUCTS
                     </section>
 
@@ -61,10 +64,13 @@
 
                 </section>
 
-                <section class="menu" id="secaoCollections">
+                <section class="menu" id="secaoCollections"
+                    onmouseleave="abrirFecharItemMenu(secaoItemsCollections,false)">
 
 
-                    <section id="nomeCollections" onclick="abrirFecharItemMenu(secaoItemsCollections)">
+                    <section class="titulosMenu" id="nomeCollections"
+                        onclick="abrirFecharItemMenu(secaoItemsCollections,true)"
+                        onmouseenter="abrirFecharItemMenu(secaoItemsCollections,true)">
                         COLLECTIONS
                     </section>
 
@@ -80,9 +86,10 @@
 
                 </section>
 
-                <section class="menu" id="secaoOptions">
+                <section class="menu" id="secaoOptions" onmouseleave="abrirFecharItemMenu(secaoItemsOptions,false)">
 
-                    <section id="nomeOptions" onclick="abrirFecharItemMenu(secaoItemsOptions)">
+                    <section class="titulosMenu" id="nomeOptions" onclick="abrirFecharItemMenu(secaoItemsOptions,true)"
+                        onmouseenter="abrirFecharItemMenu(secaoItemsOptions,true)">
                         OPTIONS
                     </section>
 
@@ -118,9 +125,10 @@
 
                 </section>
 
-                <section class="menu" id="secaoContact">
+                <section class="menu" id="secaoContact" onmouseleave="abrirFecharItemMenu(secaoItemsContact,false)">
 
-                    <section id="nomeContact" onclick="abrirFecharItemMenu(secaoItemsContact)">
+                    <section class="titulosMenu" id="nomeContact" onclick="abrirFecharItemMenu(secaoItemsContact,true)"
+                        onmouseenter="abrirFecharItemMenu(secaoItemsContact,true)">
                         CONTACT
                     </section>
 
@@ -138,7 +146,7 @@
 
                 <section id="botoesCabecalho">
 
-                    <button id="botaoMenu" type="button" onclick="abrirFecharMenu()" onmousemove="statusMenu()"
+                    <button id="botaoMenu" type="button" onclick="abrirFecharMenu()" onmouseenter="statusMenu()"
                         onmouseleave="statusMenuOff()" type="button">
 
                         <section id="imagemBotaoMenu">
@@ -219,7 +227,49 @@
         <img id="imagemDeFundo" src="../../imagens/Projetos3d/background01.png" alt="">
     </section>
 
-    <!-- <img id="bloco" src="../../imagens/Projetos3d/10.png" alt=""> -->
+    <!-- <img id="bloco" src="../../imagens/Projetos3d/10.png" alt=""> 
+
+    <section id="tiposDeCursorDoMouse">
+
+        <p class="alias">alias</p>
+        <p class="all-scroll">all-scroll</p>
+        <p class="auto">auto</p>
+        <p class="cell">cell</p>
+        <p class="col-resize">col-resize</p>
+        <p class="context-menu">context-menu</p>
+        <p class="copy">copy</p>
+        <p class="crosshair">crosshair</p>
+        <p class="default">default</p>
+        <p class="e-resize">e-resize</p>
+        <p class="ew-resize">ew-resize</p>
+        <p class="grab">grab</p>
+        <p class="grabbing">grabbing</p>
+        <p class="help">help</p>
+        <p class="move">move</p>
+        <p class="n-resize">n-resize</p>
+        <p class="ne-resize">ne-resize</p>
+        <p class="nesw-resize">nesw-resize</p>
+        <p class="ns-resize">ns-resize</p>
+        <p class="nw-resize">nw-resize</p>
+        <p class="nwse-resize">nwse-resize</p>
+        <p class="no-drop">no-drop</p>
+        <p class="none">none</p>
+        <p class="not-allowed">not-allowed</p>
+        <p class="pointer">pointer</p>
+        <p class="progress">progress</p>
+        <p class="row-resize">row-resize</p>
+        <p class="s-resize">s-resize</p>
+        <p class="se-resize">se-resize</p>
+        <p class="sw-resize">sw-resize</p>
+        <p class="text">text</p>
+        <p class="url">url</p>
+        <p class="w-resize">w-resize</p>
+        <p class="wait">wait</p>
+        <p class="zoom-in">zoom-in</p>
+        <p class="zoom-out">zoom-out</p>
+
+    </section>
+-->
 
     <script src="Lookalike3d.js"></script>
 
