@@ -1009,7 +1009,7 @@ function abrindoFechandoMenu()
     //alert(menuAberto)
     if (menuAberto)
     {
-        cabecalho.style.height = "200px";
+        cabecalho.style.height = "300px";
         secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;

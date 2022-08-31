@@ -295,7 +295,7 @@ a:active {
 
     100% {
         opacity: 1;
-        height: 200px;
+        height: 300px;
         align-items: flex-start;
     }
 }
@@ -441,9 +441,10 @@ a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     visibility: hidden;
+    font-size: 70%;
 }
 
 #secaoItemsCollections {
@@ -454,6 +455,7 @@ a:active {
     width: 100%;
     height: auto;
     visibility: hidden;
+    font-size: 70%;
 }
 
 #secaoItemsOptions {
@@ -464,6 +466,7 @@ a:active {
     width: 100%;
     height: auto;
     visibility: hidden;
+    font-size: 70%;
 }
 
 #secaoItemsContact {
@@ -471,9 +474,34 @@ a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     width: 100%;
     height: auto;
     visibility: hidden;
+    font-size: 70%;
+}
+
+
+
+.itemsProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 10%;
+    cursor: pointer;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
 }
 
 /* REFLEXOS NA IMAGEM:
