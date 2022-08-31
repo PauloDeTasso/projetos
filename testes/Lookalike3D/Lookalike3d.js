@@ -1066,17 +1066,26 @@ function abrirOptions()
     secaoOptions.classList.add('abrirItemMenu');
 }
 
-
-//var acao;
-
-function abrirFecharItemMenu(elemento, acao)
+function abrirFecharItemMenu(elemento, acao, event)
 {
+    event = event || window.event;
+
     var i;
 
     switch (elemento)
     {
         case secaoItemsHome:
+
             i = 0;
+
+            if (event.type == "click" || event.type == "touchstart")
+            {
+                open("../Lookalike3D/Lookalike3d.html", "_self")
+            } else
+            {
+
+            }
+
             break;
 
         case secaoItemsProducts:
@@ -1111,6 +1120,7 @@ function abrirFecharItemMenu(elemento, acao)
 
         titulosMenu[ i ].style.color = "rgb(35, 240, 255)";
     }
+
 
 }
 
