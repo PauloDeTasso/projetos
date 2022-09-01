@@ -25,6 +25,11 @@ var secaoItemsCollections = document.getElementById('secaoItemsCollections');
 var secaoItemsHome = document.getElementById('secaoItemsHome');
 
 var imagemBotaoMenu = document.getElementById('imagemBotaoMenu');
+var home = document.getElementById('home');
+var products = document.getElementById('products');
+var collections = document.getElementById('collections');
+var options = document.getElementById('options');
+var contact = document.getElementById('contact');
 
 var botoesCabecalho = document.getElementById('botoesCabecalho');
 
@@ -95,16 +100,16 @@ function tamanhoJanela()
 
 //
 
-function statusMenu()
+function iconeTamanho(icone)
 {
-    imagemBotaoMenu.style.width = "28px";
-    imagemBotaoMenu.style.height = "28px";
+    icone.style.width = "40px";
+    icone.style.height = "40px";
 }
 
-function statusMenuOff()
+function iconeTamanhoMenor(icone)
 {
-    imagemBotaoMenu.style.width = "27px";
-    imagemBotaoMenu.style.height = "27px";
+    icone.style.width = "35px";
+    icone.style.height = "35px";
 }
 
 function scrollImagens()
@@ -165,7 +170,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            cabecalho.style.height = "70px";
+            cabecalho.style.height = "100px";
             imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
             for (let i = 0; i < menu.length; i++) 
@@ -180,8 +185,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            imagemDeFundo.style.top = "420px";
-            cabecalho.style.height = "35px";
+            imagemDeFundo.style.top = "450px";
+            cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -197,7 +202,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
         setTimeout(() =>
         {
-            cabecalho.style.height = "35px";
+            cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -1009,7 +1014,7 @@ function abrindoFechandoMenu()
     //alert(menuAberto)
     if (menuAberto)
     {
-        cabecalho.style.height = "300px";
+        cabecalho.style.height = "450px";
         secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;
@@ -1022,7 +1027,7 @@ function abrindoFechandoMenu()
 
     } else
     {
-        cabecalho.style.height = "35px"
+        cabecalho.style.height = "70px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
         relogio.style.visibility = "visible";

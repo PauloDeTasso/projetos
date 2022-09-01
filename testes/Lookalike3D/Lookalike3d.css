@@ -99,8 +99,9 @@ html {
     left: 0px;
     position: fixed;
     width: 100%;
-    height: 35px;
-    background-color: rgba(255, 152, 27, 0.532);
+    height: 70px;
+    /*background-color: rgba(255, 152, 27, 0.532);*/
+    background-color: rgba(255, 255, 255, 0.532);
     color: rgba(23, 0, 78, 1);
 }
 
@@ -198,7 +199,7 @@ html {
 }
 
 #imagemBotaoMenu {
-    content: url("../../icones/menu02.png");
+    content: url("../../icones/Cor Laranja/menu2.png");
     /*
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -207,8 +208,8 @@ html {
     background-attachment: fixed;
     background-position: center;
     */
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     top: 0px;
     right: 30px;
 }
@@ -272,7 +273,7 @@ a:active {
 @keyframes abrirItemMenuCss {
     0% {
         opacity: 0;
-        height: 35px;
+        height: 70px;
     }
 
     100% {
@@ -289,13 +290,13 @@ a:active {
 @keyframes abrirMenuCss {
     0% {
         opacity: 1;
-        height: 35px;
+        height: 70px;
         align-items: flex-start;
     }
 
     100% {
         opacity: 1;
-        height: 300px;
+        height: 450px;
         align-items: flex-start;
     }
 }
@@ -307,12 +308,12 @@ a:active {
 @keyframes fecharMenuCss {
     0% {
         opacity: 1;
-        height: 200px;
+        height: 450px;
     }
 
     100% {
         opacity: 1;
-        height: 35px;
+        height: 70px;
     }
 }
 
@@ -424,6 +425,14 @@ a:active {
 
 .titulosMenu {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+
 }
 
 #secaoItemsHome {
@@ -452,8 +461,8 @@ a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     visibility: hidden;
     font-size: 70%;
 }
@@ -500,6 +509,16 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.iconesMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
     height: auto;
     padding: 2%;
 }

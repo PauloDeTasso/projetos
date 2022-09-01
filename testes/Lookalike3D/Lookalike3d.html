@@ -30,7 +30,9 @@
                     <section class="titulosMenu" id="nomeHome" onclick="abrirFecharItemMenu(secaoItemsHome,true)"
                         ontouchstart="abrirFecharItemMenu(secaoItemsHome,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsHome,true)">
-                        HOME
+                        <!-- HOME -->
+                        <img class="iconesMenu" id="home" src="../../icones/Cor Laranja/home.webp" alt="" width="auto"
+                            height="auto" onmouseenter="iconeTamanho(home)" onmouseleave="iconeTamanhoMenor(home)">
                     </section>
 
                     <!-- onmouseenter="abrirFecharItemMenu(secaoItemsHome,true)" -->
@@ -46,10 +48,12 @@
                     <section class="titulosMenu" id="nomeProducts"
                         onclick="abrirFecharItemMenu(secaoItemsProducts,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsProducts,true)">
-                        PRODUCTS
+                        <!-- PRODUCTS -->
+                        <img class="iconesMenu" id="products" src="../../icones/Cor Laranja/menu.png" alt=""
+                            width="auto" height="auto" onmouseenter="iconeTamanho(products)">
                     </section>
 
-                    <section id="secaoItemsProducts">
+                    <section id="secaoItemsProducts" onmouseleave="iconeTamanhoMenor(products)">
 
                         <div class="itemsProducts">CHAIRS</div>
                         <div class="itemsProducts">TABLES</div>
@@ -74,12 +78,14 @@
                     <section class="titulosMenu" id="nomeCollections"
                         onclick="abrirFecharItemMenu(secaoItemsCollections,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsCollections,true)">
-                        COLLECTIONS
+                        <!-- COLLECTIONS -->
+                        <img class="iconesMenu" id="collections" src="../../icones/Cor Laranja/photos.png" alt=""
+                            width="auto" height="auto" onmouseenter="iconeTamanho(collections)">
                     </section>
 
-                    <section id="secaoItemsCollections">
+                    <section id="secaoItemsCollections" onmouseleave="iconeTamanhoMenor(collections)">
 
-                        <div class="itemsProducts">LIVING ROOM</div>
+                        <div class="itemsProducts">LIVING_ROOM</div>
                         <div class="itemsProducts">KITCHEN</div>
                         <div class="itemsProducts">BATHROOM</div>
                         <div class="itemsProducts">OFFICE</div>
@@ -100,10 +106,12 @@
 
                     <section class="titulosMenu" id="nomeOptions" onclick="abrirFecharItemMenu(secaoItemsOptions,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsOptions,true)">
-                        OPTIONS
+                        <!-- OPTIONS -->
+                        <img class="iconesMenu" id="options" src="../../icones/Cor Laranja/configurações.png" alt=""
+                            width="auto" height="auto" onmouseenter="iconeTamanho(options)">
                     </section>
 
-                    <section id="secaoItemsOptions">
+                    <section id="secaoItemsOptions" onmouseleave="iconeTamanhoMenor(options)">
 
                         <section id="secaoTemas">
 
@@ -133,14 +141,15 @@
 
                     <section class="titulosMenu" id="nomeContact" onclick="abrirFecharItemMenu(secaoItemsContact,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsContact,true)">
-                        CONTACT
+                        <!-- CONTACT -->
+                        <img class="iconesMenu" id="contato" src="../../icones/Cor Laranja/contato.webp" alt=""
+                            width="auto" height="auto" onmouseenter="iconeTamanho(contato)">
                     </section>
 
-                    <section id="secaoItemsContact">
+                    <section id="secaoItemsContact" onmouseleave="iconeTamanhoMenor(contato)">
 
                         <a href=mailto:atendimentos.site@gmail.com target="_blank">
-                            <img src="../../icones/LOGOS/REDES SOCIAIS/email 3d.png" alt="Logo Gmail" width="25%"
-                                height="25%">
+                            <img src="../../icones/Cor Laranja/email.webp" alt="Logo Gmail" width="25%" height="25%">
                         </a>
 
                     </section>
@@ -149,8 +158,9 @@
 
                 <section id="botoesCabecalho">
 
-                    <button id="botaoMenu" type="button" onclick="abrirFecharMenu()" onmouseenter="statusMenu()"
-                        onmouseleave="statusMenuOff()" type="button">
+                    <button id="botaoMenu" type="button" onclick="abrirFecharMenu()"
+                        onmouseenter="iconeTamanho(imagemBotaoMenu)" onmouseleave="iconeTamanhoMenor(imagemBotaoMenu)"
+                        type="button">
 
                         <section id="imagemBotaoMenu">
 
