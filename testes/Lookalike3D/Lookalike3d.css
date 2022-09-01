@@ -101,7 +101,7 @@ html {
     width: 100%;
     height: 70px;
     /*background-color: rgba(255, 152, 27, 0.532);*/
-    background-color: rgba(255, 255, 255, 0.532);
+    background-color: rgba(255, 255, 255, 0.507);
     color: rgba(23, 0, 78, 1);
 }
 
@@ -171,19 +171,6 @@ html {
     background-color: rgba(0, 0, 0, 0);
 }
 
-#botaoCabecalho {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    padding: 1%;
-    border: 200px solid rgba(143, 143, 143, 0.363);
-    opacity: 0;
-}
-
 #secaoTemas {
     display: flex;
     flex-direction: row;
@@ -208,10 +195,11 @@ html {
     background-attachment: fixed;
     background-position: center;
     */
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     top: 0px;
     right: 30px;
+    cursor: pointer;
 }
 
 /*/////////////////ESTILOS DE LINKS:
@@ -273,7 +261,7 @@ a:active {
 @keyframes abrirItemMenuCss {
     0% {
         opacity: 0;
-        height: 70px;
+        height: 120px;
     }
 
     100% {
@@ -290,7 +278,7 @@ a:active {
 @keyframes abrirMenuCss {
     0% {
         opacity: 1;
-        height: 70px;
+        height: 120px;
         align-items: flex-start;
     }
 
@@ -313,7 +301,7 @@ a:active {
 
     100% {
         opacity: 1;
-        height: 70px;
+        height: 50px;
     }
 }
 
@@ -518,7 +506,47 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 35px;
+    height: auto;
+    padding: 2%;
+}
+
+#cabecalho02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+#secaoDiv01Cabecalho02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+#secaoDiv02Cabecalho02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.botoesResultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: auto;
     padding: 2%;
 }

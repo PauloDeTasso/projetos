@@ -170,7 +170,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            cabecalho.style.height = "100px";
+            cabecalho.style.height = "70px";
             imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
             for (let i = 0; i < menu.length; i++) 
@@ -202,7 +202,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
         setTimeout(() =>
         {
-            cabecalho.style.height = "70px";
+            cabecalho.style.height = "50px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -990,7 +990,7 @@ function abrirFecharMenu()
     var estiloCabecalho = window.getComputedStyle(cabecalho);
     var propriedadeCabecalho = estiloCabecalho.getPropertyValue('height');
 
-    if (propriedadeCabecalho == "35px" || propriedadeCabecalho == "70px")
+    if (propriedadeCabecalho == "50px" || propriedadeCabecalho == "70px")
     {
         menuAberto = true;
         abrirMenu();
@@ -1027,7 +1027,7 @@ function abrindoFechandoMenu()
 
     } else
     {
-        cabecalho.style.height = "70px"
+        cabecalho.style.height = "50px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
         relogio.style.visibility = "visible";
