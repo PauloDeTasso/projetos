@@ -31,6 +31,32 @@ var collections = document.getElementById('collections');
 var options = document.getElementById('options');
 var contact = document.getElementById('contact');
 
+
+var divCadeiras = document.getElementById('divCadeiras');
+var divMesas = document.getElementById('divMesas');
+var divArmarios = document.getElementById('divArmarios');
+var divCama = document.getElementById('divCama');
+var divComodas = document.getElementById('divComodas');
+var divTelevisao = document.getElementById('divTelevisao');
+var divRack = document.getElementById('divRack');
+var divSofa = document.getElementById('divSofa');
+var divBancos = document.getElementById('divBancos');
+var divChicaras = document.getElementById('divChicaras');
+var divTacas = document.getElementById('divTacas');
+
+
+var divSala = document.getElementById('divSala');
+var divQuarto = document.getElementById('divQuarto');
+var divCozinha = document.getElementById('divCozinha');
+var divBanheiro = document.getElementById('divBanheiro');
+var divEscritorio = document.getElementById('divEscritorio');
+var divQuarto = document.getElementById('divQuarto');
+var divGaragem = document.getElementById('divGaragem');
+var divJardim = document.getElementById('divJardim');
+var divExternalArea = document.getElementById('divExternalArea');
+var divSotao = document.getElementById('divSotao');
+var divPorao = document.getElementById('divPorao');
+
 var botoesCabecalho = document.getElementById('botoesCabecalho');
 
 var relogio = document.getElementById('relogio');
@@ -42,6 +68,12 @@ var bloco = document.getElementById('bloco');
 var secaoOptions = document.getElementById('secaoOptions');
 
 var imagemDeFundo = document.getElementById('imagemDeFundo');
+
+var imagemInstagram = document.getElementById('imagemInstagram');
+
+var imagemFacebook = document.getElementById('imagemFacebook');
+
+var imagemTwitter = document.getElementById('imagemTwitter');
 
 var titulosMenu = document.getElementsByClassName('titulosMenu');
 
@@ -108,8 +140,18 @@ function iconeTamanho(icone)
 
 function iconeTamanhoMenor(icone)
 {
-    icone.style.width = "35px";
-    icone.style.height = "35px";
+    icone.style.width = "30px";
+    icone.style.height = "30px";
+}
+
+function iconeOpacidade(icone)
+{
+    icone.style.opacity = "1";
+}
+
+function iconeOpacidadeMenor(icone)
+{
+    icone.style.opacity = ".5";
 }
 
 function scrollImagens()
@@ -170,7 +212,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            cabecalho.style.height = "70px";
+            cabecalho.style.height = "120px";
             imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
             for (let i = 0; i < menu.length; i++) 
@@ -185,8 +227,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            imagemDeFundo.style.top = "450px";
-            cabecalho.style.height = "70px";
+            imagemDeFundo.style.top = "500px";
+            cabecalho.style.height = "120px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -202,7 +244,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
         setTimeout(() =>
         {
-            cabecalho.style.height = "50px";
+            cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
             {
@@ -990,7 +1032,7 @@ function abrirFecharMenu()
     var estiloCabecalho = window.getComputedStyle(cabecalho);
     var propriedadeCabecalho = estiloCabecalho.getPropertyValue('height');
 
-    if (propriedadeCabecalho == "50px" || propriedadeCabecalho == "70px")
+    if (propriedadeCabecalho == "70px" || propriedadeCabecalho == "120px")
     {
         menuAberto = true;
         abrirMenu();
@@ -1014,7 +1056,7 @@ function abrindoFechandoMenu()
     //alert(menuAberto)
     if (menuAberto)
     {
-        cabecalho.style.height = "450px";
+        cabecalho.style.height = "500px";
         secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;
@@ -1027,7 +1069,7 @@ function abrindoFechandoMenu()
 
     } else
     {
-        cabecalho.style.height = "50px"
+        cabecalho.style.height = "70px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
         relogio.style.visibility = "visible";

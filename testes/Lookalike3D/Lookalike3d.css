@@ -99,7 +99,7 @@ html {
     left: 0px;
     position: fixed;
     width: 100%;
-    height: 70px;
+    height: 120px;
 
     background-color: rgba(255, 255, 255, 0.507);
     color: rgba(23, 0, 78, 1);
@@ -130,12 +130,13 @@ html {
     vertical-align: middle;
     width: 100%;
     height: auto;
-    padding: 0%;
     visibility: hidden;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    color: rgb(35, 240, 255);
-    text-shadow: 1.3px 3px 10px rgb(55, 0, 255), 0 0 5px rgb(140, 0, 255), 0 0 5px rgb(255, 255, 255);
+    font-weight: bolder;
+    color: rgb(255, 106, 0);
+    text-shadow: 1.3px 3px 10px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+    padding: 2%;
 }
 
 #relogio {
@@ -176,11 +177,17 @@ html {
     height: auto;
     background-color: rgba(255, 145, 0, 0.549);
     color: rgb(111, 0, 255);
-    font-size: 70%;
+    font-size: 57%;
 }
 
 #redesSociais {
-    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
 }
 
 #botaoMenu {
@@ -212,8 +219,8 @@ html {
     background-attachment: fixed;
     background-position: center;
     */
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     top: 0px;
     right: 30px;
     cursor: pointer;
@@ -295,13 +302,13 @@ a:active {
 @keyframes abrirMenuCss {
     0% {
         opacity: 1;
-        height: 50px;
+        height: 70px;
         align-items: flex-start;
     }
 
     100% {
         opacity: 1;
-        height: 450px;
+        height: 500px;
         align-items: flex-start;
     }
 }
@@ -313,12 +320,12 @@ a:active {
 @keyframes fecharMenuCss {
     0% {
         opacity: 1;
-        height: 450px;
+        height: 500px;
     }
 
     100% {
         opacity: 1;
-        height: 50px;
+        height: 70px;
     }
 }
 
@@ -495,17 +502,19 @@ a:active {
     font-size: 70%;
 }
 
-
-
-.itemsProducts {
+.itemsMenus {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: 100%;
-    padding: 10%;
+    padding: 12%;
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    margin: 2%;
+    opacity: .5;
 }
 
 a {
@@ -579,6 +588,32 @@ a {
     width: 100%;
     height: auto;
     padding: 0%;
+}
+
+.logosRedesSocias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: auto;
+    padding: 0%;
+    border: 0px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    margin: 2%;
+    opacity: .8;
+}
+
+#imagemInstagram {
+    opacity: .8;
+}
+
+#imagemFacebook {
+    opacity: .8;
+}
+
+#imagemTwitter {
+    opacity: .8;
 }
 
 /* REFLEXOS NA IMAGEM:
