@@ -223,6 +223,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
         }, tempoIntervalo);
 
+        //SE O SCROOL ESTIVER 100% EM BAIXO:
     } else if (Math.abs(document.documentElement.scrollHeight - document.documentElement.clientHeight - document.documentElement.scrollTop) < 1)
     {
         setTimeout(() =>

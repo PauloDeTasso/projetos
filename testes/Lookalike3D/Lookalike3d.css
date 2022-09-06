@@ -45,7 +45,7 @@ html {
     background-size: 100% auto;
     background-attachment: fixed;
     background-position: center;
-    ;
+
 }
 
 #secaoPrincipal {
@@ -66,7 +66,7 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #secaoBody {
@@ -77,7 +77,6 @@ html {
     width: 100%;
     height: auto;
     color: rgb(76, 0, 255);
-
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -88,6 +87,7 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #cabecalho {
@@ -100,9 +100,8 @@ html {
     position: fixed;
     width: 100%;
     height: 120px;
-
-    background-color: rgba(255, 255, 255, 0.507);
     color: rgba(23, 0, 78, 1);
+
     /*
     display: flex;
     flex-direction: row;
@@ -120,6 +119,9 @@ html {
 
     border: 5px solid red;
     */
+
+
+    background-color: rgba(200, 200, 200, 0.3);
 }
 
 .menu {
@@ -394,8 +396,6 @@ a:active {
     }
 }
 
-;
-
 .imagensProjetos3d {
     display: flex;
     flex-direction: column;
@@ -622,6 +622,10 @@ img {
 }
 
 /* //////////////////////////////ANIMAÇÃO:
+
+//ORDEM CORRETA PARA UNICA LINHA:
+
+object.style.animation = "name duration timingFunction delay iterationCount direction fillMode playState"
 
 ////ANIMATION:
 
