@@ -155,7 +155,7 @@ html {
     font-size: 100%;
     text-align: center;
     border-radius: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 247, 255);
     text-decoration: overline;
 }
 
@@ -221,8 +221,8 @@ html {
     background-attachment: fixed;
     background-position: center;
     */
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: auto;
     top: 0px;
     right: 30px;
     cursor: pointer;
