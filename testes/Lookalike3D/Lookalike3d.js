@@ -31,7 +31,6 @@ var collections = document.getElementById('collections');
 var options = document.getElementById('options');
 var contact = document.getElementById('contact');
 
-
 var divCadeiras = document.getElementById('divCadeiras');
 var divMesas = document.getElementById('divMesas');
 var divArmarios = document.getElementById('divArmarios');
@@ -43,7 +42,6 @@ var divSofa = document.getElementById('divSofa');
 var divBancos = document.getElementById('divBancos');
 var divChicaras = document.getElementById('divChicaras');
 var divTacas = document.getElementById('divTacas');
-
 
 var divSala = document.getElementById('divSala');
 var divQuarto = document.getElementById('divQuarto');
