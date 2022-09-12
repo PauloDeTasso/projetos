@@ -145,11 +145,13 @@ function iconeTamanhoMenor(icone)
 function iconeOpacidade(icone)
 {
     icone.style.opacity = "1";
+    icone.style.backgroundColor = "rgba(200,200,200,.5)";
 }
 
 function iconeOpacidadeMenor(icone)
 {
     icone.style.opacity = ".5";
+    icone.style.backgroundColor = "rgba(200,200,200,0)";
 }
 
 function scrollImagens()
@@ -227,7 +229,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         setTimeout(() =>
         {
             imagemDeFundo.style.top = "500px";
-            cabecalho.style.height = "120px";
+            cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
             {
