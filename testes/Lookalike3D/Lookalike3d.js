@@ -102,6 +102,10 @@ var alturaJanela = window.outerHeight;
 var larguraTela = screen.width;
 var alturaTela = screen.height;
 
+var cartao = document.getElementById('cartao');
+
+cartao.addEventListener('mouseenter', () => { cartao.classList.toggle('virar') }, false);
+
 //
 
 function tamanhoJanela()
@@ -526,6 +530,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         //  imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
     }
+
 
     /*
      
