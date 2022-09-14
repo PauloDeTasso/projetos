@@ -531,6 +531,12 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         //  imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
     }
 
+    /////////
+
+    function comodas()
+    {
+        alert("oi");
+    }
 
     /*
      
