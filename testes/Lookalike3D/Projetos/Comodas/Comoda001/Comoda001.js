@@ -212,6 +212,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
         statusSistema.innerHTML = "SE " + imagensProjetos3d[ 0 ].y + " FOR MENOR QUE -550 E " + coordenada(imagensProjetos3d[ 0 ], "bottom") + " FOR MENOR QUE -550";
     */
 
+    /*
     if (this.scrollY == 0)
     {
         setTimeout(() =>
@@ -398,6 +399,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     //0
 
+
+    /*
     if (topoImagem0 < topoImagemDeFundo && baseImagem0 < baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
     {
         imagemDeFundo.src = "../../imagens/Projetos3d/12.png";
@@ -1188,13 +1191,6 @@ imagemBotaoMenu.addEventListener('click', () =>
  
 */
 
-function abrirPagina(link)
-{
-    window.open(link, '_self');
-}
-
-/*
-
 function comodas(comoda)
 {
     switch (comoda)
@@ -1217,7 +1213,6 @@ function comodas(comoda)
     }
 
 }
-*/
 
 function itemMenuAnimacaoFinalizada()
 {

@@ -1,0 +1,871 @@
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 226, 163, 0.678);
+    /*background-image: url("../../imagens/Projetos3d/background01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center;*/
+}
+
+#secaoImagemDeFundo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: -99999;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+#imagemDeFundo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    z-index: -99999;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+#secaoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoCabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: rgb(76, 0, 255);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoRodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    color: rgba(23, 0, 78, 1);
+
+    /*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    /*background-color: rgba(255, 152, 27, 0.532);*/
+    /*
+    background-color: rgba(255, 255, 255, 0.507);
+    color: rgba(23, 0, 78, 1);
+
+    border: 5px solid red;
+    */
+
+
+    background-color: rgba(200, 200, 200, 0.3);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: bolder;
+    color: rgb(255, 106, 0);
+    text-shadow: 1.3px 3px 10px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+    padding: 2%;
+}
+
+#relogio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    padding: 0%;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(0, 247, 255);
+    text-decoration: overline;
+}
+
+#secaoImagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 145, 0, 0.549);
+    color: rgb(111, 0, 255);
+    font-size: 57%;
+}
+
+#redesSociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+}
+
+#botaoMenu {
+    border: 0px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoTemas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+    visibility: visible;
+    padding: 1%;
+    border: 2px solid rgb(26, 255, 0);
+    opacity: 0;
+}
+
+#imagemBotaoMenu {
+    content: url("../../icones/Cor Laranja/menu2.png");
+    /*
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0px 0px;
+    background-origin: content-box;
+    background-attachment: fixed;
+    background-position: center;
+    */
+    width: 30px;
+    height: auto;
+    top: 0px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/*/////////////////ESTILOS DE LINKS:
+
+/* LINK NAO VISITADO */
+a:link {
+    color: rgb(0, 6, 191);
+}
+
+/* LINK VISITADO */
+a:visited {
+    color: rgb(63, 0, 158);
+}
+
+/* MOUSE EM CIMA DO LINK */
+a:hover {
+    color: rgb(0, 255, 255);
+}
+
+/* LINK SELECIONADO */
+a:active {
+    color: yellow;
+}
+
+/*/////////////*/
+
+.opacidade10 {
+    animation: Opacidade10 3s;
+}
+
+@keyframes Opacidade10 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.opacidade01 {
+    animation: Opacidade01 3s;
+}
+
+@keyframes Opacidade01 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.abrirItemMenu {
+    animation: abrirItemMenuCss 3s;
+}
+
+@keyframes abrirItemMenuCss {
+    0% {
+        opacity: 0;
+        height: 120px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 170px;
+    }
+}
+
+.abrirMenu {
+    animation: abrirMenuCss 3s;
+    animation-direction: normal;
+}
+
+@keyframes abrirMenuCss {
+    0% {
+        opacity: 1;
+        height: 70px;
+        align-items: flex-start;
+    }
+
+    100% {
+        opacity: 1;
+        height: 500px;
+        align-items: flex-start;
+    }
+}
+
+.fecharMenu {
+    animation: fecharMenuCss 3s;
+}
+
+@keyframes fecharMenuCss {
+    0% {
+        opacity: 1;
+        height: 500px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 70px;
+    }
+}
+
+.abrirMenuImagemIcone {
+    animation: abrirMenuImagemIconeCss 3s;
+}
+
+@keyframes abrirMenuImagemIconeCss {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.playImagens {
+    animation: playImagensCss 5s alternate-reverse;
+    animation-iteration-count: 1;
+}
+
+@keyframes playImagensCss {
+    0% {
+        background-image: url("../../imagens/Projetos3d/00.png");
+    }
+
+    10% {
+        background-image: url("../../imagens/Projetos3d/01.png");
+    }
+
+    20% {
+        background-image: url("../../imagens/Projetos3d/02.png");
+    }
+
+    30% {
+        background-image: url("../../imagens/Projetos3d/03.png");
+    }
+
+    40% {
+        background-image: url("../../imagens/Projetos3d/04.png");
+    }
+
+    50% {
+        background-image: url("../../imagens/Projetos3d/05.png");
+    }
+
+    60% {
+        background-image: url("../../imagens/Projetos3d/06.png");
+    }
+
+    70% {
+        background-image: url("../../imagens/Projetos3d/07.png");
+    }
+
+    80% {
+        background-image: url("../../imagens/Projetos3d/08.png");
+    }
+
+    90% {
+        background-image: url("../../imagens/Projetos3d/09.png");
+    }
+
+    100% {
+        background-image: url("../../imagens/Projetos3d/10.png");
+    }
+}
+
+.imagensProjetos3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoStatus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#secaoOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.itemsOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.titulosMenu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+
+}
+
+#secaoItemsHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+#secaoItemsProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    visibility: hidden;
+    font-size: 70%;
+}
+
+#secaoItemsCollections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    visibility: hidden;
+    font-size: 70%;
+}
+
+#secaoItemsOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    font-size: 70%;
+}
+
+#secaoItemsContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    font-size: 70%;
+}
+
+.itemsMenus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 12%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    margin: 2%;
+    opacity: .5;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+}
+
+.iconesMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: auto;
+    padding: 0%;
+}
+
+#subCabecalho01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border: 5px solid rgb(238, 255, 0);
+
+}
+
+#subCabecalho02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    visibility: hidden;
+    border: 5px solid rgb(0, 204, 255);
+}
+
+#secaoDiv01Cabecalho02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+}
+
+#secaoDiv02Cabecalho02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.botoesResultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+}
+
+.logosRedesSocias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: auto;
+    padding: 0%;
+    border: 0px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    margin: 2%;
+    opacity: .8;
+}
+
+#imagemInstagram {
+    opacity: .8;
+}
+
+#imagemFacebook {
+    opacity: .8;
+}
+
+#imagemTwitter {
+    opacity: .8;
+}
+
+#cartao {
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 2s;
+}
+
+.virar {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    transition: all .5s;
+}
+
+/* REFLEXOS NA IMAGEM:
+img {
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+}
+
+/* //////////////////////////////ANIMAÇÃO:
+
+//ORDEM CORRETA PARA UNICA LINHA:
+
+object.style.animation = "name duration timingFunction delay iterationCount direction fillMode playState"
+
+////ANIMATION:
+
+        animation-name: play; 
+        "O NOME DO KEYFRAME DA ANIMAÇÃO A SER CHAMADA"
+        EX.: STRINGS.
+
+        animation-duration: 1s; 
+         "O TEMPO DA ANIMAÇÃO".
+        EX.: 2s, 500ms.
+
+        animation-timing-function: ease-in;
+        "O TIPO DE VELOCIDADE DA ANIMAÇÃO"
+        EX.: linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(int,start|end), cubic-bezier(n,n,n,n), initial, inherit.
+
+        animation-delay: 1s;
+        "O ATRASO PARA COMEÇAR A ANIMAÇÃO".
+        EX.: 2s, 500ms. 
+ 
+        animation-iteration-count: 3;
+        "O NUMERO DE VEZES PARA REPETIR A ANIMAÇÃO".
+        EX.: 2, 2.5, 5, 20, infinity.
+
+        animation-direction: normal;
+        "DETERMINA A DIREÇÃO DA ANIMAÇÃO, PARA FRENTE, PARA TRAZ"
+        EX.: normal, reverse, alternate, alternate-reverse, initial, inherit;
+        OBS.: DEFINA "infinity" PARA "alternate"
+        
+        animation-fill-mode: backwards;
+        "DEFINE O QUE ACONTECE QUANDO TERMINA A ANIMAÇÃO"
+        EX.: none, backwards, forwards, none, initial, inherit.
+
+////TRANSFORM:
+
+//SCALE:
+
+        transform: scale(1); "TRANSFORMA TODA A ESCALA - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scaleX(2); "TRANSFORMA A ESCALA DO EIXO X - EX VALORES: 0, 0.5,1,2,10" 
+
+        transform: scaleY(0.5); "TRANSFORMA A ESCALA DO EIXO Y - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scaleZ(3); "TRANSFORMA A ESCALA DO EIXO Z - EX VALORES: 0, 0.5,1,2,10"
+
+        transform: scale3d(2.5,1,0.3); "TRANSFORMA AS ESCALA DO EIXO X,Y,Z - EX VALORES: 0, 0.5,1,2,10"
+
+//TRANSLATE:
+
+        transform: translate(100px, -200px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X E Y.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translateX(-35%);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X.
+        EX.: "100%, 100px, 2em, 3in."   
+
+        transform: translateY(-300px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO Y.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translateZ(-300px);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO Z.
+        EX.: "100%, 100px, 2em, 3in."
+
+        transform: translate3d(12px, 50%, 3em);
+        "DESLOCA A LOCALIZAÇÃO DO EIXO X, Y, Z.
+        EX.: "100%, 100px, 2em, 3in."
+
+//ROTATE:
+
+        transform: rotate(45deg);
+        "ROTACIONA TODO O ELEMENTO 45 GRAUS.
+        EX.: (45deg = 45 graus), OU (-45deg = -45 graus),
+         (0.5turn = MEIA VOLTA - OU 180 GRAUS - SENTIDO HORARIO),
+        (-0.25turn - 90 GRAUS - SENTIDO ANTI HORARIO)" 
+
+        transform: rotateX(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO X.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotateY(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO Y.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotateZ(90deg);
+        "ROTACIONA O ELEMENTO NO EIXO Y.
+        EX.: (45deg), (0.5turn).
+
+        transform: rotate3d(1, 2.0, 3.0, 10deg);
+        "ROTACIONA O ELEMENTO NO EIXO X,Y E Z.
+        EX.: (45deg), (0.5turn).
+
+//SKEW:
+
+        transform: skew(20deg);
+        "INCLINA 20 GRAUS NO EIXO X"
+        EX.: (90deg), (.75turn) - OBS.: UM VALOR PASSADO.
+
+        transform: skew(45deg, 90deg);
+        "INCLINA 45 GRAUS NO EIXO X, E 90 GRAUS NO EIXO Y"
+        EX.: (90deg), (.75turn) - OBS.: DOIS VALORES PASSADOS.
+
+        transform: skewX(20deg);
+        "INCLINA 20 GRAUS NO EIXO X"
+        EX.: (90deg), (.75turn)
+
+        transform: skewY(-20deg);
+        "INCLINA 20 GRAUS NO EIXO Y"
+        EX.: (90deg), (-.75turn)
+
+//PERSPECTIVE: 
+
+        transform: perspective(300px);
+        "ATRIBUI UMA PERSPECTIVA 3D AO ELEMENTO"
+        EX.: (150px), () - OBS.: UM VALOR PASSADO.
+
+        ///////////////////
+
+O classList conta com os seguinte métodos:
+
+add(), adiciona uma ou mais classes ao elemento.
+
+remove(), remove uma ou mais classes do elemento.
+
+contains(), verifica se possui certa classe no elemento.
+
+item(), retorna a classe que se encontra naquele índice.
+
+toggle(), se a classe existir naquele elemento, ele a remove, se não existir ele a adiciona.
+
+length, retorna a quantidade de classes naquele elemento.
+
+        /////////////////
+
+.teste {
+    
+    animation: testeAnimacao 3s linear alternate infinite;;
+    animation-name: testeAnimacao;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;    
+    
+}
+*/
+/*
+#bloco {
+
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 529px;
+    height: 529px;
+    background-color: rgb(0, 0, 0);
+    background-position-y: top;
+    color: rgba(200, 200, 200, 1);
+}
+*/
+/*
+#statusSistema {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    top: 700px;
+    left: 0px;
+    position: fixed;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .8);
+    background-repeat: no-repeat;
+    color: rgba(200, 200, 200, 1);
+    font-size: 110%;
+}
+
+#statusSistema2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    top: 700px;
+    left: 500px;
+    position: fixed;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .8);
+    background-repeat: no-repeat;
+    color: rgba(200, 200, 200, 1);
+    font-size: 110%;
+}
+
+/*
+
+///////// TIPOS DE CURSORES DO MOUSE::after
+
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.col-resize {cursor: col-resize;}
+.context-menu {cursor: context-menu;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.grab {cursor: -webkit-grab; cursor: grab;}
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+.url {cursor: url(myBall.cur),auto;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}
+
+*/
