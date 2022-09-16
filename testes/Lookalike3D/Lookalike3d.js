@@ -1079,7 +1079,7 @@ function abrindoFechandoMenu()
         cabecalho.style.height = "70px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
-        relogio.style.visibility = "visible";
+        relogio.style.display = "flex";
 
         secaoTemas.style.visibility = "hidden"
 
@@ -1102,7 +1102,7 @@ function abrirMenuImagemIcone()
 
 function abrirMenu() 
 {
-    cabecalho.classList.remove('fecharMenu');
+    cabecalho.classList.remove('abrirMenu');
     cabecalho.classList.add('abrirMenu');
     relogio.classList.remove('opacidade10')
     relogio.classList.add('opacidade10')
@@ -1110,7 +1110,7 @@ function abrirMenu()
 
 function fecharMenu() 
 {
-    cabecalho.classList.remove('abrirMenu');
+    cabecalho.classList.remove('fecharMenu');
     cabecalho.classList.add('fecharMenu');
 }
 
@@ -1192,32 +1192,6 @@ function abrirPagina(link)
 {
     window.open(link, '_self');
 }
-
-/*
-
-function comodas(comoda)
-{
-    switch (comoda)
-    {
-        case "001":
-
-            imagensProjetos3d[ 0 ].src = "../../imagens/Projetos3d/Comodas/Comodas001/comoda01.png";
-            imagensProjetos3d[ 1 ].src = "../../imagens/Projetos3d/Comodas/Comodas001/comoda02.png";
-            imagensProjetos3d[ 2 ].src = "../../imagens/Projetos3d/Comodas/Comodas001/comoda03.png";
-            for (let i = 3; i < imagensProjetos3d.length; i++) 
-            {
-                imagensProjetos3d[ i ].src = "";
-            }
-
-            break;
-
-        default:
-
-            break;
-    }
-
-}
-*/
 
 function itemMenuAnimacaoFinalizada()
 {
