@@ -5,7 +5,7 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(255, 226, 163, 0.678);
+    background-color: rgba(0, 0, 0, 0.678);
 }
 
 #secaoImagemDeFundo {
@@ -18,7 +18,7 @@ html {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    border: 5px solid rgb(0, 6, 191);
+    border: 0px solid rgb(0, 6, 191);
 }
 
 #imagemDeFundo {
@@ -583,4 +583,44 @@ a {
     transform: rotateY(360deg);
     transform-style: preserve-3d;
     transition: all .5s;
+}
+
+#secaoMenuGaleria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+#menuCommodes {}
+
+#menuRack {}
+
+#menuCloset {}
+
+#menuBench {}
+
+.menusProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    border: 0px solid rgb(0, 0, 0);
+}
+
+.menusProdutosRack {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    border: 2px solid rgb(201, 28, 28);
 }
