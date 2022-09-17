@@ -5,8 +5,8 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url(../../../imagens/Projetos3d/08.png);
+    background-color: rgba(0, 0, 0, 1);
+    /*background-image: url(../../../imagens/Projetos3d/08.png);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -598,6 +598,7 @@ a {
     width: 100%;
     height: auto;
     padding: 0%;
+    overflow: auto;
 }
 
 #menuCommodes {}
@@ -618,7 +619,7 @@ a {
     width: 100%;
     height: auto;
     padding: 2%;
-    border: 0px solid rgb(0, 0, 0);
+    border: 0px solid rgb(209, 209, 209);
 }
 
 .menusProdutosRack {
@@ -630,15 +631,10 @@ a {
     height: auto;
     padding: 2%;
     border: 2px solid rgb(201, 28, 28);
+
 }
 
 .botoesGaleria {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    border: 0px solid rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
+    border: 10px solid rgb(209, 209, 209);
+    background-color: rgba(56, 56, 56, 0);
 }
