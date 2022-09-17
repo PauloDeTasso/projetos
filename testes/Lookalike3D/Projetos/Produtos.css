@@ -5,7 +5,11 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../../imagens/Projetos3d/08.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 #secaoImagemDeFundo {
@@ -31,7 +35,8 @@ html {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-
+    background-repeat: no-repeat;
+    border: 100px solid rgba(0, 0, 0, 0);
 }
 
 #secaoPrincipal {
@@ -592,12 +597,14 @@ a {
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 1%;
+    padding: 0%;
 }
 
 #menuCommodes {}
 
-#menuRack {}
+#menuRack01 {}
+
+#menuRack02 {}
 
 #menuCloset {}
 
@@ -623,4 +630,15 @@ a {
     height: auto;
     padding: 2%;
     border: 2px solid rgb(201, 28, 28);
+}
+
+.botoesGaleria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 0px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
