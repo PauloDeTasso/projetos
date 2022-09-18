@@ -597,7 +597,7 @@ a {
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 0%;
+    padding: 2%;
     overflow: auto;
 }
 
@@ -613,12 +613,12 @@ a {
 
 .menusProdutos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: auto;
-    padding: 2%;
+    padding: 0%;
     border: 0px solid rgb(209, 209, 209);
 }
 
@@ -629,12 +629,12 @@ a {
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 2%;
-    border: 2px solid rgb(201, 28, 28);
+    padding: 0%;
+    border: 0px solid rgb(201, 28, 28);
 
 }
 
 .botoesGaleria {
-    border: 10px solid rgb(209, 209, 209);
+    border: 0px solid rgb(209, 209, 209);
     background-color: rgba(56, 56, 56, 0);
 }
