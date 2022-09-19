@@ -595,10 +595,11 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: auto;
-    padding: 2%;
+    padding: 0%;
     overflow: auto;
+
 }
 
 #menuCommodes {}
@@ -616,9 +617,9 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: auto;
-    padding: 0%;
+    padding: 1%;
     border: 0px solid rgb(209, 209, 209);
 }
 
@@ -631,10 +632,21 @@ a {
     height: auto;
     padding: 0%;
     border: 0px solid rgb(201, 28, 28);
-
 }
 
 .botoesGaleria {
-    border: 0px solid rgb(209, 209, 209);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    border: 0px solid rgb(104, 65, 65);
     background-color: rgba(56, 56, 56, 0);
+}
+
+.imagensBotoesGaleria {
+    width: 100%;
+    height: auto;
 }

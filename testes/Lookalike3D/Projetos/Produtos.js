@@ -73,6 +73,16 @@ var imagemFacebook = document.getElementById('imagemFacebook');
 
 var imagemTwitter = document.getElementById('imagemTwitter');
 
+var menuCommodes = document.getElementById('menuCommodes');
+
+var menuRack01 = document.getElementById('menuRack01');
+
+var menuRack02 = document.getElementById('menuRack02');
+
+var menuCloset = document.getElementById('menuCloset');
+
+var menuBench = document.getElementById('menuBench');
+
 var titulosMenu = document.getElementsByClassName('titulosMenu');
 
 var coordenadas = {};
@@ -385,3 +395,36 @@ function itemMenuAnimacaoFinalizada()
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
 
 secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
+
+menuCommodes.addEventListener('click', imagensAtuaisGaleria(menuCommodes), true);
+
+function imagensAtuaisGaleria(produto)
+{
+    switch (produto)
+    {
+        case menuCommodes:
+
+            imagemDeFundo.src = "../../../imagens/Projetos3d/Comodas/Comodas001/comoda01.png"
+            break;
+
+        case menuRack01:
+
+            break;
+
+        case menuRack02:
+
+            break;
+
+        case menuCloset:
+
+            break;
+
+        case menuBench:
+
+            break;
+
+        default:
+
+            break;
+    }
+};
