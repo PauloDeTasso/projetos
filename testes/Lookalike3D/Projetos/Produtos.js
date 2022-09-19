@@ -412,6 +412,8 @@ function imagensAtuaisGaleria(produto)
     {
         case menuCommodes:
 
+            imagemDeFundo.classList.toggle('opacidade01');
+
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda01.png"
 
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda02.png"
@@ -430,6 +432,8 @@ function imagensAtuaisGaleria(produto)
 
         case menuRack01:
 
+            imagemDeFundo.classList.toggle('opacidade01');
+
             imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png"
 
             produtoAtual = menuRack01;
@@ -437,6 +441,8 @@ function imagensAtuaisGaleria(produto)
             break;
 
         case menuRack02:
+
+            imagemDeFundo.classList.toggle('opacidade01');
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png"
 
@@ -446,6 +452,8 @@ function imagensAtuaisGaleria(produto)
 
         case menuCloset:
 
+            imagemDeFundo.classList.toggle('opacidade01');
+
             imagemDeFundo.src = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa001.png"
 
             produtoAtual = menuCloset;
@@ -454,6 +462,8 @@ function imagensAtuaisGaleria(produto)
 
         case menuBench:
 
+            imagemDeFundo.classList.toggle('opacidade01');
+
             imagemDeFundo.src = "../../../imagens/Projetos3d/BANCOS/Banco001/BANCO001.png"
 
             produtoAtual = menuBench;
@@ -461,6 +471,8 @@ function imagensAtuaisGaleria(produto)
             break;
 
         default:
+
+            imagemDeFundo.classList.toggle('opacidade01');
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/00.png"
 
@@ -474,7 +486,7 @@ function imagensAtuaisGaleria(produto)
 function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 {
 
-    statusSistema2.innerHTML = produtoAtual;
+    //statusSistema2.innerHTML = produtoAtual;
 
     switch (produto)
     {
@@ -484,6 +496,8 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
             {
                 case 'esquerda':
 
+                    imagemDeFundo.classList.toggle('opacidade01');
+
                     if (arrayAtual <= 0)
                     {
                         arrayAtual = 0;
@@ -492,9 +506,9 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        // statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        //statusSistema2.innerHTML = arrayAtual;
 
                     } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
                     {
@@ -506,9 +520,9 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        //   statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        //statusSistema2.innerHTML = arrayAtual;
 
                     } else
                     {
@@ -518,15 +532,17 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        // statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        // statusSistema2.innerHTML = arrayAtual;
                     }
 
                     break;
 
                 case 'direita':
 
+                    imagemDeFundo.classList.toggle('opacidade01');
+
                     if (arrayAtual <= 0)
                     {
                         arrayAtual = 0;
@@ -537,9 +553,9 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        // statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        //  statusSistema2.innerHTML = arrayAtual;
 
                     } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
                     {
@@ -549,9 +565,9 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        // statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        // statusSistema2.innerHTML = arrayAtual;
 
                     } else
                     {
@@ -561,9 +577,9 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
 
                         //
 
-                        statusSistema.innerHTML = direcao;
+                        // statusSistema.innerHTML = direcao;
 
-                        statusSistema2.innerHTML = arrayAtual;
+                        // statusSistema2.innerHTML = arrayAtual;
                     }
 
                     break;

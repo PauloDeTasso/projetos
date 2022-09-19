@@ -5,7 +5,7 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(255, 250, 187);
     /*background-image: url(../../../imagens/Projetos3d/08.png);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -27,16 +27,16 @@ html {
 
 #imagemDeFundo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
     border: 0px solid rgba(0, 0, 0, 0);
+    transition: all 2s;
 }
 
 #secaoPrincipal {
@@ -214,7 +214,7 @@ a:active {
 /*/////////////*/
 
 .opacidade10 {
-    animation: Opacidade10 3s;
+    animation: Opacidade10 1s;
 }
 
 @keyframes Opacidade10 {
@@ -228,7 +228,7 @@ a:active {
 }
 
 .opacidade01 {
-    animation: Opacidade01 3s;
+    animation: Opacidade01 1s;
 }
 
 @keyframes Opacidade01 {
@@ -242,7 +242,7 @@ a:active {
 }
 
 .abrirItemMenu {
-    animation: abrirItemMenuCss 3s;
+    animation: abrirItemMenuCss 2s;
 }
 
 @keyframes abrirItemMenuCss {
@@ -258,7 +258,7 @@ a:active {
 }
 
 .abrirMenu {
-    animation: abrirMenuCss 3s;
+    animation: abrirMenuCss 2s;
     animation-direction: normal;
 }
 
@@ -277,7 +277,7 @@ a:active {
 }
 
 .fecharMenu {
-    animation: fecharMenuCss 3s;
+    animation: fecharMenuCss 2s;
 }
 
 @keyframes fecharMenuCss {
@@ -293,7 +293,7 @@ a:active {
 }
 
 .abrirMenuImagemIcone {
-    animation: abrirMenuImagemIconeCss 3s;
+    animation: abrirMenuImagemIconeCss 2s;
 }
 
 @keyframes abrirMenuImagemIconeCss {
@@ -567,14 +567,29 @@ a {
 
 #imagemInstagram {
     opacity: .8;
+    transition: all .5s;
 }
 
 #imagemFacebook {
     opacity: .8;
+    transition: all .5s;
 }
 
 #imagemTwitter {
     opacity: .8;
+    transition: all .5s;
+}
+
+#imagemInstagram:hover {
+    opacity: 1;
+}
+
+#imagemFacebook:hover {
+    opacity: 1;
+}
+
+#imagemTwitter:hover {
+    opacity: 1;
 }
 
 #cartao {
@@ -621,6 +636,7 @@ a {
     height: auto;
     padding: 1%;
     border: 0px solid rgb(209, 209, 209);
+    transition: all 1s;
 }
 
 .menusProdutosRack {
@@ -658,8 +674,10 @@ a {
     align-items: center;
     width: 100%;
     height: auto;
+    position: absolute;
 }
 
+/*
 .botoesPassarImagensGaleria {
     display: flex;
     flex-direction: row;
@@ -667,20 +685,83 @@ a {
     width: 100%;
     height: auto;
     background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgb(0, 0, 0);
+}
+*/
+
+#botaoPassarImagens01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgb(0, 0, 0);
+    padding: 5%;
+}
+
+#botaoPassarImagens02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgb(0, 0, 0);
+    padding: 5%;
+}
+
+#secaoBotaoVoltar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    transition: all .5s;
+}
+
+#secaoBotaoAvancar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+    transition: all .5s;
 }
 
 #imagemBotaoPassarImagens01 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 10%;
     height: auto;
+    transition: all .5s;
+    border: 0px solid rgb(0, 0, 0);
+    opacity: .3;
 }
 
 #imagemBotaoPassarImagens02 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 10%;
     height: auto;
+    transition: all .5s;
+    opacity: .3;
+}
+
+.menusProdutos:hover {
+    opacity: .7;
+}
+
+#imagemBotaoPassarImagens01:hover {
+    opacity: 1;
+}
+
+#imagemBotaoPassarImagens02:hover {
+    opacity: 1;
 }
