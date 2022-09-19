@@ -396,8 +396,6 @@ cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
 
 secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
 
-menuCommodes.addEventListener('click', imagensAtuaisGaleria(menuCommodes), true);
-
 function imagensAtuaisGaleria(produto)
 {
     switch (produto)
@@ -405,26 +403,63 @@ function imagensAtuaisGaleria(produto)
         case menuCommodes:
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/Comodas/Comodas001/comoda01.png"
+
             break;
 
         case menuRack01:
+
+            imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png"
 
             break;
 
         case menuRack02:
 
+            imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png"
+
             break;
 
         case menuCloset:
+
+            imagemDeFundo.src = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa001.png"
 
             break;
 
         case menuBench:
 
+            imagemDeFundo.src = "../../../imagens/Projetos3d/BANCOS/Banco001/BANCO001.png"
+
             break;
 
         default:
 
+            imagemDeFundo.src = "../../../imagens/Projetos3d/00.png"
+
             break;
     }
+
 };
+
+menuCommodes.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuCommodes)
+}, false);
+
+menuRack01.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuRack01)
+}, false);
+
+menuRack02.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuRack02)
+}, false);
+
+menuCloset.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuCloset)
+}, false);
+
+menuBench.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuBench)
+}, false);
