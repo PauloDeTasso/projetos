@@ -83,6 +83,10 @@ var menuCloset = document.getElementById('menuCloset');
 
 var menuBench = document.getElementById('menuBench');
 
+var botaoPassarImagens01 = document.getElementById('botaoPassarImagens01');
+
+var botaoPassarImagens02 = document.getElementById('botaoPassarImagens02');
+
 var titulosMenu = document.getElementsByClassName('titulosMenu');
 
 var coordenadas = {};
@@ -392,9 +396,15 @@ function itemMenuAnimacaoFinalizada()
     }
 }
 
-cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
+var imagemBotaoPassarImagens01 = document.getElementById('imagemBotaoPassarImagens01');
 
-secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
+var imagemBotaoPassarImagens02 = document.getElementById('imagemBotaoPassarImagens02');
+
+var imagensAtuaisGaleriaArray = [];
+
+var produtoAtual;
+
+var arrayAtual = 0;
 
 function imagensAtuaisGaleria(produto)
 {
@@ -402,7 +412,19 @@ function imagensAtuaisGaleria(produto)
     {
         case menuCommodes:
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/Comodas/Comodas001/comoda01.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda01.png"
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda02.png"
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda03.png"
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            //
+
+            produtoAtual = menuCommodes;
 
             break;
 
@@ -410,11 +432,15 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png"
 
+            produtoAtual = menuRack01;
+
             break;
 
         case menuRack02:
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png"
+
+            produtoAtual = menuRack02;
 
             break;
 
@@ -422,11 +448,15 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa001.png"
 
+            produtoAtual = menuCloset;
+
             break;
 
         case menuBench:
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/BANCOS/Banco001/BANCO001.png"
+
+            produtoAtual = menuBench;
 
             break;
 
@@ -434,10 +464,138 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.src = "../../../imagens/Projetos3d/00.png"
 
+            produtoAtual = produtoAtual;
+
             break;
     }
 
 };
+
+function acaoBotaoImagensAtuaisGaleria(produto, direcao)
+{
+
+    statusSistema2.innerHTML = produtoAtual;
+
+    switch (produto)
+    {
+        case menuCommodes:
+
+            switch (direcao)
+            {
+                case 'esquerda':
+
+                    if (arrayAtual <= 0)
+                    {
+                        arrayAtual = 0;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+
+                    } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
+                    {
+                        arrayAtual = imagensAtuaisGaleriaArray.length - 1;
+
+                        arrayAtual--;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+
+                    } else
+                    {
+                        arrayAtual--;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+                    }
+
+                    break;
+
+                case 'direita':
+
+                    if (arrayAtual <= 0)
+                    {
+                        arrayAtual = 0;
+
+                        arrayAtual++;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+
+                    } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
+                    {
+                        arrayAtual = imagensAtuaisGaleriaArray.length - 1;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+
+                    } else
+                    {
+                        arrayAtual++;
+
+                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                        //
+
+                        statusSistema.innerHTML = direcao;
+
+                        statusSistema2.innerHTML = arrayAtual;
+                    }
+
+                    break;
+
+                default:
+
+                    break;
+            }
+
+            break;
+
+        case menuRack01:
+
+            break;
+
+        case menuRack02:
+
+            break;
+
+        case menuCloset:
+
+            break;
+
+        case menuBench:
+
+            break;
+
+        default:
+
+            break;
+    }
+}
 
 menuCommodes.addEventListener('click', () =>
 {
@@ -463,3 +621,32 @@ menuBench.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuBench)
 }, false);
+
+cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
+
+secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
+
+
+imagemBotaoPassarImagens01.addEventListener('click', () =>
+{
+    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'esquerda')
+}, false);
+
+imagemBotaoPassarImagens02.addEventListener('click', () =>
+{
+    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'direita')
+}, false);
+
+
+/*
+botaoPassarImagens01.addEventListener('click', () =>
+{
+    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'esquerda')
+}, false);
+
+botaoPassarImagens02.addEventListener('click', () =>
+{
+    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'direita')
+}, false);
+
+*/
