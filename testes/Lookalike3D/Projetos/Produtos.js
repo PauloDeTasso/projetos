@@ -81,7 +81,7 @@ var menuRack02 = document.getElementById('menuRack02');
 
 var menuCloset = document.getElementById('menuCloset');
 
-var menuBench = document.getElementById('menuBench');
+var menuCenterTable = document.getElementById('menuCenterTable');
 
 var botaoPassarImagens01 = document.getElementById('botaoPassarImagens01');
 
@@ -460,13 +460,21 @@ function imagensAtuaisGaleria(produto)
 
             break;
 
-        case menuBench:
+        case menuCenterTable:
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/BANCOS/Banco001/BANCO001.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png";
 
-            produtoAtual = menuBench;
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/02.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/03.png";
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            produtoAtual = menuCenterTable;
 
             break;
 
@@ -480,130 +488,99 @@ function imagensAtuaisGaleria(produto)
 
             break;
     }
-
 };
 
-function acaoBotaoImagensAtuaisGaleria(produto, direcao)
+function acaoBotaoImagensAtuaisGaleria(direcao)
 {
-
-    //statusSistema2.innerHTML = produtoAtual;
-
-    switch (produto)
+    switch (direcao)
     {
-        case menuCommodes:
+        case 'esquerda':
 
-            switch (direcao)
+            imagemDeFundo.classList.toggle('opacidade01');
+
+            if (arrayAtual <= 0)
             {
-                case 'esquerda':
+                arrayAtual = 0;
 
-                    imagemDeFundo.classList.toggle('opacidade01');
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                    if (arrayAtual <= 0)
-                    {
-                        arrayAtual = 0;
+                //
 
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+                // statusSistema.innerHTML = direcao;
 
-                        //
+                //statusSistema2.innerHTML = arrayAtual;
 
-                        // statusSistema.innerHTML = direcao;
+            } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
+            {
+                arrayAtual = imagensAtuaisGaleriaArray.length - 1;
 
-                        //statusSistema2.innerHTML = arrayAtual;
+                arrayAtual--;
 
-                    } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
-                    {
-                        arrayAtual = imagensAtuaisGaleriaArray.length - 1;
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                        arrayAtual--;
+                //
 
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+                //   statusSistema.innerHTML = direcao;
 
-                        //
+                //statusSistema2.innerHTML = arrayAtual;
 
-                        //   statusSistema.innerHTML = direcao;
+            } else
+            {
+                arrayAtual--;
 
-                        //statusSistema2.innerHTML = arrayAtual;
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                    } else
-                    {
-                        arrayAtual--;
+                //
 
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+                // statusSistema.innerHTML = direcao;
 
-                        //
-
-                        // statusSistema.innerHTML = direcao;
-
-                        // statusSistema2.innerHTML = arrayAtual;
-                    }
-
-                    break;
-
-                case 'direita':
-
-                    imagemDeFundo.classList.toggle('opacidade01');
-
-                    if (arrayAtual <= 0)
-                    {
-                        arrayAtual = 0;
-
-                        arrayAtual++;
-
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
-
-                        //
-
-                        // statusSistema.innerHTML = direcao;
-
-                        //  statusSistema2.innerHTML = arrayAtual;
-
-                    } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
-                    {
-                        arrayAtual = imagensAtuaisGaleriaArray.length - 1;
-
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
-
-                        //
-
-                        // statusSistema.innerHTML = direcao;
-
-                        // statusSistema2.innerHTML = arrayAtual;
-
-                    } else
-                    {
-                        arrayAtual++;
-
-                        imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
-
-                        //
-
-                        // statusSistema.innerHTML = direcao;
-
-                        // statusSistema2.innerHTML = arrayAtual;
-                    }
-
-                    break;
-
-                default:
-
-                    break;
+                // statusSistema2.innerHTML = arrayAtual;
             }
 
             break;
 
-        case menuRack01:
+        case 'direita':
 
-            break;
+            imagemDeFundo.classList.toggle('opacidade01');
 
-        case menuRack02:
+            if (arrayAtual <= 0)
+            {
+                arrayAtual = 0;
 
-            break;
+                arrayAtual++;
 
-        case menuCloset:
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-            break;
+                //
 
-        case menuBench:
+                // statusSistema.innerHTML = direcao;
+
+                //  statusSistema2.innerHTML = arrayAtual;
+
+            } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
+            {
+                arrayAtual = imagensAtuaisGaleriaArray.length - 1;
+
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                //
+
+                // statusSistema.innerHTML = direcao;
+
+                // statusSistema2.innerHTML = arrayAtual;
+
+            } else
+            {
+                arrayAtual++;
+
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+                //
+
+                // statusSistema.innerHTML = direcao;
+
+                // statusSistema2.innerHTML = arrayAtual;
+            }
 
             break;
 
@@ -612,6 +589,7 @@ function acaoBotaoImagensAtuaisGaleria(produto, direcao)
             break;
     }
 }
+
 
 menuCommodes.addEventListener('click', () =>
 {
@@ -633,9 +611,9 @@ menuCloset.addEventListener('click', () =>
     imagensAtuaisGaleria(menuCloset)
 }, false);
 
-menuBench.addEventListener('click', () =>
+menuCenterTable.addEventListener('click', () =>
 {
-    imagensAtuaisGaleria(menuBench)
+    imagensAtuaisGaleria(menuCenterTable)
 }, false);
 
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
@@ -645,12 +623,12 @@ secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false)
 
 imagemBotaoPassarImagens01.addEventListener('click', () =>
 {
-    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'esquerda')
+    acaoBotaoImagensAtuaisGaleria('esquerda')
 }, false);
 
 imagemBotaoPassarImagens02.addEventListener('click', () =>
 {
-    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'direita')
+    acaoBotaoImagensAtuaisGaleria('direita')
 }, false);
 
 
