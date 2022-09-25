@@ -414,11 +414,11 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda01.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda01.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda02.png"
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda02.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda03.png"
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda03.png";
 
             //
 
@@ -434,7 +434,17 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            //
 
             produtoAtual = menuRack01;
 
@@ -444,7 +454,17 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            //
 
             produtoAtual = menuRack02;
 
@@ -454,7 +474,17 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa001.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            //
 
             produtoAtual = menuCloset;
 
@@ -474,6 +504,8 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
 
+            //
+
             produtoAtual = menuCenterTable;
 
             break;
@@ -482,7 +514,17 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagemDeFundo.src = "../../../imagens/Projetos3d/00.png"
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/00.png";
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/00.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/00.png";
+
+            //
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+
+            //
 
             produtoAtual = produtoAtual;
 
