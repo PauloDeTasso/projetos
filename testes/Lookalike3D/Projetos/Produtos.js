@@ -73,6 +73,17 @@ var imagemFacebook = document.getElementById('imagemFacebook');
 
 var imagemTwitter = document.getElementById('imagemTwitter');
 
+var imagemBotaoGaleriaComoda001 = document.getElementById('imagemBotaoGaleriaComoda001');
+
+var imagemBotaoGaleriaRack001 = document.getElementById('imagemBotaoGaleriaRack001');
+
+var imagemBotaoGaleriaRack002 = document.getElementById('imagemBotaoGaleriaRack002');
+
+var imagemBotaoGaleriaGuardaRoupa001 = document.getElementById('imagemBotaoGaleriaGuardaRoupa001');
+
+var imagemBotaoGaleriaMesaDeCentro001 = document.getElementById('imagemBotaoGaleriaMesaDeCentro001');
+
+
 var menuCommodes = document.getElementById('menuCommodes');
 
 var menuRack01 = document.getElementById('menuRack01');
@@ -643,27 +654,27 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
     }
 }
 
-menuCommodes.addEventListener('click', () =>
+imagemBotaoGaleriaComoda001.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuCommodes)
 }, false);
 
-menuRack01.addEventListener('click', () =>
+imagemBotaoGaleriaRack001.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuRack01)
 }, false);
 
-menuRack02.addEventListener('click', () =>
+imagemBotaoGaleriaRack002.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuRack02)
 }, false);
 
-menuCloset.addEventListener('click', () =>
+imagemBotaoGaleriaGuardaRoupa001.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuCloset)
 }, false);
 
-menuCenterTable.addEventListener('click', () =>
+imagemBotaoGaleriaMesaDeCentro001.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuCenterTable)
 }, false);
