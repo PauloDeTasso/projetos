@@ -12,7 +12,7 @@ html {
     background-size: 100% auto;
     background-position: center;
     border: 0px solid rgb(255, 0, 0);
-    position: fixed;
+    position: static;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     border: 0px solid rgb(0, 0, 0);
 }
 
