@@ -719,7 +719,7 @@ a {
     align-items: flex-start;
     width: 100%;
     height: auto;
-    transition: all .5s;
+    transition: all 2s;
 }
 
 #secaoBotaoAvancar {
@@ -729,7 +729,7 @@ a {
     align-items: flex-end;
     width: 100%;
     height: auto;
-    transition: all .5s;
+    transition: all 2s;
 }
 
 #imagemBotaoPassarImagens01 {
@@ -739,7 +739,7 @@ a {
     align-items: flex-start;
     width: 10%;
     height: auto;
-    transition: all .5s;
+    transition: all 2s;
     border: 0px solid rgb(0, 0, 0);
     opacity: .3;
     visibility: visible;
@@ -753,7 +753,7 @@ a {
     align-items: flex-end;
     width: 10%;
     height: auto;
-    transition: all .5s;
+    transition: all 2s;
     opacity: .3;
     cursor: pointer;
 }
