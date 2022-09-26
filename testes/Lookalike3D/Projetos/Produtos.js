@@ -469,11 +469,11 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack002/01.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack002/02.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack002/Rack002.png";
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack002/03.png";
 
             //
 
