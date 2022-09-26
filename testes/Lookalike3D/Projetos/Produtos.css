@@ -568,16 +568,19 @@ a {
 #imagemInstagram {
     opacity: .8;
     transition: all .5s;
+    cursor: pointer;
 }
 
 #imagemFacebook {
     opacity: .8;
     transition: all .5s;
+    cursor: pointer;
 }
 
 #imagemTwitter {
     opacity: .8;
     transition: all .5s;
+    cursor: pointer;
 }
 
 #imagemInstagram:hover {
@@ -659,12 +662,12 @@ a {
     height: auto;
     padding: 0%;
     border: 0px solid rgb(104, 65, 65);
-    background-color: rgba(56, 56, 56, 0);
 }
 
 .imagensBotoesGaleria {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 #secoesBotoesVoltarAvancar {
@@ -742,6 +745,7 @@ a {
     border: 0px solid rgb(0, 0, 0);
     opacity: .3;
     visibility: visible;
+    cursor: pointer;
 }
 
 #imagemBotaoPassarImagens02 {
@@ -753,6 +757,7 @@ a {
     height: auto;
     transition: all .5s;
     opacity: .3;
+    cursor: pointer;
 }
 
 .menusProdutos:hover {

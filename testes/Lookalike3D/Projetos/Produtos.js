@@ -414,11 +414,11 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda01.png";
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/01.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda02.png";
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/02.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/Comodas001/comoda03.png";
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/03.png";
 
             //
 
@@ -480,11 +480,11 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/01.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/02.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GuardaRoupa001/GuardaRoupa01.png";
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/03.png";
 
             //
 
