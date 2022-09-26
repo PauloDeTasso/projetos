@@ -11,9 +11,9 @@ html {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    border: 0px solid rgb(255, 0, 0);
+    border-top: 200px solid rgba(0, 0, 0, 0);
     position: static;
-    top: 0;
+    top: 0px;
     left: 0;
 }
 
