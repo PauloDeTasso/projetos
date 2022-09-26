@@ -167,7 +167,7 @@ function iconeOpacidadeMenor(icone)
 
 function scrollImagens()
 {
-    var xxx = imagemDeFundo.src;
+
 };
 
 //
@@ -422,7 +422,9 @@ function imagensAtuaisGaleria(produto)
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -434,15 +436,17 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack001/01.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack001/01.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack001/Rack001.png";
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack001/01.png";
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -462,7 +466,9 @@ function imagensAtuaisGaleria(produto)
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -482,7 +488,9 @@ function imagensAtuaisGaleria(produto)
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -502,7 +510,9 @@ function imagensAtuaisGaleria(produto)
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -522,7 +532,9 @@ function imagensAtuaisGaleria(produto)
 
             //
 
-            imagemDeFundo.src = imagensAtuaisGaleriaArray[ 0 ];
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             //
 
@@ -530,6 +542,9 @@ function imagensAtuaisGaleria(produto)
 
             break;
     }
+
+    imagemBotaoPassarImagens01.style.visibility = "hidden";
+    imagemBotaoPassarImagens02.style.visibility = "visible";
 };
 
 function acaoBotaoImagensAtuaisGaleria(direcao)
@@ -546,37 +561,35 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                // statusSistema.innerHTML = direcao;
-
-                //statusSistema2.innerHTML = arrayAtual;
+                imagemBotaoPassarImagens01.style.visibility = "hidden";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
 
             } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
             {
                 arrayAtual = imagensAtuaisGaleriaArray.length - 1;
 
-                arrayAtual--;
+                --arrayAtual;
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                //   statusSistema.innerHTML = direcao;
-
-                //statusSistema2.innerHTML = arrayAtual;
+                imagemBotaoPassarImagens01.style.visibility = "visible";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
 
             } else
             {
-                arrayAtual--;
+                --arrayAtual;
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                // statusSistema.innerHTML = direcao;
-
-                // statusSistema2.innerHTML = arrayAtual;
+                if (arrayAtual <= 0)
+                {
+                    imagemBotaoPassarImagens01.style.visibility = "hidden";
+                    imagemBotaoPassarImagens02.style.visibility = "visible";
+                } else
+                {
+                    imagemBotaoPassarImagens01.style.visibility = "visible";
+                    imagemBotaoPassarImagens02.style.visibility = "visible";
+                }
             }
 
             break;
@@ -593,11 +606,8 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                // statusSistema.innerHTML = direcao;
-
-                //  statusSistema2.innerHTML = arrayAtual;
+                imagemBotaoPassarImagens01.style.visibility = "visible";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
 
             } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
             {
@@ -605,11 +615,8 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                // statusSistema.innerHTML = direcao;
-
-                // statusSistema2.innerHTML = arrayAtual;
+                imagemBotaoPassarImagens01.style.visibility = "visible";
+                imagemBotaoPassarImagens02.style.visibility = "hidden";
 
             } else
             {
@@ -617,11 +624,15 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                //
-
-                // statusSistema.innerHTML = direcao;
-
-                // statusSistema2.innerHTML = arrayAtual;
+                if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
+                {
+                    imagemBotaoPassarImagens01.style.visibility = "visible";
+                    imagemBotaoPassarImagens02.style.visibility = "hidden";
+                } else
+                {
+                    imagemBotaoPassarImagens01.style.visibility = "visible";
+                    imagemBotaoPassarImagens02.style.visibility = "visible";
+                }
             }
 
             break;
@@ -631,7 +642,6 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
             break;
     }
 }
-
 
 menuCommodes.addEventListener('click', () =>
 {
@@ -662,7 +672,6 @@ cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
 
 secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
 
-
 imagemBotaoPassarImagens01.addEventListener('click', () =>
 {
     acaoBotaoImagensAtuaisGaleria('esquerda')
@@ -673,16 +682,14 @@ imagemBotaoPassarImagens02.addEventListener('click', () =>
     acaoBotaoImagensAtuaisGaleria('direita')
 }, false);
 
-
 /*
 botaoPassarImagens01.addEventListener('click', () =>
 {
-    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'esquerda')
+    acaoBotaoImagensAtuaisGaleria('esquerda')
 }, false);
 
 botaoPassarImagens02.addEventListener('click', () =>
 {
-    acaoBotaoImagensAtuaisGaleria(produtoAtual, 'direita')
+    acaoBotaoImagensAtuaisGaleria('direita')
 }, false);
-
 */

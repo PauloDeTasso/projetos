@@ -741,6 +741,7 @@ a {
     transition: all .5s;
     border: 0px solid rgb(0, 0, 0);
     opacity: .3;
+    visibility: visible;
 }
 
 #imagemBotaoPassarImagens02 {
