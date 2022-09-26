@@ -14,58 +14,64 @@
 
     </head>
 
-    <section id="secaoPrincipal">
+    <body>
 
-        <header id="secaoCabecalho">
+        <section id="secaoPrincipal">
 
-            <section id="cabecalho">
+            <header id="secaoCabecalho">
 
-                <section id="relogio">
+                <section id="cabecalho">
 
-                    00:00:00
+                    <section id="relogio">
 
-                </section>
-
-                <section class="menu" id="secaoHome" onmouseleave="abrirFecharItemMenu(secaoItemsHome,false)">
-
-                    <section class="titulosMenu" id="nomeHome" onclick="abrirFecharItemMenu(secaoItemsHome,true)"
-                        ontouchstart="abrirFecharItemMenu(secaoItemsHome,true)"
-                        onmouseenter="abrirFecharItemMenu(secaoItemsHome,true)">
-                        <!-- HOME -->
-                        <img class="iconesMenu" id="home" src="../../../../../icones/Cor Laranja/home.webp" alt=""
-                            width="70px" height="auto" onmouseenter="iconeTamanho(home)"
-                            onmouseleave="iconeTamanhoMenor(home)">
-                    </section>
-
-                    <section id="secaoItemsHome">
+                        00:00:00
 
                     </section>
 
-                </section>
+                    <section class="menu" id="secaoHome" onmouseleave="abrirFecharItemMenu(secaoItemsHome,false)">
 
-                <section class="menu" id="secaoProduts" onmouseleave="abrirFecharItemMenu(secaoItemsProducts, false)">
+                        <section class="titulosMenu" id="nomeHome" onclick="abrirFecharItemMenu(secaoItemsHome,true)"
+                            ontouchstart="abrirFecharItemMenu(secaoItemsHome,true)"
+                            onmouseenter="abrirFecharItemMenu(secaoItemsHome,true)">
+                            <!-- HOME -->
+                            <img class="iconesMenu" id="home" src="../../../../../icones/Cor Laranja/home.webp" alt=""
+                                width="70px" height="auto" onmouseenter="iconeTamanho(home)"
+                                onmouseleave="iconeTamanhoMenor(home)">
+                        </section>
 
-                    <section class="titulosMenu" id="nomeProducts"
-                        onclick="abrirFecharItemMenu(secaoItemsProducts,true)"
-                        onmouseenter="abrirFecharItemMenu(secaoItemsProducts,true)">
-                        <img class="iconesMenu" id="products" src="../../../../../icones/Cor Laranja/menu.png" alt=""
-                            width="40px" height="auto" onmouseenter="iconeTamanho(products)"
-                            onmouseleave="iconeTamanhoMenor(products)">
+                        <section id="secaoItemsHome">
+
+                        </section>
+
                     </section>
 
-                    <section id="secaoItemsProducts" onmouseleave="iconeTamanhoMenor(products)">
+                    <section class="menu" id="secaoProduts"
+                        onmouseleave="abrirFecharItemMenu(secaoItemsProducts, false)">
+
+                        <section class="titulosMenu" id="nomeProducts"
+                            onclick="abrirFecharItemMenu(secaoItemsProducts,true)"
+                            onmouseenter="abrirFecharItemMenu(secaoItemsProducts,true)">
+                            <img class="iconesMenu" id="products" src="../../../../../icones/Cor Laranja/menu.png"
+                                alt="" width="40px" height="auto" onmouseenter="iconeTamanho(products)"
+                                onmouseleave="iconeTamanhoMenor(products)"
+                                onclick="abrirPagina('../Projetos/Produtos.html')">
+                        </section>
+
+                        <section id="secaoItemsProducts" onmouseleave="iconeTamanhoMenor(products)">
+
+                        </section>
 
                     </section>
-
-                </section>
-
+                    <!-- 
                 <section class="menu" id="secaoCollections"
                     onmouseleave="abrirFecharItemMenu(secaoItemsCollections,false)">
 
                     <section class="titulosMenu" id="nomeCollections"
                         onclick="abrirFecharItemMenu(secaoItemsCollections,true)"
                         onmouseenter="abrirFecharItemMenu(secaoItemsCollections,true)">
-                        <!-- COLLECTIONS -->
+                     -->
+                    <!-- COLLECTIONS -->
+                    <!--
                         <img class="iconesMenu" id="collections" src="../../../../../icones/Cor Laranja/photos.png"
                             alt="" width="40px" height="auto" onmouseenter="iconeTamanho(collections)"
                             onmouseleave="iconeTamanhoMenor(collections)">
@@ -77,33 +83,39 @@
 
                 </section>
 
-                <section class="menu" id="secaoOptions" onmouseleave="abrirFecharItemMenu(secaoItemsOptions,false)">
+                -->
 
-                    <section class="titulosMenu" id="nomeOptions" onclick="abrirFecharItemMenu(secaoItemsOptions,true)"
-                        onmouseenter="abrirFecharItemMenu(secaoItemsOptions,true)">
-                        <!-- OPTIONS -->
-                        <img class="iconesMenu" id="options" src="../../../../../icones/Cor Laranja/configurações.png"
-                            alt="" width="40px" height="auto" onmouseenter="iconeTamanho(options)"
-                            onmouseleave="iconeTamanhoMenor(options)">
-                    </section>
+                    <section class="menu" id="secaoOptions" onmouseleave="abrirFecharItemMenu(secaoItemsOptions,false)">
 
-                    <section id="secaoItemsOptions" onmouseleave="iconeTamanhoMenor(options)">
+                        <section class="titulosMenu" id="nomeOptions"
+                            onclick="abrirFecharItemMenu(secaoItemsOptions,true)"
+                            onmouseenter="abrirFecharItemMenu(secaoItemsOptions,true)">
+                            <!-- OPTIONS -->
+                            <img class="iconesMenu" id="options"
+                                src="../../../../../icones/Cor Laranja/configurações.png" alt="" width="40px"
+                                height="auto" onmouseenter="iconeTamanho(options)"
+                                onmouseleave="iconeTamanhoMenor(options)">
+                        </section>
 
-                        <section id="secaoTemas">
+                        <section id="secaoItemsOptions" onmouseleave="iconeTamanhoMenor(options)">
 
-                            <section class="itemsOptions">
+                            <section id="secaoTemas">
 
-                                <input class="entradasTema" type="radio" id="temaA" name="tema" value="A" checked>
+                                <section class="itemsOptions">
 
-                                <img src="../../../../../imagens/luzes/amarelo.jpg" width="4%" alt="">
+                                    <input class="entradasTema" type="radio" id="temaA" name="tema" value="A" checked>
 
-                            </section>
+                                    <img src="../../../../../imagens/luzes/amarelo.jpg" width="4%" alt="">
 
-                            <section class="itemsOptions">
+                                </section>
 
-                                <input class="entradasTema" type="radio" id="temaB" name="tema" value="B">
+                                <section class="itemsOptions">
 
-                                <img src="../../../../../imagens/luzes/preto.jpg" width="4%" alt="">
+                                    <input class="entradasTema" type="radio" id="temaB" name="tema" value="B">
+
+                                    <img src="../../../../../imagens/luzes/preto.jpg" width="4%" alt="">
+
+                                </section>
 
                             </section>
 
@@ -111,181 +123,179 @@
 
                     </section>
 
-                </section>
+                    <section class="menu" id="secaoContact" onmouseleave="abrirFecharItemMenu(secaoItemsContact,false)">
 
-                <section class="menu" id="secaoContact" onmouseleave="abrirFecharItemMenu(secaoItemsContact,false)">
+                        <section class="titulosMenu" id="nomeContact"
+                            onclick="abrirFecharItemMenu(secaoItemsContact,true)"
+                            onmouseenter="abrirFecharItemMenu(secaoItemsContact,true)">
+                            <!-- CONTACT -->
+                            <img class="iconesMenu" id="contato" src="../../../../../icones/Cor Laranja/contato.webp"
+                                alt="" width="40px" height="auto" onmouseenter="iconeTamanho(contato)"
+                                onmouseleave="iconeTamanhoMenor(contato)">
+                        </section>
 
-                    <section class="titulosMenu" id="nomeContact" onclick="abrirFecharItemMenu(secaoItemsContact,true)"
-                        onmouseenter="abrirFecharItemMenu(secaoItemsContact,true)">
-                        <!-- CONTACT -->
-                        <img class="iconesMenu" id="contato" src="../../../../../icones/Cor Laranja/contato.webp" alt=""
-                            width="40px" height="auto" onmouseenter="iconeTamanho(contato)"
-                            onmouseleave="iconeTamanhoMenor(contato)">
-                    </section>
+                        <section id="secaoItemsContact" onmouseleave="iconeTamanhoMenor(contato)">
 
-                    <section id="secaoItemsContact" onmouseleave="iconeTamanhoMenor(contato)">
-
-                        <a href=mailto:atendimentos.site@gmail.com target="_blank">
-                            <img src="../../../../../icones/Cor Laranja/email.webp" alt="Logo Gmail" width="40px"
-                                height="auto">
-                        </a>
-
-                    </section>
-
-                </section>
-
-                <section id="botoesCabecalho">
-
-                    <button id="botaoMenu" type="button" onclick="abrirFecharMenu()"
-                        onmouseenter="iconeTamanho(imagemBotaoMenu)" onmouseleave="iconeTamanhoMenor(imagemBotaoMenu)"
-                        type="button">
-
-                        <section class="virar" id="cartao">
-
-                            <section id="imagemBotaoMenu">
-
-                            </section>
+                            <a href=mailto:atendimentos.site@gmail.com target="_blank">
+                                <img src="../../../../../icones/Cor Laranja/email.webp" alt="Logo Gmail" width="40px"
+                                    height="auto">
+                            </a>
 
                         </section>
 
+                    </section>
+
+                    <section id="botoesCabecalho">
+
+                        <button id="botaoMenu" type="button" onclick="abrirFecharMenu()" type="button">
+
+                            <section class="virar" id="cartao">
+
+                                <section id="imagemBotaoMenu">
+
+                                </section>
+
+                            </section>
+
+                        </button>
+
+                    </section>
+
+                </section>
+
+            </header>
+
+        </section>
+
+        <section id="secaoBody">
+
+            <section id="secoesBotoesVoltarAvancar">
+
+                <section id="secaoBotaoVoltar">
+
+                    <button id="botaoPassarImagens01" class="botoesPassarImagensGaleria" type="button">
+                        <img id="imagemBotaoPassarImagens01" src="../../../icones/Cor Laranja/voltar.png" alt="">
+                    </button>
+
+                </section>
+
+                <section id="secaoBotaoAvancar">
+
+                    <button id="botaoPassarImagens02" class="botoesPassarImagensGaleria" type="button">
+                        <img id="imagemBotaoPassarImagens02" src="../../../icones/Cor Laranja/avançar.png" alt="">
                     </button>
 
                 </section>
 
             </section>
 
-    </section>
+            <section id="secaoImagemDeFundo">
 
-    </header>
-
-    <section id="secaoBody">
-
-        <section id="secoesBotoesVoltarAvancar">
-
-            <section id="secaoBotaoVoltar">
-
-                <button id="botaoPassarImagens01" class="botoesPassarImagensGaleria" type="button">
-                    <img id="imagemBotaoPassarImagens01" src="../../../icones/Cor Laranja/voltar.png" alt="">
-                </button>
+                <img id="imagemDeFundo" src="../../../imagens/Projetos3d/00.png" alt="">
 
             </section>
 
-            <section id="secaoBotaoAvancar">
+            <section id="secaoMenuGaleria">
 
-                <button id="botaoPassarImagens02" class="botoesPassarImagensGaleria" type="button">
-                    <img id="imagemBotaoPassarImagens02" src="../../../icones/Cor Laranja/avançar.png" alt="">
-                </button>
+                <section class="menusProdutos" id="menuCommodes">
 
-            </section>
+                    <button class="botoesGaleria" type="button">
+                        <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaComoda001"
+                            src="../../../imagens/Projetos3d/COMODAS/COMODA001/01.png" alt="">
+                    </button>
 
-        </section>
+                </section>
 
-        <section id="secaoImagemDeFundo">
+                <section class="menusProdutos" id="menuRack01">
 
-            <img id="imagemDeFundo" src="../../../imagens/Projetos3d/00.png" alt="">
+                    <button class="botoesGaleria" type="button">
+                        <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaRack001"
+                            src="../../../imagens/Projetos3d/RACKS/Rack001/01.png" alt="">
+                    </button>
 
-        </section>
+                </section>
 
-        <section id="secaoMenuGaleria">
+                <section class="menusProdutos" id="menuRack02">
 
-            <section class="menusProdutos" id="menuCommodes">
+                    <button class="botoesGaleria" type="button">
+                        <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaRack002"
+                            src="../../../imagens/Projetos3d/RACKS/Rack002/01.png" alt="">
+                    </button>
 
-                <button class="botoesGaleria" type="button">
-                    <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaComoda001"
-                        src="../../../imagens/Projetos3d/COMODAS/COMODA001/01.png" alt="">
-                </button>
+                </section>
 
-            </section>
+                <section class="menusProdutos" id="menuCloset">
 
-            <section class="menusProdutos" id="menuRack01">
+                    <button class="botoesGaleria" type="button">
+                        <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaGuardaRoupa001"
+                            src="../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/01.png" alt="">
+                    </button>
 
-                <button class="botoesGaleria" type="button">
-                    <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaRack001"
-                        src="../../../imagens/Projetos3d/RACKS/Rack001/01.png" alt="">
-                </button>
+                </section>
 
-            </section>
+                <section class="menusProdutos" id="menuCenterTable">
 
-            <section class="menusProdutos" id="menuRack02">
+                    <button class="botoesGaleria" type="button">
+                        <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaMesaDeCentro001"
+                            src="../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png" alt="">
+                    </button>
 
-                <button class="botoesGaleria" type="button">
-                    <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaRack002"
-                        src="../../../imagens/Projetos3d/RACKS/Rack002/01.png" alt="">
-                </button>
-
-            </section>
-
-            <section class="menusProdutos" id="menuCloset">
-
-                <button class="botoesGaleria" type="button">
-                    <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaGuardaRoupa001"
-                        src="../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/01.png" alt="">
-                </button>
+                </section>
 
             </section>
 
-            <section class="menusProdutos" id="menuCenterTable">
+            <section id="secaoStatus">
 
-                <button class="botoesGaleria" type="button">
-                    <img class="imagensBotoesGaleria" id="imagemBotaoGaleriaMesaDeCentro001"
-                        src="../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png" alt="">
-                </button>
+                <section id="statusSistema">
+
+                </section>
+
+                <section id="statusSistema2">
+
+                </section>
 
             </section>
 
         </section>
 
-        <section id="secaoStatus">
 
-            <section id="statusSistema">
+    </body>
 
-            </section>
+    <footer id="secaoRodape">
 
-            <section id="statusSistema2">
+        <section id="rodape">
+            <p>
+                © COPYRIGHT 2022 LOOKALIKE 3D - ALL RIGHTS RESERVED - 3D CREATION
+            </p>
+        </section>
 
-            </section>
+        <section id="redesSociais">
+
+            <button class="logosRedesSocias" type="button">
+                <img id="imagemInstagram" src="../../../../../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt=""
+                    width="35px" onmouseenter="iconeOpacidade(imagemInstagram)"
+                    onmouseleave="iconeOpacidadeMenor(imagemInstagram)">
+            </button>
+
+            <button class="logosRedesSocias" type="button">
+
+                <img id="imagemFacebook" src="../../../../../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt=""
+                    width="35px" onmouseenter="iconeOpacidade(imagemFacebook)"
+                    onmouseleave="iconeOpacidadeMenor(imagemFacebook)">
+
+            </button>
+
+            <button class="logosRedesSocias" type="button">
+
+                <img id="imagemTwitter" src="../../../../../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt=""
+                    width="35px" onmouseenter="iconeOpacidade(imagemTwitter)"
+                    onmouseleave="iconeOpacidadeMenor(imagemTwitter)">
+
+            </button>
 
         </section>
 
-        </body>
-
-        <footer id="secaoRodape">
-
-            <section id="rodape">
-                <p>
-                    © COPYRIGHT 2022 LOOKALIKE 3D - ALL RIGHTS RESERVED - 3D CREATION
-                </p>
-            </section>
-
-            <section id="redesSociais">
-
-                <button class="logosRedesSocias" type="button">
-                    <img id="imagemInstagram" src="../../../../../icones/LOGOS/REDES SOCIAIS/instagram 3d.png" alt=""
-                        width="35px" onmouseenter="iconeOpacidade(imagemInstagram)"
-                        onmouseleave="iconeOpacidadeMenor(imagemInstagram)">
-                </button>
-
-                <button class="logosRedesSocias" type="button">
-
-                    <img id="imagemFacebook" src="../../../../../icones/LOGOS/REDES SOCIAIS/facebook 3d.png" alt=""
-                        width="35px" onmouseenter="iconeOpacidade(imagemFacebook)"
-                        onmouseleave="iconeOpacidadeMenor(imagemFacebook)">
-
-                </button>
-
-                <button class="logosRedesSocias" type="button">
-
-                    <img id="imagemTwitter" src="../../../../../icones/LOGOS/REDES SOCIAIS/twitter 3d.png" alt=""
-                        width="35px" onmouseenter="iconeOpacidade(imagemTwitter)"
-                        onmouseleave="iconeOpacidadeMenor(imagemTwitter)">
-
-                </button>
-
-            </section>
-
-        </footer>
-
-    </section>
+    </footer>
 
     <script src="Produtos.js"></script>
 
