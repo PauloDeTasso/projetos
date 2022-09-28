@@ -232,7 +232,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            imagemDeFundo.style.top = "500px";
+            imagemDeFundo.style.top = "120px";
             cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
@@ -1039,7 +1039,7 @@ function abrirFecharMenu()
     var estiloCabecalho = window.getComputedStyle(cabecalho);
     var propriedadeCabecalho = estiloCabecalho.getPropertyValue('height');
 
-    if (propriedadeCabecalho == "70px" || propriedadeCabecalho == "120px")
+    if (propriedadeCabecalho == "70px")
     {
         menuAberto = true;
         abrirMenu();
@@ -1063,7 +1063,7 @@ function abrindoFechandoMenu()
     //alert(menuAberto)
     if (menuAberto)
     {
-        cabecalho.style.height = "500px";
+        cabecalho.style.height = "120px";
         secaoTemas.style.visibility = "visible";
         cabecalho.style.alignItems = "flex-start";
         cabecalho.style.opacity = 1;
