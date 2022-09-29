@@ -189,12 +189,14 @@ body {
 }
 
 #imagemBotaoMenu {
+    display: none;
     content: url("../../../icones/Cor Laranja/menu2.png");
     width: 40px;
     height: auto;
     top: 0px;
     right: 30px;
     cursor: pointer;
+    visibility: hidden;
 }
 
 /*/////////////////ESTILOS DE LINKS:
