@@ -216,7 +216,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            cabecalho.style.height = "120px";
+            cabecalho.style.height = "70px";
             imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 
             for (let i = 0; i < menu.length; i++) 
@@ -224,6 +224,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
                 menu[ i ].style.visibility = "hidden";
             }
             secaoTemas.style.visibility = "hidden";
+
+            relogio.style.color = "rgb(255,255,255)"
 
         }, tempoIntervalo);
 
@@ -241,6 +243,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
             }
             secaoTemas.style.visibility = "hidden";
 
+            relogio.style.color = "rgb(255,255,255)"
+
         }, tempoIntervalo);
 
     } else
@@ -256,6 +260,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
                 menu[ i ].style.visibility = "hidden";
             }
             secaoTemas.style.visibility = "hidden";
+
+            relogio.style.color = "rgb(0, 0, 0)"
 
         }, tempoIntervalo);
     }
