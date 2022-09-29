@@ -267,20 +267,15 @@ a:active {
 
 .abrirMenu {
     animation: abrirMenuCss 2s;
-    animation-direction: normal;
 }
 
 @keyframes abrirMenuCss {
     0% {
-        opacity: 1;
         height: 70px;
-        align-items: flex-start;
     }
 
     100% {
-        opacity: 1;
         height: 120px;
-        align-items: flex-start;
     }
 }
 
@@ -290,12 +285,10 @@ a:active {
 
 @keyframes fecharMenuCss {
     0% {
-        opacity: 1;
         height: 120px;
     }
 
     100% {
-        opacity: 1;
         height: 70px;
     }
 }

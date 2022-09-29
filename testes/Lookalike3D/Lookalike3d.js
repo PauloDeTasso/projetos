@@ -354,6 +354,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     var topoImagem1 = imagensProjetos3d[ 1 ].y;
     var topoImagem2 = imagensProjetos3d[ 2 ].y;
     var topoImagem3 = imagensProjetos3d[ 3 ].y;
+    /*
     var topoImagem4 = imagensProjetos3d[ 4 ].y;
     var topoImagem5 = imagensProjetos3d[ 5 ].y;
     var topoImagem6 = imagensProjetos3d[ 6 ].y;
@@ -363,12 +364,18 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     var topoImagem10 = imagensProjetos3d[ 10 ].y;
     var topoImagem11 = imagensProjetos3d[ 11 ].y;
     var topoImagem12 = imagensProjetos3d[ 12 ].y;
+    var topoImagem13 = imagensProjetos3d[ 13 ].y;
+    var topoImagem14 = imagensProjetos3d[ 14 ].y;
+    var topoImagem15 = imagensProjetos3d[ 15 ].y;
+    var topoImagem16 = imagensProjetos3d[ 16 ].y;
+*/
     //
 
     var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (alturaJanela / 2);
     var baseImagem1 = (imagensProjetos3d[ 1 ].y) + (alturaJanela / 2);
     var baseImagem2 = (imagensProjetos3d[ 2 ].y) + (alturaJanela / 2);
     var baseImagem3 = (imagensProjetos3d[ 3 ].y) + (alturaJanela / 2);
+    /*
     var baseImagem4 = (imagensProjetos3d[ 4 ].y) + (alturaJanela / 2);
     var baseImagem5 = (imagensProjetos3d[ 5 ].y) + (alturaJanela / 2);
     var baseImagem6 = (imagensProjetos3d[ 6 ].y) + (alturaJanela / 2);
@@ -378,6 +385,11 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     var baseImagem10 = (imagensProjetos3d[ 10 ].y) + (alturaJanela / 2);
     var baseImagem11 = (imagensProjetos3d[ 11 ].y) + (alturaJanela / 2);
     var baseImagem12 = (imagensProjetos3d[ 12 ].y) + (alturaJanela / 2);
+    var baseImagem13 = (imagensProjetos3d[ 13 ].y) + (alturaJanela / 2);
+    var baseImagem14 = (imagensProjetos3d[ 14 ].y) + (alturaJanela / 2);
+    var baseImagem15 = (imagensProjetos3d[ 15 ].y) + (alturaJanela / 2);    
+    var baseImagem16 = (imagensProjetos3d[ 16 ].y) + (alturaJanela / 2);
+*/
 
     //
 
@@ -400,7 +412,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     if (topoImagem0 < topoImagemDeFundo && baseImagem0 < baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/12.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
 
     } else if (topoImagem0 > topoImagemDeFundo && baseImagem0 > baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
     {
@@ -410,125 +422,161 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     } else if (topoImagem1 < topoImagemDeFundo && baseImagem1 < baseImagemDeFundo && topoImagem2 > baseImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/11.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
 
     } else if (topoImagem1 > topoImagemDeFundo && baseImagem1 > baseImagemDeFundo && baseImagem2 > topoImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/12.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
 
         //2
 
     } else if (topoImagem2 < topoImagemDeFundo && baseImagem2 < baseImagemDeFundo && topoImagem3 > baseImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
 
     } else if (topoImagem2 > topoImagemDeFundo && baseImagem2 > baseImagemDeFundo && baseImagem3 > topoImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/11.png";
-
-        //3
-
-    } else if (topoImagem3 < topoImagemDeFundo && baseImagem3 < baseImagemDeFundo && topoImagem4 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
-
-    } else if (topoImagem3 > topoImagemDeFundo && baseImagem3 > baseImagemDeFundo && baseImagem4 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
-
-        //4
-
-    } else if (topoImagem4 < topoImagemDeFundo && baseImagem4 < baseImagemDeFundo && topoImagem5 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
-
-    } else if (topoImagem4 > topoImagemDeFundo && baseImagem4 > baseImagemDeFundo && baseImagem5 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
-
-        //5
-
-    } else if (topoImagem5 < topoImagemDeFundo && baseImagem5 < baseImagemDeFundo && topoImagem6 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
-
-    } else if (topoImagem5 > topoImagemDeFundo && baseImagem5 > baseImagemDeFundo && baseImagem6 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
-
-        //6
-
-    } else if (topoImagem6 < topoImagemDeFundo && baseImagem6 < baseImagemDeFundo && topoImagem7 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
-
-    } else if (topoImagem6 > topoImagemDeFundo && baseImagem6 > baseImagemDeFundo && baseImagem7 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
-
-        //7
-
-    } else if (topoImagem7 < topoImagemDeFundo && baseImagem7 < baseImagemDeFundo && topoImagem8 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
-
-    } else if (topoImagem7 > topoImagemDeFundo && baseImagem7 > baseImagemDeFundo && baseImagem8 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
-
-        //8
-
-    } else if (topoImagem8 < topoImagemDeFundo && baseImagem8 < baseImagemDeFundo && topoImagem9 > baseImagemDeFundo) 
-    {
         imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
-
-    } else if (topoImagem8 > topoImagemDeFundo && baseImagem8 > baseImagemDeFundo && baseImagem9 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
-
-        //9
-
-    } else if (topoImagem9 < topoImagemDeFundo && baseImagem9 < baseImagemDeFundo && topoImagem10 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
-
-    } else if (topoImagem9 > topoImagemDeFundo && baseImagem9 > baseImagemDeFundo && baseImagem10 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
-
-        //10
-
-    } else if (topoImagem10 < topoImagemDeFundo && baseImagem10 < baseImagemDeFundo && topoImagem11 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
-
-    } else if (topoImagem10 > topoImagemDeFundo && baseImagem10 > baseImagemDeFundo && baseImagem11 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
-
-        //11
-
-    } else if (topoImagem11 < topoImagemDeFundo && baseImagem11 < baseImagemDeFundo && topoImagem12 > baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/01.png";
-
-    } else if (topoImagem11 > topoImagemDeFundo && baseImagem11 > baseImagemDeFundo && baseImagem12 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
-
-        //12
-
-    } else if (topoImagem12 < topoImagemDeFundo && baseImagem12 < baseImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/00.png";
-
-    } else if (topoImagem12 > topoImagemDeFundo && baseImagem12 > baseImagemDeFundo && baseImagem11 > topoImagemDeFundo) 
-    {
-        imagemDeFundo.src = "../../imagens/Projetos3d/01.png";
-
+        /*
+                //3
+        
+            } else if (topoImagem3 < topoImagemDeFundo && baseImagem3 < baseImagemDeFundo && topoImagem4 > baseImagemDeFundo) 
+            {
+                imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
+        
+            } else if (topoImagem3 > topoImagemDeFundo && baseImagem3 > baseImagemDeFundo && baseImagem4 > topoImagemDeFundo) 
+            {
+                imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
+        
+                //4
+        
+            } else if (topoImagem4 < topoImagemDeFundo && baseImagem4 < baseImagemDeFundo && topoImagem5 > baseImagemDeFundo) 
+            {
+                imagemDeFundo.src = "../../imagens/Projetos3d/01.png";
+        
+            } else if (topoImagem4 > topoImagemDeFundo && baseImagem4 > baseImagemDeFundo && baseImagem5 > topoImagemDeFundo) 
+            {
+                imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
+        
+                //5
+                
+                    } else if (topoImagem5 < topoImagemDeFundo && baseImagem5 < baseImagemDeFundo && topoImagem6 > baseImagemDeFundo) 
+                    {
+                        imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
+                
+                    } else if (topoImagem5 > topoImagemDeFundo && baseImagem5 > baseImagemDeFundo && baseImagem6 > topoImagemDeFundo) 
+                    {
+                        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+                        
+                                //6
+                        
+                            } else if (topoImagem6 < topoImagemDeFundo && baseImagem6 < baseImagemDeFundo && topoImagem7 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
+                        
+                            } else if (topoImagem6 > topoImagemDeFundo && baseImagem6 > baseImagemDeFundo && baseImagem7 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+                        
+                                //7
+                        
+                            } else if (topoImagem7 < topoImagemDeFundo && baseImagem7 < baseImagemDeFundo && topoImagem8 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
+                        
+                            } else if (topoImagem7 > topoImagemDeFundo && baseImagem7 > baseImagemDeFundo && baseImagem8 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/06.png";
+                        
+                                //8
+                        
+                            } else if (topoImagem8 < topoImagemDeFundo && baseImagem8 < baseImagemDeFundo && topoImagem9 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
+                        
+                            } else if (topoImagem8 > topoImagemDeFundo && baseImagem8 > baseImagemDeFundo && baseImagem9 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/07.png";
+                        
+                                //9
+                        
+                            } else if (topoImagem9 < topoImagemDeFundo && baseImagem9 < baseImagemDeFundo && topoImagem10 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
+                        
+                            } else if (topoImagem9 > topoImagemDeFundo && baseImagem9 > baseImagemDeFundo && baseImagem10 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/08.png";
+                        
+                                //10
+                        
+                            } else if (topoImagem10 < topoImagemDeFundo && baseImagem10 < baseImagemDeFundo && topoImagem11 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
+                        
+                            } else if (topoImagem10 > topoImagemDeFundo && baseImagem10 > baseImagemDeFundo && baseImagem11 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/09.png";
+                        
+                                //11
+                        
+                            } else if (topoImagem11 < topoImagemDeFundo && baseImagem11 < baseImagemDeFundo && topoImagem12 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/11.png";
+                        
+                            } else if (topoImagem11 > topoImagemDeFundo && baseImagem11 > baseImagemDeFundo && baseImagem12 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/10.png";
+                        
+                                //12
+                        
+                            } else if (topoImagem12 < topoImagemDeFundo && baseImagem12 < baseImagemDeFundo && topoImagem13 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/12.png";
+                        
+                            } else if (topoImagem12 > topoImagemDeFundo && baseImagem12 > baseImagemDeFundo && baseImagem13 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/11.png";
+                        
+                                //13
+                        
+                            } else if (topoImagem13 < topoImagemDeFundo && baseImagem13 < baseImagemDeFundo && topoImagem14 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/13.png";
+                        
+                            } else if (topoImagem13 > topoImagemDeFundo && baseImagem13 > baseImagemDeFundo && baseImagem14 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/12.png";
+                        
+                                //14
+                        
+                            } else if (topoImagem14 < topoImagemDeFundo && baseImagem14 < baseImagemDeFundo && topoImagem15 > baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/14.png";
+                        
+                            } else if (topoImagem14 > topoImagemDeFundo && baseImagem14 > baseImagemDeFundo && baseImagem15 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/13.png";
+                        
+                                //15
+                        
+                            } else if (topoImagem15 < topoImagemDeFundo && baseImagem15 < baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/15.png";
+                        
+                            } else if (topoImagem15 > topoImagemDeFundo && baseImagem15 > baseImagemDeFundo && baseImagem16 > topoImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/14.png";
+                        
+                                //16
+                        
+                            } else if (topoImagem16 < topoImagemDeFundo && baseImagem16 < baseImagemDeFundo) 
+                            {
+                                imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
+                        */
     } else
     {
-        //  imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/00.png";
     }
 
     /////////

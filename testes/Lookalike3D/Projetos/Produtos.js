@@ -290,10 +290,12 @@ function abrindoFechandoMenu()
 {
     if (menuAberto)
     {
-        cabecalho.style.height = "120px";
-        secaoTemas.style.visibility = "visible";
-        cabecalho.style.alignItems = "flex-start";
+        cabecalho.style.visibility = "visible";
         cabecalho.style.opacity = 1;
+        cabecalho.style.height = "120px";
+        cabecalho.style.alignItems = "flex-start";
+
+        //secaoTemas.style.visibility = "visible";
         relogio.style.display = "none";
 
         for (let i = 0; i < menu.length; i++) 
@@ -306,9 +308,10 @@ function abrindoFechandoMenu()
         cabecalho.style.height = "70px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
+
         relogio.style.display = "flex";
 
-        secaoTemas.style.visibility = "hidden"
+        //secaoTemas.style.visibility = "hidden"
 
         for (let i = 0; i < menu.length; i++) 
         {
@@ -405,6 +408,7 @@ function abrirFecharItemMenu(elemento, acao, event)
 
 function itemMenuAnimacaoFinalizada()
 {
+
     for (let i = 0; i < secaoTemas.length; i++) 
     {
         secaoTemas[ i ].style.visibility = "visible";
