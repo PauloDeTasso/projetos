@@ -30,6 +30,7 @@ var products = document.getElementById('products');
 var collections = document.getElementById('collections');
 var options = document.getElementById('options');
 var contact = document.getElementById('contact');
+var itemContact = document.getElementById('itemContact');
 
 var divCadeiras = document.getElementById('divCadeiras');
 var divMesas = document.getElementById('divMesas');
@@ -303,6 +304,8 @@ function abrindoFechandoMenu()
             menu[ i ].style.visibility = "visible";
         }
 
+        secaoItemsContact.style.visibility = "visible";
+
     } else
     {
         cabecalho.style.height = "70px"
@@ -317,6 +320,8 @@ function abrindoFechandoMenu()
         {
             menu[ i ].style.visibility = "hidden";
         }
+
+        secaoItemsContact.style.visibility = "hidden";
     }
 }
 
