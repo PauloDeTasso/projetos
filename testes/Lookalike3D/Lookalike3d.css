@@ -11,7 +11,6 @@ html {
     background-size: 100% auto;
     background-attachment: fixed;
     background-position: center;
-
 }
 
 #secaoImagemDeFundo {
@@ -120,9 +119,7 @@ html {
 
     border: 5px solid red;
     */
-
-
-    background-color: rgba(200, 200, 200, 0.3);
+    background-color: rgba(200, 200, 200, 0);
 }
 
 .menu {
@@ -191,6 +188,7 @@ html {
     width: 100%;
     height: auto;
     padding: 0%;
+
 }
 
 #botaoMenu {
