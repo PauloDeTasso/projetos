@@ -727,6 +727,11 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
     }
 }
 
+function fecharCompra()
+{
+    secaoBotaoComprar.style.visibility = "hidden";
+}
+
 imagemBotaoGaleriaComoda001.addEventListener('click', () =>
 {
     imagensAtuaisGaleria(menuCommodes)
