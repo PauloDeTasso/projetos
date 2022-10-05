@@ -773,7 +773,7 @@ a {
 
 #secaoBotaoComprar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -794,7 +794,16 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
-#imagemBotaoComprar {
+.imagemBotaoComprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: auto;
+}
+
+.imagemBotoesComprar {
     display: flex;
     flex-direction: row;
     justify-content: center;

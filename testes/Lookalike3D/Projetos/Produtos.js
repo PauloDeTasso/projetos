@@ -19,7 +19,8 @@ var botaoMenu = document.getElementById('botaoMenu');
 
 var statusSistema = document.getElementById('statusSistema');
 
-var linkCompraAtual;
+var linkCompraAtual01;
+var linkCompraAtual02;
 
 var secaoItemsHome = document.getElementById('secaoItemsHome');
 var secaoItemsProducts = document.getElementById('secaoItemsProducts');
@@ -217,9 +218,9 @@ function mostrarBotaoComprar(statusBotaoComprar)
 
 }
 
-function linkComprar(linkCompraAtual)
+function linkComprar(link)
 {
-    abrirPagina(linkCompraAtual, '_blank');
+    abrirPagina(link, '_blank');
 }
 
 //
@@ -490,7 +491,9 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCommodes;
 
-            linkCompraAtual = "https://www.artstation.com/marketplace/p/wbmNk/modern-commode?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/wbmNk/modern-commode?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/modern-commode-912d3fb8-4c0c-4fbf-9284-52ba21f05ff0";
 
             break;
 
@@ -514,7 +517,9 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuRack01;
 
-            linkCompraAtual = "https://www.artstation.com/marketplace/p/MGR1L/rack-retro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/MGR1L/rack-retro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/architectural/decoration/rack-retro-8dbe52e5-d8a6-42b9-99ae-2802815a2d9c";
 
             break;
 
@@ -538,7 +543,9 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuRack02;
 
-            linkCompraAtual = "https://www.artstation.com/marketplace/p/jrlwn/rack-bistro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/jrlwn/rack-bistro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/rack-bistro";
 
             break;
 
@@ -562,7 +569,9 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCloset;
 
-            linkCompraAtual = "https://www.artstation.com/marketplace/p/K526z/clear-glass-wardrobe?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/K526z/clear-glass-wardrobe?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/clear-glass-wardrobe";
 
             break;
 
@@ -586,7 +595,9 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCenterTable;
 
-            linkCompraAtual = "https://www.artstation.com/marketplace/p/50ebv/exotic-coffee-table?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/50ebv/exotic-coffee-table?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/table/exotic-coffee-table-72553640-0af0-4ec7-8ec8-2786f45390c8";
 
             break;
 
@@ -610,7 +621,8 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = produtoAtual;
 
-            linkCompraAtual = "";
+            linkCompraAtual01 = "";
+            linkCompraAtual02 = "";
 
             break;
     }
