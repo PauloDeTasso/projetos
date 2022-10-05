@@ -491,7 +491,7 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCommodes;
 
-            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/wbmNk/modern-commode?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/a/20807260";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/modern-commode-912d3fb8-4c0c-4fbf-9284-52ba21f05ff0";
 
@@ -517,7 +517,7 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuRack01;
 
-            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/MGR1L/rack-retro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/a/20806538";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/architectural/decoration/rack-retro-8dbe52e5-d8a6-42b9-99ae-2802815a2d9c";
 
@@ -543,7 +543,7 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuRack02;
 
-            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/jrlwn/rack-bistro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/a/20806773";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/rack-bistro";
 
@@ -569,7 +569,7 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCloset;
 
-            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/K526z/clear-glass-wardrobe?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/a/20807373";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/clear-glass-wardrobe";
 
@@ -595,7 +595,7 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCenterTable;
 
-            linkCompraAtual01 = "https://www.artstation.com/marketplace/p/50ebv/exotic-coffee-table?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+            linkCompraAtual01 = "https://www.artstation.com/a/20807541";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/table/exotic-coffee-table-72553640-0af0-4ec7-8ec8-2786f45390c8";
 
