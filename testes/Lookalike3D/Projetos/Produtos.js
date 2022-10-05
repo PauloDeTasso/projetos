@@ -131,9 +131,9 @@ cartao.addEventListener('mouseenter', () => { cartao.classList.toggle('virar') }
 
 //
 
-function abrirPagina(link)
+function abrirPagina(link, target)
 {
-    window.open(link, '_self');
+    window.open(link, target);
 }
 
 function tamanhoJanela()

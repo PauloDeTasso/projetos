@@ -1242,9 +1242,9 @@ imagemBotaoMenu.addEventListener('click', () =>
  
 */
 
-function abrirPagina(link)
+function abrirPagina(link, target)
 {
-    window.open(link, '_self');
+    window.open(link, target);
 }
 
 function itemMenuAnimacaoFinalizada()
