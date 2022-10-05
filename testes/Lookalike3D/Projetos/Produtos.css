@@ -770,3 +770,35 @@ a {
 #imagemBotaoPassarImagens02:hover {
     opacity: 1;
 }
+
+#secaoBotaoComprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    visibility: hidden;
+}
+
+#botaoComprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 10px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#imagemBotaoComprar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: auto;
+}

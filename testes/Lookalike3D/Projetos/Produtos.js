@@ -19,6 +19,8 @@ var botaoMenu = document.getElementById('botaoMenu');
 
 var statusSistema = document.getElementById('statusSistema');
 
+var linkCompraAtual;
+
 var secaoItemsHome = document.getElementById('secaoItemsHome');
 var secaoItemsProducts = document.getElementById('secaoItemsProducts');
 var secaoItemsCollections = document.getElementById('secaoItemsCollections');
@@ -55,6 +57,10 @@ var divJardim = document.getElementById('divJardim');
 var divExternalArea = document.getElementById('divExternalArea');
 var divSotao = document.getElementById('divSotao');
 var divPorao = document.getElementById('divPorao');
+
+var secaoBotaoComprar = document.getElementById('secaoBotaoComprar');
+var botaoComprar = document.getElementById('botaoComprar');
+var imagemBotaoComprar = document.getElementById('imagemBotaoComprar');
 
 var botoesCabecalho = document.getElementById('botoesCabecalho');
 
@@ -153,7 +159,6 @@ function tamanhoJanela()
 
         imagensProjetos3d[ index ].style.height = "auto";
     }
-
 };
 
 //
@@ -186,6 +191,36 @@ function scrollImagens()
 {
 
 };
+
+//
+
+function mostrarBotaoComprar(statusBotaoComprar)
+{
+    if (imagemDeFundo.src.endsWith('00.png') == true)
+    {
+        secaoBotaoComprar.style.visibility = "hidden";
+        secoesBotoesVoltarAvancar.style.visibility = "hidden";
+
+    } else
+    {
+        secoesBotoesVoltarAvancar.style.visibility = "visible";
+
+        if (statusBotaoComprar == true)
+        {
+            secaoBotaoComprar.style.visibility = "visible";
+        } else 
+        {
+            secaoBotaoComprar.style.visibility = "hidden";
+        }
+
+    }
+
+}
+
+function linkComprar(linkCompraAtual)
+{
+    abrirPagina(linkCompraAtual, '_blank');
+}
 
 //
 
@@ -455,6 +490,8 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCommodes;
 
+            linkCompraAtual = "https://www.artstation.com/marketplace/p/wbmNk/modern-commode?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
             break;
 
         case menuRack01:
@@ -476,6 +513,8 @@ function imagensAtuaisGaleria(produto)
             //
 
             produtoAtual = menuRack01;
+
+            linkCompraAtual = "https://www.artstation.com/marketplace/p/MGR1L/rack-retro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
 
             break;
 
@@ -499,6 +538,8 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuRack02;
 
+            linkCompraAtual = "https://www.artstation.com/marketplace/p/jrlwn/rack-bistro?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
             break;
 
         case menuCloset:
@@ -520,6 +561,8 @@ function imagensAtuaisGaleria(produto)
             //
 
             produtoAtual = menuCloset;
+
+            linkCompraAtual = "https://www.artstation.com/marketplace/p/K526z/clear-glass-wardrobe?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
 
             break;
 
@@ -543,6 +586,8 @@ function imagensAtuaisGaleria(produto)
 
             produtoAtual = menuCenterTable;
 
+            linkCompraAtual = "https://www.artstation.com/marketplace/p/50ebv/exotic-coffee-table?utm_source=artstation&utm_medium=referral&utm_campaign=homepage&utm_term=marketplace";
+
             break;
 
         default:
@@ -564,6 +609,8 @@ function imagensAtuaisGaleria(produto)
             //
 
             produtoAtual = produtoAtual;
+
+            linkCompraAtual = "";
 
             break;
     }

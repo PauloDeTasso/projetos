@@ -168,7 +168,7 @@
 
         <section id="secaoBody">
 
-            <section id="secoesBotoesVoltarAvancar">
+            <section id="secoesBotoesVoltarAvancar" onmouseenter="mostrarBotaoComprar(true)">
 
                 <section id="secaoBotaoVoltar">
 
@@ -188,9 +188,19 @@
 
             </section>
 
-            <section id="secaoImagemDeFundo">
+            <section id="secaoImagemDeFundo" onmouseenter="mostrarBotaoComprar(true)"
+                onmouseleave="mostrarBotaoComprar(false)">
 
                 <img id="imagemDeFundo" src="../../../imagens/Projetos3d/00.png" alt="">
+
+            </section>
+
+            <section id="secaoBotaoComprar" onmouseenter="mostrarBotaoComprar(true)">
+
+                <button id="botaoComprar" type="button">
+                    <img onclick="linkComprar(linkCompraAtual)" id="imagemBotaoComprar"
+                        src="../../../icones/LOJA/Buy 00.png" alt="">
+                </button>
 
             </section>
 
