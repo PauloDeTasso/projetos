@@ -801,4 +801,5 @@ a {
     align-items: center;
     width: 10%;
     height: auto;
+    cursor: pointer;
 }
