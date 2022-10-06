@@ -188,6 +188,16 @@ function iconeOpacidadeMenor(icone)
     icone.style.backgroundColor = "rgba(200,200,200,0)";
 }
 
+function iconeTamanhoLink(icone)
+{
+    icone.style.width = "11%";
+}
+
+function iconeTamanhoLinkMenor(icone)
+{
+    icone.style.width = "10%";
+}
+
 function scrollImagens()
 {
 
@@ -199,19 +209,25 @@ function mostrarBotaoComprar(statusBotaoComprar)
 {
     if (imagemDeFundo.src.endsWith('00.png') == true)
     {
-        secaoBotaoComprar.style.visibility = "hidden";
-        secoesBotoesVoltarAvancar.style.visibility = "hidden";
-
+        //secaoBotaoComprar.style.display = "none";
+        //secoesBotoesVoltarAvancar.style.display = "none";
+        //secaoBotaoComprar.style.visibility = "hidden";
+        //secoesBotoesVoltarAvancar.style.visibility = "hidden";
     } else
     {
+
+        secoesBotoesVoltarAvancar.style.display = "flex";
         secoesBotoesVoltarAvancar.style.visibility = "visible";
 
         if (statusBotaoComprar == true)
         {
+            //secaoBotaoComprar.style.display = "flex";
             secaoBotaoComprar.style.visibility = "visible";
+
         } else 
         {
-            secaoBotaoComprar.style.visibility = "hidden";
+            //secaoBotaoComprar.style.visibility = "hidden";
+            //secaoBotaoComprar.style.display = "none";
         }
 
     }
