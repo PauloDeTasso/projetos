@@ -136,14 +136,14 @@ function tamanhoJanela()
 
 function iconeTamanho(icone)
 {
-    icone.style.width = "40px";
-    icone.style.height = "40px";
+    icone.style.width = "55px";
+    icone.style.height = "55px";
 }
 
 function iconeTamanhoMenor(icone)
 {
-    icone.style.width = "30px";
-    icone.style.height = "30px";
+    icone.style.width = "50px";
+    icone.style.height = "50px";
 }
 
 function iconeOpacidade(icone)

@@ -215,7 +215,7 @@ body {
 #imagemBotaoMenu {
     display: none;
     content: url("../../../icones/Cor Laranja/menu2.png");
-    width: 40px;
+    width: 50px;
     height: auto;
     top: 0px;
     right: 30px;
@@ -504,7 +504,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35px;
+    width: 50px;
     height: auto;
     padding: 0%;
 }
@@ -567,7 +567,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 25px;
+    width: 30px;
     height: auto;
     padding: 0%;
     border: 0px solid rgba(0, 0, 0, 0);
