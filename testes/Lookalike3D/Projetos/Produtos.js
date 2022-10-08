@@ -59,6 +59,10 @@ var divExternalArea = document.getElementById('divExternalArea');
 var divSotao = document.getElementById('divSotao');
 var divPorao = document.getElementById('divPorao');
 
+var botaoComprar = document.getElementById('botaoComprar');
+
+var secaoOpcoesCompra = document.getElementById('secaoOpcoesCompra');
+
 var secaoBotaoComprar = document.getElementById('secaoBotaoComprar');
 var botaoComprar = document.getElementById('botaoComprar');
 var imagemBotaoComprar = document.getElementById('imagemBotaoComprar');
@@ -190,12 +194,12 @@ function iconeOpacidadeMenor(icone)
 
 function iconeTamanhoLink(icone)
 {
-    icone.style.width = "11%";
+    icone.style.width = "17%";
 }
 
 function iconeTamanhoLinkMenor(icone)
 {
-    icone.style.width = "10%";
+    icone.style.width = "16%";
 }
 
 function scrollImagens()
@@ -209,30 +213,36 @@ function mostrarBotaoComprar(statusBotaoComprar)
 {
     if (imagemDeFundo.src.endsWith('00.png') == true)
     {
-        //secaoBotaoComprar.style.display = "none";
-        //secoesBotoesVoltarAvancar.style.display = "none";
-        //secaoBotaoComprar.style.visibility = "hidden";
-        //secoesBotoesVoltarAvancar.style.visibility = "hidden";
+        secaoBotaoComprar.style.display = "none";
+        secaoBotaoComprar.style.visibility = "hidden";
+
+        secoesBotoesVoltarAvancar.style.display = "none";
+        secoesBotoesVoltarAvancar.style.visibility = "hidden";
+
     } else
     {
 
+        secaoBotaoComprar.style.display = "flex";
+        secaoBotaoComprar.style.visibility = "visible";
         secoesBotoesVoltarAvancar.style.display = "flex";
         secoesBotoesVoltarAvancar.style.visibility = "visible";
 
         if (statusBotaoComprar == true)
         {
-            //secaoBotaoComprar.style.display = "flex";
+            secaoBotaoComprar.style.display = "flex";
             secaoBotaoComprar.style.visibility = "visible";
 
         } else 
         {
-            //secaoBotaoComprar.style.visibility = "hidden";
-            //secaoBotaoComprar.style.display = "none";
+            secaoBotaoComprar.style.visibility = "hidden";
+            secaoBotaoComprar.style.display = "none";
         }
 
     }
 
 }
+
+mostrarBotaoComprar(false);
 
 function linkComprar(link)
 {
@@ -407,6 +417,23 @@ function abrirOptions()
     secaoOptions.classList.add('abrirItemMenu');
 }
 
+function abrirOpcoesCompra()
+{
+    var estiloCabecalho = window.getComputedStyle(secaoOpcoesCompra);
+    var propriedadeCabecalho = estiloCabecalho.getPropertyValue('display');
+
+    if (propriedadeCabecalho == "none")
+    {
+        secaoOpcoesCompra.style.display = "flex";
+        botaoComprar.style.display = "none";
+
+    } else
+    {
+        secaoOpcoesCompra.style.display = "none";
+        botaoComprar.style.display = "flex";
+    }
+}
+
 function abrirFecharItemMenu(elemento, acao, event)
 {
     event = event || window.event;
@@ -506,6 +533,8 @@ function imagensAtuaisGaleria(produto)
             //
 
             produtoAtual = menuCommodes;
+
+            //
 
             linkCompraAtual01 = "https://www.artstation.com/a/20807260";
 
@@ -645,6 +674,13 @@ function imagensAtuaisGaleria(produto)
 
     imagemBotaoPassarImagens01.style.visibility = "hidden";
     imagemBotaoPassarImagens02.style.visibility = "visible";
+
+    //
+
+    secaoOpcoesCompra.style.display = "none";
+    botaoComprar.style.display = "flex";
+
+    mostrarBotaoComprar(true);
 };
 
 function acaoBotaoImagensAtuaisGaleria(direcao)
