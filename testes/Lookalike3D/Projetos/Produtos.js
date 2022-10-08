@@ -21,6 +21,7 @@ var statusSistema = document.getElementById('statusSistema');
 
 var linkCompraAtual01;
 var linkCompraAtual02;
+var linkCompraAtual03;
 
 var secaoItemsHome = document.getElementById('secaoItemsHome');
 var secaoItemsProducts = document.getElementById('secaoItemsProducts');
@@ -194,12 +195,12 @@ function iconeOpacidadeMenor(icone)
 
 function iconeTamanhoLink(icone)
 {
-    icone.style.width = "17%";
+    icone.style.opacity = "1";
 }
 
 function iconeTamanhoLinkMenor(icone)
 {
-    icone.style.width = "16%";
+    icone.style.opacity = ".9";
 }
 
 function scrollImagens()
@@ -540,6 +541,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/modern-commode-912d3fb8-4c0c-4fbf-9284-52ba21f05ff0";
 
+            linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969846";
+
             break;
 
         case menuRack01:
@@ -565,6 +568,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual01 = "https://www.artstation.com/a/20806538";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/architectural/decoration/rack-retro-8dbe52e5-d8a6-42b9-99ae-2802815a2d9c";
+
+            linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969828";
 
             break;
 
@@ -592,6 +597,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/rack-bistro";
 
+            linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969844";
+
             break;
 
         case menuCloset:
@@ -617,6 +624,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual01 = "https://www.artstation.com/a/20807373";
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/clear-glass-wardrobe";
+
+            linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969849";
 
             break;
 
@@ -644,6 +653,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/table/exotic-coffee-table-72553640-0af0-4ec7-8ec8-2786f45390c8";
 
+            linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969851";
+
             break;
 
         default:
@@ -668,6 +679,7 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual01 = "";
             linkCompraAtual02 = "";
+            linkCompraAtual03 = "";
 
             break;
     }
