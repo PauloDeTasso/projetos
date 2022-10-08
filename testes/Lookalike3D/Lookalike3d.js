@@ -234,7 +234,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     {
         setTimeout(() =>
         {
-            imagemDeFundo.style.top = "120px";
+            //imagemDeFundo.style.top = "120px";
             cabecalho.style.height = "70px";
 
             for (let i = 0; i < menu.length; i++) 
@@ -249,7 +249,6 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     } else
     {
-        imagemDeFundo.style.top = "0px";
 
         setTimeout(() =>
         {
@@ -443,17 +442,18 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     } else if (topoImagem2 > topoImagemDeFundo && baseImagem2 > baseImagemDeFundo && baseImagem3 > topoImagemDeFundo) 
     {
         imagemDeFundo.src = "../../imagens/Projetos3d/04.png";
+
+        //3
+
+    } else if (topoImagem3 < topoImagemDeFundo && baseImagem3 < baseImagemDeFundo && topoImagem2 < baseImagemDeFundo) 
+    {
+        imagemDeFundo.src = "";
+
+    } else if (topoImagem3 > topoImagemDeFundo && baseImagem3 > baseImagemDeFundo && baseImagem2 < topoImagemDeFundo) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
+
         /*
-                //3
-        
-            } else if (topoImagem3 < topoImagemDeFundo && baseImagem3 < baseImagemDeFundo && topoImagem4 > baseImagemDeFundo) 
-            {
-                imagemDeFundo.src = "../../imagens/Projetos3d/02.png";
-        
-            } else if (topoImagem3 > topoImagemDeFundo && baseImagem3 > baseImagemDeFundo && baseImagem4 > topoImagemDeFundo) 
-            {
-                imagemDeFundo.src = "../../imagens/Projetos3d/03.png";
-        
                 //4
         
             } else if (topoImagem4 < topoImagemDeFundo && baseImagem4 < baseImagemDeFundo && topoImagem5 > baseImagemDeFundo) 
@@ -1102,6 +1102,12 @@ function abrirFecharMenu()
         menuAberto = false;
         fecharMenu();
     }
+
+    cabecalho.style.animation = "none";
+    setTimeout(function ()
+    {
+        cabecalho.style.animation = "";
+    }, 100);
 }
 
 function abrindoFechandoMenu()
@@ -1258,7 +1264,7 @@ function itemMenuAnimacaoFinalizada()
 
 cabecalho.addEventListener('animationend', abrindoFechandoMenu, false);
 
-secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
+//secaoOptions.addEventListener('animationend', itemMenuAnimacaoFinalizada, false);
 
 /*
 function scrollImagens()
