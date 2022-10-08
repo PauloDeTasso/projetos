@@ -417,7 +417,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     if (topoImagem0 < topoImagemDeFundo && baseImagem0 < baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png";
 
     } else if (topoImagem0 > topoImagemDeFundo && baseImagem0 > baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
     {
@@ -431,7 +431,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     } else if (topoImagem1 > topoImagemDeFundo && baseImagem1 > baseImagemDeFundo && baseImagem2 > topoImagemDeFundo) 
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/05.png";
+        imagemDeFundo.src = "../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png";
 
         //2
 
