@@ -303,7 +303,7 @@ function coordenada(elemento, propriedade)
 
 // RELOGIO
 
-setInterval(showTime, 1000);
+//setInterval(showTime, 1000);
 
 function showTime()
 {
@@ -433,6 +433,8 @@ function abrirOpcoesCompra()
         secaoOpcoesCompra.style.display = "none";
         botaoComprar.style.display = "flex";
     }
+
+    secaoBotaoComprar.style.backgroundImage = "url('../../../imagens/gif/carrinho.gif')";
 }
 
 function abrirFecharItemMenu(elemento, acao, event)
@@ -525,6 +527,10 @@ function imagensAtuaisGaleria(produto)
 
             imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/03.png";
 
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/05.png";
+
             //
 
             arrayAtual = 0;
@@ -555,6 +561,10 @@ function imagensAtuaisGaleria(produto)
 
             imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack001/03.png";
 
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/RACKS/Rack001/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/RACKS/Rack001/05.png";
+
             //
 
             arrayAtual = 0;
@@ -582,6 +592,10 @@ function imagensAtuaisGaleria(produto)
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack002/02.png";
 
             imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/RACKS/Rack002/03.png";
+
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/RACKS/Rack002/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/RACKS/Rack002/05.png";
 
             //
 
@@ -611,6 +625,10 @@ function imagensAtuaisGaleria(produto)
 
             imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/03.png";
 
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/05.png";
+
             //
 
             arrayAtual = 0;
@@ -638,6 +656,10 @@ function imagensAtuaisGaleria(produto)
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/02.png";
 
             imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/03.png";
+
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/05.png";
 
             //
 
@@ -693,6 +715,8 @@ function imagensAtuaisGaleria(produto)
     botaoComprar.style.display = "flex";
 
     mostrarBotaoComprar(true);
+
+    secaoBotaoComprar.style.backgroundImage = "url('../../../imagens/gif/shop now04.gif')";
 };
 
 function acaoBotaoImagensAtuaisGaleria(direcao)
@@ -789,6 +813,13 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
             break;
     }
+
+    imagemDeFundo.style.animation = "none";
+    setTimeout(function ()
+    {
+        imagemDeFundo.style.animation = "";
+    }, 100);
+
 }
 
 function fecharCompra()
