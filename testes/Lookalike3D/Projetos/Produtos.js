@@ -203,6 +203,16 @@ function iconeTamanhoLinkMenor(icone)
     icone.style.opacity = ".9";
 }
 
+function iconeBackgroundColor(icone, cor)
+{
+    icone.style.backgroundColor = cor;
+}
+
+function iconeBackgroundColorOriginal(icone, cor)
+{
+    icone.style.backgroundColor = cor;
+}
+
 function scrollImagens()
 {
 
@@ -683,11 +693,15 @@ function imagensAtuaisGaleria(produto)
 
             imagemDeFundo.classList.toggle('opacidade01');
 
-            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/00.png";
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/LOGO/LOGO04.png";
 
-            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/00.png";
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/LOGO04.png";
 
-            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/00.png";
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/LOGO04.png";
+
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/LOGO04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/LOGO04.png";
 
             //
 

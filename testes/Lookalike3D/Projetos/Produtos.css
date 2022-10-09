@@ -815,10 +815,10 @@ a {
     width: 7%;
     height: auto;
     cursor: pointer;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px dashed rgb(177, 177, 177);
     background-color: rgb(250, 250, 140);
-    border-radius: 50px;
-    padding: 1%;
+    border-radius: 20px;
+    padding: 0%;
 }
 
 .imagemBotoesComprar {
@@ -829,7 +829,7 @@ a {
     width: 16%;
     height: 100%;
     cursor: pointer;
-    border: 2px solid rgba(200, 200, 200, 1);
+    border: 5px solid rgba(200, 200, 200, 1);
     opacity: .9;
 }
 
