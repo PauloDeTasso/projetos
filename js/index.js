@@ -437,7 +437,6 @@ function visitando()
     }
 
     contagemRegresiva();
-
 }
 
 /*
