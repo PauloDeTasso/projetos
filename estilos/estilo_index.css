@@ -1,15 +1,11 @@
 html {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 1;
-}
-
-#html5 {
     opacity: 1;
 }
 
@@ -24,6 +20,19 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    border: 0px solid red;
+}
+
+/**/
+
+#secaoCentro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    border: 0px solid rgb(0, 26, 255);
 }
 
 /**/
@@ -35,98 +44,7 @@ body {
     align-items: center;
     width: 3%;
     height: 100%;
-}
-
-/**/
-
-#secaoNorte {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-}
-
-/**/
-
-#secaoCentro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40%;
-}
-
-#secaoPrincipal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 94%;
-    height: 100%;
-}
-
-#navLinkPrincipal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 99%;
-}
-
-#secaoLookalike3d {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 94%;
-    height: 50%;
-    background-color: black;
-    opacity: 1;
-    border: 0px solid red;
-}
-
-#imagemLookalike3d {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 1;
-    padding: 2%;
-}
-
-#linkPrincipal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 0px solid red;
-}
-
-#imagemStart {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: auto;
-}
-
-/**/
-
-#secaoSul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
+    border: 0px solid rgb(255, 115, 0);
 }
 
 /**/
@@ -138,6 +56,7 @@ body {
     align-items: center;
     width: 3%;
     height: 100%;
+    border: 0px solid rgb(255, 230, 0);
 }
 
 #secaoLesteImagem {
@@ -159,6 +78,86 @@ body {
 }
 
 /*////////////////////////////*/
+
+#secaoNorte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border: 0px solid rgb(255, 255, 255);
+}
+
+/**/
+
+#secaoPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 100%;
+    border: 0px solid rgb(255, 255, 255);
+}
+
+/**/
+
+#secaoLookalike3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 0px solid rgba(183, 0, 255, 1);
+}
+
+#imagemLookalike3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    border: 0px solid rgb(255, 0, 212);
+    cursor: pointer;
+}
+
+/**/
+
+#secaoCwt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 0px solid rgb(0, 255, 213, 1);
+}
+
+#imagemStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border: 0px solid rgba(0, 255, 13, 1);
+    cursor: pointer;
+}
+
+/**/
+
+#secaoSul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    border: 0px solid rgb(85, 85, 85);
+}
 
 body::-webkit-scrollbar {
     width: 12px;
@@ -249,7 +248,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #statusSistema {
-    display: flex;
+    display: none;
     flex-direction: row;
     color: aliceblue;
     font-size: 30px;

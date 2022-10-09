@@ -303,6 +303,11 @@ function luzes9()
     let show = setTimeout("luzes10()", 120);
 }
 
+function abrirPagina(link, target)
+{
+    window.open(link, target);
+}
+
 /* COLORIDAS: 
 
 function luzes()
