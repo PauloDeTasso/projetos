@@ -731,6 +731,10 @@ function imagensAtuaisGaleria(produto)
     mostrarBotaoComprar(true);
 
     secaoBotaoComprar.style.backgroundImage = "url('../../../imagens/gif/shop now04.gif')";
+
+    imagemBotaoPassarImagens01.style.opacity = "1";
+    imagemBotaoPassarImagens02.style.opacity = "1";
+
 };
 
 function acaoBotaoImagensAtuaisGaleria(direcao)

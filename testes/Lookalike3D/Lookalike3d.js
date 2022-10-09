@@ -122,8 +122,10 @@ function tamanhoJanela()
         imagensProjetos3d[ index ].style.borderColor = "rgba(0,0,0,0)";
 
         imagensProjetos3d[ index ].style.opacity = 1;
-
-        imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
+        /*
+                imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
+        */
+        imagensProjetos3d[ index ].style.borderWidth = alturaJanela + "px 0px";
 
         imagensProjetos3d[ index ].style.width = "100%";
 
@@ -376,11 +378,18 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 */
     //
 
+    var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (alturaJanela);
+    var baseImagem1 = (imagensProjetos3d[ 1 ].y) + (alturaJanela);
+    var baseImagem2 = (imagensProjetos3d[ 2 ].y) + (alturaJanela);
+    var baseImagem3 = (imagensProjetos3d[ 3 ].y) + (alturaJanela);
+
+    /*
     var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (alturaJanela / 2);
     var baseImagem1 = (imagensProjetos3d[ 1 ].y) + (alturaJanela / 2);
     var baseImagem2 = (imagensProjetos3d[ 2 ].y) + (alturaJanela / 2);
     var baseImagem3 = (imagensProjetos3d[ 3 ].y) + (alturaJanela / 2);
     /*
+
     var baseImagem4 = (imagensProjetos3d[ 4 ].y) + (alturaJanela / 2);
     var baseImagem5 = (imagensProjetos3d[ 5 ].y) + (alturaJanela / 2);
     var baseImagem6 = (imagensProjetos3d[ 6 ].y) + (alturaJanela / 2);
@@ -398,7 +407,8 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     //
 
-    var topoImagemDeFundo = -(imagemDeFundo.y + alturaJanela / 2);
+    var topoImagemDeFundo = -(imagemDeFundo.y + alturaJanela);
+
     var baseImagemDeFundo = imagemDeFundo.y;
 
     /*

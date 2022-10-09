@@ -6,7 +6,7 @@ html {
     width: 100%;
     height: auto;
     /*background-color: rgba(255, 226, 163, 0.678);*/
-    background-image: url(../../../imagens/Projetos3d/LOGO/LOGO04.png);
+    background-image: url(../../imagens/Projetos3d/LOGO/LOGO04.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: fixed;
@@ -55,7 +55,6 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -67,6 +66,13 @@ html {
     width: 100%;
     height: auto;
     background-color: rgba(0, 0, 0, 0);
+    /*
+    background-image: url(../../../imagens/gif/estrelas.webp);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-attachment: local;
+    background-position: center;
+*/
 }
 
 #secaoBody {
