@@ -118,13 +118,18 @@ function imagemAtual(contador2)
     } else
     {
         contadorOpacidade = contadorOpacidade - 0.1;
+
         contador2++;
-        imagem.setAttribute('src', 'imagens/start' + contador2 + '.png')
-        //statusSistema.innerHTML = contadorOpacidade;
+
+        imagem.setAttribute('src', 'imagens/start' + contador2 + '.png');
+
         html5.style.opacity = contadorOpacidade;
+
         setTimeout("imagemAtual(" + contador2 + ")", 70);
+
     }
 }
+
 /* SE BARRA DE PROGRESSO = 100 ENTÃO: 
 
 let som = setTimeout("somTerminou()", 7000);

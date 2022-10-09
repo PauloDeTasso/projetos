@@ -1465,11 +1465,11 @@ function audioCachoeiraTocando()
     setTimeout("limparStatusSistema()", 10000);
 }
 
-var urlInterno = "../testes/BestBusiness/BestBusiness.html";
+var urlInterno = "../Projetos/BestBusiness/BestBusiness.html";
 
-var urlYouBe = "../testes/You Be/You Be.html";
+var urlYouBe = "../Projetos/You Be/You Be.html";
 
-var urlLookalike3d = "../testes/Lookalike3D/Lookalike3d.html";
+var urlLookalike3d = "../Projetos/Lookalike3D/Lookalike3d.html";
 
 function abrirUrl(url)
 {
@@ -1517,7 +1517,7 @@ function animarAjudar()
     }
 }
 
-//botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("/testes/Best Business/Mercadorias.html") }, false);
+//botaoBestBusiness.addEventListener('click', function () { abrirBestBusiness("/Projetos/Best Business/Mercadorias.html") }, false);
 
 /*
 const input = document.querySelector('input');
