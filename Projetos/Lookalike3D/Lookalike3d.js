@@ -146,6 +146,21 @@ function tamanhoJanela()
         imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.marginBottom = alturaJanela + "px";
     }
 
+    if (detectar_mobile())
+    {
+        if (screen.height > screen.width) 
+        {
+            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
+        } else
+        {
+            imagemDeFundo.style.top = "0px";
+        }
+
+    } else
+    {
+        imagemDeFundo.style.top = "0px";
+    }
+
 };
 
 //
@@ -1332,21 +1347,6 @@ function detectar_mobile()
     {
         return false;
     }
-}
-
-if (detectar_mobile())
-{
-    if (screen.height > screen.width) 
-    {
-        imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
-    } else
-    {
-        imagemDeFundo.style.top = "0px";
-    }
-
-} else
-{
-    imagemDeFundo.style.top = "0px";
 }
 
 //
