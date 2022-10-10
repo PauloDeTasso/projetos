@@ -181,7 +181,7 @@ html {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: rgba(255, 145, 0, 0.549);
+    background-color: rgba(255, 145, 0, 0.7);
     color: rgb(0, 0, 0);
     font-size: 57%;
 }
@@ -606,19 +606,19 @@ a {
     border: 0px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     margin: 2%;
-    opacity: .8;
+    opacity: .9;
 }
 
 #imagemInstagram {
-    opacity: .8;
+    opacity: .9;
 }
 
 #imagemFacebook {
-    opacity: .8;
+    opacity: .9;
 }
 
 #imagemTwitter {
-    opacity: .8;
+    opacity: .9;
 }
 
 #cartao {
