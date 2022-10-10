@@ -154,11 +154,19 @@ function tamanhoJanela()
             cabecalho.style.top = "3%";
             imagemDeFundo.style.top = alturaJanela / 7 + "px";
 
+            imagemDeFundo.style.borderWidth = "2px 0px";
+            imagemDeFundo.style.borderStyle = "solid";
+            imagemDeFundo.style.borderColor = "rgba(200,200,200,1)";
+
         } else
         {
             cabecalho.style.position = "relative";
             cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
+
+            imagemDeFundo.style.borderWidth = "0px 0px";
+            imagemDeFundo.style.borderStyle = "solid";
+            imagemDeFundo.style.borderColor = "rgba(200,200,200,0)";
         }
 
     } else
@@ -168,11 +176,20 @@ function tamanhoJanela()
             cabecalho.style.position = "fixed";
             cabecalho.style.top = "3%";
             imagemDeFundo.style.top = alturaJanela / 7 + "px";
+
+            imagemDeFundo.style.borderWidth = "2px 0px";
+            imagemDeFundo.style.borderStyle = "solid";
+            imagemDeFundo.style.borderColor = "rgba(200,200,200,1)";
+
         } else
         {
             cabecalho.style.position = "relative";
             cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
+
+            imagemDeFundo.style.borderWidth = "0px 0px";
+            imagemDeFundo.style.borderStyle = "solid";
+            imagemDeFundo.style.borderColor = "rgba(200,200,200,0)";
         }
     }
 };
@@ -527,6 +544,10 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     } else if (topoImagem3 < topoImagemDeFundo && baseImagem3 < baseImagemDeFundo && topoImagem2 < baseImagemDeFundo) 
     {
         imagemDeFundo.src = "";
+
+        imagemDeFundo.style.borderWidth = "0px 0px";
+        imagemDeFundo.style.borderStyle = "solid";
+        imagemDeFundo.style.borderColor = "rgba(200,200,200,0)";
 
     } else if (topoImagem3 > topoImagemDeFundo && baseImagem3 > baseImagemDeFundo && baseImagem2 < topoImagemDeFundo) 
     {
