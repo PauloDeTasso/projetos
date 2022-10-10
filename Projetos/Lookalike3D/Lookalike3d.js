@@ -143,6 +143,7 @@ function tamanhoJanela()
         imagensProjetos3d[ index ].style.height = "auto";
 
         imagensProjetos3d[ 0 ].style.marginTop = alturaJanela + "px";
+
         imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.marginBottom = alturaJanela + "px";
     }
 
@@ -150,9 +151,7 @@ function tamanhoJanela()
     {
         if (alturaJanela > larguraJanela) 
         {
-            cabecalho.style.position = "fixed";
-            cabecalho.style.top = "20px";
-            imagemDeFundo.style.top = ((alturaJanela / 3.3) - 100) + "px";
+            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
 
             imagemDeFundo.style.borderWidth = "2px 0px";
             imagemDeFundo.style.borderStyle = "solid";
@@ -160,8 +159,6 @@ function tamanhoJanela()
 
         } else
         {
-            cabecalho.style.position = "relative";
-            cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
 
             imagemDeFundo.style.borderWidth = "0px 0px";
@@ -173,9 +170,7 @@ function tamanhoJanela()
     {
         if (alturaJanela > larguraJanela) 
         {
-            cabecalho.style.position = "fixed";
-            cabecalho.style.top = "20px";
-            imagemDeFundo.style.top = ((alturaJanela / 3.3) - 100) + "px";
+            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
 
             imagemDeFundo.style.borderWidth = "2px 0px";
             imagemDeFundo.style.borderStyle = "solid";
@@ -183,8 +178,6 @@ function tamanhoJanela()
 
         } else
         {
-            cabecalho.style.position = "relative";
-            cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
 
             imagemDeFundo.style.borderWidth = "0px 0px";
