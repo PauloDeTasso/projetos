@@ -60,6 +60,16 @@ var divExternalArea = document.getElementById('divExternalArea');
 var divSotao = document.getElementById('divSotao');
 var divPorao = document.getElementById('divPorao');
 
+var botaoComprar01 = document.getElementById('botaoComprar01');
+var botaoComprar02 = document.getElementById('botaoComprar02');
+var botaoComprar03 = document.getElementById('botaoComprar03');
+var botaoComprar04 = document.getElementById('botaoComprar04');
+
+var imagemBotaoComprar01 = document.getElementById('imagemBotaoComprar01');
+var imagemBotaoComprar02 = document.getElementById('imagemBotaoComprar02');
+var imagemBotaoComprar03 = document.getElementById('imagemBotaoComprar03');
+var imagemBotaoComprar04 = document.getElementById('imagemBotaoComprar04');
+
 var botaoComprar = document.getElementById('botaoComprar');
 
 var secaoOpcoesCompra = document.getElementById('secaoOpcoesCompra');
@@ -193,14 +203,16 @@ function iconeOpacidadeMenor(icone)
     icone.style.backgroundColor = "rgba(200,200,200,0)";
 }
 
-function iconeTamanhoLink(icone)
+function iconeTamanhoLink(imagem, botao)
 {
-    icone.style.opacity = "1";
+    imagem.style.opacity = ".9";
+    botao.style.opacity = ".9";
 }
 
-function iconeTamanhoLinkMenor(icone)
+function iconeTamanhoLinkMenor(imagem, botao)
 {
-    icone.style.opacity = ".9";
+    imagem.style.opacity = "1";
+    botao.style.opacity = "1";
 }
 
 function iconeBackgroundColor(icone, cor)
@@ -559,6 +571,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969846";
 
+            linkCompraAtual04 = "https://blendermarket.com/products/modern-commode";
+
             break;
 
         case menuRack01:
@@ -590,6 +604,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/architectural/decoration/rack-retro-8dbe52e5-d8a6-42b9-99ae-2802815a2d9c";
 
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969828";
+
+            linkCompraAtual04 = "https://blendermarket.com/products/rack-retro";
 
             break;
 
@@ -623,6 +639,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969844";
 
+            linkCompraAtual04 = "https://blendermarket.com/products/rack-bistro";
+
             break;
 
         case menuCloset:
@@ -654,6 +672,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual02 = "https://www.cgtrader.com/3d-models/furniture/cabinet/clear-glass-wardrobe";
 
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969849";
+
+            linkCompraAtual04 = "https://blendermarket.com/products/clear-glass-wardrobe";
 
             break;
 
@@ -687,6 +707,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969851";
 
+            linkCompraAtual04 = "https://blendermarket.com/products/exotic-coffee-table";
+
             break;
 
         default:
@@ -716,6 +738,7 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual01 = "";
             linkCompraAtual02 = "";
             linkCompraAtual03 = "";
+            linkCompraAtual04 = "";
 
             break;
     }
@@ -730,7 +753,7 @@ function imagensAtuaisGaleria(produto)
 
     mostrarBotaoComprar(true);
 
-    secaoBotaoComprar.style.backgroundImage = "url('../../../imagens/gif/shop now04.gif')";
+    secaoBotaoComprar.style.backgroundImage = "url('../../../imagens/gif/shopnow01.gif')";
 
     imagemBotaoPassarImagens01.style.opacity = "1";
     imagemBotaoPassarImagens02.style.opacity = "1";
