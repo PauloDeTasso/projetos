@@ -21,8 +21,8 @@ html {
     width: 100%;
     height: auto;
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 0px;
+    left: 0px;
     z-index: -99999;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -875,3 +875,10 @@ length, retorna a quantidade de classes naquele elemento.
 .zoom-out {cursor: zoom-out;}
 
 */
+
+.telaNaHorizontal {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
