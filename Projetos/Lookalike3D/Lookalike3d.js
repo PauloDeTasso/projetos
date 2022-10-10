@@ -150,9 +150,14 @@ function tamanhoJanela()
     {
         if (alturaJanela > larguraJanela) 
         {
-            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
+            cabecalho.style.position = "fixed";
+            cabecalho.style.top = "3%";
+            imagemDeFundo.style.top = alturaJanela / 7 + "px";
+
         } else
         {
+            cabecalho.style.position = "relative";
+            cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
         }
 
@@ -160,9 +165,13 @@ function tamanhoJanela()
     {
         if (alturaJanela > larguraJanela) 
         {
-            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
+            cabecalho.style.position = "fixed";
+            cabecalho.style.top = "3%";
+            imagemDeFundo.style.top = alturaJanela / 7 + "px";
         } else
         {
+            cabecalho.style.position = "relative";
+            cabecalho.style.top = "0px";
             imagemDeFundo.style.top = "0px";
         }
     }
@@ -196,7 +205,6 @@ function iconeOpacidadeMenor(icone)
 
 function scrollImagens()
 {
-
     /*    statusSistema.innerHTML =
             "top: " + coordenada(imagensProjetos3d[ 0 ], "top") +
             " bottom: " + coordenada(htmlPrincipal, "bottom") +
@@ -746,6 +754,11 @@ statusSistema2.innerHTML = xxx + "<br>" + "<br>" +
  
     bloco.y = (statusSistema.y);
     */
+
+    setTimeout(() =>
+    {
+        relogio.style.visibility = "visible";
+    }, 2000);
 };
 
 //
@@ -1210,7 +1223,7 @@ function abrindoFechandoMenu()
         cabecalho.style.height = "70px"
         cabecalho.style.opacity = "1";
         cabecalho.style.alignItems = "flex-start";
-        relogio.style.display = "flex";
+        relogio.style.visibility = "visible";
 
         secaoTemas.style.visibility = "hidden"
 
