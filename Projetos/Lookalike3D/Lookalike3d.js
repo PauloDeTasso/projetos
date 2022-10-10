@@ -148,7 +148,7 @@ function tamanhoJanela()
 
     if (detectar_mobile())
     {
-        if (screen.height > screen.width) 
+        if (alturaJanela > larguraJanela) 
         {
             imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
         } else
@@ -158,9 +158,14 @@ function tamanhoJanela()
 
     } else
     {
-        imagemDeFundo.style.top = "0px";
+        if (alturaJanela > larguraJanela) 
+        {
+            imagemDeFundo.style.top = alturaJanela / 3.3 + "px";
+        } else
+        {
+            imagemDeFundo.style.top = "0px";
+        }
     }
-
 };
 
 //
