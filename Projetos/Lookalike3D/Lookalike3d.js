@@ -1409,6 +1409,7 @@ function scrollImagens()
 };
 
 */
+/*
 setInterval(() =>
 {
     var larguraJanela = window.outerWidth;
@@ -1437,7 +1438,7 @@ setInterval(() =>
 
     statusSistema.innerHTML = "larguraJanela: " + larguraJanela + "<br>/larguraJanela2: " + larguraJanela2 + "<br>/larguraTela: " + larguraTela + "<br><br>/alturaJanela: " + alturaJanela + "<br>/alturaJanela2: " + alturaJanela2 + "<br>/alturaTela: " + alturaTela + "<br><br>/imagensProjetos3d[ 0 ].height: " + imagensProjetos3d[ 0 ].height + "<br>/imagemDeFundo.height: " + imagemDeFundo.height + "<br><br>/topoImagemDeFundo: " + topoImagemDeFundo + "<br>/baseImagemDeFundo: " + baseImagemDeFundo + "<br><br>/topoImagem0: " + topoImagem0 + "<br>/baseImagem0: " + baseImagem0;
 }, 0);
-
+*/
 /*
     //0
 
