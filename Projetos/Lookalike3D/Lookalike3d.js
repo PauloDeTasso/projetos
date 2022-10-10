@@ -151,8 +151,8 @@ function tamanhoJanela()
         if (alturaJanela > larguraJanela) 
         {
             cabecalho.style.position = "fixed";
-            cabecalho.style.top = "3%";
-            imagemDeFundo.style.top = alturaJanela / 7 + "px";
+            cabecalho.style.top = "20px";
+            imagemDeFundo.style.top = ((alturaJanela / 3.3) - 100) + "px";
 
             imagemDeFundo.style.borderWidth = "2px 0px";
             imagemDeFundo.style.borderStyle = "solid";
@@ -174,8 +174,8 @@ function tamanhoJanela()
         if (alturaJanela > larguraJanela) 
         {
             cabecalho.style.position = "fixed";
-            cabecalho.style.top = "3%";
-            imagemDeFundo.style.top = alturaJanela / 7 + "px";
+            cabecalho.style.top = "20px";
+            imagemDeFundo.style.top = ((alturaJanela / 3.3) - 100) + "px";
 
             imagemDeFundo.style.borderWidth = "2px 0px";
             imagemDeFundo.style.borderStyle = "solid";
