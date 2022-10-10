@@ -96,8 +96,8 @@ var tempoIntervalo = 100;
 var larguraJanela = window.outerWidth;
 var alturaJanela = window.outerHeight;
 
-//var larguraJanela = window.innerWidth;
-//var alturaJanela = window.innerHeight;
+var larguraJanela2 = window.innerWidth;
+var alturaJanela2 = window.innerHeight;
 
 var larguraTela = screen.width;
 var alturaTela = screen.height;
@@ -125,7 +125,7 @@ function tamanhoJanela()
         /*
                 imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
         */
-        imagensProjetos3d[ index ].style.borderWidth = alturaJanela + "px 0px";
+        imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px";
 
         imagensProjetos3d[ index ].style.width = "100%";
 
@@ -175,7 +175,7 @@ function scrollImagens()
     statusSistema.innerHTML = "se" + coordenada(imagensProjetos3d[ 0 ], "top") + " for menor que " + coordenada(htmlPrincipal, "top") + " e " + coordenada(imagensProjetos3d[ 0 ], "bottom") + "< " + (-window.outerHeight - imagensProjetos3d[ 0 ].height);
 */
 
-    var xxx = imagemDeFundo.src;
+    // var xxx = imagemDeFundo.src;
     /*
         setInterval(() =>
         {
@@ -251,7 +251,6 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 
     } else
     {
-
         setTimeout(() =>
         {
             cabecalho.style.height = "70px";
@@ -265,102 +264,105 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
             relogio.style.color = "rgb(0, 0, 0)"
 
         }, tempoIntervalo);
-    }
+
+    };
 
     ///////////
-
-    var imagem1width = imagensProjetos3d[ 0 ].width;
-
-    var imagem1height = imagensProjetos3d[ 0 ].height;
-
+    /*
+        var imagem1width = imagensProjetos3d[ 0 ].width;
+    
+        var imagem1height = imagensProjetos3d[ 0 ].height;
+    
+        //
+    
+        var imagem1LarguraCoordenada = coordenada(imagensProjetos3d[ 0 ], "width");
+    
+        var imagem1AlturaCoordenada = coordenada(imagensProjetos3d[ 0 ], "height");
+    
+        //
+    
+        var imagem1offsetWidth = imagensProjetos3d[ 0 ].offsetWidth;
+    
+        var imagem1offsetHeight = imagensProjetos3d[ 0 ].offsetHeight;
+    
+        //
+    
+        var imagem1offsetTop = imagensProjetos3d[ 0 ].offsetTop;
+    
+        var imagem1offsetLeft = imagensProjetos3d[ 0 ].offsetLeft;
+    
+        var imagem1offsetParent = imagensProjetos3d[ 0 ].offsetParent;
+    
+        //
+    
+        var imagem1clientWidth = imagensProjetos3d[ 0 ].clientWidth;
+    
+        var imagem1clientHeight = imagensProjetos3d[ 0 ].clientHeight;
+    
+        var imagem1clientTop = imagensProjetos3d[ 0 ].clientTop;
+    
+        var imagem1clientLeft = imagensProjetos3d[ 0 ].clientLeft;
+    
+        //
+    
+        var imagem1elementFromPoint = document.elementFromPoint(0, 0);
+    
+        //
+    
+        var imagem1X = imagensProjetos3d[ 0 ].x;
+        var imagem1Y = imagensProjetos3d[ 0 ].y;
+    
+        var imagemDeFundoX = imagemDeFundo.x;
+        var imagemDeFundoY = imagemDeFundo.y;
+    
+        ///////////2
+    
+        var imagemDeFundowidth = imagemDeFundo.width;
+    
+        var imagemDeFundoheight = imagemDeFundo.height;
+    
+        //
+    
+        var imagemDeFundoLarguraCoordenada = coordenada(imagemDeFundo, "width");
+    
+        var imagemDeFundoAlturaCoordenada = coordenada(imagemDeFundo, "height");
+    
+        //
+    
+        var imagemDeFundooffsetWidth = imagemDeFundo.offsetWidth;
+    
+        var imagemDeFundooffsetHeight = imagemDeFundo.offsetHeight;
+    
+        //
+    
+        var imagemDeFundooffsetTop = imagemDeFundo.offsetTop;
+    
+        var imagemDeFundooffsetLeft = imagemDeFundo.offsetLeft;
+    
+        var imagemDeFundooffsetParent = imagemDeFundo.offsetParent;
+    
+        //
+    
+        var imagemDeFundoclientWidth = imagemDeFundo.clientWidth;
+    
+        var imagemDeFundoclientHeight = imagemDeFundo.clientHeight;
+    
+        var imagemDeFundoclientTop = imagemDeFundo.clientTop;
+    
+        var imagemDeFundoclientLeft = imagemDeFundo.clientLeft;
+    
+        //
+    
+        var imagemDeFundoelementFromPoint = document.elementFromPoint(0, 0);
+    */
     //
+    /*
+        var topoImagem0 = imagensProjetos3d[ 0 ].y;
+        var topoImagem1 = imagensProjetos3d[ 1 ].y;
+        var topoImagem2 = imagensProjetos3d[ 2 ].y;
+        var topoImagem3 = imagensProjetos3d[ 3 ].y;
+        */
 
-    var imagem1LarguraCoordenada = coordenada(imagensProjetos3d[ 0 ], "width");
-
-    var imagem1AlturaCoordenada = coordenada(imagensProjetos3d[ 0 ], "height");
-
-    //
-
-    var imagem1offsetWidth = imagensProjetos3d[ 0 ].offsetWidth;
-
-    var imagem1offsetHeight = imagensProjetos3d[ 0 ].offsetHeight;
-
-    //
-
-    var imagem1offsetTop = imagensProjetos3d[ 0 ].offsetTop;
-
-    var imagem1offsetLeft = imagensProjetos3d[ 0 ].offsetLeft;
-
-    var imagem1offsetParent = imagensProjetos3d[ 0 ].offsetParent;
-
-    //
-
-    var imagem1clientWidth = imagensProjetos3d[ 0 ].clientWidth;
-
-    var imagem1clientHeight = imagensProjetos3d[ 0 ].clientHeight;
-
-    var imagem1clientTop = imagensProjetos3d[ 0 ].clientTop;
-
-    var imagem1clientLeft = imagensProjetos3d[ 0 ].clientLeft;
-
-    //
-
-    var imagem1elementFromPoint = document.elementFromPoint(0, 0);
-
-    //
-
-    var imagem1X = imagensProjetos3d[ 0 ].x;
-    var imagem1Y = imagensProjetos3d[ 0 ].y;
-
-    var imagemDeFundoX = imagemDeFundo.x;
-    var imagemDeFundoY = imagemDeFundo.y;
-
-    ///////////2
-
-    var imagemDeFundowidth = imagemDeFundo.width;
-
-    var imagemDeFundoheight = imagemDeFundo.height;
-
-    //
-
-    var imagemDeFundoLarguraCoordenada = coordenada(imagemDeFundo, "width");
-
-    var imagemDeFundoAlturaCoordenada = coordenada(imagemDeFundo, "height");
-
-    //
-
-    var imagemDeFundooffsetWidth = imagemDeFundo.offsetWidth;
-
-    var imagemDeFundooffsetHeight = imagemDeFundo.offsetHeight;
-
-    //
-
-    var imagemDeFundooffsetTop = imagemDeFundo.offsetTop;
-
-    var imagemDeFundooffsetLeft = imagemDeFundo.offsetLeft;
-
-    var imagemDeFundooffsetParent = imagemDeFundo.offsetParent;
-
-    //
-
-    var imagemDeFundoclientWidth = imagemDeFundo.clientWidth;
-
-    var imagemDeFundoclientHeight = imagemDeFundo.clientHeight;
-
-    var imagemDeFundoclientTop = imagemDeFundo.clientTop;
-
-    var imagemDeFundoclientLeft = imagemDeFundo.clientLeft;
-
-    //
-
-    var imagemDeFundoelementFromPoint = document.elementFromPoint(0, 0);
-
-    //
-
-    var topoImagem0 = imagensProjetos3d[ 0 ].y;
-    var topoImagem1 = imagensProjetos3d[ 1 ].y;
-    var topoImagem2 = imagensProjetos3d[ 2 ].y;
-    var topoImagem3 = imagensProjetos3d[ 3 ].y;
     /*
     var topoImagem4 = imagensProjetos3d[ 4 ].y;
     var topoImagem5 = imagensProjetos3d[ 5 ].y;
@@ -378,10 +380,19 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
 */
     //
 
+    /*
+    var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (imagensProjetos3d[ 0 ].height);
+    var baseImagem1 = (imagensProjetos3d[ 1 ].y) + (imagensProjetos3d[ 1 ].height);
+    var baseImagem2 = (imagensProjetos3d[ 2 ].y) + (imagensProjetos3d[ 2 ].height);
+    var baseImagem3 = (imagensProjetos3d[ 3 ].y) + (imagensProjetos3d[ 3 ].height);
+*/
+
+    /*
     var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (alturaJanela);
     var baseImagem1 = (imagensProjetos3d[ 1 ].y) + (alturaJanela);
     var baseImagem2 = (imagensProjetos3d[ 2 ].y) + (alturaJanela);
     var baseImagem3 = (imagensProjetos3d[ 3 ].y) + (alturaJanela);
+    */
 
     /*
     var baseImagem0 = (imagensProjetos3d[ 0 ].y) + (alturaJanela / 2);
@@ -405,12 +416,6 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
     var baseImagem16 = (imagensProjetos3d[ 16 ].y) + (alturaJanela / 2);
 */
 
-    //
-
-    var topoImagemDeFundo = -(imagemDeFundo.y + alturaJanela);
-
-    var baseImagemDeFundo = imagemDeFundo.y;
-
     /*
     var topoImagem1 = imagensProjetos3d[ 0 ].y;
      
@@ -420,6 +425,28 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
      
     var baseImagemDeFundo = imagemDeFundo.y;
     */
+    /*
+        var larguraJanela = window.outerWidth;
+        var alturaJanela = window.outerHeight;
+    
+        var larguraJanela2 = window.innerWidth;
+        var alturaJanela2 = window.innerHeight;
+    
+        var larguraTela = screen.width;
+        var alturaTela = screen.height;
+    */
+    var topoImagemDeFundo = imagemDeFundo.y;
+    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
+
+    var topoImagem0 = (imagensProjetos3d[ 0 ].y + alturaJanela / 2);
+    var topoImagem1 = (imagensProjetos3d[ 1 ].y + alturaJanela / 2);
+    var topoImagem2 = (imagensProjetos3d[ 2 ].y + alturaJanela / 2);
+    var topoImagem3 = (imagensProjetos3d[ 3 ].y + alturaJanela / 2);
+
+    var baseImagem0 = topoImagem0 + imagensProjetos3d[ 0 ].height;
+    var baseImagem1 = topoImagem1 + imagensProjetos3d[ 1 ].height;
+    var baseImagem2 = topoImagem2 + imagensProjetos3d[ 2 ].height;
+    var baseImagem3 = topoImagem3 + imagensProjetos3d[ 3 ].height;
 
     ////////
 
@@ -592,7 +619,7 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
                         */
     } else
     {
-        imagemDeFundo.src = "../../imagens/Projetos3d/00.png";
+        imagemDeFundo.src = "";
     }
 
     /////////
@@ -1381,4 +1408,44 @@ function scrollImagens()
     }
 };
 
+*/
+setInterval(() =>
+{
+    var larguraJanela = window.outerWidth;
+    var alturaJanela = window.outerHeight;
+
+    var larguraJanela2 = window.innerWidth;
+    var alturaJanela2 = window.innerHeight;
+
+    var larguraTela = screen.width;
+    var alturaTela = screen.height;
+
+    var topoImagemDeFundo = imagemDeFundo.y;
+    var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
+
+    var topoImagem0 = (imagensProjetos3d[ 0 ].y + alturaJanela / 2);
+
+    var topoImagem1 = (imagensProjetos3d[ 1 ].y + alturaJanela / 2);
+    var topoImagem2 = (imagensProjetos3d[ 2 ].y + alturaJanela / 2);
+    var topoImagem3 = (imagensProjetos3d[ 3 ].y + alturaJanela / 2);
+
+    var baseImagem0 = topoImagem0 + imagensProjetos3d[ 0 ].height;
+
+    var baseImagem1 = topoImagem0 + imagensProjetos3d[ 1 ].height;
+    var baseImagem2 = topoImagem0 + imagensProjetos3d[ 2 ].height;
+    var baseImagem3 = topoImagem0 + imagensProjetos3d[ 3 ].height;
+
+    statusSistema.innerHTML = "larguraJanela: " + larguraJanela + "<br>/larguraJanela2: " + larguraJanela2 + "<br>/larguraTela: " + larguraTela + "<br><br>/alturaJanela: " + alturaJanela + "<br>/alturaJanela2: " + alturaJanela2 + "<br>/alturaTela: " + alturaTela + "<br><br>/imagensProjetos3d[ 0 ].height: " + imagensProjetos3d[ 0 ].height + "<br>/imagemDeFundo.height: " + imagemDeFundo.height + "<br><br>/topoImagemDeFundo: " + topoImagemDeFundo + "<br>/baseImagemDeFundo: " + baseImagemDeFundo + "<br><br>/topoImagem0: " + topoImagem0 + "<br>/baseImagem0: " + baseImagem0;
+}, 0);
+
+/*
+    //0
+
+    if (topoImagem0 < topoImagemDeFundo && baseImagem0 < baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png";
+
+    } else if (topoImagem0 > topoImagemDeFundo && baseImagem0 > baseImagemDeFundo && topoImagem1 > baseImagemDeFundo) 
+    {
+        imagemDeFundo.src = "../../imagens/Projetos3d/background01.png";
 */
