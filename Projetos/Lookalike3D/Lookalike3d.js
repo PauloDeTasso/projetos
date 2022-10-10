@@ -110,26 +110,40 @@ cartao.addEventListener('mouseenter', () => { cartao.classList.toggle('virar') }
 
 function tamanhoJanela()
 {
+    var larguraJanela = window.outerWidth;
+    var alturaJanela = window.outerHeight;
+
+    var larguraJanela2 = window.innerWidth;
+    var alturaJanela2 = window.innerHeight;
+
+    var larguraTela = screen.width;
+    var alturaTela = screen.height;
+
     /*
         statusSistema.innerHTML = "screen.availWidth: " + screen.availWidth + "\n/screen.availHeight: " + screen.availHeight + "\n//screen.width: " + screen.width + "\n/screen.heigh: " + screen.height + "\n//window.outerWidth: " + window.outerWidth + "\n/window.outerHeight: " + window.outerHeight + "\n//window.innerWidth: " + window.innerWidth + "\n/window.innerHeight: " + window.innerHeight;
     */
     //distanciaImagens = alturaJanela + 'px solid rgba(0,0,0,1)';
 
     for (let index = 0; index < imagensProjetos3d.length; index++)
-    {
+    {/*
         imagensProjetos3d[ index ].style.borderStyle = "solid";
 
         imagensProjetos3d[ index ].style.borderColor = "rgba(0,0,0,0)";
 
         imagensProjetos3d[ index ].style.opacity = 1;
+        */
         /*
                 imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px " + alturaJanela / 2 + "px 0px";
         */
-        imagensProjetos3d[ index ].style.borderWidth = alturaJanela / 2 + "px 0px";
+
+        imagensProjetos3d[ index ].style.margin = alturaJanela / 2 + "px 0px";
 
         imagensProjetos3d[ index ].style.width = "100%";
 
         imagensProjetos3d[ index ].style.height = "auto";
+
+        imagensProjetos3d[ 0 ].style.marginTop = alturaJanela + "px";
+        imagensProjetos3d[ imagensProjetos3d.length - 1 ].style.marginBottom = alturaJanela + "px";
     }
 
 };
@@ -425,23 +439,23 @@ document.height + " ///***////" + document.documentElement.scrollTop + "*** " + 
      
     var baseImagemDeFundo = imagemDeFundo.y;
     */
-    /*
-        var larguraJanela = window.outerWidth;
-        var alturaJanela = window.outerHeight;
-    
-        var larguraJanela2 = window.innerWidth;
-        var alturaJanela2 = window.innerHeight;
-    
-        var larguraTela = screen.width;
-        var alturaTela = screen.height;
-    */
+
+    var larguraJanela = window.outerWidth;
+    var alturaJanela = window.outerHeight;
+
+    var larguraJanela2 = window.innerWidth;
+    var alturaJanela2 = window.innerHeight;
+
+    var larguraTela = screen.width;
+    var alturaTela = screen.height;
+
     var topoImagemDeFundo = imagemDeFundo.y;
     var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
 
-    var topoImagem0 = (imagensProjetos3d[ 0 ].y + alturaJanela / 2);
-    var topoImagem1 = (imagensProjetos3d[ 1 ].y + alturaJanela / 2);
-    var topoImagem2 = (imagensProjetos3d[ 2 ].y + alturaJanela / 2);
-    var topoImagem3 = (imagensProjetos3d[ 3 ].y + alturaJanela / 2);
+    var topoImagem0 = (imagensProjetos3d[ 0 ].y);
+    var topoImagem1 = (imagensProjetos3d[ 1 ].y);
+    var topoImagem2 = (imagensProjetos3d[ 2 ].y);
+    var topoImagem3 = (imagensProjetos3d[ 3 ].y);
 
     var baseImagem0 = topoImagem0 + imagensProjetos3d[ 0 ].height;
     var baseImagem1 = topoImagem1 + imagensProjetos3d[ 1 ].height;
@@ -1424,11 +1438,11 @@ setInterval(() =>
     var topoImagemDeFundo = imagemDeFundo.y;
     var baseImagemDeFundo = (imagemDeFundo.y + imagemDeFundo.height);
 
-    var topoImagem0 = (imagensProjetos3d[ 0 ].y + alturaJanela / 2);
+    var topoImagem0 = (imagensProjetos3d[ 0 ].y);
 
-    var topoImagem1 = (imagensProjetos3d[ 1 ].y + alturaJanela / 2);
-    var topoImagem2 = (imagensProjetos3d[ 2 ].y + alturaJanela / 2);
-    var topoImagem3 = (imagensProjetos3d[ 3 ].y + alturaJanela / 2);
+    var topoImagem1 = (imagensProjetos3d[ 1 ].y);
+    var topoImagem2 = (imagensProjetos3d[ 2 ].y);
+    var topoImagem3 = (imagensProjetos3d[ 3 ].y);
 
     var baseImagem0 = topoImagem0 + imagensProjetos3d[ 0 ].height;
 
@@ -1437,6 +1451,7 @@ setInterval(() =>
     var baseImagem3 = topoImagem0 + imagensProjetos3d[ 3 ].height;
 
     statusSistema.innerHTML = "larguraJanela: " + larguraJanela + "<br>/larguraJanela2: " + larguraJanela2 + "<br>/larguraTela: " + larguraTela + "<br><br>/alturaJanela: " + alturaJanela + "<br>/alturaJanela2: " + alturaJanela2 + "<br>/alturaTela: " + alturaTela + "<br><br>/imagensProjetos3d[ 0 ].height: " + imagensProjetos3d[ 0 ].height + "<br>/imagemDeFundo.height: " + imagemDeFundo.height + "<br><br>/topoImagemDeFundo: " + topoImagemDeFundo + "<br>/baseImagemDeFundo: " + baseImagemDeFundo + "<br><br>/topoImagem0: " + topoImagem0 + "<br>/baseImagem0: " + baseImagem0;
+
 }, 0);
 */
 /*

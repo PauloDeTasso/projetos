@@ -801,14 +801,14 @@ length, retorna a quantidade de classes naquele elemento.
     color: rgba(200, 200, 200, 1);
 }
 */
-/*
+
 #statusSistema {
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: flex-start;
-    top: 600px;
-    left: 0px;
+    top: 300px;
+    left: 20px;
     position: fixed;
     width: 80%;
     background-color: rgba(0, 0, 0, .8);
@@ -816,7 +816,7 @@ length, retorna a quantidade de classes naquele elemento.
     color: rgba(200, 200, 200, 1);
     font-size: 110%;
 }
-*/
+
 /*
 #statusSistema2 {
     display: flex;
