@@ -90,45 +90,79 @@ var imagensGirou = false;
 
 var contadorOpacidade = 1.9;
 
-function goHome()
+function goHome(pagina)
 {
-    if (imagensGirou)
+    if (pagina == "Lookalike3d")
     {
-        window.location.href = "docs/Home.html";
+        abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
+
+    } else if (pagina == "Cwt")
+    {
+        if (imagensGirou)
+        {
+            window.location.href = "docs/Home.html";
+        } else
+        {
+            girarImagens(pagina);
+        }
     } else
     {
-        girarImagens();
+        alert("Escolha um Site para entrar!")
     }
-}
+};
 
-function girarImagens()
+function girarImagens(pagina)
 {
-    contador2 = 0;
-    setTimeout("imagemAtual(1)", 70);
-    fx1.play();
-}
-
-function imagemAtual(contador2)
-{
-
-    if (contador2 >= 19)
+    if (pagina == "Lookalike3d")
     {
-        imagensGirou = true;
-        goHome();
+
+    } else if (pagina == "Cwt")
+    {
+        contador2 = 0;
+        setTimeout(() =>
+        {
+            imagemAtual(1, pagina)
+        }, 70);
+        fx1.play();
     } else
     {
-        contadorOpacidade = contadorOpacidade - 0.1;
-
-        contador2++;
-
-        imagem.setAttribute('src', 'imagens/start' + contador2 + '.png');
-
-        html5.style.opacity = contadorOpacidade;
-
-        setTimeout("imagemAtual(" + contador2 + ")", 70);
 
     }
+
 }
+
+function imagemAtual(contador2, pagina)
+{
+
+    if (pagina == "Lookalike3d")
+    {
+
+    } else if (pagina == "Cwt")
+    {
+        if (contador2 >= 19)
+        {
+            imagensGirou = true;
+            goHome('Cwt');
+        } else
+        {
+            contadorOpacidade = contadorOpacidade - 0.1;
+
+            contador2++;
+
+            imagem.setAttribute('src', 'imagens/start' + contador2 + '.png');
+
+            html5.style.opacity = contadorOpacidade;
+
+            setTimeout(() =>
+            {
+                imagemAtual(contador2, pagina);
+            }, 70);
+        }
+    } else
+    {
+
+    }
+};
 
 /* SE BARRA DE PROGRESSO = 100 ENTÃO: 
 
