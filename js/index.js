@@ -2,6 +2,8 @@ var html5 = document.getElementById('html5')
 
 var imagem = document.getElementById('imagemStart')
 
+var imagemLookalike3d = document.getElementById('imagemLookalike3d')
+
 var visitasdoSite = document.getElementById('visitasSite');
 
 var objetoEmMovimento = document.getElementById('objeto');
@@ -50,29 +52,48 @@ function numeroAleatorioFrase(min, max)
     numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
 }
 
-function alterarImagem()
+function alterarImagem(pagina)
 {
-    numeroAleatorioFrase(0, 20);
-    imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png')
-    contador = 1;
-}
+    if (pagina == "Lookalike3d")
+    {
+        numeroAleatorioFrase(0, 9);
+        imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/ROLETA/0' + numeroAleatorioFraseInterno + '.png');
+        contador = 1;
+    } else if (pagina == "Cwt")
+    {
+        numeroAleatorioFrase(0, 20);
+        imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png');
+        contador = 1;
+    } else
+    {
 
-function retornarImagem()
+    }
+};
+
+function retornarImagem(pagina)
 {
-    imagem.setAttribute('src', 'imagens/start0.png')
-    /* somVento.pause();*/
-}
+    if (pagina == "Lookalike3d")
+    {
+        imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/LOGO/LOGO04.png')
+    } else if (pagina == "Cwt")
+    {
+        imagem.setAttribute('src', 'imagens/start0.png')
+    } else
+    {
+
+    }
+};
 
 function numeroEmojisAleatorio(min, max)
 {
     numeroEmojiAleatorio = Math.floor(Math.random() * (max - min) + min);
-}
+};
 
 function emojiAleatorio()
 {
     numeroEmojisAleatorio(1, 40);
     emojiNorte1.setAttribute('src', '../imagens/emojis/' + numeroEmojiAleatorio + '.png');
-}
+};
 
 function playUnico()
 {
@@ -83,10 +104,10 @@ function playUnico()
     {
 
     }
-
-}
+};
 
 var imagensGirou = false;
+var imagensGiroulLookalike = false;
 
 var contadorOpacidade = 1.9;
 
@@ -94,7 +115,15 @@ function goHome(pagina)
 {
     if (pagina == "Lookalike3d")
     {
-        abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
+        if (imagensGiroulLookalike)
+        {
+            abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
+        } else
+        {
+            girarImagens(pagina);
+        }
+
+        //abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
 
     } else if (pagina == "Cwt")
     {
@@ -115,6 +144,12 @@ function girarImagens(pagina)
 {
     if (pagina == "Lookalike3d")
     {
+        contador2 = 0;
+        setTimeout(() =>
+        {
+            imagemAtual(1, pagina)
+        }, 70);
+        fx1.play();
 
     } else if (pagina == "Cwt")
     {
@@ -128,14 +163,31 @@ function girarImagens(pagina)
     {
 
     }
-
-}
+};
 
 function imagemAtual(contador2, pagina)
 {
-
     if (pagina == "Lookalike3d")
     {
+        if (contador2 >= 20)
+        {
+            imagensGiroulLookalike = true;
+            goHome(pagina);
+        } else
+        {
+            contadorOpacidade = contadorOpacidade - 0.1;
+
+            contador2++;
+
+            imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/ROLETA/0' + contador2 + '.png');
+
+            html5.style.opacity = contadorOpacidade;
+
+            setTimeout(() =>
+            {
+                imagemAtual(contador2, pagina);
+            }, 70);
+        }
 
     } else if (pagina == "Cwt")
     {
@@ -195,7 +247,7 @@ function luzes()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
     let show = setTimeout("luzes1()", 120);
-}
+};
 
 function luzes1()
 {
@@ -204,7 +256,7 @@ function luzes1()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     let show = setTimeout("luzes2()", 120);
-}
+};
 
 function luzes2()
 {
@@ -213,7 +265,7 @@ function luzes2()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     let show = setTimeout("luzes3()", 120);
-}
+};
 
 function luzes3()
 {
@@ -222,7 +274,7 @@ function luzes3()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     let show = setTimeout("luzes4()", 120);
-}
+};
 
 function luzes4()
 {
@@ -231,7 +283,7 @@ function luzes4()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     let show = setTimeout("luzes5()", 120);
-}
+};
 
 function luzes5()
 {
@@ -240,7 +292,7 @@ function luzes5()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     let show = setTimeout("luzes6()", 120);
-}
+};
 
 function luzes6()
 {
@@ -249,7 +301,7 @@ function luzes6()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     let show = setTimeout("luzes7()", 120);
-}
+};
 
 function luzes7()
 {
@@ -258,7 +310,7 @@ function luzes7()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     let show = setTimeout("luzes8()", 120);
-}
+};
 
 function luzes8()
 {
@@ -267,8 +319,7 @@ function luzes8()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     let show = setTimeout("luzes9()", 120);
-}
-
+};
 
 function luzes16()
 {
@@ -277,7 +328,7 @@ function luzes16()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
     let show = setTimeout("luzes1()", 120);
-}
+};
 
 function luzes15()
 {
@@ -286,7 +337,7 @@ function luzes15()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
     let show = setTimeout("luzes16()", 120);
-}
+};
 
 function luzes14()
 {
@@ -295,7 +346,7 @@ function luzes14()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
     let show = setTimeout("luzes15()", 120);
-}
+};
 
 function luzes13()
 {
@@ -304,7 +355,7 @@ function luzes13()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
     let show = setTimeout("luzes14()", 120);
-}
+};
 
 function luzes12()
 {
@@ -313,7 +364,7 @@ function luzes12()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
     let show = setTimeout("luzes13()", 120);
-}
+};
 
 function luzes11()
 {
@@ -322,7 +373,7 @@ function luzes11()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
     let show = setTimeout("luzes12()", 120);
-}
+};
 
 function luzes10()
 {
@@ -331,7 +382,7 @@ function luzes10()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
     let show = setTimeout("luzes11()", 120);
-}
+};
 
 function luzes9()
 {
@@ -340,12 +391,12 @@ function luzes9()
     secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
     let show = setTimeout("luzes10()", 120);
-}
+};
 
 function abrirPagina(link, target)
 {
     window.open(link, target);
-}
+};
 
 function detectar_mobile()
 {
@@ -364,7 +415,7 @@ function detectar_mobile()
     {
         return false;
     }
-}
+};
 
 if (detectar_mobile())
 {
@@ -372,7 +423,7 @@ if (detectar_mobile())
 } else
 {
 
-}
+};
 
 /* COLORIDAS: 
 

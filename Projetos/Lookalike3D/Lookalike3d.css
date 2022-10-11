@@ -884,3 +884,7 @@ length, retorna a quantidade de classes naquele elemento.
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+.audios {
+    display: none;
+}
