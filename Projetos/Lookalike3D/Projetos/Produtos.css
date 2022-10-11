@@ -868,3 +868,7 @@ a {
     height: auto;
     border: 0px solid rgb(200, 200, 200);
 }
+
+.audios {
+    display: none;
+}

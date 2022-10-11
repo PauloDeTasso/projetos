@@ -22,6 +22,11 @@ var statusSistema = document.getElementById('statusSistema');
 var linkCompraAtual01;
 var linkCompraAtual02;
 var linkCompraAtual03;
+var linkCompraAtual04;
+
+var fx1 = document.getElementById('fx1');
+
+var fx2 = document.getElementById('fx2');
 
 var secaoItemsHome = document.getElementById('secaoItemsHome');
 var secaoItemsProducts = document.getElementById('secaoItemsProducts');
@@ -918,3 +923,34 @@ botaoPassarImagens02.addEventListener('click', () =>
     acaoBotaoImagensAtuaisGaleria('direita')
 }, false);
 */
+
+var numero = 0;
+
+var contadorOpacidade = 0;
+
+//fx1.play();
+
+function imagemAtual()
+{
+    /*
+        if (fx1.ended)
+        {
+            fx2.play();
+        }
+    */
+    if (numero < 10)
+    {
+        numero = numero + 1;
+        contadorOpacidade = Math.round(numero);
+        htmlPrincipal.style.opacity = contadorOpacidade / 10;
+        setTimeout(() =>
+        {
+            imagemAtual()
+        }, 300);
+    } else
+    {
+        //alert('Seja bem vindo!);
+    }
+}
+
+imagemAtual();
