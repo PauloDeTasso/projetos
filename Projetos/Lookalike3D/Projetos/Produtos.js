@@ -23,6 +23,7 @@ var linkCompraAtual01;
 var linkCompraAtual02;
 var linkCompraAtual03;
 var linkCompraAtual04;
+var linkCompraAtual05;
 
 var fx1 = document.getElementById('fx1');
 
@@ -69,11 +70,13 @@ var botaoComprar01 = document.getElementById('botaoComprar01');
 var botaoComprar02 = document.getElementById('botaoComprar02');
 var botaoComprar03 = document.getElementById('botaoComprar03');
 var botaoComprar04 = document.getElementById('botaoComprar04');
+var botaoComprar05 = document.getElementById('botaoComprar05');
 
 var imagemBotaoComprar01 = document.getElementById('imagemBotaoComprar01');
 var imagemBotaoComprar02 = document.getElementById('imagemBotaoComprar02');
 var imagemBotaoComprar03 = document.getElementById('imagemBotaoComprar03');
 var imagemBotaoComprar04 = document.getElementById('imagemBotaoComprar04');
+var imagemBotaoComprar05 = document.getElementById('imagemBotaoComprar05');
 
 var botaoComprar = document.getElementById('botaoComprar');
 
@@ -578,6 +581,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual04 = "https://blendermarket.com/products/modern-commode";
 
+            linkCompraAtual05 = "http://cbr.sh/lowa6j";
+
             break;
 
         case menuRack01:
@@ -611,6 +616,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969828";
 
             linkCompraAtual04 = "https://blendermarket.com/products/rack-retro";
+
+            linkCompraAtual05 = "http://cbr.sh/6fejjz";
 
             break;
 
@@ -646,6 +653,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual04 = "https://blendermarket.com/products/rack-bistro";
 
+            linkCompraAtual05 = "http://cbr.sh/gb0tmf";
+
             break;
 
         case menuCloset:
@@ -679,6 +688,8 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual03 = "https://www.turbosquid.com/FullPreview/1969849";
 
             linkCompraAtual04 = "https://blendermarket.com/products/clear-glass-wardrobe";
+
+            linkCompraAtual05 = "http://cbr.sh/jcbcue";
 
             break;
 
@@ -714,6 +725,8 @@ function imagensAtuaisGaleria(produto)
 
             linkCompraAtual04 = "https://blendermarket.com/products/exotic-coffee-table";
 
+            linkCompraAtual05 = "http://cbr.sh/z9x597";
+
             break;
 
         default:
@@ -744,6 +757,7 @@ function imagensAtuaisGaleria(produto)
             linkCompraAtual02 = "";
             linkCompraAtual03 = "";
             linkCompraAtual04 = "";
+            linkCompraAtual05 = "";
 
             break;
     }
