@@ -271,7 +271,7 @@ a:active {
 }
 
 .opacidade01 {
-    animation: Opacidade01 2s;
+    animation: Opacidade01 1s;
 }
 
 @keyframes Opacidade01 {

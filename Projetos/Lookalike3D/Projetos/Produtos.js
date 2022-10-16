@@ -549,8 +549,6 @@ function imagensAtuaisGaleria(produto)
     {
         case menuCommodes:
 
-            imagemDeFundo.classList.toggle('opacidade01');
-
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/01.png";
 
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/02.png";
@@ -587,8 +585,6 @@ function imagensAtuaisGaleria(produto)
 
         case menuRack01:
 
-            imagemDeFundo.classList.toggle('opacidade01');
-
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack001/01.png";
 
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/RACKS/Rack001/02.png";
@@ -622,8 +618,6 @@ function imagensAtuaisGaleria(produto)
             break;
 
         case menuRack02:
-
-            imagemDeFundo.classList.toggle('opacidade01');
 
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/RACKS/Rack002/01.png";
 
@@ -659,8 +653,6 @@ function imagensAtuaisGaleria(produto)
 
         case menuCloset:
 
-            imagemDeFundo.classList.toggle('opacidade01');
-
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/01.png";
 
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/GUARDA ROUPAS/GUARDAROUPA001/02.png";
@@ -695,8 +687,6 @@ function imagensAtuaisGaleria(produto)
 
         case menuCenterTable:
 
-            imagemDeFundo.classList.toggle('opacidade01');
-
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/01.png";
 
             imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/MESAS DE CENTRO/MESADECENTRO001/02.png";
@@ -730,8 +720,6 @@ function imagensAtuaisGaleria(produto)
             break;
 
         default:
-
-            imagemDeFundo.classList.toggle('opacidade01');
 
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/LOGO/LOGO04.png";
 
@@ -777,6 +765,8 @@ function imagensAtuaisGaleria(produto)
     imagemBotaoPassarImagens01.style.opacity = "1";
     imagemBotaoPassarImagens02.style.opacity = "1";
 
+    imagemDeFundo.classList.toggle('opacidade01');
+
 };
 
 function acaoBotaoImagensAtuaisGaleria(direcao)
@@ -785,27 +775,27 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
     {
         case 'esquerda':
 
-            imagemDeFundo.classList.toggle('opacidade01');
+            //imagemDeFundo.classList.toggle('opacidade01');
 
             if (arrayAtual <= 0)
             {
+                imagemBotaoPassarImagens01.style.visibility = "hidden";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
+
                 arrayAtual = 0;
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                imagemBotaoPassarImagens01.style.visibility = "hidden";
-                imagemBotaoPassarImagens02.style.visibility = "visible";
-
             } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
             {
+                imagemBotaoPassarImagens01.style.visibility = "visible";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
+
                 arrayAtual = imagensAtuaisGaleriaArray.length - 1;
 
                 --arrayAtual;
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
-
-                imagemBotaoPassarImagens01.style.visibility = "visible";
-                imagemBotaoPassarImagens02.style.visibility = "visible";
 
             } else
             {
@@ -828,27 +818,28 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
 
         case 'direita':
 
-            imagemDeFundo.classList.toggle('opacidade01');
+            //imagemDeFundo.classList.toggle('opacidade01');
 
             if (arrayAtual <= 0)
             {
+                imagemBotaoPassarImagens01.style.visibility = "visible";
+                imagemBotaoPassarImagens02.style.visibility = "visible";
+
                 arrayAtual = 0;
 
                 arrayAtual++;
 
                 imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
-                imagemBotaoPassarImagens01.style.visibility = "visible";
-                imagemBotaoPassarImagens02.style.visibility = "visible";
-
             } else if (arrayAtual >= imagensAtuaisGaleriaArray.length - 1)
             {
-                arrayAtual = imagensAtuaisGaleriaArray.length - 1;
-
-                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
                 imagemBotaoPassarImagens01.style.visibility = "visible";
                 imagemBotaoPassarImagens02.style.visibility = "hidden";
+
+                arrayAtual = imagensAtuaisGaleriaArray.length - 1;
+
+                imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
 
             } else
             {
@@ -874,12 +865,12 @@ function acaoBotaoImagensAtuaisGaleria(direcao)
             break;
     }
 
-    imagemDeFundo.style.animation = "none";
+    /*imagemDeFundo.style.animation = "none";
     setTimeout(function ()
     {
         imagemDeFundo.style.animation = "";
     }, 100);
-
+*/
 }
 
 function fecharCompra()
