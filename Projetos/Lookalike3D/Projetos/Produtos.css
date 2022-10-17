@@ -628,7 +628,7 @@ a {
     transition: all 2s;
 }
 
-#secaoMenuGaleria {
+.secoesMenuGaleria:first-child {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -638,6 +638,19 @@ a {
     padding: 0%;
     background-color: rgba(200, 200, 200);
     margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+.secoesMenuGaleria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    background-color: rgba(200, 200, 200);
+    margin-top: 0%;
     margin-bottom: 0%;
 }
 

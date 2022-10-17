@@ -104,6 +104,8 @@ var imagemFacebook = document.getElementById('imagemFacebook');
 
 var imagemTwitter = document.getElementById('imagemTwitter');
 
+var imagemBotaoGaleriaStoolHigh001 = document.getElementById('imagemBotaoGaleriaStoolHigh001');
+
 var imagemBotaoGaleriaComoda001 = document.getElementById('imagemBotaoGaleriaComoda001');
 
 var imagemBotaoGaleriaRack001 = document.getElementById('imagemBotaoGaleriaRack001');
@@ -116,6 +118,8 @@ var imagemBotaoGaleriaMesaDeCentro001 = document.getElementById('imagemBotaoGale
 
 
 var menuCommodes = document.getElementById('menuCommodes');
+
+var menuStoolHigh = document.getElementById('menuStoolHigh');
 
 var menuRack01 = document.getElementById('menuRack01');
 
@@ -547,6 +551,40 @@ function imagensAtuaisGaleria(produto)
 {
     switch (produto)
     {
+        case menuStoolHigh:
+
+            imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/STOOL HIGH/STOOLHIGH001/01.png";
+
+            imagensAtuaisGaleriaArray[ 1 ] = "../../../imagens/Projetos3d/STOOL HIGH/STOOLHIGH001/02.png";
+
+            imagensAtuaisGaleriaArray[ 2 ] = "../../../imagens/Projetos3d/STOOL HIGH/STOOLHIGH001/03.png";
+
+            imagensAtuaisGaleriaArray[ 3 ] = "../../../imagens/Projetos3d/STOOL HIGH/STOOLHIGH001/04.png";
+
+            imagensAtuaisGaleriaArray[ 4 ] = "../../../imagens/Projetos3d/STOOL HIGH/STOOLHIGH001/05.png";
+
+            //
+
+            arrayAtual = 0;
+
+            imagemDeFundo.src = imagensAtuaisGaleriaArray[ arrayAtual ];
+
+            //
+
+            produtoAtual = menuStoolHigh;
+
+            linkCompraAtual01 = "https://www.artstation.com/a/21126644";
+
+            linkCompraAtual02 = "https://www.cgtrader.com/3d-models/architectural/decoration/leather-stool-high-lux";
+
+            linkCompraAtual03 = "https://www.turbosquid.com/3d-models/3d-leather-stool-high-lux-1973774";
+
+            linkCompraAtual04 = "https://blendermarket.com/products/leather-stool-high---lux";
+
+            linkCompraAtual05 = "http://cbr.sh/jskh0f";
+
+            break;
+
         case menuCommodes:
 
             imagensAtuaisGaleriaArray[ 0 ] = "../../../imagens/Projetos3d/COMODAS/COMODA001/01.png";
@@ -877,6 +915,11 @@ function fecharCompra()
 {
     secaoBotaoComprar.style.visibility = "hidden";
 }
+
+imagemBotaoGaleriaStoolHigh001.addEventListener('click', () =>
+{
+    imagensAtuaisGaleria(menuStoolHigh)
+}, false);
 
 imagemBotaoGaleriaComoda001.addEventListener('click', () =>
 {
