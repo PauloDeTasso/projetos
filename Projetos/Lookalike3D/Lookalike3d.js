@@ -75,6 +75,8 @@ var imagemInstagram = document.getElementById('imagemInstagram');
 
 var imagemFacebook = document.getElementById('imagemFacebook');
 
+var imagemSkype = document.getElementById('imagemSkype');
+
 var imagemTwitter = document.getElementById('imagemTwitter');
 
 var titulosMenu = document.getElementsByClassName('titulosMenu');
