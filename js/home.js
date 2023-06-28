@@ -2719,6 +2719,9 @@ iconeJavascript.addEventListener("mouseout", mouseForaIconeJavascript, false);
 iconeJava.addEventListener("mouseover", mouseTocaIconeJava, false);
 iconeJava.addEventListener("mouseout", mouseForaIconeJava, false);
 
+iconePython.addEventListener("mouseover", mouseTocaIconePython, false);
+iconePython.addEventListener("mouseout", mouseForaIconePython, false);
+
 iconeMysql.addEventListener("mouseover", mouseTocaIconeMysql, false);
 iconeMysql.addEventListener("mouseout", mouseForaIconeMysql, false);
 
@@ -2769,6 +2772,18 @@ function mouseTocaIconeJava()
 function mouseForaIconeJava()
 {
     iconeJava.style.border = "3px solid rgba(106, 0, 255, 0.0)";
+}
+
+////
+
+function mouseTocaIconePython()
+{
+    iconePython.style.border = "3px solid rgba(0, 0, 255, 0.3)";
+}
+
+function mouseForaIconePython()
+{
+    iconePython.style.border = "3px solid rgba(106, 0, 255, 0.0)";
 }
 
 ////
