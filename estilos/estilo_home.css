@@ -1320,6 +1320,10 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid rgba(106, 0, 255, 0.0);
 }
 
+#iconePython {
+    border: 3px solid rgba(106, 0, 255, 0.0);
+}
+
 #iconeMysql {
     border: 3px solid rgba(106, 0, 255, 0.0);
 }

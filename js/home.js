@@ -1136,6 +1136,17 @@ function statusJavaOff()
 {
     nome.innerHTML = 'Hello! How can I help you!';
 }
+
+function statusPython()
+{
+    nome.innerHTML = 'Python!'.toUpperCase();
+}
+
+function statusPythonOff()
+{
+    nome.innerHTML = 'Hello! How can I help you!';
+}
+
 /**/
 
 function statusMysql()
