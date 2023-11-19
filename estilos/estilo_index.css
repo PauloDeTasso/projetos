@@ -127,6 +127,7 @@ body {
     height: auto;
     border: 0px solid rgb(255, 0, 212);
     cursor: pointer;
+    border-radius: 50px;
 }
 
 /**/
@@ -150,6 +151,7 @@ body {
     height: auto;
     border: 0px solid rgba(0, 255, 13, 1);
     cursor: pointer;
+    border-radius: 50px;
 }
 
 /**/

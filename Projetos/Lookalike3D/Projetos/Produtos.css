@@ -692,13 +692,15 @@ a {
     height: auto;
     padding: 0%;
     border: 0px solid rgb(104, 65, 65);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .imagensBotoesGaleria {
     width: 100%;
     height: auto;
     cursor: pointer;
-    border: 2px solid rgba(200, 200, 200, 1);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
 #secoesBotoesVoltarAvancar {
