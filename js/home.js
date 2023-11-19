@@ -1267,7 +1267,7 @@ function statusLinkedInOff()
 
 function statusTwitter()
 {
-    nome.innerHTML = 'Twitter!'.toUpperCase();
+    nome.innerHTML = 'X!'.toUpperCase();
 }
 
 function statusTwitterOff()
