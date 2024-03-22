@@ -1,103 +1,123 @@
 <!DOCTYPE html>
 <html id="html5" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
 
-    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="estilos/estilo_index.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo de Tasso</title>
 
-        <link rel="stylesheet" href="estilos/estilo_index.css" />
+    <link rel="icon" href="icones/STOPICON.png" type="image/gif" />
+  </head>
 
-        <title>Paulo de Tasso</title>
+  <header id="audios">
+    <audio autoplay id="somDoVento" class="audios" preload="auto">
+      <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg" />
+    </audio>
 
-        <link rel="icon" href="icones/STOPICON.png" type="image/gif">
+    <audio id="loop" class="audios" preload="auto" loop>
+      <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg" />
+    </audio>
 
-    </head>
+    <audio autoplay id="respiracao" class="audios" preload="auto" loop>
+      <source id="audioSource2" src="audios/repiração.ogg" type="audio/ogg" />
+    </audio>
 
-    <header id="audios">
+    <audio id="fx1" class="audios" preload="auto">
+      <source id="audioSource3" src="audios/fx1.ogg" type="audio/ogg" />
+    </audio>
 
-        <audio autoplay id='somDoVento' class="audios" preload="auto">
-            <source id="audioSource" src="audios/ventobaixo.ogg" type="audio/ogg">
-        </audio>
+    <audio id="fx2" class="audios" preload="auto">
+      <source id="audioSource4" src="audios/fx2.ogg" type="audio/ogg" />
+    </audio>
+  </header>
 
-        <audio id='loop' class="audios" preload="auto" loop>
-            <source id="audioSource2" src="audios/relaxing.ogg" type="audio/ogg">
-        </audio>
-
-        <audio autoplay id='respiracao' class="audios" preload="auto" loop>
-            <source id="audioSource2" src="audios/repiração.ogg" type="audio/ogg">
-        </audio>
-
-        <audio id='fx1' class="audios" preload="auto">
-            <source id="audioSource3" src="audios/fx1.ogg" type="audio/ogg">
-        </audio>
-
-        <audio id='fx2' class="audios" preload="auto">
-            <source id="audioSource4" src="audios/fx2.ogg" type="audio/ogg">
-        </audio>
-
-    </header>
-
-    <!-- 
+  <!-- 
     <section id="statusSistema">
 
     </section>
      -->
 
-    <body class="corpo">
+  <body class="corpo">
+    <!--  -->
+    <!--  -->
+    <!--  -->
 
+    <section id="secaoNorte">
+      <img
+        id="secaoNorteImagem"
+        src="imagens/luzes/preto.jpg"
+        alt="Cores Aleatorias"
+        width="70%"
+        height="10px"
+      />
+    </section>
+
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+
+    <section id="secaoCentro">
+      <!--  -->
+
+      <section id="secaoOeste">
+        <img
+          id="secaoOesteImagem"
+          src="imagens/luzes/preto.jpg"
+          alt="Cores Aleatorias"
+          width="10px"
+          height="70%"
+        />
+      </section>
+
+      <!--  -->
+
+      <section id="secaoPrincipal">
         <!--  -->
-        <!--  -->
-        <!--  -->
 
-        <section id="secaoNorte">
-
-            <img id="secaoNorteImagem" src="imagens/luzes/preto.jpg" alt="Cores Aleatorias" width="70%" height="10px">
-
+        <section id="secaoLookalike3d">
+          <img
+            id="imagemLookalike3d"
+            src="imagens/Projetos3d/LOGO/LOGO04.png"
+            alt=""
+            onmousemove="alterarImagem('Lookalike3d')"
+            onmouseleave="retornarImagem('Lookalike3d')"
+            onclick="goHome('Lookalike3d')"
+          />
         </section>
 
         <!--  -->
-        <!--  -->
+
+        <section id="secaoBDS">
+          <img
+            id="imagemLogoBDS"
+            src="Projetos/BDS/recursos/imagens/logos/Logo001-PNG.png"
+            alt=""
+            onclick="goHome('BDS')"
+          />
+          <span id="comentarioBDS">in construction...</span>
+        </section>
 
         <!--  -->
-        <!--  -->
 
-        <section id="secaoCentro">
+        <section id="secaoCwt">
+          <img
+            id="imagemStart"
+            src="imagens/start0.png"
+            alt="Paulo de Tasso - Go"
+            usemap="#login"
+            onmousemove="alterarImagem('Cwt')"
+            onmouseleave="retornarImagem('Cwt')"
+            onclick="goHome('Cwt')"
+          />
 
-            <!--  -->
-
-            <section id="secaoOeste">
-
-                <img id="secaoOesteImagem" src="imagens/luzes/preto.jpg" alt="Cores Aleatorias" width="10px"
-                    height="70%">
-
-            </section>
-
-            <!--  -->
-
-            <section id="secaoPrincipal">
-
-                <!--  -->
-
-                <section id="secaoLookalike3d">
-
-                    <img id="imagemLookalike3d" src="imagens/Projetos3d/LOGO/LOGO04.png" alt=""
-                        onmousemove="alterarImagem('Lookalike3d')" onmouseleave="retornarImagem('Lookalike3d')"
-                        onclick="goHome('Lookalike3d')">
-
-                </section>
-
-                <!--  -->
-
-                <section id="secaoCwt">
-
-                    <img id="imagemStart" src="imagens/start0.png" alt="Paulo de Tasso - Go" usemap="#login"
-                        onmousemove="alterarImagem('Cwt')" onmouseleave="retornarImagem('Cwt')" onclick="goHome('Cwt')">
-
-                    <!-- 
+          <!-- 
                          <map name="login">
 
                         <area id="areaImagem" onmousemove="alterarImagem()" onmouseout="retornarImagem()"
@@ -106,54 +126,54 @@
 
                        </map>
                          -->
-
-                </section>
-
-                <!--  -->
-
-            </section>
-
-            <!--  -->
-
-            <section id="secaoLeste">
-
-                <img id="secaoLesteImagem" src="imagens/luzes/preto.jpg" alt="Cores Aleatorias" width="10px"
-                    height="70%">
-
-            </section>
-
-            <!--  -->
-
         </section>
 
         <!--  -->
+      </section>
 
-        <section id="secaoSul">
+      <!--  -->
 
-            <img id="secaoSulImagem" src="imagens/luzes/preto.jpg" alt="Cores Aleatorias" width="70%" height="10px">
+      <section id="secaoLeste">
+        <img
+          id="secaoLesteImagem"
+          src="imagens/luzes/preto.jpg"
+          alt="Cores Aleatorias"
+          width="10px"
+          height="70%"
+        />
+      </section>
 
-        </section>
-
-        <!--  -->
-        <!--  -->
-        <!--  -->
-
-    </body>
-
-    <!--  -->
-
-    <div class="load">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
+      <!--  -->
+    </section>
 
     <!--  -->
 
-    <script src="js/index.js">
+    <section id="secaoSul">
+      <img
+        id="secaoSulImagem"
+        src="imagens/luzes/preto.jpg"
+        alt="Cores Aleatorias"
+        width="70%"
+        height="10px"
+      />
+    </section>
 
-    </script>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+  </body>
 
+  <!--  -->
+
+  <div class="load">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!--  -->
+
+  <script src="js/index.js"></script>
 </html>

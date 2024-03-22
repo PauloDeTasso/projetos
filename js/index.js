@@ -1,24 +1,24 @@
-var html5 = document.getElementById('html5')
+var html5 = document.getElementById("html5");
 
-var imagem = document.getElementById('imagemStart')
+var imagem = document.getElementById("imagemStart");
 
-var imagemLookalike3d = document.getElementById('imagemLookalike3d')
+var imagemLookalike3d = document.getElementById("imagemLookalike3d");
 
-var visitasdoSite = document.getElementById('visitasSite');
+var visitasdoSite = document.getElementById("visitasSite");
 
-var objetoEmMovimento = document.getElementById('objeto');
+var objetoEmMovimento = document.getElementById("objeto");
 
-var somVento = document.getElementById('somDoVento');
+var somVento = document.getElementById("somDoVento");
 
-var somLoop = document.getElementById('loop');
+var somLoop = document.getElementById("loop");
 
-var somRespiracao = document.getElementById('respiracao');
+var somRespiracao = document.getElementById("respiracao");
 
-var fx1 = document.getElementById('fx1');
+var fx1 = document.getElementById("fx1");
 
-var fx2 = document.getElementById('fx2');
+var fx2 = document.getElementById("fx2");
 
-var emojiNorte1 = document.getElementById('emojiNorte01');
+var emojiNorte1 = document.getElementById("emojiNorte01");
 
 var contador = 0;
 
@@ -28,193 +28,160 @@ var numeroAleatorioFraseInterno;
 
 var numeroEmojiAleatorio;
 
-var secaoNorteImagem = document.getElementById('secaoNorteImagem');
+var secaoNorteImagem = document.getElementById("secaoNorteImagem");
 
-var secaoSulImagem = document.getElementById('secaoSulImagem');
+var secaoSulImagem = document.getElementById("secaoSulImagem");
 
-var secaoLesteImagem = document.getElementById('secaoLesteImagem');
+var secaoLesteImagem = document.getElementById("secaoLesteImagem");
 
-var secaoOesteImagem = document.getElementById('secaoOesteImagem');
+var secaoOesteImagem = document.getElementById("secaoOesteImagem");
 
-var statusSistema = document.getElementById('statusSistema');
+var statusSistema = document.getElementById("statusSistema");
 
 /////////////////////////**/
 
 somVento.volume = 0.3;
 
-function objetoPlay()
-{
-    objetoEmMovimento.setAttribute()
+function objetoPlay() {
+  objetoEmMovimento.setAttribute();
 }
 
-function numeroAleatorioFrase(min, max)
-{
-    numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
+function numeroAleatorioFrase(min, max) {
+  numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
 }
 
-function alterarImagem(pagina)
-{
-    if (pagina == "Lookalike3d")
-    {
-        numeroAleatorioFrase(0, 9);
-        imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/ROLETA/0' + numeroAleatorioFraseInterno + '.png');
-        contador = 1;
-    } else if (pagina == "Cwt")
-    {
-        numeroAleatorioFrase(0, 20);
-        imagem.setAttribute('src', 'imagens/start' + numeroAleatorioFraseInterno + '.png');
-        contador = 1;
-    } else
-    {
+function alterarImagem(pagina) {
+  if (pagina == "Lookalike3d") {
+    numeroAleatorioFrase(0, 9);
+    imagemLookalike3d.setAttribute(
+      "src",
+      "imagens/Projetos3d/ROLETA/0" + numeroAleatorioFraseInterno + ".png"
+    );
+    contador = 1;
+  } else if (pagina == "Cwt") {
+    numeroAleatorioFrase(0, 20);
+    imagem.setAttribute(
+      "src",
+      "imagens/start" + numeroAleatorioFraseInterno + ".png"
+    );
+    contador = 1;
+  } else {
+  }
+}
 
-    }
-};
+function retornarImagem(pagina) {
+  if (pagina == "Lookalike3d") {
+    imagemLookalike3d.setAttribute("src", "imagens/Projetos3d/LOGO/LOGO04.png");
+  } else if (pagina == "Cwt") {
+    imagem.setAttribute("src", "imagens/start0.png");
+  } else {
+  }
+}
 
-function retornarImagem(pagina)
-{
-    if (pagina == "Lookalike3d")
-    {
-        imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/LOGO/LOGO04.png')
-    } else if (pagina == "Cwt")
-    {
-        imagem.setAttribute('src', 'imagens/start0.png')
-    } else
-    {
+function numeroEmojisAleatorio(min, max) {
+  numeroEmojiAleatorio = Math.floor(Math.random() * (max - min) + min);
+}
 
-    }
-};
+function emojiAleatorio() {
+  numeroEmojisAleatorio(1, 40);
+  emojiNorte1.setAttribute(
+    "src",
+    "../imagens/emojis/" + numeroEmojiAleatorio + ".png"
+  );
+}
 
-function numeroEmojisAleatorio(min, max)
-{
-    numeroEmojiAleatorio = Math.floor(Math.random() * (max - min) + min);
-};
-
-function emojiAleatorio()
-{
-    numeroEmojisAleatorio(1, 40);
-    emojiNorte1.setAttribute('src', '../imagens/emojis/' + numeroEmojiAleatorio + '.png');
-};
-
-function playUnico()
-{
-    if (contador == 0 || contador == undefined)
-    {
-        somVento.play();
-    } else
-    {
-
-    }
-};
+function playUnico() {
+  if (contador == 0 || contador == undefined) {
+    somVento.play();
+  } else {
+  }
+}
 
 var imagensGirou = false;
 var imagensGiroulLookalike = false;
 
 var contadorOpacidade = 1.9;
 
-function goHome(pagina)
-{
-    if (pagina == "Lookalike3d")
-    {
-        if (imagensGiroulLookalike)
-        {
-            abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
-        } else
-        {
-            girarImagens(pagina);
-        }
-
-        //abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
-
-    } else if (pagina == "Cwt")
-    {
-        if (imagensGirou)
-        {
-            window.location.href = "docs/Home.html";
-        } else
-        {
-            girarImagens(pagina);
-        }
-    } else
-    {
-        alert("Escolha um Site para entrar!")
+function goHome(pagina) {
+  if (pagina == "Lookalike3d") {
+    if (imagensGiroulLookalike) {
+      abrirPagina("Projetos/Lookalike3D/Lookalike3d.html", "_self");
+    } else {
+      girarImagens(pagina);
     }
-};
 
-function girarImagens(pagina)
-{
-    if (pagina == "Lookalike3d")
-    {
-        contador2 = 0;
-        setTimeout(() =>
-        {
-            imagemAtual(1, pagina)
-        }, 70);
-        fx1.play();
-
-    } else if (pagina == "Cwt")
-    {
-        contador2 = 0;
-        setTimeout(() =>
-        {
-            imagemAtual(1, pagina)
-        }, 70);
-        fx1.play();
-    } else
-    {
-
+    //abrirPagina('Projetos/Lookalike3D/Lookalike3d.html', '_self')
+  } else if (pagina == "Cwt") {
+    if (imagensGirou) {
+      window.location.href = "docs/Home.html";
+    } else {
+      girarImagens(pagina);
     }
-};
+  } else if (pagina == "BDS") {
+    window.location.href = "Projetos/BDS/index.html";
+  } else {
+    alert("Escolha um Site para entrar!");
+  }
+}
 
-function imagemAtual(contador2, pagina)
-{
-    if (pagina == "Lookalike3d")
-    {
-        if (contador2 >= 20)
-        {
-            imagensGiroulLookalike = true;
-            goHome(pagina);
-        } else
-        {
-            contadorOpacidade = contadorOpacidade - 0.1;
+function girarImagens(pagina) {
+  if (pagina == "Lookalike3d") {
+    contador2 = 0;
+    setTimeout(() => {
+      imagemAtual(1, pagina);
+    }, 70);
+    fx1.play();
+  } else if (pagina == "Cwt") {
+    contador2 = 0;
+    setTimeout(() => {
+      imagemAtual(1, pagina);
+    }, 70);
+    fx1.play();
+  } else {
+  }
+}
 
-            contador2++;
+function imagemAtual(contador2, pagina) {
+  if (pagina == "Lookalike3d") {
+    if (contador2 >= 20) {
+      imagensGiroulLookalike = true;
+      goHome(pagina);
+    } else {
+      contadorOpacidade = contadorOpacidade - 0.1;
 
-            imagemLookalike3d.setAttribute('src', 'imagens/Projetos3d/ROLETA/0' + contador2 + '.png');
+      contador2++;
 
-            html5.style.opacity = contadorOpacidade;
+      imagemLookalike3d.setAttribute(
+        "src",
+        "imagens/Projetos3d/ROLETA/0" + contador2 + ".png"
+      );
 
-            setTimeout(() =>
-            {
-                imagemAtual(contador2, pagina);
-            }, 70);
-        }
+      html5.style.opacity = contadorOpacidade;
 
-    } else if (pagina == "Cwt")
-    {
-        if (contador2 >= 19)
-        {
-            imagensGirou = true;
-            goHome('Cwt');
-        } else
-        {
-            contadorOpacidade = contadorOpacidade - 0.1;
-
-            contador2++;
-
-            imagem.setAttribute('src', 'imagens/start' + contador2 + '.png');
-
-            html5.style.opacity = contadorOpacidade;
-
-            setTimeout(() =>
-            {
-                imagemAtual(contador2, pagina);
-            }, 70);
-        }
-    } else
-    {
-
+      setTimeout(() => {
+        imagemAtual(contador2, pagina);
+      }, 70);
     }
-};
+  } else if (pagina == "Cwt") {
+    if (contador2 >= 19) {
+      imagensGirou = true;
+      goHome("Cwt");
+    } else {
+      contadorOpacidade = contadorOpacidade - 0.1;
+
+      contador2++;
+
+      imagem.setAttribute("src", "imagens/start" + contador2 + ".png");
+
+      html5.style.opacity = contadorOpacidade;
+
+      setTimeout(() => {
+        imagemAtual(contador2, pagina);
+      }, 70);
+    }
+  } else {
+  }
+}
 
 /* SE BARRA DE PROGRESSO = 100 ENTÃO: 
 
@@ -240,190 +207,165 @@ function somTerminou()
 
 luzes();
 
-function luzes()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/0.jpg');
-    let show = setTimeout("luzes1()", 120);
-};
+function luzes() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/0.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/0.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/0.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/0.jpg");
+  let show = setTimeout("luzes1()", 120);
+}
 
-function luzes1()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    let show = setTimeout("luzes2()", 120);
-};
+function luzes1() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  let show = setTimeout("luzes2()", 120);
+}
 
-function luzes2()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    let show = setTimeout("luzes3()", 120);
-};
+function luzes2() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  let show = setTimeout("luzes3()", 120);
+}
 
-function luzes3()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    let show = setTimeout("luzes4()", 120);
-};
+function luzes3() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  let show = setTimeout("luzes4()", 120);
+}
 
-function luzes4()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    let show = setTimeout("luzes5()", 120);
-};
+function luzes4() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  let show = setTimeout("luzes5()", 120);
+}
 
-function luzes5()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    let show = setTimeout("luzes6()", 120);
-};
+function luzes5() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  let show = setTimeout("luzes6()", 120);
+}
 
-function luzes6()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    let show = setTimeout("luzes7()", 120);
-};
+function luzes6() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  let show = setTimeout("luzes7()", 120);
+}
 
-function luzes7()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    let show = setTimeout("luzes8()", 120);
-};
+function luzes7() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  let show = setTimeout("luzes8()", 120);
+}
 
-function luzes8()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    let show = setTimeout("luzes9()", 120);
-};
+function luzes8() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  let show = setTimeout("luzes9()", 120);
+}
 
-function luzes16()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/1.jpg');
-    let show = setTimeout("luzes1()", 120);
-};
+function luzes16() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/1.jpg");
+  let show = setTimeout("luzes1()", 120);
+}
 
-function luzes15()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/2.jpg');
-    let show = setTimeout("luzes16()", 120);
-};
+function luzes15() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/2.jpg");
+  let show = setTimeout("luzes16()", 120);
+}
 
-function luzes14()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/3.jpg');
-    let show = setTimeout("luzes15()", 120);
-};
+function luzes14() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/3.jpg");
+  let show = setTimeout("luzes15()", 120);
+}
 
-function luzes13()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/4.jpg');
-    let show = setTimeout("luzes14()", 120);
-};
+function luzes13() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/4.jpg");
+  let show = setTimeout("luzes14()", 120);
+}
 
-function luzes12()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/5.jpg');
-    let show = setTimeout("luzes13()", 120);
-};
+function luzes12() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/5.jpg");
+  let show = setTimeout("luzes13()", 120);
+}
 
-function luzes11()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/6.jpg');
-    let show = setTimeout("luzes12()", 120);
-};
+function luzes11() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/6.jpg");
+  let show = setTimeout("luzes12()", 120);
+}
 
-function luzes10()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/7.jpg');
-    let show = setTimeout("luzes11()", 120);
-};
+function luzes10() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/7.jpg");
+  let show = setTimeout("luzes11()", 120);
+}
 
-function luzes9()
-{
-    secaoNorteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoSulImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoLesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    secaoOesteImagem.setAttribute('src', 'imagens/luzes/preto e branco/8.jpg');
-    let show = setTimeout("luzes10()", 120);
-};
+function luzes9() {
+  secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoSulImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoLesteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  secaoOesteImagem.setAttribute("src", "imagens/luzes/preto e branco/8.jpg");
+  let show = setTimeout("luzes10()", 120);
+}
 
-function abrirPagina(link, target)
-{
-    window.open(link, target);
-};
+function abrirPagina(link, target) {
+  window.open(link, target);
+}
 
-function detectar_mobile()
-{
-    if (navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)
-    )
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-};
+function detectar_mobile() {
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-if (detectar_mobile())
-{
-
-} else
-{
-
-};
+if (detectar_mobile()) {
+} else {
+}
 
 /* COLORIDAS: 
 
