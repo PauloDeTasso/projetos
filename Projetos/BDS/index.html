@@ -1,85 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Inicial</title>
-    <link
-      rel="stylesheet"
-      href="css/index/mobileMax768.css"
-      media="screen and (max-width: 768px)"
-    />
-    <link
-      rel="stylesheet"
-      href="css/index/pcMin769.css"
-      media="screen and (min-width: 769px)"
-    />
+    <link rel="stylesheet" href="css/index/mobileMax768.css" media="screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="css/index/pcMin769.css" media="screen and (min-width: 769px)" />
   </head>
 
   <body>
     <!-------------------------CABEÇALHO---------------------------->
 
     <header>
-      <section class="menu">
-        <nav>
-          <div>01</div>
-          <div>02</div>
-          <div>03</div>
-        </nav>
+      <section class="secaoHamburguerMenu">
+        <div class="hamburguerMenu"></div>
       </section>
-
-      <section class="logoPng001"></section>
-      <section class="iconeCarrinho"></section>
-      <section class="itensCarrinho">0</section>
     </header>
 
     <!-------------------------MENU LATERAL---------------------------->
 
     <aside class="menuLateral" id="menuLateral">
       <input type="search" name="pesquisa" placeholder="Pesquisar..." />
-
+      <button id="btnPesquisar">Pesquisar</button>
       <ul>
-        <li>TODOS OS PRODUTOS</li>
+        <hr>
+        <li><a href="#" onclick="enviarRequisicao('todos')">TODOS OS PRODUTOS</a></li>
+        <hr>
+        <li><a href="#" onclick="enviarRequisicao('tshirt')">T-SHIRT</a></li>
+        <li><a href="#" onclick="enviarRequisicao('cropped')">CROPPED</a></li>
+        <li><a href="#" onclick="enviarRequisicao('blusas')">BLUSAS</a></li>
+        <li><a href="#" onclick="enviarRequisicao('vestidos')">VESTIDOS</a></li>
+        <li class="parent-item">
+          <a href="#">SAIAS:</a>
+          <ul class="subitems">
+            <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
+          </ul>
+        </li>
+        <li class="parent-item">
+          <a href="#">SHORT'S:</a>
+          <ul class="subitems">
+            <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
+          </ul>
+        </li>
+        <li class="parent-item">
+          <a href="#">CALÇAS:</a>
+          <ul class="subitems">
+            <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="enviarRequisicao('conjuntos')">CONJUNTOS</a></li>
+        <hr>
+        <li><a href="#" onclick="enviarRequisicao('minhaconta')">MINHA CONTA</a></li>
+        <li><a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a></li>
 
-        <li>T-SHIRT</li>
-
-        <li>CROPPED</li>
-
-        <li>BLUSAS</li>
-
-        <li>VESTIDOS</li>
-
-        <li>SAIAS</li>
-
-        <li>JEANS</li>
-
-        <li>TECIDO</li>
-
-        <li>SHORT</li>
-
-        <li>JEANS</li>
-
-        <li>TECIDO</li>
-
-        <li>CALÇAS</li>
-
-        <li>JEANS</li>
-
-        <li>TECIDO</li>
-
-        <li>CONJUNTOS</li>
-
-        <li>SOBRE NÓS</li>
-
-        <li>MINHA CONTA</li>
       </ul>
     </aside>
+
+    <!----------------------TELA OCULTA PARA CAPTAÇÃO DE CLICK------------------------------->
+
+    <div class="overlay" id="overlay"></div>
 
     <!----------------------------------------------------->
 
     <main class="main">
-      <!-------------------------CARROSSEL---------------------------->
+
+
+      <!------------------------LOGO E CARRINHO---------------------------->
+
       <section class="secaoCarrossel">
+        <section class="logoPng001"></section>
+        <section class="iconeCarrinho"></section>
+        <section class="itensCarrinho">0</section>
+
+        <!-------------------------CARROSSEL---------------------------->
+
+
         <div class="carousel">
           <button class="prev">&lt;</button>
           <div class="slides">
@@ -99,7 +98,7 @@
       <section class="servicos">
         <div class="subServicos">
           <div class="cc"></div>
-          <p>Parcele no Cartão de Crédito!</p>
+          <p>Parcele no<br> Cartão de Crédito!</p>
         </div>
 
         <div class="subServicos">
@@ -110,8 +109,8 @@
         <div class="subServicos">
           <div class="entrega"></div>
           <p>
-            Entrega em 24h para<br />
-            Santa Terezinha - PE e<br />Imaculada - PB
+            Entrega em 24h
+            Santa Terezinha-PE<br>Imaculada-PB
           </p>
         </div>
       </section>
@@ -136,44 +135,19 @@
             <p>VESTIDOS</p>
           </div>
 
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
+          <div class="saias">
+            <div class="imagemSaias"></div>
+            <p>SAIAS</p>
           </div>
 
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
+          <div class="calcas">
+            <div class="imagemCalcas"></div>
+            <p>CALÇAS</p>
           </div>
 
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
-          </div>
-
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
-          </div>
-
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
-          </div>
-
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
-          </div>
-
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
-          </div>
-
-          <div class="tshirts">
-            <div class="imagemTshirt"></div>
-            <p>tshirts</p>
+          <div class="conjuntos">
+            <div class="imagemConjuntos"></div>
+            <p>CONJUNTOS</p>
           </div>
         </div>
 
@@ -224,7 +198,7 @@
     <!-------------------------MAIS INFORMAÇÕES---------------------------->
 
     <section class="maisInformacoes">
-      <div>
+      <div class="listaInformacoes">
         <h4>MAIS INFORMAÇÕES:</h4>
         <hr />
         <span>Minha conta</span>
@@ -247,6 +221,7 @@
         <span>FORMAS DE PAGAMENTO:</span>
         <div class="imagemFormasDePagamento"></div>
       </div>
+
       <!-------------------------SELO---------------------------->
 
       <div class="imagemSelo"></div>
@@ -263,4 +238,5 @@
 
     <script src="js/index.js"></script>
   </body>
+
 </html>
