@@ -56,6 +56,7 @@ const btnPesquisar = document.getElementById("btnPesquisar");
 // Adicione um evento de clique ao botão
 btnPesquisar.addEventListener("click", () => {
   alert(searchInput.value);
+  searchInput.value = "";
 
   /*
   // Pegue o valor digitado no campo de pesquisa
