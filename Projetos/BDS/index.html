@@ -21,42 +21,55 @@
     <!-------------------------MENU LATERAL---------------------------->
 
     <aside class="menuLateral" id="menuLateral">
-      <input type="search" name="pesquisa" placeholder="Pesquisar..." />
-      <button id="btnPesquisar">Pesquisar</button>
+      <div class="secaoBotaoPesquisar">
+        <input type="search" name="pesquisa" placeholder="Pesquisar..." />
+        <button id="btnPesquisar">Ir</button>
+      </div>
       <ul>
         <hr>
         <li><a href="#" onclick="enviarRequisicao('todos')">TODOS OS PRODUTOS</a></li>
         <hr>
         <li><a href="#" onclick="enviarRequisicao('tshirt')">T-SHIRT</a></li>
+        <hr>
         <li><a href="#" onclick="enviarRequisicao('cropped')">CROPPED</a></li>
+        <hr>
         <li><a href="#" onclick="enviarRequisicao('blusas')">BLUSAS</a></li>
+        <hr>
         <li><a href="#" onclick="enviarRequisicao('vestidos')">VESTIDOS</a></li>
+        <hr>
         <li class="parent-item">
           <a href="#">SAIAS:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <hr>
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
+        <hr>
         <li class="parent-item">
           <a href="#">SHORT'S:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <hr>
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
+        <hr>
         <li class="parent-item">
           <a href="#">CALÇAS:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
+            <hr>
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
+        <hr>
         <li><a href="#" onclick="enviarRequisicao('conjuntos')">CONJUNTOS</a></li>
         <hr>
         <li><a href="#" onclick="enviarRequisicao('minhaconta')">MINHA CONTA</a></li>
+        <hr>
         <li><a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a></li>
-
+        <hr>
       </ul>
     </aside>
 
@@ -89,6 +102,9 @@
           </div>
           <button class="next">&gt;</button>
         </div>
+
+        <!----------------------------------------------------->
+
       </section>
 
       <hr />
@@ -235,6 +251,15 @@
         <div class="imagemMarca"></div>
       </div>
     </footer>
+
+    <!-------------------------BOTAO WHATSAPP---------------------------->
+
+    <div id="whatsapp-button">
+      <div id="whatsapp-tooltip">CHAME PELO WHATSAPP</div>
+
+    </div>
+
+    <!-------------------------FINAL---------------------------->
 
     <script src="js/index.js"></script>
   </body>
