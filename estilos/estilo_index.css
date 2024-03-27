@@ -96,87 +96,179 @@ body {
 
 /**/
 
-#secaoPrincipal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 94%;
-  height: 100%;
-  border: 0px solid rgb(255, 255, 255);
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  /* Estilos para telas menores ou iguais a 600px de largura, típico de dispositivos móveis */
+
+  #secaoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 90%;
+    border: 0px solid rgb(255, 255, 255);
+  }
+
+  #secaoLookalike3d,
+  #secaoBDS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 57%;
+    height: 100%;
+    border: 0px solid rgba(183, 0, 255, 1);
+    margin-bottom: 30px;
+  }
+
+  #comentarioBDS {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(77, 77, 77);
+    border-radius: 30px;
+    padding: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: small;
+  }
+
+  #imagemLookalike3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 0px solid rgb(255, 0, 212);
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  #imagemLogoBDS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(255, 0, 212);
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /**/
+
+  #secaoCwt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 57%;
+    height: 100%;
+    border: 0px solid rgb(0, 255, 213, 1);
+    margin-bottom: 20px;
+  }
+
+  #imagemStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 0px solid rgba(0, 255, 13, 1);
+    cursor: pointer;
+    border-radius: 30px;
+  }
 }
 
 /**/
 
-#secaoLookalike3d,
-#secaoBDS {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 0px solid rgba(183, 0, 255, 1);
+/* Estilos para desktops */
+@media only screen and (min-width: 601px) {
+  /* Estilos para telas maiores que 600px de largura, típico de desktops */
+
+  #secaoPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 90%;
+    border: 0px solid rgb(255, 255, 255);
+  }
+
+  #secaoLookalike3d,
+  #secaoBDS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    border: 0px solid rgba(183, 0, 255, 1);
+    margin-bottom: 30px;
+  }
+
+  #comentarioBDS {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(77, 77, 77);
+    border-radius: 30px;
+    padding: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: small;
+  }
+
+  #imagemLookalike3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    border: 0px solid rgb(255, 0, 212);
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  #imagemLogoBDS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    border: 1px solid rgb(255, 0, 212);
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /**/
+
+  #secaoCwt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    border: 0px solid rgb(0, 255, 213, 1);
+    margin-bottom: 20px;
+  }
+
+  #imagemStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    border: 0px solid rgba(0, 255, 13, 1);
+    cursor: pointer;
+    border-radius: 30px;
+  }
 }
-
-#comentarioBDS {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgb(77, 77, 77);
-  border-radius: 30px;
-  padding: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: small;
-}
-
-#imagemLookalike3d {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: auto;
-  border: 0px solid rgb(255, 0, 212);
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-#imagemLogoBDS {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: auto;
-  border: 0px solid rgb(255, 0, 212);
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-/**/
-
-#secaoCwt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 0px solid rgb(0, 255, 213, 1);
-}
-
-#imagemStart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: auto;
-  border: 0px solid rgba(0, 255, 13, 1);
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-/**/
 
 #secaoSul {
   display: flex;

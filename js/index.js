@@ -50,7 +50,7 @@ function numeroAleatorioFrase(min, max) {
   numeroAleatorioFraseInterno = Math.floor(Math.random() * (max - min) + min);
 }
 
-function alterarImagem(pagina) {
+function alterarImagem(pagina, elemento, cor) {
   if (pagina == "Lookalike3d") {
     numeroAleatorioFrase(0, 9);
     imagemLookalike3d.setAttribute(
@@ -65,6 +65,8 @@ function alterarImagem(pagina) {
       "imagens/start" + numeroAleatorioFraseInterno + ".png"
     );
     contador = 1;
+  } else if (pagina == "BDS") {
+    elemento.style.borderColor = cor;
   } else {
   }
 }
@@ -118,7 +120,10 @@ function goHome(pagina) {
       girarImagens(pagina);
     }
   } else if (pagina == "BDS") {
-    window.location.href = "Projetos/BDS/index.html";
+    fx1.play();
+    setTimeout(() => {
+      window.location.href = "Projetos/BDS/index.html";
+    }, 1800);
   } else {
     alert("Escolha um Site para entrar!");
   }
