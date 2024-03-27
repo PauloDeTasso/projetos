@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="css/index/mobileMax768.css" media="screen and (max-width: 768px)" />
-    <link rel="stylesheet" href="css/index/pcMin769.css" media="screen and (min-width: 769px)" />
+    <link
+      rel="stylesheet"
+      href="css/index/mobileMax768.css"
+      media="screen and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/index/pcMin769.css"
+      media="screen and (min-width: 769px)"
+    />
   </head>
 
   <body>
-    <!-------------------------CABEÇALHO---------------------------->
-
-    <header>
-      <section class="secaoHamburguerMenu">
-        <div class="hamburguerMenu"></div>
-      </section>
-    </header>
-
     <!-------------------------MENU LATERAL---------------------------->
 
     <aside class="menuLateral" id="menuLateral">
@@ -26,50 +25,58 @@
         <button id="btnPesquisar">Ir</button>
       </div>
       <ul>
-        <hr>
-        <li><a href="#" onclick="enviarRequisicao('todos')">TODOS OS PRODUTOS</a></li>
-        <hr>
+        <hr />
+        <li>
+          <a href="#" onclick="enviarRequisicao('todos')">TODOS OS PRODUTOS</a>
+        </li>
+        <hr />
         <li><a href="#" onclick="enviarRequisicao('tshirt')">T-SHIRT</a></li>
-        <hr>
+        <hr />
         <li><a href="#" onclick="enviarRequisicao('cropped')">CROPPED</a></li>
-        <hr>
+        <hr />
         <li><a href="#" onclick="enviarRequisicao('blusas')">BLUSAS</a></li>
-        <hr>
+        <hr />
         <li><a href="#" onclick="enviarRequisicao('vestidos')">VESTIDOS</a></li>
-        <hr>
+        <hr />
         <li class="parent-item">
           <a href="#">SAIAS:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
-            <hr>
+            <hr />
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
-        <hr>
+        <hr />
         <li class="parent-item">
           <a href="#">SHORT'S:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
-            <hr>
+            <hr />
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
-        <hr>
+        <hr />
         <li class="parent-item">
           <a href="#">CALÇAS:</a>
           <ul class="subitems">
             <li><a href="#" onclick="enviarRequisicao('jeans')">JEANS</a></li>
-            <hr>
+            <hr />
             <li><a href="#" onclick="enviarRequisicao('tecido')">TECIDO</a></li>
           </ul>
         </li>
-        <hr>
-        <li><a href="#" onclick="enviarRequisicao('conjuntos')">CONJUNTOS</a></li>
-        <hr>
-        <li><a href="#" onclick="enviarRequisicao('minhaconta')">MINHA CONTA</a></li>
-        <hr>
-        <li><a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a></li>
-        <hr>
+        <hr />
+        <li>
+          <a href="#" onclick="enviarRequisicao('conjuntos')">CONJUNTOS</a>
+        </li>
+        <hr />
+        <li>
+          <a href="#" onclick="enviarRequisicao('minhaconta')">MINHA CONTA</a>
+        </li>
+        <hr />
+        <li>
+          <a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a>
+        </li>
+        <hr />
       </ul>
     </aside>
 
@@ -77,26 +84,28 @@
 
     <div class="overlay" id="overlay"></div>
 
-    <!----------------------------------------------------->
-
     <main class="main">
-
       <!-------------------------CARROSSEL---------------------------->
 
+      <!-------------------------CABEÇALHO---------------------------->
+
+      <!------------------------HAMBURGUER, LOGO E CARRINHO---------------------------->
+
+      <section class="cabecalho">
+        <section class="secaoHamburguerMenu">
+          <div class="hamburguerMenu"></div>
+        </section>
+        <div class="logoPng001"></div>
+        <div class="iconeCarrinho"></div>
+        <div class="itensCarrinho">0</div>
+      </section>
+
+      <!----------------------------------------------------->
+
       <section class="secaoCarrossel">
-
         <div class="carousel">
-
-          <!------------------------LOGO E CARRINHO---------------------------->
-
-          <section class="logoPng001"></section>
-          <section class="iconeCarrinho"></section>
-          <section class="itensCarrinho">0</section>
-
-          <!-------------------------CARROSSEL CONTINUAÇÃO---------------------------->
           <button class="prev">&lt;</button>
           <div class="slides">
-
             <div class="slide"></div>
             <div class="slide"></div>
             <div class="slide"></div>
@@ -104,7 +113,6 @@
           </div>
           <button class="next">&gt;</button>
         </div>
-
       </section>
 
       <hr />
@@ -114,7 +122,10 @@
       <section class="servicos">
         <div class="subServicos">
           <div class="cc"></div>
-          <p>Parcele no<br> Cartão de Crédito!</p>
+          <p>
+            Parcele no<br />
+            Cartão de Crédito!
+          </p>
         </div>
 
         <div class="subServicos">
@@ -124,10 +135,7 @@
 
         <div class="subServicos">
           <div class="entrega"></div>
-          <p>
-            Entrega em 24h
-            Santa Terezinha-PE<br>Imaculada-PB
-          </p>
+          <p>Entrega em 24h Santa Terezinha-PE<br />Imaculada-PB</p>
         </div>
       </section>
 
@@ -256,12 +264,10 @@
 
     <div id="whatsapp-button">
       <div id="whatsapp-tooltip">CHAME PELO WHATSAPP</div>
-
     </div>
 
     <!-------------------------FINAL---------------------------->
 
     <script src="js/index.js"></script>
   </body>
-
 </html>
