@@ -216,6 +216,97 @@ carousel.addEventListener("touchmove", (event) => {
   slides.style.transform = `translateX(${-counter * 100 + walk}px)`;
 });
 
+/********************************************/
+/*AVANÇO AUTOMATICO DO CARROSSEL*/
+
+// Função para avançar para o próximo slide
+function nextSlide() {
+  if (counter < slideCount - 1) {
+    counter++;
+  } else {
+    counter = 0; // Volta para o primeiro slide
+  }
+  slides.style.transform = `translateX(${-counter * 100}%)`;
+  // Reiniciar o temporizador após cada avanço de slide
+  clearInterval(autoAdvanceTimer); // Limpa o temporizador anterior
+  startAutoAdvance(); // Inicia o temporizador novamente
+}
+
+// Variável para armazenar o temporizador do auto-avanço
+let autoAdvanceTimer;
+
+// Função para iniciar o temporizador do auto-avanço
+function startAutoAdvance() {
+  autoAdvanceTimer = setInterval(nextSlide, 7000); // Avança para o próximo slide a cada 10 segundos
+}
+
+// Função para parar o temporizador do auto-avanço
+function stopAutoAdvance() {
+  clearInterval(autoAdvanceTimer);
+}
+
+// Função para verificar se o carrossel está visível na tela
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Função para verificar se o carrossel está visível e iniciar ou parar o auto-avanço
+function checkCarouselVisibility() {
+  const carouselElement = document.querySelector(".carousel");
+  if (isElementInViewport(carouselElement)) {
+    startAutoAdvance();
+  } else {
+    stopAutoAdvance();
+  }
+}
+
+// Verificar a visibilidade do carrossel ao carregar a página
+window.addEventListener("load", checkCarouselVisibility);
+
+// Verificar a visibilidade do carrossel ao rolar a página
+window.addEventListener("scroll", checkCarouselVisibility);
+
+const slidesContainer = document.querySelector(".slides");
+let touchStartX = 0;
+let touchEndX = 0;
+let touchTimer;
+
+slidesContainer.addEventListener("touchstart", handleTouchStart);
+slidesContainer.addEventListener("touchmove", handleTouchMove);
+slidesContainer.addEventListener("touchend", handleTouchEnd);
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+  stopAutoAdvance(); // Pausar o auto-avanço quando o usuário toca no slide
+}
+
+function handleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+  clearTimeout(touchTimer); // Limpar o temporizador para evitar acionamento acidental
+}
+
+function handleTouchEnd() {
+  const distance = touchEndX - touchStartX;
+  if (Math.abs(distance) > 50) {
+    if (distance > 0) {
+      // Deslize para a direita
+      prevSlide();
+    } else {
+      // Deslize para a esquerda
+      nextSlide();
+    }
+  }
+  // Reiniciar o auto-avanço após 1 segundo de inatividade
+  touchTimer = setTimeout(startAutoAdvance, 7000);
+}
+
 /*
 const carousel = document.querySelector(".carousel");
 const slides = document.querySelector(".slides");

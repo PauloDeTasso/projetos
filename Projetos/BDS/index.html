@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Inicial</title>
-    <link
-      rel="stylesheet"
-      href="css/index/mobileMax768.css"
-      media="screen and (max-width: 768px)"
-    />
-    <link
-      rel="stylesheet"
-      href="css/index/pcMin769.css"
-      media="screen and (min-width: 769px)"
-    />
+    <link rel="stylesheet" href="css/index/mobileMax768.css" media="screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="css/index/pcMin769.css" media="screen and (min-width: 769px)" />
   </head>
 
   <body>
@@ -74,7 +67,7 @@
         </li>
         <hr />
         <li>
-          <a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a>
+          <a href="php/mains/todos_os_produtos.php">SOBRE NÓS</a>
         </li>
         <hr />
       </ul>
@@ -84,12 +77,13 @@
 
     <div class="overlay" id="overlay"></div>
 
-    <main class="main">
-      <!-------------------------CARROSSEL---------------------------->
 
-      <!-------------------------CABEÇALHO---------------------------->
+    <!----------------------------------------------------->
+    <!----------------------------------------------------->
 
-      <!------------------------HAMBURGUER, LOGO E CARRINHO---------------------------->
+    <!------------------------HAMBURGUER, LOGO E CARRINHO---------------------------->
+
+    <section class="main">
 
       <section class="cabecalho">
         <section class="secaoHamburguerMenu">
@@ -102,6 +96,7 @@
 
       <!----------------------------------------------------->
 
+      <!-------------------------CARROSSEL---------------------------->
       <section class="secaoCarrossel">
         <div class="carousel">
           <button class="prev">&lt;</button>
@@ -116,6 +111,14 @@
       </section>
 
       <hr />
+
+
+      <!----------------------------------------------------->
+      <!----------------------------------------------------->
+
+    </section>
+
+    <section class="secaoFooter">
 
       <!-------------------------SERVIÇOS---------------------------->
 
@@ -198,7 +201,7 @@
       <!-------------------------COMENTARIOS E AVALIAÇÕES---------------------------->
 
       <section class="avaliacoes">COMENTÁRIOS E AVALIAÇÕES</section>
-    </main>
+    </section>
 
     <hr />
 
@@ -270,4 +273,5 @@
 
     <script src="js/index.js"></script>
   </body>
+
 </html>
