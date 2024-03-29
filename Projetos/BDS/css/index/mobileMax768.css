@@ -122,7 +122,7 @@ body {
 }
 
 .menuLateral ul li {
-  margin: 10px 0; /* Espaçamento entre os itens do menu */
+  margin: 0px 0; /* Espaçamento entre os itens do menu */
 }
 
 .menuLateral .parent-item > a {
@@ -135,20 +135,20 @@ body {
 }
 
 .menuLateral ul ul li {
-  margin: 5px 0; /* Espaçamento entre os subitens */
+  margin: 0px 0; /* Espaçamento entre os subitens */
 }
 
 .menuLateral ul ul li:first-child {
-  margin-top: 8px; /* Ajusta o espaçamento superior do primeiro subitem */
+  margin-top: 0px; /* Ajusta o espaçamento superior do primeiro subitem */
 }
 
 .menuLateral ul ul li:last-child {
-  margin-bottom: 8px; /* Ajusta o espaçamento inferior do último subitem */
+  margin-bottom: 0px; /* Ajusta o espaçamento inferior do último subitem */
 }
 
 .menuLateral .parent-item > a::before {
-  content: "+"; /* Adiciona um sinal de "+" antes do texto do item do menu principal */
-  margin-right: 6px; /* Espaçamento entre o sinal "+" e o texto do item */
+  content: ""; /* Adiciona um sinal de "+" antes do texto do item do menu principal */
+  margin-right: 0px; /* Espaçamento entre o sinal "+" e o texto do item */
 }
 
 /*********************************************************/

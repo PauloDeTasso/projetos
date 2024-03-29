@@ -68,7 +68,7 @@
                 </li>
                 <hr />
                 <li>
-                    <a href="#" onclick="enviarRequisicao('sobrenos')">SOBRE NÓS</a>
+                    <a href="php/mains/todos_os_produtos.php">SOBRE NÓS</a>
                 </li>
                 <hr />
             </ul>

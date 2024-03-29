@@ -6,11 +6,15 @@
 ?>
 
 <!-- CONTEUDO DESSA PAGINA ABAIXO: -->
+<section class="main">
 
-<section class="secaoConteudoPrincipal">
-    BORA TASSO!
+    <section class="secaoConteudoPrincipal">
+        TODOS OS PRODUTOS AQUI!
+    </section>
+
 </section>
 
+<hr />
 <!----------------------------------------------------------------------->
 
 <?php include '../footers/footer_tipo1.php'; ?>

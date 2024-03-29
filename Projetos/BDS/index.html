@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+  <!--------------------------------------------------------------->
+  <!-------------------------HEADER---------------------------->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +13,8 @@
   </head>
 
   <body>
-    <!-------------------------MENU LATERAL---------------------------->
 
+    <!-------------------------MENU LATERAL---------------------------->
     <aside class="menuLateral" id="menuLateral">
       <div class="secaoBotaoPesquisar">
         <input type="search" name="pesquisa" placeholder="Pesquisar..." />
@@ -20,7 +23,8 @@
       <ul>
         <hr />
         <li>
-          <a href="#" onclick="enviarRequisicao('todos')">TODOS OS PRODUTOS</a>
+          <a href="#" onclick="enviarRequisicao('../docs/produtos/todos_os_produtos.html')">TODOS OS
+            PRODUTOS</a>
         </li>
         <hr />
         <li><a href="#" onclick="enviarRequisicao('tshirt')">T-SHIRT</a></li>
@@ -77,10 +81,6 @@
 
     <div class="overlay" id="overlay"></div>
 
-
-    <!----------------------------------------------------->
-    <!----------------------------------------------------->
-
     <!------------------------HAMBURGUER, LOGO E CARRINHO---------------------------->
 
     <section class="main">
@@ -94,7 +94,9 @@
         <div class="itensCarrinho">0</div>
       </section>
 
-      <!----------------------------------------------------->
+
+      <!--------------------------------------------------------------->
+      <!----------------------MENU PRINCIPAL--------------------->
 
       <!-------------------------CARROSSEL---------------------------->
       <section class="secaoCarrossel">
@@ -112,11 +114,12 @@
 
       <hr />
 
-
-      <!----------------------------------------------------->
       <!----------------------------------------------------->
 
     </section>
+
+    <!-------------------------------------------------------------->
+    <!-------------------------FOOTER---------------------------->
 
     <section class="secaoFooter">
 
