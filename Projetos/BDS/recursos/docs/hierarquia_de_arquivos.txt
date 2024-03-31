@@ -1,0 +1,27 @@
+projeto/
+├── public/
+│   ├── index.php                 # Arquivo de entrada do aplicativo
+│   └── assets/
+│       ├── css/                  # Diretório para arquivos CSS
+│       │   └── style.css
+│       ├── js/                   # Diretório para arquivos JavaScript
+│       │   └── script.js
+│       └── img/                  # Diretório para imagens e outros recursos
+│
+├── app/
+│   ├── controllers/
+│   │   └── ProdutoController.php       # Controlador para manipulação de produtos
+│   │
+│   ├── models/
+│   │   └── ProdutoModel.php            # Modelo para manipulação de dados de produtos
+│   │
+│   └── views/
+│       └── produtos/
+│           └── listar.php              # Página para listar produtos
+│
+├── core/
+│   ├── Database.php                    # Classe para gerenciar conexão com o banco de dados
+│   └── Router.php                      # Classe para roteamento de URLs
+│
+└── db/
+    └── schema.sql                      # Arquivo SQL para criação do banco de dados e tabelas

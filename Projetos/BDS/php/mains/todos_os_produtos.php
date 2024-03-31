@@ -1,6 +1,6 @@
 <?php 
     $urlCssMobile768 = "../../css/index/mobileMax768.css"; 
-    $urlCssPcMin769 = "../../css/index/pcMin769.css"; 
+    $urlCssPcMin768 = "../../css/index/pcMin768.css"; 
     $urlJs = "../../js/index.js"; 
     include '../headers/header_tipo1.php'; 
 ?>

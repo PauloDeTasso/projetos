@@ -12,7 +12,7 @@ html {
   font-family: Arial, sans-serif;
   margin: 0px;
   padding: 0px;
-  background-color: #fff7fb;
+  background-color: rgb(255, 220, 250);
 }
 
 body {
@@ -38,6 +38,22 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.secaoConteudoPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: 500px;
+  margin: 0px;
+  margin-bottom: 130px;
+  padding: 0px;
+  border: 10px solid black;
 }
 
 .secaoFooter {
@@ -240,8 +256,6 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
-  top: 14px;
   width: 20%;
   height: auto;
   background-color: rgba(0, 0, 0, 0);
@@ -256,12 +270,11 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 50px;
-  background-image: url("../../recursos/imagens/icones/menu_hambuguer_001.png");
+  background-image: url("../../recursos/imagens/icones/menu_hambuguer_002.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 6;
-  text-shadow: #fe55b5;
 }
 
 .overlay.open {
@@ -1050,23 +1063,4 @@ footer {
 
 #whatsapp-button.partially-visible {
   opacity: 0.5;
-}
-
-/*******************************************************/
-/*CONTEUDO PRINCIPAL*/
-
-.secaoConteudoPrincipal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  top: 100px;
-  width: 100%;
-  height: 500px;
-  margin: 0px;
-  margin-bottom: 130px;
-  padding: 0px;
-  border: 1px solid black;
 }

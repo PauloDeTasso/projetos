@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Página Inicial</title>
         <link rel="stylesheet" href="<?php echo $urlCssMobile768 ?>" media="screen and (max-width: 768px)" />
-        <link rel="stylesheet" href="<?php echo $urlCssPcMin769 ?>" media="screen and (min-width: 769px)" />
+        <link rel="stylesheet" href="<?php echo $urlCssPcMin768 ?>" media="screen and (min-width: 769px)" />
 
     </head>
 
