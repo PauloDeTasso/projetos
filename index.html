@@ -99,8 +99,8 @@
             id="imagemLogoBDS"
             src="Projetos/BDS/recursos/imagens/logos/Logo001-PNG.png"
             alt=""
-            onmousemove="alterarImagem('BDS',this,'rgb(255, 255, 255)')"
-            onmouseleave="alterarImagem('BDS',this, 'rgb(255, 0, 212)')"
+            onmouseover="iniciarArcoIris(this)"
+            onmouseout="pararArcoIris(this)"
             onclick="goHome('BDS')"
           />
           <span id="comentarioBDS">in construction...</span>
@@ -111,13 +111,14 @@
         <section id="secaoCwt">
           <img
             id="imagemStart"
-            src="imagens/start0.png"
+            src="imagens/start0_2024_original.png"
             alt="Paulo de Tasso - Go"
             usemap="#login"
             onmousemove="alterarImagem('Cwt')"
             onmouseleave="retornarImagem('Cwt')"
             onclick="goHome('Cwt')"
           />
+          <span id="comentarioBDS">in construction...</span>
 
           <!-- 
                          <map name="login">

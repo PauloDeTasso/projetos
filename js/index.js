@@ -372,6 +372,19 @@ if (detectar_mobile()) {
 } else {
 }
 
+/***************************************************/
+/*COLORAÇÃO MOUSE POR CIMA SECAO BDS*/
+
+let arcoIrisInterval; // Variável para armazenar o intervalo do arco-íris
+
+function iniciarArcoIris(elemento) {
+  elemento.classList.add("arco-iris"); // Adiciona a classe para iniciar o arco-íris
+}
+
+function pararArcoIris(elemento) {
+  elemento.classList.remove("arco-iris"); // Remove a classe para parar o arco-íris
+}
+
 /* COLORIDAS: 
 
 function luzes()
