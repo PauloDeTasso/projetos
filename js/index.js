@@ -75,7 +75,7 @@ function retornarImagem(pagina) {
   if (pagina == "Lookalike3d") {
     imagemLookalike3d.setAttribute("src", "imagens/Projetos3d/LOGO/LOGO04.png");
   } else if (pagina == "Cwt") {
-    imagem.setAttribute("src", "imagens/start0.png");
+    imagem.setAttribute("src", "imagens/start0_2024_original.png");
   } else {
   }
 }
