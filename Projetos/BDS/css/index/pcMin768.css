@@ -249,6 +249,32 @@ body {
 }
 
 /**********************************************************/
+/*LOGIN - CADASTRO*/
+
+#loginCadastro {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  margin: 5px;
+  z-index: 20;
+}
+
+#naoLogado {
+  font-size: 0.8em; /* Tamanho da fonte pequena */
+}
+
+.links {
+  color: #ff00ae;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.divisor {
+  color: #999;
+  margin: 0 5px;
+}
+
+/**********************************************************/
 /*BOTÃO HAMBUGUER - MENU LATERAL*/
 
 .secaoHamburguerMenu {
@@ -256,6 +282,8 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  position: relative;
+  top: 40px;
   width: 20%;
   height: auto;
   background-color: rgba(0, 0, 0, 0);
@@ -270,11 +298,12 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 50px;
-  background-image: url("../../recursos/imagens/icones/menu_hambuguer_002.png");
+  background-image: url("../../recursos/imagens/icones/menu_hambuguer_001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 6;
+  text-shadow: #fe55b5;
 }
 
 .overlay.open {
@@ -287,10 +316,9 @@ body {
 
 /*********************************************************/
 /*CABEÇALHO*/
-
 .logoPng001 {
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 10px;
   width: 100%;
   height: 140px;
@@ -304,7 +332,7 @@ body {
 .iconeCarrinho {
   display: block;
   position: absolute;
-  top: 10px;
+  top: 40px;
   right: 20px;
   width: 40px;
   height: 50px;
@@ -320,7 +348,7 @@ body {
 .itensCarrinho {
   display: block;
   position: absolute;
-  top: 50px;
+  top: 80px;
   right: 10px;
   width: 20px;
   height: 17px;
@@ -333,71 +361,6 @@ body {
   color: rgb(255, 255, 255);
   font-weight: 700;
   z-index: 11;
-}
-
-/*
-.iconeCarrinho {
-  display: block;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-image: url("../../recursos/imagens/icones/carrinho002.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 11;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-}
-
-.itensCarrinho {
-  display: block;
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  width: 20px;
-  height: 17px;
-  background-color: rgba(255, 112, 191, 0.5);
-  border-radius: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  z-index: 11;
-}
-
-.logoPng001 {
-  display: block;
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  width: 100%;
-  height: 100px;
-  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 6;
-}
-*/
-
-.bannerPrincipal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 768px;
-  background-image: url("../../recursos/imagens/banners/Banner_Principal_Site_MB_950-x-1290-px-1.png");
-  /* Posição do plano de fundo (pode ser ajustada conforme necessário) */
-  background-position: center center;
-  /* Repetição do plano de fundo (no caso de ser menor do que o contêiner) */
-  background-repeat: no-repeat;
 }
 
 /*********************************************************/
@@ -405,6 +368,7 @@ body {
 
 .secaoCarrossel {
   position: relative;
+  margin-top: 100px;
 }
 
 .carousel {
@@ -450,7 +414,7 @@ body {
 }
 
 .slide:nth-child(1) {
-  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px-.jpg");
+  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(2) {

@@ -348,21 +348,6 @@ body {
   z-index: 11;
 }
 
-.bannerPrincipal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 768px;
-  background-image: url("../../recursos/imagens/banners/Banner_Principal_Site_MB_950-x-1290-px-1.png");
-  /* Posição do plano de fundo (pode ser ajustada conforme necessário) */
-  background-position: center center;
-  /* Repetição do plano de fundo (no caso de ser menor do que o contêiner) */
-  background-repeat: no-repeat;
-}
-
 /*********************************************************/
 /*CARROSEL PRINCIPAL*/
 
@@ -414,7 +399,7 @@ body {
 }
 
 .slide:nth-child(1) {
-  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px-.jpg");
+  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(2) {
