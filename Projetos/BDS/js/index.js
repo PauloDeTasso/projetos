@@ -87,6 +87,7 @@ subitems.forEach((subitem) => {
 
 /**********************************************/
 /*HAMBUGUER*/
+/*
 window.addEventListener("scroll", function () {
   var scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -98,6 +99,7 @@ window.addEventListener("scroll", function () {
     document.querySelector(".secaoHamburguerMenu").style.opacity = "1";
   }
 });
+*/
 
 /*********************************************/
 /*CARROSEL PRINCIPAL*/
