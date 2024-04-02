@@ -236,7 +236,7 @@ body {
 /*LOGIN - CADASTRO*/
 
 #loginCadastro {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 10px;
   margin: 5px;
