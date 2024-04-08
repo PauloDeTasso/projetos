@@ -25,7 +25,7 @@ switch ($_SERVER['REQUEST_METHOD'])
 {
     case 'GET':
         //HOME
-        if ($subUri[0] == 'home' || $uri == '/')
+        if ($subUri[0] == 'inicio' || $uri == '/')
         {
             $urlJs2 = "http://localhost/api/public/js/home/home.js";
 
