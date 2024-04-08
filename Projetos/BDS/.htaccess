@@ -1,0 +1,74 @@
+#RewriteEngine On
+#RewriteBase /
+# Definir a variável de ambiente REQUEST_URI
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php [QSA,E=REQUEST_URI:$1,L]
+
+####
+
+# Desabilitar listagem de diretórios
+Options -Indexes
+
+# Configurações de segurança
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    #PADRAO UTF-8
+    AddDefaultCharset UTF-8
+    
+    # Prevenir a exposição de informações sensíveis no cabeçalho do servidor
+    ServerSignature Off
+
+    # Proteger contra ataques XSS
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Impedir que o site seja carregado em um frame
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Prevenir sniffing de MIME-Type
+    Header set X-Content-Type-Options "nosniff"
+
+    # Impedir o navegador de inferir o tipo de conteúdo
+    AddType 'text/plain; charset=UTF-8' .html .htm .shtml .php
+
+    # Impedir acesso direto a arquivos de configuração
+    <FilesMatch "(\.(config|env)|~)$">
+        Require all denied
+    </FilesMatch>
+
+    # Impedir acesso direto a arquivos de banco de dados
+    <FilesMatch "\.(db|sqlite|sqlite3|sql|bak)$">
+        Require all denied
+    </FilesMatch>
+
+    # Bloquear acesso direto a arquivos de backup
+    <FilesMatch "\.(zip|rar|tar|gz|bak|old|fla|psd|ini|log|sh|inc|swp|dist|tpl)$">
+        Require all denied
+    </FilesMatch>
+
+    # Redirecionar todas as requisições não relacionadas a arquivos ou diretórios existentes para o index.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Bloquear acesso direto a scripts PHP
+#<FilesMatch "\.php$">
+#    Require all denied
+#</FilesMatch>
+
+# Configurar limites de upload de arquivos
+#php_value upload_max_filesize 10M
+#php_value post_max_size 10M
+
+# Prevenir execução de scripts em diretórios de upload
+#<FilesMatch "^uploads/.*\.php$">
+#    Require all denied
+#</FilesMatch>
+
+# Ativar SSL (substitua example.com pelo seu domínio)
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://www.example.com%{REQUEST_URI} [L,R=301]

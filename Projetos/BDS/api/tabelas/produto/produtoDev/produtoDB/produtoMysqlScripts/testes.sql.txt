@@ -1,0 +1,117 @@
+-- Leitura da tabela Categoria
+SELECT * FROM Categoria;
+
+-- Edição na tabela Categoria
+-- Substitua 'Novo Nome' e 'Nova Descrição' pelos novos valores desejados
+UPDATE Categoria
+SET nomeCategoria = 'Novo Nome', descricaoCategoria = 'Nova Descrição'
+WHERE categoriaId = id_desejado;
+
+-- Exclusão na tabela Categoria
+DELETE FROM Categoria
+WHERE categoriaId = id_desejado;
+
+-- Leitura da tabela Marca
+SELECT * FROM Marca;
+
+-- Edição na tabela Marca
+-- Substitua 'Novo Nome' e 'Nova Descrição' pelos novos valores desejados
+UPDATE Marca
+SET nomeMarca = 'Novo Nome', descricaoMarca = 'Nova Descrição'
+WHERE marcaId = id_desejado;
+
+-- Exclusão na tabela Marca
+DELETE FROM Marca
+WHERE marcaId = id_desejado;
+
+-- Leitura da tabela Tamanho
+SELECT * FROM Tamanho;
+
+-- Edição na tabela Tamanho
+-- Substitua 'Novo Tamanho' e 'Nova Descrição' pelos novos valores desejados
+UPDATE Tamanho
+SET nomeTamanho = 'Novo Tamanho', descricaoTamanho = 'Nova Descrição'
+WHERE tamanhoId = id_desejado;
+
+-- Exclusão na tabela Tamanho
+DELETE FROM Tamanho
+WHERE tamanhoId = id_desejado;
+
+-- Leitura da tabela Cor
+SELECT * FROM Cor;
+
+-- Edição na tabela Cor
+-- Substitua 'Nova Cor' pelo novo valor desejado
+UPDATE Cor
+SET nomeCor = 'Nova Cor'
+WHERE corId = id_desejado;
+
+-- Exclusão na tabela Cor
+DELETE FROM Cor
+WHERE corId = id_desejado;
+
+-- Leitura da tabela Produto
+SELECT * FROM Produto;
+
+-- Edição na tabela Produto
+-- Substitua os valores pelas novas informações desejadas
+UPDATE Produto
+SET produtoNome = 'Novo Nome', produtoDescricao = 'Nova Descrição', categoriaId = nova_categoriaId, marcaId = nova_marcaId, produtoTamanhoId = novo_tamanhoId, corId = nova_corId,
+produtoPreco = novo_preco, produtoPeso = novo_peso, produtoQuantidade = nova_quantidade, produtoDisponivel = novo_estado_disponibilidade, produtoEmPromocao = novo_estado_promocao
+WHERE produtoId = id_desejado;
+
+-- Exclusão na tabela Produto
+DELETE FROM Produto
+WHERE produtoId = id_desejado;
+
+-- Leitura da tabela Foto
+SELECT * FROM Foto;
+
+-- Edição na tabela Foto
+-- Substitua 'Nova URL' pela nova URL desejada
+UPDATE Foto
+SET urlFoto = 'Nova URL'
+WHERE fotoId = id_desejado;
+
+-- Exclusão na tabela Foto
+DELETE FROM Foto
+WHERE fotoId = id_desejado;
+
+-- Leitura da tabela Avaliacao
+SELECT * FROM Avaliacao;
+
+-- Edição na tabela Avaliacao
+-- Substitua os valores pelas novas informações desejadas
+UPDATE Avaliacao
+SET nota = nova_nota, comentario = 'Novo Comentário'
+WHERE avaliacaoId = id_desejado;
+
+-- Exclusão na tabela Avaliacao
+DELETE FROM Avaliacao
+WHERE avaliacaoId = id_desejado;
+
+-- Leitura da tabela Resposta
+SELECT * FROM Resposta;
+
+-- Edição na tabela Resposta
+-- Substitua 'Novo Conteúdo' pelo novo conteúdo desejado
+UPDATE Resposta
+SET conteudoResposta = 'Novo Conteúdo'
+WHERE respostaId = id_desejado;
+
+-- Exclusão na tabela Resposta
+DELETE FROM Resposta
+WHERE respostaId = id_desejado;
+
+-- Leitura da tabela Promocao
+SELECT * FROM Promocao;
+
+-- Edição na tabela Promocao
+-- Substitua os valores pelas novas informações desejadas
+UPDATE Promocao
+SET descricaoPromocao = 'Nova Descrição', desconto = novo_desconto, dataInicio = 'Nova Data de Início', dataFim = 'Nova Data de Fim', produtoId = novo_produtoId
+WHERE promocaoId = id_desejado;
+
+-- Exclusão na tabela Promocao
+DELETE FROM Promocao
+WHERE promocaoId = id_desejado;

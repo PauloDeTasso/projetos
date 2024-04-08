@@ -1,0 +1,1129 @@
+/*********************************************************/
+/*PRINCIPAL*/
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff7fb;
+  border: 0px solid rgba(0, 0, 0, 0)
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;  
+  border: 0px solid black;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.secaoFooter {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*********************************************************/
+/*MENU LATERAL*/
+
+.menuLateral {
+  position: fixed;
+  top: 0;
+  left: -400px; /* Inicia fechado */
+  width: 300px; /* Largura do menu */
+  height: 100%;
+  margin: 0px;
+  padding-top: 30px;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(209, 209, 209, 0.97);
+  color: rgb(0, 0, 0);
+  z-index: 10;
+  overflow-x: hidden;
+  transition: left 0.3s ease; /* Adiciona transição de movimento */
+  font-size: small;
+  overflow-y: visible;
+  border-left: 20px solid rgba(0, 0, 0, 0);
+  animation-duration: 1.4s;
+   animation-timing-function: ease-in-out;
+   z-index: 30;
+}
+
+/*********************************************************/
+/*SUBITENS*/
+/* Estilo do menu lateral e subitens */
+.menuLateral ul ul {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.07); /* Cor de fundo para os subitens */
+  padding-left: 20px; /* Espaçamento interno para os subitens */
+  border-left: 20px solid rgba(0, 0, 0, 0); /* Adiciona uma borda à esquerda para diferenciar os subitens */
+  border-radius: 10px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  margin: 5px;
+}
+
+.menuLateral ul li {
+  margin: 0px 0; /* Espaçamento entre os itens do menu */
+}
+
+.menuLateral .parent-item > a {
+  font-weight: bold; /* Defina o estilo de fonte para os itens principais do menu */
+}
+
+.menuLateral .subitems li a {
+  font-weight: normal; /* Defina o estilo de fonte para os subitens */
+  color: #000000;
+}
+
+.menuLateral ul ul li {
+  margin: 0px 0; /* Espaçamento entre os subitens */
+}
+
+.menuLateral ul ul li:first-child {
+  margin-top: 0px; /* Ajusta o espaçamento superior do primeiro subitem */
+}
+
+.menuLateral ul ul li:last-child {
+  margin-bottom: 0px; /* Ajusta o espaçamento inferior do último subitem */
+}
+
+.menuLateral .parent-item > a::before {
+  content: ""; /* Adiciona um sinal de "+" antes do texto do item do menu principal */
+  margin-right: 0px; /* Espaçamento entre o sinal "+" e o texto do item */
+}
+
+/*********************************************************/
+/*CAMPO PESQUISA*/
+
+.secaoBotaoPesquisar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.menuLateral input[type="search"] {
+  width: 70%; /* Leva em conta o padding de 10px em ambos os lados */
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 112, 191, 0.5);
+  margin-right: 10px;
+}
+
+.menuLateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Removido o margin */
+}
+
+.menuLateral ul li {
+  margin-bottom: 10px;
+}
+
+.menuLateral ul li a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  font-weight: 700;
+}
+
+.menuLateral ul li a:hover {
+  background-color: #bababa;
+  color: #fe55b5;
+}
+
+/* Estilo para o ícone de pesquisa */
+.menuLateral input[type="search"]::placeholder {
+  color: #878787;
+}
+
+.menuLateral input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.10/collection/components/svgs/ios-close-circle.svg"); /* Ícone X */
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.menuLateral input[type="search"]::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+
+.menuLateral button {
+  padding: 8px 16px;
+  background-color: rgba(255, 22, 150, 0.5);
+  color: #fff;
+  border: 1px solid rgb(255, 168, 201);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.menuLateral button:hover {
+  background-color: rgba(255, 112, 191, 1);
+}
+
+/**********************************************************/
+/*TELA OCULTA PARA ACAO DE CLIQUES*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9;
+  display: none;
+}
+
+/**********************************************************/
+/*LOGIN - CADASTRO*/
+
+#loginCadastro {
+  position: absolute;
+  top: 14px;
+  right: 3px;
+  margin: 5px;
+  z-index: 20;
+}
+
+#naoLogado {
+  font-size: 0.8em; /* Tamanho da fonte pequena */
+}
+
+.links {
+  color: #ff00ae;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.divisor {
+  color: #999;
+  margin: 0 5px;
+}
+
+/**********************************************************/
+/*BOTÃO HAMBUGUER - MENU LATERAL*/
+
+.secaoHamburguerMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  top: 40px;
+  width: 20%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 8;
+  cursor: pointer;
+}
+
+.hamburguerMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  background-image: url("../../recursos/imagens/icones/menu_hambuguer_001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 6;
+  text-shadow: #fe55b5;
+}
+
+.overlay.open {
+  display: block;
+}
+
+.menuLateral.open {
+  left: 0;
+  opacity: 1;
+  animation-name: slideInFromLeft; 
+
+}
+
+menuLateral:not(.open) {
+  left: -400px; /* Mantém o menu fora da tela */
+  opacity: 0;
+  animation-name: slideOutToLeft; /* Aplica a animação de saída */
+}
+
+/* Define a animação de entrada */
+@keyframes slideInFromLeft {
+  from {
+    left: -400px; /* Começa fora da tela */
+    opacity: 0;
+  }
+  to {
+    left: 0; /* Termina na posição inicial */
+    opacity: 1;
+  }
+}
+
+/* Define a animação de saída */
+@keyframes slideOutToLeft {
+  from {
+    left: 0; /* Começa na posição inicial */
+    opacity: 1;
+  }
+  to {
+    left: -400px; /* Termina fora da tela */
+    opacity: 0.3;
+  }
+}
+/*********************************************************/
+/*CABEÇALHO*/
+
+.logoPng001 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 140px;
+  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 6;
+}
+
+.iconeCarrinho {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 40px;
+  height: 50px;
+  background-image: url("../../recursos/imagens/icones/carrinho002.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.itensCarrinho {
+  display: block;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 20px;
+  height: 17px;
+  background-color: rgba(255, 112, 191, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  z-index: 11;
+}
+
+/*********************************************************/
+/*CARROSEL PRINCIPAL*/
+
+.secaoCarrossel {
+  position: relative;
+  margin-top: 40px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+}
+
+.prev {
+  top: 340px;
+  left: 10px;
+  z-index: 5;
+}
+
+.next {
+  top: 340px;
+  right: 10px;
+  z-index: 5;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 700px; /* Defina a altura do slide conforme necessário */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slide:nth-child(1) {
+  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../../recursos/imagens/banners/MB/02-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../../recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
+}
+
+/*********************************************************/
+/*SERVIÇOS*/
+
+.servicos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.subServicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.subServicos > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+}
+
+.cc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/cc001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pix {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/porc001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.entrega {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/entrega001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*********************************************************/
+/*CATEGORIAS*/
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+}
+
+.tituloCategoria {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.itensCategorias {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-auto-rows: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  font-size: small;
+}
+
+/*********************************************************/
+/*TSHIRTS*/
+
+.tshirts,
+.tshirts > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemTshirt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/roupas/blusas001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/*********************************************************/
+/*VESTIDOS*/
+
+.vestidos,
+.vestidos > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemVestidos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/roupas/vestidos001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/*********************************************************/
+/*SAIAS*/
+
+.saias,
+.saias > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemSaias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/roupas/saias001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/*********************************************************/
+/*CALÇAS*/
+
+.calcas,
+.calcas > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemCalcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/roupas/calcas001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/*********************************************************/
+/*CONJUNTOS*/
+
+.conjuntos,
+.conjuntos > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemConjuntos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../../recursos/imagens/icones/roupas/conjuntos001.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/**************************************************/
+/*VER TUDO*/
+
+.verTudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: auto;
+  margin: 20px;
+  padding: 0px;
+  cursor: pointer;
+  border: 4px solid black;
+  border-radius: 14px;
+}
+
+/*********************************************************/
+/*AVALIAÇÕES E COMENTARIOS*/
+
+.avaliacoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*********************************************************/
+/*PROPAGANDAS*/
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagem-container {
+  width: 90%; /* Defina a largura máxima do contêiner */
+  margin-right: 0px; /* Espaçamento entre as imagens */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.imagemBanner01,
+.imagemBanner02 {
+  width: 100%; /* Assegura que a imagem preencha o contêiner */
+  height: 400px; /* Defina a altura da imagem */
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.imagemBanner01 {
+  background-image: url("../../recursos/imagens/banners/Banner-site-luxo-507x400.png");
+}
+
+.imagemBanner02 {
+  background-image: url("../../recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
+}
+
+/*********************************************************/
+/*CONTATO*/
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.whatsapp,
+.instagram {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.imagemWhatsapp,
+.imagemInstagram {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.imagemWhatsapp {
+  background-image: url("../../recursos/imagens/icones/logo_whatsapp_png-100x100.png");
+}
+
+.imagemInstagram {
+  background-image: url("../../recursos/imagens/icones/logo_instagram_png-100x100.png");
+}
+
+.whatsapp > p,
+.instagram > p {
+  margin: 0px;
+  font-weight: 700;
+}
+
+/*********************************************************/
+/*MAIS INFORMAÇÕES - FORMAS DE PAGAMENTO - SELO*/
+
+.maisInformacoes,
+.formasDePagamento,
+.selo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
+}
+
+.imagemFormasDePagamento,
+.imagemSelo {
+  width: 90%;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.imagemFormasDePagamento {
+  background-image: url("../../recursos/imagens/formas_de_pagamentos.png");
+}
+
+.imagemFormasDePagamento > h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imagemSelo {
+  background-image: url("../../recursos/imagens/selo_safebrowsing.png");
+}
+
+.listaInformacoes > span {
+  cursor: pointer;
+}
+
+/*********************************************************/
+/*MARCA*/
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.imagemMarca {
+  width: 200px;
+  height: 100px;
+  margin: 0px;
+  padding: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.imagemMarca {
+  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
+}
+
+/*********************************************************/
+/*BOTAO WHATSAPP*/
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-image: url("../../recursos/imagens/icones/RedesSociais/WhatsApp001.png");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  animation: button-shake 1s infinite;
+}
+
+@keyframes button-shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+#whatsapp-tooltip {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+  background-color: beige;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: small;
+  font-weight: 600;
+  display: none;
+}
+
+#whatsapp-tooltip.active {
+  display: block;
+}
+
+#whatsapp-button:hover #whatsapp-tooltip {
+  display: block;
+  animation: tooltip-fadein 0.5s forwards;
+}
+
+@keyframes tooltip-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#whatsapp-tooltip:not(:hover) {
+  animation: tooltip-fadeout 0.5s forwards 5s;
+}
+
+@keyframes tooltip-fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#whatsapp-button.partially-visible {
+  opacity: 0.5;
+}
+
+/*******************************************************/
+/*CONTEUDO PRINCIPAL*/
+
+.secaoConteudoPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 130px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+/*******************************************************/
+/*api\tabelas\produto\produtoTela\produtoTelaTodosOsProdutos.php*/
+
+.secaoConteudoPrincipalTodosOsProdutos {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: auto;
+  gap: 20px; /* Espaçamento entre as colunas */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 130px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+.product {
+  border: 1px solid #ff349a;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*******************************************************/
+/*api\tabelas\produto\produtoTela\produtoTelaProdutoEspecifico.php*/
+
+.secaoConteudoPrincipalProdutoEspecifico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 130px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+#product-details {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#product-details h2 {
+  margin-top: 0;
+}
