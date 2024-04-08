@@ -1,7 +1,7 @@
 <?php
 
 $urlCssMobile768 = "http://localhost/api/public/css/index/mobileMax768.css";
-$urlCssPcMin768 = "http://localhost/api/public/css/index/pcMin768.css";
+$urlCssPcMin768 =  "http://localhost/api/public/css/index/pcMin768.css";
 $urlJs = "http://localhost/api/public/js/index/index.js";
 $favIcon = "http://localhost/api/public/recursos/imagens/logos/Logo002-PNG.png";
 

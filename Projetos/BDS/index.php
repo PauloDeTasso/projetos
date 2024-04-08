@@ -16,13 +16,13 @@ $ehAppMovel = isset($_SERVER['HTTP_X_APP_MOBILE']) && $_SERVER['HTTP_X_APP_MOBIL
 // Verifica se o hostname contém "localhost" ou o nome do site em produção
 $hostname = $_SERVER['HTTP_HOST'];
 
-// Verifica se a URI começa com /api
-$uri = $_SERVER['REQUEST_URI'];
-$ehRotaApi = (strpos($uri, '/api') === 0);
-
 // Verifica se o hostname corresponde ao localhost ou ao nome do site em produção
 $ehLocalhost = ($hostname === 'localhost');
 $ehSiteProducao = ($hostname === 'belladonnastore.com');
+
+// Verifica se a URI começa com /api
+$uri = $_SERVER['REQUEST_URI'];
+$ehRotaApi = (strpos($uri, '/api') === 0);
 
 // Se for um aplicativo móvel, abre a rota API
 if ($ehDispositivoMovel && $ehAppMovel && ($ehLocalhost || $ehSiteProducao) && $ehRotaApi)
