@@ -1,7 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/api/DAO/ConexaoDbBds.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoModelo/produtoModelo.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoModelo/produtoModelo.php';
 
 class ProdutoServicoGet
 {
@@ -9,8 +9,7 @@ class ProdutoServicoGet
     /*TODOS OS PRODUTOS*/
     public static function listarProdutos()
     {
-        try
-        {
+        try {
             // Conectar ao banco de dados
             $conexao = ConexaoDbBds::conectar();
 
@@ -26,9 +25,7 @@ class ProdutoServicoGet
             $conexao = null;
 
             return $produtos;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao listar produtos: " . $e->getMessage());
         }
     }
@@ -36,8 +33,17 @@ class ProdutoServicoGet
     /*PRODUTO POR ID*/
     public static function buscarProduto($idProduto)
     {
-        try
-        {
+        try {
+            // Validar se $idProduto é um número
+            if (!is_numeric($idProduto)) {
+                // Se não for um número, retorna uma mensagem de erro 400
+                header("HTTP/1.1 400 Bad Request");
+                throw new Exception("ID do produto inválido");
+            }
+
+            // Proteger contra injeção de SQL
+            $idProduto = TabelaProtecaoEntrada::validarTexto($idProduto);
+
             // Conectar ao banco de dados
             $conexao = ConexaoDbBds::conectar();
 
@@ -52,26 +58,32 @@ class ProdutoServicoGet
 
             // Desconectar
             $conexao = null;
+
             return $produto;
-            // return json_encode($produto);
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao buscar produto: " . $e->getMessage());
         }
     }
+
 
     /**************************************************************** */
     /*PESQUISAR POR TEXTO*/
     public static function pesquisarPorTexto($texto)
     {
-        try
-        {
+        try {
+
+            $textoValidado = TabelaValidacao::validarNome($texto);
+            if ($textoValidado) {
+                $textoValidado = $texto;
+            }
+            $textoProtegido = TabelaProtecaoEntrada::validarTexto($textoValidado);
+
+
             // Conectar ao banco de dados
             $conexao = ConexaoDbBds::conectar();
 
             // Adicionar curingas à string de pesquisa
-            $textoDigitado = "%{$texto}%";
+            $textoDigitado = "%{$textoProtegido}%";
 
             // Preparar a consulta SQL usando Prepared Statement
             $sql = "SELECT * FROM produto WHERE nomeProduto LIKE :textoNomeProduto OR descricaoProduto LIKE :textoDescricaoProduto";
@@ -87,17 +99,13 @@ class ProdutoServicoGet
 
             // Retornar os resultados da consulta
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             // Lidar com exceções PDO
             $errorMessage = 'Erro ao executar consulta no banco de dados: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
             $errorId = uniqid('PDOError');
             error_log('[' . $errorId . '] ' . $errorMessage);
             throw new Exception('[' . $errorId . '] Ocorreu um erro interno. Por favor, tente novamente mais tarde.', 500);
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             // Lidar com outras exceções
             $errorMessage = 'Erro inesperado: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
             $errorId = uniqid('GeneralError');
@@ -110,8 +118,7 @@ class ProdutoServicoGet
     /*PRODUTO POR PRECO MINIMO E MAXIMO*/
     public static function produtosPorPrecoMinMax($preco_min, $preco_max)
     {
-        try
-        {
+        try {
             // Conectar ao banco de dados
             $conexao = ConexaoDbBds::conectar();
 
@@ -129,9 +136,7 @@ class ProdutoServicoGet
             $conexao = null;
 
             return $produtos;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao listar produtos por preço: " . $e->getMessage());
         }
     }
