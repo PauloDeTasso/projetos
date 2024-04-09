@@ -1,14 +1,16 @@
 <?php
 
+
+
 if (!isset($subUri[1]))
 {
     // Importar as classes necessárias
-    require_once $produtoControle;
+    require_once $produtoControleGet;
 
     // Criar uma instância do objeto de controle do produto
-    $produtoControle = new ProdutoControle();
+    $produtoControleGet = new produtoControleGet();
 
-    $produtos_json = $produtoControle->listarProdutos();
+    $produtos_json = $produtoControleGet->listarProdutos();
 
     require_once $headerTipo01;
     require_once $todosOsProdutos;
@@ -20,13 +22,13 @@ else if (is_numeric($subUri[1]))
 {
 
     // Importar as classes necessárias
-    require_once $produtoControle;
+    require_once $produtoControleGet;
 
     // Criar uma instância do objeto de controle do produto
-    $produtoControle = new ProdutoControle();
+    $produtoControleGet = new produtoControleGet();
 
     // Buscar o produto com base no ID fornecido na URI
-    $produto = $produtoControle->buscarProduto($subUri[1]);
+    $produto = $produtoControleGet->buscarProduto($subUri[1]);
 
     require_once $headerTipo01;
     require_once $produtoEspecifico;
@@ -37,13 +39,13 @@ else if (is_numeric($subUri[1]))
 else if ($subUri[1] == 'pesquisa' && isset($subUri[2]))
 {
     // Importar as classes necessárias
-    require_once $produtoControle;
+    require_once $produtoControleGet;
 
     // Criar uma instância do objeto de controle do produto
-    $produtoControle = new ProdutoControle();
+    $produtoControleGet = new produtoControleGet();
 
     // Pesquisar produtos com base no texto fornecido na URI
-    $produtosPesquisadosPorTexto = $produtoControle->pesquisarPorTexto($subUri[2]);
+    $produtosPesquisadosPorTexto = $produtoControleGet->pesquisarPorTexto($subUri[2]);
 
     require_once $headerTipo01;
     // Verifique se há produtos retornados pela pesquisa
@@ -59,6 +61,14 @@ else if ($subUri[1] == 'pesquisa' && isset($subUri[2]))
     }
     require_once $footerTipo01;
     exit();
+} // Verifica se há parâmetros de preço mínimo e máximo na URI
+else if (isset($_GET['preco_min']) && isset($_GET['preco_max']))
+{
+    $preco_min = $_GET['preco_min'];
+    $preco_max = $_GET['preco_max'];
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControleGet.php';
+    $produtoControleGet = new ProdutoControleGet();
+    echo $produtoControleGet->listarProdutos($preco_min, $preco_max);
 }
 else
 {

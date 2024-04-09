@@ -12,7 +12,11 @@ $home = $_SERVER['DOCUMENT_ROOT'] . '/api/public/php/mains/home.php';
 $todosOsProdutos = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoTela/produtoTelaTodosOsProdutos.php';
 $produtoEspecifico = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoTela/produtoTelaProdutoEspecifico.php';
 
-$produtoControle = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControle.php';
+$produtoControleGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControleGet.php';
+$produtoControlePost = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControlePost.php';
+$produtoControlePut = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControlePut.php';
+$produtoControleDelete = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControleDelete.php';
+$produtoControlePatch = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/produto/produtoControle/produtoControlePatch.php';
 
 // Obtém a URI sem o hostname
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

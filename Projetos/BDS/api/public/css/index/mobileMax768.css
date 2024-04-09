@@ -1127,3 +1127,72 @@ h1 {
 #product-details h2 {
   margin-top: 0;
 }
+
+/**********************************************************/
+/*PRODUTOS POR PREÇO MINIMO E PREÇO MAXIMO*/
+/* Estilos para os inputs de preço */
+.preco-inputs {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-bottom: 130px;
+  padding: 0px;
+  border: 1px solid black;
+}
+
+.preco-inputs label {
+    margin-right: 10px;
+}
+
+.preco-inputs input {
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* Estilos para o botão de pesquisa */
+#btn_pesquisar_preco {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn_pesquisar_preco:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para cada card de produto */
+.card-produto {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-produto img {
+    max-width: 100%;
+}
+
+.card-produto .nome-produto {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-produto .preco-produto {
+    color: #007bff;
+    margin-top: 5px;
+}
+
+/**********************************************************/

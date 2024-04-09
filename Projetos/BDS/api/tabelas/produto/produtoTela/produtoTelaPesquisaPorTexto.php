@@ -1,4 +1,15 @@
 <!-- Conteúdo da lista de produtos -->
+<div class="preco-inputs">
+    <label for="min">Preço mínimo:</label>
+    <input type="number" id="min" name="min">
+
+    <label for="max">Preço máximo:</label>
+    <input type="number" id="max" name="max">
+
+    <button id="btn_pesquisar_preco">Pesquisar</button>
+</div>
+
+
 <div class="secaoConteudoPrincipalTodosOsProdutos">
 
     <div id="product-list">
