@@ -62,7 +62,7 @@
                         <hr />
                         <li><a href="#" onclick="enviarRequisicao('/produtos/2')">CROPPED</a></li>
                         <hr />
-                        <li><a href="#" onclick="enviarRequisicao('/blusas')">BLUSAS</a></li>
+                        <li><a href="#" onclick="enviarRequisicao('/usuarios')">BLUSAS</a></li>
                         <hr />
                         <li><a href="#" onclick="enviarRequisicao('/vestidos')">VESTIDOS</a></li>
                         <hr />

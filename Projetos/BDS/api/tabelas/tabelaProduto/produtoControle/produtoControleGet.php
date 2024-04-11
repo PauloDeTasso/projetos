@@ -81,40 +81,6 @@ class ProdutoControleGet
             error_log($errorMessage);
             throw new Exception($errorMessage);
         }
-
-        /*
-        try
-        {
-            // Remover caracteres indesejados, mantendo letras, números, espaços, acentos e pontuações
-            $texto = preg_replace('/[^A-Za-z0-9\sáàâãçéèêíìîóòôõúùû]/u', '', $texto);
-
-            // Escapar caracteres especiais para evitar injeção de HTML
-            $texto = htmlspecialchars($texto, ENT_QUOTES, 'UTF-8');
-
-            // Sanitizar a entrada para evitar injeção de SQL
-            $texto = $this->sanitizeInput($texto);
-
-            // Pesquisar por produtos usando o texto sanitizado
-            $produtosPesquisadosPorTexto = ProdutoServicoGet::pesquisarPorTexto($texto);
-
-            // Retornar os resultados da pesquisa
-            return $produtosPesquisadosPorTexto;
-        }
-        catch (PDOException $e)
-        {
-            // Lidar com exceções PDO
-            $errorMessage = 'Erro PDO ao pesquisar por texto: ' . $e->getMessage();
-            error_log($errorMessage);
-            throw new Exception('Erro ao pesquisar por texto. Detalhes: ' . $errorMessage);
-        }
-        catch (Exception $e)
-        {
-            // Lidar com outras exceções
-            $errorMessage = 'Erro ao pesquisar por texto: ' . $e->getMessage();
-            error_log($errorMessage);
-            throw new Exception($errorMessage);
-        }
-        */
     }
 
     /************************************************************** */

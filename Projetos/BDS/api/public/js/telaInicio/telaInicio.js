@@ -203,3 +203,58 @@ window.addEventListener("load", carrosselEstaVisivelNaTela);
 
 // Verificar a visibilidade do carrossel ao rolar a página
 window.addEventListener("scroll", carrosselEstaVisivelNaTela);
+
+/**************************************************/
+/*BANNER COOKIE*/
+// JavaScript para manipular o aviso de cookies
+
+if (!verificarCookiesAceitos()) {
+        document.getElementById("cookie-banner").style.display = "block";
+}
+
+function aceitarCookies() {
+    document.getElementById("cookie-banner").style.display = "none";
+    // Configurar um cookie de consentimento que expira em 30 dias
+    document.cookie = "cookies_aceitos=true; expires=" + new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000).toUTCString() + "; path=/";
+}
+
+function fecharBanner() {
+    document.getElementById("cookie-banner").style.display = "none";
+}
+
+function verificarCookiesAceitos() {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith("cookies_aceitos=true")) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/*****************************************************/
+/*TEMPO DE SESSÃO*/
+/* Controle de Sessão */
+let inativo = false;
+
+function reiniciarTempoSessao() {
+    // Reinicie a contagem regressiva para encerrar a sessão após 30 minutos de inatividade
+    inativo = false;
+    clearTimeout(tempoSessao);
+    tempoSessao = setTimeout(finalizarSessao, 1800000); // 30 minutos
+}
+
+function finalizarSessao() {
+    // Finalize a sessão quando o usuário estiver inativo por 30 minutos
+    window.location.href = '/logout'; // Redirecione para a página de logout
+}
+
+// Detecta ações do usuário
+document.addEventListener('mousemove', reiniciarTempoSessao); // Movimento do mouse
+document.addEventListener('mousedown', reiniciarTempoSessao); // Clique do mouse
+document.addEventListener('keypress', reiniciarTempoSessao); // Pressionamento de tecla
+
+// Inicie a contagem regressiva inicial
+let tempoSessao = setTimeout(finalizarSessao, 1800000); // 30 minutos
+

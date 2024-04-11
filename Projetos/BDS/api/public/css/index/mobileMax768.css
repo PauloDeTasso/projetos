@@ -1086,11 +1086,14 @@ footer {
 }
 
 .product {
+  width: 80%;
   border: 1px solid #ff349a;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: #ffaeff;
+  font-size: small;
 }
 
 /*******************************************************/
@@ -1196,3 +1199,97 @@ h1 {
 }
 
 /**********************************************************/
+/*BANNER COOKIE*/
+/* CSS para o Aviso de Cookies */
+.cookie-banner {
+    position: fixed;
+    left: 30px;
+    bottom: 10px;
+    width: 80%;
+    height: auto;
+    background-color: #844484; /* Cor rosa escura */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
+    z-index: 9999; /* Para garantir que fique sobre os outros elementos */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
+    border: 4px solid beige;
+    font-size: small;
+}
+
+.cookie-banner button {
+    margin-left: 0px;
+    border: 2px solid rgb(236, 236, 236);
+    border-radius: 15px;
+    background-color: #dbdbdb;
+    cursor: pointer;
+    color: #161616; /* Cor do texto */
+}
+
+.cookie-banner a {
+    text-decoration: underline;
+    color: #fff; /* Cor do texto */
+}
+
+/*************************************************/
+/*TELA USUARIOS TODOS OS USUARIOS*/
+ /* Estilos para a lista de usuários */
+  .secaoConteudoPrincipalTodosOsUsuarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    margin-bottom: 130px;
+    padding: 0px;
+  }
+
+  .usuario  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ff90cf;
+    font-size: small;
+    }
+
+    .usuario p  {
+   margin: 0px;
+   padding: 0px;
+    }
+
+    /**********************************************/
+    /*TELA ERRO*/
+    .secaoConteudoPrincipalErro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    margin-bottom: 130px;
+      border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffb0b0;
+    font-size: small;
+    }
