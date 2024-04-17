@@ -1068,10 +1068,8 @@ footer {
 /*api\tabelas\produto\produtoTela\produtoTelaTodosOsProdutos.php*/
 
 .secaoConteudoPrincipalTodosOsProdutos {
-  display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: auto;
-  gap: 20px; /* Espaçamento entre as colunas */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1085,9 +1083,9 @@ footer {
   border: 1px solid black;
 }
 
-.product {
+.produto {
   width: 80%;
-  border: 1px solid #ff349a;
+  border: 1px solid #ff7fbf;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
@@ -1099,7 +1097,8 @@ footer {
 /*******************************************************/
 /*api\tabelas\produto\produtoTela\produtoTelaProdutoEspecifico.php*/
 
-.secaoConteudoPrincipalProdutoEspecifico {
+.secaoConteudoPrincipalProdutoEspecifico
+{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1107,28 +1106,11 @@ footer {
   text-align: center;
   position: relative;
   top: 100px;
-  position: relative;
-  top: 100px;
   width: 100%;
   height: auto;
-  margin: 0px;
   margin-bottom: 130px;
   padding: 0px;
   border: 1px solid black;
-}
-
-h1 {
-  text-align: center;
-}
-
-#product-details {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-#product-details h2 {
-  margin-top: 0;
 }
 
 /**********************************************************/
@@ -1219,18 +1201,39 @@ h1 {
 }
 
 .cookie-banner button {
+    position: absolute;
+    right: 20px;
+    bottom: 14px;
+    width: auto;
     margin-left: 0px;
     border: 2px solid rgb(236, 236, 236);
-    border-radius: 15px;
-    background-color: #dbdbdb;
+    border-radius: 20px;
+    background-color: #ffffff;
     cursor: pointer;
-    color: #161616; /* Cor do texto */
+    color: #161616; 
+    padding: 3px 7px 3px 7px;
+    font-size: small;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.cookie-banner a {
+.cookie-banner a {  
     text-decoration: underline;
     color: #fff; /* Cor do texto */
 }
+
+.fechar-banner {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  width: auto;
+  height: auto;
+  padding: 0px 4px 0px 4px; 
+  border: 2px solid rgba(236, 236, 236,0.5);
+  border-radius: 30px;
+  background-color: #ff5050;
+  cursor: pointer;
+}
+
 
 /*************************************************/
 /*TELA USUARIOS TODOS OS USUARIOS*/
@@ -1251,22 +1254,15 @@ h1 {
   }
 
   .usuario  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #ff90cf;
-    font-size: small;
-    }
+     width: 80%;
+  border: 1px solid #ff7fbf;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffaeff;
+  font-size: small;
+}
 
     .usuario p  {
    margin: 0px;
@@ -1293,3 +1289,366 @@ h1 {
     background-color: #ffb0b0;
     font-size: small;
     }
+
+    /**********************************************/
+ /*TOAST*/
+.toast {
+  display: none;
+    visibility: hidden;    
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    width: 80%;
+    padding: 15px;
+    background-color: #ce71af;
+    color: white;
+    border-radius: 14px;
+    z-index: 999;
+   border: 5px solid violet;
+}
+
+.show {  
+  display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.toast-titulo {
+  width: auto;
+   font-size: large;
+    font-weight: 800;    
+color: #ffffff;
+    margin-top: 10px;
+     margin-bottom: 10px;
+      border-radius: 14px;
+      border: 2px solid rgb(255, 255, 255);
+       padding: 15px;
+}
+
+.toast-mensagem{
+  width: auto;
+font-size: medium;
+color: #ffffff;
+    margin-top: 10px;
+      margin-bottom: 10px;
+ padding: 15px;
+      }
+
+.toast-recomendacao {
+  width: auto;
+  font-size: medium;
+    
+color: #ffffff;
+    margin-top: 10px;
+      margin-bottom: 10px;
+ padding: 15px;
+      }
+
+/**********************************************/
+/*PESQUISA AVANÇADA*/
+/* Estilos para a seção de Pesquisa Avançada */
+
+/* Estilo para o botão de abrir a pesquisa avançada */
+#btnAbrirPesquisa01 {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* Adicione esta classe para o ícone de pesquisa */
+.icon-search {
+    display: inline-block;
+    width: 25px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 25px; /* Ajuste o tamanho do ícone conforme necessário */
+    background-image: url('../../recursos/imagens/icones/pesquisa001.png'); /* Substitua 'caminho/para/sua/imagem-de-pesquisa.png' pela URL da sua imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px; /* Ajuste o espaçamento entre o ícone e o texto conforme necessário */
+    vertical-align: middle;    
+    cursor: pointer;
+}
+
+#secaoPesquisa01 {
+    /* Mantenha a posição e o layout da seção */
+    display: none; /* Definido como none inicialmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(232, 84, 163);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffa6e1;
+    font-size: small;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s linear 1s, top 1s ease-in-out;
+}
+
+#secaoPesquisa01.aberta {
+    /* Aplicar a animação ao abrir e manter a seção visível */
+    animation: abrirPesquisa 1s forwards ease-in-out;
+    display: flex;
+}
+
+/* Animação para abrir a seção de pesquisa */
+@keyframes abrirPesquisa {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-500px); /* Move para cima */
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Sem deslocamento vertical */
+    }
+}
+
+#secaoPesquisa01:not(.aberta) {
+    /* Aplicar a animação ao fechar a seção */    
+    animation: fecharPesquisa 1s forwards ease-in-out;
+}
+
+/* Animação para fechar a seção de pesquisa */
+@keyframes fecharPesquisa {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Sem deslocamento vertical */
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-500px); /* Move para cima */ 
+    }
+}
+
+#secaoPesquisa01  h1{
+    font-size: x-large;
+    margin: 5px;
+}
+
+#secaoPesquisa01 form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#secaoPesquisa01 label{
+    margin: 5px;
+}
+
+#secaoPesquisa01 select,
+#secaoPesquisa01 input {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+}
+
+#btnPesquisar01 {
+  display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    background-color: #ff43a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilize o botão de reset para torná-lo mais visível e clicável */
+#btnLimpar01 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    cursor: pointer;
+  }
+
+#btnPesquisar01:hover {
+    background-color: #ff3381; /* Altera a cor de fundo ao passar o mouse */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+#btnLimpar01:hover {
+    background-color: #999; /* Altera a cor de fundo ao passar o mouse */
+    color: #fff; /* Altera a cor do texto ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+}
+
+
+/*sessãoFiltrosCheck*/
+.sessãoFiltrosCheck{
+  display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  background-color: rgba(0, 0, 0, .1); /* Altera a cor de fundo ao passar o mouse */  
+}
+
+/*SESSÃO FILTRO POR PREÇO*/
+/* Estilo para a seção de filtro por preço */
+#secaoFiltroPreco {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: display 0.5s ease;
+  }
+
+/* Estilo para a seção de filtro por preço */
+#filtroPreco {
+    display: none; /* Inicialmente oculta */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0); /* Altera a cor de fundo ao passar o mouse */
+    transition: display 0.5s ease; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o texto do checkbox */
+label[for="porPrecoCheckbox"] {
+ display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  margin-right: 0px;
+}
+
+#porPrecoCheckbox{
+  display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  margin-right: 0px;
+}
+
+/*SESSÃO FILTRO POR TAMANHO*/
+#secaoFiltroTamanho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: auto;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: display 0.5s ease;
+}
+
+#filtroTamanho {
+    display: none; /* Inicialmente oculta */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0); /* Altera a cor de fundo ao passar o mouse */
+  border: 5px solid rgba(0, 0, 0, 0);
+    transition: display 0.5s ease; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o texto do checkbox */
+label[for="porTamanhoCheckbox"] {
+ display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  margin-right: 0px;
+}
+
+#porTamanhoCheckbox{
+  display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+  margin-right: 0px;
+}

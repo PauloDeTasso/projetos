@@ -1,6 +1,6 @@
 <?php
 
-class ConexaoDbBds
+class ConexaoDbBdsWeb
 {
     // Configurações do banco de dados
     private static $host = "localhost";
@@ -26,7 +26,17 @@ class ConexaoDbBds
         }
         catch (PDOException $e)
         {
-            throw new Exception("Erro ao conectar ao banco de dados: " . $e->getMessage());
+            error_log("Erro ao conectar ao banco de dados:" . $e->getMessage());
+
+            $tipo_erro = 'Erro ao conectar ao banco de dados:';
+            $mensagem_erro = $e->getMessage();
+            $recomendacao = 'Tente novamente!';
+
+            //header('Location: /produtos/erro?erro=' . urlencode($tipo_erro) . '&mensagem=' . urlencode($mensagem_erro) . '&recomendacao=' . urlencode($recomendacao));
+
+            header("Location: /erro/?erro=$tipo_erro&mensagem=$mensagem_erro&recomendacao=$recomendacao");
+
+            exit();
         }
     }
 

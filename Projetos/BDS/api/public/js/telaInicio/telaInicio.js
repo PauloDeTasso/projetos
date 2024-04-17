@@ -1,7 +1,6 @@
 
 /*********************************************/
 /*CARROSEL PRINCIPAL*/
-
 const carousel = document.querySelector(".carousel");
 const slides = document.querySelector(".slides");
 const slideCount = document.querySelectorAll(".slide").length;
@@ -119,23 +118,14 @@ carousel.addEventListener("touchmove", (event) => {
 /********************************************/
 /*AVANÇO AUTOMATICO DO CARROSSEL*/
 
-// Função para verificar se o carrossel está visível e iniciar ou parar o auto-avanço
-function carrosselEstaVisivelNaTela() {
-  const elementoCarrossel = document.querySelector(".carousel");
-  if (elementoVisivelNaTela(elementoCarrossel)) {
-    iniciarAvancoAutomaticoCarrossel();
-  } else {
-    pararAvancoAutomaticoCarrossel();
-  }
-}
-
 // Variável para armazenar o temporizador do auto-avanço
 let temporizadorAvancoAutomatico;
 
 // Função para iniciar o temporizador do auto-avanço
 // Avança para o próximo slide a cada 5 segundos
 function iniciarAvancoAutomaticoCarrossel() {
-  if (!temporizadorAvancoAutomatico) {
+  if (!temporizadorAvancoAutomatico)
+  {
     temporizadorAvancoAutomatico = setInterval(proximoSlide, 5000);
   }
 }
@@ -195,18 +185,22 @@ function handleTouchMove(event) {
 
 // Reiniciar o auto-avanço após 7 segundo de inatividade
 function handleTouchEnd() {
-  touchTimer = setTimeout(carrosselEstaVisivelNaTela, 7000);
+  touchTimer = setTimeout(
+    iniciarAvancoAutomaticoCarrossel, 7000);
 }
 
 // Verificar a visibilidade do carrossel ao carregar a página
-window.addEventListener("load", carrosselEstaVisivelNaTela);
+window.addEventListener("load", 
+    iniciarAvancoAutomaticoCarrossel);
 
 // Verificar a visibilidade do carrossel ao rolar a página
-window.addEventListener("scroll", carrosselEstaVisivelNaTela);
+window.addEventListener("scroll", 
+    iniciarAvancoAutomaticoCarrossel);
 
 /**************************************************/
 /*BANNER COOKIE*/
 // JavaScript para manipular o aviso de cookies
+/*
 
 if (!verificarCookiesAceitos()) {
         document.getElementById("cookie-banner").style.display = "block";
@@ -236,6 +230,7 @@ function verificarCookiesAceitos() {
 /*****************************************************/
 /*TEMPO DE SESSÃO*/
 /* Controle de Sessão */
+/*
 let inativo = false;
 
 function reiniciarTempoSessao() {
@@ -257,4 +252,4 @@ document.addEventListener('keypress', reiniciarTempoSessao); // Pressionamento d
 
 // Inicie a contagem regressiva inicial
 let tempoSessao = setTimeout(finalizarSessao, 1800000); // 30 minutos
-
+*/

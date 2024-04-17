@@ -1,26 +1,28 @@
-<!-------------------------CONTEUDO CENTRAL---------------------------->
-
 <?php
-// Converter a string JSON de volta para um array associativo
-$produto_array = json_decode($produto, true);
+// Supondo que $produtoJson contenha seu JSON
 
-// Verificar se a conversão foi bem-sucedida
-if ($produto_array === null) {
-    // Tratar caso a conversão falhe
-    echo "Erro ao decodificar o JSON.";
-} else {
-    // Exibir os detalhes do produto
-?>
-<div class="secaoConteudoPrincipalProdutoEspecifico">
-    <div class="product">
-        <h2>Detalhes do Produto</h2>
-        <ul>
-            <?php foreach ($produto_array as $chave => $valor) : ?>
-            <li><strong><?php echo $chave; ?>:</strong> <?php echo $valor; ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</div>
-<?php
+// Decodificar o JSON para um objeto PHP
+$produtoEspecifico = json_decode($produtoJson);
+
+// Verificar se a decodificação foi bem-sucedida
+if ($produtoEspecifico === null)
+{
+    echo "<div class='secaoConteudoPrincipalProdutoEspecifico'>
+            <h1>Erro ao decodificar o JSON.</h1>
+          </div>";
 }
-?>
+else
+{
+    // Exibição do conteúdo com as classes CSS
+    echo "<div class='secaoConteudoPrincipalProdutoEspecifico'>
+            <div class='produto'>";
+
+    // Iterar sobre as propriedades do objeto
+    foreach ($produtoEspecifico as $propriedade => $valor)
+    {
+        // Exibir o nome da propriedade e seu valor
+        echo "<p><strong>$propriedade:</strong> $valor</p>";
+    }
+
+    echo "</div></div>";
+}

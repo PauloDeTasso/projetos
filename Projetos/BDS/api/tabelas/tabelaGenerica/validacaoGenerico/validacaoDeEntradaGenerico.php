@@ -1,25 +1,28 @@
 <?php
-
-class TabelaValidacao
+class ValidacaoDeEntrada
 {
 
     // Método para validar um nome
     public static function validarNome($nome)
     {
-        // Apenas letras e espaços são permitidos no nome
-        return preg_match('/^[a-zA-ZÀ-ÿ\s]+$/', $nome);
+        // Aceita letras (maiúsculas e minúsculas), números e caracteres especiais do alfabeto brasileiro, incluindo "Ã", "Ç", "É", etc.
+        return preg_match('/^[\p{L}\p{N}çÇãÃáÁàÀâÂéÉêÊíÍóÓõÕôÔúÚüÜ\s]+$/u', $nome);
     }
+
 
     // Método para validar um CPF
     public static function validarCPF($cpf)
     {
         // Verifica se o CPF possui 11 dígitos e se atende ao algoritmo de validação
-        if (strlen($cpf) != 11) {
+        if (strlen($cpf) != 11)
+        {
             return false;
         }
 
-        for ($i = 0; $i < 10; $i++) {
-            if (substr_count($cpf, $i) == 11) {
+        for ($i = 0; $i < 10; $i++)
+        {
+            if (substr_count($cpf, $i) == 11)
+            {
                 return false;
             }
         }
@@ -28,11 +31,13 @@ class TabelaValidacao
         $v1 = 0;
         $v2 = 0;
 
-        for ($i = 0, $p = 10; $i < 9; $i++, $p--) {
+        for ($i = 0, $p = 10; $i < 9; $i++, $p--)
+        {
             $v1 += $cpf[$i] * $p;
         }
 
-        for ($i = 0, $p = 11; $i < 10; $i++, $p--) {
+        for ($i = 0, $p = 11; $i < 10; $i++, $p--)
+        {
             $v2 += $cpf[$i] * $p;
         }
 
@@ -46,12 +51,15 @@ class TabelaValidacao
     public static function validarCNPJ($cnpj)
     {
         // Verifica se o CNPJ possui 14 dígitos e se atende ao algoritmo de validação
-        if (strlen($cnpj) != 14) {
+        if (strlen($cnpj) != 14)
+        {
             return false;
         }
 
-        for ($i = 0; $i < 10; $i++) {
-            if (substr_count($cnpj, $i) == 14) {
+        for ($i = 0; $i < 10; $i++)
+        {
+            if (substr_count($cnpj, $i) == 14)
+            {
                 return false;
             }
         }
@@ -60,7 +68,8 @@ class TabelaValidacao
         $soma = 0;
         $multiplicador = 5;
 
-        for ($i = 0; $i < 12; $i++) {
+        for ($i = 0; $i < 12; $i++)
+        {
             $soma += $cnpj[$i] * $multiplicador;
             $multiplicador = ($multiplicador == 2) ? 9 : $multiplicador - 1;
         }
@@ -115,7 +124,8 @@ class TabelaValidacao
     public static function validarData($data)
     {
         // Verifica se a data está no formato dd/mm/aaaa
-        if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $data)) {
+        if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $data))
+        {
             return false;
         }
 

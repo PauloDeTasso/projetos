@@ -67,9 +67,10 @@ if ($ehDispositivoMovel && $ehAppMovel && ($ehLocalhost || $ehSiteProducao) && $
 // Se for localhost ou site de produção, abre a rota da Web
 if ($ehLocalhost || $ehSiteProducao)
 {*/
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/api/public/php/rotas/rotasPorMetodoHttpWeb.php';
 exit(); // Saímos do script após abrir a rota da Web
-    /*
+/*
 }
 
 // Se não for nenhum dos casos anteriores, retorna uma mensagem JSON de erro

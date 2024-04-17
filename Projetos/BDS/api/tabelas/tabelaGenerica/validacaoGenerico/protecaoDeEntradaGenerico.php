@@ -1,7 +1,7 @@
 <?php
 // TabelaProtecaoEntrada.php
 
-class TabelaProtecaoEntrada
+class ProtecaoDeEntrada
 {
     public static function validarTexto($texto)
     {

@@ -5,14 +5,68 @@ $urlCssPcMin768 =  "http://localhost/api/public/css/index/pcMin768.css";
 $urlJs = "http://localhost/api/public/js/index/index.js";
 $favIcon = "http://localhost/api/public/recursos/imagens/logos/Logo002-PNG.png";
 
-//TELAS
+//DB
+$coneccaoBdsWeb = $_SERVER['DOCUMENT_ROOT'] . '/api/DAO/ConexaoDbBdsWeb.php';
+
+//UTILIDADES:
+$protecaoDeEntrada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/validacaoGenerico/protecaoDeEntradaGenerico.php';
+$validacaoDeEntrada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/validacaoGenerico/validacaoDeEntradaGenerico.php';
+$utilidadeGenerica = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/utilidadeGenerico/utilidadeGenerico.php';
+
+////TELAS:
+
+//TELA HEADER E FOOTER - PADRAO TIPO 1
 $telaHeaderTipo01 = $_SERVER['DOCUMENT_ROOT'] . '/api/public/php/headers/telaHeaderTipo1.php';
 $telaFooterTipo01 = $_SERVER['DOCUMENT_ROOT'] . '/api/public/php/footers/telaFooterTipo1.php';
+
+//INICIAL
 $telaInicio = $_SERVER['DOCUMENT_ROOT'] . '/api/public/php/mains/telaInicio.php';
 
-//ROTAS
-$produtoRotaGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoRota/produtoRotaGet.php';
-$usuarioRotaGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioRota/usuarioRotaGet.php';
+////TABELA GENERICA
+//DAO
+$tabelaGenericaDaoGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/daoGenerica/tabelaGenericaDaoGet.php';
+$tabelaUtilidades = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/utilidadeGenerico/utilidadeGenerico.php';
+////PRODUTOS:
+//CONTROLES
+$produtoControleGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoControle/produtoControleGet.php';
+//MODELOS:
+$produtoModelo = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoModelo/produtoModelo.php';
+//SERVIÇOS
+$produtoServicoGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoModelo/produtoServico/produtoServicoGet.php';
+//DAO'S
+$produtoDaoGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoDao/produtoDaoGet.php';
+
+//TELA GENERICA DE ERRO
+$telaGenericaErro = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/telaGenerica/telaErroGenerico.php';
+
+//TELAS DE PRODUTOS:
+$telaTodosOsProdutos = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaTodosOsProdutos.php';
+$telaProdutoEspecifico = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaProdutoEspecifico.php';
+$telaProdutoPesquisa = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaPesquisaPorTexto.php';
+$telaProdutoPesquisaAvancada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoPesquisaAvancada.php';
+$telaProdutoErro = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaErro.php';
+
+////USUARIOS:
+//CONTROLES
+$usuarioControleGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioControle/usuarioControleGet.php';
+//MODELOS:
+$usuarioModelo = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioModelo/usuarioModelo.php';
+//SERVIÇOS
+$usuarioServicoGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioModelo/usuarioServico/usuarioServicoGet.php';
+//DAO'S
+$usuarioDaoGet = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioDao/usuarioDaoGet.php';
+
+//TELAS DE USUARIOS:
+$telaTodosOsUsuarios = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioTela/usuarioTelaGet/usuarioTelaTodosOsUsuarios.php';
+$telaUsuarioEspecifico = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioTela/usuarioTelaGet/usuarioTelaUsuarioEspecifico.php';
+$telaUsuarioPesquisa = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioTela/usuarioTelaGet/usuarioTelaPesquisaPorTexto.php';
+$telaUsuarioErro = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaUsuario/usuarioTela/usuarioTelaErro.php';
+
+/**************************************************************/
+//
+require_once $utilidadeGenerica;
+
+////LOGICA DAS ROTAS:
 
 // Obtém a URI sem o hostname
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -24,40 +78,41 @@ $subUri = explode('/', trim($uri, '/'));
 switch ($_SERVER['REQUEST_METHOD'])
 {
     case 'GET':
-        //HOME
+        //INICIO
         if ($subUri[0] == 'inicio' || $uri == '/')
         {
             $urlJs2 = "http://localhost/api/public/js/telaInicio/telaInicio.js";
 
-            //CHAMA A PAGINA HOME
             require_once $telaHeaderTipo01;
             require_once $telaInicio;
             require_once $telaFooterTipo01;
+
             exit();
         }
+        //USUARIOS
         else if ($subUri[0] === 'usuarios')
         {
-            require_once $usuarioRotaGet;
+            require_once $usuarioControleGet;
         }
-        else if ($subUri[0] == 'produtos')
+        //PRODUTOS
+        else if ($subUri[0] === 'produtos')
         {
-            require_once $produtoRotaGet;
+            require_once $produtoControleGet;
         }
+        //CLIENTES
         else if ($subUri[0] === 'clientes')
         {
             require_once('tabelas/cliente/clienteRotaGet.php');
         }
+        //ENDEREÇO
         else if ($subUri[0] === 'endereco')
         {
             require_once('tabelas/endereco/enderecoRotaGet.php');
         }
+        //CONFIGURACAO
         else if ($subUri[0] === 'configuracao_site')
         {
             require_once('tabelas/configuracao_site/configuracaoSiteRotaGet.php');
-        }
-        else if ($subUri[0] === 'usuarios')
-        {
-            require_once('tabelas/usuarios/usuariosRotaGet.php');
         }
         else if ($subUri[0] === 'categorias')
         {
@@ -171,10 +226,31 @@ switch ($_SERVER['REQUEST_METHOD'])
         {
             require_once('tabelas/datas_de_atualizacoes/datasDeAtualizacoesRotaGet.php');
         }
+        //URI = /erro/?erro=$tipo_erro&mensagem=$mensagem_erro&recomendacao=$recomendacao
+        else if ($subUri[0] === 'erro' && !isset($subUri[2]))
+        {
+            if (
+                isset($_GET['erro']) && isset($_GET['mensagem'])
+                && isset($_GET['recomendacao'])
+            )
+            {
+                $tipo_erro = $_GET['erro'];
+                $mensagem_erro = $_GET['mensagem'];
+                $recomendacao = $_GET['recomendacao'];
+                require_once $telaHeaderTipo01;
+                require_once $telaGenericaErro;
+                require_once $telaFooterTipo01;
+                exit();
+            }
+            exit();
+        }
         else
         {
-            http_response_code(400);
-            echo json_encode(array("Erro:" => "A URI ($uri) é inválida!"), JSON_UNESCAPED_UNICODE);
+            require_once $telaHeaderTipo01;
+            require_once $telaInicio;
+            require_once $telaFooterTipo01;
+            Utilidades::exibirToast('Erro de recurso (400)!', 'URI inválida', "A URI ($uri) é inválida!");
+            exit();
         }
 
         break;

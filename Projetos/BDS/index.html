@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Inicial</title>
+    <title>Bella Donna Store</title>
     <link rel="stylesheet" href="api/public/css/index/mobileMax768.css" media="screen and (max-width: 768px)" />
     <link rel="stylesheet" href="api/public/css/index/pcMin768.css" media="screen and (min-width: 768px)" />
     <link rel="icon" href="api/public/recursos/imagens/logos/Logo002-PNG.png" type="image/x-icon">
@@ -16,7 +16,6 @@
 
   <body>
     <!-------------------------HEADER---------------------------->
-
     <!-----------------------LOGIN / CADASTRO------------------------------>
     <header id="loginCadastro">
 
@@ -52,20 +51,20 @@
       <ul>
         <hr />
         <li>
-          <a href="#" onclick="enviarRequisicao('/home')">INICIO</a>
+          <a href="#" onclick="enviarRequisicao('/inicio')">INICIO</a>
         </li>
         <hr />
         <li>
-          <a href="#" onclick="enviarRequisicao('/produtos')">TODOS OS PRODUTOS</a>
+          <a href="#" onclick="enviarRequisicao('/produtos?root=menu')">TODOS OS PRODUTOS</a>
         </li>
         <hr />
         <li><a href="#" onclick="enviarRequisicao('/produtos/1')">T-SHIRT</a></li>
         <hr />
         <li><a href="#" onclick="enviarRequisicao('/produtos/2')">CROPPED</a></li>
         <hr />
-        <li><a href="#" onclick="enviarRequisicao('/blusas')">BLUSAS</a></li>
+        <li><a href="#" onclick="enviarRequisicao('/produtos/promocao')">BLUSAS</a></li>
         <hr />
-        <li><a href="#" onclick="enviarRequisicao('/vestidos')">VESTIDOS</a></li>
+        <li><a href="#" onclick="enviarRequisicao('/produtos/promocao/marca')">VESTIDOS</a></li>
         <hr />
         <li class="parent-item">
           <a href="#">SAIAS:</a>
@@ -99,7 +98,7 @@
         </li>
         <hr />
         <li>
-          <a href="#" onclick="enviarRequisicao('minhaconta')">MINHA CONTA</a>
+          <a href="#" onclick="enviarRequisicao('/usuarios')">MINHA CONTA</a>
         </li>
         <hr />
         <li>
@@ -109,10 +108,14 @@
       </ul>
     </aside>
 
-    <section class="main">
+    <!-------------------------TOAST---------------------------->
+    <div id="toast" class="toast">
+      <div class="toast-titulo" id="toast-titulo"></div>
+      <div class="toast-mensagem" id="toast-mensagem"></div>
+      <div class="toast-recomendacao" id="toast-recomendacao"></div>
+    </div>
 
-      <!-------------------------------------------------------------->
-      <!-------------------------CONTEUDO CENTRAL---------------------------->
+    <section class="main">
 
       <!-------------------------CARROSSEL---------------------------->
       <section class="secaoCarrossel">
@@ -130,9 +133,15 @@
 
       <hr />
 
+      <div id="cookie-banner" class="cookie-banner">
+        <p>Este site usa cookies para garantir que você obtenha a melhor experiência.</p>
+        <a href="/politica-de-privacidade">Política de Privacidade</a>
+        <button onclick="aceitarCookies()">Aceitar</button>
+        <span onclick="fecharBanner()" class="fechar-banner">&times;</span>
+      </div>
+
     </section>
 
-    <script src="/api/public/js/home/home.js"></script>
 
     <!-------------------------------------------------------------->
     <!-------------------------FOOTER---------------------------->
@@ -289,7 +298,7 @@
 
     <!-------------------------FINAL---------------------------->
     <script src="api/public/js/index/index.js"></script>
-    <script src="api/public/js/home/home.js"></script>
+    <script src="api/public/js/telaInicio/telaInicio.js"></script>
   </body>
 
 </html>

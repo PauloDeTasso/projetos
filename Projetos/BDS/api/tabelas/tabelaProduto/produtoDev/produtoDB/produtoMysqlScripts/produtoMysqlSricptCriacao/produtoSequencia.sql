@@ -10,6 +10,15 @@ CREATE TABLE IF NOT EXISTS Categoria (
     UNIQUE(nomeCategoria) -- Garante que o nome da categoria seja único
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Tabela para armazenar as subcategorias de produtos
+CREATE TABLE IF NOT EXISTS Subcategoria (
+    idSubcategoria INT AUTO_INCREMENT PRIMARY KEY,
+    nomeSubcategoria VARCHAR(255) NOT NULL,
+    descricaoSubcategoria TEXT,
+    categoriaId INT,
+    FOREIGN KEY (categoriaId) REFERENCES Categoria(idCategoria)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Tabela para armazenar as marcas dos produtos
 CREATE TABLE IF NOT EXISTS Marca (
     idMarca INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,6 +48,7 @@ CREATE TABLE IF NOT EXISTS Produto (
     nomeProduto VARCHAR(255) NOT NULL, -- Nome do produto
     descricaoProduto TEXT, -- Descrição do produto
     categoriaId INT, -- Chave estrangeira para a tabela de categorias
+    subcategoriaId INT, -- Chave estrangeira para a tabela de subcategorias
     marcaId INT, -- Chave estrangeira para a tabela de marcas
     produtoTamanhoId INT, -- Chave estrangeira para a tabela de tamanhos
     bustoProduto DECIMAL(10,2), -- Medidas do produto
@@ -55,8 +65,10 @@ CREATE TABLE IF NOT EXISTS Produto (
     FOREIGN KEY (categoriaId) REFERENCES Categoria(idCategoria), -- Define a relação com a tabela de categorias
     FOREIGN KEY (marcaId) REFERENCES Marca(idMarca), -- Define a relação com a tabela de marcas
     FOREIGN KEY (produtoTamanhoId) REFERENCES Tamanho(idTamanho), -- Define a relação com a tabela de tamanhos
-    FOREIGN KEY (corId) REFERENCES Cor(idCor) -- Define a relação com a tabela de cores
+    FOREIGN KEY (corId) REFERENCES Cor(idCor), -- Define a relação com a tabela de cores
+    FULLTEXT(nomeProduto) -- Índice FULLTEXT na coluna nomeProduto
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Tabela para armazenar as imagens dos produtos
 CREATE TABLE IF NOT EXISTS Foto (

@@ -1,12 +1,13 @@
 <?php
 // TabelaUtilidades.php
 
-class TabelaUtilidades
+class Utilidades
 {
     // Função para calcular o preço com desconto
     public static function calcularPrecoComDesconto($preco, $desconto)
     {
-        if ($desconto < 0 || $desconto > 100) {
+        if ($desconto < 0 || $desconto > 100)
+        {
             throw new InvalidArgumentException('O desconto deve estar entre 0 e 100.');
         }
 
@@ -25,9 +26,30 @@ class TabelaUtilidades
     {
         $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $codigo = '';
-        for ($i = 0; $i < $tamanho; $i++) {
+        for ($i = 0; $i < $tamanho; $i++)
+        {
             $codigo .= $caracteres[rand(0, strlen($caracteres) - 1)];
         }
         return $codigo;
+    }
+
+    // Função para exibir um toast
+    public static function exibirToast($titulo, $mensagem, $recomendacao)
+    {
+        $toastScript = "<script>exibirToast('$titulo', '$mensagem', '$recomendacao');</script>";
+        echo $toastScript;
+    }
+
+    public static function incluirArquivos(...$arquivos)
+    {
+        if (empty($arquivos))
+        {
+            return;
+        }
+
+        foreach ($arquivos as $arquivo)
+        {
+            require_once $arquivo;
+        }
     }
 }
