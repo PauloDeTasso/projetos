@@ -1,6 +1,11 @@
 <div class="secaoConteudoPrincipalTodosOsProdutos">
 
     <?php
+
+    require_once $telaProdutoOrdenacao;
+
+    echo "<h3>RESULTADOS PARA \"$textoPesquisadoProtegido\":</h3>";
+
     // Verifique se há produtos retornados pela pesquisa
     if (!empty($produtosPesquisadosPorTextoJson))
     {

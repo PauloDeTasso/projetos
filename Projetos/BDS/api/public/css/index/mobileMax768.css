@@ -1,4 +1,5 @@
-/*********************************************************/
+
+/********************************************************************/
 /*PRINCIPAL*/
 
 html {
@@ -66,7 +67,7 @@ body {
   padding: 0px;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*MENU LATERAL*/
 
 .menuLateral {
@@ -92,7 +93,7 @@ body {
    z-index: 30;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*SUBITENS*/
 /* Estilo do menu lateral e subitens */
 .menuLateral ul ul {
@@ -135,7 +136,7 @@ body {
   margin-right: 0px; /* Espaçamento entre o sinal "+" e o texto do item */
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CAMPO PESQUISA*/
 
 .secaoBotaoPesquisar {
@@ -217,7 +218,7 @@ body {
   background-color: rgba(255, 112, 191, 1);
 }
 
-/**********************************************************/
+/********************************************************************/
 /*TELA OCULTA PARA ACAO DE CLIQUES*/
 
 .overlay {
@@ -231,7 +232,7 @@ body {
   display: none;
 }
 
-/**********************************************************/
+/********************************************************************/
 /*LOGIN - CADASTRO*/
 
 #loginCadastro {
@@ -257,7 +258,7 @@ body {
   margin: 0 5px;
 }
 
-/**********************************************************/
+/********************************************************************/
 /*BOTÃO HAMBUGUER - MENU LATERAL*/
 
 .secaoHamburguerMenu {
@@ -329,7 +330,8 @@ menuLateral:not(.open) {
     opacity: 0.3;
   }
 }
-/*********************************************************/
+
+/********************************************************************/
 /*CABEÇALHO*/
 
 .logoPng001 {
@@ -379,7 +381,7 @@ menuLateral:not(.open) {
   z-index: 11;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CARROSEL PRINCIPAL*/
 
 .secaoCarrossel {
@@ -441,7 +443,7 @@ menuLateral:not(.open) {
   background-image: url("../../recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
 }
 
-/*********************************************************/
+/********************************************************************/
 /*SERVIÇOS*/
 
 .servicos {
@@ -529,7 +531,7 @@ menuLateral:not(.open) {
   background-size: contain;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CATEGORIAS*/
 
 .categorias {
@@ -571,7 +573,7 @@ menuLateral:not(.open) {
   font-size: small;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*TSHIRTS*/
 
 .tshirts,
@@ -604,7 +606,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*VESTIDOS*/
 
 .vestidos,
@@ -637,7 +639,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*SAIAS*/
 
 .saias,
@@ -670,7 +672,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CALÇAS*/
 
 .calcas,
@@ -703,7 +705,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CONJUNTOS*/
 
 .conjuntos,
@@ -736,7 +738,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/**************************************************/
+/********************************************************************/
 /*VER TUDO*/
 
 .verTudo {
@@ -754,7 +756,7 @@ menuLateral:not(.open) {
   border-radius: 14px;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*AVALIAÇÕES E COMENTARIOS*/
 
 .avaliacoes {
@@ -769,7 +771,7 @@ menuLateral:not(.open) {
   padding: 0px;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*PROPAGANDAS*/
 
 .imagens {
@@ -808,7 +810,7 @@ menuLateral:not(.open) {
   background-image: url("../../recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
 }
 
-/*********************************************************/
+/********************************************************************/
 /*CONTATO*/
 
 .contato {
@@ -865,7 +867,7 @@ menuLateral:not(.open) {
   font-weight: 700;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*MAIS INFORMAÇÕES - FORMAS DE PAGAMENTO - SELO*/
 
 .maisInformacoes,
@@ -920,7 +922,7 @@ menuLateral:not(.open) {
   cursor: pointer;
 }
 
-/*********************************************************/
+/********************************************************************/
 /*MARCA*/
 
 footer {
@@ -966,7 +968,7 @@ footer {
   background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
 }
 
-/*********************************************************/
+/********************************************************************/
 /*BOTAO WHATSAPP*/
 
 #whatsapp-button {
@@ -1045,7 +1047,7 @@ footer {
   opacity: 0.5;
 }
 
-/*******************************************************/
+/********************************************************************/
 /*CONTEUDO PRINCIPAL*/
 
 .secaoConteudoPrincipal {
@@ -1064,7 +1066,7 @@ footer {
   border: 1px solid black;
 }
 
-/*******************************************************/
+/********************************************************************/
 /*api\tabelas\produto\produtoTela\produtoTelaTodosOsProdutos.php*/
 
 .secaoConteudoPrincipalTodosOsProdutos {
@@ -1085,16 +1087,26 @@ footer {
 
 .produto {
   width: 80%;
-  border: 1px solid #ff7fbf;
+  border: 1px solid rgb(232, 84, 163);
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #ffaeff;
+  margin-bottom: 10px;  
+  background-color: #ffade4;
   font-size: small;
 }
 
-/*******************************************************/
+.secaoConteudoPrincipalTodosOsProdutos h3{
+padding: 5px;
+color: #fe55b5;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+background-color: rgba(244, 244, 244, 0.5);
+margin: 0px;
+margin-top: 10px;
+}
+
+/********************************************************************/
 /*api\tabelas\produto\produtoTela\produtoTelaProdutoEspecifico.php*/
 
 .secaoConteudoPrincipalProdutoEspecifico
@@ -1113,7 +1125,7 @@ footer {
   border: 1px solid black;
 }
 
-/**********************************************************/
+/********************************************************************/
 /*PRODUTOS POR PREÇO MINIMO E PREÇO MAXIMO*/
 /* Estilos para os inputs de preço */
 .preco-inputs {
@@ -1180,7 +1192,7 @@ footer {
     margin-top: 5px;
 }
 
-/**********************************************************/
+/********************************************************************/
 /*BANNER COOKIE*/
 /* CSS para o Aviso de Cookies */
 .cookie-banner {
@@ -1189,7 +1201,7 @@ footer {
     bottom: 10px;
     width: 80%;
     height: auto;
-    background-color: #844484; /* Cor rosa escura */
+    background-color: #cc63b0; /* Cor rosa escura */
     padding: 10px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
@@ -1235,7 +1247,7 @@ footer {
 }
 
 
-/*************************************************/
+/********************************************************************/
 /*TELA USUARIOS TODOS OS USUARIOS*/
  /* Estilos para a lista de usuários */
   .secaoConteudoPrincipalTodosOsUsuarios {
@@ -1269,7 +1281,7 @@ footer {
    padding: 0px;
     }
 
-    /**********************************************/
+/********************************************************************/
     /*TELA ERRO*/
     .secaoConteudoPrincipalErro{
     display: flex;
@@ -1290,7 +1302,7 @@ footer {
     font-size: small;
     }
 
-    /**********************************************/
+/********************************************************************/
  /*TOAST*/
 .toast {
   display: none;
@@ -1344,7 +1356,7 @@ color: #ffffff;
  padding: 15px;
       }
 
-/**********************************************/
+/********************************************************************/
 /*PESQUISA AVANÇADA*/
 /* Estilos para a seção de Pesquisa Avançada */
 
@@ -1394,7 +1406,7 @@ color: #ffffff;
     border: 1px solid rgb(232, 84, 163);
     border-radius: 10px;
     padding: 10px;
-    background-color: #ffa6e1;
+    background-color: #ffade4;
     font-size: small;
     opacity: 0;
     visibility: hidden;
@@ -1464,6 +1476,18 @@ color: #ffffff;
     width: auto;
 }
 
+.secaoBotoesFormularioPesquisaAvancada{
+display: flex; 
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: auto;
+height: auto;
+padding: 5px;
+margin-bottom: 5px;
+}
+
 #btnPesquisar01 {
   display: flex; 
     flex-direction: column;
@@ -1473,7 +1497,7 @@ color: #ffffff;
     width: auto;
     height: auto;
     margin: 5px;
-    padding: 5px 0px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #ff43a1;
     color: white;
@@ -1491,7 +1515,7 @@ color: #ffffff;
     width: auto;
     height: auto;
     margin: 5px;
-    padding: 5px 0px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #ccc;
     color: #333;
@@ -1526,6 +1550,7 @@ color: #ffffff;
   background-color: rgba(0, 0, 0, .1); /* Altera a cor de fundo ao passar o mouse */  
 }
 
+/********************************************************************/
 /*SESSÃO FILTRO POR PREÇO*/
 /* Estilo para a seção de filtro por preço */
 #secaoFiltroPreco {
@@ -1590,6 +1615,7 @@ label[for="porPrecoCheckbox"] {
   margin-right: 0px;
 }
 
+/********************************************************************/
 /*SESSÃO FILTRO POR TAMANHO*/
 #secaoFiltroTamanho {
     display: flex;
@@ -1651,4 +1677,199 @@ label[for="porTamanhoCheckbox"] {
     padding: 0px 0px;
     border-radius: 10px;
   margin-right: 0px;
+}
+
+
+/********************************************************************/
+/*SESSÃO FILTRO POR PROMOCAO*/
+#secaoFiltroPromocao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: auto;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: display 0.5s ease;
+}
+
+/* Estilo para o texto do checkbox */
+label[for="porPromocaoCheckbox"] {
+    display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+    margin-right: 0px;
+}
+
+#porPromocaoCheckbox{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+    margin-right: 0px;
+}
+
+/********************************************************************/
+/*POR CORES*/
+/* Estilo para a seção de filtro por cor */
+#secaoFiltroCor {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    width: 95%;
+    height: auto;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: display 0.5s ease;
+}
+
+/* Estilo para o texto do checkbox de cor */
+label[for="porCorCheckbox"] {
+    display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+    width: 80%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    margin-right: 0px;
+}
+
+/* Estilo para a seção de filtro por cor */
+#filtroCor {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0); 
+    border: 1px solid rgba(0, 0, 0, .1);
+    transition: display 0.5s ease;
+}
+
+#opcoesCores
+{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0px;
+}
+/* Estilo para as opções de cores */
+.opcaoCor {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.opcaoCor input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.opcaoCor label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Mostra a seção de cores quando o checkbox de filtro por cor está marcado */
+#porCorCheckbox:checked ~ #filtroCor {
+    display: flex;
+}
+
+#secaoPesquisa01 label, p{
+color: #000000;
+font-weight: 700;
+font-size: small;
+text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+
+/********************************************************************/
+/*POR DISPONIBILIDADE*/
+/* Estilo para a seção de filtro por disponibilidade */
+#secaoFiltroDisponibilidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: auto;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: display 0.5s ease;
+}
+
+/* Estilo para o texto do checkbox de disponibilidade */
+label[for="porDisponibilidadeCheckbox"] {
+    display: flex; 
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+    margin-right: 0px;
+}
+#porDisponibilidadeCheckbox{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    margin: 0%;
+    padding: 0px 0px;
+    border-radius: 10px;
+    margin-right: 0px;
 }

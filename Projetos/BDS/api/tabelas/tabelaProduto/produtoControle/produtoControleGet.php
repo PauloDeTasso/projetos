@@ -25,7 +25,7 @@ if ($subUri[0] === 'produtos' && !isset($subUri[1]))
         else if (isset($_GET['root']) && $_GET['root'] === 'produtos')
         {
             require_once $telaHeaderTipo01;
-            require_once $telaProdutoPesquisa;
+            require_once $telaInicio;
             require_once $telaFooterTipo01;
             Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
         }
@@ -43,7 +43,7 @@ if ($subUri[0] === 'produtos' && !isset($subUri[1]))
         else if (isset($_GET['root']) && $_GET['root'] === 'produtos')
         {
             require_once $telaHeaderTipo01;
-            require_once $telaProdutoPesquisa;
+            require_once $telaInicio;
             require_once $telaFooterTipo01;
             Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
         }

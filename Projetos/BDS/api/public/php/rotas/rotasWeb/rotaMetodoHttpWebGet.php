@@ -42,9 +42,11 @@ $telaGenericaErro = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaGenerica/tel
 //TELAS DE PRODUTOS:
 $telaTodosOsProdutos = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaTodosOsProdutos.php';
 $telaProdutoEspecifico = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaProdutoEspecifico.php';
-$telaProdutoPesquisa = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaPesquisaPorTexto.php';
-$telaProdutoPesquisaAvancada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoPesquisaAvancada.php';
+$telaProdutoPesquisadoPorTexto = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaGet/produtoTelaPesquisaPorTexto.php';
+$telaProdutoPesquisaAvancada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaPesquisaAvancada.php';
 $telaProdutoErro = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaErro.php';
+$telaPesquisaAvancada = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaPesquisaAvancada.php';
+$telaProdutoOrdenacao = $_SERVER['DOCUMENT_ROOT'] . '/api/tabelas/tabelaProduto/produtoTela/produtoTelaOrdenacao.php';
 
 ////USUARIOS:
 //CONTROLES

@@ -210,7 +210,7 @@ function somTerminou()
 }
 */
 
-luzes();
+//uzes();
 
 function luzes() {
   secaoNorteImagem.setAttribute("src", "imagens/luzes/preto e branco/0.jpg");

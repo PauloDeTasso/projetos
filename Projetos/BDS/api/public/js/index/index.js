@@ -276,9 +276,35 @@ filtroPrecoMaximoInput.addEventListener("input", function () {
 
 /*BOTAO RESET 1*/
 function limparCampos() {
-    seletorPesquisaAvancadaPrincipal.selectedIndex = 0; // Defina o primeiro item como selecionado
-    document.getElementById("filtro_preco_maximo").value = 1000; // Defina o valor padrão para o campo de filtro de preço
-    filtroPrecoMaximoValor.innerHTML = filtroPrecoMaximoInput.value;
+    // Limpa o seletor de tipo de peça, definindo o primeiro item como selecionado
+    seletorPesquisaAvancadaPrincipal.selectedIndex = 0;
+
+    // Limpa o campo de filtro de preço, definindo o valor padrão
+    document.getElementById("filtro_preco_maximo").value = 1000;
+    // Atualiza o valor exibido do filtro de preço
+    filtroPrecoMaximoValor.innerHTML = filtro_preco_maximo.value;
+
+    // Desmarca o checkbox de filtro por preço
+    document.getElementById('porPrecoCheckbox').checked = false;
+
+    // Desmarca o checkbox de filtro por tamanho
+    document.getElementById('porTamanhoCheckbox').checked = false;
+    // Reseta o seletor de tamanho, selecionando a opção padrão
+    document.getElementById('tamanho').selectedIndex = 0;
+
+    // Desmarca todos os checkboxes de filtro por cor
+    const checkboxesCores = document.querySelectorAll('#opcoesCores input[type="checkbox"]');
+    checkboxesCores.forEach(function(checkbox) {
+        checkbox.checked = false;
+    });
+    // Esconde a seção de filtro por cor
+    document.getElementById('filtroCor').style.display = 'none';
+
+    // Desmarca o checkbox de filtro por cor
+    document.getElementById('porCorCheckbox').checked = false;
+
+    // Desmarca o checkbox de filtro por promoção
+    document.getElementById('porPromocaoCheckbox').checked = false;
 }
 
 /*CHECK BOX FILTRO POR PREÇO*/
@@ -316,7 +342,26 @@ function limparCampos() {
     });
 
 /*******************************************************************/
+/**/
+/*CHECK BOX FILTRO POR CORES*/
+// Obtém o checkbox e a seção de filtro por cor
+const porCorCheckbox = document.getElementById('porCorCheckbox');
+const filtroCor = document.getElementById('filtroCor');
 
+// Adiciona um ouvinte de evento para o checkbox de filtro por cor
+porCorCheckbox.addEventListener('change', function() {
+    // Verifica se o checkbox está marcado
+    if (this.checked) {
+        // Abre a seção de filtro por cor
+        filtroCor.style.display = 'block';
+    } else {
+        // Fecha a seção de filtro por cor
+        filtroCor.style.display = 'none';
+    }
+});
+
+
+/**/
 
 /*NOME DINAMICO PARA SELEÇÃO NA PESQUISA INICIAL*/
 // Adiciona um ouvinte de evento ao elemento select
@@ -334,6 +379,7 @@ seletorPesquisaAvancadaPrincipal.addEventListener("change", function () {
        selecaoValor = pecaSelecionada;
     }
 });
+
 
 /*******************************************************************/
 /*ENVIAR PESQUISA AVANÇADA*/
@@ -377,6 +423,36 @@ function pesquisaAvancada()
         parametros += `tamanho=${tamanhoSelecionado}&`;
       }
     }
+   
+     // Verifica se o checkbox de filtro por cor está marcado
+    const porCorCheckbox = document.getElementById('porCorCheckbox');
+    if (porCorCheckbox.checked) {
+        // Obtém as cores selecionadas
+        const coresSelecionadas = document.querySelectorAll('#opcoesCores input[type="checkbox"]:checked');
+        if (coresSelecionadas.length > 0) {
+            // Cria um array para armazenar as cores selecionadas
+            let cores = [];
+            coresSelecionadas.forEach(function(cor) {
+                cores.push(cor.value);
+            });
+            // Adiciona as cores à string de parâmetros
+            parametros += `cores=${cores.join(",")}&`;
+        }
+    }
+
+  // Verifica se o checkbox de filtro por disponibilidade está marcado
+    const porDisponibilidadeCheckbox = document.getElementById('porDisponibilidadeCheckbox');
+    if (porDisponibilidadeCheckbox.checked) {
+        // Adiciona o filtro por disponibilidade à string de parâmetros
+        parametros += `disponibilidade=1&`;
+    }
+  
+     // Verifica se o checkbox de filtro por promoção está marcado
+    const porPromocaoCheckbox = document.getElementById('porPromocaoCheckbox');
+    if (porPromocaoCheckbox.checked) {
+        // Adiciona o filtro por promoção à string de parâmetros
+        parametros += `promocao=1&`;
+    }   
     
     // Remove o último "&" da string de parâmetros, se houver
     parametros = parametros.slice(0, -1);
@@ -393,4 +469,22 @@ function pesquisaAvancada()
     // Redireciona para a URL da requisição GET
     window.location.href = url;
 }
+
+/*******************************************************************/
+/*ABERTURA DA PESQUISA POR PESQUISA MENU*/
+    // Obtém o caminho da URI
+    var uri = window.location.pathname;
+    
+    // Verifica se a URI corresponde ao padrão desejado
+    if (uri.startsWith('/produtos/pesquisamenu/')) {
+        // Obtém a seção de pesquisa
+        var secaoPesquisa = document.getElementById('secaoPesquisa01');
+        
+        // Adiciona a classe 'aberta' para mostrar a seção com a animação
+        secaoPesquisa.classList.add('aberta');
+}
+    
+
+/*******************************************************************/
+
 

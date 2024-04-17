@@ -487,21 +487,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 #secaoNorteImagem {
+  display: none;
   border: 0px solid rgb(0, 0, 0);
   border-radius: 50%;
 }
 
 #secaoSulImagem {
+  display: none;
   border: 0px solid rgb(0, 0, 0);
   border-radius: 50%;
 }
 
 #secaoLesteImagem {
+  display: none;
   border: 0px solid rgb(0, 0, 0);
   border-radius: 50%;
 }
 
 #secaoOesteImagem {
+  display: none;
   border: 0px solid rgb(0, 0, 0);
   border-radius: 50%;
 }
