@@ -1,0 +1,142 @@
+<button id="btnAbrirPesquisaAvancada">Pesquisa Avançada</button>
+
+<section id="pesquisaAvancada" style="display: none;">
+
+    <!-- Formulário para pesquisa avançada -->
+    <form action="/produtos/pesquisaavancada" method="GET">
+
+
+        <!-- Campo para cor -->
+        <label for="cor">Cor:</label>
+        <select id="cor" name="cor" class="custom-select">
+            <option value="">Selecione uma cor</option>
+            <?php
+            // Cores disponíveis com nomes estilosos
+            $cores = [
+                "#FF0000" => "Vermelho Clássico",
+                "#FFC0CB" => "Rosa Empoeirado",
+                "#800080" => "Roxo Real",
+                "#FF00FF" => "Fucsia Elegante",
+                "#0000FF" => "Azul Marinho",
+                "#00FFFF" => "Ciano Cristal",
+                "#008000" => "Verde Esmeralda",
+                "#FFFF00" => "Amarelo Dourado",
+                "#FFA500" => "Laranja Coral",
+                "#FFFFFF" => "Branco Puro",
+                "#000000" => "Preto Profundo",
+                "#D2B48C" => "Marrom Caramelo",
+                "#FFD700" => "Dourado Luxuoso",
+                "#A52A2A" => "Marrom Café",
+                "#4682B4" => "Azul Safira",
+                "#800000" => "Rubi Escarlate"
+            ];
+
+            // Gerar as opções do menu de seleção de cores
+            foreach ($cores as $codigo_cor => $nome_cor)
+            {
+                // Determina se a cor do texto deve ser branca ou preta com base na luminosidade da cor de fundo
+                $cor_texto = luminosidade_cor($codigo_cor) > 0.5 ? "#000000" : "#FFFFFF";
+                echo "<option value='$codigo_cor' style='background-color: $codigo_cor; color: $cor_texto; font-weight: bold; text-align: center; padding: 5px;'>$nome_cor</option>";
+            }
+
+            // Função para calcular a luminosidade da cor (usada para determinar a cor do texto)
+            function luminosidade_cor($cor)
+            {
+                $cor = str_replace('#', '', $cor);
+                $r = hexdec(substr($cor, 0, 2)) / 255;
+                $g = hexdec(substr($cor, 2, 2)) / 255;
+                $b = hexdec(substr($cor, 4, 2)) / 255;
+                $luminosidade = 0.2126 * $r + 0.7152 * $g + 0.0722 * $b;
+                return $luminosidade;
+            }
+            ?>
+        </select>
+
+        <!-- Seleção de categoria -->
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="">Selecione uma categoria</option>
+            <?php
+            // Categorias disponíveis
+            $categorias = [
+                "Camisetas",
+                "Calças",
+                "Vestidos",
+                "Saias"
+            ];
+
+            // Gerar as opções do menu de seleção de categorias
+            foreach ($categorias as $categoria)
+            {
+                echo "<option value='$categoria'>$categoria</option>";
+            }
+            ?>
+        </select>
+
+        <!-- Seleção de subcategoria -->
+        <label for="subcategoria">Subcategoria:</label>
+        <select id="subcategoria" name="subcategoria">
+            <option value="">Selecione uma subcategoria</option>
+            <?php
+            // Subcategorias disponíveis
+            $subcategorias = [
+                "Manga Curta",
+                "Manga Longa",
+                "Jeans",
+                "Social"
+            ];
+
+            // Gerar as opções do menu de seleção de subcategorias
+            foreach ($subcategorias as $subcategoria)
+            {
+                echo "<option value='$subcategoria'>$subcategoria</option>";
+            }
+            ?>
+        </select>
+
+        <!-- Seleção de marca -->
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca">
+            <option value="">Selecione uma marca</option>
+            <?php
+            // Marcas disponíveis
+            $marcas = [
+                "Nike",
+                "Adidas",
+                "Levi's",
+                "Zara"
+            ];
+
+            // Gerar as opções do menu de seleção de marcas
+            foreach ($marcas as $marca)
+            {
+                echo "<option value='$marca'>$marca</option>";
+            }
+            ?>
+        </select>
+
+        <!-- Checkbox para produtos em promoção -->
+        <label for="promocao">Em Promoção:</label>
+        <input type="checkbox" id="promocao" name="promocao" value="1">
+
+        <!-- Checkbox para ordenação por preço -->
+        <label for="ordenar_preco">Ordenar por Preço:</label>
+        <select id="ordenar_preco" name="ordenar_preco">
+            <option value="asc">Menor para Maior</option>
+            <option value="desc">Maior para Menor</option>
+        </select>
+
+        <!-- Checkbox para ordenação por popularidade -->
+        <label for="ordenar_popularidade">Ordenar por Popularidade:</label>
+        <select id="ordenar_popularidade" name="ordenar_popularidade">
+            <option value="asc">Menos Popular para Mais Popular</option>
+            <option value="desc">Mais Popular para Menos Popular</option>
+        </select>
+
+        <!-- Botão de pesquisa -->
+        <button type="submit">Pesquisar</button>
+        <!-- Botão de limpar campos -->
+        <button type="reset">Limpar</button>
+
+    </form>
+</section>

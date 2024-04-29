@@ -5,7 +5,9 @@
 $produtoEspecifico = json_decode($produtoJson);
 
 // Verificar se a decodificação foi bem-sucedida
-if ($produtoEspecifico === null)
+if (
+    ($produtoEspecifico === null) && (json_last_error() !== JSON_ERROR_NONE)
+)
 {
     echo "<div class='secaoConteudoPrincipalProdutoEspecifico'>
             <h1>Erro ao decodificar o JSON.</h1>
@@ -18,11 +20,10 @@ else
             <div class='produto'>";
 
     // Iterar sobre as propriedades do objeto
-    foreach ($produtoEspecifico as $propriedade => $valor)
+    foreach ($produtoEspecifico as $chave => $valor)
     {
         // Exibir o nome da propriedade e seu valor
-        echo "<p><strong>$propriedade:</strong> $valor</p>";
+        echo "<p><strong>$chave:</strong> $valor</p>";
     }
-
     echo "</div></div>";
 }

@@ -1,95 +1,122 @@
 <?php
 
 require_once $tabelaGenericaDaoGet;
+require_once $produtoDaoGet;
 
 $nomeDesseArquivo = basename(__FILE__, '.php');
 
 /*******************************************************************/
-//URI = /produtos
-if ($subUri[0] === 'produtos' && !isset($subUri[1]))
-{
-    try
-    {
-        $produtos_db = TabelaGenericaDaoGet::listarTodos($nomeDesseArquivo);
-        $produtos_json = json_encode($produtos_db);
-    }
-    catch (PDOException $e)
-    {
-        if (isset($_GET['root']) && $_GET['root'] === 'menu')
-        {
-            require_once $telaHeaderTipo01;
-            require_once $telaInicio;
-            require_once $telaFooterTipo01;
-            Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
-        }
-        else if (isset($_GET['root']) && $_GET['root'] === 'produtos')
-        {
-            require_once $telaHeaderTipo01;
-            require_once $telaInicio;
-            require_once $telaFooterTipo01;
-            Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
-        }
-    }
+// URI = /produtos
+if ($subUri[0] === 'produtos' && !isset($subUri[1])) {
+    if (!isset($_GET['categoria'])) {
+        // Verifica se há um parâmetro de ordenação na URI
+        $opcaoOrdenacao = isset($_GET['ordem']) ? $_GET['ordem'] : 'nomeAsc';
 
-    if (empty($produtos_json))
-    {
-        if (isset($_GET['root']) && $_GET['root'] === 'menu')
-        {
+        try {
+            $produtos_db = ProdutoDaoGet::listarTodosProdutosImagens($nomeDesseArquivo, $opcaoOrdenacao);
+            $produtos_json = json_encode($produtos_db);
+        } catch (PDOException $e) {
+            // Tratamento de erro
             require_once $telaHeaderTipo01;
             require_once $telaInicio;
             require_once $telaFooterTipo01;
-            Utilidades::exibirToast('Falha na obtenção dos dados!', 'Não foi possivel se conectar com os nossos registros no momento', 'Por favor, verifique sua conecção ou tente mais tarde.');
-        }
-        else if (isset($_GET['root']) && $_GET['root'] === 'produtos')
-        {
-            require_once $telaHeaderTipo01;
-            require_once $telaInicio;
-            require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
             Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
+            exit();
         }
-    }
 
-    require_once $telaHeaderTipo01;
-    require_once $telaProdutoPesquisaAvancada;
-    require_once $telaTodosOsProdutos;
-    require_once $telaFooterTipo01;
-    exit();
+        if (empty($produtos_json)) {
+            // Tratamento de erro
+            require_once $telaHeaderTipo01;
+            require_once $telaInicio;
+            require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
+            Utilidades::exibirToast('Falha na obtenção dos dados!', 'Não foi possível se conectar com os nossos registros no momento', 'Por favor, verifique sua conexão ou tente mais tarde.');
+            exit();
+        }
+
+        // Renderiza a tela de pesquisa avançada e a lista de produtos
+        require_once $telaHeaderTipo01;
+        require_once $telaProdutoPesquisaAvancada;
+        require_once $telaTodosOsProdutos;
+        require_once $telaFooterTipo01;
+        exit();
+    } else {
+        // Se a categoria foi fornecida
+        $categoria = $_GET['categoria'];
+
+        // Se a subcategoria também foi fornecida
+        if (isset($_GET['subcategoria'])) {
+            $subcategoria = $_GET['subcategoria'];
+        } else {
+            $subcategoria = null;
+        }
+
+        // Verifica se há um parâmetro de ordenação na URI
+        $opcaoOrdenacao = isset($_GET['ordem']) ? $_GET['ordem'] : 'nomeAsc';
+
+        // Lista os produtos com base na categoria e subcategoria (se fornecidos)
+        try {
+            $produtos_db = ProdutoDaoGet::listarProdutosPorCategoriaSubcategoria($categoria, $subcategoria, $opcaoOrdenacao);
+            $produtos_json = json_encode($produtos_db);
+        } catch (PDOException $e) {
+            // Tratamento de erro
+            require_once $telaHeaderTipo01;
+            require_once $telaInicio;
+            require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
+            Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
+            exit();
+        }
+
+        if (empty($produtos_json)) {
+            // Tratamento de erro
+            require_once $telaHeaderTipo01;
+            require_once $telaInicio;
+            require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
+            Utilidades::exibirToast('Falha na obtenção dos dados!', 'Não foi possível se conectar com os nossos registros no momento', 'Por favor, verifique sua conexão ou tente mais tarde.');
+            exit();
+        }
+
+        // Renderiza a tela de pesquisa avançada e a lista de produtos
+        require_once $telaHeaderTipo01;
+        require_once $telaProdutoPesquisaAvancada;
+        require_once $telaTodosOsProdutos;
+        require_once $telaFooterTipo01;
+        exit();
+    }
 }
 
 /****************************************************************** */
 //URI = /produtos/{NUMERO}}
-else if ($subUri[0] === 'produtos' && isset($subUri[1]) && is_numeric($subUri[1]) && !isset($subUri[2]))
-{
+else if ($subUri[0] === 'produtos' && isset($subUri[1]) && is_numeric($subUri[1]) && !isset($subUri[2])) {
     $idProduto = $subUri[1];
     require_once $protecaoDeEntrada;
-    try
-    {
+    try {
         // Proteger contra injeção de SQL
         $idProdutoVerificado = ProtecaoDeEntrada::validarTexto($idProduto);
 
         $produtoDb = TabelaGenericaDaoGet::buscarPorID($idProdutoVerificado, $nomeDesseArquivo);
 
         // Verifica se o produto foi encontrado
-        if ($produtoDb)
-        {
+        if ($produtoDb) {
             $produtoJson = json_encode($produtoDb);
-        }
-        else
-        {
+        } else {
             require_once $telaHeaderTipo01;
             require_once $telaInicio;
             require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
             Utilidades::exibirToast('Produto não Encontrado!', 'HTTP/1.1 404 Not Found', "O produto de ID: ($idProduto) não foi encontrado.");
             exit();
         }
-    }
-    catch (Exception $e)
-    {
+    } catch (Exception $e) {
         header("");
         echo json_encode(array("message" => $e->getMessage()));
         require_once $telaHeaderTipo01;
         require_once $telaInicio;
         require_once $telaFooterTipo01;
+        require_once $tabelaUtilidades;
         Utilidades::exibirToast('ERRO!', 'HTTP/1.1 500 Internal Server Error', "$e");
         exit();
     }
@@ -101,61 +128,62 @@ else if ($subUri[0] === 'produtos' && isset($subUri[1]) && is_numeric($subUri[1]
 
 /****************************************************************** */
 //URI = /produtos/pesquisamenu/{TEXTO}
-else if ($subUri[0] === 'produtos' && $subUri[1] == 'pesquisamenu' && isset($subUri[2]) && !isset($subUri[3]))
-{
-    $textoPesquisadoDecodificado = urldecode($subUri[2]);
+else if (($subUri[0] === 'produtos') && ($subUri[1] == 'pesquisamenu') ||
+    ($subUri[1] == 'pesquisa') && isset($_GET['textoPesquisa'])
+) {
+    // Verifica se há um parâmetro de ordenação na URI
+    $opcaoOrdenacao = isset($_GET['ordem']) ? $_GET['ordem'] : 'nomeAsc';
+
+    $textoPesquisadoDecodificado = urldecode($_GET['textoPesquisa']);
 
     require_once $protecaoDeEntrada;
     require_once $validacaoDeEntrada;
 
-    try
-    {
+    try {
         $textoPesquisadoValidado = ValidacaoDeEntrada::validarNome($textoPesquisadoDecodificado);
 
-        if ($textoPesquisadoValidado)
-        {
+        if ($textoPesquisadoValidado) {
             $textoPesquisadoProtegido = ProtecaoDeEntrada::validarTexto($textoPesquisadoDecodificado);
-        }
-        else
-        {
+        } else {
             require_once $telaHeaderTipo01;
             require_once $telaInicio;
             require_once $telaFooterTipo01;
+            require_once $tabelaUtilidades;
             Utilidades::exibirToast('Erro!', 'Texto inválido ', "O texto ($textoPesquisadoDecodificado) no campo de pesquisa é inválido.");
             exit();
         }
-        $produtosPesquisadosPorTextoDb = TabelaGenericaDaoGet::pesquisarPorTextoColuna('nomeProduto', $textoPesquisadoProtegido, $nomeDesseArquivo);
 
-        if (empty($produtosPesquisadosPorTextoDb))
-        {
+        $produtos_db = ProdutoDaoGet::pesquisarProdutos($textoPesquisadoProtegido, $opcaoOrdenacao);
+
+        if (empty($produtos_db)) {
             require_once $telaHeaderTipo01;
             require_once $telaInicio;
             require_once $telaFooterTipo01;
             require_once $tabelaUtilidades;
             Utilidades::exibirToast('Produto não encontrado!', 'Tente novamente.', "O texto ($textoPesquisadoDecodificado) no campo de pesquisa não foi encontrado.");
+            exit();
+        } else {
+            $produtos_json = json_encode($produtos_db);
         }
-        else
-        {
-            $produtosPesquisadosPorTextoJson = json_encode($produtosPesquisadosPorTextoDb);
-        }
-    }
-    catch (Exception $e)
-    {
+    } catch (Exception $e) {
         require_once $telaHeaderTipo01;
         require_once $telaInicio;
         require_once $telaFooterTipo01;
+        require_once $tabelaUtilidades;
         Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', $e);
+        exit();
     }
     require_once $telaHeaderTipo01;
-    require_once $telaProdutoPesquisadoPorTexto;
+    require_once $telaProdutoPesquisaAvancada;
+    require_once $telaTodosOsProdutos;
     require_once $telaFooterTipo01;
     exit();
 }
 
+
 /****************************************************************** */
 //URI = /produtos/?pmin={NUMERO}&pmax={NUMERO}
-else if ($subUri[0] === 'produtos' && isset($_GET['preco_min']) && isset($_GET['preco_max']))
-{
+else if ($subUri[0] === 'produtos' && isset($_GET['preco_min']) && isset($_GET['preco_max'])) {
     $preco_min = $_GET['preco_min'];
     $preco_max = $_GET['preco_max'];
     require_once $produtoServicoGet;
@@ -165,25 +193,22 @@ else if ($subUri[0] === 'produtos' && isset($_GET['preco_min']) && isset($_GET['
 
 /****************************************************************** */
 //URI = /produtos/promocao
-else if ($subUri[0] === 'produtos' && $subUri[1] === 'promocao' && !isset($subUri[2]))
-{
-    try
-    {
+else if ($subUri[0] === 'produtos' && $subUri[1] === 'promocao' && !isset($subUri[2])) {
+    try {
         $parametros = array('promocaoProduto' => 1);
 
         $produtos_db = TabelaGenericaDaoGet::filtrarRegistros($parametros, $nomeDesseArquivo);
         $produtos_json = json_encode($produtos_db);
-    }
-    catch (PDOException $e)
-    {
+    } catch (PDOException $e) {
         require_once $telaHeaderTipo01;
         require_once $telaInicio;
         require_once $telaFooterTipo01;
+        require_once $tabelaUtilidades;
         Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
+        exit();
     }
 
-    if (empty($produtos_json))
-    {
+    if (empty($produtos_json)) {
         $tipo_erro = 'Erro de Dados:';
         $mensagem_erro = 'Não foi possivel se conectar com os nossos registros no momento.';
         $recomendacao = 'Por favor, verifique sua conecção ou tente mais tarde.';
@@ -199,26 +224,22 @@ else if ($subUri[0] === 'produtos' && $subUri[1] === 'promocao' && !isset($subUr
 }
 
 //URI = /produtos/promocao/marca
-else if ($subUri[0] === 'produtos' && $subUri[1] === 'promocao' && $subUri[2] === 'marca' && !isset($subUri[3]))
-{
-    echo "<H1>PASSOU AQUI</H1>";
-    try
-    {
+else if ($subUri[0] === 'produtos' && $subUri[1] === 'promocao' && $subUri[2] === 'marca' && !isset($subUri[3])) {
+    try {
         $parametros = array('promocaoProduto' => 1, 'marcaId' => 1);
 
         $produtos_db = TabelaGenericaDaoGet::filtrarRegistros($parametros, $nomeDesseArquivo);
         $produtos_json = json_encode($produtos_db);
-    }
-    catch (PDOException $e)
-    {
+    } catch (PDOException $e) {
         require_once $telaHeaderTipo01;
         require_once $telaInicio;
         require_once $telaFooterTipo01;
+        require_once $tabelaUtilidades;
         Utilidades::exibirToast('Erro!', 'HTTP/1.1 500 Internal Server Error', "$e");
+        exit();
     }
 
-    if (empty($produtos_json))
-    {
+    if (empty($produtos_json)) {
         $tipo_erro = 'Erro de Dados:';
         $mensagem_erro = 'Não foi possivel se conectar com os nossos registros no momento.';
         $recomendacao = 'Por favor, verifique sua conecção ou tente mais tarde.';
@@ -245,11 +266,13 @@ if (empty($produtos_json))
     exit();
 }
 */
+
+
+
+/****************************************************************** */
 //URI = /produtos/erro/?erro=$tipo_erro&mensagem=$mensagem_erro
-else if ($subUri[0] === 'produtos' && $subUri[1] === 'erro' && !isset($subUri[2]))
-{
-    if (isset($_GET['erro']) && isset($_GET['mensagem']))
-    {
+else if ($subUri[0] === 'produtos' && $subUri[1] === 'erro' && !isset($subUri[2])) {
+    if (isset($_GET['erro']) && isset($_GET['mensagem'])) {
         $tipo_erro = $_GET['erro'];
         $mensagem_erro = $_GET['mensagem'];
         $recomendacao = $_GET['recomendacao'];
@@ -257,9 +280,7 @@ else if ($subUri[0] === 'produtos' && $subUri[1] === 'erro' && !isset($subUri[2]
         require_once $telaProdutoErro;
         require_once $telaFooterTipo01;
         exit();
-    }
-    else
-    {
+    } else {
         $tipo_erro = "ERRO!";
         $mensagem_erro = "<p>Ocorreu um erro inesperado.</p>";
         require_once $telaHeaderTipo01;
@@ -272,11 +293,11 @@ else if ($subUri[0] === 'produtos' && $subUri[1] === 'erro' && !isset($subUri[2]
 
 /****************************************************************** */
 //URI = INVALIDA
-else
-{
+else {
     require_once $telaHeaderTipo01;
     require_once $telaInicio;
     require_once $telaFooterTipo01;
+    require_once $tabelaUtilidades;
     Utilidades::exibirToast('Erro de recurso!', 'URI inválida', "A URI ($uri) é inválida!");
     exit();
 }

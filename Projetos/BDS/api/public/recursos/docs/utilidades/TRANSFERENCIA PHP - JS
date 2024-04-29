@@ -1,0 +1,103 @@
+
+<script>
+const produtos = <?php echo $produtos_json; ?>;
+
+// Função para exibir os produtos ordenados na tela
+function exibirProdutos(produtos) {
+    const containerProdutos = document.getElementById('containerProdutos');
+    containerProdutos.innerHTML = ''; // Limpa o conteúdo atual
+
+    // Adiciona cada produto ao contêiner
+    produtos.forEach((produto, index) => {
+        const produtoHTML = `
+            <div class='produto' onclick="exibirDetalhesProduto(${index})">
+                <h2>${produto.nomeProduto}</h2>
+                <p><strong>Descrição:</strong> ${produto.descricaoProduto}</p>
+                <p><strong>Preço:</strong> $${produto.precoProduto}</p>
+                <p><strong>Disponível:</strong> ${produto.disponivelProduto ? 'Sim' : 'Não'}</p>
+            </div>
+        `;
+        containerProdutos.innerHTML += produtoHTML; // Adiciona o HTML do produto ao container
+    });
+
+    // Após exibir os produtos, adicionamos o seletor de ordenação
+    adicionarSeletorOrdenacao();
+}
+
+// Função para exibir os detalhes do produto clicado
+function exibirDetalhesProduto(index) {
+    const produto = produtos[index];
+    alert(
+        `Detalhes do produto:\nNome: ${produto.nomeProduto}\nDescrição: ${produto.descricaoProduto}\nPreço: $${produto.precoProduto}\nDisponível: ${produto.disponivelProduto ? 'Sim' : 'Não'}`
+    );
+}
+
+// Variável global para armazenar a opção selecionada
+let opcaoSelecionada = 'nomeAsc';
+
+// Função para adicionar o seletor de ordenação
+function adicionarSeletorOrdenacao() {
+    const containerOrdenacao = document.getElementById('containerOrdenacao');
+    containerOrdenacao.innerHTML = ''; // Limpa o conteúdo atual
+
+    // Cria o HTML do seletor de ordenação
+    const ordenacaoHTML = `
+            <select id="seletorOrdenacao">
+                <option value="nomeAsc">Nome (A-Z)</option>
+                <option value="nomeDesc">Nome (Z-A)</option>
+                <option value="precoAsc">Menor Preço</option>
+                <option value="precoDesc">Maior Preço</option>
+                <option value="popularidade">Popularidade</option>
+                <!-- Adicione mais opções de ordenação, se necessário -->
+            </select>
+        `;
+
+    // Adiciona o HTML do seletor de ordenação ao contêiner
+    containerOrdenacao.innerHTML = ordenacaoHTML;
+
+    // Obtém o elemento do seletor de ordenação
+    const seletorOrdenacao = document.getElementById('seletorOrdenacao');
+
+    // Define a opção selecionada inicialmente
+    seletorOrdenacao.value = opcaoSelecionada;
+
+    // Adiciona um ouvinte de evento para detectar mudanças no seletor
+    seletorOrdenacao.addEventListener('change', function() {
+        opcaoSelecionada = seletorOrdenacao.value; // Atualiza a opção selecionada
+        ordenarResultados(opcaoSelecionada);
+        // Atualiza o texto do seletor com a opção selecionada
+        const selectedIndex = seletorOrdenacao.selectedIndex;
+        seletorOrdenacao.options[selectedIndex].text = seletorOrdenacao.options[selectedIndex].textContent +
+            ' (selecionado)';
+    });
+}
+
+
+// Função para ordenar os resultados com base na opção selecionada
+function ordenarResultados(opcao) {
+    switch (opcao) {
+        case 'nomeAsc':
+            produtos.sort((a, b) => a.nomeProduto.localeCompare(b.nomeProduto));
+            break;
+        case 'nomeDesc':
+            produtos.sort((a, b) => b.nomeProduto.localeCompare(a.nomeProduto));
+            break;
+        case 'precoAsc':
+            produtos.sort((a, b) => a.precoProduto - b.precoProduto);
+            break;
+        case 'precoDesc':
+            produtos.sort((a, b) => b.precoProduto - a.precoProduto);
+            break;
+        case 'popularidade':
+            // Implemente a lógica de ordenação por popularidade
+            // Aqui você pode definir sua própria lógica de ordenação por popularidade
+            break;
+        default:
+            produtos.sort((a, b) => a.nomeProduto.localeCompare(b.nomeProduto));
+            break;
+    }
+    exibirProdutos(produtos);
+}
+
+// Inicialização da ordenação
+ordenarResultados('nomeAsc');

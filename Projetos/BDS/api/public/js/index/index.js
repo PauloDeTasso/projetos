@@ -1,4 +1,4 @@
-var seletorPesquisaAvancadaPrincipal = document.getElementById("selecao");
+
 /*********************************************/
 /*MENU LATERAL/ */
 const menuLateral = document.getElementById("menuLateral");
@@ -66,14 +66,23 @@ searchInput.addEventListener("click", (event) => {
 
 /****************************************** */
 /*BOTAO PESQUISAR - AÇÃO DE CLIQUE */
-/*CAMPO PESQUISAR*/
+/*CAMPO PESQUISAR - MENU*/
 
 document.getElementById("btnPesquisar").addEventListener("click", function() {
     // Obter o texto digitado no campo de pesquisa
     var textoPesquisa = document.getElementById("campoPesquisa").value;
 
-    // Redirecionar para a página de pesquisa com o texto como parâmetro
-    window.location.href = "/produtos/pesquisamenu/" + textoPesquisa;
+    // Redirecionar para a página de pesquisa com o texto como parâmetro GET
+    window.location.href = "/produtos/pesquisamenu?textoPesquisa=" + encodeURIComponent(textoPesquisa);
+});
+
+/*CAMPO PESQUISAR POR TEXTO*/
+document.getElementById("btnIrPesquisaPorTexto").addEventListener("click", function() {
+    // Obter o texto digitado no campo de pesquisa
+    var textoPesquisa = document.getElementById("entradaPesquisaPorTexto").value;
+
+    // Redirecionar para a página de pesquisa com o texto como parâmetro GET
+    window.location.href = "/produtos/pesquisa?textoPesquisa=" + encodeURIComponent(textoPesquisa);
 });
 
 /**********************************************/
@@ -181,6 +190,22 @@ function exibirToast(titulo, mensagem, recomendacao) {
     }, 7000); 
 }
 
+/*******************************************************************/
+/*ABERTURA DA PESQUISA POR PESQUISA MENU*/
+// Obtém o caminho da URI
+    /*
+    var uri = window.location.pathname;
+    
+    // Verifica se a URI corresponde ao padrão desejado
+    if (uri.startsWith('/produtos/pesquisamenu/')) {
+        // Obtém a seção de pesquisa
+        var secaoPesquisa = document.getElementById('secaoPesquisaAvancada');
+        
+        // Adiciona a classe 'aberta' para mostrar a seção com a animação
+        secaoPesquisa.classList.add('aberta');
+}
+    */
+
 /***********************************************/
 /*PESQUISA AVANÇADA*/
 
@@ -251,240 +276,3 @@ document.getElementById("btnAbrirPesquisaAvancada").addEventListener("click", fu
 });
 
 */
-
-/***********************************************************/        
-/**/
-
-// Obtém o botão e a caixa de pesquisa
-const btnAbrirPesquisa01 = document.getElementById('btnAbrirPesquisa01');
-const secaoPesquisa01 = document.getElementById('secaoPesquisa01');
-
-// Adiciona um ouvinte de evento para o botão
-btnAbrirPesquisa01.addEventListener('click', function () {
-    // Usa o método toggle para adicionar ou remover a classe 'aberta'
-    secaoPesquisa01.classList.toggle('aberta');
-});
-
-// Obtém os elementos de input e o span para exibir o valor
-var filtroPrecoMaximoInput = document.getElementById("filtro_preco_maximo");
-var filtroPrecoMaximoValor = document.getElementById("filtro_preco_maximo_valor");
-
-// Atualiza o valor exibido ao mover o controle deslizante
-filtroPrecoMaximoInput.addEventListener("input", function () {
-    filtroPrecoMaximoValor.innerHTML = filtroPrecoMaximoInput.value;
-});
-
-/*BOTAO RESET 1*/
-function limparCampos() {
-    // Limpa o seletor de tipo de peça, definindo o primeiro item como selecionado
-    seletorPesquisaAvancadaPrincipal.selectedIndex = 0;
-
-    // Limpa o campo de filtro de preço, definindo o valor padrão
-    document.getElementById("filtro_preco_maximo").value = 1000;
-    // Atualiza o valor exibido do filtro de preço
-    filtroPrecoMaximoValor.innerHTML = filtro_preco_maximo.value;
-
-    // Desmarca o checkbox de filtro por preço
-    document.getElementById('porPrecoCheckbox').checked = false;
-
-    // Desmarca o checkbox de filtro por tamanho
-    document.getElementById('porTamanhoCheckbox').checked = false;
-    // Reseta o seletor de tamanho, selecionando a opção padrão
-    document.getElementById('tamanho').selectedIndex = 0;
-
-    // Desmarca todos os checkboxes de filtro por cor
-    const checkboxesCores = document.querySelectorAll('#opcoesCores input[type="checkbox"]');
-    checkboxesCores.forEach(function(checkbox) {
-        checkbox.checked = false;
-    });
-    // Esconde a seção de filtro por cor
-    document.getElementById('filtroCor').style.display = 'none';
-
-    // Desmarca o checkbox de filtro por cor
-    document.getElementById('porCorCheckbox').checked = false;
-
-    // Desmarca o checkbox de filtro por promoção
-    document.getElementById('porPromocaoCheckbox').checked = false;
-}
-
-/*CHECK BOX FILTRO POR PREÇO*/
-  // Obtém o checkbox e a seção de filtro por preço
-    const porPrecoCheckbox = document.getElementById('porPrecoCheckbox');
-    const filtroPreco = document.getElementById('filtroPreco');
-
-    // Adiciona um ouvinte de evento para o checkbox
-    porPrecoCheckbox.addEventListener('change', function() {
-        // Verifica se o checkbox está marcado
-        if (this.checked) {
-            // Abre a seção de filtro por preço
-            filtroPreco.style.display = 'flex';
-        } else {
-            // Fecha a seção de filtro por preço
-            filtroPreco.style.display = 'none';
-        }
-    });
-
-    /*CHECK BOX FILTRO POR TAMANHO*/
-  // Obtém o checkbox e a seção de filtro por preço
-    const porTamanhoCheckbox = document.getElementById('porTamanhoCheckbox');
-    const filtroTamanho = document.getElementById('filtroTamanho');
-
-    // Adiciona um ouvinte de evento para o checkbox
-    porTamanhoCheckbox.addEventListener('change', function() {
-        // Verifica se o checkbox está marcado
-        if (this.checked) {
-            // Abre a seção de filtro por preço
-            filtroTamanho.style.display = 'flex';
-        } else {
-            // Fecha a seção de filtro por preço
-            filtroTamanho.style.display = 'none';
-        }
-    });
-
-/*******************************************************************/
-/**/
-/*CHECK BOX FILTRO POR CORES*/
-// Obtém o checkbox e a seção de filtro por cor
-const porCorCheckbox = document.getElementById('porCorCheckbox');
-const filtroCor = document.getElementById('filtroCor');
-
-// Adiciona um ouvinte de evento para o checkbox de filtro por cor
-porCorCheckbox.addEventListener('change', function() {
-    // Verifica se o checkbox está marcado
-    if (this.checked) {
-        // Abre a seção de filtro por cor
-        filtroCor.style.display = 'block';
-    } else {
-        // Fecha a seção de filtro por cor
-        filtroCor.style.display = 'none';
-    }
-});
-
-
-/**/
-
-/*NOME DINAMICO PARA SELEÇÃO NA PESQUISA INICIAL*/
-// Adiciona um ouvinte de evento ao elemento select
-seletorPesquisaAvancadaPrincipal.addEventListener("change", function () {
-    // Obtém o valor selecionado
-    var pecaSelecionada = this.options[this.selectedIndex].value;
-
-    // Atualiza o texto do rótulo substituindo apenas "Peças"
-    var label_filtro_preco_maximo = document.getElementById("label_filtro_preco_maximo");
-    if (pecaSelecionada == "") {
-      label_filtro_preco_maximo.innerText = "PEÇAS ATÉ NO MÁXIMO?"
-      selecaoValor = "todas";
-    } else {
-      label_filtro_preco_maximo.innerText = pecaSelecionada + " ATÉ NO MÁXIMO?"
-       selecaoValor = pecaSelecionada;
-    }
-});
-
-
-/*******************************************************************/
-/*ENVIAR PESQUISA AVANÇADA*/
-
-// Adiciona um ouvinte de evento para o botão de pesquisa
-function pesquisaAvancada()
-{    
-    // Inicializa a string de parâmetros da URL
-  let parametros = "";
-  
-  var selecaoValor = "";
-  var pecaSelecionada = seletorPesquisaAvancadaPrincipal.options[seletorPesquisaAvancadaPrincipal.selectedIndex].value;
-  if (pecaSelecionada == "")
-  {
-    selecaoValor = "todas";    
-   parametros +=  `tipo=${selecaoValor}&`;
-  } else
-  {
-    selecaoValor = pecaSelecionada;    
-   parametros +=  `tipo=${selecaoValor}&`;
-  }
-    
-    // Verifica se o checkbox de filtro por preço está marcado
-    const porPrecoCheckbox = document.getElementById('porPrecoCheckbox');
-    if (porPrecoCheckbox.checked) {
-        // Adiciona o valor do filtro de preço à string de parâmetros
-        const filtroPrecoMaximo = document.getElementById('filtro_preco_maximo').value;
-        parametros += `preco=${filtroPrecoMaximo}&`;
-    }
-    
-    // Verifica se o checkbox de filtro por tamanho está marcado
-    const porTamanhoCheckbox = document.getElementById('porTamanhoCheckbox');
-    if (porTamanhoCheckbox.checked) {
-        // Adiciona o valor do filtro de tamanho à string de parâmetros
-      const tamanhoSelecionado = document.getElementById('tamanho').value;
-      if (tamanhoSelecionado == "")
-      {
-        parametros = parametros;
-      } else
-      {        
-        parametros += `tamanho=${tamanhoSelecionado}&`;
-      }
-    }
-   
-     // Verifica se o checkbox de filtro por cor está marcado
-    const porCorCheckbox = document.getElementById('porCorCheckbox');
-    if (porCorCheckbox.checked) {
-        // Obtém as cores selecionadas
-        const coresSelecionadas = document.querySelectorAll('#opcoesCores input[type="checkbox"]:checked');
-        if (coresSelecionadas.length > 0) {
-            // Cria um array para armazenar as cores selecionadas
-            let cores = [];
-            coresSelecionadas.forEach(function(cor) {
-                cores.push(cor.value);
-            });
-            // Adiciona as cores à string de parâmetros
-            parametros += `cores=${cores.join(",")}&`;
-        }
-    }
-
-  // Verifica se o checkbox de filtro por disponibilidade está marcado
-    const porDisponibilidadeCheckbox = document.getElementById('porDisponibilidadeCheckbox');
-    if (porDisponibilidadeCheckbox.checked) {
-        // Adiciona o filtro por disponibilidade à string de parâmetros
-        parametros += `disponibilidade=1&`;
-    }
-  
-     // Verifica se o checkbox de filtro por promoção está marcado
-    const porPromocaoCheckbox = document.getElementById('porPromocaoCheckbox');
-    if (porPromocaoCheckbox.checked) {
-        // Adiciona o filtro por promoção à string de parâmetros
-        parametros += `promocao=1&`;
-    }   
-    
-    // Remove o último "&" da string de parâmetros, se houver
-    parametros = parametros.slice(0, -1);
-    
-    // Constrói a URL da requisição GET com base nos parâmetros
-    let url = "/produtos/pesquisaavancada/";
-    if (parametros !== "") {
-        url += `?${parametros}`;
-    } else {
-        // Se nenhum filtro estiver selecionado, enviar apenas o valor do seletor de produto
-        url += parametros;
-    }
-    
-    // Redireciona para a URL da requisição GET
-    window.location.href = url;
-}
-
-/*******************************************************************/
-/*ABERTURA DA PESQUISA POR PESQUISA MENU*/
-    // Obtém o caminho da URI
-    var uri = window.location.pathname;
-    
-    // Verifica se a URI corresponde ao padrão desejado
-    if (uri.startsWith('/produtos/pesquisamenu/')) {
-        // Obtém a seção de pesquisa
-        var secaoPesquisa = document.getElementById('secaoPesquisa01');
-        
-        // Adiciona a classe 'aberta' para mostrar a seção com a animação
-        secaoPesquisa.classList.add('aberta');
-}
-    
-
-/*******************************************************************/
-
-

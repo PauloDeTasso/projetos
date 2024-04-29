@@ -1,6 +1,8 @@
 <!-------------------------------------------------------------->
 <!-------------------------FOOTER---------------------------->
 
+<hr />
+
 <section class="secaoFooter">
     <!-------------------------SERVIÇOS---------------------------->
 
@@ -35,32 +37,32 @@
 
         <div class="itensCategorias">
             <div class="tshirts">
-                <div class="imagemTshirt"></div>
+                <div class="imagemTshirt" onclick="enviarRequisicao('/produtos/?categoria=tshirts')"></div>
                 <p>TSHIRT</p>
             </div>
 
             <div class="vestidos">
-                <div class="imagemVestidos"></div>
+                <div class="imagemVestidos" onclick="enviarRequisicao('/produtos/?categoria=vestidos')"></div>
                 <p>VESTIDOS</p>
             </div>
 
             <div class="saias">
-                <div class="imagemSaias"></div>
+                <div class="imagemSaias" onclick="enviarRequisicao('/produtos/?categoria=saias')"></div>
                 <p>SAIAS</p>
             </div>
 
             <div class="calcas">
-                <div class="imagemCalcas"></div>
+                <div class="imagemCalcas" onclick="enviarRequisicao('/produtos/?categoria=calcas')"></div>
                 <p>CALÇAS</p>
             </div>
 
             <div class="conjuntos">
-                <div class="imagemConjuntos"></div>
+                <div class="imagemConjuntos" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')"></div>
                 <p>CONJUNTOS</p>
             </div>
         </div>
 
-        <div class="verTudo">
+        <div class="verTudo" onclick="enviarRequisicao('/produtos?root=menu')">
             <h2>VER TUDO</h2>
         </div>
     </section>

@@ -5,11 +5,9 @@ class TabelaGenericaDaoGet
 {
     private static $conexao;
 
-    //LISTA TODOS OS REGISTROS
     public static function listarTodos($nomeClasseChamadora)
     {
-        try
-        {
+        try {
             // Obtém o nome da classe atual
             $nomeArquivo = $nomeClasseChamadora;
 
@@ -26,18 +24,16 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao listar registros da tabela $nomeTabela: " . $e->getMessage());
         }
     }
 
+
     //BUSCA REGISTRO POR ID
     public static function buscarPorID($id, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -52,9 +48,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registro;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao recuperar o registro da tabela $nomeTabela com o ID $id: " . $e->getMessage());
         }
     }
@@ -62,8 +56,7 @@ class TabelaGenericaDaoGet
     //BUSCA POR TEXTO PESQUISADO EM UMA COLUNA ESPECIFICA
     public static function pesquisarPorTextoColuna($coluna, $textoPesquisado, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -76,8 +69,7 @@ class TabelaGenericaDaoGet
             $stmt->execute();
             $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if (empty($registros))
-            {
+            if (empty($registros)) {
                 $queryProduto = "SELECT * FROM $nomeTabela WHERE $coluna LIKE :textoPesquisado";
                 $stmtProduto = self::$conexao->prepare($queryProduto);
                 $stmtProduto->bindParam(':textoPesquisado', $textoPesquisadoPronto, PDO::PARAM_STR);
@@ -85,18 +77,12 @@ class TabelaGenericaDaoGet
                 $registrosProduto = $stmtProduto->fetchAll(PDO::FETCH_ASSOC);
 
                 return $registrosProduto;
-            }
-            else
-            {
+            } else {
                 return $registros;
             }
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao pesquisar texto na coluna $coluna da tabela $nomeTabela: " . $e->getMessage());
-        }
-        finally
-        {
+        } finally {
             // Feche a conexão após o uso
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
         }
@@ -105,8 +91,7 @@ class TabelaGenericaDaoGet
     //BUSCA POR TEXTO PESQUISADO EM UMA OU VARIAS COLUNAS ESPECIFICAS
     public static function pesquisarPorTextoColunas($texto, $colunas, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
 
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
@@ -115,8 +100,7 @@ class TabelaGenericaDaoGet
             $conexao = ConexaoDbBdsWeb::conectar();
 
             // Construir a parte da consulta para as colunas
-            $colunasConsulta = implode(', ', array_map(function ($coluna)
-            {
+            $colunasConsulta = implode(', ', array_map(function ($coluna) {
                 return $coluna . ' LIKE ?';
             }, $colunas));
 
@@ -127,8 +111,7 @@ class TabelaGenericaDaoGet
             $stmt = $conexao->prepare($sql);
 
             // Bind dos parâmetros
-            foreach ($colunas as $index => $coluna)
-            {
+            foreach ($colunas as $index => $coluna) {
                 $stmt->bindValue($index + 1, $texto);
             }
 
@@ -136,17 +119,13 @@ class TabelaGenericaDaoGet
 
             // Retornar os resultados da consulta
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             // Lidar com exceções PDO
             $errorMessage = 'Erro ao executar consulta no banco de dados: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
             $errorId = uniqid('PDOError');
             error_log('[' . $errorId . '] ' . $errorMessage);
             throw new Exception('[' . $errorId . '] Ocorreu um erro interno. Por favor, tente novamente mais tarde.', 500);
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             // Lidar com outras exceções
             $errorMessage = 'Erro inesperado: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
             $errorId = uniqid('GeneralError');
@@ -158,8 +137,7 @@ class TabelaGenericaDaoGet
     //RETONA REGISTROS COM BASE EM UM OU VARIOS PARAMETROS DOS REGISTROS DA TABELA
     public static function filtrarRegistros($parametros, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -168,8 +146,7 @@ class TabelaGenericaDaoGet
             $where = [];
             $bindParams = [];
 
-            foreach ($parametros as $campo => $valor)
-            {
+            foreach ($parametros as $campo => $valor) {
                 $where[] = "$campo = :$campo";
                 $bindParams[":$campo"] = $valor;
             }
@@ -183,9 +160,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao filtrar registros da tabela $nomeTabela: " . $e->getMessage());
         }
     }
@@ -193,8 +168,7 @@ class TabelaGenericaDaoGet
     //RETORNA TODOS OS REGISTROS ORDENADOS PELO PARA PARAMETRO ESPECIFICO
     public static function ordenarRegistros($campo, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -208,9 +182,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao ordenar registros da tabela $nomeTabela: " . $e->getMessage());
         }
     }
@@ -218,8 +190,7 @@ class TabelaGenericaDaoGet
     //
     public static function paginacaoRegistros($pagina, $tamanho, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -237,9 +208,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao paginar registros da tabela $nomeTabela: " . $e->getMessage());
         }
     }
@@ -247,8 +216,7 @@ class TabelaGenericaDaoGet
     //
     public static function recuperarRelacionamento($id, $relacionamento, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -260,8 +228,7 @@ class TabelaGenericaDaoGet
             $stmt->execute();
             $registro = $stmt->fetch();
 
-            if (!$registro)
-            {
+            if (!$registro) {
                 throw new Exception("Registro com o ID $id na tabela $nomeTabela não encontrado.");
             }
 
@@ -276,9 +243,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $relacionamentoRegistro;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao recuperar o relacionamento $relacionamento da tabela $nomeTabela com o ID $id: " . $e->getMessage());
         }
     }
@@ -286,8 +251,7 @@ class TabelaGenericaDaoGet
     //
     public static function contarRegistros($propriedade, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -301,9 +265,7 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $resultado['total'];
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao contar registros da tabela $nomeTabela: " . $e->getMessage());
         }
     }
@@ -311,8 +273,7 @@ class TabelaGenericaDaoGet
     //
     public static function recuperarRegistrosPorIntervalo($campo, $min, $max, $nomeClasseChamadora)
     {
-        try
-        {
+        try {
             $nomeClasse = $nomeClasseChamadora;
             $nomeTabela = strtolower(str_replace('ControleGet', '', $nomeClasse));
 
@@ -328,10 +289,70 @@ class TabelaGenericaDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao recuperar registros por intervalo na tabela $nomeTabela: " . $e->getMessage());
         }
+    }
+
+    /* */
+
+    public static function exibirProduto($valor)
+    {
+        try {
+            // Obtenha o valor do produto a partir da URI
+            $produto = ucfirst(strtolower($valor)); // Converte para maiúscula e ajusta a formatação
+
+            // Verifica se a tabela do produto existe no banco de dados
+            if (!self::tabelaExiste($produto)) {
+                throw new Exception("Produto não encontrado.");
+            }
+
+            // Prepara a consulta SQL
+            $query = "SELECT * FROM $produto";
+
+            self::$conexao = ConexaoDbBdsWeb::conectar();
+            $stmt = self::$conexao->prepare($query);
+            $stmt->execute();
+            $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            ConexaoDbBdsWeb::fecharConexao(self::$conexao);
+
+            // Renderiza a tela correspondente
+            self::renderizarTela($produto, $produtos);
+        } catch (PDOException $e) {
+            throw new Exception("Erro ao buscar produto: " . $e->getMessage());
+        }
+    }
+
+    private static function tabelaExiste($nomeTabela)
+    {
+        // Verifica se a tabela existe no banco de dados
+        self::$conexao = ConexaoDbBdsWeb::conectar();
+        $stmt = self::$conexao->prepare("SHOW TABLES LIKE :nomeTabela");
+        $stmt->bindParam(':nomeTabela', $nomeTabela, PDO::PARAM_STR);
+        $stmt->execute();
+        $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+        ConexaoDbBdsWeb::fecharConexao(self::$conexao);
+
+        return $resultado !== false;
+    }
+
+    private static function renderizarTela($produto, $dados)
+    {
+        // Aqui você renderiza a tela correspondente utilizando os dados obtidos do banco de dados
+        // Você pode usar a mesma estrutura das outras telas e o mesmo padrão de exibição
+
+        // Por exemplo, você pode fazer um loop pelos produtos e exibir suas informações
+        foreach ($dados as $produto) {
+            // Renderiza as informações do produto
+            echo '<div class="produto">';
+            echo '<h2>' . $produto['nomeProduto'] . '</h2>';
+            echo '<p>Preço: R$' . number_format($produto['precoProduto'], 2, ',', '.') . '</p>';
+            // Renderiza outras informações relevantes do produto
+            echo '</div>';
+        }
+
+        // Retorne os dados em formato JSON
+        echo json_encode($dados);
     }
 }

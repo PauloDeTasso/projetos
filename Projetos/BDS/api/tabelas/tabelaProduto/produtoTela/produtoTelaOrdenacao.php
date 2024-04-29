@@ -1,37 +1,54 @@
- <select id="seletorOrdenacao">
-     <option value="precoAsc">Menor Preço</option>
-     <option value="precoDesc">Maior Preço</option>
-     <option value="popularidade">Popularidade</option>
-     <!-- Adicione mais opções de ordenação, se necessário -->
- </select>
+<!-- Conteúdo do seletor de ordenação -->
+<div id="containerOrdenacao" class="ordenacao-container">
+    <select id="seletorOrdenacao">
+        <option value="nomeAsc">Nome (A-Z)</option>
+        <option value="nomeDesc">Nome (Z-A)</option>
+        <option value="precoAsc">Menor Preço</option>
+        <option value="precoDesc">Maior Preço</option>
+        <option value="popularidade">Popularidade</option>
+    </select>
+</div>
 
+<!-- Script para capturar a seleção do usuário e atualizar a URI -->
+<script>
+document.getElementById('seletorOrdenacao').addEventListener('change', function() {
+    var selectedOption = this.value;
+    var currentUrl = new URL(window.location.href);
+    var params = new URLSearchParams(currentUrl.search);
 
+    // Atualiza o parâmetro 'ordem' com a nova seleção
+    params.set('ordem', selectedOption);
 
- <script>
-// Obtém o elemento select de ordenação
-const seletorOrdenacao = document.getElementById('seletorOrdenacao');
+    // Atualiza a URI com os novos parâmetros
+    currentUrl.search = params.toString();
+    window.location.href = currentUrl.toString();
 
-// Adiciona um ouvinte de evento para detectar mudanças no seletor
-seletorOrdenacao.addEventListener('change', function() {
-        // Chama a função para ordenar os resultados com base na opção selecionada
-        ordenarResultados(this.value);
+    // Atualiza o estado do seletor para refletir a seleção do usuário
+    this.value = selectedOption;
+});
+
+// Recupera a opção selecionada do seletor ao carregar a página
+document.addEventListener("DOMContentLoaded", function() {
+    var currentUrl = new URL(window.location.href);
+    var params = new URLSearchParams(currentUrl.search);
+    var selectedOption = params.get('ordem');
+
+    if (selectedOption) {
+        document.getElementById('seletorOrdenacao').value = selectedOption;
     }
+});
+</script>
 
-);
-
-// Função para ordenar os resultados com base na opção selecionada
-function ordenarResultados(opcao) {
-    // Implemente a lógica de ordenação aqui
-    // Por exemplo, você pode chamar uma função de classificação ou atualizar a consulta SQL, dependendo de como os resultados são obtidos
-    console.log('Opção de ordenação selecionada:', opcao);
-    // Aqui você pode atualizar os resultados na página com base na ordenação selecionada
-}
- </script>
-
- <style>
-/* Estilo para o seletor de ordenação */
-#seletorOrdenacao {
-    margin-top: 10px;
+<!-- Estilos -->
+<style>
+.ordenacao-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 10px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 14px;
@@ -40,17 +57,17 @@ function ordenarResultados(opcao) {
     color: #333;
     cursor: pointer;
     outline: none;
-    /* Remove a borda ao focar */
-    width: 200px;
-    /* Ajuste conforme necessário */
+    width: auto;
     font-weight: 600;
 }
 
-/* Estilize as opções do seletor de ordenação, se necessário */
-#seletorOrdenacao option {
+.ordenacao-container select {
     font-size: 14px;
     color: #333;
     background-color: #fff;
     font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
- </style>
+</style>

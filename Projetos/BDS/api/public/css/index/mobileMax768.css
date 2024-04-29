@@ -137,7 +137,7 @@ body {
 }
 
 /********************************************************************/
-/*CAMPO PESQUISA*/
+/*CAMPO PESQUISA MENU*/
 
 .secaoBotaoPesquisar {
   display: flex;
@@ -282,7 +282,7 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 50px;
-  background-image: url("../../recursos/imagens/icones/menu_hambuguer_001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/menu_hambuguer_001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -340,7 +340,7 @@ menuLateral:not(.open) {
   left: 10px;
   width: 100%;
   height: 140px;
-  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/logos/Logo001-PNG.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -354,7 +354,7 @@ menuLateral:not(.open) {
   right: 20px;
   width: 40px;
   height: 50px;
-  background-image: url("../../recursos/imagens/icones/carrinho002.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/carrinho002.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -395,15 +395,24 @@ menuLateral:not(.open) {
 }
 
 .prev,
-.next {
+.next {  
   position: absolute;
   top: 0;
   transform: translateY(-50%);
-  padding: 10px;
+  padding: 5px 10px 5px 10px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   border: none;
+  border-radius: 50%;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+}
+
+.prev:hover,
+.next:hover {    
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .prev {
@@ -432,15 +441,15 @@ menuLateral:not(.open) {
 }
 
 .slide:nth-child(1) {
-  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(2) {
-  background-image: url("../../recursos/imagens/banners/MB/02-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/02-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(3) {
-  background-image: url("../../recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
 }
 
 /********************************************************************/
@@ -493,7 +502,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/cc001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/cc001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -509,7 +518,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/porc001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/porc001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -525,7 +534,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/entrega001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/entrega001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -599,7 +608,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/roupas/blusas001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/blusas001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -632,7 +641,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/roupas/vestidos001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/vestidos001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -665,7 +674,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/roupas/saias001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/saias001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -698,7 +707,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/roupas/calcas001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/calcas001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -731,7 +740,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("../../recursos/imagens/icones/roupas/conjuntos001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/conjuntos001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -803,11 +812,11 @@ menuLateral:not(.open) {
 }
 
 .imagemBanner01 {
-  background-image: url("../../recursos/imagens/banners/Banner-site-luxo-507x400.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/banners/Banner-site-luxo-507x400.png");
 }
 
 .imagemBanner02 {
-  background-image: url("../../recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
 }
 
 /********************************************************************/
@@ -854,11 +863,11 @@ menuLateral:not(.open) {
 }
 
 .imagemWhatsapp {
-  background-image: url("../../recursos/imagens/icones/logo_whatsapp_png-100x100.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/logo_whatsapp_png-100x100.png");
 }
 
 .imagemInstagram {
-  background-image: url("../../recursos/imagens/icones/logo_instagram_png-100x100.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/logo_instagram_png-100x100.png");
 }
 
 .whatsapp > p,
@@ -899,7 +908,7 @@ menuLateral:not(.open) {
 }
 
 .imagemFormasDePagamento {
-  background-image: url("../../recursos/imagens/formas_de_pagamentos.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/formas_de_pagamentos.png");
 }
 
 .imagemFormasDePagamento > h4 {
@@ -915,7 +924,7 @@ menuLateral:not(.open) {
 }
 
 .imagemSelo {
-  background-image: url("../../recursos/imagens/selo_safebrowsing.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/selo_safebrowsing.png");
 }
 
 .listaInformacoes > span {
@@ -931,11 +940,12 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 110%;
   height: auto;
   margin: 0px;
   margin-bottom: 20px;
-  padding: 0px;
+  padding: 0px;  
+  border: 1px solid rgb(255, 182, 231);
 }
 
 .marca {
@@ -948,8 +958,7 @@ footer {
   height: auto;
   margin: 0px;
   padding: 0px;
-  background-color: rgba(0, 0, 0, 1);
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .imagemMarca {
@@ -965,7 +974,7 @@ footer {
 }
 
 .imagemMarca {
-  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/logos/Logo001-PNG.png");
 }
 
 /********************************************************************/
@@ -979,11 +988,13 @@ footer {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-image: url("../../recursos/imagens/icones/RedesSociais/WhatsApp001.png");
+  background-image: url("http://localhost/api/public/recursos/imagens/icones/RedesSociais/WhatsApp001.png");
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
   animation: button-shake 1s infinite;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
 }
 
 @keyframes button-shake {
@@ -1018,15 +1029,15 @@ footer {
 
 #whatsapp-button:hover #whatsapp-tooltip {
   display: block;
-  animation: tooltip-fadein 0.5s forwards;
+  animation: tooltip-fadein 0.5s forwards;  
 }
 
 @keyframes tooltip-fadein {
   0% {
-    opacity: 0;
+    opacity: 0;        
   }
   100% {
-    opacity: 1;
+    opacity: 1;        
   }
 }
 
@@ -1044,7 +1055,8 @@ footer {
 }
 
 #whatsapp-button.partially-visible {
-  opacity: 0.5;
+  opacity: 0.5;  
+  border: 2px solid white;
 }
 
 /********************************************************************/
@@ -1058,12 +1070,14 @@ footer {
   text-align: center;
   position: relative;
   top: 100px;
-  width: 100%;
+  width: 97%;
   height: auto;
   margin: 0px;
-  margin-bottom: 130px;
-  padding: 0px;
-  border: 1px solid black;
+  margin-bottom: 100px;
+  padding: 0px;  
+  border: 1px solid rgb(255, 66, 214);  
+  border-radius: 10px;
+  background-color: rgba(255, 0, 195, 0.1);
 }
 
 /********************************************************************/
@@ -1079,10 +1093,11 @@ footer {
   top: 100px;
   width: 100%;
   height: auto;
+  margin-bottom: 0px;
+  height: auto;
   margin: 0px;
-  margin-bottom: 130px;
+  margin-bottom: 10px;
   padding: 0px;
-  border: 1px solid black;
 }
 
 .produto {
@@ -1094,6 +1109,7 @@ footer {
   margin-bottom: 10px;  
   background-color: #ffade4;
   font-size: small;
+  cursor: pointer;
 }
 
 .secaoConteudoPrincipalTodosOsProdutos h3{
@@ -1353,523 +1369,4 @@ color: #ffffff;
 color: #ffffff;
     margin-top: 10px;
       margin-bottom: 10px;
- padding: 15px;
-      }
-
-/********************************************************************/
-/*PESQUISA AVANÇADA*/
-/* Estilos para a seção de Pesquisa Avançada */
-
-/* Estilo para o botão de abrir a pesquisa avançada */
-#btnAbrirPesquisa01 {
-    position: absolute;
-    top: 50px;
-    right: 80px;
-    width: auto;
-    height: auto;
-    margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    padding: 5px 10px;
-    border: 0px;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 20;
-}
-
-/* Adicione esta classe para o ícone de pesquisa */
-.icon-search {
-    display: inline-block;
-    width: 25px; /* Ajuste o tamanho do ícone conforme necessário */
-    height: 25px; /* Ajuste o tamanho do ícone conforme necessário */
-    background-image: url('../../recursos/imagens/icones/pesquisa001.png'); /* Substitua 'caminho/para/sua/imagem-de-pesquisa.png' pela URL da sua imagem */
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 5px; /* Ajuste o espaçamento entre o ícone e o texto conforme necessário */
-    vertical-align: middle;    
-    cursor: pointer;
-}
-
-#secaoPesquisa01 {
-    /* Mantenha a posição e o layout da seção */
-    display: none; /* Definido como none inicialmente */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    top: 100px;
-    width: 80%;
-    height: auto;
-    margin: 0px;
-    margin-bottom: 10px;
-    border: 1px solid rgb(232, 84, 163);
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #ffade4;
-    font-size: small;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s linear 1s, top 1s ease-in-out;
-}
-
-#secaoPesquisa01.aberta {
-    /* Aplicar a animação ao abrir e manter a seção visível */
-    animation: abrirPesquisa 1s forwards ease-in-out;
-    display: flex;
-}
-
-/* Animação para abrir a seção de pesquisa */
-@keyframes abrirPesquisa {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-500px); /* Move para cima */
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0); /* Sem deslocamento vertical */
-    }
-}
-
-#secaoPesquisa01:not(.aberta) {
-    /* Aplicar a animação ao fechar a seção */    
-    animation: fecharPesquisa 1s forwards ease-in-out;
-}
-
-/* Animação para fechar a seção de pesquisa */
-@keyframes fecharPesquisa {
-    0% {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0); /* Sem deslocamento vertical */
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-500px); /* Move para cima */ 
-    }
-}
-
-#secaoPesquisa01  h1{
-    font-size: x-large;
-    margin: 5px;
-}
-
-#secaoPesquisa01 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#secaoPesquisa01 label{
-    margin: 5px;
-}
-
-#secaoPesquisa01 select,
-#secaoPesquisa01 input {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: auto;
-}
-
-.secaoBotoesFormularioPesquisaAvancada{
-display: flex; 
-flex-direction: row;
-justify-content: center;
-align-items: center;
-text-align: center;
-width: auto;
-height: auto;
-padding: 5px;
-margin-bottom: 5px;
-}
-
-#btnPesquisar01 {
-  display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background-color: #ff43a1;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Estilize o botão de reset para torná-lo mais visível e clicável */
-#btnLimpar01 {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background-color: #ccc;
-    color: #333;
-    border: none;
-    cursor: pointer;
-  }
-
-#btnPesquisar01:hover {
-    background-color: #ff3381; /* Altera a cor de fundo ao passar o mouse */
-    transition: background-color 0.3s; /* Adiciona uma transição suave */
-}
-
-#btnLimpar01:hover {
-    background-color: #999; /* Altera a cor de fundo ao passar o mouse */
-    color: #fff; /* Altera a cor do texto ao passar o mouse */
-    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
-}
-
-
-/*sessãoFiltrosCheck*/
-.sessãoFiltrosCheck{
-  display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  background-color: rgba(0, 0, 0, .1); /* Altera a cor de fundo ao passar o mouse */  
-}
-
-/********************************************************************/
-/*SESSÃO FILTRO POR PREÇO*/
-/* Estilo para a seção de filtro por preço */
-#secaoFiltroPreco {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    height: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 4px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, .1);;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: display 0.5s ease;
-  }
-
-/* Estilo para a seção de filtro por preço */
-#filtroPreco {
-    display: none; /* Inicialmente oculta */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0); /* Altera a cor de fundo ao passar o mouse */
-    transition: display 0.5s ease; /* Adiciona uma transição suave */
-}
-
-/* Estilo para o texto do checkbox */
-label[for="porPrecoCheckbox"] {
- display: flex; 
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  margin-right: 0px;
-}
-
-#porPrecoCheckbox{
-  display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  margin-right: 0px;
-}
-
-/********************************************************************/
-/*SESSÃO FILTRO POR TAMANHO*/
-#secaoFiltroTamanho {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    height: auto;    
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 4px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, .1);;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: display 0.5s ease;
-}
-
-#filtroTamanho {
-    display: none; /* Inicialmente oculta */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0); /* Altera a cor de fundo ao passar o mouse */
-  border: 5px solid rgba(0, 0, 0, 0);
-    transition: display 0.5s ease; /* Adiciona uma transição suave */
-}
-
-/* Estilo para o texto do checkbox */
-label[for="porTamanhoCheckbox"] {
- display: flex; 
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  margin-right: 0px;
-}
-
-#porTamanhoCheckbox{
-  display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-  margin-right: 0px;
-}
-
-
-/********************************************************************/
-/*SESSÃO FILTRO POR PROMOCAO*/
-#secaoFiltroPromocao {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    height: auto;    
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 4px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, .1);;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: display 0.5s ease;
-}
-
-/* Estilo para o texto do checkbox */
-label[for="porPromocaoCheckbox"] {
-    display: flex; 
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-    margin-right: 0px;
-}
-
-#porPromocaoCheckbox{
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-    margin-right: 0px;
-}
-
-/********************************************************************/
-/*POR CORES*/
-/* Estilo para a seção de filtro por cor */
-#secaoFiltroCor {
-  display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    width: 95%;
-    height: auto;    
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 4px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, .1);;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: display 0.5s ease;
-}
-
-/* Estilo para o texto do checkbox de cor */
-label[for="porCorCheckbox"] {
-    display: flex; 
-    flex-direction: row;
-    justify-content: left;
-    align-items: flex-start;
-    text-align: left;
-    width: 80%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    margin-right: 0px;
-}
-
-/* Estilo para a seção de filtro por cor */
-#filtroCor {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0); 
-    border: 1px solid rgba(0, 0, 0, .1);
-    transition: display 0.5s ease;
-}
-
-#opcoesCores
-{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    margin: 0%;
-    padding: 0px;
-}
-/* Estilo para as opções de cores */
-.opcaoCor {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.opcaoCor input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.opcaoCor label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Mostra a seção de cores quando o checkbox de filtro por cor está marcado */
-#porCorCheckbox:checked ~ #filtroCor {
-    display: flex;
-}
-
-#secaoPesquisa01 label, p{
-color: #000000;
-font-weight: 700;
-font-size: small;
-text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
-}
-
-
-/********************************************************************/
-/*POR DISPONIBILIDADE*/
-/* Estilo para a seção de filtro por disponibilidade */
-#secaoFiltroDisponibilidade {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    height: auto;    
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 4px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, .1);;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: display 0.5s ease;
-}
-
-/* Estilo para o texto do checkbox de disponibilidade */
-label[for="porDisponibilidadeCheckbox"] {
-    display: flex; 
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-    margin-right: 0px;
-}
-#porDisponibilidadeCheckbox{
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
-    height: auto;
-    margin: 0%;
-    padding: 0px 0px;
-    border-radius: 10px;
-    margin-right: 0px;
-}
+ padding: 15px; }

@@ -1,74 +1,295 @@
-USE bds;
+    USE bds;
 
--- Inserindo dados na tabela Categoria
-INSERT INTO Categoria (nomeCategoria, descricaoCategoria) VALUES
-('Blusas', 'Blusas femininas variadas'),
-('Calças', 'Calças femininas variadas'),
-('Vestidos', 'Vestidos femininos variados'),
-('Saias', 'Saias femininas variadas'),
-('Casacos', 'Casacos femininos variados');
+    -- Inserir categorias
+    INSERT INTO Categoria (nomeCategoria, descricaoCategoria) VALUES 
+    ('tshirts', 'Camisetas de manga curta'),
+    ('cropped', 'Blusas curtas'),
+    ('blusas', 'Blusas diversas'),
+    ('vestidos', 'Vestidos femininos'),
+    ('saias', 'Saias femininas'),
+    ('shorts', 'Shorts femininos'),
+    ('calcas', 'Calças femininas'),
+    ('conjuntos', 'Conjuntos de roupas femininas');
 
--- Inserindo dados na tabela Marca
-INSERT INTO Marca (nomeMarca, descricaoMarca) VALUES
-('Marca A', 'Descrição da Marca A'),
-('Marca B', 'Descrição da Marca B'),
-('Marca C', 'Descrição da Marca C'),
-('Marca D', 'Descrição da Marca D'),
-('Marca E', 'Descrição da Marca E');
+    -- Inserir subcategorias
+    INSERT INTO Subcategoria (nomeSubcategoria, descricaoSubcategoria, categoriaId) VALUES 
+    ('jeans', 'Saias jeans', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'saias')),
+    ('tecido', 'Saias de tecido', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'saias')),
+    ('jeans', 'Shorts jeans', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'shorts')),
+    ('tecido', 'Shorts de tecido', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'shorts')),
+    ('jeans', 'Calças jeans', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'calcas')),
+    ('tecido', 'Calças de tecido', (SELECT idCategoria FROM Categoria WHERE nomeCategoria = 'calcas'));
 
--- Inserindo dados na tabela Tamanho
-INSERT INTO Tamanho (nomeTamanho, descricaoTamanho) VALUES
-('P', 'Pequeno'),
-('M', 'Médio'),
-('G', 'Grande'),
-('GG', 'Extra Grande'),
-('36', 'Número 36'),
-('38', 'Número 38');
+    -- Inserir marcas
+    INSERT INTO Marcas (nomeMarca, descricaoMarca) VALUES 
+    ('Marca A', 'Descrição da Marca A'),
+    ('Marca B', 'Descrição da Marca B'),
+    ('Marca C', 'Descrição da Marca C'),
+    ('Marca D', 'Descrição da Marca D'),
+    ('Marca E', 'Descrição da Marca E');
 
--- Inserindo dados na tabela Cor
-INSERT INTO Cor (nomeCor) VALUES
-('Preto'),
-('Branco'),
-('Azul'),
-('Vermelho'),
-('Verde'),
-('Rosa');
+    -- Inserir cores
+    INSERT INTO Cor (nomeCor) VALUES 
+    ('Preto'),
+    ('Branco'),
+    ('Azul'),
+    ('Vermelho'),
+    ('Verde'),
+    ('Rosa'),
+    ('Amarelo'),
+    ('Laranja'),
+    ('Roxo'),
+    ('Turquesa'),
+    ('Bege'),
+    ('Vinho'),
+    ('Azul Marinho'),
+    ('Rosa Claro'),
+    ('Verde Água'),
+    ('Bordô'),
+    ('Roxo Claro'),
+    ('Caramelo'),
+    ('Cinza');
 
--- Inserindo dados na tabela Produto
-INSERT INTO Produto (nomeProduto, descricaoProduto, categoriaId, marcaId, produtoTamanhoId, bustoProduto, cinturaProduto, quadrilProduto, corId, precoProduto, pesoProduto, quantidadeProduto, disponivelProduto, promocaoProduto)
-VALUES
-('Blusa Floral', 'Blusa com estampa floral', 1, 1, 1, 80.5, 60.0, 90.0, 1, 39.99, 0.2, 20, TRUE, FALSE),
-('Calça Jeans Skinny', 'Calça jeans modelagem skinny', 2, 2, 2, NULL, 70.0, 95.0, 3, 59.99, 0.3, 15, TRUE, TRUE),
-('Vestido Midi', 'Vestido midi com detalhes em renda', 3, 3, 3, 85.0, 68.0, 95.0, 5, 79.99, 0.4, 10, TRUE, FALSE),
-('Saia Plissada', 'Saia plissada com estampa xadrez', 4, 4, 4, NULL, NULL, NULL, 2, 29.99, 0.25, 25, TRUE, FALSE),
-('Casaco de Lã', 'Casaco de lã com capuz', 5, 5, 5, NULL, NULL, NULL, 4, 89.99, 0.5, 8, TRUE, FALSE);
+    -- Inserir tamanhos
+    INSERT INTO Tamanho (nomeTamanho, descricaoTamanho) VALUES 
+    ('PP', 'Extra pequeno'),
+    ('P', 'Pequeno'),
+    ('M', 'Médio'),
+    ('G', 'Grande'),
+    ('GG', 'Extra Grande'),
+    ('36', 'Tamanho 36'),
+    ('38', 'Tamanho 38'),
+    ('40', 'Tamanho 40'),
+    ('42', 'Tamanho 42'),
+    ('44', 'Tamanho 44'),
+    ('46', 'Tamanho 46'),
+    ('48', 'Tamanho 48'),
+    ('50', 'Tamanho 50'),
+    ('52', 'Tamanho 52'),
+    ('54', 'Tamanho 54'),
+    ('56', 'Tamanho 56'),
+    ('58', 'Tamanho 58'),
+    ('60', 'Tamanho 60');
 
--- Inserindo dados na tabela Foto
-INSERT INTO Foto (urlFoto, produtoId) VALUES
-('url_da_foto_1.jpg', 1),
-('url_da_foto_2.jpg', 2),
-('url_da_foto_3.jpg', 3),
-('url_da_foto_4.jpg', 4),
-('url_da_foto_5.jpg', 5);
+   -- Adições de Dados para Tabela 'produto'
+    INSERT INTO Produto (nomeProduto, descricaoProduto, categoriaId, subcategoriaId, marcaId, tamanhoId, corId, precoProduto, pesoProduto, bustoProduto, cinturaProduto, quadrilProduto, quantidadeProduto, disponivelProduto, promocaoProduto) VALUES
+    ('T-Shirt Preta', 'Descrição da T-Shirt Preta', 1, NULL, 1, 3, 1, 29.90, NULL, NULL, NULL, NULL, 50, TRUE, FALSE),
+    ('T-Shirt Branca', 'Descrição da T-Shirt Branca', 1, NULL, 2, 2, 2, 29.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('T-Shirt Azul', 'Descrição da T-Shirt Azul', 1, NULL, 3, 1, 3, 29.90, NULL, NULL, NULL, NULL, 40, TRUE, FALSE),
+    ('Cropped Preto', 'Descrição do Cropped Preto', 2, NULL, 4, 3, 1, 39.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Cropped Branco', 'Descrição do Cropped Branco', 2, NULL, 3, 2, 2, 39.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Cropped Vermelho', 'Descrição do Cropped Vermelho', 2, NULL, 2, 3, 4, 39.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Blusa Azul', 'Descrição da Blusa Azul', 3, NULL, 1, 4, 3, 49.90, NULL, NULL, NULL, NULL, 35, TRUE, FALSE),
+    ('Blusa Verde', 'Descrição da Blusa Verde', 3, NULL, 2, 3, 5, 49.90, NULL, NULL, NULL, NULL, 45, TRUE, FALSE),
+    ('Blusa Amarela', 'Descrição da Blusa Amarela', 3, NULL, 3, 4, 6, 49.90, NULL, NULL, NULL, NULL, 55, TRUE, FALSE),
+    ('Vestido Preto', 'Descrição do Vestido Preto', 4, NULL, 4, 3, 1, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Vestido Branco', 'Descrição do Vestido Branco', 4, NULL, 3, 2, 2, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Vestido Vermelho', 'Descrição do Vestido Vermelho', 4, NULL, 2, 3, 4, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 1, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 2', 'Descrição da Saia Jeans 2', 5, 1, 2, 3, 2, 59.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Saia Jeans 3', 'Descrição da Saia Jeans 3', 5, 1, 3, 4, 3, 49.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Saia Tecido 1', 'Descrição da Saia de Tecido', 5, 2, 1, 2, 1, 49.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Tecido 2', 'Descrição da Saia de Tecido', 5, 2, 2, 3, 2, 59.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Saia Tecido 3', 'Descrição da Saia de Tecido', 5, 2, 3, 5, 3, 69.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Shorts Jeans 1', 'Descrição do Shorts Jeans', 6, 1, 1, 2, 1, 49.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Shorts Jeans 2', 'Descrição do Shorts Jeans', 6, 1, 2, 3, 2, 59.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Shorts Jeans 3', 'Descrição do Shorts Jeans', 6, 1, 3, 4, 3, 69.90, NULL, NULL, NULL, NULL, 35, TRUE, FALSE),
+    ('Shorts Tecido 1', 'Descrição do Shorts de Tecido', 6, 2, 1, 2, 1, 49.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Shorts Tecido 2', 'Descrição do Shorts de Tecido', 6, 2, 2, 3, 2, 59.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Shorts Tecido 3', 'Descrição do Shorts de Tecido', 6, 2, 3, 4, 3, 69.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Calça Jeans 1', 'Descrição da Calça Jeans', 7, 1, 1, 2, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Calça Jeans 2', 'Descrição da Calça Jeans', 7, 1, 2, 3, 2, 79.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Calça Jeans 3', 'Descrição da Calça Jeans', 7, 1, 3, 5, 3, 89.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Calça Tecido 1', 'Descrição da Calça de Tecido', 7, 2, 1, 2, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Calça Tecido 2', 'Descrição da Calça de Tecido', 7, 2, 2, 3, 2, 79.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Calça Tecido 3', 'Descrição da Calça de Tecido', 7, 2, 3, 4, 3, 89.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Conjunto Preto', 'Descrição do Conjunto Preto', 8, NULL, 2, 4, 1, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Conjunto Branco', 'Descrição do Conjunto Branco', 8, NULL, 3, 3, 2, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Conjunto Azul', 'Descrição do Conjunto Azul', 8, NULL, 1, 2, 3, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE);
 
--- Inserindo dados na tabela Avaliacao
-INSERT INTO Avaliacao (notaAvaliacao, comentarioAvaliacao, produtoId, clienteId) VALUES
-(4.5, 'Adorei o produto, ótima qualidade!', 1, 1),
-(3.8, 'Bonita peça, mas esperava mais.', 2, 2),
-(5.0, 'Superou minhas expectativas, recomendo!', 3, 3),
-(4.0, 'Produto de acordo com o esperado.', 4, 4),
-(4.2, 'Gostei bastante, entrega rápida.', 5, 5);
+    -- Adições de Dados para Tabela 'produto'
+    INSERT INTO Produto (nomeProduto, descricaoProduto, categoriaId, subcategoriaId, marcaId, tamanhoId, corId, precoProduto, pesoProduto, bustoProduto, cinturaProduto, quadrilProduto, quantidadeProduto, disponivelProduto, promocaoProduto) VALUES
+    ('T-Shirt Preta', 'Descrição da T-Shirt Preta', 1, NULL, 1, 1, 1, 29.90, NULL, NULL, NULL, NULL, 50, TRUE, FALSE),
+    ('T-Shirt Preta', 'Descrição da T-Shirt Preta', 1, NULL, 1, 2, 1, 29.90, NULL, NULL, NULL, NULL, 50, TRUE, FALSE),
+    ('T-Shirt Preta', 'Descrição da T-Shirt Preta', 1, NULL, 1, 4, 1, 29.90, NULL, NULL, NULL, NULL, 50, TRUE, FALSE),
+    ('T-Shirt Preta', 'Descrição da T-Shirt Preta', 1, NULL, 1, 5, 1, 29.90, NULL, NULL, NULL, NULL, 50, TRUE, FALSE),
+    ('T-Shirt Branca', 'Descrição da T-Shirt Branca', 1, NULL, 2, 1, 2, 29.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('T-Shirt Azul', 'Descrição da T-Shirt Azul', 1, NULL, 3, 3, 3, 29.90, NULL, NULL, NULL, NULL, 40, TRUE, FALSE),
+    ('Cropped Preto', 'Descrição do Cropped Preto', 2, NULL, 4, 5, 1, 39.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Cropped Branco', 'Descrição do Cropped Branco', 2, NULL, 3, 4, 2, 39.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Cropped Vermelho', 'Descrição do Cropped Vermelho', 2, NULL, 2, 1, 4, 39.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Blusa Azul', 'Descrição da Blusa Azul', 3, NULL, 1, 2, 3, 49.90, NULL, NULL, NULL, NULL, 35, TRUE, FALSE),
+    ('Blusa Verde', 'Descrição da Blusa Verde', 3, NULL, 2, 1, 5, 49.90, NULL, NULL, NULL, NULL, 45, TRUE, FALSE),
+    ('Blusa Amarela', 'Descrição da Blusa Amarela', 3, NULL, 3, 5, 6, 49.90, NULL, NULL, NULL, NULL, 55, TRUE, FALSE),
+    ('Vestido Preto', 'Descrição do Vestido Preto', 4, NULL, 4, 1, 1, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Vestido Branco', 'Descrição do Vestido Branco', 4, NULL, 3, 3, 2, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Vestido Vermelho', 'Descrição do Vestido Vermelho', 4, NULL, 2, 4, 4, 99.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 2, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 3, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 4, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 5, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 6, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 7, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 8, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 9, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 10, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 11, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 12, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 13, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 14, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 15, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 16, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 17, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 1', 'Descrição da Saia Jeans 1', 5, 1, 1, 18, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Jeans 2', 'Descrição da Saia Jeans 2', 5, 1, 2, 11, 2, 59.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Saia Jeans 3', 'Descrição da Saia Jeans 3', 5, 1, 3, 12, 3, 49.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Saia Jeans 2', 'Descrição da Saia Jeans 2', 5, 1, 2, 2, 2, 59.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Saia Jeans 3', 'Descrição da Saia Jeans 3', 5, 1, 3, 3, 3, 49.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Saia Tecido 1', 'Descrição da Saia de Tecido', 5, 2, 1, 1, 1, 49.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Saia Tecido 2', 'Descrição da Saia de Tecido', 5, 2, 2, 2, 2, 59.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Saia Tecido 3', 'Descrição da Saia de Tecido', 5, 2, 3, 4, 3, 69.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Shorts Jeans 1', 'Descrição do Shorts Jeans', 6, 1, 1, 1, 1, 49.90, NULL, NULL, NULL, NULL, 15, TRUE, FALSE),
+    ('Shorts Jeans 2', 'Descrição do Shorts Jeans', 6, 1, 2, 2, 2, 59.90, NULL, NULL, NULL, NULL, 25, TRUE, FALSE),
+    ('Shorts Jeans 3', 'Descrição do Shorts Jeans', 6, 1, 3, 3, 3, 69.90, NULL, NULL, NULL, NULL, 35, TRUE, FALSE),
+    ('Shorts Tecido 1', 'Descrição do Shorts de Tecido', 6, 2, 1, 3, 1, 49.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Shorts Tecido 2', 'Descrição do Shorts de Tecido', 6, 2, 2, 4, 2, 59.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Shorts Tecido 3', 'Descrição do Shorts de Tecido', 6, 2, 3, 5, 3, 69.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Calça Jeans 1', 'Descrição da Calça Jeans', 7, 1, 1, 7, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Calça Jeans 2', 'Descrição da Calça Jeans', 7, 1, 2, 10, 2, 79.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Calça Jeans 3', 'Descrição da Calça Jeans', 7, 1, 3, 14, 3, 89.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Calça Tecido 1', 'Descrição da Calça de Tecido', 7, 2, 1, 11, 1, 69.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Calça Tecido 2', 'Descrição da Calça de Tecido', 7, 2, 2, 8, 2, 79.90, NULL, NULL, NULL, NULL, 20, TRUE, FALSE),
+    ('Calça Tecido 3', 'Descrição da Calça de Tecido', 7, 2, 3, 15, 3, 89.90, NULL, NULL, NULL, NULL, 30, TRUE, FALSE),
+    ('Conjunto Preto', 'Descrição do Conjunto Preto', 8, NULL, 2, 3, 1, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Conjunto Branco', 'Descrição do Conjunto Branco', 8, NULL, 3, 2, 2, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE),
+    ('Conjunto Azul', 'Descrição do Conjunto Azul', 8, NULL, 1, 1, 3, 129.90, NULL, NULL, NULL, NULL, 10, TRUE, FALSE);
 
--- Inserindo dados na tabela Resposta
-INSERT INTO Resposta (conteudoResposta, avaliacaoId) VALUES
-('Obrigado pelo feedback!', 1),
-('Vamos trabalhar para melhorar!', 2),
-('Ficamos felizes que tenha gostado!', 3),
-('Estamos à disposição!', 4),
-('Esperamos vê-lo novamente em breve!', 5);
+    -- Inserir imagens para cada produto
+    INSERT INTO Imagem (urlImagem, produtoId) VALUES
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/01.jpg', 1),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/02.jpg', 2),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/03.jpg', 3),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/04.jpg', 4),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/05.jpg', 5),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/06.jpg', 6),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/07.jpg', 7),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/08.jpg', 8),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/09.jpg', 9),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/10.jpg', 10),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/11.jpg', 11),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/12.jpg', 12),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/13.jpg', 13),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/14.jpg', 14),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/15.jpg', 15),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/16.jpg', 16),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/17.jpg', 17),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/18.jpg', 18),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/19.jpg', 19),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/20.jpg', 20),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/21.jpg', 21),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/22.jpg', 22),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/23.jpg', 23),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/24.jpg', 24),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/25.jpg', 25),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/26.jpg', 26),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/27.jpg', 27),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/28.jpg', 28),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/29.jpg', 29),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/30.jpg', 30),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/31.jpg', 31),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/32.jpg', 32),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/33.jpg', 33),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/34.jpg', 34),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/35.jpg', 35),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/36.jpg', 36),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/37.jpg', 37),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/38.jpg', 38),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/39.jpg', 39),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/40.jpg', 40),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/41.jpg', 41),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/42.jpg', 42),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/43.jpg', 43),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/44.jpg', 44),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/45.jpg', 45),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/46.jpg', 46),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/47.jpg', 47),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/48.jpg', 48),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/49.jpg', 49),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/50.jpg', 50),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/51.jpg', 51),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/52.jpg', 52),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/53.jpg', 53),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/54.jpg', 54),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/55.jpg', 55),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/56.jpg', 56),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/57.jpg', 57),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/58.jpg', 58),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/59.jpg', 59),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/60.jpg', 60),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/61.jpg', 61),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/62.jpg', 62),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/63.jpg', 63),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/64.jpg', 64),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/65.jpg', 65),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/66.jpg', 66),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/67.jpg', 67),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/68.jpg', 68),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/69.jpg', 69),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/70.jpg', 70),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/71.jpg', 71),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/72.jpg', 72),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/73.jpg', 73),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/74.jpg', 74),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/75.jpg', 75),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/76.jpg', 76),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/77.jpg', 77),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/78.jpg', 78),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/79.jpg', 79),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/80.jpg', 80),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/81.jpg', 81),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/82.jpg', 82),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/83.jpg', 83),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/84.jpg', 84),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/85.jpg', 85),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/86.jpg', 86),
+    ('http://localhost/api/public/recursos/imagens/banners/produtos/testes/87.jpg', 87);
 
--- Inserindo dados na tabela Promocao
-INSERT INTO Promocao (descricaoPromocao, descontoPromocao, dataInicioPromocao, dataFimPromocao, produtoId) VALUES
-('Desconto de Primavera', 10.00, '2024-04-01', '2024-04-15', 1),
-('Oferta Especial', 20.00, '2024-04-01', '2024-04-10', 3),
-('Queima de Estoque', 15.00, '2024-04-01', '2024-04-30', 5);
+    -- Inserir clientes
+    INSERT INTO Clientes (nomeCliente, emailCliente, telefoneCliente) VALUES
+    ('Maria Silva', 'maria@example.com', '123456789'),
+    ('Ana Santos', 'ana@example.com', '987654321'),
+    ('Juliana Oliveira', 'juliana@example.com', NULL),
+    ('Camila Souza', 'camila@example.com', '555555555'),
+    ('Carolina Lima', 'carolina@example.com', '111111111');
+
+    -- Inserir avaliações
+    INSERT INTO Avaliacao (notaAvaliacao, comentarioAvaliacao, produtoId, clienteId) VALUES
+    (4.5, 'Adorei o produto, muito confortável!', 1, 1),
+    (5.0, 'A qualidade do tecido é excelente.', 2, 2),
+    (3.8, 'A cor não corresponde exatamente à imagem.', 3, 3),
+    (4.0, 'Vestido lindo, ficou perfeito!', 4, 4),
+    (4.2, 'Shorts jeans bem estiloso, recomendo.', 6, 5);
+
+    -- Inserir comentários
+    INSERT INTO Comentario (conteudoComentario, avaliacaoId) VALUES
+    ('Sim, também gostei muito!', 1),
+    ('Concordo, tecido de ótima qualidade.', 2),
+    ('Pena que a cor não é exatamente como na foto.', 3),
+    ('Você poderia me dizer como ficou no busto?', 4),
+    ('Estiloso mesmo, comprei um também.', 5);
+
+    -- Inserir respostas aos comentários
+    INSERT INTO Resposta (conteudoResposta, comentarioId) VALUES
+    ('Que bom que gostou!', 1),
+    ('Ficou perfeito, recomendo!', 4),
+    ('Sim, claro! No busto ficou confortável, não apertou.', 4);
+
+    -- Inserir promoções
+    INSERT INTO Promocao (descricaoPromocao, descontoPromocao, dataInicioPromocao, dataFimPromocao) VALUES
+    ('Promoção de Verão', 20.00, '2024-06-01', '2024-06-30'),
+    ('Black Friday', 30.00, '2024-11-25', '2024-11-26');
+
+    -- Associar produtos às promoções
+    INSERT INTO ProdutoPromocao (produtoId, promocaoId) VALUES
+    (3, 1),
+    (6, 2);

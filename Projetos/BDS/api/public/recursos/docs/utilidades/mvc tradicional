@@ -1,0 +1,70 @@
+meu_projeto/
+├── app/
+│   ├── Console/
+│   │   ├── Commands/
+│   │   │   └── SyncProductsCommand.php          (Comando para sincronizar produtos)
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginController.php          (Controlador para autenticação de usuários)
+│   │   │   │   └── RegisterController.php       (Controlador para registro de usuários)
+│   │   │   ├── Admin/
+│   │   │   │   ├── DashboardController.php    (Controlador para o painel de controle do administrador)
+│   │   │   │   ├── UserController.php         (Controlador para gerenciamento de usuários no painel de controle)
+│   │   │   │   ├── ProductController.php      (Controlador para gerenciamento de produtos no painel de controle)
+│   │   │   │   ├── OrderController.php        (Controlador para gerenciamento de pedidos no painel de controle)
+│   │   │   │   └── CategoryController.php     (Controlador para gerenciamento de categorias no painel de controle)
+│   │   │   └── Frontend/
+│   │   │       ├── HomeController.php         (Controlador para a página inicial do site)
+│   │   │       ├── ProductController.php      (Controlador para exibição de produtos no site)
+│   │   │       ├── CartController.php         (Controlador para gerenciamento do carrinho de compras no site)
+│   │   │       ├── CheckoutController.php     (Controlador para processamento do checkout no site)
+│   │   │       └── UserController.php         (Controlador para gerenciamento de usuários no site)
+│   │   ├── Middleware/
+│   │   │   ├── Authenticate.php                (Middleware para autenticação de usuários)
+│   │   │   └── CheckCartNotEmpty.php           (Middleware para verificar se o carrinho não está vazio)
+│   │   ├── Requests/                           (Validação de dados de entrada)
+│   │   │   └── CreateUserRequest.php           (Regras de validação para criar um usuário)
+│   │   └── Kernel.php                          (Kernel HTTP)
+│   ├── Models/
+│   │   ├── User.php                           (Modelo para a tabela de usuários)
+│   │   ├── Product.php                        (Modelo para a tabela de produtos)
+│   │   ├── Order.php                          (Modelo para a tabela de pedidos)
+│   │   ├── Category.php                       (Modelo para a tabela de categorias)
+│   │   └── CartItem.php                       (Modelo para a tabela de itens do carrinho)
+│   ├── Services/
+│   │   ├── DatabaseService.php                (Serviço para conexão com o banco de dados)
+│   │   ├── AuthService.php                    (Serviço para lógica de autenticação)
+│   │   ├── CartService.php                    (Serviço para lógica relacionada ao carrinho de compras)
+│   │   └── OrderService.php                   (Serviço para lógica relacionada aos pedidos)
+│   ├── Repositories/
+│   │   ├── UserRepository.php                 (Repositório para operações relacionadas a usuários no banco de dados)
+│   │   ├── ProductRepository.php              (Repositório para operações relacionadas a produtos no banco de dados)
+│   │   ├── OrderRepository.php                (Repositório para operações relacionadas a pedidos no banco de dados)
+│   │   ├── CategoryRepository.php             (Repositório para operações relacionadas a categorias no banco de dados)
+│   │   └── CartItemRepository.php             (Repositório para operações relacionadas a itens do carrinho no banco de dados)
+│   ├── Events/
+│   │   └── UserRegistered.php                 (Evento disparado quando um usuário é registrado)
+│   ├── Listeners/
+│   │   └── SendWelcomeEmail.php               (Ouvinte para enviar e-mail de boas-vindas após registro)
+│   ├── Policies/
+│   │   └── ProductPolicy.php                  (Política de acesso para produtos)
+│   └── Helpers/
+│       ├── AuthHelper.php                     (Funções auxiliares relacionadas à autenticação)
+│       └── CartHelper.php                     (Funções auxiliares relacionadas ao carrinho de compras)
+├── config/
+│   ├── app.php                                (Arquivo de configuração principal)
+│   ├── database.php                           (Configuração do banco de dados)
+│   └── auth.php                               (Configuração de autenticação)
+├── database/
+│   ├── migrations/                            (Arquivos de migração do banco de dados)
+│   └── seeds/                                 (Arquivos de seed para popular o banco de dados)
+├── resources/
+│   └── views/                                 (Arquivos de visualização)
+├── routes/
+│   ├── web.php                               (Definição de rotas da aplicação web)
+│   └── console.php                           (Definição de comandos de console)
+├── public/
+│   ├── index.php                              (Arquivo de entrada da aplicação)
+│   └── .htaccess                              (Arquivo de configuração para URL amigável)
+└── vendor/                                    (Diretório de dependências de terceiros, por exemplo, bibliotecas)

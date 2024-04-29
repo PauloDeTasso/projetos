@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Produtos</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <section class="todosOsProdutos">
+            <!-- Produto 1 -->
+            <div class="produto">
+                <div class="imagem"></div>
+                <div class="detalhes">
+                    <h2>Vestido Teodora</h2>
+                    <p>R$ 288,00</p>
+                    <div class="tamanhos">
+                        <ul>
+                            <li class="p"></li>
+                            <li class="m"></li>
+                            <li class="g"></li>
+                            <li class="gg"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto">
+                <div class="imagem"></div>
+                <div class="detalhes">
+                    <h2>Vestido Zoe Bege</h2>
+                    <p>R$ 399,90</p>
+                    <div class="tamanhos">
+                        <ul>
+                            <li class="p"></li>
+                            <li class="m"></li>
+                            <li class="g"></li>
+                            <li class="gg"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .todosOsProdutos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 5px;
+    }
+
+    .produto {
+        border: 0px solid #4a4a4a;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagem {
+        width: 100%;
+        /* Defina a proporção de aspecto usando padding-bottom: 200% (o dobro da largura) */
+        padding-bottom: 200%;
+        /* A altura é duas vezes a largura */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+    }
+
+    .produto:nth-child(1) .imagem {
+        background-image: url('http://localhost/api/public/recursos/imagens/banners/produtos/testes/01.jpg');
+    }
+
+    .produto:nth-child(2) .imagem {
+        background-image: url('http://localhost/api/public/recursos/imagens/banners/produtos/testes/02.jpg');
+    }
+
+    .produto h2 {
+        font-size: medium;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .produto p {
+        font-size: 1.1rem;
+        color: #575757;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .produto button {
+        background-color: #ff6b6b;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .produto button:hover {
+        background-color: #e74c3c;
+        transform: translateY(-2px);
+    }
+
+    .tamanhos {
+        margin-bottom: 15px;
+    }
+
+    .tamanhos span {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .tamanhos ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    .tamanhos li {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+    }
+
+    /* Define as imagens para os tamanhos */
+    .tamanhos li.p {
+        background-image: url('api/public/recursos/imagens/icones/roupas/tamanhos/p.png');
+    }
+
+    .tamanhos li.m {
+        background-image: url('api/public/recursos/imagens/icones/roupas/tamanhos/m.png');
+    }
+
+    .tamanhos li.g {
+        background-image: url('api/public/recursos/imagens/icones/roupas/tamanhos/g.png');
+    }
+
+    .tamanhos li.gg {
+        background-image: url('api/public/recursos/imagens/icones/roupas/tamanhos/gg.png');
+    }
+
+    /* Hover Consistente */
+    .produto:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
