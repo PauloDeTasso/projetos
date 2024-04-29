@@ -1,3 +1,7 @@
+/* Definindo a variável base da URL para as imagens */
+:root {
+  --urlBaseHost: "";
+}
 
 /********************************************************************/
 /*PRINCIPAL*/
@@ -14,7 +18,8 @@ html {
   margin: 0px;
   padding: 0px;
   background-color: #fff7fb;
-  border: 0px solid rgba(0, 0, 0, 0)
+  border: 0px solid rgba(0, 0, 0, 0);
+       
 }
 
 body {
@@ -281,8 +286,8 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 50px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/menu_hambuguer_001.png");
+  height: 50px;  
+  background-image: url("../../recursos/imagens/icones/menu_hambuguer_001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -340,7 +345,7 @@ menuLateral:not(.open) {
   left: 10px;
   width: 100%;
   height: 140px;
-  background-image: url("http://localhost/api/public/recursos/imagens/logos/Logo001-PNG.png");
+  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -354,7 +359,7 @@ menuLateral:not(.open) {
   right: 20px;
   width: 40px;
   height: 50px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/carrinho002.png");
+  background-image: url("../../recursos/imagens/icones/carrinho002.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -441,15 +446,15 @@ menuLateral:not(.open) {
 }
 
 .slide:nth-child(1) {
-  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+  background-image: url("../../recursos/imagens/banners/MB/01-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(2) {
-  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/02-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
+  background-image: url("../../recursos/imagens/banners/MB/02-Banner-Principal-Site-PC1920-×-600-px-950-x-1290-px.png");
 }
 
 .slide:nth-child(3) {
-  background-image: url("http://localhost/api/public/recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
+  background-image: url("../../recursos/imagens/banners/MB/03-Banner_Principal_Site_MB_950-x-1290-px.png");
 }
 
 /********************************************************************/
@@ -502,7 +507,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/cc001.png");
+  background-image: url("../../recursos/imagens/icones/cc001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -518,7 +523,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/porc001.png");
+  background-image: url("../../recursos/imagens/icones/porc001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -534,7 +539,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/entrega001.png");
+  background-image: url("../../recursos/imagens/icones/entrega001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -608,7 +613,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/blusas001.png");
+  background-image: url("../../recursos/imagens/icones/roupas/blusas001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -641,7 +646,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/vestidos001.png");
+  background-image: url("../../recursos/imagens/icones/roupas/vestidos001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -674,7 +679,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/saias001.png");
+  background-image: url("../../recursos/imagens/icones/roupas/saias001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -707,7 +712,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/calcas001.png");
+  background-image: url("../../recursos/imagens/icones/roupas/calcas001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -740,7 +745,7 @@ menuLateral:not(.open) {
   height: 50px;
   margin: 0px;
   padding: 0px;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/roupas/conjuntos001.png");
+  background-image: url("../../recursos/imagens/icones/roupas/conjuntos001.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -812,11 +817,11 @@ menuLateral:not(.open) {
 }
 
 .imagemBanner01 {
-  background-image: url("http://localhost/api/public/recursos/imagens/banners/Banner-site-luxo-507x400.png");
+  background-image: url("../../recursos/imagens/banners/Banner-site-luxo-507x400.png");
 }
 
 .imagemBanner02 {
-  background-image: url("http://localhost/api/public/recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
+  background-image: url("../../recursos/imagens/banners/banner-so-bandagem-categoria-507x400.png");
 }
 
 /********************************************************************/
@@ -863,11 +868,11 @@ menuLateral:not(.open) {
 }
 
 .imagemWhatsapp {
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/logo_whatsapp_png-100x100.png");
+  background-image: url("../../recursos/imagens/icones/logo_whatsapp_png-100x100.png");
 }
 
 .imagemInstagram {
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/logo_instagram_png-100x100.png");
+  background-image: url("../../recursos/imagens/icones/logo_instagram_png-100x100.png");
 }
 
 .whatsapp > p,
@@ -908,7 +913,7 @@ menuLateral:not(.open) {
 }
 
 .imagemFormasDePagamento {
-  background-image: url("http://localhost/api/public/recursos/imagens/formas_de_pagamentos.png");
+  background-image: url("../../recursos/imagens/formas_de_pagamentos.png");
 }
 
 .imagemFormasDePagamento > h4 {
@@ -924,7 +929,7 @@ menuLateral:not(.open) {
 }
 
 .imagemSelo {
-  background-image: url("http://localhost/api/public/recursos/imagens/selo_safebrowsing.png");
+  background-image: url("../../recursos/imagens/selo_safebrowsing.png");
 }
 
 .listaInformacoes > span {
@@ -974,7 +979,7 @@ footer {
 }
 
 .imagemMarca {
-  background-image: url("http://localhost/api/public/recursos/imagens/logos/Logo001-PNG.png");
+  background-image: url("../../recursos/imagens/logos/Logo001-PNG.png");
 }
 
 /********************************************************************/
@@ -988,7 +993,7 @@ footer {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-image: url("http://localhost/api/public/recursos/imagens/icones/RedesSociais/WhatsApp001.png");
+  background-image: url("../../recursos/imagens/icones/RedesSociais/WhatsApp001.png");
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
