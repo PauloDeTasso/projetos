@@ -47,7 +47,8 @@
             ];
 
             // Gerar as opções do menu de seleção de produtos
-            foreach ($produtos as $produto) {
+            foreach ($produtos as $produto)
+            {
                 echo "<option value='$produto'>$produto</option>";
             }
             ?>
@@ -90,7 +91,8 @@
                             "GG"
                         ];
                         // Gerar as opções do menu de seleção de tamanhos
-                        foreach ($tamanhos as $tamanho) {
+                        foreach ($tamanhos as $tamanho)
+                        {
                             $tamanhoMinusculo = strtolower($tamanho);
                             echo "<option value='$tamanhoMinusculo'>$tamanho</option>";
                         }
@@ -126,7 +128,8 @@
                         ];
 
                         // Gerar as opções do menu de seleção de cores
-                        foreach ($cores as $cor) {
+                        foreach ($cores as $cor)
+                        {
                             $corMinusculo = strtolower($cor); // Converter para minúsculas para usar como valor
                             echo "<option value='$corMinusculo'>$cor</option>";
                         }
@@ -205,6 +208,12 @@
     /* Ajuste o espaçamento entre o ícone e o texto conforme necessário */
     vertical-align: middle;
     cursor: pointer;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.icon-search:hover {
+    width: 30px;
+    height: 30px;
 }
 
 #secaoPesquisaPorTexto {

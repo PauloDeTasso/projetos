@@ -158,7 +158,7 @@
 .tamanhos li {
     width: 20px;
     height: 20px;
-    background-color: #ccc;
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     margin-right: 0px;
     align-items: center;

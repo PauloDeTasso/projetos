@@ -50,74 +50,44 @@
                 </div>
 
                 <ul>
-                    <hr />
-                    <li>
-                        <a href="#" onclick="enviarRequisicao('/inicio')">INICIO</a>
-                    </li>
-                    <hr />
-                    <li>
-                        <a href="#" onclick="enviarRequisicao('/produtos?root=menu')">TODOS OS PRODUTOS</a>
-                    </li>
-                    <hr />
+                    <li><a href="#" onclick="enviarRequisicao('/inicio')">INICIO</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/produtos?root=menu')">TODOS OS PRODUTOS</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=tshirts')">T-SHIRT</a></li>
-                    <hr />
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=cropped')">CROPPED</a></li>
-                    <hr />
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=blusas')">BLUSAS</a></li>
-                    <hr />
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=vestidos')">VESTIDOS</a></li>
-                    <hr />
                     <li class="parent-item">
-                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias')">SAIAS:</a>
+                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias')">SAIAS</a>
                         <ul class="subitems">
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=jeans')">JEANS</a>
+                            <li>
+                                <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=jeans')">JEANS</a>
                             </li>
-                            <hr />
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=tecido')">TECIDO</a>
+                            <li>
+                                <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
-                    <hr />
                     <li class="parent-item">
-                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts')">SHORT'S:</a>
+                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts')">SHORT'S</a>
                         <ul class="subitems">
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=jeans')">JEANS</a>
+                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=jeans')">JEANS</a>
                             </li>
-                            <hr />
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=tecido')">TECIDO</a>
+                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
-                    <hr />
                     <li class="parent-item">
-                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas')">CALÇAS:</a>
+                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas')">CALÇAS</a>
                         <ul class="subitems">
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=jeans')">JEANS</a>
+                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=jeans')">JEANS</a>
                             </li>
-                            <hr />
-                            <li><a href="#"
-                                    onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=tecido')">TECIDO</a>
+                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
-                    <hr />
-                    <li>
-                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')">CONJUNTOS</a>
-                    </li>
-                    <hr />
-                    <li>
-                        <a href="#" onclick="enviarRequisicao('/minhaconta')">MINHA CONTA</a>
-                    </li>
-                    <hr />
-                    <li>
-                        <a href="#" onclick="enviarRequisicao('/sobre')">SOBRE NÓS</a>
-                    </li>
-                    <hr />
+                    <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')">CONJUNTOS</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/minhaconta')">MINHA CONTA</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/sobre')">SOBRE NÓS</a></li>
                 </ul>
             </aside>
 
