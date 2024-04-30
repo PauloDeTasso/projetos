@@ -49,9 +49,12 @@
                     <button id="btnPesquisar">Ir</button>
                 </div>
 
-                <ul>
+                <ul>    
                     <li><a href="#" onclick="enviarRequisicao('/inicio')">INICIO</a></li>
-                    <li><a href="#" onclick="enviarRequisicao('/produtos?root=menu')">TODOS OS PRODUTOS</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/minhaconta')">MINHA CONTA</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/sobre')">QUEM SOMOS</a></li>
+                    <hr>
+                    <li><a href="#" onclick="enviarRequisicao('/produtos?root=menu')">TODAS AS PEÇAS</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=tshirts')">T-SHIRT</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=cropped')">CROPPED</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=blusas')">BLUSAS</a></li>
@@ -97,10 +100,7 @@
                         </ul>
                     </li>
 
-
-                    <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')">CONJUNTOS</a></li>
-                    <li><a href="#" onclick="enviarRequisicao('/minhaconta')">MINHA CONTA</a></li>
-                    <li><a href="#" onclick="enviarRequisicao('/sobre')">SOBRE NÓS</a></li>
+                    <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')">CONJUNTOS</a></li>                   
                 </ul>
             </aside>
 
@@ -354,6 +354,11 @@
             .menuLateral ul ul li {
                 border: 0px solid black;
             }
+
+             .menuLateral hr {
+                    visibility: hidden;
+                    padding-top: 18px;
+                }
         </style>
 
         <script>
