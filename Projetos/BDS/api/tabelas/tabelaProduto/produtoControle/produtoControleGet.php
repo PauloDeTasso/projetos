@@ -180,6 +180,46 @@ else if (($subUri[0] === 'produtos') && ($subUri[1] == 'pesquisamenu') ||
     exit();
 }
 
+/**/
+// Se o subUri for produtos/pesquisaavancada
+/*
+else if (($subUri[0] === 'produtos') && ($subUri[1] == 'pesquisaavancada')) {
+    require_once 'protecaoDeEntrada.php';
+    require_once 'validacaoDeEntrada.php';
+    require_once 'ProdutoDAO.php';
+    require_once 'telaHeaderTipo01.php';
+    require_once 'telaProdutoPesquisaAvancada.php';
+    require_once 'telaFooterTipo01.php';
+
+    // Parâmetros da pesquisa avançada
+    $categoria = isset($_GET['selecao']) ? $_GET['selecao'] : null;
+    $tamanho = isset($_GET['tamanho']) ? $_GET['tamanho'] : null;
+    $cor = isset($_GET['corSelect']) ? $_GET['corSelect'] : null;
+    $precoMin = isset($_GET['filtro_preco_minimo']) ? $_GET['filtro_preco_minimo'] : null;
+    $precoMax = isset($_GET['filtro_preco_maximo']) ? $_GET['filtro_preco_maximo'] : null;
+    $disponivel = isset($_GET['porDisponibilidadeCheckbox']) ? $_GET['porDisponibilidadeCheckbox'] : null;
+    $promocao = isset($_GET['porPromocaoCheckbox']) ? $_GET['porPromocaoCheckbox'] : null;
+
+    // Faça a validação e proteção dos parâmetros, se necessário
+
+    // Chame o método para pesquisar os produtos avançados
+    try {
+        $produtos_db = ProdutoDAO::pesquisarProdutosAvancado($categoria, $tamanho, $cor, $precoMin, $precoMax, $disponivel, $promocao);
+
+        // Verifique se há resultados e faça o processamento adequado
+
+        // Renderize a página de resultados com os produtos encontrados
+        require_once 'telaHeaderTipo01.php';
+        require_once 'telaProdutoPesquisaAvancada.php';
+        require_once 'telaFooterTipo01.php';
+        exit();
+    } catch (Exception $e) {
+        // Trate erros, como exibir uma mensagem de erro na página ou registrar em log
+        exit("Erro: " . $e->getMessage());
+    }
+}
+*/
+/**/
 
 /****************************************************************** */
 //URI = /produtos/?pmin={NUMERO}&pmax={NUMERO}
@@ -288,7 +328,6 @@ else if ($subUri[0] === 'produtos' && $subUri[1] === 'erro' && !isset($subUri[2]
         require_once $telaFooterTipo01;
         exit();
     }
-    exit();
 }
 
 /****************************************************************** */

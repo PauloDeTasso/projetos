@@ -8,8 +8,7 @@ class ProdutoDaoGet
     //LISTA TODOS OS REGISTROS
     public static function listarTodosProdutosImagens($nomeClasseChamadora, $opcaoOrdenacao)
     {
-        try
-        {
+        try {
             // Obtém o nome da classe atual
             $nomeArquivo = $nomeClasseChamadora;
 
@@ -19,8 +18,7 @@ class ProdutoDaoGet
             self::$conexao = ConexaoDbBdsWeb::conectar();
 
             // Define a coluna de ordenação com base na opção selecionada
-            switch ($opcaoOrdenacao)
-            {
+            switch ($opcaoOrdenacao) {
                 case 'nomeAsc':
                     $ordenacao = 'nomeProduto ASC';
                     break;
@@ -51,8 +49,7 @@ class ProdutoDaoGet
             $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Para cada produto, obter imagens e tamanhos relacionados
-            foreach ($registros as &$produto)
-            {
+            foreach ($registros as &$produto) {
                 $produto['imagens'] = self::obterImagensProduto($produto['idProduto']);
                 $produto['tamanhos'] = self::obterTamanhosProduto($produto['idProduto'], $produto['nomeProduto']);
             }
@@ -60,9 +57,7 @@ class ProdutoDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao listar registros da tabela Produto: " . $e->getMessage());
         }
     }
@@ -71,11 +66,9 @@ class ProdutoDaoGet
     /****/
     public static function listarProdutosPorCategoriaSubcategoria($categoria, $subcategoria = null, $opcaoOrdenacao = 'nomeAsc')
     {
-        try
-        {
+        try {
             // Define a coluna de ordenação com base na opção selecionada
-            switch ($opcaoOrdenacao)
-            {
+            switch ($opcaoOrdenacao) {
                 case 'nomeAsc':
                     $ordenacao = 'Produto.nomeProduto ASC';
                     break;
@@ -102,16 +95,14 @@ class ProdutoDaoGet
                   JOIN Categoria ON Produto.categoriaId = Categoria.idCategoria";
 
             // Verifica se a subcategoria está definida
-            if ($subcategoria)
-            {
+            if ($subcategoria) {
                 $query .= " JOIN Subcategoria ON Produto.subcategoriaId = Subcategoria.idSubcategoria";
             }
 
             $query .= " WHERE Categoria.nomeCategoria = :categoria";
 
             // Verifica se a subcategoria está definida
-            if ($subcategoria)
-            {
+            if ($subcategoria) {
                 $query .= " AND Subcategoria.nomeSubcategoria = :subcategoria";
             }
 
@@ -122,8 +113,7 @@ class ProdutoDaoGet
 
             // Vincula os parâmetros da categoria e subcategoria, se aplicável
             $stmt->bindParam(':categoria', $categoria, PDO::PARAM_STR);
-            if ($subcategoria)
-            {
+            if ($subcategoria) {
                 $stmt->bindParam(':subcategoria', $subcategoria, PDO::PARAM_STR);
             }
 
@@ -131,8 +121,7 @@ class ProdutoDaoGet
             $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Para cada produto, obter imagens e tamanhos relacionados
-            foreach ($registros as &$produto)
-            {
+            foreach ($registros as &$produto) {
                 $produto['imagens'] = self::obterImagensProduto($produto['idProduto']);
                 $produto['tamanhos'] = self::obterTamanhosProduto($produto['idProduto'], $produto['nomeProduto']);
             }
@@ -140,9 +129,7 @@ class ProdutoDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $registros;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao listar produtos por categoria: " . $e->getMessage());
         }
     }
@@ -150,13 +137,11 @@ class ProdutoDaoGet
     // Lista os produtos com base na pesquisa por texto
     public static function pesquisarProdutos($textoPesquisa, $opcaoOrdenacao)
     {
-        try
-        {
+        try {
             self::$conexao = ConexaoDbBdsWeb::conectar();
 
             // Define a coluna de ordenação com base na opção selecionada
-            switch ($opcaoOrdenacao)
-            {
+            switch ($opcaoOrdenacao) {
                 case 'nomeAsc':
                     $ordenacao = 'nomeProduto ASC';
                     break;
@@ -202,8 +187,7 @@ class ProdutoDaoGet
             $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Para cada produto, obter imagens e tamanhos relacionados
-            foreach ($produtos as &$produto)
-            {
+            foreach ($produtos as &$produto) {
                 $produto['imagens'] = self::obterImagensProduto($produto['idProduto']);
                 $produto['tamanhos'] = self::obterTamanhosProduto($produto['idProduto']);
             }
@@ -211,9 +195,7 @@ class ProdutoDaoGet
             ConexaoDbBdsWeb::fecharConexao(self::$conexao);
 
             return $produtos;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             echo "<p>$e</p>";
             throw new Exception("Erro ao pesquisar produtos: " . $e->getMessage());
         }
@@ -233,8 +215,7 @@ class ProdutoDaoGet
     // Função para obter os tamanhos relacionados a um produto
     private static function obterTamanhosProduto($produtoId)
     {
-        try
-        {
+        try {
             $query = "SELECT t.nomeTamanho 
           FROM Tamanho t 
           JOIN Produto p ON t.idTamanho = p.tamanhoId 
@@ -253,129 +234,68 @@ class ProdutoDaoGet
             sort($nomesTamanhos);
 
             return $nomesTamanhos;
-        }
-        catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             throw new Exception("Erro ao obter os tamanhos do produto: " . $e->getMessage());
         }
     }
 
-    /**************************************************************** */
-    /*TODOS OS PRODUTOS*//*
-    public static function listarProdutos()
+    //PESQUISA AVANÇADA
+    public static function pesquisarProdutosAvancado($categoria, $tamanho, $cor, $precoMin, $precoMax, $disponivel, $promocao)
     {
-        try
-        {
-            $registros = TabelaGenericaDaoGet::listarTodos();
-            return $registros;
-        }
-        catch (PDOException $e)
-        {
-            throw new Exception("Erro ao listar produtos: " . $e->getMessage());
-        }
-    }
-    /**************************************************************** */
-    /*PRODUTO POR ID*//*
-    public static function buscarProduto($idProduto)
-    {
+        try {
+            $conexao = ConexaoDbBdsWeb::conectar();
+            $sql = "SELECT * FROM Produto WHERE 1";
 
-        try
-        {
-            $registro = TabelaGenericaDaoGet::buscarPorID($idProduto);
-            echo json_encode($registro);
-        }
-        catch (Exception $e)
-        {
-            echo json_encode(array("erro" => $e->getMessage()));
-        }
-    }
-
-
-    /**************************************************************** */
-
-    /*PESQUISAR POR TEXTO - COLUNAS*/
-    /*
-    public static function pesquisarPorTexto($texto)
-    {
-        try
-        {
-
-            $textoValidado = ValidacaoDeEntrada::validarNome($texto);
-            if ($textoValidado)
-            {
-                $textoValidado = $texto;
+            // Adiciona cláusulas WHERE para cada parâmetro não vazio
+            if (!empty($categoria)) {
+                $sql .= " AND categoriaId = ?";
             }
-            $textoProtegido = ProtecaoDeEntrada::validarTexto($textoValidado);
+            if (!empty($tamanho)) {
+                $sql .= " AND tamanhoId = ?";
+            }
+            if (!empty($cor)) {
+                $sql .= " AND corId = ?";
+            }
+            if (!empty($precoMin)) {
+                $sql .= " AND precoProduto >= ?";
+            }
+            if (!empty($precoMax)) {
+                $sql .= " AND precoProduto <= ?";
+            }
+            if ($disponivel === 'on') {
+                $sql .= " AND disponivelProduto = 1";
+            }
+            if ($promocao === 'on') {
+                $sql .= " AND promocaoProduto = 1";
+            }
 
-
-            // Conectar ao banco de dados
-            $conexao = ConexaoDbBds::conectar();
-
-            // Adicionar curingas à string de pesquisa
-            $textoDigitado = "%{$textoProtegido}%";
-
-            // Preparar a consulta SQL usando Prepared Statement
-            $sql = "SELECT * FROM produto WHERE nomeProduto LIKE :textoNomeProduto OR descricaoProduto LIKE :textoDescricaoProduto";
-
-            // Preparar a consulta usando Prepared Statement
             $stmt = $conexao->prepare($sql);
 
-            // Vincular os parâmetros corretamente
-            $stmt->bindParam(':textoNomeProduto', $textoDigitado, PDO::PARAM_STR);
-            $stmt->bindParam(':textoDescricaoProduto', $textoDigitado, PDO::PARAM_STR);
+            // Atribui valores aos parâmetros e executa a consulta
+            $params = [];
+            if (!empty($categoria)) {
+                $params[] = $categoria;
+            }
+            if (!empty($tamanho)) {
+                $params[] = $tamanho;
+            }
+            if (!empty($cor)) {
+                $params[] = $cor;
+            }
+            if (!empty($precoMin)) {
+                $params[] = $precoMin;
+            }
+            if (!empty($precoMax)) {
+                $params[] = $precoMax;
+            }
 
-            $stmt->execute();
-
-            // Retornar os resultados da consulta
+            $stmt->execute($params);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-        catch (PDOException $e)
-        {
-            // Lidar com exceções PDO
-            $errorMessage = 'Erro ao executar consulta no banco de dados: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
-            $errorId = uniqid('PDOError');
-            error_log('[' . $errorId . '] ' . $errorMessage);
-            throw new Exception('[' . $errorId . '] Ocorreu um erro interno. Por favor, tente novamente mais tarde.', 500);
-        }
-        catch (Exception $e)
-        {
-            // Lidar com outras exceções
-            $errorMessage = 'Erro inesperado: ' . $e->getMessage() . ' in ' . $e->getFile() . ' on line ' . $e->getLine() . '. Consulta SQL: ' . $sql;
-            $errorId = uniqid('GeneralError');
-            error_log('[' . $errorId . '] ' . $errorMessage);
-            throw new Exception('[' . $errorId . '] Ocorreu um erro interno. Por favor, tente novamente mais tarde.', 500);
+        } catch (PDOException $e) {
+            // Trate o erro aqui, como log, mensagem de erro, etc.
+            return false;
+        } finally {
+            ConexaoDbBdsWeb::fecharConexao($conexao);
         }
     }
-
-    /**************************************************************** */
-    /*PRODUTO POR PRECO MINIMO E MAXIMO*/
-    /*
-    public static function produtosPorPrecoMinMax($preco_min, $preco_max)
-    {
-        try
-        {
-            // Conectar ao banco de dados
-            $conexao = ConexaoDbBds::conectar();
-
-            // Preparar e executar a consulta SQL com os parâmetros de preço mínimo e máximo
-            $sql = "SELECT * FROM Produto WHERE precoProduto BETWEEN :preco_min AND :preco_max";
-            $stmt = $conexao->prepare($sql);
-            $stmt->bindParam(':preco_min', $preco_min);
-            $stmt->bindParam(':preco_max', $preco_max);
-            $stmt->execute();
-
-            // Obter os resultados
-            $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            // Desconectar
-            $conexao = null;
-
-            return $produtos;
-        }
-        catch (PDOException $e)
-        {
-            throw new Exception("Erro ao listar produtos por preço: " . $e->getMessage());
-        }
-    }
-    */
 }

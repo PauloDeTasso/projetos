@@ -58,33 +58,46 @@
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=vestidos')">VESTIDOS</a></li>
                     <li class="parent-item">
                         <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias')">SAIAS</a>
-                        <ul class="subitems">
+                        <span class="arrow-icon" onclick="alternarSubitens(event,'subitemsSaias')">▼</span>
+                        <ul class="subitemsSaias">
                             <li>
-                                <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=jeans')">JEANS</a>
+                                <a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=jeans')">JEANS</a>
                             </li>
                             <li>
-                                <a href="#" onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=tecido')">TECIDO</a>
+                                <a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=saias&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
+
                     <li class="parent-item">
-                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts')">SHORT'S</a>
-                        <ul class="subitems">
-                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=jeans')">JEANS</a>
+                        <a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts')">SHORTS</a>
+                        <span class="arrow-icon" onclick="alternarSubitens(event,'subitemsShorts')">▼</span>
+                        <ul class="subitemsShorts">
+                            <li><a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=jeans')">JEANS</a>
                             </li>
-                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=tecido')">TECIDO</a>
+                            <li><a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=shorts&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
+
                     <li class="parent-item">
                         <a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas')">CALÇAS</a>
-                        <ul class="subitems">
-                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=jeans')">JEANS</a>
+                        <span class="arrow-icon" onclick="alternarSubitens(event,'subitemsCalcas')">▼</span>
+                        <ul class="subitemsCalcas">
+                            <li><a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=jeans')">JEANS</a>
                             </li>
-                            <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=tecido')">TECIDO</a>
+                            <li><a href="#"
+                                    onclick="enviarRequisicao('/produtos/?categoria=calcas&subcategoria=tecido')">TECIDO</a>
                             </li>
                         </ul>
                     </li>
+
+
                     <li><a href="#" onclick="enviarRequisicao('/produtos/?categoria=conjuntos')">CONJUNTOS</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/minhaconta')">MINHA CONTA</a></li>
                     <li><a href="#" onclick="enviarRequisicao('/sobre')">SOBRE NÓS</a></li>
@@ -106,3 +119,61 @@
             <?php
             require $telaProdutoPesquisaAvancada;
             ?>
+
+            <style>
+            .subitemsSaias,
+            .subitemsShorts,
+            .subitemsCalcas {
+                visibility: hidden;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: opacity 1s ease, visibility 1s ease, max-height 1s ease;
+            }
+
+            .menuLateral .subitemsSaias.show,
+            .menuLateral .subitemsShorts.show,
+            .menuLateral .subitemsCalcas.show {
+                visibility: visible;
+                opacity: 1;
+                max-height: 500px;
+            }
+
+            /* Estilo para o ícone da seta */
+            .menuLateral .parent-item .arrow-icon {
+                cursor: pointer;
+                position: relative;
+                top: -10px;
+                right: -100px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .menuLateral .subitemsSaias li a,
+            .menuLateral .subitemsShorts li a,
+            .menuLateral .subitemsCalcas li a {
+                padding: 10px;
+                padding-left: 50px;
+                transition: opacity 1s ease;
+            }
+
+            .menuLateral ul ul li {
+                border: 0px solid black;
+            }
+            </style>
+
+            <script>
+            function alternarSubitens(evento, classeSubitens) {
+                const iconeSeta = evento.target; // O ícone da seta é o próprio alvo do evento
+                const subitens = document.querySelector('.' + classeSubitens); // Seleciona os subitens correspondentes
+
+                subitens.classList.toggle('show'); // Alternar a classe para exibir ou ocultar os subitens
+
+                // Alternar a direção da seta com base na visibilidade dos subitens
+                if (subitens.classList.contains('show')) {
+                    iconeSeta.innerHTML = '&#9650;'; // Define a seta para cima quando os subitens estão visíveis
+                } else {
+                    iconeSeta.innerHTML = '&#9660;'; // Define a seta para baixo quando os subitens estão ocultos
+                }
+            }
+            </script>

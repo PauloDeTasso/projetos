@@ -30,6 +30,7 @@ function toggleMenu() {
 */
 
 // Abre ou fecha o menu ao clicar no ícone de hambúrguer
+
 secaoHamburguerMenu.addEventListener("click", (event) => {
   event.stopPropagation(); // Impede a propagação do evento para o documento
   toggleMenu();
@@ -40,18 +41,20 @@ overlay.addEventListener("click", () => {
   toggleMenu();
 });
 
+/*
 menuLateral.addEventListener("click", () => {
   toggleMenu();
 });
-
+*/
 // Fecha o menu ao clicar fora dele
+/*
 document.addEventListener("click", (event) => {
   const isClickedInsideMenu = menuLateral.contains(event.target);
   if (!isClickedInsideMenu && menuLateral.classList.contains("open")) {
     toggleMenu();
   }
 });
-
+*/
 // Impede a propagação do evento de clique dentro do menu
 menuLateral.addEventListener("click", (event) => {
   event.stopPropagation();
